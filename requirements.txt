@@ -1,10 +1,7 @@
 requests==2.31.0
 beautifulsoup4==4.12.3
 lxml==5.1.0
-
-# Optional: For Groq LLM API (recommended)
 groq==0.4.1
 
-# Optional: For local NLP fallback
-spacy==3.7.2
-# To download French model: python -m spacy download fr_core_news_md
+# Optional: For local NLP fallback (not needed for GitHub Actions)
+# spacy==3.7.2

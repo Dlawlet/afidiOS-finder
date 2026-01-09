@@ -6,10 +6,6 @@ Uses LLM (Groq API) for accurate semantic analysis with NLP fallback
 import os
 import json
 from typing import Dict, Tuple
-from dotenv import load_dotenv
-
-# Load the environment variables
-load_dotenv()
 
 class SemanticJobAnalyzer:
     """

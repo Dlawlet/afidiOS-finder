@@ -1,25 +1,39 @@
+# -*- coding: utf-8 -*-
+"""
+Scheduled Job Scraper - Run automatically via Windows Task Scheduler
+Generates remote jobs export for external applications
+"""
+
+import sys
+import io
+# Force UTF-8 encoding for console output on Windows
+sys.stdout = io.TextIOWrapper(sys.stdout.buffer, encoding='utf-8')
+
 import requests
 from bs4 import BeautifulSoup
 from urllib.parse import urljoin
 from remote_detector import RemoteJobDetector
 from semantic_analyzer import SemanticJobAnalyzer
 from description_fetcher import JobDescriptionFetcher
+from job_exporter import JobExporter
 import os
+import json
+from datetime import datetime
+from pathlib import Path
 
-def scrape_jobs_with_semantic_analysis(url, use_llm=True):
+
+def scrape_and_export_remote_jobs(url, use_llm=True):
     """
-    Scrape jobs with semantic re-analysis of low-confidence classifications
-    
-    Args:
-        url: The URL to scrape
-        use_llm: Whether to use LLM for semantic analysis (requires API key)
+    Scrape jobs and export only remote-friendly jobs
+    Optimized for automated scheduling
     """
     try:
+        print(f"[{datetime.now().strftime('%Y-%m-%d %H:%M:%S')}] Starting scheduled scraping...")
+        
         headers = {
-            'User-Agent': 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/91.0.4472.124 Safari/537.36',
-            'Accept': 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,*/*;q=0.8',
+            'User-Agent': 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36',
+            'Accept': 'text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8',
             'Accept-Language': 'fr-FR,fr;q=0.9,en-US;q=0.8,en;q=0.7',
-            'Connection': 'keep-alive',
         }
         
         response = requests.get(url, headers=headers)
@@ -28,17 +42,13 @@ def scrape_jobs_with_semantic_analysis(url, use_llm=True):
         soup = BeautifulSoup(response.content, 'html.parser')
         job_cards = soup.find_all('div', attrs={'data-url': True})
         
+        print(f"Found {len(job_cards)} jobs to analyze")
+        
         # Initialize detectors
         basic_detector = RemoteJobDetector()
         semantic_analyzer = SemanticJobAnalyzer(use_groq=use_llm)
         description_fetcher = JobDescriptionFetcher()
         
-        print(f"\n{'='*80}")
-        print(f"SCRAPING & ANALYSIS: {len(job_cards)} jobs found")
-        print(f"Mode: {'🤖 LLM-Enhanced' if use_llm else '📚 NLP-Only'}")
-        print(f"{'='*80}\n")
-        
-        # Statistics
         stats = {
             'total': len(job_cards),
             'on_site_high': 0,
@@ -109,26 +119,23 @@ def scrape_jobs_with_semantic_analysis(url, use_llm=True):
                 if desc_p:
                     job_description = desc_p.get_text(strip=True)
             
-            # PHASE 1: Initial classification with keyword/category detection
+            # Initial classification
             initial_analysis = basic_detector.detect_remote_possibility(
                 job_title,
                 job_description,
                 job_location
             )
             
-            # Track initial classification
             classification_type = f"{'remote' if initial_analysis['is_remote'] else 'on_site'}_{initial_analysis['confidence']}"
             stats[classification_type] = stats.get(classification_type, 0) + 1
             
-            # PHASE 1.5: Check if we need full description for semantic analysis
+            # Check if we need full description
             needs_semantic = initial_analysis['confidence'].lower() in ['low', 'medium']
             description_to_use = job_description
             description_source = 'listing_page'
             
             if needs_semantic:
-                # Check if description is truncated or too short
                 if description_fetcher.needs_full_description(job_description):
-                    print(f"  📄 Description seems incomplete for Job #{idx}, fetching full version...")
                     full_desc_result = description_fetcher.get_best_description(
                         job_description,
                         job_url,
@@ -139,9 +146,8 @@ def scrape_jobs_with_semantic_analysis(url, use_llm=True):
                         description_to_use = full_desc_result['description']
                         description_source = full_desc_result['source']
                         stats['full_description_fetched'] += 1
-                        print(f"  ✅ Fetched full description ({len(description_to_use)} chars)")
             
-            # PHASE 2: Semantic re-analysis for LOW and MEDIUM confidence cases
+            # Semantic re-analysis
             final_analysis = initial_analysis.copy()
             
             if initial_analysis['confidence'].lower() in ['low', 'medium']:
@@ -149,8 +155,9 @@ def scrape_jobs_with_semantic_analysis(url, use_llm=True):
                 
                 job_data = {
                     'title': job_title,
-                    'description': description_to_use,  # Use full description if fetched
-                    'location': job_location
+                    'description': description_to_use,
+                    'location': job_location,
+                    'price': job_price
                 }
                 
                 semantic_result = semantic_analyzer.reanalyze_low_confidence(
@@ -158,7 +165,6 @@ def scrape_jobs_with_semantic_analysis(url, use_llm=True):
                     initial_analysis
                 )
                 
-                # Update analysis with semantic results
                 final_analysis = semantic_result
             
             # Store results
@@ -168,7 +174,7 @@ def scrape_jobs_with_semantic_analysis(url, use_llm=True):
                 'location': job_location,
                 'price': job_price,
                 'poster': job_poster,
-                'date': job_date,
+                'date_posted': job_date,
                 'description': job_description,
                 'full_description': description_to_use,
                 'description_source': description_source,
@@ -179,44 +185,6 @@ def scrape_jobs_with_semantic_analysis(url, use_llm=True):
             }
             
             results.append(job_result)
-            
-            # Display results
-            is_remote = final_analysis['is_remote']
-            confidence = final_analysis['confidence'].upper()
-            emoji = '🏠' if is_remote else '📍'
-            status = 'REMOTE' if is_remote else 'ON-SITE'
-            reanalyzed_mark = ' 🔄 (Re-analyzed)' if job_result['was_reanalyzed'] else ''
-            
-            print(f"\nJob #{idx}")
-            print(f"  Title: {job_title}")
-            print(f"  Location: {job_location}")
-            print(f"  Classification: {emoji} {status} - Confidence: {confidence}{reanalyzed_mark}")
-            
-            if job_result['was_reanalyzed']:
-                print(f"    ├─ Initial: {initial_analysis['reason']}")
-                print(f"    └─ Final: {final_analysis['reason']}")
-            else:
-                print(f"    └─ {final_analysis['reason']}")
-            
-            print(f"  Price: {job_price}")
-            print(f"  Posted by: {job_poster} on {job_date}")
-            print(f"  Description: {job_description[:120]}..." if len(job_description) > 120 else f"  Description: {job_description}")
-            print(f"  URL: {job_full_url}")
-            print("-" * 80)
-        
-        # Display summary statistics
-        print(f"\n{'='*80}")
-        print("CLASSIFICATION SUMMARY:")
-        print(f"{'='*80}")
-        print(f"Total Jobs: {stats['total']}")
-        print(f"\nInitial Classification:")
-        print(f"  📍 ON-SITE HIGH:   {stats.get('on_site_high', 0)} (No recheck needed)")
-        print(f"  📍 ON-SITE MEDIUM: {stats.get('on_site_medium', 0)}")
-        print(f"  📍 ON-SITE LOW:    {stats.get('on_site_low', 0)}")
-        print(f"  🏠 REMOTE MEDIUM:  {stats.get('remote_medium', 0)} (Semantic recheck)")
-        print(f"  🏠 REMOTE LOW:     {stats.get('remote_low', 0)}")
-        print(f"\n🔄 Re-analyzed with Semantic Model: {stats['reanalyzed']} jobs")
-        print(f"📄 Full Descriptions Fetched: {stats['full_description_fetched']} jobs")
         
         # Count final classifications
         final_stats = {
@@ -224,49 +192,85 @@ def scrape_jobs_with_semantic_analysis(url, use_llm=True):
             'remote': sum(1 for r in results if r['final_classification']['is_remote'])
         }
         
-        print(f"\nFinal Results:")
-        print(f"  📍 ON-SITE: {final_stats['on_site']} jobs")
-        print(f"  🏠 REMOTE:  {final_stats['remote']} jobs")
-        print(f"{'='*80}\n")
+        stats['final_on_site'] = final_stats['on_site']
+        stats['final_remote'] = final_stats['remote']
+        stats['llm_used'] = use_llm
         
-        return results, stats
+        print(f"Analysis complete: {stats['final_remote']} remote jobs found out of {stats['total']}")
         
-    except requests.exceptions.RequestException as e:
-        print(f"Error fetching URL: {e}")
-        return [], {}
+        # Export ONLY remote jobs to a fixed filename
+        exporter = JobExporter()
+        
+        # Prepare ONLY remote jobs for export
+        remote_jobs = []
+        for idx, result in enumerate(results, 1):
+            final_class = result['final_classification']
+            if final_class['is_remote']:  # Only include remote jobs
+                remote_jobs.append({
+                    'id': idx,
+                    'title': result['title'],
+                    'location': result['location'],
+                    'category': result['location'].split(' - ')[0] if ' - ' in result['location'] else 'N/A',
+                    'price': result['price'],
+                    'poster': result['poster'],
+                    'date_posted': result['date_posted'],
+                    'classification': 'REMOTE',
+                    'confidence': final_class['confidence'].upper(),
+                    'is_remote': True,
+                    'reasoning': final_class['reason'],
+                    'description': result['description'],
+                    'description_source': result['description_source'],
+                    'was_reanalyzed': result['was_reanalyzed'],
+                    'url': result['url']
+                })
+        
+        # Export to FIXED filename for external app access
+        json_path = exporter.export_to_json(remote_jobs, stats, filename='remote_jobs_latest.json')
+        csv_path = exporter.export_to_csv(remote_jobs, filename='remote_jobs_latest.csv')
+        
+        print(f"\n✅ Remote jobs exported:")
+        print(f"   JSON: {json_path}")
+        print(f"   CSV:  {csv_path}")
+        print(f"\n[{datetime.now().strftime('%Y-%m-%d %H:%M:%S')}] Scraping completed successfully")
+        
+        return remote_jobs, stats
+        
     except Exception as e:
-        print(f"An error occurred: {e}")
+        print(f"❌ ERROR: {e}")
         import traceback
         traceback.print_exc()
         return [], {}
 
 
 if __name__ == "__main__":
-    print("\n🚀 Advanced Job Scraper with Semantic Analysis")
-    print("="*80)
-    
     # Check for Groq API key
     groq_key = os.environ.get('GROQ_API_KEY')
+    use_llm = bool(groq_key)
     
-    if groq_key:
-        print("✅ Groq API key found - Using LLM for semantic analysis")
-        use_llm = True
-    else:
-        print("⚠️  No Groq API key found")
-        print("   Option 1: Set GROQ_API_KEY environment variable")
-        print("   Option 2: Get free API key at: https://console.groq.com/")
-        print("\n   Falling back to local NLP analysis...")
-        use_llm = False
+    print(f"Mode: {'LLM-Enhanced' if use_llm else 'NLP-Only'}")
     
-    print("\n")
+    url = "https://www.jemepropose.com/annonces/?offer_type=2&provider_type=1"
     
-    default_url = "https://www.jemepropose.com/annonces/?offer_type=2&provider_type=1"
-    print(f"Default URL: {default_url}")
-    user_input = input("Press Enter to use default URL or enter a different URL: ").strip()
+    remote_jobs, stats = scrape_and_export_remote_jobs(url, use_llm=use_llm)
     
-    target_url = user_input if user_input else default_url
+    # Log to file for monitoring
+    log_dir = Path('logs')
+    log_dir.mkdir(exist_ok=True)
     
-    if target_url:
-        results, stats = scrape_jobs_with_semantic_analysis(target_url, use_llm=use_llm)
-    else:
-        print("No URL provided.")
+    log_file = log_dir / f"scrape_log_{datetime.now().strftime('%Y%m%d')}.txt"
+    
+    with open(log_file, 'a', encoding='utf-8') as f:
+        f.write(f"\n{'='*80}\n")
+        f.write(f"Run: {datetime.now().strftime('%Y-%m-%d %H:%M:%S')}\n")
+        f.write(f"Total jobs: {stats.get('total', 0)}\n")
+        f.write(f"Remote jobs: {stats.get('final_remote', 0)}\n")
+        f.write(f"Mode: {'LLM' if use_llm else 'NLP'}\n")
+        f.write(f"Status: {'SUCCESS' if remote_jobs is not None else 'FAILED'}\n")
+    
+    # Push to GitHub for web access (if configured)
+    try:
+        from github_publisher import git_push_results
+        print("\n🌐 Publishing to GitHub...")
+        git_push_results()
+    except Exception as e:
+        print(f"ℹ️  GitHub push skipped: {e}")

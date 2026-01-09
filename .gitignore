@@ -1,0 +1,42 @@
+# Python
+__pycache__/
+*.py[cod]
+*$py.class
+*.so
+.Python
+*.egg-info/
+dist/
+build/
+
+# Virtual environments
+venv/
+env/
+ENV/
+
+# Environment variables
+.env
+
+# Logs
+logs/
+*.log
+
+# Temporary files
+*.tmp
+*.bak
+my_remote_jobs.json
+
+# IDE
+.vscode/
+.idea/
+*.swp
+*.swo
+
+# OS
+.DS_Store
+Thumbs.db
+
+# Keep exports but ignore large timestamped files (optionnel)
+# exports/*_202*.json
+# exports/*_202*.csv
+# !exports/remote_jobs_latest.json
+# !exports/remote_jobs_latest.csv

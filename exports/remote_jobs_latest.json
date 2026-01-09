@@ -1,0 +1,40 @@
+{
+  "metadata": {
+    "export_date": "2026-01-09 15:35:21",
+    "total_jobs": 20,
+    "analysis_mode": "LLM-Enhanced"
+  },
+  "statistics": {
+    "total": 20,
+    "on_site_high": 17,
+    "on_site_low": 0,
+    "on_site_medium": 1,
+    "remote_high": 0,
+    "remote_low": 0,
+    "remote_medium": 2,
+    "reanalyzed": 3,
+    "full_description_fetched": 2,
+    "final_on_site": 19,
+    "final_remote": 1,
+    "llm_used": true
+  },
+  "jobs": [
+    {
+      "id": 20,
+      "title": "1er exercice comptable d'une association",
+      "location": "Assistance comptable - Montbizot (72380)",
+      "category": "Assistance comptable",
+      "price": "15.00 € - De l'heure",
+      "poster": "Jenny432",
+      "date_posted": "02/01/2026",
+      "classification": "REMOTE",
+      "confidence": "HIGH",
+      "is_remote": true,
+      "reasoning": "LLM Analysis: Travail comptable réalisable à distance avec ordinateur",
+      "description": "Bonjour,Je recherche une personne pour m'accompagner dans la réalisation du 1er exercice de comptabilité de mon association.",
+      "description_source": "listing_page",
+      "was_reanalyzed": true,
+      "url": "https://www.jemepropose.com/annonces/assistance-comptable/1er-exercice-comptable-dune-association+10498945/"
+    }
+  ]
+}

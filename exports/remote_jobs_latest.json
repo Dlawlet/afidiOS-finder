@@ -1,32 +1,19 @@
 {
   "metadata": {
-    "export_date": "2026-01-09 16:30:53",
-    "total_jobs": 2,
+    "export_date": "2026-01-09 16:50:20",
+    "total_jobs": 1,
     "analysis_mode": "LLM-Enhanced"
   },
   "statistics": {
-    "total": 2,
-    "remote": 2,
+    "total": 1,
+    "remote": 1,
     "on_site": 0,
     "remote_percentage": 100.0,
     "llm_used": true,
     "source": "https://www.jemepropose.com/annonces/?offer_type=2&provider_type=1",
-    "export_date": "2026-01-09 16:30:53"
+    "export_date": "2026-01-09 16:50:20"
   },
   "jobs": [
-    {
-      "id": "17",
-      "title": "Coach en développement personnel / coach de vie",
-      "location": "Coaching personnel - Nice (06000)",
-      "price": "A définir",
-      "poster": "pléiade.mc",
-      "date_posted": "05/01/2026",
-      "description": "Nous sommes une association à la recherche d’un ou d’une coach de vie/coach en développement personnel pour intervenir ponctuellement auprès...",
-      "url": "https://www.jemepropose.com/annonces/coaching-personnel/coach-en-developpement-personnel-coach-de-vie+10496855/",
-      "is_remote": true,
-      "remote_confidence": 0,
-      "remote_reason": "LLM Analysis: Coaching possible en visio/téléphone"
-    },
     {
       "id": "20",
       "title": "1er exercice comptable d'une association",
@@ -35,10 +22,12 @@
       "poster": "Jenny432",
       "date_posted": "02/01/2026",
       "description": "Bonjour,Je recherche une personne pour m'accompagner dans la réalisation du 1er exercice de comptabilité de mon association.",
+      "full_description": "Bonjour,Je recherche une personne pour m'accompagner dans la réalisation du 1er exercice de comptabilité de mon association. Bonjour,Je recherche une personne pour m'accompagner dans la réalisation du 1er exercice de comptabilité de mon association. Soyez le premier à déposer un avis sur cette annonce.",
       "url": "https://www.jemepropose.com/annonces/assistance-comptable/1er-exercice-comptable-dune-association+10498945/",
       "is_remote": true,
       "remote_confidence": 0,
-      "remote_reason": "LLM Analysis: Travail comptable réalisable à distance avec ordinateur"
+      "remote_reason": "LLM Analysis: Travail comptable réalisable à distance avec ordinateur",
+      "analyzed_with_llm": true
     }
   ]
 }

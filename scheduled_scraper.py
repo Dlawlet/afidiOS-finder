@@ -14,6 +14,7 @@ from bs4 import BeautifulSoup
 from urllib.parse import urljoin
 from semantic_analyzer import SemanticJobAnalyzer
 from job_exporter import JobExporter
+from job_helpers import JobDescriptionFetcher, BasicRemoteDetector
 import os
 import json
 from datetime import datetime
@@ -47,9 +48,18 @@ def scrape_and_analyze_jobs(url="https://www.jemepropose.com/annonces/?offer_typ
             print("⚠️  No jobs found - check website structure")
             return None
         
-        # Initialize analyzer
-        print("🤖 Initializing Groq LLM analyzer...")
-        analyzer = SemanticJobAnalyzer(use_groq=use_llm)
+        # Initialize tools
+        print("🤖 Initializing analyzers...")
+        basic_detector = BasicRemoteDetector()
+        description_fetcher = JobDescriptionFetcher()
+        llm_analyzer = SemanticJobAnalyzer(use_groq=use_llm)
+        
+        stats = {
+            'total': len(job_cards),
+            'analyzed_with_llm': 0,
+            'full_description_fetched': 0,
+            'high_confidence_skip': 0
+        }
         
         results = []
         remote_count = 0
@@ -100,7 +110,7 @@ def scrape_and_analyze_jobs(url="https://www.jemepropose.com/annonces/?offer_typ
                     job_date = text
                     break
             
-            # Extract description
+            # Extract description (short preview)
             job_description = 'N/A'
             description_rows = card.find_all('div', class_='row')
             if description_rows:
@@ -109,23 +119,60 @@ def scrape_and_analyze_jobs(url="https://www.jemepropose.com/annonces/?offer_typ
                 if desc_p:
                     job_description = desc_p.get_text(strip=True)
             
-            print(f"[{idx}/{len(job_cards)}] Analyzing: {job_title[:50]}...")
+            print(f"[{idx}/{len(job_cards)}] {job_title[:50]}...")
             
-            # Analyze with LLM
-            analysis = analyzer.analyze_with_groq(
+            # Step 1: Basic keyword detection
+            basic_result = basic_detector.detect_confidence(
                 job_title,
                 job_description,
-                job_location,
-                job_price
+                job_location
             )
             
-            # Store result
-            is_remote = analysis.get('is_remote', False)
+            # Step 2: Decide if we need full description and LLM
+            needs_full_analysis = basic_result['confidence'] != 'HIGH'
+            full_description = job_description
+            
+            if needs_full_analysis:
+                # Fetch full description ONLY if description seems truncated (> 120 chars)
+                # Si < 120 chars, c'est probablement complet
+                if len(job_description) >= 120:
+                    print(f"    📄 Fetching full description (truncated at {len(job_description)} chars)...")
+                    fetched_desc = description_fetcher.fetch_full_description(job_full_url)
+                    if fetched_desc and len(fetched_desc) > len(job_description):
+                        full_description = fetched_desc
+                        stats['full_description_fetched'] += 1
+                        print(f"    ✅ Full description: {len(fetched_desc)} chars")
+                    else:
+                        print(f"    ⚠️ Could not fetch better description")
+                else:
+                    print(f"    ℹ️  Description seems complete ({len(job_description)} chars)")
+                
+                # Step 3: Analyze with LLM
+                print(f"    🤖 Analyzing with LLM...")
+                analysis = llm_analyzer.analyze_with_groq(
+                    job_title,
+                    full_description,
+                    job_location,
+                    job_price
+                )
+                stats['analyzed_with_llm'] += 1
+                
+                is_remote = analysis.get('is_remote', False)
+                remote_confidence = analysis.get('remote_confidence', 0)
+                remote_reason = analysis.get('reason', 'LLM analysis')
+            else:
+                # High confidence from keywords - skip LLM
+                stats['high_confidence_skip'] += 1
+                is_remote = basic_result['is_remote']
+                remote_confidence = 1.0 if basic_result['confidence'] == 'HIGH' else 0.7
+                remote_reason = f"Keyword detection: {basic_result['reason']}"
+            
+            # Display result
             if is_remote:
                 remote_count += 1
-                print(f"  ✅ REMOTE (confidence: {analysis.get('remote_confidence', 0):.2f})")
+                print(f"  ✅ REMOTE (confidence: {remote_confidence:.2f}) - {remote_reason}")
             else:
-                print(f"  ❌ On-site")
+                print(f"  ❌ On-site - {remote_reason}")
             
             job_result = {
                 'id': str(idx),
@@ -135,10 +182,12 @@ def scrape_and_analyze_jobs(url="https://www.jemepropose.com/annonces/?offer_typ
                 'poster': job_poster,
                 'date_posted': job_date,
                 'description': job_description,
+                'full_description': full_description,
                 'url': job_full_url,
                 'is_remote': is_remote,
-                'remote_confidence': analysis.get('remote_confidence', 0),
-                'remote_reason': analysis.get('reason', 'N/A')
+                'remote_confidence': remote_confidence,
+                'remote_reason': remote_reason,
+                'analyzed_with_llm': needs_full_analysis
             }
             
             results.append(job_result)
@@ -148,6 +197,10 @@ def scrape_and_analyze_jobs(url="https://www.jemepropose.com/annonces/?offer_typ
         print(f"   Total jobs: {len(results)}")
         print(f"   Remote jobs: {remote_count}")
         print(f"   Remote percentage: {(remote_count/len(results)*100):.1f}%")
+        print(f"   📊 Stats:")
+        print(f"      - Analyzed with LLM: {stats['analyzed_with_llm']}")
+        print(f"      - High confidence skip: {stats['high_confidence_skip']}")
+        print(f"      - Full descriptions fetched: {stats['full_description_fetched']}")
         print(f"{'='*60}\n")
         
         # Export results

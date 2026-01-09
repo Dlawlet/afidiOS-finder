@@ -56,7 +56,7 @@ class JobDescriptionFetcher:
                 main_content = soup.find('main') or soup.find('article')
                 if main_content:
                     paragraphs = main_content.find_all('p')
-                    long_paragraphs = [p.get_text(strip=True) for p in paragraphs if len(p.get_text(strip=True)) > 50]
+                    long_paragraphs = [p.get_text(strip=True) for p in paragraphs if len(p.get_text(strip=True)) > 10]
                     if long_paragraphs:
                         description = ' '.join(long_paragraphs)
             

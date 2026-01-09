@@ -12,34 +12,40 @@ class SemanticJobAnalyzer:
     Analyzes job descriptions using LLM or NLP to determine remote work possibility
     """
     
-    def __init__(self, use_groq=True, groq_api_key=None):
+    def __init__(self, use_groq=True, groq_api_key=None, verbose=False):
         """
         Initialize the semantic analyzer
         
         Args:
             use_groq: Whether to use Groq API (True) or local NLP (False)
             groq_api_key: Groq API key (optional, can be set in environment)
+            verbose: Show detailed progress messages (default False)
         """
         self.use_groq = use_groq
         self.groq_api_key = groq_api_key or os.getenv('GROQ_API_KEY')
         self.groq_client = None
         self.nlp_model = None
+        self.verbose = verbose
         
         if self.use_groq and self.groq_api_key:
             try:
                 from groq import Groq
                 self.groq_client = Groq(api_key=self.groq_api_key)
-                print("✅ Groq API initialized successfully")
+                if self.verbose:
+                    print("✅ Groq API initialized successfully")
             except ImportError:
-                print("⚠️  Groq library not installed. Run: pip install groq")
-                print("⚠️  Falling back to local NLP")
+                if self.verbose:
+                    print("⚠️  Groq library not installed. Run: pip install groq")
+                    print("⚠️  Falling back to local NLP")
                 self.use_groq = False
             except Exception as e:
-                print(f"⚠️  Groq initialization failed: {e}")
-                print("⚠️  Falling back to local NLP")
+                if self.verbose:
+                    print(f"⚠️  Groq initialization failed: {e}")
+                    print("⚠️  Falling back to local NLP")
                 self.use_groq = False
         else:
-            print("ℹ️  Using local NLP (no Groq API key provided)")
+            if self.verbose:
+                print("ℹ️  Using local NLP (no Groq API key provided)")
             self.use_groq = False
         
         # Initialize local NLP as fallback
@@ -52,13 +58,16 @@ class SemanticJobAnalyzer:
             import spacy
             try:
                 self.nlp_model = spacy.load("fr_core_news_md")
-                print("✅ Local NLP (spaCy) initialized successfully")
+                if self.verbose:
+                    print("✅ Local NLP (spaCy) initialized successfully")
             except OSError:
-                print("⚠️  French model not found. Downloading...")
-                print("   Run: python -m spacy download fr_core_news_md")
+                if self.verbose:
+                    print("⚠️  French model not found. Downloading...")
+                    print("   Run: python -m spacy download fr_core_news_md")
                 self.nlp_model = None
         except ImportError:
-            print("⚠️  spaCy not installed. Run: pip install spacy")
+            if self.verbose:
+                print("⚠️  spaCy not installed. Run: pip install spacy")
             self.nlp_model = None
     
     def analyze_with_groq(self, job_title: str, job_description: str, 
@@ -100,7 +109,7 @@ Response format (JSON ONLY):
 {{
     "is_remote": true/false,
     "confidence": "high",
-    "reason": "brief explanation in French (max 50 words)"
+    "reason": "brief explanation in French (max 10 words)"
 }}
 
 Examples:
@@ -145,8 +154,9 @@ Respond ONLY with valid JSON, no other text."""
             }
             
         except Exception as e:
-            print(f"⚠️  Groq API error: {e}")
-            print("⚠️  Falling back to local NLP")
+            if self.verbose:
+                print(f"⚠️  Groq API error: {e}")
+                print("⚠️  Falling back to local NLP")
             return self._analyze_with_nlp(job_title, job_description, job_location)
     
     def _analyze_with_nlp(self, job_title: str, job_description: str, 
@@ -203,7 +213,8 @@ Respond ONLY with valid JSON, no other text."""
                 if token.lemma_ in physical_verbs:
                     onsite_score += 2
         
-        print(f"    📊 NLP Scores - Remote: {remote_score}, On-site: {onsite_score}")
+        if self.verbose:
+            print(f"    📊 NLP Scores - Remote: {remote_score}, On-site: {onsite_score}")
         
         # Decision logic with lower threshold
         if remote_score > onsite_score + 1:
@@ -254,7 +265,8 @@ Respond ONLY with valid JSON, no other text."""
         if confidence not in ['low', 'medium']:
             return current_result
         
-        print(f"  🔍 Re-analyzing with semantic model: {job_data.get('title', 'N/A')[:50]}...")
+        if self.verbose:
+            print(f"  🔍 Re-analyzing with semantic model: {job_data.get('title', 'N/A')[:50]}...")
         
         if self.use_groq:
             classification = f"{'REMOTE' if current_result.get('is_remote') else 'ON-SITE'} LOW"

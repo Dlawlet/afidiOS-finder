@@ -35,6 +35,8 @@ my_remote_jobs.json
 .DS_Store
 Thumbs.db
 
+scheduled_scraper_old.py
+
 # Keep exports but ignore large timestamped files (optionnel)
 # exports/*_202*.json
 # exports/*_202*.csv

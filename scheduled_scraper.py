@@ -1,93 +1,80 @@
 # -*- coding: utf-8 -*-
 """
-Scheduled Job Scraper - Run automatically via Windows Task Scheduler
-Generates remote jobs export for external applications
+Scheduled Job Scraper - Optimized for GitHub Actions
+Scrapes jemepropose.com and detects remote jobs using Groq LLM
 """
 
 import sys
 import io
-# Force UTF-8 encoding for console output on Windows
+# Force UTF-8 encoding for console output
 sys.stdout = io.TextIOWrapper(sys.stdout.buffer, encoding='utf-8')
 
 import requests
 from bs4 import BeautifulSoup
 from urllib.parse import urljoin
-from remote_detector import RemoteJobDetector
 from semantic_analyzer import SemanticJobAnalyzer
-from description_fetcher import JobDescriptionFetcher
 from job_exporter import JobExporter
 import os
 import json
 from datetime import datetime
-from pathlib import Path
 
 
-def scrape_and_export_remote_jobs(url, use_llm=True):
+def scrape_and_analyze_jobs(url="https://www.jemepropose.com/annonces/?offer_type=2&provider_type=1", use_llm=True):
     """
-    Scrape jobs and export only remote-friendly jobs
-    Optimized for automated scheduling
+    Main scraping function - simplified version
     """
+    print(f"\n{'='*60}")
+    print(f"🚀 Starting job scraper - {datetime.now().strftime('%Y-%m-%d %H:%M:%S')}")
+    print(f"{'='*60}\n")
+    
     try:
-        print(f"[{datetime.now().strftime('%Y-%m-%d %H:%M:%S')}] Starting scheduled scraping...")
-        
         headers = {
             'User-Agent': 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36',
             'Accept': 'text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8',
             'Accept-Language': 'fr-FR,fr;q=0.9,en-US;q=0.8,en;q=0.7',
         }
         
-        response = requests.get(url, headers=headers)
+        print(f"📡 Fetching jobs from: {url}")
+        response = requests.get(url, headers=headers, timeout=30)
         response.raise_for_status()
         
         soup = BeautifulSoup(response.content, 'html.parser')
         job_cards = soup.find_all('div', attrs={'data-url': True})
         
-        print(f"Found {len(job_cards)} jobs to analyze")
+        print(f"✅ Found {len(job_cards)} job listings\n")
         
-        # Initialize detectors
-        basic_detector = RemoteJobDetector()
-        semantic_analyzer = SemanticJobAnalyzer(use_groq=use_llm)
-        description_fetcher = JobDescriptionFetcher()
+        if len(job_cards) == 0:
+            print("⚠️  No jobs found - check website structure")
+            return None
         
-        stats = {
-            'total': len(job_cards),
-            'on_site_high': 0,
-            'on_site_low': 0,
-            'on_site_medium': 0,
-            'remote_high': 0,
-            'remote_low': 0,
-            'remote_medium': 0,
-            'reanalyzed': 0,
-            'full_description_fetched': 0
-        }
+        # Initialize analyzer
+        print("🤖 Initializing Groq LLM analyzer...")
+        analyzer = SemanticJobAnalyzer(use_groq=use_llm)
         
         results = []
+        remote_count = 0
         
         for idx, card in enumerate(job_cards, 1):
             # Extract job data
             job_url = card.get('data-url', 'N/A')
             job_full_url = urljoin(url, job_url) if job_url != 'N/A' else 'N/A'
             
-            job_title = 'N/A'
-            job_description = 'N/A'
-            job_location = 'N/A'
-            job_price = 'N/A'
-            job_poster = 'N/A'
-            job_date = 'N/A'
-            
             # Extract title
+            job_title = 'N/A'
             title_tag = card.find('span', class_='card-title')
             if title_tag:
                 job_title = title_tag.get_text(strip=True)
             
             # Extract location
+            job_location = 'N/A'
             location_tag = card.find('a', class_='grey_jmp_text')
             if location_tag:
                 job_location = location_tag.get_text(strip=True)
             
             # Extract price
-            price_tags_all = card.find_all('b', class_='orange_jmp_text')
-            for price_tag in price_tags_all:
+            job_price = 'N/A'
+            price_tags = card.find_all('b', class_='orange_jmp_text')
+            for price_tag in price_tags:
                 if price_tag.parent.name == 'div':
                     price_text = price_tag.get_text(strip=True)
                     small_tag = price_tag.find_next_sibling('small')
@@ -97,6 +84,7 @@ def scrape_and_export_remote_jobs(url, use_llm=True):
                     break
             
             # Extract poster
+            job_poster = 'N/A'
             poster_tags = card.find_all('b', class_='orange_jmp_text')
             for poster_tag in poster_tags:
                 if poster_tag.parent.name == 'p':
@@ -104,6 +92,7 @@ def scrape_and_export_remote_jobs(url, use_llm=True):
                     break
             
             # Extract date
+            job_date = 'N/A'
             span_tags = card.find_all('span')
             for span in span_tags:
                 text = span.get_text(strip=True)
@@ -112,6 +101,7 @@ def scrape_and_export_remote_jobs(url, use_llm=True):
                     break
             
             # Extract description
+            job_description = 'N/A'
             description_rows = card.find_all('div', class_='row')
             if description_rows:
                 last_row = description_rows[-1]
@@ -119,158 +109,134 @@ def scrape_and_export_remote_jobs(url, use_llm=True):
                 if desc_p:
                     job_description = desc_p.get_text(strip=True)
             
-            # Initial classification
-            initial_analysis = basic_detector.detect_remote_possibility(
+            print(f"[{idx}/{len(job_cards)}] Analyzing: {job_title[:50]}...")
+            
+            # Analyze with LLM
+            analysis = analyzer.analyze_with_groq(
                 job_title,
                 job_description,
-                job_location
+                job_location,
+                job_price
             )
             
-            classification_type = f"{'remote' if initial_analysis['is_remote'] else 'on_site'}_{initial_analysis['confidence']}"
-            stats[classification_type] = stats.get(classification_type, 0) + 1
+            # Store result
+            is_remote = analysis.get('is_remote', False)
+            if is_remote:
+                remote_count += 1
+                print(f"  ✅ REMOTE (confidence: {analysis.get('remote_confidence', 0):.2f})")
+            else:
+                print(f"  ❌ On-site")
             
-            # Check if we need full description
-            needs_semantic = initial_analysis['confidence'].lower() in ['low', 'medium']
-            description_to_use = job_description
-            description_source = 'listing_page'
-            
-            if needs_semantic:
-                if description_fetcher.needs_full_description(job_description):
-                    full_desc_result = description_fetcher.get_best_description(
-                        job_description,
-                        job_url,
-                        force_fetch=False
-                    )
-                    
-                    if full_desc_result['was_fetched']:
-                        description_to_use = full_desc_result['description']
-                        description_source = full_desc_result['source']
-                        stats['full_description_fetched'] += 1
-            
-            # Semantic re-analysis
-            final_analysis = initial_analysis.copy()
-            
-            if initial_analysis['confidence'].lower() in ['low', 'medium']:
-                stats['reanalyzed'] += 1
-                
-                job_data = {
-                    'title': job_title,
-                    'description': description_to_use,
-                    'location': job_location,
-                    'price': job_price
-                }
-                
-                semantic_result = semantic_analyzer.reanalyze_low_confidence(
-                    job_data,
-                    initial_analysis
-                )
-                
-                final_analysis = semantic_result
-            
-            # Store results
             job_result = {
-                'id': idx,
+                'id': str(idx),
                 'title': job_title,
                 'location': job_location,
                 'price': job_price,
                 'poster': job_poster,
                 'date_posted': job_date,
                 'description': job_description,
-                'full_description': description_to_use,
-                'description_source': description_source,
                 'url': job_full_url,
-                'initial_classification': initial_analysis,
-                'final_classification': final_analysis,
-                'was_reanalyzed': initial_analysis['confidence'].lower() in ['low', 'medium']
+                'is_remote': is_remote,
+                'remote_confidence': analysis.get('remote_confidence', 0),
+                'remote_reason': analysis.get('reason', 'N/A')
             }
             
             results.append(job_result)
         
-        # Count final classifications
-        final_stats = {
-            'on_site': sum(1 for r in results if not r['final_classification']['is_remote']),
-            'remote': sum(1 for r in results if r['final_classification']['is_remote'])
-        }
+        print(f"\n{'='*60}")
+        print(f"✅ Analysis complete!")
+        print(f"   Total jobs: {len(results)}")
+        print(f"   Remote jobs: {remote_count}")
+        print(f"   Remote percentage: {(remote_count/len(results)*100):.1f}%")
+        print(f"{'='*60}\n")
         
-        stats['final_on_site'] = final_stats['on_site']
-        stats['final_remote'] = final_stats['remote']
-        stats['llm_used'] = use_llm
-        
-        print(f"Analysis complete: {stats['final_remote']} remote jobs found out of {stats['total']}")
-        
-        # Export ONLY remote jobs to a fixed filename
+        # Export results
+        print("💾 Exporting results...")
         exporter = JobExporter()
         
-        # Prepare ONLY remote jobs for export
-        remote_jobs = []
-        for idx, result in enumerate(results, 1):
-            final_class = result['final_classification']
-            if final_class['is_remote']:  # Only include remote jobs
-                remote_jobs.append({
-                    'id': idx,
-                    'title': result['title'],
-                    'location': result['location'],
-                    'category': result['location'].split(' - ')[0] if ' - ' in result['location'] else 'N/A',
-                    'price': result['price'],
-                    'poster': result['poster'],
-                    'date_posted': result['date_posted'],
-                    'classification': 'REMOTE',
-                    'confidence': final_class['confidence'].upper(),
-                    'is_remote': True,
-                    'reasoning': final_class['reason'],
-                    'description': result['description'],
-                    'description_source': result['description_source'],
-                    'was_reanalyzed': result['was_reanalyzed'],
-                    'url': result['url']
-                })
+        # Create stats for exporter
+        stats = {
+            'total': len(results),
+            'remote': remote_count,
+            'on_site': len(results) - remote_count,
+            'remote_percentage': round(remote_count / len(results) * 100, 2) if results else 0,
+            'llm_used': use_llm,
+            'source': url,
+            'export_date': datetime.now().strftime('%Y-%m-%d %H:%M:%S')
+        }
         
-        # Export to FIXED filename for external app access
-        json_path = exporter.export_to_json(remote_jobs, stats, filename='remote_jobs_latest.json')
-        csv_path = exporter.export_to_csv(remote_jobs, filename='remote_jobs_latest.csv')
+        # Export to fixed filenames (for public access)
+        json_path = exporter.export_to_json(
+            results,
+            stats,
+            filename='remote_jobs_latest.json'
+        )
         
-        print(f"\n✅ Remote jobs exported:")
-        print(f"   JSON: {json_path}")
-        print(f"   CSV:  {csv_path}")
-        print(f"\n[{datetime.now().strftime('%Y-%m-%d %H:%M:%S')}] Scraping completed successfully")
+        csv_path = exporter.export_to_csv(
+            results,
+            filename='remote_jobs_latest.csv'
+        )
         
-        return remote_jobs, stats
+        print(f"✅ JSON exported: {json_path}")
+        print(f"✅ CSV exported: {csv_path}")
+        
+        return {
+            'results': results,
+            'stats': stats
+        }
         
     except Exception as e:
-        print(f"❌ ERROR: {e}")
+        print(f"\n❌ Error during scraping: {e}")
         import traceback
         traceback.print_exc()
-        return [], {}
+        return None
+
+
+def main():
+    """Main entry point"""
+    # Check for Groq API key
+    groq_key = os.getenv('GROQ_API_KEY')
+    
+    if not groq_key:
+        print("⚠️  Warning: GROQ_API_KEY not found in environment")
+        print("   Trying to load from .env file...")
+        
+        # Try to load from .env
+        try:
+            with open('.env', 'r') as f:
+                for line in f:
+                    if line.startswith('GROQ_API_KEY='):
+                        groq_key = line.split('=', 1)[1].strip()
+                        os.environ['GROQ_API_KEY'] = groq_key
+                        print("   ✅ Loaded from .env file")
+                        break
+        except FileNotFoundError:
+            print("   ❌ .env file not found")
+    
+    if not groq_key:
+        print("\n❌ ERROR: GROQ_API_KEY not configured")
+        print("   Set it in GitHub Secrets or create a .env file")
+        sys.exit(1)
+    
+    # Run scraper
+    result = scrape_and_analyze_jobs()
+    
+    if result:
+        print(f"\n🎉 Scraping completed successfully!")
+        print(f"\n📊 Summary:")
+        print(f"   - Total jobs scraped: {result['stats']['total']}")
+        print(f"   - Remote jobs found: {result['stats']['remote']}")
+        
+        # Show public URLs
+        print(f"\n🌍 Public access URLs:")
+        print(f"   JSON: https://raw.githubusercontent.com/Dlawlet/afidiOS-finder/main/exports/remote_jobs_latest.json")
+        print(f"   CSV:  https://raw.githubusercontent.com/Dlawlet/afidiOS-finder/main/exports/remote_jobs_latest.csv")
+        
+        return 0
+    else:
+        print("\n❌ Scraping failed")
+        return 1
 
 
 if __name__ == "__main__":
-    # Check for Groq API key
-    groq_key = os.environ.get('GROQ_API_KEY')
-    use_llm = bool(groq_key)
-    
-    print(f"Mode: {'LLM-Enhanced' if use_llm else 'NLP-Only'}")
-    
-    url = "https://www.jemepropose.com/annonces/?offer_type=2&provider_type=1"
-    
-    remote_jobs, stats = scrape_and_export_remote_jobs(url, use_llm=use_llm)
-    
-    # Log to file for monitoring
-    log_dir = Path('logs')
-    log_dir.mkdir(exist_ok=True)
-    
-    log_file = log_dir / f"scrape_log_{datetime.now().strftime('%Y%m%d')}.txt"
-    
-    with open(log_file, 'a', encoding='utf-8') as f:
-        f.write(f"\n{'='*80}\n")
-        f.write(f"Run: {datetime.now().strftime('%Y-%m-%d %H:%M:%S')}\n")
-        f.write(f"Total jobs: {stats.get('total', 0)}\n")
-        f.write(f"Remote jobs: {stats.get('final_remote', 0)}\n")
-        f.write(f"Mode: {'LLM' if use_llm else 'NLP'}\n")
-        f.write(f"Status: {'SUCCESS' if remote_jobs is not None else 'FAILED'}\n")
-    
-    # Push to GitHub for web access (if configured)
-    try:
-        from github_publisher import git_push_results
-        print("\n🌐 Publishing to GitHub...")
-        git_push_results()
-    except Exception as e:
-        print(f"ℹ️  GitHub push skipped: {e}")
+    sys.exit(main())

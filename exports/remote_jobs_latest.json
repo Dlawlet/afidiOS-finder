@@ -1,6 +1,6 @@
 {
   "metadata": {
-    "export_date": "2026-01-09 17:54:07",
+    "export_date": "2026-01-09 16:59:04",
     "total_jobs": 11,
     "analysis_mode": "LLM-Enhanced"
   },
@@ -11,7 +11,7 @@
     "remote_percentage": 100.0,
     "llm_used": true,
     "source": "https://www.jemepropose.com/annonces/?offer_type=2&provider_type=1&page=10",
-    "export_date": "2026-01-09 17:54:07"
+    "export_date": "2026-01-09 16:59:04"
   },
   "jobs": [
     {
@@ -26,7 +26,7 @@
       "url": "https://www.jemepropose.com/annonces/assistance-comptable/1er-exercice-comptable-dune-association+10498945/",
       "is_remote": true,
       "remote_confidence": 0,
-      "remote_reason": "LLM Analysis: Travail comptable réalisable à distance",
+      "remote_reason": "NLP Analysis: Strong remote indicators (score: 9 vs 0)",
       "analyzed_with_llm": true,
       "page": 1
     },

@@ -3,15 +3,14 @@ from bs4 import BeautifulSoup
 from urllib.parse import urljoin
 from remote_detector import RemoteJobDetector
 
-def scrape_jobs(url):
+def scrape_remote_jobs_only(url):
     """
-    Scrape job listings from jemepropose.com
+    Scrape and filter only remote jobs from jemepropose.com
     
     Args:
         url: The URL of the job listing page
     """
     try:
-        # Send a GET request to the URL
         headers = {
             'User-Agent': 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/91.0.4472.124 Safari/537.36',
             'Accept': 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,*/*;q=0.8',
@@ -20,46 +19,35 @@ def scrape_jobs(url):
         }
         
         response = requests.get(url, headers=headers)
-        response.raise_for_status()  # Raise an exception for bad status codes
+        response.raise_for_status()
         
-        # Parse the HTML content
         soup = BeautifulSoup(response.content, 'html.parser')
-        
-        # Find all job listings - looking for div with data-url attribute
-        # This captures both fadeLeft and fadeRight animations
         job_cards = soup.find_all('div', attrs={'data-url': True})
         
-        # Initialize remote job detector
         detector = RemoteJobDetector()
         
-        print(f"Found {len(job_cards)} job(s):\n")
-        print("=" * 80)
+        remote_jobs = []
+        on_site_jobs = []
         
-        # Extract and print information for each job
-        for idx, card in enumerate(job_cards, 1):
-            # Get the data-url attribute
+        # Analyze all jobs
+        for card in job_cards:
             job_url = card.get('data-url', 'N/A')
             job_full_url = urljoin(url, job_url) if job_url != 'N/A' else 'N/A'
             
-            # Try to extract job title and other details
+            # Extract job details
             job_title = 'N/A'
             job_description = 'N/A'
             job_location = 'N/A'
             job_price = 'N/A'
-            job_poster = 'N/A'
-            job_date = 'N/A'
             
-            # Extract title from span with class "card-title"
             title_tag = card.find('span', class_='card-title')
             if title_tag:
                 job_title = title_tag.get_text(strip=True)
             
-            # Extract location from link with class "grey_jmp_text"
             location_tag = card.find('a', class_='grey_jmp_text')
             if location_tag:
                 job_location = location_tag.get_text(strip=True)
             
-            # Extract price from b tag with class "orange_jmp_text" and its sibling small tag
             price_tags_all = card.find_all('b', class_='orange_jmp_text')
             for price_tag in price_tags_all:
                 if price_tag.parent.name == 'div':
@@ -70,22 +58,6 @@ def scrape_jobs(url):
                     job_price = price_text
                     break
             
-            # Extract poster name (first b tag with orange_jmp_text class that's in a p tag)
-            poster_tags = card.find_all('b', class_='orange_jmp_text')
-            for poster_tag in poster_tags:
-                if poster_tag.parent.name == 'p':
-                    job_poster = poster_tag.get_text(strip=True)
-                    break
-            
-            # Extract date
-            span_tags = card.find_all('span')
-            for span in span_tags:
-                text = span.get_text(strip=True)
-                if '/' in text and len(text) == 10:  # Date format DD/MM/YYYY
-                    job_date = text
-                    break
-            
-            # Extract description from the last p tag in the card
             description_rows = card.find_all('div', class_='row')
             if description_rows:
                 last_row = description_rows[-1]
@@ -93,38 +65,62 @@ def scrape_jobs(url):
                 if desc_p:
                     job_description = desc_p.get_text(strip=True)
             
-            # Detect if job can be done remotely
+            # Detect remote possibility
             remote_analysis = detector.detect_remote_possibility(
                 job_title, 
                 job_description, 
                 job_location
             )
-            remote_status = detector.format_remote_status(remote_analysis)
             
-            print(f"Job #{idx}")
-            print(f"  Title: {job_title}")
-            print(f"  Location: {job_location}")
-            print(f"  Remote Work: {remote_status}")
-            print(f"  └─ Reason: {remote_analysis['reason']}")
-            print(f"  Price: {job_price}")
-            print(f"  Posted by: {job_poster}")
-            print(f"  Date: {job_date}")
-            print(f"  Description: {job_description[:150]}..." if len(job_description) > 150 else f"  Description: {job_description}")
-            print(f"  URL: {job_full_url}")
-            print("-" * 80)
+            job_data = {
+                'title': job_title,
+                'location': job_location,
+                'price': job_price,
+                'description': job_description,
+                'url': job_full_url,
+                'remote_analysis': remote_analysis
+            }
+            
+            if remote_analysis['is_remote']:
+                remote_jobs.append(job_data)
+            else:
+                on_site_jobs.append(job_data)
         
-        return job_cards
+        # Display results
+        print(f"\n{'='*80}")
+        print(f"SUMMARY: Found {len(job_cards)} total jobs")
+        print(f"  🏠 REMOTE: {len(remote_jobs)} jobs")
+        print(f"  📍 ON-SITE: {len(on_site_jobs)} jobs")
+        print(f"{'='*80}\n")
+        
+        if remote_jobs:
+            print(f"\n🏠 REMOTE JOBS ({len(remote_jobs)}):\n")
+            print("=" * 80)
+            
+            for idx, job in enumerate(remote_jobs, 1):
+                print(f"\nJob #{idx}")
+                print(f"  Title: {job['title']}")
+                print(f"  Location: {job['location']}")
+                print(f"  Price: {job['price']}")
+                print(f"  Confidence: {job['remote_analysis']['confidence'].upper()}")
+                print(f"  Reason: {job['remote_analysis']['reason']}")
+                print(f"  Description: {job['description'][:150]}..." if len(job['description']) > 150 else f"  Description: {job['description']}")
+                print(f"  URL: {job['url']}")
+                print("-" * 80)
+        else:
+            print("\n⚠️  No remote jobs found in this search.")
+        
+        return remote_jobs, on_site_jobs
         
     except requests.exceptions.RequestException as e:
         print(f"Error fetching the URL: {e}")
-        return []
+        return [], []
     except Exception as e:
         print(f"An error occurred: {e}")
-        return []
+        return [], []
 
 
 if __name__ == "__main__":
-    # Default URL for jemepropose.com
     default_url = "https://www.jemepropose.com/annonces/?offer_type=2&provider_type=1"
     
     print(f"Default URL: {default_url}")
@@ -133,6 +129,6 @@ if __name__ == "__main__":
     target_url = user_input if user_input else default_url
     
     if target_url:
-        scrape_jobs(target_url)
+        scrape_remote_jobs_only(target_url)
     else:
-        print("No URL provided. Please run the script again with a valid URL.")
+        print("No URL provided.")

@@ -1,6 +1,6 @@
 {
   "metadata": {
-    "export_date": "2026-01-09 16:23:30",
+    "export_date": "2026-01-09 15:25:25",
     "total_jobs": 20,
     "analysis_mode": "LLM-Enhanced"
   },
@@ -11,7 +11,7 @@
     "remote_percentage": 10.0,
     "llm_used": true,
     "source": "https://www.jemepropose.com/annonces/?offer_type=2&provider_type=1",
-    "export_date": "2026-01-09 16:23:30"
+    "export_date": "2026-01-09 15:25:25"
   },
   "jobs": [
     {
@@ -259,7 +259,7 @@
       "url": "https://www.jemepropose.com/annonces/bricolage/travaux-urgents+10498994/",
       "is_remote": false,
       "remote_confidence": 0,
-      "remote_reason": "LLM Analysis: Bricolage nécessite une présence physique"
+      "remote_reason": "LLM Analysis: Bricolage nécessite présence physique"
     },
     {
       "id": "20",

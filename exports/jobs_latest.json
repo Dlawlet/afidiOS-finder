@@ -1,6 +1,10 @@
 {
   "metadata": {
+<<<<<<< HEAD
     "export_date": "2026-01-09 16:50:20",
+=======
+    "export_date": "2026-01-09 15:34:22",
+>>>>>>> 24e3e4533be1a7d43457b8502eb40a272225343c
     "total_jobs": 20,
     "analysis_mode": "LLM-Enhanced"
   },
@@ -11,7 +15,11 @@
     "remote_percentage": 5.0,
     "llm_used": true,
     "source": "https://www.jemepropose.com/annonces/?offer_type=2&provider_type=1",
+<<<<<<< HEAD
     "export_date": "2026-01-09 16:50:20"
+=======
+    "export_date": "2026-01-09 15:34:22"
+>>>>>>> 24e3e4533be1a7d43457b8502eb40a272225343c
   },
   "jobs": [
     {
@@ -100,9 +108,14 @@
       "full_description": "je recherche personne pour ménage nettoyage",
       "url": "https://www.jemepropose.com/annonces/menage/cherche-pour-menage+10499215/",
       "is_remote": false,
+<<<<<<< HEAD
       "remote_confidence": 1.0,
       "remote_reason": "Keyword detection: On-site keyword: ménage",
       "analyzed_with_llm": false
+=======
+      "remote_confidence": 0,
+      "remote_reason": "LLM Analysis: Présence physique obligatoire pour ménage et nettoyage"
+>>>>>>> 24e3e4533be1a7d43457b8502eb40a272225343c
     },
     {
       "id": "7",

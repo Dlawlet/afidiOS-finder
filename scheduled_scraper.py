@@ -155,7 +155,7 @@ def scrape_and_analyze_jobs(url="https://www.jemepropose.com/annonces/?offer_typ
         exporter = JobExporter()
         
         # Create stats for exporter
-        stats = {
+        stats_all = {
             'total': len(results),
             'remote': remote_count,
             'on_site': len(results) - remote_count,
@@ -165,24 +165,55 @@ def scrape_and_analyze_jobs(url="https://www.jemepropose.com/annonces/?offer_typ
             'export_date': datetime.now().strftime('%Y-%m-%d %H:%M:%S')
         }
         
-        # Export to fixed filenames (for public access)
-        json_path = exporter.export_to_json(
+        # Filter remote jobs only
+        remote_jobs = [job for job in results if job['is_remote']]
+        
+        stats_remote = {
+            'total': len(remote_jobs),
+            'remote': len(remote_jobs),
+            'on_site': 0,
+            'remote_percentage': 100.0,
+            'llm_used': use_llm,
+            'source': url,
+            'export_date': datetime.now().strftime('%Y-%m-%d %H:%M:%S')
+        }
+        
+        # Export ALL jobs to jobs_latest.*
+        print("📦 Exporting all jobs...")
+        json_all = exporter.export_to_json(
             results,
-            stats,
+            stats_all,
+            filename='jobs_latest.json'
+        )
+        
+        csv_all = exporter.export_to_csv(
+            results,
+            filename='jobs_latest.csv'
+        )
+        
+        print(f"✅ All jobs JSON: {json_all}")
+        print(f"✅ All jobs CSV: {csv_all}")
+        
+        # Export REMOTE ONLY to remote_jobs_latest.*
+        print("🏠 Exporting remote jobs only...")
+        json_remote = exporter.export_to_json(
+            remote_jobs,
+            stats_remote,
             filename='remote_jobs_latest.json'
         )
         
-        csv_path = exporter.export_to_csv(
-            results,
+        csv_remote = exporter.export_to_csv(
+            remote_jobs,
             filename='remote_jobs_latest.csv'
         )
         
-        print(f"✅ JSON exported: {json_path}")
-        print(f"✅ CSV exported: {csv_path}")
+        print(f"✅ Remote jobs JSON: {json_remote}")
+        print(f"✅ Remote jobs CSV: {csv_remote}")
         
         return {
             'results': results,
-            'stats': stats
+            'remote_jobs': remote_jobs,
+            'stats': stats_all
         }
         
     except Exception as e:

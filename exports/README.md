@@ -4,19 +4,32 @@ Ce dossier contient les résultats du scraping automatique.
 
 ## Fichiers
 
-- `remote_jobs_latest.json` - Tous les jobs (format JSON)
-- `remote_jobs_latest.csv` - Tous les jobs (format CSV)
-- `jobs_latest.json` - Ancienne version (obsolète)
-- `jobs_latest.csv` - Ancienne version (obsolète)
+### Tous les jobs
+- `jobs_latest.json` - **Tous les jobs** scrapés (format JSON)
+- `jobs_latest.csv` - **Tous les jobs** scrapés (format CSV)
+
+### Jobs remote uniquement
+- `remote_jobs_latest.json` - **Jobs remote uniquement** (format JSON)
+- `remote_jobs_latest.csv` - **Jobs remote uniquement** (format CSV)
 
 ## Accès public
 
-**JSON:**
+**Tous les jobs (JSON):**
+```
+https://raw.githubusercontent.com/Dlawlet/afidiOS-finder/main/exports/jobs_latest.json
+```
+
+**Tous les jobs (CSV):**
+```
+https://raw.githubusercontent.com/Dlawlet/afidiOS-finder/main/exports/jobs_latest.csv
+```
+
+**Remote uniquement (JSON):**
 ```
 https://raw.githubusercontent.com/Dlawlet/afidiOS-finder/main/exports/remote_jobs_latest.json
 ```
 
-**CSV:**
+**Remote uniquement (CSV):**
 ```
 https://raw.githubusercontent.com/Dlawlet/afidiOS-finder/main/exports/remote_jobs_latest.csv
 ```

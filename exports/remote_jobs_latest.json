@@ -1,17 +1,17 @@
 {
   "metadata": {
-    "export_date": "2026-01-10 22:34:22",
-    "total_jobs": 10,
+    "export_date": "2026-01-10 22:45:21",
+    "total_jobs": 5,
     "analysis_mode": "LLM-Enhanced"
   },
   "statistics": {
-    "total": 10,
-    "remote": 10,
+    "total": 5,
+    "remote": 5,
     "on_site": 0,
     "remote_percentage": 100.0,
     "llm_used": true,
-    "source": "https://www.jemepropose.com/annonces/?offer_type=2&provider_type=1&page=10",
-    "export_date": "2026-01-10 22:34:22"
+    "source": "https://www.jemepropose.com/annonces/?offer_type=2&provider_type=1&page=5",
+    "export_date": "2026-01-10 22:45:21"
   },
   "jobs": [
     {
@@ -93,86 +93,6 @@
       "remote_reason": "NLP Analysis: Likely remote work (score: 3 vs 2)",
       "analyzed_with_llm": true,
       "page": 4
-    },
-    {
-      "id": "120",
-      "title": "Creation site internet",
-      "location": "Création site internet - Cagnes-sur-Mer (06800)",
-      "price": "Gratuit",
-      "poster": "ciindy1031",
-      "date_posted": "04/11/2025",
-      "description": "Bonjour je recherche une personne qui peut me cree un site internet droopshipping cles en main . Je prendrer le devis le moins chere car je...",
-      "full_description": "Numéro de mise en relation Bonjour je recherche une personne qui peut me cree un site internet droopshipping cles en main . Je prendrer le devis le moins chere car je n’est pas un gros budjet cordialement Bonjour je recherche une personne qui peut me cree un site internet droopshipping cles en main . Je prendrer le devis le moins chere car je n’est pas un gros budjet cordialement Soyez le premier à déposer un avis sur cette annonce.",
-      "url": "https://www.jemepropose.com/annonces/creation-site-internet/creation-site-internet+10496507/",
-      "is_remote": true,
-      "remote_confidence": 0.0,
-      "remote_reason": "NLP Analysis: Strong remote indicators (score: 2 vs 0)",
-      "analyzed_with_llm": true,
-      "page": 6
-    },
-    {
-      "id": "124",
-      "title": "Cours de français langue étrangère (FLE) – préparation DELF B2﻿ / DALF C1﻿",
-      "location": "Formations à distance - A Distance",
-      "price": "A définir",
-      "poster": "SophieFLE",
-      "date_posted": "01/11/2025",
-      "description": "Formatrice diplômée Master 2 en didactique du FLE, avec près de 20 ans d’expérience. J’offre un accompagnement personnalisé pour réussir...",
-      "full_description": "Formatrice diplômée Master 2 en didactique du FLE, avec près de 20 ans d’expérience. J’offre un accompagnement personnalisé pour réussir...",
-      "url": "https://www.jemepropose.com/annonces/formations-a-distance/cours-de-francais-langue-etrangere-fle-preparation-delf-b2-dalf-c1+10496361/",
-      "is_remote": true,
-      "remote_confidence": 1.0,
-      "remote_reason": "Keyword detection: Keyword: à distance",
-      "analyzed_with_llm": false,
-      "page": 7
-    },
-    {
-      "id": "143",
-      "title": "Secrétariat à distance",
-      "location": "Secrétariat - Limoges-Fourches (77550)",
-      "price": "A définir",
-      "poster": "Tess@secrétariat",
-      "date_posted": "20/10/2025",
-      "description": "Vous recherchez un service de secrétariat à distance lors de vos vacances, vous avez un surplus de travail ou tout simplement vous souhaitez...",
-      "full_description": "Vous recherchez un service de secrétariat à distance lors de vos vacances, vous avez un surplus de travail ou tout simplement vous souhaitez...",
-      "url": "https://www.jemepropose.com/annonces/secretariat/secretariat-a-distance+10495683/",
-      "is_remote": true,
-      "remote_confidence": 1.0,
-      "remote_reason": "Keyword detection: Keyword: à distance",
-      "analyzed_with_llm": false,
-      "page": 8
-    },
-    {
-      "id": "165",
-      "title": "Montage vidéo anniversaire 40 ans – photos + vidéos + musique",
-      "location": "Montage vidéo - Brindas (69126)",
-      "price": "A définir",
-      "poster": "Gilles brindas",
-      "date_posted": "29/09/2025",
-      "description": "bonjour, Je recherche une personne capable de réaliser une vidéo d’anniversaire pour les 40 ans de ma femme. Contenu à monter...",
-      "full_description": "Numéro de mise en relation bonjour, Je recherche une personne capable de réaliser une vidéo d’anniversaire pour les 40 ans de ma femme. Contenu à monter : Plus de 80 photos, Quelques vidéos courtes (dont une séquence avec nos enfants), Textes humoristiques et tendres que j’ai déjà préparés, 2 à 3 musiques différentes pour rythmer la vidéo. Style recherché : Vidéo d’une durée d’environ 8 minutes, Mélange humour + émotion, Effets simples et élégants (zoom, fondu, transitions fluides), Résultat final en format MP4 Full HD, prêt à être diffusé lors de l’événement. Date limite : jeudi 2 octobre Je recherche une personne capable de réaliser une vidéo d’anniversaire pour les 40 ans de ma femme. Contenu à monter : Plus de 80 photos, Quelques vidéos courtes (dont une séquence avec nos enfants), Textes humoristiques et tendres que j’ai déjà préparés, 2 à 3 musiques différentes pour rythmer la vidéo. Style recherché : Vidéo d’une durée d’environ 8 minutes, Mélange humour + émotion, Effets simples et élégants (zoom, fondu, transitions fluides), Résultat final en format MP4 Full HD, prêt à être diffusé lors de l’événement. Date limite : jeudi 2 octobre Soyez le premier à déposer un avis sur cette annonce.",
-      "url": "https://www.jemepropose.com/annonces/montage-video/montage-video-anniversaire-40-ans-photos-videos-musique+10494609/",
-      "is_remote": true,
-      "remote_confidence": 0.0,
-      "remote_reason": "NLP Analysis: Strong remote indicators (score: 2 vs 0)",
-      "analyzed_with_llm": true,
-      "page": 9
-    },
-    {
-      "id": "175",
-      "title": "Recherche modèle pour collaboration shooting lifestyle",
-      "location": "Modèle photo - Paris (75000)",
-      "price": "Échange",
-      "poster": "Nicky Lebel",
-      "date_posted": "21/09/2025",
-      "description": "Bonjour, Dans le cadre du renouvellement de mon portfolio, je recherche 4 à 5 modèles (H/F, tout âge, tout style) pour des séances...",
-      "full_description": "Bonjour, Dans le cadre du renouvellement de mon portfolio, je recherche 4 à 5 modèles (H/F, tout âge, tout style) pour des séances photos collaboratives. En échange de votre temps et de votre énergie, je vous fournirai des photos retouchées, que vous pourrez utiliser pour votre propre book. De mon côté, cela me permettra de développer ma nouvelle orientation artistique. Je prévois des séances en extérieur à Paris et/ou alentours. Projet non rémunéré (échange de compétences). Merci de m’écrire si vous souhaitez participer, avec une courte présentation et, si possible, 2-3 photos de vous. email: contact@nickylebel.com Site: nickylebel.com Merci Dans le cadre du renouvellement de mon portfolio, je recherche 4 à 5 modèles (H/F, tout âge, tout style) pour des séances photos collaboratives. En échange de votre temps et de votre énergie, je vous fournirai des photos retouchées, que vous pourrez utiliser pour votre propre book. De mon côté, cela me permettra de développer ma nouvelle orientation artistique. Je prévois des séances en extérieur à Paris et/ou alentours. Projet non rémunéré (échange de compétences). Merci de m’écrire si vous souhaitez participer, avec une courte présentation et, si possible, 2-3 photos de vous. email: contact@nickylebel.com Site: nickylebel.com Soyez le premier à déposer un avis sur cette annonce.",
-      "url": "https://www.jemepropose.com/annonces/modele-photo/recherche-modele-pour-collaboration-shooting-lifestyle+10494156/",
-      "is_remote": true,
-      "remote_confidence": 0.0,
-      "remote_reason": "NLP Analysis: Strong remote indicators (score: 2 vs 0)",
-      "analyzed_with_llm": true,
-      "page": 9
     }
   ]
 }

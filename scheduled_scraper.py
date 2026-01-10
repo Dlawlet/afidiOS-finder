@@ -195,7 +195,7 @@ def scrape_and_analyze_jobs(base_url="https://www.jemepropose.com/annonces/?offe
                     stats['analyzed_with_llm'] += 1
                     
                     is_remote = analysis.get('is_remote', False)
-                    remote_confidence = analysis.get('remote_confidence', 0)
+                    remote_confidence = analysis.get('remote_confidence', 0.0)
                     remote_reason = analysis.get('reason', 'LLM analysis')
                 else:
                     # High confidence from keywords - skip LLM

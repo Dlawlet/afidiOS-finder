@@ -110,7 +110,17 @@ class BasicRemoteDetector:
             'mécanique', 'mecanique', 'réparation', 'reparation',
             'chauffeur', 'conducteur', 'transport', 'camion',
             'manuel', 'physique', 'sur place', 'à domicile',
-            'présence', 'presence'
+            'présence', 'presence',
+            # Job seeker indicators (NOT job offers!)
+            'je cherche', 'je recherche un emploi', 'recherche emploi',
+            'cherche un cdi', 'cherche un cdd', 'candidature',
+            'je suis disponible', 'mon cv', 'mes compétences',
+            # Local service indicators
+            'accompagner', 'accompagnement personnalisé',
+            'rendez-vous physique', 'se déplacer', 'déplacement',
+            'visite à domicile', 'chez le client', 'chez vous',
+            'commercial', 'prospection', 'visites clients',
+            'immobilier', 'visite de biens', 'estimation sur place'
         ]
     
     def detect_confidence(self, job_title, job_description, job_location):
@@ -132,9 +142,12 @@ class BasicRemoteDetector:
                     'reason': f"Keyword: {keyword}"
                 }
         
-        # Check strong on-site indicators
+        # Check strong on-site indicators (with context)
         for keyword in self.onsite_keywords_high:
             if keyword in text:
+                # Special case: "pas de déplacement" = remote-friendly
+                if keyword in ['déplacement', 'se déplacer'] and 'pas de' in text:
+                    continue
                 return {
                     'is_remote': False,
                     'confidence': 'HIGH',

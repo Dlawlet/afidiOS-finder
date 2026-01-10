@@ -88,38 +88,68 @@ class SemanticJobAnalyzer:
             return self._analyze_with_nlp(job_title, job_description, job_location)
         
         try:
-            prompt = f"""Analyze this French job listing and determine if it can be done remotely.
+            prompt = f"""You are analyzing a French job listing to determine if it's a genuine remote work opportunity.
 
-Job Title: {job_title}
+JOB LISTING:
+Title: {job_title}
 Location/Category: {job_location}
 Description: {job_description}
 
-Current Classification: {current_classification}
+YOUR TASK:
+Determine if this is a GENUINE remote work opportunity where the worker can perform 100% of their duties from home/anywhere without needing to be physically present.
 
-Instructions:
-1. Determine if this job CAN be done remotely (télétravail possible)
-2. Consider ONLY the job description content - ignore location city name
-3. Key factors:
-   - Does it require physical presence? (cleaning, childcare, construction = NO)
-   - Can it be done with computer/internet? (accounting, coaching, writing = YES)
-   - Does it mention "sur place", "à domicile", "présentiel"? (= likely NO)
-   - Does it mention "en ligne", "visio", "distance"? (= likely YES)
+THINK LIKE A HUMAN:
+- Is this even a job offer, or is someone looking for work themselves?
+- Does the actual work require physical presence (visiting clients, handling physical objects, in-person meetings)?
+- Can ALL the work be done (or the final result be shared) through a computer and internet connection?
+- Are there explicit mentions of remote/télétravail, or clear indicators the work is 100% online?
+- What is the INTENT behind the words, not just the keywords?
 
-Response format (JSON ONLY):
+BE CONSERVATIVE:
+- If it's ambiguous or unclear → classify as NOT remote
+- If it COULD be remote but doesn't explicitly say so → NOT remote
+- If it requires ANY physical presence → NOT remote
+- Only classify as remote if it's clearly, genuinely, 100% work-from-home
+
+CONTEXT MATTERS:
+- "Je cherche une personne" (I'm hiring) ≠ "Je cherche un emploi" (I'm job hunting)
+- "Accompagner en visio" (remote coaching) ≠ "Accompagner sur place" (in-person)
+- "Commercial digital en ligne" (remote sales) ≠ "Commercial terrain" (field sales)
+- "A Distance" in location doesn't guarantee remote - read the actual description
+
+EXAMPLES OF YOUR REASONING:
+
+Example 1: "Assistance comptable - Je recherche une personne pour m'accompagner dans la réalisation de ma comptabilité"
+→ is_remote: false, confidence: 0.85
+→ reason: "Accompagnement implique présence physique chez le client"
+→ Why: "Accompagner" in this context means in-person help, not remote assistance
+
+Example 2: "Développeur web - Création site WordPress, travail 100% en télétravail"
+→ is_remote: true, confidence: 0.95
+→ reason: "Développement web explicitement en télétravail"
+→ Why: Clear statement of 100% remote work
+
+Example 3: "Secrétariat - Je cherche un emploi en CDI comme assistante administrative"
+→ is_remote: false, confidence: 1.0
+→ reason: "Annonce de recherche d'emploi, pas une offre"
+→ Why: This is a job seeker, not an employer offering a position
+
+Example 4: "Rédaction articles - Tout se fait en ligne, communication par email"
+→ is_remote: true, confidence: 0.90
+→ reason: "Travail d'écriture entièrement en ligne"
+→ Why: Writing work with online-only communication is clearly remote
+
+Example 5: "Commercial immobilier - Prospecter et accompagner les clients dans leurs projets"
+→ is_remote: false, confidence: 0.90
+→ reason: "Immobilier nécessite visites physiques des biens"
+→ Why: Real estate inherently requires property visits
+
+RESPOND IN JSON FORMAT ONLY:
 {{
     "is_remote": true/false,
-    "confidence": "high",
-    "reason": "brief explanation in French (max 10 words)"
-}}
-
-Examples:
-- "Assistance comptable" + computer work → {{"is_remote": true, "confidence": "high", "reason": "Travail comptable réalisable à distance avec ordinateur"}}
-- "Coaching personnel" + no mention of "sur place" → {{"is_remote": true, "confidence": "high", "reason": "Coaching possible en visio/téléphone"}}
-- "Coaching" + "intervenir auprès d'un public" → {{"is_remote": false, "confidence": "high", "reason": "Intervention en présentiel requise"}}
-- "Ménage" → {{"is_remote": false, "confidence": "high", "reason": "Présence physique obligatoire"}}
-- "Ingénieur du son pour tournage" → {{"is_remote": false, "confidence": "high", "reason": "Présence sur le plateau de tournage nécessaire"}}
-
-Respond ONLY with valid JSON, no other text."""
+    "confidence": 0.0-1.0,
+    "reason": "clear explanation in French (max 12 words)"
+}}"""
 
             chat_completion = self.groq_client.chat.completions.create(
                 messages=[
@@ -147,10 +177,17 @@ Respond ONLY with valid JSON, no other text."""
             
             result = json.loads(response_text)
             
+            # Extract and validate confidence score
+            confidence = result.get('confidence', 0.5)
+            if isinstance(confidence, str):
+                # Convert old string format to float
+                confidence_map = {'high': 0.9, 'medium': 0.6, 'low': 0.3}
+                confidence = confidence_map.get(confidence.lower(), 0.5)
+            
             return {
                 'is_remote': result.get('is_remote', False),
-                'confidence': result.get('confidence', 'medium'),
-                'reason': f"LLM Analysis: {result.get('reason', 'No reason provided')}"
+                'remote_confidence': float(confidence),
+                'reason': f"LLM: {result.get('reason', 'No reason provided')}"
             }
             
         except Exception as e:

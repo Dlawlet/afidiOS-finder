@@ -367,9 +367,9 @@ def main():
         print("\n❌ ERROR: GROQ_API_KEY not configured")
         print("   Set it in GitHub Secrets or create a .env file")
         sys.exit(1)
-    
-    # Run scraper with verbose flag and max 5 pages (to stay within Groq API free tier)
-    result = scrape_and_analyze_jobs(verbose=args.verbose, max_pages=5)
+
+    # Run scraper with verbose flag and max 10 pages (to stay within Groq API free tier)
+    result = scrape_and_analyze_jobs(verbose=args.verbose, max_pages=10)
     
     if result:
         print(f"\n🎉 Scraping completed successfully!")

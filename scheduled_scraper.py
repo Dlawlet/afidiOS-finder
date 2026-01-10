@@ -144,9 +144,11 @@ def scrape_and_analyze_jobs(base_url="https://www.jemepropose.com/annonces/?offe
                 description_rows = card.find_all('div', class_='row')
                 if description_rows:
                     last_row = description_rows[-1]
-                    desc_p = last_row.find('p')
-                    if desc_p:
-                        job_description = desc_p.get_text(strip=True)
+                    # Get all <p> tags in the last row to capture full description
+                    desc_paragraphs = last_row.find_all('p')
+                    if desc_paragraphs:
+                        # Join all paragraphs with space, preserving structure
+                        job_description = ' '.join([p.get_text(separator=' ', strip=True) for p in desc_paragraphs if p.get_text(strip=True)])
                 
                 if verbose:
                     print(f"[{idx}/{len(job_cards)}] {job_title[:50]}...")

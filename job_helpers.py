@@ -40,30 +40,33 @@ class JobDescriptionFetcher:
             # Method 1: Look for card-body (jemepropose.com structure)
             card_body = soup.find('div', class_='card-body')
             if card_body:
-                # Get all paragraphs in card body
+                # Get all paragraphs in card body, preserving line breaks
                 paragraphs = card_body.find_all('p')
                 if paragraphs:
-                    description = ' '.join([p.get_text(strip=True) for p in paragraphs])
+                    # Use separator to preserve sentence structure, filter empty paragraphs
+                    texts = [p.get_text(separator=' ', strip=True) for p in paragraphs]
+                    description = ' '.join([t for t in texts if t])
             
             # Method 2: Look for description div
             if not description:
                 desc_div = soup.find('div', class_='card-text')
                 if desc_div:
-                    description = desc_div.get_text(strip=True)
+                    # Get all text including nested elements
+                    description = desc_div.get_text(separator=' ', strip=True)
             
             # Method 3: Look for main content area
             if not description:
                 main_content = soup.find('main') or soup.find('article')
                 if main_content:
                     paragraphs = main_content.find_all('p')
-                    long_paragraphs = [p.get_text(strip=True) for p in paragraphs if len(p.get_text(strip=True)) > 10]
+                    long_paragraphs = [p.get_text(separator=' ', strip=True) for p in paragraphs if len(p.get_text(strip=True)) > 10]
                     if long_paragraphs:
                         description = ' '.join(long_paragraphs)
             
             # Method 4: Look for any large text block
             if not description:
                 paragraphs = soup.find_all('p')
-                long_paragraphs = [p.get_text(strip=True) for p in paragraphs if len(p.get_text(strip=True)) > 100]
+                long_paragraphs = [p.get_text(separator=' ', strip=True) for p in paragraphs if len(p.get_text(strip=True)) > 100]
                 if long_paragraphs:
                     description = ' '.join(long_paragraphs[:3])  # Max 3 paragraphs
             

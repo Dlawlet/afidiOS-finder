@@ -1,6 +1,6 @@
 {
   "metadata": {
-    "export_date": "2026-01-10 22:08:15",
+    "export_date": "2026-01-10 22:34:22",
     "total_jobs": 200,
     "analysis_mode": "LLM-Enhanced"
   },
@@ -12,7 +12,7 @@
     "llm_used": true,
     "source": "https://www.jemepropose.com/annonces/?offer_type=2&provider_type=1",
     "pages_scraped": 10,
-    "export_date": "2026-01-10 22:08:15"
+    "export_date": "2026-01-10 22:34:22"
   },
   "jobs": [
     {
@@ -59,7 +59,7 @@
       "url": "https://www.jemepropose.com/annonces/terrassement/mur-de-soutenement+10499225/",
       "is_remote": false,
       "remote_confidence": 0.95,
-      "remote_reason": "LLM: Travail nécessite présence physique sur chantier",
+      "remote_reason": "LLM: Travail de terrassement nécessite présence physique",
       "analyzed_with_llm": true,
       "page": 1
     },
@@ -122,8 +122,8 @@
       "full_description": "Recherche d'urgence auxiliaire de vie pour assister un homme handicapé sur fauteuil roulant dans tous les actes de la vie quotidienne : (toilette, habillage, levé, réfection de lit, sorties, surveillance...) : Du Lundi au Vendredi de 08H-15H et le samedi de 08H-12H y compris jours fériés Rémunération : 11,33€/h net soit 1914.33€ mensuel net. Majoration de 70% au titre des jours fériés travaillés. CDI avec une période d'essai de 1 mois renouvelable une 1 fois. Déclaration URSSAF. (CESU). Pour plus d'infos, contact d'urgence par tél ou mail. Recherche d'urgence auxiliaire de vie pour assister un homme handicapé sur fauteuil roulant dans tous les actes de la vie quotidienne : (toilette, habillage, levé, réfection de lit, sorties, surveillance...) : Du Lundi au Vendredi de 08H-15H et le samedi de 08H-12H y compris jours fériés Rémunération : 11,33€/h net soit 1914.33€ mensuel net. Majoration de 70% au titre des jours fériés travaillés. CDI avec une période d'essai de 1 mois renouvelable une 1 fois. Déclaration URSSAF. (CESU). Pour plus d'infos, contact d'urgence par tél ou mail. Soyez le premier à déposer un avis sur cette annonce.",
       "url": "https://www.jemepropose.com/annonces/auxiliaire-de-vie/offre-emploi-dauxiliaire-de-vie-en-cdi-de-39-heures+9846609/",
       "is_remote": false,
-      "remote_confidence": 1.0,
-      "remote_reason": "LLM: Présence physique requise",
+      "remote_confidence": 0.0,
+      "remote_reason": "NLP Analysis: Ambiguous signals (remote: 0, onsite: 0)",
       "analyzed_with_llm": true,
       "page": 1
     },
@@ -218,8 +218,8 @@
       "full_description": "Nous sommes une association à la recherche d’un ou d’une coach de vie/coach en développement personnel pour intervenir ponctuellement auprès d’un public d’adolescents et de jeunes adultes, afin de définir, préciser les grandes lignes de leurs projets d’études, et construire un parcours qui leur ressemble. Ces interventions se déclinent selon les missions suivantes : Mener des entretiens avec des adolescents et de jeunes adultes, en utilisant les outils développés par l’association (questionnaire d’exploration de la personnalité, pratiques narratives) Coordonner l’intervention de professionnels invités à partager leur expérience de terrain et à échanger avec les jeunes Rendre compte des séances menées avec l’équipe de pilotage de l’association, participer aux réunions de coordination et de bilan des interventions. Profil recherché : Formation et/ou expérience solide en coaching de vie, développement personnel ou domaine similaire, avec une pratique auprès d’adolescents et/ou de jeunes adultes Capacité à travailler dans une posture d’écoute, de bienveillance et de non-jugement Expérience de l’animation d’ateliers collectifs, avec une aisance à mobiliser le groupe Condition de l’intervention : Date de disponibilité : à partir de fin février/début mars 2026 Type d’engagement : missions ponctuelles (à définir en fonction des besoins et disponibilités) pouvant aller de 3 heures jusqu’à 7 heures par semaine Lieu : locaux de l’association, Principauté de Monaco Rémunération : selon convention et profil, sur la base d’honoraires ou de vacations Formation préalable : courte session sur les outils spécifiques développés par l’association Nous sommes une association à la recherche d’un ou d’une coach de vie/coach en développement personnel pour intervenir ponctuellement auprès d’un public d’adolescents et de jeunes adultes, afin de définir, préciser les grandes lignes de leurs projets d’études, et construire un parcours qui leur ressemble. Ces interventions se déclinent selon les missions suivantes : Profil recherché : Condition de l’intervention : Soyez le premier à déposer un avis sur cette annonce.",
       "url": "https://www.jemepropose.com/annonces/coaching-personnel/coach-en-developpement-personnel-coach-de-vie+10496855/",
       "is_remote": false,
-      "remote_confidence": 0.95,
-      "remote_reason": "LLM: Présence physique requise",
+      "remote_confidence": 0.0,
+      "remote_reason": "NLP Analysis: Likely on-site work (score: 4 vs 3)",
       "analyzed_with_llm": true,
       "page": 1
     },
@@ -298,8 +298,8 @@
       "full_description": "Numéro de mise en relation Bonjour, Je suis activement à la recherche d'un(e)e Ingé SON pour le Tournage d'un premier Court métrage les samedi 10 et dimanche 11 janvier 2026 à Vinon-sur-Verdon 83560 France. Ceci est la première partie d'un triptyque de courts métrages comme teasers d'un long métrage. Le projet est non rémunéré et déffrayé (matériel, logement + catering fournis). C'est un premier projet avec une équipe de professionnels enthousiastes. L'histoire en 2 mots : Femme 40aine, épouse et mère, seule face au miroir de sa salle de douche, évolue dans différentes scènes du quotidien de l’habitude, du contrôle au point de non retour, quand se regardera-t-elle enfin ? Niveau son;Il faut des prises de sons IN, d'ambiance et OFF + des messages vocaux. Intéressé(e) par le projet ? N'hésite pas à me contacter. Au plaisir de te lire, Belle année à toi, Je suis activement à la recherche d'un(e)e Ingé SON pour le Tournage d'un premier Court métrage les samedi 10 et dimanche 11 janvier 2026 à Vinon-sur-Verdon 83560 France. Ceci est la première partie d'un triptyque de courts métrages comme teasers d'un long métrage. Le projet est non rémunéré et déffrayé (matériel, logement + catering fournis). C'est un premier projet avec une équipe de professionnels enthousiastes. L'histoire en 2 mots : Femme 40aine, épouse et mère, seule face au miroir de sa salle de douche, évolue dans différentes scènes du quotidien de l’habitude, du contrôle au point de non retour, quand se regardera-t-elle enfin ? Niveau son;Il faut des prises de sons IN, d'ambiance et OFF + des messages vocaux. Intéressé(e) par le projet ? N'hésite pas à me contacter. Au plaisir de te lire, Belle année à toi, Soyez le premier à déposer un avis sur cette annonce.",
       "url": "https://www.jemepropose.com/annonces/ingenieur-du-son/recherche-inge-son-court-metrage-10-11-janvier-2026+10498916/",
       "is_remote": false,
-      "remote_confidence": 0.95,
-      "remote_reason": "LLM: Tournage sur place requis",
+      "remote_confidence": 0.0,
+      "remote_reason": "NLP Analysis: Strong on-site indicators (score: 2 vs 0)",
       "analyzed_with_llm": true,
       "page": 1
     },

@@ -107,9 +107,7 @@ THINK LIKE A HUMAN:
 
 BE CONSERVATIVE:
 - If it's ambiguous or unclear → classify as NOT remote
-- If it COULD be remote but doesn't explicitly say so → NOT remote
 - If it requires ANY physical presence → NOT remote
-- Only classify as remote if it's clearly, genuinely, 100% work-from-home
 
 CONTEXT MATTERS:
 - "Je cherche une personne" (I'm hiring) ≠ "Je cherche un emploi" (I'm job hunting)

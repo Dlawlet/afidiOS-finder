@@ -191,9 +191,19 @@ RESPOND IN JSON FORMAT ONLY:
             }
             
         except Exception as e:
-            if self.verbose:
-                print(f"⚠️  Groq API error: {e}")
-                print("⚠️  Falling back to local NLP")
+            error_msg = str(e)
+            
+            # Check if it's a rate limit error
+            if 'rate_limit_exceeded' in error_msg or '429' in error_msg:
+                if self.verbose or True:  # Always show rate limit warnings
+                    print(f"⚠️  Groq API Rate Limit: {e}")
+                    print("⚠️  Falling back to local NLP")
+                    print("💡 Tip: Upgrade your Groq plan or reduce scraping frequency")
+            else:
+                if self.verbose:
+                    print(f"⚠️  Groq API error: {e}")
+                    print("⚠️  Falling back to local NLP")
+            
             return self._analyze_with_nlp(job_title, job_description, job_location)
     
     def _analyze_with_nlp(self, job_title: str, job_description: str, 

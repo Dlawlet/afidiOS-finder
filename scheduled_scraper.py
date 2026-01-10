@@ -186,6 +186,10 @@ def scrape_and_analyze_jobs(base_url="https://www.jemepropose.com/annonces/?offe
                     # Step 3: Analyze with LLM
                     if verbose:
                         print(f"    🤖 Analyzing with LLM...")
+                    
+                    # Limit description length to save tokens (max 500 chars is enough for context)
+                    #description_for_llm = full_description[:500] if len(full_description) > 500 else full_description
+                    
                     analysis = llm_analyzer.analyze_with_groq(
                         job_title,
                         full_description,
@@ -364,8 +368,8 @@ def main():
         print("   Set it in GitHub Secrets or create a .env file")
         sys.exit(1)
     
-    # Run scraper with verbose flag and max 10 pages
-    result = scrape_and_analyze_jobs(verbose=args.verbose, max_pages=10)
+    # Run scraper with verbose flag and max 5 pages (to stay within Groq API free tier)
+    result = scrape_and_analyze_jobs(verbose=args.verbose, max_pages=5)
     
     if result:
         print(f"\n🎉 Scraping completed successfully!")

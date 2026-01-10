@@ -1,35 +1,19 @@
 {
   "metadata": {
-    "export_date": "2026-01-10 22:45:21",
-    "total_jobs": 5,
+    "export_date": "2026-01-10 22:57:08",
+    "total_jobs": 2,
     "analysis_mode": "LLM-Enhanced"
   },
   "statistics": {
-    "total": 5,
-    "remote": 5,
+    "total": 2,
+    "remote": 2,
     "on_site": 0,
     "remote_percentage": 100.0,
     "llm_used": true,
     "source": "https://www.jemepropose.com/annonces/?offer_type=2&provider_type=1&page=5",
-    "export_date": "2026-01-10 22:45:21"
+    "export_date": "2026-01-10 22:57:08"
   },
   "jobs": [
-    {
-      "id": "22",
-      "title": "Secretariat",
-      "location": "Secrétariat - A L'Etranger",
-      "price": "10.00 € - De l'heure",
-      "poster": "Mardoualla",
-      "date_posted": "31/12/2025",
-      "description": "Secrétaire polyvalente, organisée et réactive pour la gestion administrative et la coordination. Assistance administrative efficace : gestion...",
-      "full_description": "Secrétaire polyvalente, organisée et réactive pour la gestion administrative et la coordination. Assistance administrative efficace : gestion des agendas, rédaction, suivi des dossiers.Secrétariat professionnel pour optimiser votre organisation et votre productivité. Support administratif fiable et discret pour vos besoins quotidiens. Secrétaire polyvalente, organisée et réactive pour la gestion administrative et la coordination. Assistance administrative efficace : gestion des agendas, rédaction, suivi des dossiers.Secrétariat professionnel pour optimiser votre organisation et votre productivité. Support administratif fiable et discret pour vos besoins quotidiens. Soyez le premier à déposer un avis sur cette annonce.",
-      "url": "https://www.jemepropose.com/annonces/secretariat/secretariat+10498878/",
-      "is_remote": true,
-      "remote_confidence": 0.0,
-      "remote_reason": "NLP Analysis: Strong remote indicators (score: 8 vs 0)",
-      "analyzed_with_llm": true,
-      "page": 2
-    },
     {
       "id": "38",
       "title": "Recherche personne motivée pour refonte de site web (projet créatif)",
@@ -41,26 +25,10 @@
       "full_description": "Bonjour, Je recherche une personne jeune, motivée et à l’aise avec le web (étudiant(e) ou autodidacte bienvenu(e)) pour m’aider à moderniser un site internet de vente de vidéos. Le site existe déjà, mais l’objectif est de : - rafraîchir le design (aspect plus moderne, plus propre) - améliorer l’expérience utilisateur - optimiser la présentation des contenus et des pages de vente - éventuellement apporter des idées créatives / techniques Profil recherché - Intérêt pour le développement web / webdesign - À l’aise avec WordPress, HTML/CSS, ou autres outils web (selon ton profil) - Autonome, sérieux(se), force de proposition - Projet idéal pour un(e) étudiant(e) souhaitant gagner de l’expérience sur un vrai site Rémunération - Tarif à définir selon l’expérience et les compétences -Paiement en tant que particulier (mission ponctuelle) Infos complémentaires -Mission flexible -Échanges simples et humains -Possibilité de collaboration sur le long terme si le feeling est bon N’hésite pas à me contacter avec : une courte présentation ton niveau / ce que tu sais faire éventuellement des exemples de sites ou projets À bientôt ! Je recherche une personne jeune, motivée et à l’aise avec le web (étudiant(e) ou autodidacte bienvenu(e)) pour m’aider à moderniser un site internet de vente de vidéos. Le site existe déjà, mais l’objectif est de : - rafraîchir le design (aspect plus moderne, plus propre) - améliorer l’expérience utilisateur - optimiser la présentation des contenus et des pages de vente - éventuellement apporter des idées créatives / techniques Profil recherché - Intérêt pour le développement web / webdesign - À l’aise avec WordPress, HTML/CSS, ou autres outils web (selon ton profil) - Autonome, sérieux(se), force de proposition - Projet idéal pour un(e) étudiant(e) souhaitant gagner de l’expérience sur un vrai site Rémunération - Tarif à définir selon l’expérience et les compétences -Paiement en tant que particulier (mission ponctuelle) Infos complémentaires -Mission flexible -Échanges simples et humains -Possibilité de collaboration sur le long terme si le feeling est bon N’hésite pas à me contacter avec : une courte présentation ton niveau / ce que tu sais faire éventuellement des exemples de sites ou projets À bientôt ! Soyez le premier à déposer un avis sur cette annonce.",
       "url": "https://www.jemepropose.com/annonces/creation-site-internet/recherche-personne-motivee-pour-refonte-de-site-web-projet-creatif+10498729/",
       "is_remote": true,
-      "remote_confidence": 0.0,
-      "remote_reason": "NLP Analysis: Strong remote indicators (score: 12 vs 0)",
+      "remote_confidence": 0.92,
+      "remote_reason": "LLM: Travail web entièrement en ligne possible",
       "analyzed_with_llm": true,
       "page": 2
-    },
-    {
-      "id": "58",
-      "title": "Assistant(e) lifestyle recherché(e)",
-      "location": "Secrétariat - Paris (75000)",
-      "price": "A définir",
-      "poster": "Sara_007",
-      "date_posted": "18/12/2025",
-      "description": "Vous aimez marcher, porter et garder le sourire ? Ce job est pour vous ! Jeune femme active recherche une personne fiable et...",
-      "full_description": "Numéro de mise en relation Vous aimez marcher, porter et garder le sourire ? Ce job est pour vous ! Jeune femme active recherche une personne fiable et dynamique pour m’accompagner du lundi au dimanche, de 9h à 20h. Vos missions : En semaine : porter mon sac et mon badge avec style. Le week-end : gérer mes sacs de shopping (oui, il y en aura, mais c’est fun !). Rémunération : SMIC (et ma reconnaissance éternelle). 📞 Intéressé(e) ? Contactez-moi ______________ À bientôt, Sara Vous aimez marcher, porter et garder le sourire ? Ce job est pour vous ! Jeune femme active recherche une personne fiable et dynamique pour m’accompagner du lundi au dimanche, de 9h à 20h. Vos missions : En semaine : porter mon sac et mon badge avec style. Le week-end : gérer mes sacs de shopping (oui, il y en aura, mais c’est fun !). Rémunération : SMIC (et ma reconnaissance éternelle). 📞 Intéressé(e) ? Contactez-moi ______________ Soyez le premier à déposer un avis sur cette annonce.",
-      "url": "https://www.jemepropose.com/annonces/secretariat/assistante-lifestyle-recherchee+10498483/",
-      "is_remote": true,
-      "remote_confidence": 0.0,
-      "remote_reason": "NLP Analysis: Strong remote indicators (score: 3 vs 0)",
-      "analyzed_with_llm": true,
-      "page": 3
     },
     {
       "id": "66",
@@ -73,24 +41,8 @@
       "full_description": "Bonjour, Je m'appelle Priscillia , je viens de créer mon entreprise , je suis auto - entrepreneuse. Je suis vraiment au début , je suis à l'étape de la fabrication de ma marchandise, donc n'est pas encore fait de chiffre d'affaire, je cherche une personne qui pourrait me réaliser un site internet gratuit ou pas chère. Si vous êtes intéressé , pouvez - vous me laisser un mail. Je crée des bijoux fantaisie. Mon univers est très coloré, je fabrique des bijoux pour enfants, femmes et hommes. En vous remerciant d'avance. Priscillia Je m'appelle Priscillia , je viens de créer mon entreprise , je suis auto - entrepreneuse. Je suis vraiment au début , je suis à l'étape de la fabrication de ma marchandise, donc n'est pas encore fait de chiffre d'affaire, je cherche une personne qui pourrait me réaliser un site internet gratuit ou pas chère. Si vous êtes intéressé , pouvez - vous me laisser un mail. Je crée des bijoux fantaisie. Mon univers est très coloré, je fabrique des bijoux pour enfants, femmes et hommes. En vous remerciant d'avance. Soyez le premier à déposer un avis sur cette annonce.",
       "url": "https://www.jemepropose.com/annonces/creation-site-internet/recherche-createur-de-site-internet+10498326/",
       "is_remote": true,
-      "remote_confidence": 0.0,
-      "remote_reason": "NLP Analysis: Strong remote indicators (score: 4 vs 0)",
-      "analyzed_with_llm": true,
-      "page": 4
-    },
-    {
-      "id": "77",
-      "title": "Gestion d'appartements airbnb",
-      "location": "Secrétariat - Albi (81000)",
-      "price": "A définir",
-      "poster": "Daures",
-      "date_posted": "09/12/2025",
-      "description": "Bonjour, Je gère une vingtaine d’appartements en location courte durée et je recherche une personne sérieuse, motivée et organisée pour...",
-      "full_description": "Numéro de mise en relation Bonjour, Je gère une vingtaine d’appartements en location courte durée et je recherche une personne sérieuse, motivée et organisée pour m’accompagner sur la gestion administrative : répondre au téléphone, aux messages des voyageurs, gestion du planning de réservations. Poste basé sur Albi (Gambetta et Verdier) Disponibilité rapide souhaitée. Si vous êtes intéressé(e), contactez-moi : Cordialement, Régis Je gère une vingtaine d’appartements en location courte durée et je recherche une personne sérieuse, motivée et organisée pour m’accompagner sur la gestion administrative : répondre au téléphone, aux messages des voyageurs, gestion du planning de réservations. Poste basé sur Albi (Gambetta et Verdier) Disponibilité rapide souhaitée. Si vous êtes intéressé(e), contactez-moi : Cordialement, Régis Soyez le premier à déposer un avis sur cette annonce.",
-      "url": "https://www.jemepropose.com/annonces/secretariat/gestion-dappartements-airbnb+10498104/",
-      "is_remote": true,
-      "remote_confidence": 0.0,
-      "remote_reason": "NLP Analysis: Likely remote work (score: 3 vs 2)",
+      "remote_confidence": 0.8,
+      "remote_reason": "LLM: Création site internet à distance",
       "analyzed_with_llm": true,
       "page": 4
     }

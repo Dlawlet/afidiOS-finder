@@ -160,7 +160,7 @@ RESPOND IN JSON FORMAT ONLY:
                         "content": prompt
                     }
                 ],
-                model="llama-3.3-70b-versatile",  # Updated: Latest stable Groq model
+                model="groq/compound",  # Updated: Latest stable Groq model
                 temperature=0.1,  # Low temperature for consistent results
                 max_tokens=200,
             )

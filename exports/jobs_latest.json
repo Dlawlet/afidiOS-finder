@@ -1,18 +1,18 @@
 {
   "metadata": {
-    "export_date": "2026-01-11 10:42:08",
+    "export_date": "2026-01-11 11:20:57",
     "total_jobs": 200,
     "analysis_mode": "LLM-Enhanced"
   },
   "statistics": {
     "total": 200,
-    "remote": 4,
-    "on_site": 196,
-    "remote_percentage": 2.0,
+    "remote": 5,
+    "on_site": 195,
+    "remote_percentage": 2.5,
     "llm_used": true,
     "source": "https://www.jemepropose.com/annonces/?offer_type=2&provider_type=1",
     "pages_scraped": 10,
-    "export_date": "2026-01-11 10:42:08"
+    "export_date": "2026-01-11 11:20:57"
   },
   "jobs": [
     {
@@ -59,7 +59,7 @@
       "url": "https://www.jemepropose.com/annonces/terrassement/mur-de-soutenement+10499225/",
       "is_remote": false,
       "remote_confidence": 0.95,
-      "remote_reason": "LLM: Travail nécessite présence physique pour construction et terrassement",
+      "remote_reason": "LLM: Terrassement et maçonnerie impossible à distance",
       "analyzed_with_llm": true,
       "page": 1
     },
@@ -122,8 +122,8 @@
       "full_description": "Recherche d'urgence auxiliaire de vie pour assister un homme handicapé sur fauteuil roulant dans tous les actes de la vie quotidienne : (toilette, habillage, levé, réfection de lit, sorties, surveillance...) : Du Lundi au Vendredi de 08H-15H et le samedi de 08H-12H y compris jours fériés Rémunération : 11,33€/h net soit 1914.33€ mensuel net. Majoration de 70% au titre des jours fériés travaillés. CDI avec une période d'essai de 1 mois renouvelable une 1 fois. Déclaration URSSAF. (CESU). Pour plus d'infos, contact d'urgence par tél ou mail. Recherche d'urgence auxiliaire de vie pour assister un homme handicapé sur fauteuil roulant dans tous les actes de la vie quotidienne : (toilette, habillage, levé, réfection de lit, sorties, surveillance...) : Du Lundi au Vendredi de 08H-15H et le samedi de 08H-12H y compris jours fériés Rémunération : 11,33€/h net soit 1914.33€ mensuel net. Majoration de 70% au titre des jours fériés travaillés. CDI avec une période d'essai de 1 mois renouvelable une 1 fois. Déclaration URSSAF. (CESU). Pour plus d'infos, contact d'urgence par tél ou mail. Soyez le premier à déposer un avis sur cette annonce.",
       "url": "https://www.jemepropose.com/annonces/auxiliaire-de-vie/offre-emploi-dauxiliaire-de-vie-en-cdi-de-39-heures+9846609/",
       "is_remote": false,
-      "remote_confidence": 1.0,
-      "remote_reason": "LLM: Travail nécessite présence physique pour assistance",
+      "remote_confidence": 0.95,
+      "remote_reason": "LLM: Assistance physique handicap toilette habillage présence indispensable",
       "analyzed_with_llm": true,
       "page": 1
     },
@@ -219,7 +219,7 @@
       "url": "https://www.jemepropose.com/annonces/coaching-personnel/coach-en-developpement-personnel-coach-de-vie+10496855/",
       "is_remote": false,
       "remote_confidence": 0.95,
-      "remote_reason": "LLM: Travail nécessite présence physique aux locaux de l'association",
+      "remote_reason": "LLM: Interventions ponctuelles dans locaux association Monaco",
       "analyzed_with_llm": true,
       "page": 1
     },
@@ -299,7 +299,7 @@
       "url": "https://www.jemepropose.com/annonces/ingenieur-du-son/recherche-inge-son-court-metrage-10-11-janvier-2026+10498916/",
       "is_remote": false,
       "remote_confidence": 0.95,
-      "remote_reason": "LLM: Tournage film nécessite présence physique sur site",
+      "remote_reason": "LLM: Tournage sur place à Vinon-sur-Verdon",
       "analyzed_with_llm": true,
       "page": 1
     },
@@ -363,7 +363,7 @@
       "url": "https://www.jemepropose.com/annonces/secretariat/secretariat+10498878/",
       "is_remote": false,
       "remote_confidence": 0.7,
-      "remote_reason": "LLM: Pas de mention explicite de télétravail",
+      "remote_reason": "LLM: Annonce floue, sans mention télétravail ni employeur clair",
       "analyzed_with_llm": true,
       "page": 2
     },
@@ -394,8 +394,8 @@
       "full_description": "Numéro de mise en relation Recherche une personne pour le 05/01/26 qui peut me conduire de la place Benidorme au Cannet 06110    a Mouans. Sartoux 06370 je serais présente à 19h1/2 le 05/01/26 Recherche une personne pour le 05/01/26 qui peut me conduire de la place Benidorme au Cannet 06110    a Mouans. Sartoux 06370 je serais présente à 19h1/2 le 05/01/26 Soyez le premier à déposer un avis sur cette annonce.",
       "url": "https://www.jemepropose.com/annonces/coaching-sportif/covoiturage+10498866/",
       "is_remote": false,
-      "remote_confidence": 0.0,
-      "remote_reason": "NLP Analysis: Ambiguous signals (remote: 0, onsite: 0)",
+      "remote_confidence": 1.0,
+      "remote_reason": "LLM: Demande de covoiturage, pas une offre d'emploi",
       "analyzed_with_llm": true,
       "page": 2
     },
@@ -459,7 +459,7 @@
       "url": "https://www.jemepropose.com/annonces/serveuse/recherche-3-serveurs-pour-mariage-a-cerdon-01-6-juin-2026+10498830/",
       "is_remote": false,
       "remote_confidence": 1.0,
-      "remote_reason": "LLM: Travail nécessite présence physique pour service à table",
+      "remote_reason": "LLM: Service à table sur place pour mariage",
       "analyzed_with_llm": true,
       "page": 2
     },
@@ -474,8 +474,8 @@
       "full_description": "Bonjour, je recherche quelqu'un afin de faire une dépose et une pose de circulateur sur chaudière de Dietrich merci.",
       "url": "https://www.jemepropose.com/annonces/plombier/circulateur+10498808/",
       "is_remote": false,
-      "remote_confidence": 0.0,
-      "remote_reason": "NLP Analysis: Ambiguous signals (remote: 0, onsite: 0)",
+      "remote_confidence": 1.0,
+      "remote_reason": "LLM: Travail de plomberie sur chaudière, présence physique obligatoire",
       "analyzed_with_llm": true,
       "page": 2
     },
@@ -490,8 +490,8 @@
       "full_description": "Bonjour, Je recherche une personne pour remplacer une auxiliaire de vie qui se met en arrêt tout les 15 jours qui travaille sur un poste de nuit. Le planning est le suivant : Semaine paire : Samedi : 21 heures à 9 heures le lendemain Dimanche : 21 heures à 9 heures le lendemain Semaine Impaire : Vendredi : 21 heures à 9 heures le lendemain Pour l’instant ça sera en CDD mais il ya de fortes chances que que ça devienne un poste CDI. C’est en CESU et le taux horaire est de 11€78 congés payés inclus N'hésitez à me poser vos questions Cordialement, Je recherche une personne pour remplacer une auxiliaire de vie qui se met en arrêt tout les 15 jours qui travaille sur un poste de nuit. Le planning est le suivant : Semaine paire : Samedi : 21 heures à 9 heures le lendemain Dimanche : 21 heures à 9 heures le lendemain Semaine Impaire : Vendredi : 21 heures à 9 heures le lendemain Pour l’instant ça sera en CDD mais il ya de fortes chances que que ça devienne un poste CDI. C’est en CESU et le taux horaire est de 11€78 congés payés inclus N'hésitez à me poser vos questions Cordialement, Soyez le premier à déposer un avis sur cette annonce.",
       "url": "https://www.jemepropose.com/annonces/auxiliaire-de-vie/poste-de-nuit+10498799/",
       "is_remote": false,
-      "remote_confidence": 0.99,
-      "remote_reason": "LLM: Travail d'auxiliaire de vie nécessite présence physique",
+      "remote_confidence": 0.95,
+      "remote_reason": "LLM: auxiliaire de vie de nuit sur place",
       "analyzed_with_llm": true,
       "page": 2
     },
@@ -554,8 +554,8 @@
       "full_description": "Bonjour, Je recherche un(e) modèle pour des séances de dessin de modèle vivant. Les séances se déroulent dans une ambiance calme et ont une durée de 30 min à 1h. Rémunération : 50€ de l’heure Débutant(e) bienvenue Si vous êtes intéressé, n’hésitez pas à me contacter pour plus d’informations Je recherche un(e) modèle pour des séances de dessin de modèle vivant. Les séances se déroulent dans une ambiance calme et ont une durée de 30 min à 1h. Rémunération : 50€ de l’heure Débutant(e) bienvenue Si vous êtes intéressé, n’hésitez pas à me contacter pour plus d’informations Soyez le premier à déposer un avis sur cette annonce.",
       "url": "https://www.jemepropose.com/annonces/emploi-etudiant/modele-dessin+10498763/",
       "is_remote": false,
-      "remote_confidence": 0.0,
-      "remote_reason": "NLP Analysis: Ambiguous signals (remote: 0, onsite: 0)",
+      "remote_confidence": 0.95,
+      "remote_reason": "LLM: Modèle vivant : présence physique obligatoire",
       "analyzed_with_llm": true,
       "page": 2
     },
@@ -618,8 +618,8 @@
       "full_description": "Bonjour, Je recherche une personne jeune, motivée et à l’aise avec le web (étudiant(e) ou autodidacte bienvenu(e)) pour m’aider à moderniser un site internet de vente de vidéos. Le site existe déjà, mais l’objectif est de : - rafraîchir le design (aspect plus moderne, plus propre) - améliorer l’expérience utilisateur - optimiser la présentation des contenus et des pages de vente - éventuellement apporter des idées créatives / techniques Profil recherché - Intérêt pour le développement web / webdesign - À l’aise avec WordPress, HTML/CSS, ou autres outils web (selon ton profil) - Autonome, sérieux(se), force de proposition - Projet idéal pour un(e) étudiant(e) souhaitant gagner de l’expérience sur un vrai site Rémunération - Tarif à définir selon l’expérience et les compétences -Paiement en tant que particulier (mission ponctuelle) Infos complémentaires -Mission flexible -Échanges simples et humains -Possibilité de collaboration sur le long terme si le feeling est bon N’hésite pas à me contacter avec : une courte présentation ton niveau / ce que tu sais faire éventuellement des exemples de sites ou projets À bientôt ! Je recherche une personne jeune, motivée et à l’aise avec le web (étudiant(e) ou autodidacte bienvenu(e)) pour m’aider à moderniser un site internet de vente de vidéos. Le site existe déjà, mais l’objectif est de : - rafraîchir le design (aspect plus moderne, plus propre) - améliorer l’expérience utilisateur - optimiser la présentation des contenus et des pages de vente - éventuellement apporter des idées créatives / techniques Profil recherché - Intérêt pour le développement web / webdesign - À l’aise avec WordPress, HTML/CSS, ou autres outils web (selon ton profil) - Autonome, sérieux(se), force de proposition - Projet idéal pour un(e) étudiant(e) souhaitant gagner de l’expérience sur un vrai site Rémunération - Tarif à définir selon l’expérience et les compétences -Paiement en tant que particulier (mission ponctuelle) Infos complémentaires -Mission flexible -Échanges simples et humains -Possibilité de collaboration sur le long terme si le feeling est bon N’hésite pas à me contacter avec : une courte présentation ton niveau / ce que tu sais faire éventuellement des exemples de sites ou projets À bientôt ! Soyez le premier à déposer un avis sur cette annonce.",
       "url": "https://www.jemepropose.com/annonces/creation-site-internet/recherche-personne-motivee-pour-refonte-de-site-web-projet-creatif+10498729/",
       "is_remote": true,
-      "remote_confidence": 0.8,
-      "remote_reason": "LLM: Tâches web réalisables entièrement à distance",
+      "remote_confidence": 0.9,
+      "remote_reason": "LLM: Développement web, aucune contrainte de lieu",
       "analyzed_with_llm": true,
       "page": 2
     },
@@ -682,8 +682,8 @@
       "full_description": "réseaux sociaux cherche une personne se connaissant dans création d'un site avec WordPress. un site i...",
       "url": "https://www.jemepropose.com/annonces/depannage-informatique/cree-site-wordpress-18a+10498674/",
       "is_remote": false,
-      "remote_confidence": 0.7,
-      "remote_reason": "LLM: Pas de mention explicite de télétravail",
+      "remote_confidence": 0.95,
+      "remote_reason": "LLM: Catégorie dépannage informatique implique intervention sur site",
       "analyzed_with_llm": true,
       "page": 3
     },
@@ -698,8 +698,8 @@
       "full_description": "Bonjour je recherche des cours d'Espagnol à 20Km maxi de Clisson",
       "url": "https://www.jemepropose.com/annonces/cours-d-espagnol/recherche-cours-despagnol+10498662/",
       "is_remote": false,
-      "remote_confidence": 0.9,
-      "remote_reason": "LLM: Recherche cours à proximité, pas de mention télétravail",
+      "remote_confidence": 0.95,
+      "remote_reason": "LLM: Demande de cours particuliers, présence physique requise",
       "analyzed_with_llm": true,
       "page": 3
     },
@@ -715,7 +715,7 @@
       "url": "https://www.jemepropose.com/annonces/garde-d-animaux/accompagnement-chien-en-clinique-veterinaire+10498659/",
       "is_remote": false,
       "remote_confidence": 0.95,
-      "remote_reason": "LLM: Nécessite présence physique en clinique vétérinaire",
+      "remote_reason": "LLM: Accompagner chien en clinique nécessite présence",
       "analyzed_with_llm": true,
       "page": 3
     },
@@ -762,8 +762,8 @@
       "full_description": "photographe cherche modèle femmes et couples pour photos tous styles, couleur/N&B, intérieur, extérieur je me déplace",
       "url": "https://www.jemepropose.com/annonces/photographe/photographe-cherche-modeles+10498626/",
       "is_remote": false,
-      "remote_confidence": 0.0,
-      "remote_reason": "NLP Analysis: Ambiguous signals (remote: 0, onsite: 0)",
+      "remote_confidence": 1.0,
+      "remote_reason": "LLM: Photographe cherche modèles, travail sur place",
       "analyzed_with_llm": true,
       "page": 3
     },
@@ -859,7 +859,7 @@
       "url": "https://www.jemepropose.com/annonces/auxiliaire-de-vie/cherche-aide-domicile+10498540/",
       "is_remote": false,
       "remote_confidence": 1.0,
-      "remote_reason": "LLM: Soins à domicile nécessitent présence physique",
+      "remote_reason": "LLM: Soins à domicile, présence physique obligatoire",
       "analyzed_with_llm": true,
       "page": 3
     },
@@ -939,7 +939,7 @@
       "url": "https://www.jemepropose.com/annonces/secretariat/assistante-lifestyle-recherchee+10498483/",
       "is_remote": false,
       "remote_confidence": 1.0,
-      "remote_reason": "LLM: Tâches nécessitent présence physique",
+      "remote_reason": "LLM: Porte sacs et shopping, présence physique obligatoire",
       "analyzed_with_llm": true,
       "page": 3
     },
@@ -1050,8 +1050,8 @@
       "full_description": "Bonjour, Je suis photographe amateur et parisien. Je désire pratiquer la photo de personne. Je suis partant pour faire tous types de projets. Equipé d'un appareil et d'une flash je peux vous prendre en photo de jour comme de nuit. N'hésitez à me contacter et nous pourrons discuter de vos envies et lieux. I’m an amateur photographer based in Paris, and I’m looking to practice portrait photography. I’m open to all kinds of creative projects and ideas. Equipped with a camera and flash, I can take your photos both during the day and at night. Feel free to contact me, and we can discuss your ideas and preferred locations around Paris. Je suis photographe amateur et parisien. Je désire pratiquer la photo de personne. Je suis partant pour faire tous types de projets. Equipé d'un appareil et d'une flash je peux vous prendre en photo de jour comme de nuit. N'hésitez à me contacter et nous pourrons discuter de vos envies et lieux. I’m an amateur photographer based in Paris, and I’m looking to practice portrait photography. I’m open to all kinds of creative projects and ideas. Equipped with a camera and flash, I can take your photos both during the day and at night. Feel free to contact me, and we can discuss your ideas and preferred locations around Paris. Soyez le premier à déposer un avis sur cette annonce.",
       "url": "https://www.jemepropose.com/annonces/photographe/photographe-amateur-photos-gratuits+10498327/",
       "is_remote": false,
-      "remote_confidence": 0.0,
-      "remote_reason": "NLP Analysis: Ambiguous signals (remote: 0, onsite: 0)",
+      "remote_confidence": 1.0,
+      "remote_reason": "LLM: Annonce d’un photographe cherchant des modèles, pas une offre d’emploi",
       "analyzed_with_llm": true,
       "page": 4
     },
@@ -1066,8 +1066,8 @@
       "full_description": "Bonjour, Je m'appelle Priscillia , je viens de créer mon entreprise , je suis auto - entrepreneuse. Je suis vraiment au début , je suis à l'étape de la fabrication de ma marchandise, donc n'est pas encore fait de chiffre d'affaire, je cherche une personne qui pourrait me réaliser un site internet gratuit ou pas chère. Si vous êtes intéressé , pouvez - vous me laisser un mail. Je crée des bijoux fantaisie. Mon univers est très coloré, je fabrique des bijoux pour enfants, femmes et hommes. En vous remerciant d'avance. Priscillia Je m'appelle Priscillia , je viens de créer mon entreprise , je suis auto - entrepreneuse. Je suis vraiment au début , je suis à l'étape de la fabrication de ma marchandise, donc n'est pas encore fait de chiffre d'affaire, je cherche une personne qui pourrait me réaliser un site internet gratuit ou pas chère. Si vous êtes intéressé , pouvez - vous me laisser un mail. Je crée des bijoux fantaisie. Mon univers est très coloré, je fabrique des bijoux pour enfants, femmes et hommes. En vous remerciant d'avance. Soyez le premier à déposer un avis sur cette annonce.",
       "url": "https://www.jemepropose.com/annonces/creation-site-internet/recherche-createur-de-site-internet+10498326/",
       "is_remote": false,
-      "remote_confidence": 0.9,
-      "remote_reason": "LLM: Annonce recherche service, pas offre d'emploi",
+      "remote_confidence": 0.95,
+      "remote_reason": "LLM: demande bénévole pas offre d'emploi",
       "analyzed_with_llm": true,
       "page": 4
     },
@@ -1082,8 +1082,8 @@
       "full_description": "Bonjour, recherche quelqu’un très proche de Montady pour venir donner de temps en temps à manger à mon chat le soir",
       "url": "https://www.jemepropose.com/annonces/garde-d-animaux/chat-nourriture+10498324/",
       "is_remote": false,
-      "remote_confidence": 0.95,
-      "remote_reason": "LLM: Nourrir le chat nécessite présence physique",
+      "remote_confidence": 1.0,
+      "remote_reason": "LLM: Garde de chat sur place à Montady",
       "analyzed_with_llm": true,
       "page": 4
     },
@@ -1099,7 +1099,7 @@
       "url": "https://www.jemepropose.com/annonces/auxiliaire-de-vie/h-60-ans-souhaite-aide-soutien-rangement-veillee+10498302/",
       "is_remote": false,
       "remote_confidence": 0.95,
-      "remote_reason": "LLM: Tâches nécessitant une présence physique, pas de mention télétravail",
+      "remote_reason": "LLM: Aide physique au domicile, veillée",
       "analyzed_with_llm": true,
       "page": 4
     },
@@ -1114,8 +1114,8 @@
       "full_description": "Numéro de mise en relation Venez découvrir ce superbe appartement T2 de 40m² entièrement rénové et meublé, idéal pour une personne seule ou un couple recherchant confort et tranquillité. Situé au rez-de-chaussée ,il offre un cadre de vie agréable et fonctionnel avec accès direct à une grande cave privative, parfaite pour le stockage (vélos, cartons, etc.). Les atouts du logement : - Appartement refait à neuf avec des prestations modernes - Salle de bain neuve avec belle douche et machine à laver/Sèche linge - Cuisine entièrement équipée avec électroménager neuf : four, hotte, micro-ondes, bouilloire, machine à café, grille-pain, vaisselle etc - Mobilier neuf : lit, TV, table, chaises, rangements - Un petit bureau aménagé dans la chambre. - Entrée privative via une cour calme, avec verrière d’entrée apportant charme et luminosité - Proche des commerces et de la gare de Versoix Disponible immédiatement. premier contact par mail Venez découvrir ce superbe appartement T2 de 40m² entièrement rénové et meublé, idéal pour une personne seule ou un couple recherchant confort et tranquillité. Situé au rez-de-chaussée ,il offre un cadre de vie agréable et fonctionnel avec accès direct à une grande cave privative, parfaite pour le stockage (vélos, cartons, etc.). Les atouts du logement : - Appartement refait à neuf avec des prestations modernes - Salle de bain neuve avec belle douche et machine à laver/Sèche linge - Cuisine entièrement équipée avec électroménager neuf : four, hotte, micro-ondes, bouilloire, machine à café, grille-pain, vaisselle etc - Mobilier neuf : lit, TV, table, chaises, rangements - Un petit bureau aménagé dans la chambre. - Entrée privative via une cour calme, avec verrière d’entrée apportant charme et luminosité - Proche des commerces et de la gare de Versoix Disponible immédiatement. premier contact par mail Soyez le premier à déposer un avis sur cette annonce.",
       "url": "https://www.jemepropose.com/annonces/chambre-a-louer/appartement-a-louer+10498258/",
       "is_remote": false,
-      "remote_confidence": 0.0,
-      "remote_reason": "NLP Analysis: Strong on-site indicators (score: 4 vs 0)",
+      "remote_confidence": 1.0,
+      "remote_reason": "LLM: Annonce de location immobilière, pas une offre d'emploi",
       "analyzed_with_llm": true,
       "page": 4
     },
@@ -1146,8 +1146,8 @@
       "full_description": "Bonjour, Recherche bassiste pour préparer la saison 2026 travail répertoire sur des compositions reggae",
       "url": "https://www.jemepropose.com/annonces/musicien/bassiste+10498243/",
       "is_remote": false,
-      "remote_confidence": 0.8,
-      "remote_reason": "LLM: Travail de musicien nécessite présence physique",
+      "remote_confidence": 0.95,
+      "remote_reason": "LLM: Musicien : répétitions et concerts impliquent présence physique",
       "analyzed_with_llm": true,
       "page": 4
     },
@@ -1242,8 +1242,8 @@
       "full_description": "Numéro de mise en relation Bonjour, Je gère une vingtaine d’appartements en location courte durée et je recherche une personne sérieuse, motivée et organisée pour m’accompagner sur la gestion administrative : répondre au téléphone, aux messages des voyageurs, gestion du planning de réservations. Poste basé sur Albi (Gambetta et Verdier) Disponibilité rapide souhaitée. Si vous êtes intéressé(e), contactez-moi : Cordialement, Régis Je gère une vingtaine d’appartements en location courte durée et je recherche une personne sérieuse, motivée et organisée pour m’accompagner sur la gestion administrative : répondre au téléphone, aux messages des voyageurs, gestion du planning de réservations. Poste basé sur Albi (Gambetta et Verdier) Disponibilité rapide souhaitée. Si vous êtes intéressé(e), contactez-moi : Cordialement, Régis Soyez le premier à déposer un avis sur cette annonce.",
       "url": "https://www.jemepropose.com/annonces/secretariat/gestion-dappartements-airbnb+10498104/",
       "is_remote": false,
-      "remote_confidence": 0.85,
-      "remote_reason": "LLM: Poste basé à Albi, nécessite présence physique",
+      "remote_confidence": 0.95,
+      "remote_reason": "LLM: Poste basé sur Albi, présence physique exigée",
       "analyzed_with_llm": true,
       "page": 4
     },
@@ -1274,8 +1274,8 @@
       "full_description": "Femme en situation de handicap moteur, dynamique, minutieuse, et complètement autonome dans la gestion mentale de son quotidien, recherche deux à trois personnes,  auxiliaires de vie, étudiantes infirmières/aides soignantes, ou toute personne désireuse d'aider, sans infantiliser. Les prestations s’effectueraient le mardi et le vendredi matin , et deux week-end sur trois (le matin également) , pour une durée de  deux à trois heures par jour en moyenne . Possibilité de partager une même intervention entre deux aidantes Les missions demandées seraient : - Aide à la toilette - Aide à l’habillage - Mise en beauté pas trop sophistiquée (maquillage et coiffure) - Petit ménage - Aide à la préparation des  repas et à leur \"mise en contenu\" - Aide au rangement et à l'entretien de mon  intérieur Qualités demandées : - Etre à l’écoute et patiente - Avoir le sens du respect et et la discrétion - Etre ponctuelle - Savoir s'adapter (ex:: savoir me laisser la prise de décision) - Avoir le souci du détail - Aimer dialoguer\n\\ - CV et entretien d'embauche à l’appui Seules les candidatures sérieuses et explicites seront traitées. Cesu: 13€ /H et 16,25€/H  les dimanche et jours fériés Femme en situation de handicap moteur, dynamique, minutieuse, et complètement autonome dans la gestion mentale de son quotidien, recherche deux à trois personnes,  auxiliaires de vie, étudiantes infirmières/aides soignantes, ou toute personne désireuse d'aider, sans infantiliser. Les prestations s’effectueraient le mardi et le vendredi matin , et deux week-end sur trois (le matin également) , pour une durée de  deux à trois heures par jour en moyenne . Possibilité de partager une même intervention entre deux aidantes Les missions demandées seraient : - Aide à la toilette - Aide à l’habillage - Mise en beauté pas trop sophistiquée (maquillage et coiffure) - Petit ménage - Aide à la préparation des  repas et à leur \"mise en contenu\" - Aide au rangement et à l'entretien de mon  intérieur Qualités demandées : - Etre à l’écoute et patiente - Avoir le sens du respect et et la discrétion - Etre ponctuelle - Savoir s'adapter (ex:: savoir me laisser la prise de décision) - Avoir le souci du détail - Aimer dialoguer\n\\ CV et entretien d'embauche à l’appui Seules les candidatures sérieuses et explicites seront traitées. Cesu: 13€ /H et 16,25€/H  les dimanche et jours fériés Soyez le premier à déposer un avis sur cette annonce.",
       "url": "https://www.jemepropose.com/annonces/auxiliaire-de-vie/recherche-auxiliaires-de-vie-ou-aide-soignante+785238/",
       "is_remote": false,
-      "remote_confidence": 0.95,
-      "remote_reason": "LLM: Tâches de care nécessitent présence physique",
+      "remote_confidence": 1.0,
+      "remote_reason": "LLM: Aide corporelle sur place : toilette, habillage, ménage",
       "analyzed_with_llm": true,
       "page": 4
     },
@@ -1290,8 +1290,8 @@
       "full_description": "Numéro de mise en relation 📣 Recherche Serveuses / Serveurs pour Mariage Nous recherchons plusieurs serveuses / serveurs pour assurer le service lors d’un mariage. 🔸 Horaires recherchés : 2 serveuses/serveurs : de 12h00 à 15h00 (3 heures) 2 serveuses/serveurs : de 18h00 à 00h00 (6 heures) 🔸 Missions : Mise en place Service en salle / boissons Aide ponctuelle selon besoins Respect des consignes et bonne présentation 🔸 Profil recherché : Sérieux(se), dynamique, ponctuel(le) Expérience en service appréciée. Bonne présentation et sens du contact 🔸 Lieu : Moisdon La Rivière salle Gravotel. 🔸 Rémunération : Selon Expérience ➡️ N’hésitez pas à rentrer en contact avec moi pour en discuter. 📣 Recherche Serveuses / Serveurs pour Mariage Nous recherchons plusieurs serveuses / serveurs pour assurer le service lors d’un mariage. 🔸 Horaires recherchés : 2 serveuses/serveurs : de 12h00 à 15h00 (3 heures) 2 serveuses/serveurs : de 18h00 à 00h00 (6 heures) 🔸 Missions : Mise en place Service en salle / boissons Aide ponctuelle selon besoins Respect des consignes et bonne présentation 🔸 Profil recherché : Sérieux(se), dynamique, ponctuel(le) Expérience en service appréciée. Bonne présentation et sens du contact 🔸 Lieu : Moisdon La Rivière salle Gravotel. 🔸 Rémunération : Selon Expérience ➡️ N’hésitez pas à rentrer en contact avec moi pour en discuter. Soyez le premier à déposer un avis sur cette annonce.",
       "url": "https://www.jemepropose.com/annonces/serveuse/serveureuse+10498011/",
       "is_remote": false,
-      "remote_confidence": 0.0,
-      "remote_reason": "NLP Analysis: Ambiguous signals (remote: 0, onsite: 0)",
+      "remote_confidence": 1.0,
+      "remote_reason": "LLM: Serveur en salle : présence physique obligatoire",
       "analyzed_with_llm": true,
       "page": 4
     },
@@ -1338,8 +1338,8 @@
       "full_description": "Il s'agit là de l'adaptation du livre célèbre de l'auteur Frieda McFadden. Nous avons donc besoin d'un minimum de 6 acteurs. Il nous faut donc 3 femmes et 3 hommes. Il s'agit là de l'adaptation du livre célèbre de l'auteur Frieda McFadden. Nous avons donc besoin d'un minimum de 6 acteurs. Il nous faut donc 3 femmes et 3 hommes. Soyez le premier à déposer un avis sur cette annonce.",
       "url": "https://www.jemepropose.com/annonces/comedien/adaptation-de-la-psy-de-freida-mcfadden+10497746/",
       "is_remote": false,
-      "remote_confidence": 0.9,
-      "remote_reason": "LLM: Acteurs nécessaires sur place pour performances",
+      "remote_confidence": 0.95,
+      "remote_reason": "LLM: Casting d'acteurs : présence physique sur plateau obligatoire",
       "analyzed_with_llm": true,
       "page": 5
     },
@@ -1418,8 +1418,8 @@
       "full_description": "Numéro de mise en relation Bonjour, Besoin d'un Kinésithérapeutes, 3 fois par semaine pour une dame de 86 ans ! pour plus d'informations veuillez contacter ce numéro _______________ le fils de la dame vous répondra ! Besoin d'un Kinésithérapeutes, 3 fois par semaine pour une dame de 86 ans ! pour plus d'informations veuillez contacter ce numéro _______________ le fils de la dame vous répondra ! Soyez le premier à déposer un avis sur cette annonce.",
       "url": "https://www.jemepropose.com/annonces/aide-soignante/besoin-de-kinesitherapeute+10497571/",
       "is_remote": false,
-      "remote_confidence": 0.95,
-      "remote_reason": "LLM: Kinésithérapeute nécessite présence physique auprès du client",
+      "remote_confidence": 1.0,
+      "remote_reason": "LLM: Kinésithérapie = soins physiques sur place",
       "analyzed_with_llm": true,
       "page": 5
     },
@@ -1498,8 +1498,8 @@
       "full_description": "Bonjour, je suis à la recherche de personnel pour un événement. L'événement durera 14h (de 14h à 4h du matin). Il faudra, lors de cet événement, mettre en place la décoration extérieure et intérieure selon le modèle que l'on vous présentera, installer des éléments (nourriture/boissons) à l'extérieur, mettre en place un buffet et assurer le service, installer le bar et assurer le service, débarrasser les contenants vides, enlever les décorations, ranger les tables et chaises, et jeter les poubelles. Lieux de l'événement : à Vaulx-en-Velin. Date : 18 juillet 2026. Bonjour, je suis à la recherche de personnel pour un événement. L'événement durera 14h (de 14h à 4h du matin). Il faudra, lors de cet événement, mettre en place la décoration extérieure et intérieure selon le modèle que l'on vous présentera, installer des éléments (nourriture/boissons) à l'extérieur, mettre en place un buffet et assurer le service, installer le bar et assurer le service, débarrasser les contenants vides, enlever les décorations, ranger les tables et chaises, et jeter les poubelles. Lieux de l'événement : à Vaulx-en-Velin. Date : 18 juillet 2026. Soyez le premier à déposer un avis sur cette annonce.",
       "url": "https://www.jemepropose.com/annonces/serveuse/serveursserveuse-polyvalents+10497494/",
       "is_remote": false,
-      "remote_confidence": 0.0,
-      "remote_reason": "NLP Analysis: Strong on-site indicators (score: 2 vs 0)",
+      "remote_confidence": 1.0,
+      "remote_reason": "LLM: Service événementiel sur place, manipulation physique requise",
       "analyzed_with_llm": true,
       "page": 5
     },
@@ -1515,7 +1515,7 @@
       "url": "https://www.jemepropose.com/annonces/acteur/recherche-dacteur-pour-tournage-sur-toulouse-du-26-au-30-janvier+10497487/",
       "is_remote": false,
       "remote_confidence": 0.95,
-      "remote_reason": "LLM: Tournage nécessite présence physique",
+      "remote_reason": "LLM: Tournage sur place à Toulouse",
       "analyzed_with_llm": true,
       "page": 5
     },
@@ -1531,7 +1531,7 @@
       "url": "https://www.jemepropose.com/annonces/organisation-de-voyage/un-voyage-de-2-jours-et-1-nuit-pour-visiter-la-baie-dha-long-au-vietnam+10497486/",
       "is_remote": false,
       "remote_confidence": 1.0,
-      "remote_reason": "LLM: Annonce de voyage, pas une offre d'emploi",
+      "remote_reason": "LLM: Offre de voyage touristique, pas d'emploi",
       "analyzed_with_llm": true,
       "page": 5
     },
@@ -1627,7 +1627,7 @@
       "url": "https://www.jemepropose.com/annonces/emploi-etudiant/fille-au-paire+10497275/",
       "is_remote": false,
       "remote_confidence": 1.0,
-      "remote_reason": "LLM: Accompagnement physique des enfants après l'école",
+      "remote_reason": "LLM: Garde d'enfants sur place, présence physique obligatoire",
       "analyzed_with_llm": true,
       "page": 6
     },
@@ -1690,8 +1690,8 @@
       "full_description": "Numéro de mise en relation Pet sitter passionné et expérimenté sur Nîmes  – Votre chien entre de bonnes mains ! Je suis pet sitter à plein temps depuis 9 ans et je me ferai un plaisir de prendre soin de votre compagnon à quatre pattes. Avec ma compagne, nous vivons dans une maison de 90 m² avec un jardin sécurisé de 50 m², idéale pour que votre chien s'épanouisse en toute sécurité. Ce que je vous propose : Promenades quotidiennes : Environ 2 heures de balade chaque jour, dans la garrigue à moins de 10 minutes de chez nous. Jeux et compagnons : Des moments de détente et de jeux avec d'autres chiens si votre compagnon est sociable. Espace dédié : La maison lui est entièrement accessible, sauf les chambres à l'étage. Vétérinaire à proximité : Un vétérinaire compétent se trouve à 5 minutes en cas de besoin. Races accueillies : Beagle, Cocker, Carlin, Labrador, Doberman, Saint-Bernard, Border Collie, Caniche, Golden Retriever, Berger Suisse, Teckel, et bien d'autres ! Je suis disponible pour des gardes à la journée, le week-end, pendant les vacances ou même pour quelques heures. Je m'adapte à vos besoins, tout en m'assurant que votre chien soit sociable avec ses congénères. Pet sitter passionné et expérimenté sur Nîmes  – Votre chien entre de bonnes mains ! Je suis pet sitter à plein temps depuis 9 ans et je me ferai un plaisir de prendre soin de votre compagnon à quatre pattes. Avec ma compagne, nous vivons dans une maison de 90 m² avec un jardin sécurisé de 50 m², idéale pour que votre chien s'épanouisse en toute sécurité. Ce que je vous propose : Promenades quotidiennes : Environ 2 heures de balade chaque jour, dans la garrigue à moins de 10 minutes de chez nous. Jeux et compagnons : Des moments de détente et de jeux avec d'autres chiens si votre compagnon est sociable. Espace dédié : La maison lui est entièrement accessible, sauf les chambres à l'étage. Vétérinaire à proximité : Un vétérinaire compétent se trouve à 5 minutes en cas de besoin. Races accueillies : Beagle, Cocker, Carlin, Labrador, Doberman, Saint-Bernard, Border Collie, Caniche, Golden Retriever, Berger Suisse, Teckel, et bien d'autres ! Je suis disponible pour des gardes à la journée, le week-end, pendant les vacances ou même pour quelques heures. Je m'adapte à vos besoins, tout en m'assurant que votre chien soit sociable avec ses congénères. tel 0650454364 Soyez le premier à déposer un avis sur cette annonce.",
       "url": "https://www.jemepropose.com/annonces/garde-d-animaux/que-du-bonheur+10497038/",
       "is_remote": false,
-      "remote_confidence": 0.95,
-      "remote_reason": "LLM: Soins animaux nécessitent présence physique",
+      "remote_confidence": 1.0,
+      "remote_reason": "LLM: Offre de garde d’animaux, présence physique obligatoire",
       "analyzed_with_llm": true,
       "page": 6
     },
@@ -1707,7 +1707,7 @@
       "url": "https://www.jemepropose.com/annonces/peintre/compagnon+10497035/",
       "is_remote": false,
       "remote_confidence": 0.95,
-      "remote_reason": "LLM: Travail physique de peinture nécessite présence sur place",
+      "remote_reason": "LLM: Peintre décorateur implique travaux sur site",
       "analyzed_with_llm": true,
       "page": 6
     },
@@ -1723,7 +1723,7 @@
       "url": "https://www.jemepropose.com/annonces/conciergerie/recherche-personne-locale-micro-entreprise-conciergerie-hameau-de-3-logements-a-chalencon-07240+10496932/",
       "is_remote": false,
       "remote_confidence": 0.95,
-      "remote_reason": "LLM: Tâches nécessitent présence physique sur site",
+      "remote_reason": "LLM: Ménage, check-in et linge sur place obligatoire",
       "analyzed_with_llm": true,
       "page": 6
     },
@@ -1738,8 +1738,8 @@
       "full_description": "Bonjour, Professionnelle de l’hospitalité dans le monde du luxe depuis plus de 15 ans, je gère des chambres d’hôtes et plusieurs maisons en location courte durée (type Airbnb) dans la région de Vidauban et ses alentours. Je propose mes services de conciergerie souhaitant louer leur logement en toute sérénité : – Création et gestion des annonces Airbnb / Booking / expedia ... – Accueil des voyageurs : check-in / check-out – Communication avec les locataires avant, pendant et après le séjour – Aide vérification ménage et aide à la gestion du linge et des entretiens piscines / jardins – Suivi du calendrier et optimisation des tarifs – Création de site internet vitrine pour votre logement – Aide à l’achat ou au renouvellement de matériel (vaisselle, linge, mobilier…) – Intervention ponctuelle ou gestion complète à l’année --> Lors de l'hiver, je peux passer régulièrement pour surveiller la propriété, relever le courrier ... Zone : Vidauban et ses 35km dont Saint Tropez Je m’adapte à vos besoins, que vous soyez propriétaire à l’année ou seulement en saison. Professionnelle de l’hospitalité dans le monde du luxe depuis plus de 15 ans, je gère des chambres d’hôtes et plusieurs maisons en location courte durée (type Airbnb) dans la région de Vidauban et ses alentours. Je propose mes services de conciergerie souhaitant louer leur logement en toute sérénité : – Création et gestion des annonces Airbnb / Booking / expedia ... – Accueil des voyageurs : check-in / check-out – Communication avec les locataires avant, pendant et après le séjour – Aide vérification ménage et aide à la gestion du linge et des entretiens piscines / jardins – Suivi du calendrier et optimisation des tarifs – Création de site internet vitrine pour votre logement – Aide à l’achat ou au renouvellement de matériel (vaisselle, linge, mobilier…) – Intervention ponctuelle ou gestion complète à l’année --> Lors de l'hiver, je peux passer régulièrement pour surveiller la propriété, relever le courrier ... Zone : Vidauban et ses 35km dont Saint Tropez Je m’adapte à vos besoins, que vous soyez propriétaire à l’année ou seulement en saison. Soyez le premier à déposer un avis sur cette annonce.",
       "url": "https://www.jemepropose.com/annonces/conciergerie/gestion-complete-de-votre-logement-par-une-professionnelle-du-tourisme-de-lhospitalite+10496930/",
       "is_remote": false,
-      "remote_confidence": 0.8,
-      "remote_reason": "LLM: Tâches nécessitant une présence physique régulière",
+      "remote_confidence": 1.0,
+      "remote_reason": "LLM: Prestataire propose services sur place, pas offre d'emploi",
       "analyzed_with_llm": true,
       "page": 6
     },
@@ -1770,8 +1770,8 @@
       "full_description": "Bonjour, Nous sommes à la recherche d'une personne qui pourrait s'occuper de notre fils de 7 ans, en situation de handicap (autiste), à notre domicile, sur le créneau  7h45 / 8h30 tous les matins de la semaine pour le réveil, l'habillage, le petit déjeuner et le transport en voiture jusqu'à l'arrêt de bus (~1km de notre domicile) A ces 5h /semaine peuvent s'ajouter en fonction de vos disponibilités d'autre temps de garde (mercredi après-midi, WE et les périodes de vacances scolaires) Secteur wittenheim. Si ce poste est susceptible de vous intéresser n'hésitez pas à me contacter pour en parler plus en détail Bonne journée ☺️ Bonjour, Nous sommes à la recherche d'une personne qui pourrait s'occuper de notre fils de 7 ans, en situation de handicap (autiste), à notre domicile, sur le créneau  7h45 / 8h30 tous les matins de la semaine pour le réveil, l'habillage, le petit déjeuner et le transport en voiture jusqu'à l'arrêt de bus (~1km de notre domicile) A ces 5h /semaine peuvent s'ajouter en fonction de vos disponibilités d'autre temps de garde (mercredi après-midi, WE et les périodes de vacances scolaires) Secteur wittenheim. Si ce poste est susceptible de vous intéresser n'hésitez pas à me contacter pour en parler plus en détail Bonne journée ☺️ Soyez le premier à déposer un avis sur cette annonce.",
       "url": "https://www.jemepropose.com/annonces/auxiliaire-de-vie/cherche-auxilliaire-de-vie+10496748/",
       "is_remote": false,
-      "remote_confidence": 0.0,
-      "remote_reason": "NLP Analysis: Strong on-site indicators (score: 2 vs 0)",
+      "remote_confidence": 1.0,
+      "remote_reason": "LLM: Garde d'enfant handicapé au domicile, présence obligatoire",
       "analyzed_with_llm": true,
       "page": 6
     },
@@ -1834,8 +1834,8 @@
       "full_description": "Numéro de mise en relation Bonjour, Je suis Kevin, une personne sérieuse, fiable et discrète, à la recherche d’un poste de gardiennage de maison ou de propriété. Fort d’une expérience dans le maintien de la sécurité et de l’entretien de résidences, je m’engage à assurer la surveillance régulière, le bon fonctionnement des installations et le soin des lieux comme si c’était les miens. Compétences et services proposés : Surveillance et sécurité de la maison / propriété Gestion du courrier, accueil des intervenants (artisans, livraisons…) Entretien de la maison et du jardin (arrosage, nettoyage, etc.) Gestion des installations techniques (chauffage, eau, électricité selon consignes) Disponibilité régulière ou temporaire selon vos besoins Qualités personnelles : Fiable et discret(e) Sens des responsabilités Organisé(e) et autonome Bon relationnel avec les propriétaires et le personnel éventuel Disponibilités : À définir selon vos besoins (temporaire, saisonnier ou permanent) Je suis prêt(e) à rencontrer les propriétaires pour discuter de vos besoins et adapter mes services à votre résidence. FORMATIONS ET DIPLÔMES -AGENT SPÉCIALISÉ EN SÉCURITÉ PRIVÉE -S.S.I.A.P.1 -SAUVETEUR SECOURISTE DU TRAVAIL -PALPATION DE SÉCURITÉ ET INSPECTION VISUELLE DES BAGAGES A MAIN -EQUIPIER DE PREMIÈRE INTERVENTION -HABILITATION ELECTRIQUE HO BS -INITIATION AUTO-DEFENSE ET MISE EN SÉCURITÉ DES PERSONNES Bonjour, Je suis Kevin, une personne sérieuse, fiable et discrète, à la recherche d’un poste de gardiennage de maison ou de propriété. Fort d’une expérience dans le maintien de la sécurité et de l’entretien de résidences, je m’engage à assurer la surveillance régulière, le bon fonctionnement des installations et le soin des lieux comme si c’était les miens. Compétences et services proposés : Surveillance et sécurité de la maison / propriété Gestion du courrier, accueil des intervenants (artisans, livraisons…) Entretien de la maison et du jardin (arrosage, nettoyage, etc.) Gestion des installations techniques (chauffage, eau, électricité selon consignes) Disponibilité régulière ou temporaire selon vos besoins Qualités personnelles : Fiable et discret(e) Sens des responsabilités Organisé(e) et autonome Bon relationnel avec les propriétaires et le personnel éventuel Disponibilités : À définir selon vos besoins (temporaire, saisonnier ou permanent) Je suis prêt(e) à rencontrer les propriétaires pour discuter de vos besoins et adapter mes services à votre résidence. FORMATIONS ET DIPLÔMES -AGENT SPÉCIALISÉ EN SÉCURITÉ PRIVÉE -S.S.I.A.P.1 -SAUVETEUR SECOURISTE DU TRAVAIL -PALPATION DE SÉCURITÉ ET INSPECTION VISUELLE DES BAGAGES A MAIN -EQUIPIER DE PREMIÈRE INTERVENTION -HABILITATION ELECTRIQUE HO BS -INITIATION AUTO-DEFENSE ET MISE EN SÉCURITÉ DES PERSONNES Soyez le premier à déposer un avis sur cette annonce.",
       "url": "https://www.jemepropose.com/annonces/gardiennage-de-domicile/agent-de-gardiennage-et-entretien-disponibilite-immediate+10496634/",
       "is_remote": false,
-      "remote_confidence": 0.95,
-      "remote_reason": "LLM: Travail nécessite présence physique pour surveillance et entretien",
+      "remote_confidence": 1.0,
+      "remote_reason": "LLM: Kevin cherche un emploi, pas une offre de poste",
       "analyzed_with_llm": true,
       "page": 6
     },
@@ -1867,7 +1867,7 @@
       "url": "https://www.jemepropose.com/annonces/emploi-etudiant/inexperimente+10496599/",
       "is_remote": false,
       "remote_confidence": 1.0,
-      "remote_reason": "LLM: Annonce de recherche d'emploi, tâches nécessitant présence physique",
+      "remote_reason": "LLM: Annonce de recherche d'emploi, pas une offre",
       "analyzed_with_llm": true,
       "page": 6
     },
@@ -1882,8 +1882,8 @@
       "full_description": "Bonjour je me propose pour vous aidez dans votre quotidien cordialement",
       "url": "https://www.jemepropose.com/annonces/auxiliaire-de-vie/auxiliaire-de-vie+10496549/",
       "is_remote": false,
-      "remote_confidence": 0.9,
-      "remote_reason": "LLM: Description suggère assistance physique",
+      "remote_confidence": 0.95,
+      "remote_reason": "LLM: Annonce de recherche d'emploi, pas une offre",
       "analyzed_with_llm": true,
       "page": 6
     },
@@ -1898,8 +1898,8 @@
       "full_description": "Bonjour, bonsoir. Dans le cadre de notre dernière année d'études à l'égole Travelling a Mauguio, nous devons réaliser un film du début à la fin en autonomie. Nous recherchons donc 2 personnes, homme ou femme, entre 18 et 35 ans, toute taille, style, et expérience sont acceptés. Le seul point demandé est de parler japonais ou coréen. Il s'agit d'un projet amateur. Ce n'est donc  malheureusement pas rémunéré. Mais c'est une occasion de travailler avec de jeunes passionnés de cinéma et de si cela est votre but également, d'acquérir de l'expérience dans ce milieu en temps qu'acteur. Le film parle d'un conflit intellectuel lors d'une partie d'échecs entre 2 héritiers d'entreprises japonaises. Il n'y a pas de dialogue en tel sur le tournage. Tout sera enregistré en voix off. Les dialogues seront leurs pensées. 1 jour de tournage en décembre pour les voix, et 2 jours vers fin janvier pour l'acting. Si intéressé  merci de me contacter :) Bonjour, bonsoir. Dans le cadre de notre dernière année d'études à l'égole Travelling a Mauguio, nous devons réaliser un film du début à la fin en autonomie. Nous recherchons donc 2 personnes, homme ou femme, entre 18 et 35 ans, toute taille, style, et expérience sont acceptés. Le seul point demandé est de parler japonais ou coréen. Il s'agit d'un projet amateur. Ce n'est donc  malheureusement pas rémunéré. Mais c'est une occasion de travailler avec de jeunes passionnés de cinéma et de si cela est votre but également, d'acquérir de l'expérience dans ce milieu en temps qu'acteur. Le film parle d'un conflit intellectuel lors d'une partie d'échecs entre 2 héritiers d'entreprises japonaises. Il n'y a pas de dialogue en tel sur le tournage. Tout sera enregistré en voix off. Les dialogues seront leurs pensées. 1 jour de tournage en décembre pour les voix, et 2 jours vers fin janvier pour l'acting. Si intéressé  merci de me contacter :) Ce serait les 2 jours de tournage. A compter également un jour pr les voix off en décembre début du mois. Soyez le premier à déposer un avis sur cette annonce.",
       "url": "https://www.jemepropose.com/annonces/acteur/recherche-2-acteurs-parlant-japonais-ou-coreen+10496514/",
       "is_remote": false,
-      "remote_confidence": 0.95,
-      "remote_reason": "LLM: Tournage physique requis pour film",
+      "remote_confidence": 1.0,
+      "remote_reason": "LLM: Tournage physique sur place, présence obligatoire",
       "analyzed_with_llm": true,
       "page": 6
     },
@@ -1913,9 +1913,9 @@
       "description": "Bonjour je recherche une personne qui peut me cree un site internet droopshipping cles en main . Je prendrer le devis le moins chere car je...",
       "full_description": "Numéro de mise en relation Bonjour je recherche une personne qui peut me cree un site internet droopshipping cles en main . Je prendrer le devis le moins chere car je n’est pas un gros budjet cordialement Bonjour je recherche une personne qui peut me cree un site internet droopshipping cles en main . Je prendrer le devis le moins chere car je n’est pas un gros budjet cordialement Soyez le premier à déposer un avis sur cette annonce.",
       "url": "https://www.jemepropose.com/annonces/creation-site-internet/creation-site-internet+10496507/",
-      "is_remote": false,
-      "remote_confidence": 0.8,
-      "remote_reason": "LLM: Pas de mention explicite télétravail",
+      "is_remote": true,
+      "remote_confidence": 0.95,
+      "remote_reason": "LLM: Création site web seul travail, livrable en ligne",
       "analyzed_with_llm": true,
       "page": 6
     },
@@ -1946,8 +1946,8 @@
       "full_description": "Numéro de mise en relation Je recherche un ingénieur du son patient, créatif, sensible et ouvert, capable de comprendre la vision d’une artiste intuitive et de transformer la matière brute en quelque chose de fort, sincère et marquant . Autodidacte et intuitive, je compose et chante à l’instinct, sans connaissance du solfège. J’ai besoin d’un ingénieur du son capable de convertir les sons, mélodies et harmonies qui sortent de ma bouche en notes réelles, pour donner vie à ce que j’entends intérieurement. Si tu ressens la musique comme un langage de l’âme et que tu veux construire quelque chose d’authentique, à deux, dans un vrai esprit de création partagée, contacte-moi. ». Je protège mon art comme on protège un secret. Ce projet est encadré et chaque collaboration se fait dans la clarté et le respect. Je ne cherche pas la foule, mais la justesse. J’ai déjà sorti deux clips par le passé. Ce ne sont pas des morceaux qui reflètent mon univers actuel — je prends aujourd’hui une direction beaucoup plus dark pop, plus viscérale. Mais ces titres peuvent te donner une idée de ma voix et de ma sensibilité. C’est ma base, pas mon sommet ✦ Je cherche la bonne alchimie, pas juste une collaboration. ⚡️ .Je crois que certaines rencontres sont écrites dans le son avant d’exister dans la vie. Peut-être que nos fréquences se cherchaient déjà. Je recherche un ingénieur du son patient, créatif, sensible et ouvert, capable de comprendre la vision d’une artiste intuitive et de transformer la matière brute en quelque chose de fort, sincère et marquant . Autodidacte et intuitive, je compose et chante à l’instinct, sans connaissance du solfège. J’ai besoin d’un ingénieur du son capable de convertir les sons, mélodies et harmonies qui sortent de ma bouche en notes réelles, pour donner vie à ce que j’entends intérieurement. Si tu ressens la musique comme un langage de l’âme et que tu veux construire quelque chose d’authentique, à deux, dans un vrai esprit de création partagée, contacte-moi. ». Je protège mon art comme on protège un secret. Ce projet est encadré et chaque collaboration se fait dans la clarté et le respect. Je ne cherche pas la foule, mais la justesse. J’ai déjà sorti deux clips par le passé. Ce ne sont pas des morceaux qui reflètent mon univers actuel — je prends aujourd’hui une direction beaucoup plus dark pop, plus viscérale. Mais ces titres peuvent te donner une idée de ma voix et de ma sensibilité. C’est ma base, pas mon sommet ✦ Je cherche la bonne alchimie, pas juste une collaboration. ⚡️ .Je crois que certaines rencontres sont écrites dans le son avant d’exister dans la vie. Peut-être que nos fréquences se cherchaient déjà. Soyez le premier à déposer un avis sur cette annonce.",
       "url": "https://www.jemepropose.com/annonces/ingenieur-du-son/recherche-ingenieur-du-son-pour-collaboration-artistique+10496485/",
       "is_remote": false,
-      "remote_confidence": 0.7,
-      "remote_reason": "LLM: Mention de Nantes sans télétravail explicite",
+      "remote_confidence": 0.95,
+      "remote_reason": "LLM: Artiste cherche collaborateur, pas d'indication télétravail",
       "analyzed_with_llm": true,
       "page": 7
     },
@@ -1994,8 +1994,8 @@
       "full_description": "Bonjour Je suis un photographe amateur situé sur Lyon et je recherche une modèle (souriante) pour une séance photos Je fais tout style de photos (portrait, mode, etc...) Si vous êtes intéressée et/ou pour plus d'informations, n'hésitez pas à me contacter Bien cordialement Je suis un photographe amateur situé sur Lyon et je recherche une modèle (souriante) pour une séance photos Je fais tout style de photos (portrait, mode, etc...) Si vous êtes intéressée et/ou pour plus d'informations, n'hésitez pas à me contacter Bien cordialement Soyez le premier à déposer un avis sur cette annonce.",
       "url": "https://www.jemepropose.com/annonces/photographe/recherche-modele-pour-seance-photos+10496353/",
       "is_remote": false,
-      "remote_confidence": 0.95,
-      "remote_reason": "LLM: Séance photos nécessite présence physique",
+      "remote_confidence": 1.0,
+      "remote_reason": "LLM: Séance photo oblige présence physique modèle",
       "analyzed_with_llm": true,
       "page": 7
     },
@@ -2026,8 +2026,8 @@
       "full_description": "Numéro de mise en relation Vous saviez combien de temps un recruteur passe à analyser un CV ? 3 secondes. Oui, 3 secondes pour décider si votre profil mérite d’être lu… ou ignoré. Autant dire qu’en 3 secondes, tout se joue : la structure, les mots, l’image que vous renvoyez, et la cohérence entre votre parcours et votre ambition. Et c’est justement là que j’interviens. Je suis Responsable RH dans un grand groupe et étudiante en Master 5 DRH dans une grande école privée. Chaque semaine, je lis des dizaines de candidatures : certaines sont fades, d’autres copiées sur l’IA, et d’autres… marquent instantanément. Vous voulez savoir la différence ? 👉 Celles qui se démarquent sont authentiques, stratégiques et parfaitement alignées avec le poste visé. 💼 Ce que je fais pour vous : Je ne crée pas simplement un CV ou une lettre — Je construis votre image professionnelle. Celle qui raconte votre histoire, attire les recruteurs et prouve que vous êtes la bonne personne. J’analyse votre profil comme le ferait un service RH interne : Ce que les recruteurs voient (et ce qu’ils ne voient pas) Les informations qui doivent sauter aux yeux dès la première ligne Les incohérences qui bloquent votre candidature sans que vous le sachiez La posture et le discours qui feront dire : “Ce candidat, il faut le rencontrer.” Je vous aide à structurer, affirmer et valoriser votre parcours, sans le travestir. Et si vous voulez vraiment sortir du lot ? Je vous montre comment une touche d’humour maîtrisée, un storytelling intelligent ou une mise en forme pensée comme une stratégie peuvent transformer une simple candidature en un vrai levier d’opportunités. Je connais parfaitement les attentes des recruteurs, les critères des ATS, et les leviers qui font basculer une candidature dans la pile des “sélectionnés”. Chaque prestation est rédigée à la main, avec une vraie analyse humaine — pas un texte automatisé. 🚀 Pourquoi me choisir ? Parce que je recrute moi-même, chaque jour. Parce que je sais ce qui attire, ce qui dérange, et ce qui fait dire “non” en deux secondes. Et surtout, parce que j’ai une approche humaine et moderne des RH : pas de jargon inutile, pas de copier-coller, mais une vraie analyse de fond, pensée pour votre réussite. Mon objectif ? ➡️ Que vous soyez vu, compris et retenu. ➡️ Que votre profil reflète votre valeur réelle. ➡️ Que chaque recruteur ait envie de vous rencontrer, pas juste de vous lire. ✨ En clair : Je transforme des candidatures ordinaires en profils qui captivent. Je vous apprends à parler le langage des RH, à préparer vos entretiens avec stratégie, et à vous présenter avec impact et confiance. Parce qu’aujourd’hui, il ne suffit plus de postuler. Il faut savoir se positionner, convaincre et marquer les esprits. Et c’est exactement ce que je fais pour vous. Vous saviez combien de temps un recruteur passe à analyser un CV ? 3 secondes. Oui, 3 secondes pour décider si votre profil mérite d’être lu… ou ignoré. Autant dire qu’en 3 secondes, tout se joue : la structure, les mots, l’image que vous renvoyez, et la cohérence entre votre parcours et votre ambition. Et c’est justement là que j’interviens. Je suis Responsable RH dans un grand groupe et étudiante en Master 5 DRH dans une grande école privée. Chaque semaine, je lis des dizaines de candidatures : certaines sont fades, d’autres copiées sur l’IA, et d’autres… marquent instantanément. Vous voulez savoir la différence ? 👉 Celles qui se démarquent sont authentiques, stratégiques et parfaitement alignées avec le poste visé. 💼 Ce que je fais pour vous : Je ne crée pas simplement un CV ou une lettre — Je construis votre image professionnelle. Celle qui raconte votre histoire, attire les recruteurs et prouve que vous êtes la bonne personne. J’analyse votre profil comme le ferait un service RH interne : Ce que les recruteurs voient (et ce qu’ils ne voient pas) Les informations qui doivent sauter aux yeux dès la première ligne Les incohérences qui bloquent votre candidature sans que vous le sachiez La posture et le discours qui feront dire : “Ce candidat, il faut le rencontrer.” Je vous aide à structurer, affirmer et valoriser votre parcours, sans le travestir. Et si vous voulez vraiment sortir du lot ? Je vous montre comment une touche d’humour maîtrisée, un storytelling intelligent ou une mise en forme pensée comme une stratégie peuvent transformer une simple candidature en un vrai levier d’opportunités. Je connais parfaitement les attentes des recruteurs, les critères des ATS, et les leviers qui font basculer une candidature dans la pile des “sélectionnés”. Chaque prestation est rédigée à la main, avec une vraie analyse humaine — pas un texte automatisé. 🚀 Pourquoi me choisir ? Parce que je recrute moi-même, chaque jour. Parce que je sais ce qui attire, ce qui dérange, et ce qui fait dire “non” en deux secondes. Et surtout, parce que j’ai une approche humaine et moderne des RH : pas de jargon inutile, pas de copier-coller, mais une vraie analyse de fond, pensée pour votre réussite. Mon objectif ? ➡️ Que vous soyez vu, compris et retenu. ➡️ Que votre profil reflète votre valeur réelle. ➡️ Que chaque recruteur ait envie de vous rencontrer, pas juste de vous lire. ✨ En clair : Je transforme des candidatures ordinaires en profils qui captivent. Je vous apprends à parler le langage des RH, à préparer vos entretiens avec stratégie, et à vous présenter avec impact et confiance. Parce qu’aujourd’hui, il ne suffit plus de postuler. Il faut savoir se positionner, convaincre et marquer les esprits. Et c’est exactement ce que je fais pour vous. Soyez le premier à déposer un avis sur cette annonce.",
       "url": "https://www.jemepropose.com/annonces/ressources-humaines/je-vais-te-donner-les-secrets-des-rh-pour-te-rendre-irresistible-sur-le-marche-du-travail+10496304/",
       "is_remote": false,
-      "remote_confidence": 0.0,
-      "remote_reason": "NLP Analysis: Strong on-site indicators (score: 2 vs 0)",
+      "remote_confidence": 0.95,
+      "remote_reason": "LLM: Annonce de service, pas une offre d'emploi",
       "analyzed_with_llm": true,
       "page": 7
     },
@@ -2058,8 +2058,8 @@
       "full_description": "Bonjour Je recherche quelqu'un pour garder ma mère de 94 ans tous les mercredis, de 8h à 17h à partir du mercredi 12 novembre 2025 Paiement en CESU Je recherche quelqu'un pour garder ma mère de 94 ans tous les mercredis, de 8h à 17h à partir du mercredi 12 novembre 2025 Paiement en CESU Soyez le premier à déposer un avis sur cette annonce.",
       "url": "https://www.jemepropose.com/annonces/auxiliaire-de-vie/personne-agee+10496254/",
       "is_remote": false,
-      "remote_confidence": 0.95,
-      "remote_reason": "LLM: Garde de personne âgée nécessite présence physique",
+      "remote_confidence": 1.0,
+      "remote_reason": "LLM: Garde d'une personne âgée, présence physique obligatoire",
       "analyzed_with_llm": true,
       "page": 7
     },
@@ -2106,8 +2106,8 @@
       "full_description": "Bonjour, je suis à la recherche de 2 serveurs pour les 18 ans de mon fils. Lieu ! Touffreville (27) - 19h00 - minuit",
       "url": "https://www.jemepropose.com/annonces/serveuse/recherche-serveur+10496118/",
       "is_remote": false,
-      "remote_confidence": 0.95,
-      "remote_reason": "LLM: Travail à un événement nécessite présence physique",
+      "remote_confidence": 1.0,
+      "remote_reason": "LLM: Serveur en événementiel, présence physique obligatoire",
       "analyzed_with_llm": true,
       "page": 7
     },
@@ -2154,8 +2154,8 @@
       "full_description": "bonsoir je recherche quelqu'un qui recherche pour promener son chien ou même le garder",
       "url": "https://www.jemepropose.com/annonces/garde-d-animaux/moccuper-de-vos-animaux+10496044/",
       "is_remote": false,
-      "remote_confidence": 0.95,
-      "remote_reason": "LLM: Tâches nécessitent présence physique pour garde d'animaux",
+      "remote_confidence": 1.0,
+      "remote_reason": "LLM: Garde et promenade de chiens nécessite présence physique",
       "analyzed_with_llm": true,
       "page": 7
     },
@@ -2186,8 +2186,8 @@
       "full_description": "Numéro de mise en relation Bonjour je recherche des gardes de nuit chez une personne agee , a partir du mois de novembre 2025 , je suis une personne  qui est tres serieuse ,qui a de l experience , et je suis de confience , ma recherche est sur ou au allentours de vandays montalivet , disponible tout les soirs de la semaine , j attend vos propositions merci a vous tarif a definir ensembles Bonjour je recherche des gardes de nuit chez une personne agee , a partir du mois de novembre 2025 , je suis une personne  qui est tres serieuse ,qui a de l experience , et je suis de confience , ma recherche est sur ou au allentours de vandays montalivet , disponible tout les soirs de la semaine , j attend vos propositions merci a vous tarif a definir ensembles Soyez le premier à déposer un avis sur cette annonce.",
       "url": "https://www.jemepropose.com/annonces/auxiliaire-de-vie/cherche-gardes-de-nuit-chez-personne-agee+10495975/",
       "is_remote": false,
-      "remote_confidence": 0.0,
-      "remote_reason": "NLP Analysis: Ambiguous signals (remote: 0, onsite: 0)",
+      "remote_confidence": 1.0,
+      "remote_reason": "LLM: Garde de nuit chez la personne = présence physique obligatoire",
       "analyzed_with_llm": true,
       "page": 7
     },
@@ -2203,7 +2203,7 @@
       "url": "https://www.jemepropose.com/annonces/gardiennage-de-domicile/maison-avec-jardin-et-piscine-en-gardiennage-1-mois+10495965/",
       "is_remote": false,
       "remote_confidence": 1.0,
-      "remote_reason": "LLM: Gardiennage nécessite présence physique sur place",
+      "remote_reason": "LLM: Gardiennage physique d'une maison à Nouméa",
       "analyzed_with_llm": true,
       "page": 7
     },
@@ -2234,8 +2234,8 @@
       "full_description": "Numéro de mise en relation Bonjour, je suis à la recherche d'une gouvernant pour une résidence principale. Les missions vont de l'entretien générale de la maison au repassage. Nous estimons qu'un 15/20 heures semaines serait idéal mais nous pourrions revoir à la hausse au besoin. Nous avons des animaux de compagnie (chien, chat). Nous ne sommes pas attaché à des horaires en particulier, cela dépendra de la personne. Si elle préfère les après-midi , pas de souci. Bonjour, je suis à la recherche d'une gouvernant pour une résidence principale. Les missions vont de l'entretien générale de la maison au repassage. Nous estimons qu'un 15/20 heures semaines serait idéal mais nous pourrions revoir à la hausse au besoin. Nous avons des animaux de compagnie (chien, chat). Nous ne sommes pas attaché à des horaires en particulier, cela dépendra de la personne. Si elle préfère les après-midi , pas de souci. Soyez le premier à déposer un avis sur cette annonce.",
       "url": "https://www.jemepropose.com/annonces/gouvernante/recherche-gouvernante+10495796/",
       "is_remote": false,
-      "remote_confidence": 0.0,
-      "remote_reason": "NLP Analysis: Strong on-site indicators (score: 2 vs 0)",
+      "remote_confidence": 0.95,
+      "remote_reason": "LLM: Gouvernante = ménage sur place, présence physique obligatoire",
       "analyzed_with_llm": true,
       "page": 7
     },
@@ -2282,8 +2282,8 @@
       "full_description": "Nous recherchons une personne de confiance pour une collaboration humaine et durable autour d’un appartement haut de gamme situé à Bourg Lévêque, à Rennes. Ce n’est pas un simple “ménage” : c’est un lieu d’exception, une ambiance, une expérience à faire vivre. Nous cherchons quelqu’un qui aime le beau travail, le contact humain, et la satisfaction d’un accueil réussi. En pratique : •En octobre 2025, le logement a été occupé une douzaine de jours (6 en semaine et 6 le week-end). •L’activité monte doucement en puissance, notamment à l’approche des fêtes de fin d’année. Les missions : •Effectuer les ménages complets après chaque séjour, avec soin et sens du détail (linge, spa, ambiance, vérifications). •Accueillir les voyageurs : remise des clés, sourire, explications simples, un vrai moment agréable pour qui aime recevoir. •Gérer de petits approvisionnements (produits, bouteilles, objets de confort ou à la vente sur place). •Partager un bref retour après chaque passage (message ou photo). •Pouvoir proposer un(e) remplaçant(e) de confiance en cas d’absence. Ce que nous faisons de notre côté : Nous, les propriétaires, gérons toute la relation client, les réservations, les vérifications d’identité, la partie administrative et commerciale. Ce que nous voulons avant tout, c’est travailler main dans la main avec une personne sur qui on peut compter, avec qui on s’entend bien, et avec qui on construit une vraie relation de confiance dans la durée. Personne recherchée : •Sérieuse, bienveillante, rigoureuse et à l’aise dans un environnement haut de gamme. •Apprécie le contact humain, le sens du détail et les lieux soignés. •Habite idéalement à proximité du quartier Bourg Lévêque (déplacements simples). •Dispose déjà d’autres clients ou activités, et souhaite compléter son activité avec un lieu où l’on travaille dans le respect et la confiance mutuelle. Conditions : •Environ 12 interventions par mois, principalement le week-end mais aussi en semaine. •Planning communiqué à l’avance, avec souplesse et échanges constants. •Formation aux protocoles d’entretien et d’accueil assurée. 📩 Si cette mission vous parle, écrivez-nous quelques lignes sur votre parcours, votre quartier de résidence et vos disponibilités. Nous serons heureux de faire connaissance. Nous recherchons une personne de confiance pour une collaboration humaine et durable autour d’un appartement haut de gamme situé à Bourg Lévêque, à Rennes. Ce n’est pas un simple “ménage” : c’est un lieu d’exception, une ambiance, une expérience à faire vivre. Nous cherchons quelqu’un qui aime le beau travail, le contact humain, et la satisfaction d’un accueil réussi. En pratique : •En octobre 2025, le logement a été occupé une douzaine de jours (6 en semaine et 6 le week-end). •L’activité monte doucement en puissance, notamment à l’approche des fêtes de fin d’année. Les missions : •Effectuer les ménages complets après chaque séjour, avec soin et sens du détail (linge, spa, ambiance, vérifications). •Accueillir les voyageurs : remise des clés, sourire, explications simples, un vrai moment agréable pour qui aime recevoir. •Gérer de petits approvisionnements (produits, bouteilles, objets de confort ou à la vente sur place). •Partager un bref retour après chaque passage (message ou photo). •Pouvoir proposer un(e) remplaçant(e) de confiance en cas d’absence. Ce que nous faisons de notre côté : Nous, les propriétaires, gérons toute la relation client, les réservations, les vérifications d’identité, la partie administrative et commerciale. Ce que nous voulons avant tout, c’est travailler main dans la main avec une personne sur qui on peut compter, avec qui on s’entend bien, et avec qui on construit une vraie relation de confiance dans la durée. Personne recherchée : •Sérieuse, bienveillante, rigoureuse et à l’aise dans un environnement haut de gamme. •Apprécie le contact humain, le sens du détail et les lieux soignés. •Habite idéalement à proximité du quartier Bourg Lévêque (déplacements simples). •Dispose déjà d’autres clients ou activités, et souhaite compléter son activité avec un lieu où l’on travaille dans le respect et la confiance mutuelle. Conditions : •Environ 12 interventions par mois, principalement le week-end mais aussi en semaine. •Planning communiqué à l’avance, avec souplesse et échanges constants. •Formation aux protocoles d’entretien et d’accueil assurée. 📩 Si cette mission vous parle, écrivez-nous quelques lignes sur votre parcours, votre quartier de résidence et vos disponibilités. Nous serons heureux de faire connaissance. Soyez le premier à déposer un avis sur cette annonce.",
       "url": "https://www.jemepropose.com/annonces/conciergerie/assistante-dentretien-et-daccueil-appartement-haut-de-gamme-quartier-bourg-leveque-rennes+10495632/",
       "is_remote": false,
-      "remote_confidence": 0.95,
-      "remote_reason": "LLM: Tâches nécessitent présence physique à l'appartement",
+      "remote_confidence": 0.98,
+      "remote_reason": "LLM: Ménage, accueil physique et remise des clés sur place",
       "analyzed_with_llm": true,
       "page": 8
     },
@@ -2330,8 +2330,8 @@
       "full_description": "Photographe passionné basé à Paris, je suis à la recherche d’une modèle pour un shooting créatif (portrait, mode, urbain, artistique, etc.). Projet rémunéré Débutante acceptée, l’essentiel est la motivation et une bonne énergie ! Si tu es intéressé(e), envoie-moi un message avec quelques photos À bientôt ! Stan Photographe passionné basé à Paris, je suis à la recherche d’une modèle pour un shooting créatif (portrait, mode, urbain, artistique, etc.). Projet rémunéré Débutante acceptée, l’essentiel est la motivation et une bonne énergie ! Si tu es intéressé(e), envoie-moi un message avec quelques photos À bientôt ! Soyez le premier à déposer un avis sur cette annonce.",
       "url": "https://www.jemepropose.com/annonces/modele-photo/recherche-modele-photo-pour-projet-remunere+10492744/",
       "is_remote": false,
-      "remote_confidence": 0.95,
-      "remote_reason": "LLM: Photoshoot nécessite présence physique",
+      "remote_confidence": 1.0,
+      "remote_reason": "LLM: Shooting photo sur Paris, présence physique obligatoire",
       "analyzed_with_llm": true,
       "page": 8
     },
@@ -2346,8 +2346,8 @@
       "full_description": "Bonjour, Je recherche 3 serveurs(es) pour un mariage en juillet 2026. Service des boissons et des petits fours pour le vin d'honneur. Pour le repas, il s'agit d'un buffet froid, il faudra juste mettre en place et s'occuper de la gestion des bouteilles sur les tables pendant le repas. Servir le dessert. La vaisselle est à rendre sale, donc pas de lavage prévu de l'ensemble des assiettes et couverts. La cuisine dispose d'un lave vaisselles, il faudra juste laver quelques assiettes pour le lendemain. Je recherche 3 serveurs(es) pour un mariage en juillet 2026. Service des boissons et des petits fours pour le vin d'honneur. Pour le repas, il s'agit d'un buffet froid, il faudra juste mettre en place et s'occuper de la gestion des bouteilles sur les tables pendant le repas. Servir le dessert. La vaisselle est à rendre sale, donc pas de lavage prévu de l'ensemble des assiettes et couverts. La cuisine dispose d'un lave vaisselles, il faudra juste laver quelques assiettes pour le lendemain. Soyez le premier à déposer un avis sur cette annonce.",
       "url": "https://www.jemepropose.com/annonces/serveuse/recherche-serveurses-pour-un-mariage+10495379/",
       "is_remote": false,
-      "remote_confidence": 0.95,
-      "remote_reason": "LLM: Tâches nécessitent présence physique au lieu du mariage",
+      "remote_confidence": 1.0,
+      "remote_reason": "LLM: Service lors d’un mariage, présence physique obligatoire",
       "analyzed_with_llm": true,
       "page": 8
     },
@@ -2395,7 +2395,7 @@
       "url": "https://www.jemepropose.com/annonces/serveuse/service-pour-aperitif-et-diner-anniversaire+10495301/",
       "is_remote": false,
       "remote_confidence": 1.0,
-      "remote_reason": "LLM: Travail nécessite présence physique en salle",
+      "remote_reason": "LLM: Serveur anniversaire sur place, pas télétravail",
       "analyzed_with_llm": true,
       "page": 8
     },
@@ -2442,8 +2442,8 @@
       "full_description": "Je suis spécialisée dans l accompagnement de fin de vie.",
       "url": "https://www.jemepropose.com/annonces/auxiliaire-de-vie/recherche-mi-temps-auxiliaire-de-vie+10495250/",
       "is_remote": false,
-      "remote_confidence": 0.0,
-      "remote_reason": "NLP Analysis: Ambiguous signals (remote: 0, onsite: 0)",
+      "remote_confidence": 0.95,
+      "remote_reason": "LLM: Accompagnement fin de vie nécessite présence physique",
       "analyzed_with_llm": true,
       "page": 8
     },
@@ -2602,8 +2602,8 @@
       "full_description": "Numéro de mise en relation bonjour, Je recherche une personne capable de réaliser une vidéo d’anniversaire pour les 40 ans de ma femme. Contenu à monter : Plus de 80 photos, Quelques vidéos courtes (dont une séquence avec nos enfants), Textes humoristiques et tendres que j’ai déjà préparés, 2 à 3 musiques différentes pour rythmer la vidéo. Style recherché : Vidéo d’une durée d’environ 8 minutes, Mélange humour + émotion, Effets simples et élégants (zoom, fondu, transitions fluides), Résultat final en format MP4 Full HD, prêt à être diffusé lors de l’événement. Date limite : jeudi 2 octobre Je recherche une personne capable de réaliser une vidéo d’anniversaire pour les 40 ans de ma femme. Contenu à monter : Plus de 80 photos, Quelques vidéos courtes (dont une séquence avec nos enfants), Textes humoristiques et tendres que j’ai déjà préparés, 2 à 3 musiques différentes pour rythmer la vidéo. Style recherché : Vidéo d’une durée d’environ 8 minutes, Mélange humour + émotion, Effets simples et élégants (zoom, fondu, transitions fluides), Résultat final en format MP4 Full HD, prêt à être diffusé lors de l’événement. Date limite : jeudi 2 octobre Soyez le premier à déposer un avis sur cette annonce.",
       "url": "https://www.jemepropose.com/annonces/montage-video/montage-video-anniversaire-40-ans-photos-videos-musique+10494609/",
       "is_remote": true,
-      "remote_confidence": 0.9,
-      "remote_reason": "LLM: Travail de montage vidéo pouvant être fait à distance",
+      "remote_confidence": 0.95,
+      "remote_reason": "LLM: Montage vidéo livrable en ligne sans déplacement",
       "analyzed_with_llm": true,
       "page": 9
     },
@@ -2635,7 +2635,7 @@
       "url": "https://www.jemepropose.com/annonces/traiteur/recherche-traiteur-sur-faymoreau+10494430/",
       "is_remote": false,
       "remote_confidence": 0.95,
-      "remote_reason": "LLM: Service traiteur nécessite présence physique sur site",
+      "remote_reason": "LLM: Recherche traiteur pour mariage, pas télétravail",
       "analyzed_with_llm": true,
       "page": 9
     },
@@ -2650,8 +2650,8 @@
       "full_description": "Numéro de mise en relation cherche aux de vie véhiculée, dynamique et joie de vivre pour aide mr handicapé la cinquantaine les mardi  ou vendredi de 10h à 15h.  secteur tremblay les villages. rémunération 13 € net heure  Déclaré cesu cherche aux de vie véhiculée, dynamique et joie de vivre pour aide mr handicapé la cinquantaine les mardi  ou vendredi de 10h à 15h.  secteur tremblay les villages. rémunération 13 € net heure  Déclaré cesu Soyez le premier à déposer un avis sur cette annonce.",
       "url": "https://www.jemepropose.com/annonces/auxiliaire-de-vie/recrute-des-decembre-en-cdi+8466866/",
       "is_remote": false,
-      "remote_confidence": 0.0,
-      "remote_reason": "NLP Analysis: Ambiguous signals (remote: 0, onsite: 0)",
+      "remote_confidence": 0.95,
+      "remote_reason": "LLM: Auxiliaire de vie sur place à Tremblay-les-Villages",
       "analyzed_with_llm": true,
       "page": 9
     },
@@ -2715,7 +2715,7 @@
       "url": "https://www.jemepropose.com/annonces/gardiennage-de-domicile/gestion-dune-maison+10494259/",
       "is_remote": false,
       "remote_confidence": 0.95,
-      "remote_reason": "LLM: Gestion de maison nécessite présence physique",
+      "remote_reason": "LLM: Gardiennage maison implique présence physique obligatoire",
       "analyzed_with_llm": true,
       "page": 9
     },
@@ -2731,7 +2731,7 @@
       "url": "https://www.jemepropose.com/annonces/serveuse/soiree+10494251/",
       "is_remote": false,
       "remote_confidence": 1.0,
-      "remote_reason": "LLM: Tâches nécessitent présence physique pour service et rangement",
+      "remote_reason": "LLM: Service soirée anniversaire, présence physique obligatoire",
       "analyzed_with_llm": true,
       "page": 9
     },
@@ -2763,7 +2763,7 @@
       "url": "https://www.jemepropose.com/annonces/modele-photo/recherche-modele-pour-collaboration-shooting-lifestyle+10494156/",
       "is_remote": false,
       "remote_confidence": 0.95,
-      "remote_reason": "LLM: Sessions photos en extérieur à Paris",
+      "remote_reason": "LLM: Séances photos à Paris, pas de télétravail",
       "analyzed_with_llm": true,
       "page": 9
     },
@@ -2795,7 +2795,7 @@
       "url": "https://www.jemepropose.com/annonces/cours-d-anglais/cours-danglais+10494108/",
       "is_remote": false,
       "remote_confidence": 0.95,
-      "remote_reason": "LLM: Demande d'aide personnelle, pas une offre d'emploi",
+      "remote_reason": "LLM: Recherche de cours particuliers, présence physique requise",
       "analyzed_with_llm": true,
       "page": 9
     },
@@ -2810,8 +2810,8 @@
       "full_description": "Numéro de mise en relation Bonjour j'écris depuis plus de 30 ans et vous propose mon aide pour écrire un roman, corrections, aide à l'écriture ou soutien scolaire primaire et lycée sur Valras Plage Bonjour j'écris depuis plus de 30 ans et vous propose mon aide pour écrire un roman, corrections, aide à l'écriture ou soutien scolaire primaire et lycée sur Valras Plage Bac L et anciennement fonctionnaire des Finances et écrivaine Soyez le premier à déposer un avis sur cette annonce.",
       "url": "https://www.jemepropose.com/annonces/ecrivain-public/aide-a-lecriture+10494043/",
       "is_remote": false,
-      "remote_confidence": 0.8,
-      "remote_reason": "LLM: Mention de lieu spécifique sans indication de télétravail",
+      "remote_confidence": 0.95,
+      "remote_reason": "LLM: Annonce d'une autrice cherchant des clients sur Valras-Plage",
       "analyzed_with_llm": true,
       "page": 9
     },
@@ -2906,8 +2906,8 @@
       "full_description": "Bonjour , je propose mes services pour servir dans les mariages ,événements etc .",
       "url": "https://www.jemepropose.com/annonces/serveuse/serveuse-hotesse-poir-evenements+10493778/",
       "is_remote": false,
-      "remote_confidence": 0.95,
-      "remote_reason": "LLM: Travail nécessite présence physique aux événements",
+      "remote_confidence": 1.0,
+      "remote_reason": "LLM: Annonce de recherche d'emploi, pas une offre",
       "analyzed_with_llm": true,
       "page": 10
     },
@@ -2923,7 +2923,7 @@
       "url": "https://www.jemepropose.com/annonces/cours-de-danse/recherche-danseureuse-experimentee+10493772/",
       "is_remote": false,
       "remote_confidence": 0.95,
-      "remote_reason": "LLM: Cours de danse nécessitent présence physique",
+      "remote_reason": "LLM: Cours de danse nécessite présence physique",
       "analyzed_with_llm": true,
       "page": 10
     },
@@ -3146,8 +3146,8 @@
       "full_description": "Je recherche une dame de compagnie pour ma grand mère de 92 ans . Discuter,jouer,activiter....",
       "url": "https://www.jemepropose.com/annonces/auxiliaire-de-vie/dame-de-compagnie+10493292/",
       "is_remote": false,
-      "remote_confidence": 0.0,
-      "remote_reason": "NLP Analysis: Ambiguous signals (remote: 0, onsite: 0)",
+      "remote_confidence": 0.95,
+      "remote_reason": "LLM: Accompagnement personne âgée nécessite présence physique",
       "analyzed_with_llm": true,
       "page": 10
     },
@@ -3163,7 +3163,7 @@
       "url": "https://www.jemepropose.com/annonces/colocation/appartement-tres-jolie+10493278/",
       "is_remote": false,
       "remote_confidence": 1.0,
-      "remote_reason": "LLM: Annonce de location, pas une offre d'emploi",
+      "remote_reason": "LLM: Annonce de colocation, pas une offre d'emploi",
       "analyzed_with_llm": true,
       "page": 10
     },
@@ -3178,8 +3178,8 @@
       "full_description": "Numéro de mise en relation Bonjour je recherche quelqu’un pour réviser mon moteur bateau ou pour m’aider , depuis les vacances il ne tourne plus que sur 3 cylindres, ceux de droite. Il n’y a pas de jus à la sortie des électrodes. Je ne pense pas que les 3 bobines gauche ne fonctionnement plus en même temps quand je branche une bobine de droite à gauche le cylindre fonctionne donc ce n’est pas l’arrivée d’essence Bonjour je recherche quelqu’un pour réviser mon moteur bateau ou pour m’aider , depuis les vacances il ne tourne plus que sur 3 cylindres, ceux de droite. Il n’y a pas de jus à la sortie des électrodes. Je ne pense pas que les 3 bobines gauche ne fonctionnement plus en même temps quand je branche une bobine de droite à gauche le cylindre fonctionne donc ce n’est pas l’arrivée d’essence Soyez le premier à déposer un avis sur cette annonce.",
       "url": "https://www.jemepropose.com/annonces/entretien-bateau/revision-moteur+10493227/",
       "is_remote": false,
-      "remote_confidence": 0.95,
-      "remote_reason": "LLM: Tâche physique sur moteur bateau nécessite présence",
+      "remote_confidence": 1.0,
+      "remote_reason": "LLM: Révision moteur bateau nécessite intervention physique sur place",
       "analyzed_with_llm": true,
       "page": 10
     },

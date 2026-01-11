@@ -1,18 +1,18 @@
 {
   "metadata": {
-    "export_date": "2026-01-11 11:20:57",
+    "export_date": "2026-01-11 12:05:50",
     "total_jobs": 200,
     "analysis_mode": "LLM-Enhanced"
   },
   "statistics": {
     "total": 200,
-    "remote": 5,
-    "on_site": 195,
-    "remote_percentage": 2.5,
+    "remote": 4,
+    "on_site": 196,
+    "remote_percentage": 2.0,
     "llm_used": true,
     "source": "https://www.jemepropose.com/annonces/?offer_type=2&provider_type=1",
     "pages_scraped": 10,
-    "export_date": "2026-01-11 11:20:57"
+    "export_date": "2026-01-11 12:05:50"
   },
   "jobs": [
     {
@@ -27,7 +27,7 @@
       "url": "https://www.jemepropose.com/annonces/bricolage/bricolage+10499312/",
       "is_remote": false,
       "remote_confidence": 1.0,
-      "remote_reason": "Keyword detection: On-site keyword: bricolage",
+      "remote_reason": "Keyword detection: Obvious on-site work: bricolage",
       "analyzed_with_llm": false,
       "page": 1
     },
@@ -43,7 +43,7 @@
       "url": "https://www.jemepropose.com/annonces/cours-a-domicile/hauffeur-hf+10499240/",
       "is_remote": false,
       "remote_confidence": 1.0,
-      "remote_reason": "Keyword detection: On-site keyword: chauffeur",
+      "remote_reason": "Keyword detection: Obvious on-site work: chauffeur",
       "analyzed_with_llm": false,
       "page": 1
     },
@@ -58,8 +58,8 @@
       "full_description": "1) Réalisation d'une semelle (partielle) et d'un mur de soutènement (partiel) en vue d'une mise à niveau du terrain. 2) Réalisation d'une élévation du mur existant de 4 ou 5 parpaings. 3) terrassement 1) Réalisation d'une semelle (partielle) et d'un mur de soutènement (partiel) en vue d'une mise à niveau du terrain. 2) Réalisation d'une élévation du mur existant de 4 ou 5 parpaings. 3) terrassement Soyez le premier à déposer un avis sur cette annonce.",
       "url": "https://www.jemepropose.com/annonces/terrassement/mur-de-soutenement+10499225/",
       "is_remote": false,
-      "remote_confidence": 0.95,
-      "remote_reason": "LLM: Terrassement et maçonnerie impossible à distance",
+      "remote_confidence": 1.0,
+      "remote_reason": "LLM: Terrassement et construction mur nécessitent présence physique",
       "analyzed_with_llm": true,
       "page": 1
     },
@@ -75,7 +75,7 @@
       "url": "https://www.jemepropose.com/annonces/menage/cherche-pour-menage+10499215/",
       "is_remote": false,
       "remote_confidence": 1.0,
-      "remote_reason": "Keyword detection: On-site keyword: ménage",
+      "remote_reason": "Keyword detection: Obvious on-site work: ménage",
       "analyzed_with_llm": false,
       "page": 1
     },
@@ -91,7 +91,7 @@
       "url": "https://www.jemepropose.com/annonces/menage/mrs+10499207/",
       "is_remote": false,
       "remote_confidence": 1.0,
-      "remote_reason": "Keyword detection: On-site keyword: ménage",
+      "remote_reason": "Keyword detection: Obvious on-site work: ménage",
       "analyzed_with_llm": false,
       "page": 1
     },
@@ -107,7 +107,7 @@
       "url": "https://www.jemepropose.com/annonces/baby-sitting/native-english-babysitter-early-afternoons+10499202/",
       "is_remote": false,
       "remote_confidence": 1.0,
-      "remote_reason": "Keyword detection: On-site keyword: baby",
+      "remote_reason": "Keyword detection: Obvious on-site work: baby",
       "analyzed_with_llm": false,
       "page": 1
     },
@@ -122,8 +122,8 @@
       "full_description": "Recherche d'urgence auxiliaire de vie pour assister un homme handicapé sur fauteuil roulant dans tous les actes de la vie quotidienne : (toilette, habillage, levé, réfection de lit, sorties, surveillance...) : Du Lundi au Vendredi de 08H-15H et le samedi de 08H-12H y compris jours fériés Rémunération : 11,33€/h net soit 1914.33€ mensuel net. Majoration de 70% au titre des jours fériés travaillés. CDI avec une période d'essai de 1 mois renouvelable une 1 fois. Déclaration URSSAF. (CESU). Pour plus d'infos, contact d'urgence par tél ou mail. Recherche d'urgence auxiliaire de vie pour assister un homme handicapé sur fauteuil roulant dans tous les actes de la vie quotidienne : (toilette, habillage, levé, réfection de lit, sorties, surveillance...) : Du Lundi au Vendredi de 08H-15H et le samedi de 08H-12H y compris jours fériés Rémunération : 11,33€/h net soit 1914.33€ mensuel net. Majoration de 70% au titre des jours fériés travaillés. CDI avec une période d'essai de 1 mois renouvelable une 1 fois. Déclaration URSSAF. (CESU). Pour plus d'infos, contact d'urgence par tél ou mail. Soyez le premier à déposer un avis sur cette annonce.",
       "url": "https://www.jemepropose.com/annonces/auxiliaire-de-vie/offre-emploi-dauxiliaire-de-vie-en-cdi-de-39-heures+9846609/",
       "is_remote": false,
-      "remote_confidence": 0.95,
-      "remote_reason": "LLM: Assistance physique handicap toilette habillage présence indispensable",
+      "remote_confidence": 1.0,
+      "remote_reason": "LLM: Soins corporels sur place, présence physique obligatoire",
       "analyzed_with_llm": true,
       "page": 1
     },
@@ -139,7 +139,7 @@
       "url": "https://www.jemepropose.com/annonces/femme-de-chambre/femme-de-menage+10499181/",
       "is_remote": false,
       "remote_confidence": 1.0,
-      "remote_reason": "Keyword detection: On-site keyword: ménage",
+      "remote_reason": "Keyword detection: Obvious on-site work: ménage",
       "analyzed_with_llm": false,
       "page": 1
     },
@@ -155,7 +155,7 @@
       "url": "https://www.jemepropose.com/annonces/menage/femme-de-menage-35-heures-par-semaines+10499157/",
       "is_remote": false,
       "remote_confidence": 1.0,
-      "remote_reason": "Keyword detection: On-site keyword: ménage",
+      "remote_reason": "Keyword detection: Obvious on-site work: ménage",
       "analyzed_with_llm": false,
       "page": 1
     },
@@ -171,7 +171,7 @@
       "url": "https://www.jemepropose.com/annonces/garde-d-enfants/garde-enfant-4-ans-a-domicile-le-mercredi+10499142/",
       "is_remote": false,
       "remote_confidence": 1.0,
-      "remote_reason": "Keyword detection: On-site keyword: garde d'enfant",
+      "remote_reason": "Keyword detection: Obvious on-site work: garde d'enfant",
       "analyzed_with_llm": false,
       "page": 1
     },
@@ -187,7 +187,7 @@
       "url": "https://www.jemepropose.com/annonces/menage/recherche-employe-de-maison+10499140/",
       "is_remote": false,
       "remote_confidence": 1.0,
-      "remote_reason": "Keyword detection: On-site keyword: ménage",
+      "remote_reason": "Keyword detection: Obvious on-site work: ménage",
       "analyzed_with_llm": false,
       "page": 1
     },
@@ -203,7 +203,7 @@
       "url": "https://www.jemepropose.com/annonces/demenagement/co-transportage-ou-camion-a-vide+10499117/",
       "is_remote": false,
       "remote_confidence": 1.0,
-      "remote_reason": "Keyword detection: On-site keyword: ménage",
+      "remote_reason": "Keyword detection: Obvious on-site work: ménage",
       "analyzed_with_llm": false,
       "page": 1
     },
@@ -219,7 +219,7 @@
       "url": "https://www.jemepropose.com/annonces/coaching-personnel/coach-en-developpement-personnel-coach-de-vie+10496855/",
       "is_remote": false,
       "remote_confidence": 0.95,
-      "remote_reason": "LLM: Interventions ponctuelles dans locaux association Monaco",
+      "remote_reason": "LLM: Interventions en présentiel auprès d'adolescents à Monaco",
       "analyzed_with_llm": true,
       "page": 1
     },
@@ -235,7 +235,7 @@
       "url": "https://www.jemepropose.com/annonces/bricolage/travaux-urgents+10498994/",
       "is_remote": false,
       "remote_confidence": 1.0,
-      "remote_reason": "Keyword detection: On-site keyword: bricolage",
+      "remote_reason": "Keyword detection: Obvious on-site work: bricolage",
       "analyzed_with_llm": false,
       "page": 1
     },
@@ -247,12 +247,12 @@
       "poster": "Jenny432",
       "date_posted": "02/01/2026",
       "description": "Bonjour, Je recherche une personne pour m'accompagner dans la réalisation du 1er exercice de comptabilité de mon association.",
-      "full_description": "Bonjour, Je recherche une personne pour m'accompagner dans la réalisation du 1er exercice de comptabilité de mon association.",
+      "full_description": "Bonjour, Je recherche une personne pour m'accompagner dans la réalisation du 1er exercice de comptabilité de mon association. Bonjour, Je recherche une personne pour m'accompagner dans la réalisation du 1er exercice de comptabilité de mon association. Soyez le premier à déposer un avis sur cette annonce.",
       "url": "https://www.jemepropose.com/annonces/assistance-comptable/1er-exercice-comptable-dune-association+10498945/",
       "is_remote": false,
-      "remote_confidence": 1.0,
-      "remote_reason": "Keyword detection: On-site keyword: accompagner",
-      "analyzed_with_llm": false,
+      "remote_confidence": 0.9,
+      "remote_reason": "LLM: Accompagnement comptable implique présence physique",
+      "analyzed_with_llm": true,
       "page": 1
     },
     {
@@ -263,12 +263,12 @@
       "poster": "selinonte88",
       "date_posted": "02/01/2026",
       "description": "Bonjour. Nous recherchons une personne qualifiée. Pouvant s'occuper le mercredi matin De ma fille à domicile. Pour. La préparer à...",
-      "full_description": "Bonjour. Nous recherchons une personne qualifiée. Pouvant s'occuper le mercredi matin De ma fille à domicile. Pour. La préparer à...",
+      "full_description": "Numéro de mise en relation Bonjour. Nous recherchons une personne qualifiée. Pouvant s'occuper le mercredi matin De ma fille à domicile. Pour. La préparer à partir. À 9h45 Car le bus de son centre vient la chercher. il faudrait commencer à 8h15 pour terminer à 9h45 uniquement le mercredi Matin. Et de temps en temps Faire plus d heures pendant les vacances de l'autre auxiliaire de vie attitrée. Et des heures parfois le soir. Ma fille ne parle pas et se déplace avec difficulté. Et est souvent incontinente. Le paiement s'effectue par CESU. Si vous êtes intéressée  Veuillez nouscontacter avec nos remerciements. Nous recherchons une personne qualifiée. Pouvant s'occuper le mercredi matin De ma fille à domicile. Pour. La préparer à partir. À 9h45 Car le bus de son centre vient la chercher. il faudrait commencer à 8h15 pour terminer à 9h45 uniquement le mercredi Matin. Et de temps en temps Faire plus d heures pendant les vacances de l'autre auxiliaire de vie attitrée. Et des heures parfois le soir. Ma fille ne parle pas et se déplace avec difficulté. Et est souvent incontinente. Le paiement s'effectue par CESU. Si vous êtes intéressée  Veuillez nouscontacter avec nos remerciements. Soyez le premier à déposer un avis sur cette annonce.",
       "url": "https://www.jemepropose.com/annonces/auxiliaire-de-vie/personne-polyhandicapee+10498938/",
       "is_remote": false,
       "remote_confidence": 1.0,
-      "remote_reason": "Keyword detection: On-site keyword: à domicile",
-      "analyzed_with_llm": false,
+      "remote_reason": "LLM: Garde à domicile, présence physique indispensable",
+      "analyzed_with_llm": true,
       "page": 1
     },
     {
@@ -283,7 +283,7 @@
       "url": "https://www.jemepropose.com/annonces/menage/menage-et-garde-denfants+10498934/",
       "is_remote": false,
       "remote_confidence": 1.0,
-      "remote_reason": "Keyword detection: On-site keyword: ménage",
+      "remote_reason": "Keyword detection: Obvious on-site work: ménage",
       "analyzed_with_llm": false,
       "page": 1
     },
@@ -315,7 +315,7 @@
       "url": "https://www.jemepropose.com/annonces/baby-sitting/urgent-recherche-une-nounou+10498899/",
       "is_remote": false,
       "remote_confidence": 1.0,
-      "remote_reason": "Keyword detection: On-site keyword: baby",
+      "remote_reason": "Keyword detection: Obvious on-site work: baby",
       "analyzed_with_llm": false,
       "page": 1
     },
@@ -327,12 +327,12 @@
       "poster": "scker01",
       "date_posted": "01/01/2026",
       "description": "bonjour je m appel sophie je suis une jeun tv je cherche maquilleuse a mon domicile pour cours et m aider .j habite bercy",
-      "full_description": "bonjour je m appel sophie je suis une jeun tv je cherche maquilleuse a mon domicile pour cours et m aider .j habite bercy",
+      "full_description": "Numéro de mise en relation bonjour je m appel sophie je suis une jeun tv je cherche maquilleuse a mon domicile pour cours et m aider .j habite bercy je m appel sophie je suis une jeun tv je cherche maquilleuse a mon domicile pour cours et m aider .j habite bercy Soyez le premier à déposer un avis sur cette annonce.",
       "url": "https://www.jemepropose.com/annonces/estheticienne/recherche-maquilleuse-domicile+10498898/",
       "is_remote": false,
-      "remote_confidence": 1.0,
-      "remote_reason": "Keyword detection: On-site keyword: je cherche",
-      "analyzed_with_llm": false,
+      "remote_confidence": 0.95,
+      "remote_reason": "LLM: Maquilleuse domicile = intervention physique",
+      "analyzed_with_llm": true,
       "page": 1
     },
     {
@@ -347,7 +347,7 @@
       "url": "https://www.jemepropose.com/annonces/garde-d-enfants/recherche-femme-de-menagenounou+10498897/",
       "is_remote": false,
       "remote_confidence": 1.0,
-      "remote_reason": "Keyword detection: On-site keyword: menage",
+      "remote_reason": "Keyword detection: Obvious on-site work: menage",
       "analyzed_with_llm": false,
       "page": 2
     },
@@ -362,8 +362,8 @@
       "full_description": "Secrétaire polyvalente, organisée et réactive pour la gestion administrative et la coordination. Assistance administrative efficace : gestion des agendas, rédaction, suivi des dossiers.Secrétariat professionnel pour optimiser votre organisation et votre productivité. Support administratif fiable et discret pour vos besoins quotidiens. Secrétaire polyvalente, organisée et réactive pour la gestion administrative et la coordination. Assistance administrative efficace : gestion des agendas, rédaction, suivi des dossiers.Secrétariat professionnel pour optimiser votre organisation et votre productivité. Support administratif fiable et discret pour vos besoins quotidiens. Soyez le premier à déposer un avis sur cette annonce.",
       "url": "https://www.jemepropose.com/annonces/secretariat/secretariat+10498878/",
       "is_remote": false,
-      "remote_confidence": 0.7,
-      "remote_reason": "LLM: Annonce floue, sans mention télétravail ni employeur clair",
+      "remote_confidence": 0.9,
+      "remote_reason": "LLM: Annonce de recherche d'emploi, pas une offre",
       "analyzed_with_llm": true,
       "page": 2
     },
@@ -375,12 +375,12 @@
       "poster": "amandine.a67",
       "date_posted": "31/12/2025",
       "description": "Bonjour, Fraîchement installée dans la région je cherche un emploi en CDI en tant qu'assistante administrative, assistante ADV ou...",
-      "full_description": "Bonjour, Fraîchement installée dans la région je cherche un emploi en CDI en tant qu'assistante administrative, assistante ADV ou...",
+      "full_description": "Numéro de mise en relation Bonjour, Fraîchement installée dans la région je cherche un emploi en CDI en tant qu'assistante administrative, assistante ADV ou assistante de direction. Gestion de la boite mail, appels téléphoniques, planification de techniciens, CRM, pack office.... J'ai travaillé dans de grandes entreprises afin de me former de manière à pouvoir être la plus polyvalente possible et acquérir de nouvelles compétences. N'hésitez pas à me contacter si mon CV correspond aux qualités recherchées par votre entreprise. Fraîchement installée dans la région je cherche un emploi en CDI en tant qu'assistante administrative, assistante ADV ou assistante de direction. Gestion de la boite mail, appels téléphoniques, planification de techniciens, CRM, pack office.... J'ai travaillé dans de grandes entreprises afin de me former de manière à pouvoir être la plus polyvalente possible et acquérir de nouvelles compétences. N'hésitez pas à me contacter si mon CV correspond aux qualités recherchées par votre entreprise. Soyez le premier à déposer un avis sur cette annonce.",
       "url": "https://www.jemepropose.com/annonces/secretariat/assistante-administrative+10498873/",
       "is_remote": false,
       "remote_confidence": 1.0,
-      "remote_reason": "Keyword detection: On-site keyword: je cherche",
-      "analyzed_with_llm": false,
+      "remote_reason": "LLM: Candidat cherche un emploi, pas une offre d'emploi",
+      "analyzed_with_llm": true,
       "page": 2
     },
     {
@@ -411,7 +411,7 @@
       "url": "https://www.jemepropose.com/annonces/auxiliaire-de-vie/auxiliairedevie+10498836/",
       "is_remote": false,
       "remote_confidence": 1.0,
-      "remote_reason": "Keyword detection: On-site keyword: menage",
+      "remote_reason": "Keyword detection: Obvious on-site work: menage",
       "analyzed_with_llm": false,
       "page": 2
     },
@@ -427,7 +427,7 @@
       "url": "https://www.jemepropose.com/annonces/menage/cherche-hf-de-menage-et-entretien-a-domicile+10498835/",
       "is_remote": false,
       "remote_confidence": 1.0,
-      "remote_reason": "Keyword detection: On-site keyword: ménage",
+      "remote_reason": "Keyword detection: Obvious on-site work: ménage",
       "analyzed_with_llm": false,
       "page": 2
     },
@@ -439,12 +439,12 @@
       "poster": "Bastienjulien",
       "date_posted": "30/12/2025",
       "description": "Bonjour Diplômée accompagnement éducatif sociale Je cherche un emploi aux alentours de lezignan Personnes en situation...",
-      "full_description": "Bonjour Diplômée accompagnement éducatif sociale Je cherche un emploi aux alentours de lezignan Personnes en situation...",
+      "full_description": "Numéro de mise en relation Bonjour Diplômée accompagnement éducatif sociale Je cherche un emploi aux alentours de lezignan Personnes en situation de handicap enfants et adultes Diplômée accompagnement éducatif sociale Je cherche un emploi aux alentours de lezignan Personnes en situation de handicap enfants et adultes Soyez le premier à déposer un avis sur cette annonce.",
       "url": "https://www.jemepropose.com/annonces/auxiliaire-de-vie/diplome-deaes+10498834/",
       "is_remote": false,
-      "remote_confidence": 1.0,
-      "remote_reason": "Keyword detection: On-site keyword: je cherche",
-      "analyzed_with_llm": false,
+      "remote_confidence": 0.95,
+      "remote_reason": "LLM: Recherche d'emploi, pas une offre",
+      "analyzed_with_llm": true,
       "page": 2
     },
     {
@@ -455,12 +455,12 @@
       "poster": "carrydavid",
       "date_posted": "30/12/2025",
       "description": "Nous nous marions le 6 juin 2026 à Cerdon (01) et recherchons 3 serveurs pour prendre en charge la partie service à table. Nous avons prévu un...",
-      "full_description": "Numéro de mise en relation Nous nous marions le 6 juin 2026 à Cerdon (01) et recherchons 3 serveurs pour prendre en charge la partie service à table. Nous avons prévu un grand buffet pour 80 personnes, l'objectif de la prestation sera de prendre en charge la préparation des plats (déjà cuisinés) et des boissons. Je recherche à minima 1 serveur avec l'expérience nécessaire pour ce type de prestation et 2 autres moins expérimentés. N'hésitez pas à me contacter pour en discuter. Nous nous marions le 6 juin 2026 à Cerdon (01) et recherchons 3 serveurs pour prendre en charge la partie service à table. Nous avons prévu un grand buffet pour 80 personnes, l'objectif de la prestation sera de prendre en charge la préparation des plats (déjà cuisinés) et des boissons. Je recherche à minima 1 serveur avec l'expérience nécessaire pour ce type de prestation et 2 autres moins expérimentés. N'hésitez pas à me contacter pour en discuter. Soyez le premier à déposer un avis sur cette annonce.",
+      "full_description": "Nous nous marions le 6 juin 2026 à Cerdon (01) et recherchons 3 serveurs pour prendre en charge la partie service à table. Nous avons prévu un...",
       "url": "https://www.jemepropose.com/annonces/serveuse/recherche-3-serveurs-pour-mariage-a-cerdon-01-6-juin-2026+10498830/",
       "is_remote": false,
       "remote_confidence": 1.0,
-      "remote_reason": "LLM: Service à table sur place pour mariage",
-      "analyzed_with_llm": true,
+      "remote_reason": "Keyword detection: Obvious on-site work: serveur",
+      "analyzed_with_llm": false,
       "page": 2
     },
     {
@@ -491,7 +491,7 @@
       "url": "https://www.jemepropose.com/annonces/auxiliaire-de-vie/poste-de-nuit+10498799/",
       "is_remote": false,
       "remote_confidence": 0.95,
-      "remote_reason": "LLM: auxiliaire de vie de nuit sur place",
+      "remote_reason": "LLM: Auxiliaire de vie sur place, nuits physiques",
       "analyzed_with_llm": true,
       "page": 2
     },
@@ -507,7 +507,7 @@
       "url": "https://www.jemepropose.com/annonces/transport-de-personnes/recherche-transport+10498793/",
       "is_remote": false,
       "remote_confidence": 1.0,
-      "remote_reason": "Keyword detection: On-site keyword: transport",
+      "remote_reason": "Keyword detection: Obvious on-site work: transport de personnes",
       "analyzed_with_llm": false,
       "page": 2
     },
@@ -523,7 +523,7 @@
       "url": "https://www.jemepropose.com/annonces/bricolage/montage-de-porte-de-placard-coulissante+10498776/",
       "is_remote": false,
       "remote_confidence": 1.0,
-      "remote_reason": "Keyword detection: On-site keyword: bricolage",
+      "remote_reason": "Keyword detection: Obvious on-site work: bricolage",
       "analyzed_with_llm": false,
       "page": 2
     },
@@ -539,7 +539,7 @@
       "url": "https://www.jemepropose.com/annonces/garde-d-enfants/recherche+10498767/",
       "is_remote": false,
       "remote_confidence": 1.0,
-      "remote_reason": "Keyword detection: On-site keyword: garde d'enfant",
+      "remote_reason": "Keyword detection: Obvious on-site work: garde d'enfant",
       "analyzed_with_llm": false,
       "page": 2
     },
@@ -554,8 +554,8 @@
       "full_description": "Bonjour, Je recherche un(e) modèle pour des séances de dessin de modèle vivant. Les séances se déroulent dans une ambiance calme et ont une durée de 30 min à 1h. Rémunération : 50€ de l’heure Débutant(e) bienvenue Si vous êtes intéressé, n’hésitez pas à me contacter pour plus d’informations Je recherche un(e) modèle pour des séances de dessin de modèle vivant. Les séances se déroulent dans une ambiance calme et ont une durée de 30 min à 1h. Rémunération : 50€ de l’heure Débutant(e) bienvenue Si vous êtes intéressé, n’hésitez pas à me contacter pour plus d’informations Soyez le premier à déposer un avis sur cette annonce.",
       "url": "https://www.jemepropose.com/annonces/emploi-etudiant/modele-dessin+10498763/",
       "is_remote": false,
-      "remote_confidence": 0.95,
-      "remote_reason": "LLM: Modèle vivant : présence physique obligatoire",
+      "remote_confidence": 1.0,
+      "remote_reason": "LLM: Modèle vivant implique présence physique obligatoire",
       "analyzed_with_llm": true,
       "page": 2
     },
@@ -571,7 +571,7 @@
       "url": "https://www.jemepropose.com/annonces/transport-de-personnes/chauffeur-a-la-demande-pour-accompagnements-occasionnels+10498760/",
       "is_remote": false,
       "remote_confidence": 1.0,
-      "remote_reason": "Keyword detection: On-site keyword: chauffeur",
+      "remote_reason": "Keyword detection: Obvious on-site work: chauffeur",
       "analyzed_with_llm": false,
       "page": 2
     },
@@ -587,7 +587,7 @@
       "url": "https://www.jemepropose.com/annonces/auxiliaire-de-vie/retraite-grenoble-cherche-aide-pour-petits-soins-paramedicaux+10498753/",
       "is_remote": false,
       "remote_confidence": 1.0,
-      "remote_reason": "Keyword detection: On-site keyword: soins",
+      "remote_reason": "Keyword detection: Obvious on-site work: soins",
       "analyzed_with_llm": false,
       "page": 2
     },
@@ -603,7 +603,7 @@
       "url": "https://www.jemepropose.com/annonces/aide-soignante/infirmiere-jeune-retraitee+10498747/",
       "is_remote": false,
       "remote_confidence": 1.0,
-      "remote_reason": "Keyword detection: On-site keyword: soins",
+      "remote_reason": "Keyword detection: Obvious on-site work: soins",
       "analyzed_with_llm": false,
       "page": 2
     },
@@ -635,7 +635,7 @@
       "url": "https://www.jemepropose.com/annonces/baby-sitting/nounou-hf+10498700/",
       "is_remote": false,
       "remote_confidence": 1.0,
-      "remote_reason": "Keyword detection: On-site keyword: baby",
+      "remote_reason": "Keyword detection: Obvious on-site work: baby",
       "analyzed_with_llm": false,
       "page": 2
     },
@@ -651,7 +651,7 @@
       "url": "https://www.jemepropose.com/annonces/menage/cherche-hf-de-menage-et-entretien-a-domicile+10498699/",
       "is_remote": false,
       "remote_confidence": 1.0,
-      "remote_reason": "Keyword detection: On-site keyword: ménage",
+      "remote_reason": "Keyword detection: Obvious on-site work: ménage",
       "analyzed_with_llm": false,
       "page": 2
     },
@@ -667,7 +667,7 @@
       "url": "https://www.jemepropose.com/annonces/menage/recherche-femme-ou-homme-de-menage+10498687/",
       "is_remote": false,
       "remote_confidence": 1.0,
-      "remote_reason": "Keyword detection: On-site keyword: ménage",
+      "remote_reason": "Keyword detection: Obvious on-site work: ménage",
       "analyzed_with_llm": false,
       "page": 3
     },
@@ -683,7 +683,7 @@
       "url": "https://www.jemepropose.com/annonces/depannage-informatique/cree-site-wordpress-18a+10498674/",
       "is_remote": false,
       "remote_confidence": 0.95,
-      "remote_reason": "LLM: Catégorie dépannage informatique implique intervention sur site",
+      "remote_reason": "LLM: Catégorie dépannage informatique = intervention sur site",
       "analyzed_with_llm": true,
       "page": 3
     },
@@ -714,8 +714,8 @@
       "full_description": "Numéro de mise en relation Bonjour, je recherche un accompagnant véhiculé pour m'aider à tenir ma chienne pour visite véto du PARC FEURS Chienne de 3 ans croisée Berger allemand / Malinois Bonjour, je recherche un accompagnant véhiculé pour m'aider à tenir ma chienne pour visite véto du PARC FEURS Chienne de 3 ans croisée Berger allemand / Malinois Soyez le premier à déposer un avis sur cette annonce.",
       "url": "https://www.jemepropose.com/annonces/garde-d-animaux/accompagnement-chien-en-clinique-veterinaire+10498659/",
       "is_remote": false,
-      "remote_confidence": 0.95,
-      "remote_reason": "LLM: Accompagner chien en clinique nécessite présence",
+      "remote_confidence": 1.0,
+      "remote_reason": "LLM: Accompagner chien chez véto = présence physique obligatoire",
       "analyzed_with_llm": true,
       "page": 3
     },
@@ -731,7 +731,7 @@
       "url": "https://www.jemepropose.com/annonces/menage/recherche-femme-ou-homme-de-menage-mulhouse-centre-ville+10498652/",
       "is_remote": false,
       "remote_confidence": 1.0,
-      "remote_reason": "Keyword detection: On-site keyword: ménage",
+      "remote_reason": "Keyword detection: Obvious on-site work: ménage",
       "analyzed_with_llm": false,
       "page": 3
     },
@@ -747,7 +747,7 @@
       "url": "https://www.jemepropose.com/annonces/baby-sitting/recherche-babysitter-pour-fille-de-5-ans+10498644/",
       "is_remote": false,
       "remote_confidence": 1.0,
-      "remote_reason": "Keyword detection: On-site keyword: baby",
+      "remote_reason": "Keyword detection: Obvious on-site work: baby",
       "analyzed_with_llm": false,
       "page": 3
     },
@@ -763,7 +763,7 @@
       "url": "https://www.jemepropose.com/annonces/photographe/photographe-cherche-modeles+10498626/",
       "is_remote": false,
       "remote_confidence": 1.0,
-      "remote_reason": "LLM: Photographe cherche modèles, travail sur place",
+      "remote_reason": "LLM: Photographe se déplace, travail sur place",
       "analyzed_with_llm": true,
       "page": 3
     },
@@ -779,7 +779,7 @@
       "url": "https://www.jemepropose.com/annonces/bricolage/missions-de-maintenance-de-nos-locaux-professionnels+10498612/",
       "is_remote": false,
       "remote_confidence": 1.0,
-      "remote_reason": "Keyword detection: On-site keyword: bricolage",
+      "remote_reason": "Keyword detection: Obvious on-site work: bricolage",
       "analyzed_with_llm": false,
       "page": 3
     },
@@ -791,12 +791,12 @@
       "poster": "Cecicour",
       "date_posted": "22/12/2025",
       "description": "Bonjour ,ayant travaillé 30 comme aide médico psychologique auprès de personnes en situation de handicaps et plus de 3 ans auprès de personnes...",
-      "full_description": "Bonjour ,ayant travaillé 30 comme aide médico psychologique auprès de personnes en situation de handicaps et plus de 3 ans auprès de personnes...",
+      "full_description": "Numéro de mise en relation Bonjour ,ayant travaillé 30 comme aide médico psychologique auprès de personnes en situation de handicaps et plus de 3 ans auprès de personnes âgées a domicile,je propose mes services en tant qu 'auxiliaire de vie à domicile..  ayant le BAFA et gardé des enfants ( j ai deux petits enfants jumeaux 🤗)je propose mes services pour des gardes d 'enfants . Bonjour ,ayant travaillé 30 comme aide médico psychologique auprès de personnes en situation de handicaps et plus de 3 ans auprès de personnes âgées a domicile,je propose mes services en tant qu 'auxiliaire de vie à domicile..  ayant le BAFA et gardé des enfants ( j ai deux petits enfants jumeaux 🤗)je propose mes services pour des gardes d 'enfants . Soyez le premier à déposer un avis sur cette annonce.",
       "url": "https://www.jemepropose.com/annonces/auxiliaire-de-vie/auxiliaire-de-vie-a-domicile+10498606/",
       "is_remote": false,
       "remote_confidence": 1.0,
-      "remote_reason": "Keyword detection: On-site keyword: à domicile",
-      "analyzed_with_llm": false,
+      "remote_reason": "LLM: Chercheur d'emploi, pas une offre",
+      "analyzed_with_llm": true,
       "page": 3
     },
     {
@@ -807,12 +807,12 @@
       "poster": "stephane41",
       "date_posted": "21/12/2025",
       "description": "Bonjour je suis Stéphane Photographe animalier et portrait je cherche une femme qui accepterais d'avoir des photos d'elle avec ses belle...",
-      "full_description": "Bonjour je suis Stéphane Photographe animalier et portrait je cherche une femme qui accepterais d'avoir des photos d'elle avec ses belle...",
+      "full_description": "Numéro de mise en relation Bonjour je suis Stéphane Photographe animalier et portrait je cherche une femme qui accepterais d'avoir des photos d'elle avec ses belle couleurs d'hiver Bonjour je suis Stéphane Photographe animalier et portrait je cherche une femme qui accepterais d'avoir des photos d'elle avec ses belle couleurs d'hiver Soyez le premier à déposer un avis sur cette annonce.",
       "url": "https://www.jemepropose.com/annonces/photographe/recherche-modele-debutant+10498573/",
       "is_remote": false,
-      "remote_confidence": 1.0,
-      "remote_reason": "Keyword detection: On-site keyword: je cherche",
-      "analyzed_with_llm": false,
+      "remote_confidence": 0.95,
+      "remote_reason": "LLM: Photographie sur place, pas de télétravail possible",
+      "analyzed_with_llm": true,
       "page": 3
     },
     {
@@ -827,7 +827,7 @@
       "url": "https://www.jemepropose.com/annonces/menage/recherche-aide-menagere-pour-location-estivale+10498563/",
       "is_remote": false,
       "remote_confidence": 1.0,
-      "remote_reason": "Keyword detection: On-site keyword: ménage",
+      "remote_reason": "Keyword detection: Obvious on-site work: ménage",
       "analyzed_with_llm": false,
       "page": 3
     },
@@ -839,12 +839,12 @@
       "poster": "Gary - H",
       "date_posted": "19/12/2025",
       "description": "Nous recrutons des commerciaux indépendants (H/F) dans l’immobilier. Débutant accepté – Formation et accompagnement assurés. Convient...",
-      "full_description": "Nous recrutons des commerciaux indépendants (H/F) dans l’immobilier. Débutant accepté – Formation et accompagnement assurés. Convient...",
+      "full_description": "Numéro de mise en relation Nous recrutons des commerciaux indépendants (H/F) dans l’immobilier. Débutant accepté – Formation et accompagnement assurés. Convient aussi pour un complément de revenu ou une double activité. Profil recherché : Rigueur, professionnalisme, goût du contact client, motivation et autonomie. Vos missions Prospecter et développer votre portefeuille client Accompagner vendeurs et acquéreurs dans leurs projets immobiliers Estimer les biens et assurer leur mise en valeur Négocier et conclure les transactions Assurer un suivi client rigoureux et professionnel Conditions : Vous êtes votre propre patron. Vous gérez librement votre emploi du temps. Vous travaillez depuis votre domicile ou où vous le souhaitez. Rémunération attractive à la commission 📞 Intéressé (e) ? Contactez-moi pour en savoir plus. Nous recrutons des commerciaux indépendants (H/F) dans l’immobilier. Débutant accepté – Formation et accompagnement assurés. Convient aussi pour un complément de revenu ou une double activité. Profil recherché : Rigueur, professionnalisme, goût du contact client, motivation et autonomie. Vos missions Prospecter et développer votre portefeuille client Accompagner vendeurs et acquéreurs dans leurs projets immobiliers Estimer les biens et assurer leur mise en valeur Négocier et conclure les transactions Assurer un suivi client rigoureux et professionnel Conditions : Vous êtes votre propre patron. Vous gérez librement votre emploi du temps. Vous travaillez depuis votre domicile ou où vous le souhaitez. Rémunération attractive à la commission 📞 Intéressé (e) ? Contactez-moi pour en savoir plus. Soyez le premier à déposer un avis sur cette annonce.",
       "url": "https://www.jemepropose.com/annonces/commercial/nous-recrutons-des-commerciaux-independants-hf-dans-limmobilier+10498543/",
       "is_remote": false,
-      "remote_confidence": 1.0,
-      "remote_reason": "Keyword detection: On-site keyword: commercial",
-      "analyzed_with_llm": false,
+      "remote_confidence": 0.95,
+      "remote_reason": "LLM: Immobilier exige visites, estimations et signatures sur place",
+      "analyzed_with_llm": true,
       "page": 3
     },
     {
@@ -875,7 +875,7 @@
       "url": "https://www.jemepropose.com/annonces/bricolage/petits-travaux+10498539/",
       "is_remote": false,
       "remote_confidence": 1.0,
-      "remote_reason": "Keyword detection: On-site keyword: bricolage",
+      "remote_reason": "Keyword detection: Obvious on-site work: bricolage",
       "analyzed_with_llm": false,
       "page": 3
     },
@@ -891,7 +891,7 @@
       "url": "https://www.jemepropose.com/annonces/massage-reiki/modele-massage+10498535/",
       "is_remote": false,
       "remote_confidence": 1.0,
-      "remote_reason": "Keyword detection: On-site keyword: massage",
+      "remote_reason": "Keyword detection: Obvious on-site work: massage",
       "analyzed_with_llm": false,
       "page": 3
     },
@@ -907,7 +907,7 @@
       "url": "https://www.jemepropose.com/annonces/auxiliaire-de-vie/besoin-dun-auxiliaire-de-vie+10498496/",
       "is_remote": false,
       "remote_confidence": 1.0,
-      "remote_reason": "Keyword detection: On-site keyword: soins",
+      "remote_reason": "Keyword detection: Obvious on-site work: soins",
       "analyzed_with_llm": false,
       "page": 3
     },
@@ -919,12 +919,12 @@
       "poster": "amand.cardenn",
       "date_posted": "18/12/2025",
       "description": "Je recherche un auxiliaire de vie pour accompagner mon oncle dans quelques ses tâches quotidiennes Voici les missions, rémunération...",
-      "full_description": "Je recherche un auxiliaire de vie pour accompagner mon oncle dans quelques ses tâches quotidiennes Voici les missions, rémunération...",
+      "full_description": "Je recherche un auxiliaire de vie pour accompagner mon oncle dans quelques ses tâches quotidiennes Voici les missions, rémunération satisfaisante : Accueil à l’aéroport Aide aux courses Promenades Accompagnement aux activités culturelles (cinéma, théâtre, bibliothèque) Cordialement Je recherche un auxiliaire de vie pour accompagner mon oncle dans quelques ses tâches quotidiennes Voici les missions, rémunération satisfaisante : Accueil à l’aéroport Aide aux courses Promenades Accompagnement aux activités culturelles (cinéma, théâtre, bibliothèque) Cordialement Mon offre est très urgente, merci Soyez le premier à déposer un avis sur cette annonce.",
       "url": "https://www.jemepropose.com/annonces/auxiliaire-de-vie/recherche-auxiliaire-de-vie-dans-le-75+10498495/",
       "is_remote": false,
       "remote_confidence": 1.0,
-      "remote_reason": "Keyword detection: On-site keyword: accompagner",
-      "analyzed_with_llm": false,
+      "remote_reason": "LLM: Accueil aéroport, courses, promenades : présence physique obligatoire",
+      "analyzed_with_llm": true,
       "page": 3
     },
     {
@@ -938,8 +938,8 @@
       "full_description": "Numéro de mise en relation Vous aimez marcher, porter et garder le sourire ? Ce job est pour vous ! Jeune femme active recherche une personne fiable et dynamique pour m’accompagner du lundi au dimanche, de 9h à 20h. Vos missions : En semaine : porter mon sac et mon badge avec style. Le week-end : gérer mes sacs de shopping (oui, il y en aura, mais c’est fun !). Rémunération : SMIC (et ma reconnaissance éternelle). 📞 Intéressé(e) ? Contactez-moi ______________ À bientôt, Sara Vous aimez marcher, porter et garder le sourire ? Ce job est pour vous ! Jeune femme active recherche une personne fiable et dynamique pour m’accompagner du lundi au dimanche, de 9h à 20h. Vos missions : En semaine : porter mon sac et mon badge avec style. Le week-end : gérer mes sacs de shopping (oui, il y en aura, mais c’est fun !). Rémunération : SMIC (et ma reconnaissance éternelle). 📞 Intéressé(e) ? Contactez-moi ______________ Soyez le premier à déposer un avis sur cette annonce.",
       "url": "https://www.jemepropose.com/annonces/secretariat/assistante-lifestyle-recherchee+10498483/",
       "is_remote": false,
-      "remote_confidence": 1.0,
-      "remote_reason": "LLM: Porte sacs et shopping, présence physique obligatoire",
+      "remote_confidence": 0.95,
+      "remote_reason": "LLM: Porte sacs et shopping sur place, pas de télétravail",
       "analyzed_with_llm": true,
       "page": 3
     },
@@ -955,7 +955,7 @@
       "url": "https://www.jemepropose.com/annonces/jardinage/entretien-jardinage-petites-reparations+10498466/",
       "is_remote": false,
       "remote_confidence": 1.0,
-      "remote_reason": "Keyword detection: On-site keyword: jardinage",
+      "remote_reason": "Keyword detection: Obvious on-site work: jardinage",
       "analyzed_with_llm": false,
       "page": 3
     },
@@ -971,7 +971,7 @@
       "url": "https://www.jemepropose.com/annonces/secretariat/aide-administrative-vente+10498465/",
       "is_remote": false,
       "remote_confidence": 1.0,
-      "remote_reason": "Keyword detection: On-site keyword: ménage",
+      "remote_reason": "Keyword detection: Obvious on-site work: ménage",
       "analyzed_with_llm": false,
       "page": 3
     },
@@ -987,7 +987,7 @@
       "url": "https://www.jemepropose.com/annonces/menage/prestataire-de-menage+10498464/",
       "is_remote": false,
       "remote_confidence": 1.0,
-      "remote_reason": "Keyword detection: On-site keyword: ménage",
+      "remote_reason": "Keyword detection: Obvious on-site work: ménage",
       "analyzed_with_llm": false,
       "page": 4
     },
@@ -1003,7 +1003,7 @@
       "url": "https://www.jemepropose.com/annonces/bricolage/maconnerie+10498411/",
       "is_remote": false,
       "remote_confidence": 1.0,
-      "remote_reason": "Keyword detection: On-site keyword: bricolage",
+      "remote_reason": "Keyword detection: Obvious on-site work: bricolage",
       "analyzed_with_llm": false,
       "page": 4
     },
@@ -1019,7 +1019,7 @@
       "url": "https://www.jemepropose.com/annonces/menage/recherche-aide-menagere-a-saint-nazaire-nettoyage-maison+10498391/",
       "is_remote": false,
       "remote_confidence": 1.0,
-      "remote_reason": "Keyword detection: On-site keyword: ménage",
+      "remote_reason": "Keyword detection: Obvious on-site work: ménage",
       "analyzed_with_llm": false,
       "page": 4
     },
@@ -1035,7 +1035,7 @@
       "url": "https://www.jemepropose.com/annonces/bricolage/amenagement-camping-car+10498340/",
       "is_remote": false,
       "remote_confidence": 1.0,
-      "remote_reason": "Keyword detection: On-site keyword: ménage",
+      "remote_reason": "Keyword detection: Obvious on-site work: ménage",
       "analyzed_with_llm": false,
       "page": 4
     },
@@ -1065,9 +1065,9 @@
       "description": "Bonjour, Je m'appelle Priscillia , je viens de créer mon entreprise , je suis auto - entrepreneuse. Je suis vraiment au début , je suis...",
       "full_description": "Bonjour, Je m'appelle Priscillia , je viens de créer mon entreprise , je suis auto - entrepreneuse. Je suis vraiment au début , je suis à l'étape de la fabrication de ma marchandise, donc n'est pas encore fait de chiffre d'affaire, je cherche une personne qui pourrait me réaliser un site internet gratuit ou pas chère. Si vous êtes intéressé , pouvez - vous me laisser un mail. Je crée des bijoux fantaisie. Mon univers est très coloré, je fabrique des bijoux pour enfants, femmes et hommes. En vous remerciant d'avance. Priscillia Je m'appelle Priscillia , je viens de créer mon entreprise , je suis auto - entrepreneuse. Je suis vraiment au début , je suis à l'étape de la fabrication de ma marchandise, donc n'est pas encore fait de chiffre d'affaire, je cherche une personne qui pourrait me réaliser un site internet gratuit ou pas chère. Si vous êtes intéressé , pouvez - vous me laisser un mail. Je crée des bijoux fantaisie. Mon univers est très coloré, je fabrique des bijoux pour enfants, femmes et hommes. En vous remerciant d'avance. Soyez le premier à déposer un avis sur cette annonce.",
       "url": "https://www.jemepropose.com/annonces/creation-site-internet/recherche-createur-de-site-internet+10498326/",
-      "is_remote": false,
+      "is_remote": true,
       "remote_confidence": 0.95,
-      "remote_reason": "LLM: demande bénévole pas offre d'emploi",
+      "remote_reason": "LLM: Création site web 100% réalisable à distance",
       "analyzed_with_llm": true,
       "page": 4
     },
@@ -1098,8 +1098,8 @@
       "full_description": "Numéro de mise en relation Bonjour, je suis un homme de 60 ans ayant besoin d'un soutien moral, une aide bienveillante pour certains gestes du quotidien, rangement, activités de mémoires ludiques, discussions sur tous sujets pour créer de la positivité, veillée pour l'aide au coucher, j'ai des difficultés d'endormissement. Priorité pour le weekend, voir si un besoin se fera pour la semaine. Paiement Césu, espèces, forfait weekend possible. 20 euros net de l'heure après 18 h ou 15 euros net de l'heure pour la journée. Merci de me contacter par sms en priorité ou par la messagerie du site, Cordialement. je suis un homme de 60 ans ayant besoin d'un soutien moral, une aide bienveillante pour certains gestes du quotidien, rangement, activités de mémoires ludiques, discussions sur tous sujets pour créer de la positivité, veillée pour l'aide au coucher, j'ai des difficultés d'endormissement. Priorité pour le weekend, voir si un besoin se fera pour la semaine. Paiement Césu, espèces, forfait weekend possible. 20 euros net de l'heure après 18 h ou 15 euros net de l'heure pour la journée. Merci de me contacter par sms en priorité ou par la messagerie du site, Cordialement. Soyez le premier à déposer un avis sur cette annonce.",
       "url": "https://www.jemepropose.com/annonces/auxiliaire-de-vie/h-60-ans-souhaite-aide-soutien-rangement-veillee+10498302/",
       "is_remote": false,
-      "remote_confidence": 0.95,
-      "remote_reason": "LLM: Aide physique au domicile, veillée",
+      "remote_confidence": 1.0,
+      "remote_reason": "LLM: Aide physique sur place, présence indispensable",
       "analyzed_with_llm": true,
       "page": 4
     },
@@ -1127,12 +1127,12 @@
       "poster": "kmiloud@hotmail.com",
       "date_posted": "12/12/2025",
       "description": "Bonjour,Je me permets de vous contacter car je suis à la recherche d’une jeune fille majeure pour accompagner ma fille dans ses devoirs à...",
-      "full_description": "Bonjour,Je me permets de vous contacter car je suis à la recherche d’une jeune fille majeure pour accompagner ma fille dans ses devoirs à...",
+      "full_description": "Bonjour,Je me permets de vous contacter car je suis à la recherche d’une jeune fille majeure pour accompagner ma fille dans ses devoirs à domicile. Elle est en classe de 5ème franco-allemand à Sarreguemines et a besoin d’un soutien régulier et quotidien dans presque toutes les matières.L’objectif est de l’aider à rattraper les cours et à se préparer efficacement aux examens. Ce soutien devra se poursuivre jusqu’à ce qu’elle retrouve un bon équilibre scolaire. Le planning pourra être défini ensemble, en accord avec la personne intervenante, le papa et l’enseignante. Je vous remercie de bien vouloir me contacter, nous sommes a sarreguemines. Cordialement, Bonjour,Je me permets de vous contacter car je suis à la recherche d’une jeune fille majeure pour accompagner ma fille dans ses devoirs à domicile. Elle est en classe de 5ème franco-allemand à Sarreguemines et a besoin d’un soutien régulier et quotidien dans presque toutes les matières.L’objectif est de l’aider à rattraper les cours et à se préparer efficacement aux examens. Ce soutien devra se poursuivre jusqu’à ce qu’elle retrouve un bon équilibre scolaire. Le planning pourra être défini ensemble, en accord avec la personne intervenante, le papa et l’enseignante. Je vous remercie de bien vouloir me contacter, nous sommes a sarreguemines. Cordialement, Soyez le premier à déposer un avis sur cette annonce.",
       "url": "https://www.jemepropose.com/annonces/cours-a-domicile/demande-de-soutien-scolaire-a-domicile+10498255/",
       "is_remote": false,
-      "remote_confidence": 1.0,
-      "remote_reason": "Keyword detection: On-site keyword: à domicile",
-      "analyzed_with_llm": false,
+      "remote_confidence": 0.95,
+      "remote_reason": "LLM: soutien scolaire à domicile, jamais télétravail",
+      "analyzed_with_llm": true,
       "page": 4
     },
     {
@@ -1147,7 +1147,7 @@
       "url": "https://www.jemepropose.com/annonces/musicien/bassiste+10498243/",
       "is_remote": false,
       "remote_confidence": 0.95,
-      "remote_reason": "LLM: Musicien : répétitions et concerts impliquent présence physique",
+      "remote_reason": "LLM: Musicien nécessite répétitions et concerts en présentiel",
       "analyzed_with_llm": true,
       "page": 4
     },
@@ -1163,7 +1163,7 @@
       "url": "https://www.jemepropose.com/annonces/baby-sitting/recherche-baby-sitter-paris+10498214/",
       "is_remote": false,
       "remote_confidence": 1.0,
-      "remote_reason": "Keyword detection: On-site keyword: baby",
+      "remote_reason": "Keyword detection: Obvious on-site work: baby",
       "analyzed_with_llm": false,
       "page": 4
     },
@@ -1175,12 +1175,12 @@
       "poster": "anne501",
       "date_posted": "11/12/2025",
       "description": "Bonjour Je cherche quelqu'un pour m'aider à faire de l'organisation dans mes tickets de caisse, ensuite les scanner, et enfin les saisir...",
-      "full_description": "Bonjour Je cherche quelqu'un pour m'aider à faire de l'organisation dans mes tickets de caisse, ensuite les scanner, et enfin les saisir...",
+      "full_description": "Bonjour Je cherche quelqu'un pour m'aider à faire de l'organisation dans mes tickets de caisse, ensuite les scanner, et enfin les saisir dans mon logiciel comptable pour l'année 2025. J'estime le temps de travail à environ 5-6 heures à faire en une ou deux sessions. À discuter ensemble selon les disponibilités. Je propose 20 à 25€ de l'heure, en fonction de l'expérience de la personne. Le travail doit s'effectuer dans mon lieu de travail, métro Guy Môquet 75018. À l'issue de ce travail, j'aurai besoin d'une attestation de rémunération si la personne ne peut pas faire de facture. Je vous remercie Anne Bonjour Je cherche quelqu'un pour m'aider à faire de l'organisation dans mes tickets de caisse, ensuite les scanner, et enfin les saisir dans mon logiciel comptable pour l'année 2025. J'estime le temps de travail à environ 5-6 heures à faire en une ou deux sessions. À discuter ensemble selon les disponibilités. Je propose 20 à 25€ de l'heure, en fonction de l'expérience de la personne. Le travail doit s'effectuer dans mon lieu de travail, métro Guy Môquet 75018. À l'issue de ce travail, j'aurai besoin d'une attestation de rémunération si la personne ne peut pas faire de facture. Je vous remercie Anne Soyez le premier à déposer un avis sur cette annonce.",
       "url": "https://www.jemepropose.com/annonces/assistance-comptable/saisie-comptable+10498204/",
       "is_remote": false,
       "remote_confidence": 1.0,
-      "remote_reason": "Keyword detection: On-site keyword: je cherche",
-      "analyzed_with_llm": false,
+      "remote_reason": "LLM: Travail obligatoirement sur place, métro Guy Môquet",
+      "analyzed_with_llm": true,
       "page": 4
     },
     {
@@ -1195,8 +1195,8 @@
       "url": "https://www.jemepropose.com/annonces/auxiliaire-de-vie/cherche-auxiliaire-de-vie-pour-aide-toilette-et-repas+10498149/",
       "is_remote": false,
       "remote_confidence": 1.0,
-      "remote_reason": "Keyword detection: On-site keyword: je cherche",
-      "analyzed_with_llm": false,
+      "remote_reason": "LLM: Aide toilette et repas nécessite présence physique",
+      "analyzed_with_llm": true,
       "page": 4
     },
     {
@@ -1211,7 +1211,7 @@
       "url": "https://www.jemepropose.com/annonces/menage/urgent-femme-de-menage-benerville-sur-mer+10498137/",
       "is_remote": false,
       "remote_confidence": 1.0,
-      "remote_reason": "Keyword detection: On-site keyword: ménage",
+      "remote_reason": "Keyword detection: Obvious on-site work: ménage",
       "analyzed_with_llm": false,
       "page": 4
     },
@@ -1227,7 +1227,7 @@
       "url": "https://www.jemepropose.com/annonces/bricolage/petits-travaux+10498132/",
       "is_remote": false,
       "remote_confidence": 1.0,
-      "remote_reason": "Keyword detection: On-site keyword: bricolage",
+      "remote_reason": "Keyword detection: Obvious on-site work: bricolage",
       "analyzed_with_llm": false,
       "page": 4
     },
@@ -1259,7 +1259,7 @@
       "url": "https://www.jemepropose.com/annonces/garde-d-enfants/nourrice+10498057/",
       "is_remote": false,
       "remote_confidence": 1.0,
-      "remote_reason": "Keyword detection: On-site keyword: garde d'enfant",
+      "remote_reason": "Keyword detection: Obvious on-site work: garde d'enfant",
       "analyzed_with_llm": false,
       "page": 4
     },
@@ -1287,12 +1287,12 @@
       "poster": "Alex4499",
       "date_posted": "07/12/2025",
       "description": "📣 Recherche Serveuses / Serveurs pour Mariage Nous recherchons plusieurs serveuses / serveurs pour assurer le service lors d’un mariage.",
-      "full_description": "Numéro de mise en relation 📣 Recherche Serveuses / Serveurs pour Mariage Nous recherchons plusieurs serveuses / serveurs pour assurer le service lors d’un mariage. 🔸 Horaires recherchés : 2 serveuses/serveurs : de 12h00 à 15h00 (3 heures) 2 serveuses/serveurs : de 18h00 à 00h00 (6 heures) 🔸 Missions : Mise en place Service en salle / boissons Aide ponctuelle selon besoins Respect des consignes et bonne présentation 🔸 Profil recherché : Sérieux(se), dynamique, ponctuel(le) Expérience en service appréciée. Bonne présentation et sens du contact 🔸 Lieu : Moisdon La Rivière salle Gravotel. 🔸 Rémunération : Selon Expérience ➡️ N’hésitez pas à rentrer en contact avec moi pour en discuter. 📣 Recherche Serveuses / Serveurs pour Mariage Nous recherchons plusieurs serveuses / serveurs pour assurer le service lors d’un mariage. 🔸 Horaires recherchés : 2 serveuses/serveurs : de 12h00 à 15h00 (3 heures) 2 serveuses/serveurs : de 18h00 à 00h00 (6 heures) 🔸 Missions : Mise en place Service en salle / boissons Aide ponctuelle selon besoins Respect des consignes et bonne présentation 🔸 Profil recherché : Sérieux(se), dynamique, ponctuel(le) Expérience en service appréciée. Bonne présentation et sens du contact 🔸 Lieu : Moisdon La Rivière salle Gravotel. 🔸 Rémunération : Selon Expérience ➡️ N’hésitez pas à rentrer en contact avec moi pour en discuter. Soyez le premier à déposer un avis sur cette annonce.",
+      "full_description": "📣 Recherche Serveuses / Serveurs pour Mariage Nous recherchons plusieurs serveuses / serveurs pour assurer le service lors d’un mariage.",
       "url": "https://www.jemepropose.com/annonces/serveuse/serveureuse+10498011/",
       "is_remote": false,
       "remote_confidence": 1.0,
-      "remote_reason": "LLM: Serveur en salle : présence physique obligatoire",
-      "analyzed_with_llm": true,
+      "remote_reason": "Keyword detection: Obvious on-site work: serveur",
+      "analyzed_with_llm": false,
       "page": 4
     },
     {
@@ -1307,7 +1307,7 @@
       "url": "https://www.jemepropose.com/annonces/bricolage/suppression-de-cloisons+10497892/",
       "is_remote": false,
       "remote_confidence": 1.0,
-      "remote_reason": "Keyword detection: On-site keyword: bricolage",
+      "remote_reason": "Keyword detection: Obvious on-site work: bricolage",
       "analyzed_with_llm": false,
       "page": 5
     },
@@ -1323,7 +1323,7 @@
       "url": "https://www.jemepropose.com/annonces/menage/menage-saisonnier+10497752/",
       "is_remote": false,
       "remote_confidence": 1.0,
-      "remote_reason": "Keyword detection: On-site keyword: ménage",
+      "remote_reason": "Keyword detection: Obvious on-site work: ménage",
       "analyzed_with_llm": false,
       "page": 5
     },
@@ -1339,7 +1339,7 @@
       "url": "https://www.jemepropose.com/annonces/comedien/adaptation-de-la-psy-de-freida-mcfadden+10497746/",
       "is_remote": false,
       "remote_confidence": 0.95,
-      "remote_reason": "LLM: Casting d'acteurs : présence physique sur plateau obligatoire",
+      "remote_reason": "LLM: Casting d'acteurs : présence physique sur plateau requise",
       "analyzed_with_llm": true,
       "page": 5
     },
@@ -1355,8 +1355,8 @@
       "url": "https://www.jemepropose.com/annonces/gardiennage-de-domicile/gardiennage-gratruit+10497708/",
       "is_remote": false,
       "remote_confidence": 1.0,
-      "remote_reason": "Keyword detection: On-site keyword: je cherche",
-      "analyzed_with_llm": false,
+      "remote_reason": "LLM: Annonce de recherche de logement, pas une offre d'emploi",
+      "analyzed_with_llm": true,
       "page": 5
     },
     {
@@ -1371,7 +1371,7 @@
       "url": "https://www.jemepropose.com/annonces/menage/aide-a-domicile+10497679/",
       "is_remote": false,
       "remote_confidence": 1.0,
-      "remote_reason": "Keyword detection: On-site keyword: ménage",
+      "remote_reason": "Keyword detection: Obvious on-site work: ménage",
       "analyzed_with_llm": false,
       "page": 5
     },
@@ -1383,12 +1383,12 @@
       "poster": "rayon de soleil 18",
       "date_posted": "29/11/2025",
       "description": "Bonjour, je suis Auxiliaires de vie qualifié depuis plus de 15 ans  et passionnée par mon métier j'ai à cœur d'accompagner les personnes âgées...",
-      "full_description": "Bonjour, je suis Auxiliaires de vie qualifié depuis plus de 15 ans  et passionnée par mon métier j'ai à cœur d'accompagner les personnes âgées...",
+      "full_description": "Bonjour, je suis Auxiliaires de vie qualifié depuis plus de 15 ans  et passionnée par mon métier j'ai à cœur d'accompagner les personnes âgées afin de contribuer à leur bien-être physique et psychologique dans leur quotidien avec respect et empathie, je me propose pour vous aider pour  une intervention ponctuelle .  Je mets du soleil dans votre vie. Autonome, organisée, discrète  , sérieuse ,professionnelle tels sont mes atouts Bonjour, je suis Auxiliaires de vie qualifié depuis plus de 15 ans  et passionnée par mon métier j'ai à cœur d'accompagner les personnes âgées afin de contribuer à leur bien-être physique et psychologique dans leur quotidien avec respect et empathie, je me propose pour vous aider pour  une intervention ponctuelle .  Je mets du soleil dans votre vie. Autonome, organisée, discrète  , sérieuse ,professionnelle tels sont mes atouts Soyez le premier à déposer un avis sur cette annonce.",
       "url": "https://www.jemepropose.com/annonces/auxiliaire-de-vie/besoin-dauxiliaire-de-vie-je-peux-vous-aidez+10497646/",
       "is_remote": false,
       "remote_confidence": 1.0,
-      "remote_reason": "Keyword detection: On-site keyword: accompagner",
-      "analyzed_with_llm": false,
+      "remote_reason": "LLM: Annonce d’auxiliaire de vie recherchant un emploi, pas une offre",
+      "analyzed_with_llm": true,
       "page": 5
     },
     {
@@ -1403,7 +1403,7 @@
       "url": "https://www.jemepropose.com/annonces/formations-professionnelles/etude-de-renovation+10497607/",
       "is_remote": false,
       "remote_confidence": 1.0,
-      "remote_reason": "Keyword detection: On-site keyword: chef",
+      "remote_reason": "Keyword detection: Obvious on-site work: chef",
       "analyzed_with_llm": false,
       "page": 5
     },
@@ -1435,7 +1435,7 @@
       "url": "https://www.jemepropose.com/annonces/chauffeur-livreur/chauffeur-de-personnes-en-situation-de-handicap+10497558/",
       "is_remote": false,
       "remote_confidence": 1.0,
-      "remote_reason": "Keyword detection: On-site keyword: chauffeur",
+      "remote_reason": "Keyword detection: Obvious on-site work: chauffeur",
       "analyzed_with_llm": false,
       "page": 5
     },
@@ -1451,7 +1451,7 @@
       "url": "https://www.jemepropose.com/annonces/menage/nous-recherchons-en-urgence-une-personne-pour-les-taches-menageres+10497553/",
       "is_remote": false,
       "remote_confidence": 1.0,
-      "remote_reason": "Keyword detection: On-site keyword: ménage",
+      "remote_reason": "Keyword detection: Obvious on-site work: ménage",
       "analyzed_with_llm": false,
       "page": 5
     },
@@ -1467,7 +1467,7 @@
       "url": "https://www.jemepropose.com/annonces/jardinage/jardinier-tous-travaux+10497537/",
       "is_remote": false,
       "remote_confidence": 1.0,
-      "remote_reason": "Keyword detection: On-site keyword: jardinage",
+      "remote_reason": "Keyword detection: Obvious on-site work: jardinage",
       "analyzed_with_llm": false,
       "page": 5
     },
@@ -1483,7 +1483,7 @@
       "url": "https://www.jemepropose.com/annonces/auxiliaire-de-vie/aide-a-la-personne+10497535/",
       "is_remote": false,
       "remote_confidence": 1.0,
-      "remote_reason": "Keyword detection: On-site keyword: nettoyage",
+      "remote_reason": "Keyword detection: Obvious on-site work: nettoyage",
       "analyzed_with_llm": false,
       "page": 5
     },
@@ -1495,12 +1495,12 @@
       "poster": "Lested",
       "date_posted": "25/11/2025",
       "description": "Bonjour, je suis à la recherche de personnel pour un événement. L'événement durera 14h (de 14h à 4h du matin). Il faudra, lors de cet...",
-      "full_description": "Bonjour, je suis à la recherche de personnel pour un événement. L'événement durera 14h (de 14h à 4h du matin). Il faudra, lors de cet événement, mettre en place la décoration extérieure et intérieure selon le modèle que l'on vous présentera, installer des éléments (nourriture/boissons) à l'extérieur, mettre en place un buffet et assurer le service, installer le bar et assurer le service, débarrasser les contenants vides, enlever les décorations, ranger les tables et chaises, et jeter les poubelles. Lieux de l'événement : à Vaulx-en-Velin. Date : 18 juillet 2026. Bonjour, je suis à la recherche de personnel pour un événement. L'événement durera 14h (de 14h à 4h du matin). Il faudra, lors de cet événement, mettre en place la décoration extérieure et intérieure selon le modèle que l'on vous présentera, installer des éléments (nourriture/boissons) à l'extérieur, mettre en place un buffet et assurer le service, installer le bar et assurer le service, débarrasser les contenants vides, enlever les décorations, ranger les tables et chaises, et jeter les poubelles. Lieux de l'événement : à Vaulx-en-Velin. Date : 18 juillet 2026. Soyez le premier à déposer un avis sur cette annonce.",
+      "full_description": "Bonjour, je suis à la recherche de personnel pour un événement. L'événement durera 14h (de 14h à 4h du matin). Il faudra, lors de cet...",
       "url": "https://www.jemepropose.com/annonces/serveuse/serveursserveuse-polyvalents+10497494/",
       "is_remote": false,
       "remote_confidence": 1.0,
-      "remote_reason": "LLM: Service événementiel sur place, manipulation physique requise",
-      "analyzed_with_llm": true,
+      "remote_reason": "Keyword detection: Obvious on-site work: serveur",
+      "analyzed_with_llm": false,
       "page": 5
     },
     {
@@ -1514,8 +1514,8 @@
       "full_description": "Numéro de mise en relation Nous cherchons un homme âgé afin d'incarner le rôle d'un libraire pour un tournage de projet d'école. Critère : 55-65 ans , Souriant Non Rémunéré Nous cherchons un homme âgé afin d'incarner le rôle d'un libraire pour un tournage de projet d'école. Critère : 55-65 ans , Souriant Non Rémunéré Soyez le premier à déposer un avis sur cette annonce.",
       "url": "https://www.jemepropose.com/annonces/acteur/recherche-dacteur-pour-tournage-sur-toulouse-du-26-au-30-janvier+10497487/",
       "is_remote": false,
-      "remote_confidence": 0.95,
-      "remote_reason": "LLM: Tournage sur place à Toulouse",
+      "remote_confidence": 1.0,
+      "remote_reason": "LLM: Tournage à Toulouse, présence physique obligatoire",
       "analyzed_with_llm": true,
       "page": 5
     },
@@ -1531,7 +1531,7 @@
       "url": "https://www.jemepropose.com/annonces/organisation-de-voyage/un-voyage-de-2-jours-et-1-nuit-pour-visiter-la-baie-dha-long-au-vietnam+10497486/",
       "is_remote": false,
       "remote_confidence": 1.0,
-      "remote_reason": "LLM: Offre de voyage touristique, pas d'emploi",
+      "remote_reason": "LLM: Annonce de voyage touristique, pas une offre d'emploi",
       "analyzed_with_llm": true,
       "page": 5
     },
@@ -1547,7 +1547,7 @@
       "url": "https://www.jemepropose.com/annonces/bricolage/help-recherche-bricoleur+10497438/",
       "is_remote": false,
       "remote_confidence": 1.0,
-      "remote_reason": "Keyword detection: On-site keyword: bricolage",
+      "remote_reason": "Keyword detection: Obvious on-site work: bricolage",
       "analyzed_with_llm": false,
       "page": 5
     },
@@ -1563,7 +1563,7 @@
       "url": "https://www.jemepropose.com/annonces/menage/recherche-femme-de-menage+10497387/",
       "is_remote": false,
       "remote_confidence": 1.0,
-      "remote_reason": "Keyword detection: On-site keyword: ménage",
+      "remote_reason": "Keyword detection: Obvious on-site work: ménage",
       "analyzed_with_llm": false,
       "page": 5
     },
@@ -1579,7 +1579,7 @@
       "url": "https://www.jemepropose.com/annonces/menage/menage+10497379/",
       "is_remote": false,
       "remote_confidence": 1.0,
-      "remote_reason": "Keyword detection: On-site keyword: ménage",
+      "remote_reason": "Keyword detection: Obvious on-site work: ménage",
       "analyzed_with_llm": false,
       "page": 5
     },
@@ -1595,7 +1595,7 @@
       "url": "https://www.jemepropose.com/annonces/demenagement/recherche-personne-pour-aide-petit-dmenagement-une-demi-journee+10497358/",
       "is_remote": false,
       "remote_confidence": 1.0,
-      "remote_reason": "Keyword detection: On-site keyword: ménage",
+      "remote_reason": "Keyword detection: Obvious on-site work: ménage",
       "analyzed_with_llm": false,
       "page": 5
     },
@@ -1607,12 +1607,12 @@
       "poster": "Bertrand 64",
       "date_posted": "20/11/2025",
       "description": "Bonjour, je cherche une dame de compagnie pour accompagner ma maman de 92 ans. Vous serez logée chez elle,  c’est une grande maison bien...",
-      "full_description": "Bonjour, je cherche une dame de compagnie pour accompagner ma maman de 92 ans. Vous serez logée chez elle,  c’est une grande maison bien...",
+      "full_description": "Numéro de mise en relation Bonjour, je cherche une dame de compagnie pour accompagner ma maman de 92 ans. Vous serez logée chez elle,  c’est une grande maison bien chauffée avec grande chambre et salle de bains attenante. Nous conservont l’intervention des dames de l’ADMR pour le levé et le couché. C’est une gentille grand-mère qui a des difficultés à marcher, donc cane ou déambulatoire, et à entendre malgré l’appareillage. Bonjour, je cherche une dame de compagnie pour accompagner ma maman de 92 ans. Vous serez logée chez elle,  c’est une grande maison bien chauffée avec grande chambre et salle de bains attenante. Nous conservont l’intervention des dames de l’ADMR pour le levé et le couché. C’est une gentille grand-mère qui a des difficultés à marcher, donc cane ou déambulatoire, et à entendre malgré l’appareillage. Je suis joignable toute la journée, sans réponse,  laissez un message et je rappelle toujours,  merci. Soyez le premier à déposer un avis sur cette annonce.",
       "url": "https://www.jemepropose.com/annonces/auxiliaire-de-vie/cherche-dame-de-compagnie-permanente-salaire-nourrie-logee+10497291/",
       "is_remote": false,
       "remote_confidence": 1.0,
-      "remote_reason": "Keyword detection: On-site keyword: je cherche",
-      "analyzed_with_llm": false,
+      "remote_reason": "LLM: Logée chez la personne, présence physique requise",
+      "analyzed_with_llm": true,
       "page": 5
     },
     {
@@ -1643,7 +1643,7 @@
       "url": "https://www.jemepropose.com/annonces/menage/recherche-personne-menage-linge-porto-ota+10497241/",
       "is_remote": false,
       "remote_confidence": 1.0,
-      "remote_reason": "Keyword detection: On-site keyword: ménage",
+      "remote_reason": "Keyword detection: Obvious on-site work: ménage",
       "analyzed_with_llm": false,
       "page": 6
     },
@@ -1659,7 +1659,7 @@
       "url": "https://www.jemepropose.com/annonces/menage/recherche-heures-de-menage-repassage+10497073/",
       "is_remote": false,
       "remote_confidence": 1.0,
-      "remote_reason": "Keyword detection: On-site keyword: ménage",
+      "remote_reason": "Keyword detection: Obvious on-site work: ménage",
       "analyzed_with_llm": false,
       "page": 6
     },
@@ -1675,7 +1675,7 @@
       "url": "https://www.jemepropose.com/annonces/menage/cherche-heures-de-menage+10497070/",
       "is_remote": false,
       "remote_confidence": 1.0,
-      "remote_reason": "Keyword detection: On-site keyword: ménage",
+      "remote_reason": "Keyword detection: Obvious on-site work: ménage",
       "analyzed_with_llm": false,
       "page": 6
     },
@@ -1690,8 +1690,8 @@
       "full_description": "Numéro de mise en relation Pet sitter passionné et expérimenté sur Nîmes  – Votre chien entre de bonnes mains ! Je suis pet sitter à plein temps depuis 9 ans et je me ferai un plaisir de prendre soin de votre compagnon à quatre pattes. Avec ma compagne, nous vivons dans une maison de 90 m² avec un jardin sécurisé de 50 m², idéale pour que votre chien s'épanouisse en toute sécurité. Ce que je vous propose : Promenades quotidiennes : Environ 2 heures de balade chaque jour, dans la garrigue à moins de 10 minutes de chez nous. Jeux et compagnons : Des moments de détente et de jeux avec d'autres chiens si votre compagnon est sociable. Espace dédié : La maison lui est entièrement accessible, sauf les chambres à l'étage. Vétérinaire à proximité : Un vétérinaire compétent se trouve à 5 minutes en cas de besoin. Races accueillies : Beagle, Cocker, Carlin, Labrador, Doberman, Saint-Bernard, Border Collie, Caniche, Golden Retriever, Berger Suisse, Teckel, et bien d'autres ! Je suis disponible pour des gardes à la journée, le week-end, pendant les vacances ou même pour quelques heures. Je m'adapte à vos besoins, tout en m'assurant que votre chien soit sociable avec ses congénères. Pet sitter passionné et expérimenté sur Nîmes  – Votre chien entre de bonnes mains ! Je suis pet sitter à plein temps depuis 9 ans et je me ferai un plaisir de prendre soin de votre compagnon à quatre pattes. Avec ma compagne, nous vivons dans une maison de 90 m² avec un jardin sécurisé de 50 m², idéale pour que votre chien s'épanouisse en toute sécurité. Ce que je vous propose : Promenades quotidiennes : Environ 2 heures de balade chaque jour, dans la garrigue à moins de 10 minutes de chez nous. Jeux et compagnons : Des moments de détente et de jeux avec d'autres chiens si votre compagnon est sociable. Espace dédié : La maison lui est entièrement accessible, sauf les chambres à l'étage. Vétérinaire à proximité : Un vétérinaire compétent se trouve à 5 minutes en cas de besoin. Races accueillies : Beagle, Cocker, Carlin, Labrador, Doberman, Saint-Bernard, Border Collie, Caniche, Golden Retriever, Berger Suisse, Teckel, et bien d'autres ! Je suis disponible pour des gardes à la journée, le week-end, pendant les vacances ou même pour quelques heures. Je m'adapte à vos besoins, tout en m'assurant que votre chien soit sociable avec ses congénères. tel 0650454364 Soyez le premier à déposer un avis sur cette annonce.",
       "url": "https://www.jemepropose.com/annonces/garde-d-animaux/que-du-bonheur+10497038/",
       "is_remote": false,
-      "remote_confidence": 1.0,
-      "remote_reason": "LLM: Offre de garde d’animaux, présence physique obligatoire",
+      "remote_confidence": 0.95,
+      "remote_reason": "LLM: Garde d'animaux sur place à Nîmes",
       "analyzed_with_llm": true,
       "page": 6
     },
@@ -1707,7 +1707,7 @@
       "url": "https://www.jemepropose.com/annonces/peintre/compagnon+10497035/",
       "is_remote": false,
       "remote_confidence": 0.95,
-      "remote_reason": "LLM: Peintre décorateur implique travaux sur site",
+      "remote_reason": "LLM: Peintre décorateur nécessite présence physique sur chantier",
       "analyzed_with_llm": true,
       "page": 6
     },
@@ -1738,8 +1738,8 @@
       "full_description": "Bonjour, Professionnelle de l’hospitalité dans le monde du luxe depuis plus de 15 ans, je gère des chambres d’hôtes et plusieurs maisons en location courte durée (type Airbnb) dans la région de Vidauban et ses alentours. Je propose mes services de conciergerie souhaitant louer leur logement en toute sérénité : – Création et gestion des annonces Airbnb / Booking / expedia ... – Accueil des voyageurs : check-in / check-out – Communication avec les locataires avant, pendant et après le séjour – Aide vérification ménage et aide à la gestion du linge et des entretiens piscines / jardins – Suivi du calendrier et optimisation des tarifs – Création de site internet vitrine pour votre logement – Aide à l’achat ou au renouvellement de matériel (vaisselle, linge, mobilier…) – Intervention ponctuelle ou gestion complète à l’année --> Lors de l'hiver, je peux passer régulièrement pour surveiller la propriété, relever le courrier ... Zone : Vidauban et ses 35km dont Saint Tropez Je m’adapte à vos besoins, que vous soyez propriétaire à l’année ou seulement en saison. Professionnelle de l’hospitalité dans le monde du luxe depuis plus de 15 ans, je gère des chambres d’hôtes et plusieurs maisons en location courte durée (type Airbnb) dans la région de Vidauban et ses alentours. Je propose mes services de conciergerie souhaitant louer leur logement en toute sérénité : – Création et gestion des annonces Airbnb / Booking / expedia ... – Accueil des voyageurs : check-in / check-out – Communication avec les locataires avant, pendant et après le séjour – Aide vérification ménage et aide à la gestion du linge et des entretiens piscines / jardins – Suivi du calendrier et optimisation des tarifs – Création de site internet vitrine pour votre logement – Aide à l’achat ou au renouvellement de matériel (vaisselle, linge, mobilier…) – Intervention ponctuelle ou gestion complète à l’année --> Lors de l'hiver, je peux passer régulièrement pour surveiller la propriété, relever le courrier ... Zone : Vidauban et ses 35km dont Saint Tropez Je m’adapte à vos besoins, que vous soyez propriétaire à l’année ou seulement en saison. Soyez le premier à déposer un avis sur cette annonce.",
       "url": "https://www.jemepropose.com/annonces/conciergerie/gestion-complete-de-votre-logement-par-une-professionnelle-du-tourisme-de-lhospitalite+10496930/",
       "is_remote": false,
-      "remote_confidence": 1.0,
-      "remote_reason": "LLM: Prestataire propose services sur place, pas offre d'emploi",
+      "remote_confidence": 0.95,
+      "remote_reason": "LLM: Services de conciergerie sur place : check-in, ménage, jardin",
       "analyzed_with_llm": true,
       "page": 6
     },
@@ -1755,7 +1755,7 @@
       "url": "https://www.jemepropose.com/annonces/coiffure/prestations-coiffure+10496766/",
       "is_remote": false,
       "remote_confidence": 1.0,
-      "remote_reason": "Keyword detection: On-site keyword: coiffure",
+      "remote_reason": "Keyword detection: Obvious on-site work: coiffure",
       "analyzed_with_llm": false,
       "page": 6
     },
@@ -1771,7 +1771,7 @@
       "url": "https://www.jemepropose.com/annonces/auxiliaire-de-vie/cherche-auxilliaire-de-vie+10496748/",
       "is_remote": false,
       "remote_confidence": 1.0,
-      "remote_reason": "LLM: Garde d'enfant handicapé au domicile, présence obligatoire",
+      "remote_reason": "LLM: Garde d'enfant à domicile, présence physique obligatoire",
       "analyzed_with_llm": true,
       "page": 6
     },
@@ -1783,12 +1783,12 @@
       "poster": "reinhardinho",
       "date_posted": "08/11/2025",
       "description": "Bonjour, Je recherche une personne sérieuse pour accompagner ma fille de 10 ans, en classe de CM2, dans ses devoirs ainsi que pour l’aider à...",
-      "full_description": "Bonjour, Je recherche une personne sérieuse pour accompagner ma fille de 10 ans, en classe de CM2, dans ses devoirs ainsi que pour l’aider à...",
+      "full_description": "Bonjour, Je recherche une personne sérieuse pour accompagner ma fille de 10 ans, en classe de CM2, dans ses devoirs ainsi que pour l’aider à progresser en maths et en français. Interventions à domicile. Merci de me contacter pour échanger. Cordialement Bonjour, Je recherche une personne sérieuse pour accompagner ma fille de 10 ans, en classe de CM2, dans ses devoirs ainsi que pour l’aider à progresser en maths et en français. Interventions à domicile. Merci de me contacter pour échanger. Cordialement Soyez le premier à déposer un avis sur cette annonce.",
       "url": "https://www.jemepropose.com/annonces/soutien-scolaire/soutien-scolaire-cm2-pour-enfant-de-10-ans+10496720/",
       "is_remote": false,
-      "remote_confidence": 1.0,
-      "remote_reason": "Keyword detection: On-site keyword: accompagner",
-      "analyzed_with_llm": false,
+      "remote_confidence": 0.95,
+      "remote_reason": "LLM: Interventions à domicile = présence physique obligatoire",
+      "analyzed_with_llm": true,
       "page": 6
     },
     {
@@ -1803,7 +1803,7 @@
       "url": "https://www.jemepropose.com/annonces/menage/menage-repassage+10496689/",
       "is_remote": false,
       "remote_confidence": 1.0,
-      "remote_reason": "Keyword detection: On-site keyword: ménage",
+      "remote_reason": "Keyword detection: Obvious on-site work: ménage",
       "analyzed_with_llm": false,
       "page": 6
     },
@@ -1819,7 +1819,7 @@
       "url": "https://www.jemepropose.com/annonces/menage/je-recherche-une-personne-pour-le-menage-des-parties-communes-dun-immeuble-sur-foix+10496669/",
       "is_remote": false,
       "remote_confidence": 1.0,
-      "remote_reason": "Keyword detection: On-site keyword: ménage",
+      "remote_reason": "Keyword detection: Obvious on-site work: ménage",
       "analyzed_with_llm": false,
       "page": 6
     },
@@ -1835,7 +1835,7 @@
       "url": "https://www.jemepropose.com/annonces/gardiennage-de-domicile/agent-de-gardiennage-et-entretien-disponibilite-immediate+10496634/",
       "is_remote": false,
       "remote_confidence": 1.0,
-      "remote_reason": "LLM: Kevin cherche un emploi, pas une offre de poste",
+      "remote_reason": "LLM: Kevin cherche un emploi, pas une offre",
       "analyzed_with_llm": true,
       "page": 6
     },
@@ -1851,7 +1851,7 @@
       "url": "https://www.jemepropose.com/annonces/menage/je-cherche-un-travail+10496617/",
       "is_remote": false,
       "remote_confidence": 1.0,
-      "remote_reason": "Keyword detection: On-site keyword: ménage",
+      "remote_reason": "Keyword detection: Obvious on-site work: ménage",
       "analyzed_with_llm": false,
       "page": 6
     },
@@ -1867,7 +1867,7 @@
       "url": "https://www.jemepropose.com/annonces/emploi-etudiant/inexperimente+10496599/",
       "is_remote": false,
       "remote_confidence": 1.0,
-      "remote_reason": "LLM: Annonce de recherche d'emploi, pas une offre",
+      "remote_reason": "LLM: Étudiante cherche emploi, pas une offre de poste",
       "analyzed_with_llm": true,
       "page": 6
     },
@@ -1898,8 +1898,8 @@
       "full_description": "Bonjour, bonsoir. Dans le cadre de notre dernière année d'études à l'égole Travelling a Mauguio, nous devons réaliser un film du début à la fin en autonomie. Nous recherchons donc 2 personnes, homme ou femme, entre 18 et 35 ans, toute taille, style, et expérience sont acceptés. Le seul point demandé est de parler japonais ou coréen. Il s'agit d'un projet amateur. Ce n'est donc  malheureusement pas rémunéré. Mais c'est une occasion de travailler avec de jeunes passionnés de cinéma et de si cela est votre but également, d'acquérir de l'expérience dans ce milieu en temps qu'acteur. Le film parle d'un conflit intellectuel lors d'une partie d'échecs entre 2 héritiers d'entreprises japonaises. Il n'y a pas de dialogue en tel sur le tournage. Tout sera enregistré en voix off. Les dialogues seront leurs pensées. 1 jour de tournage en décembre pour les voix, et 2 jours vers fin janvier pour l'acting. Si intéressé  merci de me contacter :) Bonjour, bonsoir. Dans le cadre de notre dernière année d'études à l'égole Travelling a Mauguio, nous devons réaliser un film du début à la fin en autonomie. Nous recherchons donc 2 personnes, homme ou femme, entre 18 et 35 ans, toute taille, style, et expérience sont acceptés. Le seul point demandé est de parler japonais ou coréen. Il s'agit d'un projet amateur. Ce n'est donc  malheureusement pas rémunéré. Mais c'est une occasion de travailler avec de jeunes passionnés de cinéma et de si cela est votre but également, d'acquérir de l'expérience dans ce milieu en temps qu'acteur. Le film parle d'un conflit intellectuel lors d'une partie d'échecs entre 2 héritiers d'entreprises japonaises. Il n'y a pas de dialogue en tel sur le tournage. Tout sera enregistré en voix off. Les dialogues seront leurs pensées. 1 jour de tournage en décembre pour les voix, et 2 jours vers fin janvier pour l'acting. Si intéressé  merci de me contacter :) Ce serait les 2 jours de tournage. A compter également un jour pr les voix off en décembre début du mois. Soyez le premier à déposer un avis sur cette annonce.",
       "url": "https://www.jemepropose.com/annonces/acteur/recherche-2-acteurs-parlant-japonais-ou-coreen+10496514/",
       "is_remote": false,
-      "remote_confidence": 1.0,
-      "remote_reason": "LLM: Tournage physique sur place, présence obligatoire",
+      "remote_confidence": 0.95,
+      "remote_reason": "LLM: Tournage sur place, présence physique obligatoire",
       "analyzed_with_llm": true,
       "page": 6
     },
@@ -1915,7 +1915,7 @@
       "url": "https://www.jemepropose.com/annonces/creation-site-internet/creation-site-internet+10496507/",
       "is_remote": true,
       "remote_confidence": 0.95,
-      "remote_reason": "LLM: Création site web seul travail, livrable en ligne",
+      "remote_reason": "LLM: Développement site web entièrement réalisable à distance",
       "analyzed_with_llm": true,
       "page": 6
     },
@@ -1931,7 +1931,7 @@
       "url": "https://www.jemepropose.com/annonces/menage/recherche-aide-menagere-serieuse+10496501/",
       "is_remote": false,
       "remote_confidence": 1.0,
-      "remote_reason": "Keyword detection: On-site keyword: ménage",
+      "remote_reason": "Keyword detection: Obvious on-site work: ménage",
       "analyzed_with_llm": false,
       "page": 6
     },
@@ -1946,8 +1946,8 @@
       "full_description": "Numéro de mise en relation Je recherche un ingénieur du son patient, créatif, sensible et ouvert, capable de comprendre la vision d’une artiste intuitive et de transformer la matière brute en quelque chose de fort, sincère et marquant . Autodidacte et intuitive, je compose et chante à l’instinct, sans connaissance du solfège. J’ai besoin d’un ingénieur du son capable de convertir les sons, mélodies et harmonies qui sortent de ma bouche en notes réelles, pour donner vie à ce que j’entends intérieurement. Si tu ressens la musique comme un langage de l’âme et que tu veux construire quelque chose d’authentique, à deux, dans un vrai esprit de création partagée, contacte-moi. ». Je protège mon art comme on protège un secret. Ce projet est encadré et chaque collaboration se fait dans la clarté et le respect. Je ne cherche pas la foule, mais la justesse. J’ai déjà sorti deux clips par le passé. Ce ne sont pas des morceaux qui reflètent mon univers actuel — je prends aujourd’hui une direction beaucoup plus dark pop, plus viscérale. Mais ces titres peuvent te donner une idée de ma voix et de ma sensibilité. C’est ma base, pas mon sommet ✦ Je cherche la bonne alchimie, pas juste une collaboration. ⚡️ .Je crois que certaines rencontres sont écrites dans le son avant d’exister dans la vie. Peut-être que nos fréquences se cherchaient déjà. Je recherche un ingénieur du son patient, créatif, sensible et ouvert, capable de comprendre la vision d’une artiste intuitive et de transformer la matière brute en quelque chose de fort, sincère et marquant . Autodidacte et intuitive, je compose et chante à l’instinct, sans connaissance du solfège. J’ai besoin d’un ingénieur du son capable de convertir les sons, mélodies et harmonies qui sortent de ma bouche en notes réelles, pour donner vie à ce que j’entends intérieurement. Si tu ressens la musique comme un langage de l’âme et que tu veux construire quelque chose d’authentique, à deux, dans un vrai esprit de création partagée, contacte-moi. ». Je protège mon art comme on protège un secret. Ce projet est encadré et chaque collaboration se fait dans la clarté et le respect. Je ne cherche pas la foule, mais la justesse. J’ai déjà sorti deux clips par le passé. Ce ne sont pas des morceaux qui reflètent mon univers actuel — je prends aujourd’hui une direction beaucoup plus dark pop, plus viscérale. Mais ces titres peuvent te donner une idée de ma voix et de ma sensibilité. C’est ma base, pas mon sommet ✦ Je cherche la bonne alchimie, pas juste une collaboration. ⚡️ .Je crois que certaines rencontres sont écrites dans le son avant d’exister dans la vie. Peut-être que nos fréquences se cherchaient déjà. Soyez le premier à déposer un avis sur cette annonce.",
       "url": "https://www.jemepropose.com/annonces/ingenieur-du-son/recherche-ingenieur-du-son-pour-collaboration-artistique+10496485/",
       "is_remote": false,
-      "remote_confidence": 0.95,
-      "remote_reason": "LLM: Artiste cherche collaborateur, pas d'indication télétravail",
+      "remote_confidence": 0.9,
+      "remote_reason": "LLM: Artiste cherche collaborateur, pas offre d'emploi",
       "analyzed_with_llm": true,
       "page": 7
     },
@@ -1963,7 +1963,7 @@
       "url": "https://www.jemepropose.com/annonces/menage/recherche-32h-cdi-agent-dentretien+10496378/",
       "is_remote": false,
       "remote_confidence": 1.0,
-      "remote_reason": "Keyword detection: On-site keyword: ménage",
+      "remote_reason": "Keyword detection: Obvious on-site work: ménage",
       "analyzed_with_llm": false,
       "page": 7
     },
@@ -1975,12 +1975,12 @@
       "poster": "SophieFLE",
       "date_posted": "01/11/2025",
       "description": "Formatrice diplômée Master 2 en didactique du FLE, avec près de 20 ans d’expérience. J’offre un accompagnement personnalisé pour réussir...",
-      "full_description": "Formatrice diplômée Master 2 en didactique du FLE, avec près de 20 ans d’expérience. J’offre un accompagnement personnalisé pour réussir...",
+      "full_description": "Formatrice diplômée Master 2 en didactique du FLE, avec près de 20 ans d’expérience. J’offre un accompagnement personnalisé pour réussir les examens DELF B2 et DALF C1. Bilan initial pour définir votre niveau et objectifs. Séances ciblant les 4 compétences (écrit, oral, compréhension), avec supports variés (articles, vidéos, audios). Corrections personnalisées et suivi attentif. Cours en visioconférence, travail personnel guidé. Premier bilan offert. Contactez-moi pour construire votre parcours vers la réussite ! Pas de cours à l'unité. Cours par webcam Cours individuel Forfait préparation DELF B2 - 12h = 780€ Forfait préparation DALF C1 - 15h = 975€ Les forfaits sont conçus pour que vous puissiez réussir votre diplôme au bout de 3 mois. Cours en binôme Forfait préparation DELF B2 - 15h = 585€ par personne Forfait préparation DALF C1 - 18h = 731€ par personne CESU non acceptés Paiement par virement bancaire uniquement Formatrice diplômée Master 2 en didactique du FLE, avec près de 20 ans d’expérience. J’offre un accompagnement personnalisé pour réussir les examens DELF B2 et DALF C1. Bilan initial pour définir votre niveau et objectifs. Séances ciblant les 4 compétences (écrit, oral, compréhension), avec supports variés (articles, vidéos, audios). Corrections personnalisées et suivi attentif. Cours en visioconférence, travail personnel guidé. Premier bilan offert. Contactez-moi pour construire votre parcours vers la réussite ! Pas de cours à l'unité. Cours par webcam Cours individuel Forfait préparation DELF B2 - 12h = 780€ Forfait préparation DALF C1 - 15h = 975€ Les forfaits sont conçus pour que vous puissiez réussir votre diplôme au bout de 3 mois. Cours en binôme Forfait préparation DELF B2 - 15h = 585€ par personne Forfait préparation DALF C1 - 18h = 731€ par personne CESU non acceptés Paiement par virement bancaire uniquement Soyez le premier à déposer un avis sur cette annonce.",
       "url": "https://www.jemepropose.com/annonces/formations-a-distance/cours-de-francais-langue-etrangere-fle-preparation-delf-b2-dalf-c1+10496361/",
-      "is_remote": true,
+      "is_remote": false,
       "remote_confidence": 1.0,
-      "remote_reason": "Keyword detection: Keyword: à distance",
-      "analyzed_with_llm": false,
+      "remote_reason": "LLM: Annonce d’une formatrice, pas une offre d’emploi",
+      "analyzed_with_llm": true,
       "page": 7
     },
     {
@@ -1995,7 +1995,7 @@
       "url": "https://www.jemepropose.com/annonces/photographe/recherche-modele-pour-seance-photos+10496353/",
       "is_remote": false,
       "remote_confidence": 1.0,
-      "remote_reason": "LLM: Séance photo oblige présence physique modèle",
+      "remote_reason": "LLM: Séance photo oblige présence physique du modèle",
       "analyzed_with_llm": true,
       "page": 7
     },
@@ -2011,7 +2011,7 @@
       "url": "https://www.jemepropose.com/annonces/menage/menage+10496307/",
       "is_remote": false,
       "remote_confidence": 1.0,
-      "remote_reason": "Keyword detection: On-site keyword: ménage",
+      "remote_reason": "Keyword detection: Obvious on-site work: ménage",
       "analyzed_with_llm": false,
       "page": 7
     },
@@ -2026,8 +2026,8 @@
       "full_description": "Numéro de mise en relation Vous saviez combien de temps un recruteur passe à analyser un CV ? 3 secondes. Oui, 3 secondes pour décider si votre profil mérite d’être lu… ou ignoré. Autant dire qu’en 3 secondes, tout se joue : la structure, les mots, l’image que vous renvoyez, et la cohérence entre votre parcours et votre ambition. Et c’est justement là que j’interviens. Je suis Responsable RH dans un grand groupe et étudiante en Master 5 DRH dans une grande école privée. Chaque semaine, je lis des dizaines de candidatures : certaines sont fades, d’autres copiées sur l’IA, et d’autres… marquent instantanément. Vous voulez savoir la différence ? 👉 Celles qui se démarquent sont authentiques, stratégiques et parfaitement alignées avec le poste visé. 💼 Ce que je fais pour vous : Je ne crée pas simplement un CV ou une lettre — Je construis votre image professionnelle. Celle qui raconte votre histoire, attire les recruteurs et prouve que vous êtes la bonne personne. J’analyse votre profil comme le ferait un service RH interne : Ce que les recruteurs voient (et ce qu’ils ne voient pas) Les informations qui doivent sauter aux yeux dès la première ligne Les incohérences qui bloquent votre candidature sans que vous le sachiez La posture et le discours qui feront dire : “Ce candidat, il faut le rencontrer.” Je vous aide à structurer, affirmer et valoriser votre parcours, sans le travestir. Et si vous voulez vraiment sortir du lot ? Je vous montre comment une touche d’humour maîtrisée, un storytelling intelligent ou une mise en forme pensée comme une stratégie peuvent transformer une simple candidature en un vrai levier d’opportunités. Je connais parfaitement les attentes des recruteurs, les critères des ATS, et les leviers qui font basculer une candidature dans la pile des “sélectionnés”. Chaque prestation est rédigée à la main, avec une vraie analyse humaine — pas un texte automatisé. 🚀 Pourquoi me choisir ? Parce que je recrute moi-même, chaque jour. Parce que je sais ce qui attire, ce qui dérange, et ce qui fait dire “non” en deux secondes. Et surtout, parce que j’ai une approche humaine et moderne des RH : pas de jargon inutile, pas de copier-coller, mais une vraie analyse de fond, pensée pour votre réussite. Mon objectif ? ➡️ Que vous soyez vu, compris et retenu. ➡️ Que votre profil reflète votre valeur réelle. ➡️ Que chaque recruteur ait envie de vous rencontrer, pas juste de vous lire. ✨ En clair : Je transforme des candidatures ordinaires en profils qui captivent. Je vous apprends à parler le langage des RH, à préparer vos entretiens avec stratégie, et à vous présenter avec impact et confiance. Parce qu’aujourd’hui, il ne suffit plus de postuler. Il faut savoir se positionner, convaincre et marquer les esprits. Et c’est exactement ce que je fais pour vous. Vous saviez combien de temps un recruteur passe à analyser un CV ? 3 secondes. Oui, 3 secondes pour décider si votre profil mérite d’être lu… ou ignoré. Autant dire qu’en 3 secondes, tout se joue : la structure, les mots, l’image que vous renvoyez, et la cohérence entre votre parcours et votre ambition. Et c’est justement là que j’interviens. Je suis Responsable RH dans un grand groupe et étudiante en Master 5 DRH dans une grande école privée. Chaque semaine, je lis des dizaines de candidatures : certaines sont fades, d’autres copiées sur l’IA, et d’autres… marquent instantanément. Vous voulez savoir la différence ? 👉 Celles qui se démarquent sont authentiques, stratégiques et parfaitement alignées avec le poste visé. 💼 Ce que je fais pour vous : Je ne crée pas simplement un CV ou une lettre — Je construis votre image professionnelle. Celle qui raconte votre histoire, attire les recruteurs et prouve que vous êtes la bonne personne. J’analyse votre profil comme le ferait un service RH interne : Ce que les recruteurs voient (et ce qu’ils ne voient pas) Les informations qui doivent sauter aux yeux dès la première ligne Les incohérences qui bloquent votre candidature sans que vous le sachiez La posture et le discours qui feront dire : “Ce candidat, il faut le rencontrer.” Je vous aide à structurer, affirmer et valoriser votre parcours, sans le travestir. Et si vous voulez vraiment sortir du lot ? Je vous montre comment une touche d’humour maîtrisée, un storytelling intelligent ou une mise en forme pensée comme une stratégie peuvent transformer une simple candidature en un vrai levier d’opportunités. Je connais parfaitement les attentes des recruteurs, les critères des ATS, et les leviers qui font basculer une candidature dans la pile des “sélectionnés”. Chaque prestation est rédigée à la main, avec une vraie analyse humaine — pas un texte automatisé. 🚀 Pourquoi me choisir ? Parce que je recrute moi-même, chaque jour. Parce que je sais ce qui attire, ce qui dérange, et ce qui fait dire “non” en deux secondes. Et surtout, parce que j’ai une approche humaine et moderne des RH : pas de jargon inutile, pas de copier-coller, mais une vraie analyse de fond, pensée pour votre réussite. Mon objectif ? ➡️ Que vous soyez vu, compris et retenu. ➡️ Que votre profil reflète votre valeur réelle. ➡️ Que chaque recruteur ait envie de vous rencontrer, pas juste de vous lire. ✨ En clair : Je transforme des candidatures ordinaires en profils qui captivent. Je vous apprends à parler le langage des RH, à préparer vos entretiens avec stratégie, et à vous présenter avec impact et confiance. Parce qu’aujourd’hui, il ne suffit plus de postuler. Il faut savoir se positionner, convaincre et marquer les esprits. Et c’est exactement ce que je fais pour vous. Soyez le premier à déposer un avis sur cette annonce.",
       "url": "https://www.jemepropose.com/annonces/ressources-humaines/je-vais-te-donner-les-secrets-des-rh-pour-te-rendre-irresistible-sur-le-marche-du-travail+10496304/",
       "is_remote": false,
-      "remote_confidence": 0.95,
-      "remote_reason": "LLM: Annonce de service, pas une offre d'emploi",
+      "remote_confidence": 1.0,
+      "remote_reason": "LLM: Offre de coaching RH, pas d’emploi proposé",
       "analyzed_with_llm": true,
       "page": 7
     },
@@ -2039,12 +2039,12 @@
       "poster": "lugdivinekore94",
       "date_posted": "31/10/2025",
       "description": "Discrète, sérieuse et digne de confiance, je mets à votre service mon expérience dans la surveillance privée, l’accompagnement personnalisé et...",
-      "full_description": "Discrète, sérieuse et digne de confiance, je mets à votre service mon expérience dans la surveillance privée, l’accompagnement personnalisé et...",
+      "full_description": "Numéro de mise en relation Discrète, sérieuse et digne de confiance, je mets à votre service mon expérience dans la surveillance privée, l’accompagnement personnalisé et l’aide à la personne. J’interviens auprès de particuliers, familles ou résidences pour assurer une présence rassurante, sécurisante et bienveillante, de jour comme de nuit. Mes prestations s’adaptent à vos besoins : • Surveillance de domicile ou de biens personnels • Accompagnement confidentiel lors de déplacements • Garde de confiance pour personnes âgées ou seules • Aide à domicile et assistance quotidienne avec empathie Professionnelle, ponctuelle et très respectueuse de la confidentialité, je veille toujours à instaurer un climat de sérénité et de respect mutuel. 📍 Secteurs couverts : Annemasse – Genève – Haute-Savoie 🕒 Disponibilités : Jour / Nuit / Week-end 💶 Tarif : à partir de 18 €/h selon la prestation Discrète, sérieuse et digne de confiance, je mets à votre service mon expérience dans la surveillance privée, l’accompagnement personnalisé et l’aide à la personne. J’interviens auprès de particuliers, familles ou résidences pour assurer une présence rassurante, sécurisante et bienveillante, de jour comme de nuit. Mes prestations s’adaptent à vos besoins : • Surveillance de domicile ou de biens personnels • Accompagnement confidentiel lors de déplacements • Garde de confiance pour personnes âgées ou seules • Aide à domicile et assistance quotidienne avec empathie Professionnelle, ponctuelle et très respectueuse de la confidentialité, je veille toujours à instaurer un climat de sérénité et de respect mutuel. 📍 Secteurs couverts : Annemasse – Genève – Haute-Savoie 🕒 Disponibilités : Jour / Nuit / Week-end 💶 Tarif : à partir de 18 €/h selon la prestation Soyez le premier à déposer un avis sur cette annonce.",
       "url": "https://www.jemepropose.com/annonces/auxiliaire-de-vie/garde-privee-surveillance-accompagnement-et-aide-a-la-personne-annemasse-geneve-haute-savoie+10496293/",
       "is_remote": false,
       "remote_confidence": 1.0,
-      "remote_reason": "Keyword detection: On-site keyword: accompagnement personnalisé",
-      "analyzed_with_llm": false,
+      "remote_reason": "LLM: Prestations sur site : surveillance, garde, aide physique",
+      "analyzed_with_llm": true,
       "page": 7
     },
     {
@@ -2075,8 +2075,8 @@
       "url": "https://www.jemepropose.com/annonces/auxiliaire-de-vie/recherche-auxiliaire-de-vie-a-domicile+10496209/",
       "is_remote": false,
       "remote_confidence": 1.0,
-      "remote_reason": "Keyword detection: On-site keyword: à domicile",
-      "analyzed_with_llm": false,
+      "remote_reason": "LLM: Garde de personne âgée, présence physique indispensable",
+      "analyzed_with_llm": true,
       "page": 7
     },
     {
@@ -2087,12 +2087,12 @@
       "poster": "samysnoussi10",
       "date_posted": "29/10/2025",
       "description": "Tu es motivé(e), à l’aise au téléphone et tu veux gagner de l’argent selon tes résultats ? Notre société, spécialisée dans l’énergie...",
-      "full_description": "Tu es motivé(e), à l’aise au téléphone et tu veux gagner de l’argent selon tes résultats ? Notre société, spécialisée dans l’énergie...",
+      "full_description": "Numéro de mise en relation Tu es motivé(e), à l’aise au téléphone et tu veux gagner de l’argent selon tes résultats ? Notre société, spécialisée dans l’énergie renouvelable, recherche plusieurs téléprospecteurs / téléprospectrices dynamiques pour rejoindre notre équipe à Paris 19e. 🔧 Ta mission : Contacter des particuliers et des entreprises pour leur présenter nos offres en énergie verte. Argumenter, convaincre et générer des contrats. 💶 Rémunération : 👉 100 % à la commission. Tu es payé selon le nombre de contrats que tu signes. Aucun plafond : tu peux gagner 0 € comme 10 000 €, tout dépend de tes résultats et de ta motivation. ⏰ Horaires : Du lundi au vendredi, de 9h à 19h30, avec 1h30 de pause déjeuner de 12h30 à 14h. 🎯 Profil recherché : Dynamique, motivé(e) et persuasif(ve) Bonne aisance orale Débutant accepté – formation assurée 📍 Lieu : Paris 19e Tu es motivé(e), à l’aise au téléphone et tu veux gagner de l’argent selon tes résultats ? Notre société, spécialisée dans l’énergie renouvelable, recherche plusieurs téléprospecteurs / téléprospectrices dynamiques pour rejoindre notre équipe à Paris 19e. Ta mission : Contacter des particuliers et des entreprises pour leur présenter nos offres en énergie verte. Argumenter, convaincre et générer des contrats. Rémunération : 👉 100 % à la commission. Tu es payé selon le nombre de contrats que tu signes. Aucun plafond : tu peux gagner 0 € comme 10 000 €, tout dépend de tes résultats et de ta motivation. Du lundi au vendredi, de 9h à 19h30, avec 1h30 de pause déjeuner de 12h30 à 14h. Profil recherché : Dynamique, motivé(e) et persuasif(ve) Bonne aisance orale Débutant accepté – formation assurée 📍 Lieu : Paris 19e Soyez le premier à déposer un avis sur cette annonce.",
       "url": "https://www.jemepropose.com/annonces/teleprospecteur/teleprospection-energie-renouvelable-paris-19e+10496203/",
       "is_remote": false,
-      "remote_confidence": 1.0,
-      "remote_reason": "Keyword detection: On-site keyword: prospection",
-      "analyzed_with_llm": false,
+      "remote_confidence": 0.95,
+      "remote_reason": "LLM: Présence obligatoire au bureau Paris 19e",
+      "analyzed_with_llm": true,
       "page": 7
     },
     {
@@ -2107,8 +2107,8 @@
       "url": "https://www.jemepropose.com/annonces/serveuse/recherche-serveur+10496118/",
       "is_remote": false,
       "remote_confidence": 1.0,
-      "remote_reason": "LLM: Serveur en événementiel, présence physique obligatoire",
-      "analyzed_with_llm": true,
+      "remote_reason": "Keyword detection: Obvious on-site work: serveur",
+      "analyzed_with_llm": false,
       "page": 7
     },
     {
@@ -2119,12 +2119,12 @@
       "poster": "codeEtPermis00432",
       "date_posted": "28/10/2025",
       "description": "Bonjour à tous je suis dispo pour tous vous accompagner lors de vos démarches : Code de la route permis de conduire titre de...",
-      "full_description": "Bonjour à tous je suis dispo pour tous vous accompagner lors de vos démarches : Code de la route permis de conduire titre de...",
+      "full_description": "Numéro de mise en relation Bonjour à tous je suis dispo pour tous vous accompagner lors de vos démarches : Code de la route permis de conduire titre de sejour renouvellement de document Bien d'autres services Bonjour à tous je suis dispo pour tous vous accompagner lors de vos démarches : Code de la route permis de conduire titre de sejour renouvellement de document Bien d'autres services Soyez le premier à déposer un avis sur cette annonce.",
       "url": "https://www.jemepropose.com/annonces/assistance-juridique/auto-ecole-france+10496114/",
       "is_remote": false,
-      "remote_confidence": 1.0,
-      "remote_reason": "Keyword detection: On-site keyword: accompagner",
-      "analyzed_with_llm": false,
+      "remote_confidence": 0.95,
+      "remote_reason": "LLM: Annonce d'un particulier proposant ses services, pas une offre d'emploi",
+      "analyzed_with_llm": true,
       "page": 7
     },
     {
@@ -2139,7 +2139,7 @@
       "url": "https://www.jemepropose.com/annonces/menage/menage-repassage+10496080/",
       "is_remote": false,
       "remote_confidence": 1.0,
-      "remote_reason": "Keyword detection: On-site keyword: ménage",
+      "remote_reason": "Keyword detection: Obvious on-site work: ménage",
       "analyzed_with_llm": false,
       "page": 7
     },
@@ -2155,7 +2155,7 @@
       "url": "https://www.jemepropose.com/annonces/garde-d-animaux/moccuper-de-vos-animaux+10496044/",
       "is_remote": false,
       "remote_confidence": 1.0,
-      "remote_reason": "LLM: Garde et promenade de chiens nécessite présence physique",
+      "remote_reason": "LLM: Garde et promenade de chiens nécessitent présence physique",
       "analyzed_with_llm": true,
       "page": 7
     },
@@ -2171,7 +2171,7 @@
       "url": "https://www.jemepropose.com/annonces/cuisine-a-domicile/recherche-cuisiniere-a-domicile+10496001/",
       "is_remote": false,
       "remote_confidence": 1.0,
-      "remote_reason": "Keyword detection: On-site keyword: cuisine",
+      "remote_reason": "Keyword detection: Obvious on-site work: cuisine",
       "analyzed_with_llm": false,
       "page": 7
     },
@@ -2187,7 +2187,7 @@
       "url": "https://www.jemepropose.com/annonces/auxiliaire-de-vie/cherche-gardes-de-nuit-chez-personne-agee+10495975/",
       "is_remote": false,
       "remote_confidence": 1.0,
-      "remote_reason": "LLM: Garde de nuit chez la personne = présence physique obligatoire",
+      "remote_reason": "LLM: Gardes de nuit chez la personne = présence physique obligatoire",
       "analyzed_with_llm": true,
       "page": 7
     },
@@ -2203,7 +2203,7 @@
       "url": "https://www.jemepropose.com/annonces/gardiennage-de-domicile/maison-avec-jardin-et-piscine-en-gardiennage-1-mois+10495965/",
       "is_remote": false,
       "remote_confidence": 1.0,
-      "remote_reason": "LLM: Gardiennage physique d'une maison à Nouméa",
+      "remote_reason": "LLM: Gardiennage physique sur place à Nouméa",
       "analyzed_with_llm": true,
       "page": 7
     },
@@ -2219,7 +2219,7 @@
       "url": "https://www.jemepropose.com/annonces/garde-d-enfants/taches-menageres-et-garde-denfant+10495858/",
       "is_remote": false,
       "remote_confidence": 1.0,
-      "remote_reason": "Keyword detection: On-site keyword: garde d'enfant",
+      "remote_reason": "Keyword detection: Obvious on-site work: garde d'enfant",
       "analyzed_with_llm": false,
       "page": 7
     },
@@ -2251,7 +2251,7 @@
       "url": "https://www.jemepropose.com/annonces/menage/menage-de-printemps-et-des-3-autres-saisons+10495753/",
       "is_remote": false,
       "remote_confidence": 1.0,
-      "remote_reason": "Keyword detection: On-site keyword: ménage",
+      "remote_reason": "Keyword detection: Obvious on-site work: ménage",
       "analyzed_with_llm": false,
       "page": 7
     },
@@ -2263,12 +2263,12 @@
       "poster": "Tess@secrétariat",
       "date_posted": "20/10/2025",
       "description": "Vous recherchez un service de secrétariat à distance lors de vos vacances, vous avez un surplus de travail ou tout simplement vous souhaitez...",
-      "full_description": "Vous recherchez un service de secrétariat à distance lors de vos vacances, vous avez un surplus de travail ou tout simplement vous souhaitez...",
+      "full_description": "Numéro de mise en relation Vous recherchez un service de secrétariat à distance lors de vos vacances, vous avez un surplus de travail ou tout simplement vous souhaitez que votre secrétariat soit basé à distance alors n'hésitez pas à me contacter. Je saurai gérer votre planning via doctolib ou un autre service d'agenda selon vos exigences, gérer vos e-mails  , les rédactions de courrier, vos réservations. Contacter moi pour plus d'informations. Vous recherchez un service de secrétariat à distance lors de vos vacances, vous avez un surplus de travail ou tout simplement vous souhaitez que votre secrétariat soit basé à distance alors n'hésitez pas à me contacter. Je saurai gérer votre planning via doctolib ou un autre service d'agenda selon vos exigences, gérer vos e-mails  , les rédactions de courrier, vos réservations. Contacter moi pour plus d'informations. Soyez le premier à déposer un avis sur cette annonce.",
       "url": "https://www.jemepropose.com/annonces/secretariat/secretariat-a-distance+10495683/",
-      "is_remote": true,
-      "remote_confidence": 1.0,
-      "remote_reason": "Keyword detection: Keyword: à distance",
-      "analyzed_with_llm": false,
+      "is_remote": false,
+      "remote_confidence": 0.95,
+      "remote_reason": "LLM: Annonce d'une personne cherchant du travail, pas une offre",
+      "analyzed_with_llm": true,
       "page": 8
     },
     {
@@ -2282,7 +2282,7 @@
       "full_description": "Nous recherchons une personne de confiance pour une collaboration humaine et durable autour d’un appartement haut de gamme situé à Bourg Lévêque, à Rennes. Ce n’est pas un simple “ménage” : c’est un lieu d’exception, une ambiance, une expérience à faire vivre. Nous cherchons quelqu’un qui aime le beau travail, le contact humain, et la satisfaction d’un accueil réussi. En pratique : •En octobre 2025, le logement a été occupé une douzaine de jours (6 en semaine et 6 le week-end). •L’activité monte doucement en puissance, notamment à l’approche des fêtes de fin d’année. Les missions : •Effectuer les ménages complets après chaque séjour, avec soin et sens du détail (linge, spa, ambiance, vérifications). •Accueillir les voyageurs : remise des clés, sourire, explications simples, un vrai moment agréable pour qui aime recevoir. •Gérer de petits approvisionnements (produits, bouteilles, objets de confort ou à la vente sur place). •Partager un bref retour après chaque passage (message ou photo). •Pouvoir proposer un(e) remplaçant(e) de confiance en cas d’absence. Ce que nous faisons de notre côté : Nous, les propriétaires, gérons toute la relation client, les réservations, les vérifications d’identité, la partie administrative et commerciale. Ce que nous voulons avant tout, c’est travailler main dans la main avec une personne sur qui on peut compter, avec qui on s’entend bien, et avec qui on construit une vraie relation de confiance dans la durée. Personne recherchée : •Sérieuse, bienveillante, rigoureuse et à l’aise dans un environnement haut de gamme. •Apprécie le contact humain, le sens du détail et les lieux soignés. •Habite idéalement à proximité du quartier Bourg Lévêque (déplacements simples). •Dispose déjà d’autres clients ou activités, et souhaite compléter son activité avec un lieu où l’on travaille dans le respect et la confiance mutuelle. Conditions : •Environ 12 interventions par mois, principalement le week-end mais aussi en semaine. •Planning communiqué à l’avance, avec souplesse et échanges constants. •Formation aux protocoles d’entretien et d’accueil assurée. 📩 Si cette mission vous parle, écrivez-nous quelques lignes sur votre parcours, votre quartier de résidence et vos disponibilités. Nous serons heureux de faire connaissance. Nous recherchons une personne de confiance pour une collaboration humaine et durable autour d’un appartement haut de gamme situé à Bourg Lévêque, à Rennes. Ce n’est pas un simple “ménage” : c’est un lieu d’exception, une ambiance, une expérience à faire vivre. Nous cherchons quelqu’un qui aime le beau travail, le contact humain, et la satisfaction d’un accueil réussi. En pratique : •En octobre 2025, le logement a été occupé une douzaine de jours (6 en semaine et 6 le week-end). •L’activité monte doucement en puissance, notamment à l’approche des fêtes de fin d’année. Les missions : •Effectuer les ménages complets après chaque séjour, avec soin et sens du détail (linge, spa, ambiance, vérifications). •Accueillir les voyageurs : remise des clés, sourire, explications simples, un vrai moment agréable pour qui aime recevoir. •Gérer de petits approvisionnements (produits, bouteilles, objets de confort ou à la vente sur place). •Partager un bref retour après chaque passage (message ou photo). •Pouvoir proposer un(e) remplaçant(e) de confiance en cas d’absence. Ce que nous faisons de notre côté : Nous, les propriétaires, gérons toute la relation client, les réservations, les vérifications d’identité, la partie administrative et commerciale. Ce que nous voulons avant tout, c’est travailler main dans la main avec une personne sur qui on peut compter, avec qui on s’entend bien, et avec qui on construit une vraie relation de confiance dans la durée. Personne recherchée : •Sérieuse, bienveillante, rigoureuse et à l’aise dans un environnement haut de gamme. •Apprécie le contact humain, le sens du détail et les lieux soignés. •Habite idéalement à proximité du quartier Bourg Lévêque (déplacements simples). •Dispose déjà d’autres clients ou activités, et souhaite compléter son activité avec un lieu où l’on travaille dans le respect et la confiance mutuelle. Conditions : •Environ 12 interventions par mois, principalement le week-end mais aussi en semaine. •Planning communiqué à l’avance, avec souplesse et échanges constants. •Formation aux protocoles d’entretien et d’accueil assurée. 📩 Si cette mission vous parle, écrivez-nous quelques lignes sur votre parcours, votre quartier de résidence et vos disponibilités. Nous serons heureux de faire connaissance. Soyez le premier à déposer un avis sur cette annonce.",
       "url": "https://www.jemepropose.com/annonces/conciergerie/assistante-dentretien-et-daccueil-appartement-haut-de-gamme-quartier-bourg-leveque-rennes+10495632/",
       "is_remote": false,
-      "remote_confidence": 0.98,
+      "remote_confidence": 0.95,
       "remote_reason": "LLM: Ménage, accueil physique et remise des clés sur place",
       "analyzed_with_llm": true,
       "page": 8
@@ -2299,7 +2299,7 @@
       "url": "https://www.jemepropose.com/annonces/coiffure/kreolity-hair-spa-recherche-une-coiffeuse-independante+10495564/",
       "is_remote": false,
       "remote_confidence": 1.0,
-      "remote_reason": "Keyword detection: On-site keyword: coiffure",
+      "remote_reason": "Keyword detection: Obvious on-site work: coiffure",
       "analyzed_with_llm": false,
       "page": 8
     },
@@ -2315,7 +2315,7 @@
       "url": "https://www.jemepropose.com/annonces/menage/recherche-equipe-de-menage-pour-locations-courte-duree-menage-et-gestion-du-linge-en-auto-entrepreneur-imperatif+10495473/",
       "is_remote": false,
       "remote_confidence": 1.0,
-      "remote_reason": "Keyword detection: On-site keyword: ménage",
+      "remote_reason": "Keyword detection: Obvious on-site work: ménage",
       "analyzed_with_llm": false,
       "page": 8
     },
@@ -2330,8 +2330,8 @@
       "full_description": "Photographe passionné basé à Paris, je suis à la recherche d’une modèle pour un shooting créatif (portrait, mode, urbain, artistique, etc.). Projet rémunéré Débutante acceptée, l’essentiel est la motivation et une bonne énergie ! Si tu es intéressé(e), envoie-moi un message avec quelques photos À bientôt ! Stan Photographe passionné basé à Paris, je suis à la recherche d’une modèle pour un shooting créatif (portrait, mode, urbain, artistique, etc.). Projet rémunéré Débutante acceptée, l’essentiel est la motivation et une bonne énergie ! Si tu es intéressé(e), envoie-moi un message avec quelques photos À bientôt ! Soyez le premier à déposer un avis sur cette annonce.",
       "url": "https://www.jemepropose.com/annonces/modele-photo/recherche-modele-photo-pour-projet-remunere+10492744/",
       "is_remote": false,
-      "remote_confidence": 1.0,
-      "remote_reason": "LLM: Shooting photo sur Paris, présence physique obligatoire",
+      "remote_confidence": 0.95,
+      "remote_reason": "LLM: Shooting photo à Paris, présence physique obligatoire",
       "analyzed_with_llm": true,
       "page": 8
     },
@@ -2343,12 +2343,12 @@
       "poster": "leroydimitri1981",
       "date_posted": "14/10/2025",
       "description": "Bonjour, Je recherche 3 serveurs(es) pour un mariage en juillet 2026. Service des boissons et des petits fours pour le vin...",
-      "full_description": "Bonjour, Je recherche 3 serveurs(es) pour un mariage en juillet 2026. Service des boissons et des petits fours pour le vin d'honneur. Pour le repas, il s'agit d'un buffet froid, il faudra juste mettre en place et s'occuper de la gestion des bouteilles sur les tables pendant le repas. Servir le dessert. La vaisselle est à rendre sale, donc pas de lavage prévu de l'ensemble des assiettes et couverts. La cuisine dispose d'un lave vaisselles, il faudra juste laver quelques assiettes pour le lendemain. Je recherche 3 serveurs(es) pour un mariage en juillet 2026. Service des boissons et des petits fours pour le vin d'honneur. Pour le repas, il s'agit d'un buffet froid, il faudra juste mettre en place et s'occuper de la gestion des bouteilles sur les tables pendant le repas. Servir le dessert. La vaisselle est à rendre sale, donc pas de lavage prévu de l'ensemble des assiettes et couverts. La cuisine dispose d'un lave vaisselles, il faudra juste laver quelques assiettes pour le lendemain. Soyez le premier à déposer un avis sur cette annonce.",
+      "full_description": "Bonjour, Je recherche 3 serveurs(es) pour un mariage en juillet 2026. Service des boissons et des petits fours pour le vin...",
       "url": "https://www.jemepropose.com/annonces/serveuse/recherche-serveurses-pour-un-mariage+10495379/",
       "is_remote": false,
       "remote_confidence": 1.0,
-      "remote_reason": "LLM: Service lors d’un mariage, présence physique obligatoire",
-      "analyzed_with_llm": true,
+      "remote_reason": "Keyword detection: Obvious on-site work: serveur",
+      "analyzed_with_llm": false,
       "page": 8
     },
     {
@@ -2363,7 +2363,7 @@
       "url": "https://www.jemepropose.com/annonces/conciergerie/pilone+10495365/",
       "is_remote": false,
       "remote_confidence": 1.0,
-      "remote_reason": "Keyword detection: On-site keyword: ménage",
+      "remote_reason": "Keyword detection: Obvious on-site work: ménage",
       "analyzed_with_llm": false,
       "page": 8
     },
@@ -2379,7 +2379,7 @@
       "url": "https://www.jemepropose.com/annonces/coiffure/recherche-modele-hommefemme+10495350/",
       "is_remote": false,
       "remote_confidence": 1.0,
-      "remote_reason": "Keyword detection: On-site keyword: coiffure",
+      "remote_reason": "Keyword detection: Obvious on-site work: coiffure",
       "analyzed_with_llm": false,
       "page": 8
     },
@@ -2391,12 +2391,12 @@
       "poster": "les chapy",
       "date_posted": "12/10/2025",
       "description": "Bonjour, Je recherche un serveur ou une serveuse pour aider à un anniversaire pour l'apéritif et service buffet pour le diner le  09...",
-      "full_description": "Bonjour, Je recherche un serveur ou une serveuse pour aider à un anniversaire pour l'apéritif et service buffet pour le diner le  09 mai  2026 à la salle de Thodure à Saint Marcel les Valence. Prix à me proposer et à discuter selon le contenu de la prestation. Cdl. Je recherche un serveur ou une serveuse pour aider à un anniversaire pour l'apéritif et service buffet pour le diner le  09 mai  2026 à la salle de Thodure à Saint Marcel les Valence. Prix à me proposer et à discuter selon le contenu de la prestation. Soyez le premier à déposer un avis sur cette annonce.",
+      "full_description": "Bonjour, Je recherche un serveur ou une serveuse pour aider à un anniversaire pour l'apéritif et service buffet pour le diner le  09...",
       "url": "https://www.jemepropose.com/annonces/serveuse/service-pour-aperitif-et-diner-anniversaire+10495301/",
       "is_remote": false,
       "remote_confidence": 1.0,
-      "remote_reason": "LLM: Serveur anniversaire sur place, pas télétravail",
-      "analyzed_with_llm": true,
+      "remote_reason": "Keyword detection: Obvious on-site work: serveur",
+      "analyzed_with_llm": false,
       "page": 8
     },
     {
@@ -2411,7 +2411,7 @@
       "url": "https://www.jemepropose.com/annonces/garde-d-enfants/garde-denfants-a-domicile+10495299/",
       "is_remote": false,
       "remote_confidence": 1.0,
-      "remote_reason": "Keyword detection: On-site keyword: garde d'enfant",
+      "remote_reason": "Keyword detection: Obvious on-site work: garde d'enfant",
       "analyzed_with_llm": false,
       "page": 8
     },
@@ -2427,7 +2427,7 @@
       "url": "https://www.jemepropose.com/annonces/garde-d-enfants/etudiante-a-la-recherche-dun-job-etudiant+10495258/",
       "is_remote": false,
       "remote_confidence": 1.0,
-      "remote_reason": "Keyword detection: On-site keyword: garde d'enfant",
+      "remote_reason": "Keyword detection: Obvious on-site work: garde d'enfant",
       "analyzed_with_llm": false,
       "page": 8
     },
@@ -2443,7 +2443,7 @@
       "url": "https://www.jemepropose.com/annonces/auxiliaire-de-vie/recherche-mi-temps-auxiliaire-de-vie+10495250/",
       "is_remote": false,
       "remote_confidence": 0.95,
-      "remote_reason": "LLM: Accompagnement fin de vie nécessite présence physique",
+      "remote_reason": "LLM: Accompagnement fin de vie implique présence physique",
       "analyzed_with_llm": true,
       "page": 8
     },
@@ -2459,7 +2459,7 @@
       "url": "https://www.jemepropose.com/annonces/repassage/recherche-heure-de-repassage-retrait-et-retour-a-domicile+10495233/",
       "is_remote": false,
       "remote_confidence": 1.0,
-      "remote_reason": "Keyword detection: On-site keyword: repassage",
+      "remote_reason": "Keyword detection: Obvious on-site work: repassage",
       "analyzed_with_llm": false,
       "page": 8
     },
@@ -2471,12 +2471,12 @@
       "poster": "LDCN",
       "date_posted": "10/10/2025",
       "description": "Bonjour, Je recherche une personne pour l'entretien et la préparation de 2 appartements à Granville en location saisonnière à...",
-      "full_description": "Bonjour, Je recherche une personne pour l'entretien et la préparation de 2 appartements à Granville en location saisonnière à...",
+      "full_description": "Bonjour, Je recherche une personne pour l'entretien et la préparation de 2 appartements à Granville en location saisonnière à l'année. Au plaisir d'échanger, Cordialement. Je recherche une personne pour l'entretien et la préparation de 2 appartements à Granville en location saisonnière à l'année. Au plaisir d'échanger, Cordialement. Soyez le premier à déposer un avis sur cette annonce.",
       "url": "https://www.jemepropose.com/annonces/conciergerie/recherche+10495207/",
       "is_remote": false,
       "remote_confidence": 1.0,
-      "remote_reason": "Keyword detection: On-site keyword: réparation",
-      "analyzed_with_llm": false,
+      "remote_reason": "LLM: Nettoyage et préparation d'appartements sur place",
+      "analyzed_with_llm": true,
       "page": 8
     },
     {
@@ -2491,7 +2491,7 @@
       "url": "https://www.jemepropose.com/annonces/menage/recherche-personne-pour-menage-sur-arreau+10495195/",
       "is_remote": false,
       "remote_confidence": 1.0,
-      "remote_reason": "Keyword detection: On-site keyword: ménage",
+      "remote_reason": "Keyword detection: Obvious on-site work: ménage",
       "analyzed_with_llm": false,
       "page": 8
     },
@@ -2503,12 +2503,12 @@
       "poster": "emploiavenir",
       "date_posted": "03/10/2025",
       "description": "Je suis à la recherche d'une personne expérimentée au poste de secrétaire à domicile. Si vous êtes disponible veuillez me contacter pour...",
-      "full_description": "Je suis à la recherche d'une personne expérimentée au poste de secrétaire à domicile. Si vous êtes disponible veuillez me contacter pour...",
+      "full_description": "Je suis à la recherche d'une personne expérimentée au poste de secrétaire à domicile. Si vous êtes disponible veuillez me contacter pour plus d'amples informations. Ps/ Pas sérieux s'abstenir Cordialement. Je suis à la recherche d'une personne expérimentée au poste de secrétaire à domicile. Si vous êtes disponible veuillez me contacter pour plus d'amples informations. Ps/ Pas sérieux s'abstenir Cordialement. Soyez le premier à déposer un avis sur cette annonce.",
       "url": "https://www.jemepropose.com/annonces/secretariat/recherche-tele-secretaire-experimentee+10494841/",
       "is_remote": false,
-      "remote_confidence": 1.0,
-      "remote_reason": "Keyword detection: On-site keyword: à domicile",
-      "analyzed_with_llm": false,
+      "remote_confidence": 0.8,
+      "remote_reason": "LLM: Télé-secrétaire à domicile, pas forcément 100% en ligne",
+      "analyzed_with_llm": true,
       "page": 8
     },
     {
@@ -2523,7 +2523,7 @@
       "url": "https://www.jemepropose.com/annonces/conciergerie/entretien-dune-maison-en-location-saisonniere+10494818/",
       "is_remote": false,
       "remote_confidence": 1.0,
-      "remote_reason": "Keyword detection: On-site keyword: ménage",
+      "remote_reason": "Keyword detection: Obvious on-site work: ménage",
       "analyzed_with_llm": false,
       "page": 8
     },
@@ -2535,12 +2535,12 @@
       "poster": "Vero Payet",
       "date_posted": "02/10/2025",
       "description": "Je suis accueillante  familiale  je cherche 1fois par semaine  5 à 6h une personne qui réchauffera  le repas du midi et qui assurera une...",
-      "full_description": "Je suis accueillante  familiale  je cherche 1fois par semaine  5 à 6h une personne qui réchauffera  le repas du midi et qui assurera une...",
+      "full_description": "Numéro de mise en relation Je suis accueillante  familiale  je cherche 1fois par semaine  5 à 6h une personne qui réchauffera  le repas du midi et qui assurera une présence auprès de 3 personnes en situation  de handicap psychologique leger 3 monsieurs très corrects gentils et parfaitement autonomes dans les actes du quotidien sans aucune contrainte Je suis accueillante  familiale  je cherche 1fois par semaine  5 à 6h une personne qui réchauffera  le repas du midi et qui assurera une présence auprès de 3 personnes en situation  de handicap psychologique leger 3 monsieurs très corrects gentils et parfaitement autonomes dans les actes du quotidien sans aucune contrainte Soyez le premier à déposer un avis sur cette annonce.",
       "url": "https://www.jemepropose.com/annonces/auxiliaire-de-vie/remplacement-presence-et-aide-au-repas+10494799/",
       "is_remote": false,
       "remote_confidence": 1.0,
-      "remote_reason": "Keyword detection: On-site keyword: présence",
-      "analyzed_with_llm": false,
+      "remote_reason": "LLM: Présence physique obligatoire pour réchauffer repas et accompagner",
+      "analyzed_with_llm": true,
       "page": 8
     },
     {
@@ -2555,7 +2555,7 @@
       "url": "https://www.jemepropose.com/annonces/garde-d-animaux/garde-week-end-et-vacances+10494756/",
       "is_remote": false,
       "remote_confidence": 1.0,
-      "remote_reason": "Keyword detection: On-site keyword: nounou",
+      "remote_reason": "Keyword detection: Obvious on-site work: nounou",
       "analyzed_with_llm": false,
       "page": 8
     },
@@ -2567,12 +2567,12 @@
       "poster": "Fabien17",
       "date_posted": "01/10/2025",
       "description": "Bonjour, Travailleur indépendant, je cherche un complément de revenus et vous propose mes services pour garder un œil sur votre maison...",
-      "full_description": "Bonjour, Travailleur indépendant, je cherche un complément de revenus et vous propose mes services pour garder un œil sur votre maison...",
+      "full_description": "Numéro de mise en relation Bonjour, Travailleur indépendant, je cherche un complément de revenus et vous propose mes services pour garder un œil sur votre maison lorsque vous vous absentez. Je travaille dans le domaine de la sécurité depuis plus de 20 ans et serait apporté tout mon savoir faire pour garantir la sécurité de vos propriétés. Les missions seront à définir avec vous, simple visite mensuelle ou hebdomadaire, mise en chauffe de la maison avant votre arrivée, mise route après \"hivernage\", passage après un épisode météo particulier, ouvrir/fermer la maison pour l'intervention d'un artisan, vous êtes connectés à votre maison et quelque chose de suspect vous intrigue, en fonction de ma disponibilité je peux aller sur place plus ou moins rapidement. Le nettoyage et l'entretien de votre propriété peut également faire parti de mes missions. Je suis quelqu'un de sérieux, discret, ayant le sens des responsabilités avec une expérience solide. Travailleur indépendant, je cherche un complément de revenus et vous propose mes services pour garder un œil sur votre maison lorsque vous vous absentez. Je travaille dans le domaine de la sécurité depuis plus de 20 ans et serait apporté tout mon savoir faire pour garantir la sécurité de vos propriétés. Les missions seront à définir avec vous, simple visite mensuelle ou hebdomadaire, mise en chauffe de la maison avant votre arrivée, mise route après \"hivernage\", passage après un épisode météo particulier, ouvrir/fermer la maison pour l'intervention d'un artisan, vous êtes connectés à votre maison et quelque chose de suspect vous intrigue, en fonction de ma disponibilité je peux aller sur place plus ou moins rapidement. Le nettoyage et l'entretien de votre propriété peut également faire parti de mes missions. Je suis quelqu'un de sérieux, discret, ayant le sens des responsabilités avec une expérience solide. Disponible toute l'année Soyez le premier à déposer un avis sur cette annonce.",
       "url": "https://www.jemepropose.com/annonces/gardiennage-de-domicile/gardiennage-et-intendance-de-votre-propriete+10494724/",
       "is_remote": false,
       "remote_confidence": 1.0,
-      "remote_reason": "Keyword detection: On-site keyword: je cherche",
-      "analyzed_with_llm": false,
+      "remote_reason": "LLM: Annonce d'un gardien cherchant du travail sur place",
+      "analyzed_with_llm": true,
       "page": 8
     },
     {
@@ -2587,7 +2587,7 @@
       "url": "https://www.jemepropose.com/annonces/menage/je-me-proprose+10494698/",
       "is_remote": false,
       "remote_confidence": 1.0,
-      "remote_reason": "Keyword detection: On-site keyword: ménage",
+      "remote_reason": "Keyword detection: Obvious on-site work: ménage",
       "analyzed_with_llm": false,
       "page": 9
     },
@@ -2603,7 +2603,7 @@
       "url": "https://www.jemepropose.com/annonces/montage-video/montage-video-anniversaire-40-ans-photos-videos-musique+10494609/",
       "is_remote": true,
       "remote_confidence": 0.95,
-      "remote_reason": "LLM: Montage vidéo livrable en ligne sans déplacement",
+      "remote_reason": "LLM: Montage vidéo livrable par internet",
       "analyzed_with_llm": true,
       "page": 9
     },
@@ -2619,7 +2619,7 @@
       "url": "https://www.jemepropose.com/annonces/bricolage/travaux-amenagement-maison+10494607/",
       "is_remote": false,
       "remote_confidence": 1.0,
-      "remote_reason": "Keyword detection: On-site keyword: ménage",
+      "remote_reason": "Keyword detection: Obvious on-site work: ménage",
       "analyzed_with_llm": false,
       "page": 9
     },
@@ -2635,7 +2635,7 @@
       "url": "https://www.jemepropose.com/annonces/traiteur/recherche-traiteur-sur-faymoreau+10494430/",
       "is_remote": false,
       "remote_confidence": 0.95,
-      "remote_reason": "LLM: Recherche traiteur pour mariage, pas télétravail",
+      "remote_reason": "LLM: Recherche traiteur pour mariage, nécessite présence sur place",
       "analyzed_with_llm": true,
       "page": 9
     },
@@ -2651,7 +2651,7 @@
       "url": "https://www.jemepropose.com/annonces/auxiliaire-de-vie/recrute-des-decembre-en-cdi+8466866/",
       "is_remote": false,
       "remote_confidence": 0.95,
-      "remote_reason": "LLM: Auxiliaire de vie sur place à Tremblay-les-Villages",
+      "remote_reason": "LLM: Auxiliaire de vie à domicile, présence physique obligatoire",
       "analyzed_with_llm": true,
       "page": 9
     },
@@ -2667,7 +2667,7 @@
       "url": "https://www.jemepropose.com/annonces/baby-sitting/baby-sitting+10494377/",
       "is_remote": false,
       "remote_confidence": 1.0,
-      "remote_reason": "Keyword detection: On-site keyword: baby",
+      "remote_reason": "Keyword detection: Obvious on-site work: baby",
       "analyzed_with_llm": false,
       "page": 9
     },
@@ -2683,7 +2683,7 @@
       "url": "https://www.jemepropose.com/annonces/menage/je-recherche-femme-de-menage+10494330/",
       "is_remote": false,
       "remote_confidence": 1.0,
-      "remote_reason": "Keyword detection: On-site keyword: ménage",
+      "remote_reason": "Keyword detection: Obvious on-site work: ménage",
       "analyzed_with_llm": false,
       "page": 9
     },
@@ -2699,7 +2699,7 @@
       "url": "https://www.jemepropose.com/annonces/menage/aide-menagere+10494312/",
       "is_remote": false,
       "remote_confidence": 1.0,
-      "remote_reason": "Keyword detection: On-site keyword: ménage",
+      "remote_reason": "Keyword detection: Obvious on-site work: ménage",
       "analyzed_with_llm": false,
       "page": 9
     },
@@ -2715,7 +2715,7 @@
       "url": "https://www.jemepropose.com/annonces/gardiennage-de-domicile/gestion-dune-maison+10494259/",
       "is_remote": false,
       "remote_confidence": 0.95,
-      "remote_reason": "LLM: Gardiennage maison implique présence physique obligatoire",
+      "remote_reason": "LLM: Gardiennage et gestion d'une maison impliquent présence physique",
       "analyzed_with_llm": true,
       "page": 9
     },
@@ -2731,7 +2731,7 @@
       "url": "https://www.jemepropose.com/annonces/serveuse/soiree+10494251/",
       "is_remote": false,
       "remote_confidence": 1.0,
-      "remote_reason": "LLM: Service soirée anniversaire, présence physique obligatoire",
+      "remote_reason": "LLM: Service soirée anniversaire nécessite présence physique",
       "analyzed_with_llm": true,
       "page": 9
     },
@@ -2747,7 +2747,7 @@
       "url": "https://www.jemepropose.com/annonces/menage/femme-de-menage+10494225/",
       "is_remote": false,
       "remote_confidence": 1.0,
-      "remote_reason": "Keyword detection: On-site keyword: ménage",
+      "remote_reason": "Keyword detection: Obvious on-site work: ménage",
       "analyzed_with_llm": false,
       "page": 9
     },
@@ -2762,8 +2762,8 @@
       "full_description": "Bonjour, Dans le cadre du renouvellement de mon portfolio, je recherche 4 à 5 modèles (H/F, tout âge, tout style) pour des séances photos collaboratives. En échange de votre temps et de votre énergie, je vous fournirai des photos retouchées, que vous pourrez utiliser pour votre propre book. De mon côté, cela me permettra de développer ma nouvelle orientation artistique. Je prévois des séances en extérieur à Paris et/ou alentours. Projet non rémunéré (échange de compétences). Merci de m’écrire si vous souhaitez participer, avec une courte présentation et, si possible, 2-3 photos de vous. email: contact@nickylebel.com Site: nickylebel.com Merci Dans le cadre du renouvellement de mon portfolio, je recherche 4 à 5 modèles (H/F, tout âge, tout style) pour des séances photos collaboratives. En échange de votre temps et de votre énergie, je vous fournirai des photos retouchées, que vous pourrez utiliser pour votre propre book. De mon côté, cela me permettra de développer ma nouvelle orientation artistique. Je prévois des séances en extérieur à Paris et/ou alentours. Projet non rémunéré (échange de compétences). Merci de m’écrire si vous souhaitez participer, avec une courte présentation et, si possible, 2-3 photos de vous. email: contact@nickylebel.com Site: nickylebel.com Soyez le premier à déposer un avis sur cette annonce.",
       "url": "https://www.jemepropose.com/annonces/modele-photo/recherche-modele-pour-collaboration-shooting-lifestyle+10494156/",
       "is_remote": false,
-      "remote_confidence": 0.95,
-      "remote_reason": "LLM: Séances photos à Paris, pas de télétravail",
+      "remote_confidence": 1.0,
+      "remote_reason": "LLM: Shooting photo sur place à Paris, pas de télétravail",
       "analyzed_with_llm": true,
       "page": 9
     },
@@ -2779,7 +2779,7 @@
       "url": "https://www.jemepropose.com/annonces/menage/recherche-heures-de-menage+10494116/",
       "is_remote": false,
       "remote_confidence": 1.0,
-      "remote_reason": "Keyword detection: On-site keyword: ménage",
+      "remote_reason": "Keyword detection: Obvious on-site work: ménage",
       "analyzed_with_llm": false,
       "page": 9
     },
@@ -2811,7 +2811,7 @@
       "url": "https://www.jemepropose.com/annonces/ecrivain-public/aide-a-lecriture+10494043/",
       "is_remote": false,
       "remote_confidence": 0.95,
-      "remote_reason": "LLM: Annonce d'une autrice cherchant des clients sur Valras-Plage",
+      "remote_reason": "LLM: Annonce d'une auteure proposant ses services, pas une offre d'emploi",
       "analyzed_with_llm": true,
       "page": 9
     },
@@ -2827,7 +2827,7 @@
       "url": "https://www.jemepropose.com/annonces/chef-de-cuisine/recherche-chef-prive-a-domicile+10493972/",
       "is_remote": false,
       "remote_confidence": 1.0,
-      "remote_reason": "Keyword detection: On-site keyword: cuisine",
+      "remote_reason": "Keyword detection: Obvious on-site work: cuisine",
       "analyzed_with_llm": false,
       "page": 9
     },
@@ -2843,7 +2843,7 @@
       "url": "https://www.jemepropose.com/annonces/menage/recherche-femme-de-menage+10493952/",
       "is_remote": false,
       "remote_confidence": 1.0,
-      "remote_reason": "Keyword detection: On-site keyword: ménage",
+      "remote_reason": "Keyword detection: Obvious on-site work: ménage",
       "analyzed_with_llm": false,
       "page": 9
     },
@@ -2859,7 +2859,7 @@
       "url": "https://www.jemepropose.com/annonces/menage/menage-a-domicile+10493914/",
       "is_remote": false,
       "remote_confidence": 1.0,
-      "remote_reason": "Keyword detection: On-site keyword: ménage",
+      "remote_reason": "Keyword detection: Obvious on-site work: ménage",
       "analyzed_with_llm": false,
       "page": 9
     },
@@ -2875,7 +2875,7 @@
       "url": "https://www.jemepropose.com/annonces/menage/aide-menagere+10493885/",
       "is_remote": false,
       "remote_confidence": 1.0,
-      "remote_reason": "Keyword detection: On-site keyword: ménage",
+      "remote_reason": "Keyword detection: Obvious on-site work: ménage",
       "analyzed_with_llm": false,
       "page": 9
     },
@@ -2891,7 +2891,7 @@
       "url": "https://www.jemepropose.com/annonces/garde-d-enfants/recherche-baby-sitter-mardi-et-jeudi-soir+10493880/",
       "is_remote": false,
       "remote_confidence": 1.0,
-      "remote_reason": "Keyword detection: On-site keyword: garde d'enfant",
+      "remote_reason": "Keyword detection: Obvious on-site work: garde d'enfant",
       "analyzed_with_llm": false,
       "page": 9
     },
@@ -2923,7 +2923,7 @@
       "url": "https://www.jemepropose.com/annonces/cours-de-danse/recherche-danseureuse-experimentee+10493772/",
       "is_remote": false,
       "remote_confidence": 0.95,
-      "remote_reason": "LLM: Cours de danse nécessite présence physique",
+      "remote_reason": "LLM: Cours de danse impliquent présence physique",
       "analyzed_with_llm": true,
       "page": 10
     },
@@ -2939,7 +2939,7 @@
       "url": "https://www.jemepropose.com/annonces/menage/recherche-aide-menagere-2-jours-par-semaine+10493765/",
       "is_remote": false,
       "remote_confidence": 1.0,
-      "remote_reason": "Keyword detection: On-site keyword: ménage",
+      "remote_reason": "Keyword detection: Obvious on-site work: ménage",
       "analyzed_with_llm": false,
       "page": 10
     },
@@ -2955,7 +2955,7 @@
       "url": "https://www.jemepropose.com/annonces/garde-d-enfants/recherche-accompagnante-pour-trajets-ecole-football-decines+10493650/",
       "is_remote": false,
       "remote_confidence": 1.0,
-      "remote_reason": "Keyword detection: On-site keyword: garde d'enfant",
+      "remote_reason": "Keyword detection: Obvious on-site work: garde d'enfant",
       "analyzed_with_llm": false,
       "page": 10
     },
@@ -2971,7 +2971,7 @@
       "url": "https://www.jemepropose.com/annonces/menage/emplois-de-menage-a-domicile+10493637/",
       "is_remote": false,
       "remote_confidence": 1.0,
-      "remote_reason": "Keyword detection: On-site keyword: ménage",
+      "remote_reason": "Keyword detection: Obvious on-site work: ménage",
       "analyzed_with_llm": false,
       "page": 10
     },
@@ -2987,7 +2987,7 @@
       "url": "https://www.jemepropose.com/annonces/massage-reiki/massage+10493601/",
       "is_remote": false,
       "remote_confidence": 1.0,
-      "remote_reason": "Keyword detection: On-site keyword: massage",
+      "remote_reason": "Keyword detection: Obvious on-site work: massage",
       "analyzed_with_llm": false,
       "page": 10
     },
@@ -3003,7 +3003,7 @@
       "url": "https://www.jemepropose.com/annonces/bricolage/fixation-murale-equipement-lourd+10493597/",
       "is_remote": false,
       "remote_confidence": 1.0,
-      "remote_reason": "Keyword detection: On-site keyword: bricolage",
+      "remote_reason": "Keyword detection: Obvious on-site work: bricolage",
       "analyzed_with_llm": false,
       "page": 10
     },
@@ -3019,7 +3019,7 @@
       "url": "https://www.jemepropose.com/annonces/demenagement/urgent-aide-au-demenagement+10493572/",
       "is_remote": false,
       "remote_confidence": 1.0,
-      "remote_reason": "Keyword detection: On-site keyword: ménage",
+      "remote_reason": "Keyword detection: Obvious on-site work: ménage",
       "analyzed_with_llm": false,
       "page": 10
     },
@@ -3035,7 +3035,7 @@
       "url": "https://www.jemepropose.com/annonces/bricolage/monteur-meuble+10493570/",
       "is_remote": false,
       "remote_confidence": 1.0,
-      "remote_reason": "Keyword detection: On-site keyword: bricolage",
+      "remote_reason": "Keyword detection: Obvious on-site work: bricolage",
       "analyzed_with_llm": false,
       "page": 10
     },
@@ -3051,7 +3051,7 @@
       "url": "https://www.jemepropose.com/annonces/bricolage/joints+10493543/",
       "is_remote": false,
       "remote_confidence": 1.0,
-      "remote_reason": "Keyword detection: On-site keyword: bricolage",
+      "remote_reason": "Keyword detection: Obvious on-site work: bricolage",
       "analyzed_with_llm": false,
       "page": 10
     },
@@ -3067,7 +3067,7 @@
       "url": "https://www.jemepropose.com/annonces/menage/aide-menagere+10493496/",
       "is_remote": false,
       "remote_confidence": 1.0,
-      "remote_reason": "Keyword detection: On-site keyword: ménage",
+      "remote_reason": "Keyword detection: Obvious on-site work: ménage",
       "analyzed_with_llm": false,
       "page": 10
     },
@@ -3083,7 +3083,7 @@
       "url": "https://www.jemepropose.com/annonces/menage/detartrer-la-douche-et-les-portes-douches-et-jointures+10493487/",
       "is_remote": false,
       "remote_confidence": 1.0,
-      "remote_reason": "Keyword detection: On-site keyword: ménage",
+      "remote_reason": "Keyword detection: Obvious on-site work: ménage",
       "analyzed_with_llm": false,
       "page": 10
     },
@@ -3099,7 +3099,7 @@
       "url": "https://www.jemepropose.com/annonces/bricolage/boucher-un-trou-au-mur+10493486/",
       "is_remote": false,
       "remote_confidence": 1.0,
-      "remote_reason": "Keyword detection: On-site keyword: bricolage",
+      "remote_reason": "Keyword detection: Obvious on-site work: bricolage",
       "analyzed_with_llm": false,
       "page": 10
     },
@@ -3115,7 +3115,7 @@
       "url": "https://www.jemepropose.com/annonces/jardinage/recherche-personne-pour-entretien-jardin+10490727/",
       "is_remote": false,
       "remote_confidence": 1.0,
-      "remote_reason": "Keyword detection: On-site keyword: jardinage",
+      "remote_reason": "Keyword detection: Obvious on-site work: jardinage",
       "analyzed_with_llm": false,
       "page": 10
     },
@@ -3131,7 +3131,7 @@
       "url": "https://www.jemepropose.com/annonces/menage/aide-a-domicile-agent-dentretien+10493334/",
       "is_remote": false,
       "remote_confidence": 1.0,
-      "remote_reason": "Keyword detection: On-site keyword: ménage",
+      "remote_reason": "Keyword detection: Obvious on-site work: ménage",
       "analyzed_with_llm": false,
       "page": 10
     },
@@ -3146,8 +3146,8 @@
       "full_description": "Je recherche une dame de compagnie pour ma grand mère de 92 ans . Discuter,jouer,activiter....",
       "url": "https://www.jemepropose.com/annonces/auxiliaire-de-vie/dame-de-compagnie+10493292/",
       "is_remote": false,
-      "remote_confidence": 0.95,
-      "remote_reason": "LLM: Accompagnement personne âgée nécessite présence physique",
+      "remote_confidence": 1.0,
+      "remote_reason": "LLM: Accompagnement de personne âgée, présence physique indispensable",
       "analyzed_with_llm": true,
       "page": 10
     },
@@ -3179,7 +3179,7 @@
       "url": "https://www.jemepropose.com/annonces/entretien-bateau/revision-moteur+10493227/",
       "is_remote": false,
       "remote_confidence": 1.0,
-      "remote_reason": "LLM: Révision moteur bateau nécessite intervention physique sur place",
+      "remote_reason": "LLM: Révision moteur bateau nécessite intervention physique sur site",
       "analyzed_with_llm": true,
       "page": 10
     },
@@ -3195,7 +3195,7 @@
       "url": "https://www.jemepropose.com/annonces/cuisine-a-domicile/recherche-menage-et-cuisine+10493209/",
       "is_remote": false,
       "remote_confidence": 1.0,
-      "remote_reason": "Keyword detection: On-site keyword: menage",
+      "remote_reason": "Keyword detection: Obvious on-site work: menage",
       "analyzed_with_llm": false,
       "page": 10
     },
@@ -3211,7 +3211,7 @@
       "url": "https://www.jemepropose.com/annonces/menage/2-heures-par-semaine-minimum+10493196/",
       "is_remote": false,
       "remote_confidence": 1.0,
-      "remote_reason": "Keyword detection: On-site keyword: ménage",
+      "remote_reason": "Keyword detection: Obvious on-site work: ménage",
       "analyzed_with_llm": false,
       "page": 10
     }

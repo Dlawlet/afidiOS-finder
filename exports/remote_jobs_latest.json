@@ -1,17 +1,17 @@
 {
   "metadata": {
-    "export_date": "2026-01-10 22:57:08",
-    "total_jobs": 2,
+    "export_date": "2026-01-11 11:20:57",
+    "total_jobs": 5,
     "analysis_mode": "LLM-Enhanced"
   },
   "statistics": {
-    "total": 2,
-    "remote": 2,
+    "total": 5,
+    "remote": 5,
     "on_site": 0,
     "remote_percentage": 100.0,
     "llm_used": true,
-    "source": "https://www.jemepropose.com/annonces/?offer_type=2&provider_type=1&page=5",
-    "export_date": "2026-01-10 22:57:08"
+    "source": "https://www.jemepropose.com/annonces/?offer_type=2&provider_type=1&page=10",
+    "export_date": "2026-01-11 11:20:57"
   },
   "jobs": [
     {
@@ -25,26 +25,74 @@
       "full_description": "Bonjour, Je recherche une personne jeune, motivée et à l’aise avec le web (étudiant(e) ou autodidacte bienvenu(e)) pour m’aider à moderniser un site internet de vente de vidéos. Le site existe déjà, mais l’objectif est de : - rafraîchir le design (aspect plus moderne, plus propre) - améliorer l’expérience utilisateur - optimiser la présentation des contenus et des pages de vente - éventuellement apporter des idées créatives / techniques Profil recherché - Intérêt pour le développement web / webdesign - À l’aise avec WordPress, HTML/CSS, ou autres outils web (selon ton profil) - Autonome, sérieux(se), force de proposition - Projet idéal pour un(e) étudiant(e) souhaitant gagner de l’expérience sur un vrai site Rémunération - Tarif à définir selon l’expérience et les compétences -Paiement en tant que particulier (mission ponctuelle) Infos complémentaires -Mission flexible -Échanges simples et humains -Possibilité de collaboration sur le long terme si le feeling est bon N’hésite pas à me contacter avec : une courte présentation ton niveau / ce que tu sais faire éventuellement des exemples de sites ou projets À bientôt ! Je recherche une personne jeune, motivée et à l’aise avec le web (étudiant(e) ou autodidacte bienvenu(e)) pour m’aider à moderniser un site internet de vente de vidéos. Le site existe déjà, mais l’objectif est de : - rafraîchir le design (aspect plus moderne, plus propre) - améliorer l’expérience utilisateur - optimiser la présentation des contenus et des pages de vente - éventuellement apporter des idées créatives / techniques Profil recherché - Intérêt pour le développement web / webdesign - À l’aise avec WordPress, HTML/CSS, ou autres outils web (selon ton profil) - Autonome, sérieux(se), force de proposition - Projet idéal pour un(e) étudiant(e) souhaitant gagner de l’expérience sur un vrai site Rémunération - Tarif à définir selon l’expérience et les compétences -Paiement en tant que particulier (mission ponctuelle) Infos complémentaires -Mission flexible -Échanges simples et humains -Possibilité de collaboration sur le long terme si le feeling est bon N’hésite pas à me contacter avec : une courte présentation ton niveau / ce que tu sais faire éventuellement des exemples de sites ou projets À bientôt ! Soyez le premier à déposer un avis sur cette annonce.",
       "url": "https://www.jemepropose.com/annonces/creation-site-internet/recherche-personne-motivee-pour-refonte-de-site-web-projet-creatif+10498729/",
       "is_remote": true,
-      "remote_confidence": 0.92,
-      "remote_reason": "LLM: Travail web entièrement en ligne possible",
+      "remote_confidence": 0.9,
+      "remote_reason": "LLM: Développement web, aucune contrainte de lieu",
       "analyzed_with_llm": true,
       "page": 2
     },
     {
-      "id": "66",
-      "title": "recherche créateur de site internet",
-      "location": "Création site internet - A Distance",
+      "id": "119",
+      "title": "Creation site internet",
+      "location": "Création site internet - Cagnes-sur-Mer (06800)",
       "price": "Gratuit",
-      "poster": "mamzelle.candice.enterprise",
-      "date_posted": "14/12/2025",
-      "description": "Bonjour, Je m'appelle Priscillia , je viens de créer mon entreprise , je suis auto - entrepreneuse. Je suis vraiment au début , je suis...",
-      "full_description": "Bonjour, Je m'appelle Priscillia , je viens de créer mon entreprise , je suis auto - entrepreneuse. Je suis vraiment au début , je suis à l'étape de la fabrication de ma marchandise, donc n'est pas encore fait de chiffre d'affaire, je cherche une personne qui pourrait me réaliser un site internet gratuit ou pas chère. Si vous êtes intéressé , pouvez - vous me laisser un mail. Je crée des bijoux fantaisie. Mon univers est très coloré, je fabrique des bijoux pour enfants, femmes et hommes. En vous remerciant d'avance. Priscillia Je m'appelle Priscillia , je viens de créer mon entreprise , je suis auto - entrepreneuse. Je suis vraiment au début , je suis à l'étape de la fabrication de ma marchandise, donc n'est pas encore fait de chiffre d'affaire, je cherche une personne qui pourrait me réaliser un site internet gratuit ou pas chère. Si vous êtes intéressé , pouvez - vous me laisser un mail. Je crée des bijoux fantaisie. Mon univers est très coloré, je fabrique des bijoux pour enfants, femmes et hommes. En vous remerciant d'avance. Soyez le premier à déposer un avis sur cette annonce.",
-      "url": "https://www.jemepropose.com/annonces/creation-site-internet/recherche-createur-de-site-internet+10498326/",
+      "poster": "ciindy1031",
+      "date_posted": "04/11/2025",
+      "description": "Bonjour je recherche une personne qui peut me cree un site internet droopshipping cles en main . Je prendrer le devis le moins chere car je...",
+      "full_description": "Numéro de mise en relation Bonjour je recherche une personne qui peut me cree un site internet droopshipping cles en main . Je prendrer le devis le moins chere car je n’est pas un gros budjet cordialement Bonjour je recherche une personne qui peut me cree un site internet droopshipping cles en main . Je prendrer le devis le moins chere car je n’est pas un gros budjet cordialement Soyez le premier à déposer un avis sur cette annonce.",
+      "url": "https://www.jemepropose.com/annonces/creation-site-internet/creation-site-internet+10496507/",
       "is_remote": true,
-      "remote_confidence": 0.8,
-      "remote_reason": "LLM: Création site internet à distance",
+      "remote_confidence": 0.95,
+      "remote_reason": "LLM: Création site web seul travail, livrable en ligne",
       "analyzed_with_llm": true,
-      "page": 4
+      "page": 6
+    },
+    {
+      "id": "123",
+      "title": "Cours de français langue étrangère (FLE) – préparation DELF B2﻿ / DALF C1﻿",
+      "location": "Formations à distance - A Distance",
+      "price": "A définir",
+      "poster": "SophieFLE",
+      "date_posted": "01/11/2025",
+      "description": "Formatrice diplômée Master 2 en didactique du FLE, avec près de 20 ans d’expérience. J’offre un accompagnement personnalisé pour réussir...",
+      "full_description": "Formatrice diplômée Master 2 en didactique du FLE, avec près de 20 ans d’expérience. J’offre un accompagnement personnalisé pour réussir...",
+      "url": "https://www.jemepropose.com/annonces/formations-a-distance/cours-de-francais-langue-etrangere-fle-preparation-delf-b2-dalf-c1+10496361/",
+      "is_remote": true,
+      "remote_confidence": 1.0,
+      "remote_reason": "Keyword detection: Keyword: à distance",
+      "analyzed_with_llm": false,
+      "page": 7
+    },
+    {
+      "id": "141",
+      "title": "Secrétariat à distance",
+      "location": "Secrétariat - Limoges-Fourches (77550)",
+      "price": "A définir",
+      "poster": "Tess@secrétariat",
+      "date_posted": "20/10/2025",
+      "description": "Vous recherchez un service de secrétariat à distance lors de vos vacances, vous avez un surplus de travail ou tout simplement vous souhaitez...",
+      "full_description": "Vous recherchez un service de secrétariat à distance lors de vos vacances, vous avez un surplus de travail ou tout simplement vous souhaitez...",
+      "url": "https://www.jemepropose.com/annonces/secretariat/secretariat-a-distance+10495683/",
+      "is_remote": true,
+      "remote_confidence": 1.0,
+      "remote_reason": "Keyword detection: Keyword: à distance",
+      "analyzed_with_llm": false,
+      "page": 8
+    },
+    {
+      "id": "162",
+      "title": "Montage vidéo anniversaire 40 ans – photos + vidéos + musique",
+      "location": "Montage vidéo - Brindas (69126)",
+      "price": "A définir",
+      "poster": "Gilles brindas",
+      "date_posted": "29/09/2025",
+      "description": "bonjour, Je recherche une personne capable de réaliser une vidéo d’anniversaire pour les 40 ans de ma femme. Contenu à monter...",
+      "full_description": "Numéro de mise en relation bonjour, Je recherche une personne capable de réaliser une vidéo d’anniversaire pour les 40 ans de ma femme. Contenu à monter : Plus de 80 photos, Quelques vidéos courtes (dont une séquence avec nos enfants), Textes humoristiques et tendres que j’ai déjà préparés, 2 à 3 musiques différentes pour rythmer la vidéo. Style recherché : Vidéo d’une durée d’environ 8 minutes, Mélange humour + émotion, Effets simples et élégants (zoom, fondu, transitions fluides), Résultat final en format MP4 Full HD, prêt à être diffusé lors de l’événement. Date limite : jeudi 2 octobre Je recherche une personne capable de réaliser une vidéo d’anniversaire pour les 40 ans de ma femme. Contenu à monter : Plus de 80 photos, Quelques vidéos courtes (dont une séquence avec nos enfants), Textes humoristiques et tendres que j’ai déjà préparés, 2 à 3 musiques différentes pour rythmer la vidéo. Style recherché : Vidéo d’une durée d’environ 8 minutes, Mélange humour + émotion, Effets simples et élégants (zoom, fondu, transitions fluides), Résultat final en format MP4 Full HD, prêt à être diffusé lors de l’événement. Date limite : jeudi 2 octobre Soyez le premier à déposer un avis sur cette annonce.",
+      "url": "https://www.jemepropose.com/annonces/montage-video/montage-video-anniversaire-40-ans-photos-videos-musique+10494609/",
+      "is_remote": true,
+      "remote_confidence": 0.95,
+      "remote_reason": "LLM: Montage vidéo livrable en ligne sans déplacement",
+      "analyzed_with_llm": true,
+      "page": 9
     }
   ]
 }

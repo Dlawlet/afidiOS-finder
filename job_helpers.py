@@ -82,90 +82,71 @@ class JobDescriptionFetcher:
 
 
 class BasicRemoteDetector:
-    """Fast keyword-based remote detection for pre-filtering"""
+    """
+    Fast keyword-based detector for pre-filtering BEFORE LLM analysis.
+    
+    PHILOSOPHY:
+    - ONLY discard jobs that are OBVIOUSLY on-site (high confidence)
+    - Let LLM handle everything else (it understands context better)
+    - Do NOT try to detect remote jobs here - that's the LLM's job
+    """
     
     def __init__(self):
-        # Strong remote indicators
-        self.remote_keywords_high = [
-            'télétravail', 'teletravail', 'remote', 'à distance',
-            'travail à domicile', 'home office', 'full remote',
-            'distanciel', '100% remote', 'télé-travail'
-        ]
-        
-        # Possible remote indicators
-        self.remote_keywords_medium = [
-            'visio', 'vidéo', 'zoom', 'teams', 'skype',
-            'en ligne', 'online', 'virtuel', 'internet'
-        ]
-        
-        # Strong on-site indicators
-        self.onsite_keywords_high = [
+        # ONLY track OBVIOUS on-site jobs that require physical presence
+        # Everything else goes to LLM for intelligent context-aware analysis
+        self.obvious_onsite_keywords = [
+            # Physical/manual work - 100% requires presence
             'ménage', 'menage', 'nettoyage', 'repassage',
             'jardinage', 'bricolage', 'plomberie', 'électricité',
             'déménagement', 'demenagement', 'livraison',
-            'garde d\'enfant', 'baby', 'babysitter', 'nounou',
-            'cuisine', 'cuisinier', 'chef', 'restaur',
-            'coiffure', 'massage', 'soins', 'esthétique',
             'construction', 'maçon', 'peinture', 'charpente',
-            'mécanique', 'mecanique', 'réparation', 'reparation',
-            'chauffeur', 'conducteur', 'transport', 'camion',
-            'manuel', 'physique', 'sur place', 'à domicile',
-            'présence', 'presence',
-            # Job seeker indicators (NOT job offers!)
-            'je cherche', 'je recherche un emploi', 'recherche emploi',
-            'cherche un cdi', 'cherche un cdd', 'candidature',
-            'je suis disponible', 'mon cv', 'mes compétences',
-            # Local service indicators
-            'accompagner', 'accompagnement personnalisé',
-            'rendez-vous physique', 'se déplacer', 'déplacement',
-            'visite à domicile', 'chez le client', 'chez vous',
-            'commercial', 'prospection', 'visites clients',
-            'immobilier', 'visite de biens', 'estimation sur place'
+            'mécanique', 'mecanique', 'réparation auto', 'reparation auto',
+            
+            # Childcare/personal care - 100% requires presence
+            'garde d\'enfant', 'baby', 'babysitter', 'nounou',
+            'baby-sitting', 'garde bébé', 'assistante maternelle',
+            
+            # Food/hospitality - 100% requires presence
+            'cuisine', 'cuisinier', 'chef', 'restaur', 'serveur',
+            'barman', 'plonge', 'commis de cuisine',
+            
+            # Personal services - 100% requires presence
+            'coiffure', 'coiffeur', 'massage', 'masseur',
+            'soins', 'esthétique', 'manucure', 'pédicure',
+            
+            # Transportation - 100% requires presence
+            'chauffeur', 'conducteur', 'livreur', 'taxi',
+            'uber', 'vtc', 'camion', 'transport de personnes',
+            
+            # Household help - 100% requires presence
+            'aide ménagère', 'femme de ménage', 'homme de ménage',
+            'repasseuse', 'garde malade', 'aide à domicile'
         ]
     
     def detect_confidence(self, job_title, job_description, job_location):
         """
-        Fast keyword-based detection
+        Pre-filter to catch OBVIOUS on-site jobs only.
+        Everything else goes to LLM for intelligent analysis.
         
         Returns:
             dict: {'is_remote': bool, 'confidence': str, 'reason': str}
-                  confidence: 'HIGH', 'MEDIUM', 'LOW'
+                  confidence: 'HIGH' = obvious on-site, skip LLM
+                             'LOW' = uncertain, send to LLM
         """
         text = f"{job_title} {job_description} {job_location}".lower()
         
-        # Check strong remote indicators
-        for keyword in self.remote_keywords_high:
+        # Check for OBVIOUS on-site work (physical presence required)
+        for keyword in self.obvious_onsite_keywords:
             if keyword in text:
-                return {
-                    'is_remote': True,
-                    'confidence': 'HIGH',
-                    'reason': f"Keyword: {keyword}"
-                }
-        
-        # Check strong on-site indicators (with context)
-        for keyword in self.onsite_keywords_high:
-            if keyword in text:
-                # Special case: "pas de déplacement" = remote-friendly
-                if keyword in ['déplacement', 'se déplacer'] and 'pas de' in text:
-                    continue
                 return {
                     'is_remote': False,
                     'confidence': 'HIGH',
-                    'reason': f"On-site keyword: {keyword}"
+                    'reason': f"Obvious on-site work: {keyword}"
                 }
         
-        # Check medium remote indicators
-        for keyword in self.remote_keywords_medium:
-            if keyword in text:
-                return {
-                    'is_remote': True,
-                    'confidence': 'MEDIUM',
-                    'reason': f"Possible remote: {keyword}"
-                }
-        
-        # Uncertain - needs LLM analysis
+        # Everything else: uncertain, let LLM decide with context
         return {
-            'is_remote': False,
+            'is_remote': False,  # Default, but will be analyzed by LLM
             'confidence': 'LOW',
-            'reason': 'Uncertain - needs LLM analysis'
+            'reason': 'Uncertain - needs LLM context analysis'
         }

@@ -1,6 +1,6 @@
 {
   "metadata": {
-    "export_date": "2026-01-11 06:30:06",
+    "export_date": "2026-01-11 10:17:13",
     "total_jobs": 8,
     "analysis_mode": "LLM-Enhanced"
   },
@@ -11,7 +11,7 @@
     "remote_percentage": 100.0,
     "llm_used": true,
     "source": "https://www.jemepropose.com/annonces/?offer_type=2&provider_type=1&page=10",
-    "export_date": "2026-01-11 06:30:06"
+    "export_date": "2026-01-11 10:17:13"
   },
   "jobs": [
     {
@@ -26,7 +26,7 @@
       "url": "https://www.jemepropose.com/annonces/creation-site-internet/recherche-personne-motivee-pour-refonte-de-site-web-projet-creatif+10498729/",
       "is_remote": true,
       "remote_confidence": 0.92,
-      "remote_reason": "LLM: Travail web en ligne possible",
+      "remote_reason": "LLM: Travail web sans nécessité de présence physique",
       "analyzed_with_llm": true,
       "page": 2
     },
@@ -57,8 +57,8 @@
       "full_description": "Numéro de mise en relation Bonjour je recherche une personne qui peut me cree un site internet droopshipping cles en main . Je prendrer le devis le moins chere car je n’est pas un gros budjet cordialement Bonjour je recherche une personne qui peut me cree un site internet droopshipping cles en main . Je prendrer le devis le moins chere car je n’est pas un gros budjet cordialement Soyez le premier à déposer un avis sur cette annonce.",
       "url": "https://www.jemepropose.com/annonces/creation-site-internet/creation-site-internet+10496507/",
       "is_remote": true,
-      "remote_confidence": 0.0,
-      "remote_reason": "NLP Analysis: Strong remote indicators (score: 2 vs 0)",
+      "remote_confidence": 0.8,
+      "remote_reason": "LLM: Création site internet en ligne possible",
       "analyzed_with_llm": true,
       "page": 6
     },

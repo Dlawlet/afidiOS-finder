@@ -1,12 +1,13 @@
 """
 Job Results Exporter - Export and update job analysis results
 Supports JSON and CSV formats with incremental updates
+Enhanced with job history tracking
 """
 
 import json
 import csv
 import os
-from datetime import datetime
+from datetime import datetime, timedelta
 from pathlib import Path
 
 
@@ -26,6 +27,88 @@ class JobExporter:
         # Generate timestamp for this export session
         self.timestamp = datetime.now().strftime('%Y%m%d_%H%M%S')
         self.date_str = datetime.now().strftime('%Y-%m-%d %H:%M:%S')
+        
+        # History file path
+        self.history_file = self.output_dir / 'job_history.json'
+    
+    def load_job_history(self):
+        """Load previously seen job IDs and URLs"""
+        if self.history_file.exists():
+            try:
+                with open(self.history_file, 'r', encoding='utf-8') as f:
+                    return json.load(f)
+            except (json.JSONDecodeError, IOError):
+                return {'seen_urls': {}, 'last_update': None}
+        return {'seen_urls': {}, 'last_update': None}
+    
+    def update_job_history(self, jobs):
+        """Update history with new jobs"""
+        history = self.load_job_history()
+        
+        for job in jobs:
+            url = job.get('url')
+            if url and url != 'N/A':
+                history['seen_urls'][url] = {
+                    'first_seen': history['seen_urls'].get(url, {}).get('first_seen', self.date_str),
+                    'last_seen': self.date_str,
+                    'title': job.get('title'),
+                    'is_remote': job.get('is_remote')
+                }
+        
+        history['last_update'] = self.date_str
+        
+        try:
+            with open(self.history_file, 'w', encoding='utf-8') as f:
+                json.dump(history, f, ensure_ascii=False, indent=2)
+        except IOError as e:
+            print(f"⚠️  Could not update history: {e}")
+        
+        return history
+    
+    def filter_new_jobs(self, jobs, days=7):
+        """
+        Return only jobs not seen in last N days
+        
+        Args:
+            jobs: List of job dictionaries
+            days: Number of days to consider as "new" (default 7)
+            
+        Returns:
+            List of new jobs
+        """
+        history = self.load_job_history()
+        cutoff = datetime.now() - timedelta(days=days)
+        
+        new_jobs = []
+        for job in jobs:
+            url = job.get('url')
+            if url not in history['seen_urls']:
+                new_jobs.append(job)
+            else:
+                last_seen = history['seen_urls'][url].get('last_seen')
+                if last_seen:
+                    try:
+                        last_seen_date = datetime.strptime(last_seen, '%Y-%m-%d %H:%M:%S')
+                        if last_seen_date < cutoff:
+                            new_jobs.append(job)
+                    except ValueError:
+                        # If date parsing fails, include the job
+                        new_jobs.append(job)
+        
+        return new_jobs
+    
+    def get_history_stats(self):
+        """Get statistics about job history"""
+        history = self.load_job_history()
+        
+        total_seen = len(history['seen_urls'])
+        remote_seen = sum(1 for job in history['seen_urls'].values() if job.get('is_remote'))
+        
+        return {
+            'total_jobs_seen': total_seen,
+            'remote_jobs_seen': remote_seen,
+            'last_update': history.get('last_update', 'Never')
+        }
     
     def export_to_json(self, jobs, stats, filename=None):
         """
@@ -44,11 +127,16 @@ class JobExporter:
         
         filepath = self.output_dir / filename
         
+        # Update history
+        self.update_job_history(jobs)
+        history_stats = self.get_history_stats()
+        
         export_data = {
             'metadata': {
                 'export_date': self.date_str,
                 'total_jobs': stats['total'],
-                'analysis_mode': 'LLM-Enhanced' if stats.get('llm_used', False) else 'NLP-Only'
+                'analysis_mode': 'LLM-Enhanced' if stats.get('llm_used', False) else 'NLP-Only',
+                'history_stats': history_stats
             },
             'statistics': stats,
             'jobs': jobs

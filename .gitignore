@@ -42,3 +42,5 @@ scheduled_scraper_old.py
 # exports/*_202*.csv
 # !exports/remote_jobs_latest.json
 # !exports/remote_jobs_latest.csv
+
+cache/

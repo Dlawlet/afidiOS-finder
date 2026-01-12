@@ -2,6 +2,7 @@
 """
 Scheduled Job Scraper - Optimized for GitHub Actions
 Scrapes jemepropose.com and detects remote jobs using Groq LLM
+Enhanced with structured logging and metrics tracking
 """
 
 import sys
@@ -12,12 +13,13 @@ sys.stdout = io.TextIOWrapper(sys.stdout.buffer, encoding='utf-8')
 import requests
 from bs4 import BeautifulSoup
 from urllib.parse import urljoin
-from semantic_analyzer import SemanticJobAnalyzer
+from semantic_analyzer import SemanticJobAnalyzer, setup_logging
 from job_exporter import JobExporter
 from job_helpers import JobDescriptionFetcher, BasicRemoteDetector
 import os
 import json
 from datetime import datetime
+import logging
 
 
 def scrape_and_analyze_jobs(base_url="https://www.jemepropose.com/annonces/?offer_type=2&provider_type=1", use_llm=True, verbose=False, max_pages=10):
@@ -30,11 +32,26 @@ def scrape_and_analyze_jobs(base_url="https://www.jemepropose.com/annonces/?offe
         verbose: Show detailed progress messages (default False)
         max_pages: Maximum number of pages to scrape (default 10)
     """
+    # Setup logging
+    logger = setup_logging(verbose)
+    
+    # Track metrics
+    metrics = {
+        'start_time': datetime.now(),
+        'jobs_scraped': 0,
+        'llm_calls': 0,
+        'cache_hits': 0,
+        'errors': [],
+        'confidence_distribution': {'high': 0, 'medium': 0, 'low': 0}
+    }
+    
     if verbose:
         print(f"\n{'='*60}")
         print(f"🚀 Starting job scraper - {datetime.now().strftime('%Y-%m-%d %H:%M:%S')}")
         print(f"📄 Scraping up to {max_pages} pages")
         print(f"{'='*60}\n")
+    
+    logger.info(f"Starting job scraper - max pages: {max_pages}, LLM: {use_llm}")
     
     all_jobs = []
     job_id_counter = 0
@@ -62,6 +79,8 @@ def scrape_and_analyze_jobs(base_url="https://www.jemepropose.com/annonces/?offe
         
         remote_count = 0
         
+        logger.info(f"Initialized analyzers - LLM: {use_llm}")
+        
         # Loop through pages
         for page_num in range(1, max_pages + 1):
             # Construct URL
@@ -84,6 +103,7 @@ def scrape_and_analyze_jobs(base_url="https://www.jemepropose.com/annonces/?offe
             if len(job_cards) == 0:
                 if verbose:
                     print(f"⚠️  No jobs on page {page_num} - stopping")
+                logger.warning(f"No jobs found on page {page_num}, stopping scrape")
                 break
             
             if verbose:
@@ -197,6 +217,7 @@ def scrape_and_analyze_jobs(base_url="https://www.jemepropose.com/annonces/?offe
                         job_price
                     )
                     stats['analyzed_with_llm'] += 1
+                    metrics['llm_calls'] += 1
                     
                     is_remote = analysis.get('is_remote', False)
                     remote_confidence = analysis.get('remote_confidence', 0.0)
@@ -219,6 +240,14 @@ def scrape_and_analyze_jobs(base_url="https://www.jemepropose.com/annonces/?offe
                     if is_remote:
                         remote_count += 1
                 
+                # Track confidence distribution
+                if remote_confidence >= 0.7:
+                    metrics['confidence_distribution']['high'] += 1
+                elif remote_confidence >= 0.4:
+                    metrics['confidence_distribution']['medium'] += 1
+                else:
+                    metrics['confidence_distribution']['low'] += 1
+                
                 job_result = {
                     'id': str(job_id_counter),
                     'title': job_title,
@@ -237,6 +266,12 @@ def scrape_and_analyze_jobs(base_url="https://www.jemepropose.com/annonces/?offe
                 }
                 
                 all_jobs.append(job_result)
+                metrics['jobs_scraped'] += 1
+        
+        # Get cache statistics
+        cache_stats = llm_analyzer.get_cache_stats()
+        metrics['cache_hits'] = cache_stats['cache_hits']
+        metrics['duration'] = (datetime.now() - metrics['start_time']).seconds
         
         # Always show final summary
         print(f"\n{'='*60}")
@@ -250,7 +285,32 @@ def scrape_and_analyze_jobs(base_url="https://www.jemepropose.com/annonces/?offe
             print(f"      - Analyzed with LLM: {stats['analyzed_with_llm']}")
             print(f"      - High confidence skip: {stats['high_confidence_skip']}")
             print(f"      - Full descriptions fetched: {stats['full_description_fetched']}")
+            print(f"      - Cache hits: {cache_stats['cache_hits']} ({cache_stats['hit_rate_percentage']:.1f}%)")
+            print(f"      - Duration: {metrics['duration']}s")
         print(f"{'='*60}\n")
+        
+        logger.info(f"Scraping complete - Total: {len(all_jobs)}, Remote: {remote_count}, Duration: {metrics['duration']}s")
+        logger.info(f"Cache stats: {cache_stats}")
+        logger.info(f"Confidence distribution: {metrics['confidence_distribution']}")
+        
+        # Export metrics
+        metrics_export = {
+            'timestamp': datetime.now().isoformat(),
+            'duration_seconds': metrics['duration'],
+            'jobs_scraped': metrics['jobs_scraped'],
+            'remote_jobs': remote_count,
+            'llm_calls': metrics['llm_calls'],
+            'cache_stats': cache_stats,
+            'confidence_distribution': metrics['confidence_distribution'],
+            'errors': metrics['errors']
+        }
+        
+        try:
+            with open('exports/metrics_latest.json', 'w', encoding='utf-8') as f:
+                json.dump(metrics_export, f, indent=2, ensure_ascii=False)
+            logger.info("Metrics exported successfully")
+        except Exception as e:
+            logger.error(f"Failed to export metrics: {e}")
         
         # Export results
         if verbose:
@@ -321,11 +381,28 @@ def scrape_and_analyze_jobs(base_url="https://www.jemepropose.com/annonces/?offe
         return {
             'results': all_jobs,
             'remote_jobs': remote_jobs,
-            'stats': stats_all
+            'stats': stats_all,
+            'metrics': metrics_export
         }
         
     except Exception as e:
         print(f"\n❌ Error during scraping: {e}")
+        logger.error(f"Scraping failed: {e}", exc_info=True)
+        metrics['errors'].append(str(e))
+        
+        # Try to export error metrics
+        try:
+            metrics['duration'] = (datetime.now() - metrics['start_time']).seconds
+            with open('exports/metrics_latest.json', 'w', encoding='utf-8') as f:
+                json.dump({
+                    'timestamp': datetime.now().isoformat(),
+                    'status': 'error',
+                    'error': str(e),
+                    'metrics': metrics
+                }, f, indent=2, ensure_ascii=False)
+        except:
+            pass
+        
         import traceback
         traceback.print_exc()
         return None

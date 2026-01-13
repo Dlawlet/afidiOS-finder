@@ -1,37 +1,21 @@
 {
   "metadata": {
-    "export_date": "2026-01-12 06:40:52",
-    "total_jobs": 6,
+    "export_date": "2026-01-13 06:38:28",
+    "total_jobs": 4,
     "analysis_mode": "LLM-Enhanced"
   },
   "statistics": {
-    "total": 6,
-    "remote": 6,
+    "total": 4,
+    "remote": 4,
     "on_site": 0,
     "remote_percentage": 100.0,
     "llm_used": true,
     "source": "https://www.jemepropose.com/annonces/?offer_type=2&provider_type=1&page=10",
-    "export_date": "2026-01-12 06:40:52"
+    "export_date": "2026-01-13 06:38:28"
   },
   "jobs": [
     {
-      "id": "21",
-      "title": "Secretariat",
-      "location": "Secrétariat - A L'Etranger",
-      "price": "10.00 € - De l'heure",
-      "poster": "Mardoualla",
-      "date_posted": "31/12/2025",
-      "description": "Secrétaire polyvalente, organisée et réactive pour la gestion administrative et la coordination. Assistance administrative efficace : gestion...",
-      "full_description": "Secrétaire polyvalente, organisée et réactive pour la gestion administrative et la coordination. Assistance administrative efficace : gestion des agendas, rédaction, suivi des dossiers.Secrétariat professionnel pour optimiser votre organisation et votre productivité. Support administratif fiable et discret pour vos besoins quotidiens. Secrétaire polyvalente, organisée et réactive pour la gestion administrative et la coordination. Assistance administrative efficace : gestion des agendas, rédaction, suivi des dossiers.Secrétariat professionnel pour optimiser votre organisation et votre productivité. Support administratif fiable et discret pour vos besoins quotidiens. Soyez le premier à déposer un avis sur cette annonce.",
-      "url": "https://www.jemepropose.com/annonces/secretariat/secretariat+10498878/",
-      "is_remote": true,
-      "remote_confidence": 0.85,
-      "remote_reason": "LLM: Tâches administratives réalisables entièrement en ligne",
-      "analyzed_with_llm": true,
-      "page": 2
-    },
-    {
-      "id": "37",
+      "id": "46",
       "title": "Recherche personne motivée pour refonte de site web (projet créatif)",
       "location": "Création site internet - Chessy (77700)",
       "price": "A définir",
@@ -44,10 +28,10 @@
       "remote_confidence": 0.9,
       "remote_reason": "LLM: Développement web, aucune contrainte de lieu",
       "analyzed_with_llm": true,
-      "page": 2
+      "page": 3
     },
     {
-      "id": "65",
+      "id": "74",
       "title": "recherche créateur de site internet",
       "location": "Création site internet - A Distance",
       "price": "Gratuit",
@@ -58,12 +42,12 @@
       "url": "https://www.jemepropose.com/annonces/creation-site-internet/recherche-createur-de-site-internet+10498326/",
       "is_remote": true,
       "remote_confidence": 0.95,
-      "remote_reason": "LLM: Création site web 100% réalisable à distance",
+      "remote_reason": "LLM: Création site web 100 % réalisable à distance",
       "analyzed_with_llm": true,
       "page": 4
     },
     {
-      "id": "116",
+      "id": "125",
       "title": "Creation site internet",
       "location": "Création site internet - Cagnes-sur-Mer (06800)",
       "price": "Gratuit",
@@ -76,26 +60,10 @@
       "remote_confidence": 0.95,
       "remote_reason": "LLM: Développement site web entièrement réalisable à distance",
       "analyzed_with_llm": true,
-      "page": 6
+      "page": 7
     },
     {
-      "id": "153",
-      "title": "Recherche Télé secrétaire expérimentée",
-      "location": "Secrétariat - Poitiers (86000)",
-      "price": "20.00 € - De l'heure",
-      "poster": "emploiavenir",
-      "date_posted": "03/10/2025",
-      "description": "Je suis à la recherche d'une personne expérimentée au poste de secrétaire à domicile. Si vous êtes disponible veuillez me contacter pour...",
-      "full_description": "Je suis à la recherche d'une personne expérimentée au poste de secrétaire à domicile. Si vous êtes disponible veuillez me contacter pour plus d'amples informations. Ps/ Pas sérieux s'abstenir Cordialement. Je suis à la recherche d'une personne expérimentée au poste de secrétaire à domicile. Si vous êtes disponible veuillez me contacter pour plus d'amples informations. Ps/ Pas sérieux s'abstenir Cordialement. Soyez le premier à déposer un avis sur cette annonce.",
-      "url": "https://www.jemepropose.com/annonces/secretariat/recherche-tele-secretaire-experimentee+10494841/",
-      "is_remote": true,
-      "remote_confidence": 0.9,
-      "remote_reason": "LLM: Secrétaire à domicile, pas de présence requise",
-      "analyzed_with_llm": true,
-      "page": 8
-    },
-    {
-      "id": "159",
+      "id": "168",
       "title": "Montage vidéo anniversaire 40 ans – photos + vidéos + musique",
       "location": "Montage vidéo - Brindas (69126)",
       "price": "A définir",
@@ -106,9 +74,9 @@
       "url": "https://www.jemepropose.com/annonces/montage-video/montage-video-anniversaire-40-ans-photos-videos-musique+10494609/",
       "is_remote": true,
       "remote_confidence": 0.95,
-      "remote_reason": "LLM: Montage vidéo livrable par internet, aucune présence requise",
+      "remote_reason": "LLM: Montage vidéo entièrement réalisable à distance",
       "analyzed_with_llm": true,
-      "page": 8
+      "page": 9
     }
   ]
 }

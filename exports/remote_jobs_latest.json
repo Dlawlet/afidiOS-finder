@@ -1,21 +1,21 @@
 {
   "metadata": {
-    "export_date": "2026-01-13 06:38:28",
-    "total_jobs": 4,
+    "export_date": "2026-01-14 06:38:10",
+    "total_jobs": 3,
     "analysis_mode": "LLM-Enhanced"
   },
   "statistics": {
-    "total": 4,
-    "remote": 4,
+    "total": 3,
+    "remote": 3,
     "on_site": 0,
     "remote_percentage": 100.0,
     "llm_used": true,
     "source": "https://www.jemepropose.com/annonces/?offer_type=2&provider_type=1&page=10",
-    "export_date": "2026-01-13 06:38:28"
+    "export_date": "2026-01-14 06:38:10"
   },
   "jobs": [
     {
-      "id": "46",
+      "id": "52",
       "title": "Recherche personne motivée pour refonte de site web (projet créatif)",
       "location": "Création site internet - Chessy (77700)",
       "price": "A définir",
@@ -31,23 +31,7 @@
       "page": 3
     },
     {
-      "id": "74",
-      "title": "recherche créateur de site internet",
-      "location": "Création site internet - A Distance",
-      "price": "Gratuit",
-      "poster": "mamzelle.candice.enterprise",
-      "date_posted": "14/12/2025",
-      "description": "Bonjour, Je m'appelle Priscillia , je viens de créer mon entreprise , je suis auto - entrepreneuse. Je suis vraiment au début , je suis...",
-      "full_description": "Bonjour, Je m'appelle Priscillia , je viens de créer mon entreprise , je suis auto - entrepreneuse. Je suis vraiment au début , je suis à l'étape de la fabrication de ma marchandise, donc n'est pas encore fait de chiffre d'affaire, je cherche une personne qui pourrait me réaliser un site internet gratuit ou pas chère. Si vous êtes intéressé , pouvez - vous me laisser un mail. Je crée des bijoux fantaisie. Mon univers est très coloré, je fabrique des bijoux pour enfants, femmes et hommes. En vous remerciant d'avance. Priscillia Je m'appelle Priscillia , je viens de créer mon entreprise , je suis auto - entrepreneuse. Je suis vraiment au début , je suis à l'étape de la fabrication de ma marchandise, donc n'est pas encore fait de chiffre d'affaire, je cherche une personne qui pourrait me réaliser un site internet gratuit ou pas chère. Si vous êtes intéressé , pouvez - vous me laisser un mail. Je crée des bijoux fantaisie. Mon univers est très coloré, je fabrique des bijoux pour enfants, femmes et hommes. En vous remerciant d'avance. Soyez le premier à déposer un avis sur cette annonce.",
-      "url": "https://www.jemepropose.com/annonces/creation-site-internet/recherche-createur-de-site-internet+10498326/",
-      "is_remote": true,
-      "remote_confidence": 0.95,
-      "remote_reason": "LLM: Création site web 100 % réalisable à distance",
-      "analyzed_with_llm": true,
-      "page": 4
-    },
-    {
-      "id": "125",
+      "id": "127",
       "title": "Creation site internet",
       "location": "Création site internet - Cagnes-sur-Mer (06800)",
       "price": "Gratuit",
@@ -63,7 +47,7 @@
       "page": 7
     },
     {
-      "id": "168",
+      "id": "170",
       "title": "Montage vidéo anniversaire 40 ans – photos + vidéos + musique",
       "location": "Montage vidéo - Brindas (69126)",
       "price": "A définir",

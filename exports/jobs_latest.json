@@ -1,22 +1,38 @@
 {
   "metadata": {
-    "export_date": "2026-01-14 06:38:10",
+    "export_date": "2026-01-15 06:37:58",
     "total_jobs": 200,
     "analysis_mode": "LLM-Enhanced"
   },
   "statistics": {
     "total": 200,
-    "remote": 3,
-    "on_site": 197,
-    "remote_percentage": 1.5,
+    "remote": 4,
+    "on_site": 196,
+    "remote_percentage": 2.0,
     "llm_used": true,
     "source": "https://www.jemepropose.com/annonces/?offer_type=2&provider_type=1",
     "pages_scraped": 10,
-    "export_date": "2026-01-14 06:38:10"
+    "export_date": "2026-01-15 06:37:58"
   },
   "jobs": [
     {
       "id": "1",
+      "title": "Aide aux personnes âgées",
+      "location": "Auxiliaire de vie - Saint-Raphaël (83700)",
+      "price": "A définir",
+      "poster": "E.GUEGAN",
+      "date_posted": "14/01/2026",
+      "description": "Jeune retraitée vous propose mes services sur Saint Raphaël / Fréjus pour accompagner les seniors dans la vie au quotidien :",
+      "full_description": "Numéro de mise en relation Jeune retraitée vous propose mes services sur Saint Raphaël / Fréjus pour accompagner les seniors dans la vie au quotidien : aide aux courses accompagnement aux sorties et aux rdv aide administrative promenade des chiens Je possède  une expérience de 20 ans en tant qu'aide soignante en maison de retraite . Ne nature empathique , soignée et calme , c'est avec plaisir que j'accompagnerai les personnes ayant besoins d'une aide mais aussi d'une compagnie au quotidien . Véhiculée - disponible la semaine - CESU accepté Jeune retraitée vous propose mes services sur Saint Raphaël / Fréjus pour accompagner les seniors dans la vie au quotidien : Je possède  une expérience de 20 ans en tant qu'aide soignante en maison de retraite . Ne nature empathique , soignée et calme , c'est avec plaisir que j'accompagnerai les personnes ayant besoins d'une aide mais aussi d'une compagnie au quotidien . Véhiculée - disponible la semaine - CESU accepté Disponible en semaine , dès à présent Soyez le premier à déposer un avis sur cette annonce.",
+      "url": "https://www.jemepropose.com/annonces/auxiliaire-de-vie/aide-aux-personnes-agees+10499570/",
+      "is_remote": false,
+      "remote_confidence": 1.0,
+      "remote_reason": "LLM: Annonce d'une personne cherchant un emploi, pas une offre",
+      "analyzed_with_llm": true,
+      "page": 1
+    },
+    {
+      "id": "2",
       "title": "Offre emploi d'auxiliaire de vie en CDI de 39 heures",
       "location": "Auxiliaire de vie - Pantin (93500)",
       "price": "1914.33 € - Au mois",
@@ -27,12 +43,28 @@
       "url": "https://www.jemepropose.com/annonces/auxiliaire-de-vie/offre-emploi-dauxiliaire-de-vie-en-cdi-de-39-heures+9846609/",
       "is_remote": false,
       "remote_confidence": 1.0,
-      "remote_reason": "LLM: Soins corporels, présence physique indispensable",
+      "remote_reason": "LLM: Soins corporels, présence physique obligatoire",
       "analyzed_with_llm": true,
       "page": 1
     },
     {
-      "id": "2",
+      "id": "3",
+      "title": "Végan",
+      "location": "Pâtissier - Paris 15e arrondissement (75015)",
+      "price": "A définir",
+      "poster": "marc0618",
+      "date_posted": "13/01/2026",
+      "description": "Bonjour je recherche une personne sérieuse pour realiser quelques gâteaux végan ,dans Paris et proches .",
+      "full_description": "Bonjour je recherche une personne sérieuse pour realiser quelques gâteaux végan ,dans Paris et proches .",
+      "url": "https://www.jemepropose.com/annonces/patissier/vegan+10499545/",
+      "is_remote": false,
+      "remote_confidence": 0.95,
+      "remote_reason": "LLM: Pâtisserie végan nécessite fabrication physique sur place",
+      "analyzed_with_llm": true,
+      "page": 1
+    },
+    {
+      "id": "4",
       "title": "Cherche femme pour le ménage et Nettoyage",
       "location": "Ménage - Arcachon (33120)",
       "price": "A définir",
@@ -48,7 +80,7 @@
       "page": 1
     },
     {
-      "id": "3",
+      "id": "5",
       "title": "Gîte",
       "location": "Conciergerie Airbnb - Scharrachbergheim-Irmstett (67310)",
       "price": "13.72 € - De l'heure",
@@ -59,12 +91,12 @@
       "url": "https://www.jemepropose.com/annonces/conciergerie/gite+5798359/",
       "is_remote": false,
       "remote_confidence": 1.0,
-      "remote_reason": "LLM: Ménage, accueil et état des lieux sur place",
+      "remote_reason": "LLM: Ménage, accueil clients et état des lieux sur place",
       "analyzed_with_llm": true,
       "page": 1
     },
     {
-      "id": "4",
+      "id": "6",
       "title": "Perte de messagerie",
       "location": "Dépannage informatique - Asnières-sur-Seine (92600)",
       "price": "A définir",
@@ -75,28 +107,12 @@
       "url": "https://www.jemepropose.com/annonces/depannage-informatique/perte-de-messagerie+10499428/",
       "is_remote": false,
       "remote_confidence": 0.95,
-      "remote_reason": "LLM: Demande de dépannage, pas une offre d'emploi",
+      "remote_reason": "LLM: Demande de dépannage physique, pas une offre d'emploi",
       "analyzed_with_llm": true,
       "page": 1
     },
     {
-      "id": "5",
-      "title": "Cherche femme pour le ménage et Nettoyage",
-      "location": "Ménage - Bourg-Saint-Andéol (07700)",
-      "price": "A définir",
-      "poster": "Antoine300",
-      "date_posted": "11/01/2026",
-      "description": "Votre mission inclut le ménage courant (aspirateur, nettoyage des sols et des surfaces, rangement des pièces), repassage, entretien du linge,...",
-      "full_description": "Votre mission inclut le ménage courant (aspirateur, nettoyage des sols et des surfaces, rangement des pièces), repassage, entretien du linge,...",
-      "url": "https://www.jemepropose.com/annonces/menage/cherche-femme-pour-le-menage-et-nettoyage+10499425/",
-      "is_remote": false,
-      "remote_confidence": 1.0,
-      "remote_reason": "Keyword detection: Obvious on-site work: ménage",
-      "analyzed_with_llm": false,
-      "page": 1
-    },
-    {
-      "id": "6",
+      "id": "7",
       "title": "recherche professeur des écoles Français",
       "location": "Cours à domicile - Noisy-le-Grand (93160)",
       "price": "A définir",
@@ -112,7 +128,7 @@
       "page": 1
     },
     {
-      "id": "7",
+      "id": "8",
       "title": "Remorquage  voiture",
       "location": "Transport de marchandises - La Rochelle (17000)",
       "price": "Partage",
@@ -123,12 +139,12 @@
       "url": "https://www.jemepropose.com/annonces/transport-de-marchandises/remorquage-voiture+10499417/",
       "is_remote": false,
       "remote_confidence": 1.0,
-      "remote_reason": "LLM: Remorquage nécessite déplacement physique",
+      "remote_reason": "LLM: Remorquage nécessite déplacement physique avec véhicule",
       "analyzed_with_llm": true,
       "page": 1
     },
     {
-      "id": "8",
+      "id": "9",
       "title": "Recherche personne pour pose de tringles à rideaux",
       "location": "Bricolage - Sannois (95110)",
       "price": "40.00 € - Forfait",
@@ -144,7 +160,7 @@
       "page": 1
     },
     {
-      "id": "9",
+      "id": "10",
       "title": "Aide au quotidien",
       "location": "Ménage - Paris 2e arrondissement (75002)",
       "price": "10.00 € - De l'heure",
@@ -160,7 +176,7 @@
       "page": 1
     },
     {
-      "id": "10",
+      "id": "11",
       "title": "Aide pour mise au lit d’un monsieur handicapé",
       "location": "Auxiliaire de vie - Sète (34200)",
       "price": "12.50 € - De l'heure",
@@ -176,7 +192,7 @@
       "page": 1
     },
     {
-      "id": "11",
+      "id": "12",
       "title": "Gite bien-être",
       "location": "Ménage - Verrens-Arvey (73460)",
       "price": "A définir",
@@ -192,7 +208,7 @@
       "page": 1
     },
     {
-      "id": "12",
+      "id": "13",
       "title": "Recherche bricoleur polyvalent expérimenté – Commerce Vieux-Port",
       "location": "Bricolage - Marseille 1e arrondissement (13001)",
       "price": "A définir",
@@ -204,22 +220,6 @@
       "is_remote": false,
       "remote_confidence": 1.0,
       "remote_reason": "Keyword detection: Obvious on-site work: bricolage",
-      "analyzed_with_llm": false,
-      "page": 1
-    },
-    {
-      "id": "13",
-      "title": "Cherche femme pour le ménage et nettoyage",
-      "location": "Ménage - Cabestany (66330)",
-      "price": "A définir",
-      "poster": "Antoine300",
-      "date_posted": "09/01/2026",
-      "description": "Je recherche une personne sérieuse dynamique motivée responsable pour des mission inclut le ménage courant (aspirateur, nettoyage des sols et...",
-      "full_description": "Je recherche une personne sérieuse dynamique motivée responsable pour des mission inclut le ménage courant (aspirateur, nettoyage des sols et...",
-      "url": "https://www.jemepropose.com/annonces/menage/cherche-femme-pour-le-menage-et-nettoyage+10499365/",
-      "is_remote": false,
-      "remote_confidence": 1.0,
-      "remote_reason": "Keyword detection: Obvious on-site work: ménage",
       "analyzed_with_llm": false,
       "page": 1
     },
@@ -315,7 +315,7 @@
       "url": "https://www.jemepropose.com/annonces/terrassement/mur-de-soutenement+10499225/",
       "is_remote": false,
       "remote_confidence": 1.0,
-      "remote_reason": "LLM: Terrassement et construction mur nécessitent présence physique",
+      "remote_reason": "LLM: Travaux de maçonnerie et terrassement sur place",
       "analyzed_with_llm": true,
       "page": 1
     },
@@ -554,8 +554,8 @@
       "full_description": "Numéro de mise en relation bonjour je m appel sophie je suis une jeun tv je cherche maquilleuse a mon domicile pour cours et m aider .j habite bercy je m appel sophie je suis une jeun tv je cherche maquilleuse a mon domicile pour cours et m aider .j habite bercy Soyez le premier à déposer un avis sur cette annonce.",
       "url": "https://www.jemepropose.com/annonces/estheticienne/recherche-maquilleuse-domicile+10498898/",
       "is_remote": false,
-      "remote_confidence": 0.95,
-      "remote_reason": "LLM: Maquillage à domicile, présence physique obligatoire",
+      "remote_confidence": 1.0,
+      "remote_reason": "LLM: Maquilleuse à domicile = intervention physique chez la cliente",
       "analyzed_with_llm": true,
       "page": 2
     },
@@ -603,7 +603,7 @@
       "url": "https://www.jemepropose.com/annonces/secretariat/assistante-administrative+10498873/",
       "is_remote": false,
       "remote_confidence": 1.0,
-      "remote_reason": "LLM: Annonce de recherche d'emploi, pas une offre",
+      "remote_reason": "LLM: Candidat cherche un emploi, pas une offre",
       "analyzed_with_llm": true,
       "page": 2
     },
@@ -667,7 +667,7 @@
       "url": "https://www.jemepropose.com/annonces/auxiliaire-de-vie/diplome-deaes+10498834/",
       "is_remote": false,
       "remote_confidence": 1.0,
-      "remote_reason": "LLM: Candidat cherche un emploi, pas une offre",
+      "remote_reason": "LLM: Annonce de recherche d'emploi, pas une offre",
       "analyzed_with_llm": true,
       "page": 3
     },
@@ -715,7 +715,7 @@
       "url": "https://www.jemepropose.com/annonces/auxiliaire-de-vie/poste-de-nuit+10498799/",
       "is_remote": false,
       "remote_confidence": 0.95,
-      "remote_reason": "LLM: Auxiliaire de vie = présence physique auprès du patient",
+      "remote_reason": "LLM: Auxiliaire de vie sur site, présence physique requise",
       "analyzed_with_llm": true,
       "page": 3
     },
@@ -779,7 +779,7 @@
       "url": "https://www.jemepropose.com/annonces/emploi-etudiant/modele-dessin+10498763/",
       "is_remote": false,
       "remote_confidence": 1.0,
-      "remote_reason": "LLM: Modèle vivant = présence physique obligatoire",
+      "remote_reason": "LLM: Modèle vivant implique présence physique obligatoire",
       "analyzed_with_llm": true,
       "page": 3
     },
@@ -905,9 +905,9 @@
       "description": "réseaux sociaux cherche une personne se connaissant dans création d'un site avec WordPress. un site i...",
       "full_description": "réseaux sociaux cherche une personne se connaissant dans création d'un site avec WordPress. un site i...",
       "url": "https://www.jemepropose.com/annonces/depannage-informatique/cree-site-wordpress-18a+10498674/",
-      "is_remote": false,
+      "is_remote": true,
       "remote_confidence": 0.9,
-      "remote_reason": "LLM: Catégorie dépannage informatique = intervention sur site",
+      "remote_reason": "LLM: Création WordPress réalisable entièrement en ligne",
       "analyzed_with_llm": true,
       "page": 3
     },
@@ -923,7 +923,7 @@
       "url": "https://www.jemepropose.com/annonces/cours-d-espagnol/recherche-cours-despagnol+10498662/",
       "is_remote": false,
       "remote_confidence": 0.95,
-      "remote_reason": "LLM: Recherche cours particulier, présence physique requise",
+      "remote_reason": "LLM: Demande de cours particuliers, présence physique requise",
       "analyzed_with_llm": true,
       "page": 3
     },
@@ -987,7 +987,7 @@
       "url": "https://www.jemepropose.com/annonces/photographe/photographe-cherche-modeles+10498626/",
       "is_remote": false,
       "remote_confidence": 1.0,
-      "remote_reason": "LLM: Photographe cherche modèles, travail sur place",
+      "remote_reason": "LLM: Photographe cherche modèles, nécessite présence physique",
       "analyzed_with_llm": true,
       "page": 4
     },
@@ -1018,8 +1018,8 @@
       "full_description": "Numéro de mise en relation Bonjour ,ayant travaillé 30 comme aide médico psychologique auprès de personnes en situation de handicaps et plus de 3 ans auprès de personnes âgées a domicile,je propose mes services en tant qu 'auxiliaire de vie à domicile..  ayant le BAFA et gardé des enfants ( j ai deux petits enfants jumeaux 🤗)je propose mes services pour des gardes d 'enfants . Bonjour ,ayant travaillé 30 comme aide médico psychologique auprès de personnes en situation de handicaps et plus de 3 ans auprès de personnes âgées a domicile,je propose mes services en tant qu 'auxiliaire de vie à domicile..  ayant le BAFA et gardé des enfants ( j ai deux petits enfants jumeaux 🤗)je propose mes services pour des gardes d 'enfants . Soyez le premier à déposer un avis sur cette annonce.",
       "url": "https://www.jemepropose.com/annonces/auxiliaire-de-vie/auxiliaire-de-vie-a-domicile+10498606/",
       "is_remote": false,
-      "remote_confidence": 0.95,
-      "remote_reason": "LLM: Annonce d'une personne cherchant du travail, pas une offre",
+      "remote_confidence": 1.0,
+      "remote_reason": "LLM: Annonce de candidat, pas une offre d'emploi",
       "analyzed_with_llm": true,
       "page": 4
     },
@@ -1035,7 +1035,7 @@
       "url": "https://www.jemepropose.com/annonces/photographe/recherche-modele-debutant+10498573/",
       "is_remote": false,
       "remote_confidence": 0.95,
-      "remote_reason": "LLM: Photographe cherche modèle, présence physique requise",
+      "remote_reason": "LLM: Photographie portrait nécessite présence physique du modèle",
       "analyzed_with_llm": true,
       "page": 4
     },
@@ -1067,7 +1067,7 @@
       "url": "https://www.jemepropose.com/annonces/commercial/nous-recrutons-des-commerciaux-independants-hf-dans-limmobilier+10498543/",
       "is_remote": false,
       "remote_confidence": 0.95,
-      "remote_reason": "LLM: Immobilier = visites biens, signatures, déplacements obligatoires",
+      "remote_reason": "LLM: Immobilier = visites, estimations et signatures sur place",
       "analyzed_with_llm": true,
       "page": 4
     },
@@ -1147,7 +1147,7 @@
       "url": "https://www.jemepropose.com/annonces/auxiliaire-de-vie/recherche-auxiliaire-de-vie-dans-le-75+10498495/",
       "is_remote": false,
       "remote_confidence": 1.0,
-      "remote_reason": "LLM: Accompagnement physique aéroport, courses, promenades",
+      "remote_reason": "LLM: Accueil aéroport, courses, promenades : présence physique obligatoire",
       "analyzed_with_llm": true,
       "page": 4
     },
@@ -1162,8 +1162,8 @@
       "full_description": "Numéro de mise en relation Vous aimez marcher, porter et garder le sourire ? Ce job est pour vous ! Jeune femme active recherche une personne fiable et dynamique pour m’accompagner du lundi au dimanche, de 9h à 20h. Vos missions : En semaine : porter mon sac et mon badge avec style. Le week-end : gérer mes sacs de shopping (oui, il y en aura, mais c’est fun !). Rémunération : SMIC (et ma reconnaissance éternelle). 📞 Intéressé(e) ? Contactez-moi ______________ À bientôt, Sara Vous aimez marcher, porter et garder le sourire ? Ce job est pour vous ! Jeune femme active recherche une personne fiable et dynamique pour m’accompagner du lundi au dimanche, de 9h à 20h. Vos missions : En semaine : porter mon sac et mon badge avec style. Le week-end : gérer mes sacs de shopping (oui, il y en aura, mais c’est fun !). Rémunération : SMIC (et ma reconnaissance éternelle). 📞 Intéressé(e) ? Contactez-moi ______________ Soyez le premier à déposer un avis sur cette annonce.",
       "url": "https://www.jemepropose.com/annonces/secretariat/assistante-lifestyle-recherchee+10498483/",
       "is_remote": false,
-      "remote_confidence": 1.0,
-      "remote_reason": "LLM: Porte sacs et courses, présence physique obligatoire",
+      "remote_confidence": 0.95,
+      "remote_reason": "LLM: Travail physique d'accompagnement et port de sacs",
       "analyzed_with_llm": true,
       "page": 4
     },
@@ -1249,22 +1249,6 @@
     },
     {
       "id": "78",
-      "title": "aménagement camping car",
-      "location": "Bricolage - Bouzy-la-Forêt (45460)",
-      "price": "A définir",
-      "poster": "laverdure60",
-      "date_posted": "15/12/2025",
-      "description": "recherche  pour aménagement camping car",
-      "full_description": "recherche  pour aménagement camping car",
-      "url": "https://www.jemepropose.com/annonces/bricolage/amenagement-camping-car+10498340/",
-      "is_remote": false,
-      "remote_confidence": 1.0,
-      "remote_reason": "Keyword detection: Obvious on-site work: ménage",
-      "analyzed_with_llm": false,
-      "page": 4
-    },
-    {
-      "id": "79",
       "title": "Demande de soutien scolaire à domicile",
       "location": "Cours à domicile - Sarreguemines (57200)",
       "price": "A définir",
@@ -1274,13 +1258,13 @@
       "full_description": "Bonjour,Je me permets de vous contacter car je suis à la recherche d’une jeune fille majeure pour accompagner ma fille dans ses devoirs à domicile. Elle est en classe de 5ème franco-allemand à Sarreguemines et a besoin d’un soutien régulier et quotidien dans presque toutes les matières.L’objectif est de l’aider à rattraper les cours et à se préparer efficacement aux examens. Ce soutien devra se poursuivre jusqu’à ce qu’elle retrouve un bon équilibre scolaire. Le planning pourra être défini ensemble, en accord avec la personne intervenante, le papa et l’enseignante. Je vous remercie de bien vouloir me contacter, nous sommes a sarreguemines. Cordialement, Bonjour,Je me permets de vous contacter car je suis à la recherche d’une jeune fille majeure pour accompagner ma fille dans ses devoirs à domicile. Elle est en classe de 5ème franco-allemand à Sarreguemines et a besoin d’un soutien régulier et quotidien dans presque toutes les matières.L’objectif est de l’aider à rattraper les cours et à se préparer efficacement aux examens. Ce soutien devra se poursuivre jusqu’à ce qu’elle retrouve un bon équilibre scolaire. Le planning pourra être défini ensemble, en accord avec la personne intervenante, le papa et l’enseignante. Je vous remercie de bien vouloir me contacter, nous sommes a sarreguemines. Cordialement, Soyez le premier à déposer un avis sur cette annonce.",
       "url": "https://www.jemepropose.com/annonces/cours-a-domicile/demande-de-soutien-scolaire-a-domicile+10498255/",
       "is_remote": false,
-      "remote_confidence": 0.95,
-      "remote_reason": "LLM: Soutien scolaire à domicile, présence physique requise",
+      "remote_confidence": 1.0,
+      "remote_reason": "LLM: Soutien scolaire à domicile, présence physique obligatoire",
       "analyzed_with_llm": true,
       "page": 4
     },
     {
-      "id": "80",
+      "id": "79",
       "title": "Recherche baby-sitter Paris",
       "location": "Baby-sitting - Paris 7e arrondissement (75007)",
       "price": "50.00 € - De l'heure",
@@ -1296,7 +1280,7 @@
       "page": 4
     },
     {
-      "id": "81",
+      "id": "80",
       "title": "Saisie comptable",
       "location": "Assistance comptable - Paris 18e arrondissement (75018)",
       "price": "A définir",
@@ -1307,12 +1291,12 @@
       "url": "https://www.jemepropose.com/annonces/assistance-comptable/saisie-comptable+10498204/",
       "is_remote": false,
       "remote_confidence": 1.0,
-      "remote_reason": "LLM: Travail doit s'effectuer dans mon lieu de travail",
+      "remote_reason": "LLM: Travail imposé sur place, métro Guy Môquet",
       "analyzed_with_llm": true,
-      "page": 5
+      "page": 4
     },
     {
-      "id": "82",
+      "id": "81",
       "title": "cherche Auxiliaire de vie pour aide toilette et repas",
       "location": "Auxiliaire de vie - Anglet (64600)",
       "price": "A définir",
@@ -1328,7 +1312,7 @@
       "page": 5
     },
     {
-      "id": "83",
+      "id": "82",
       "title": "Urgent - Femme de ménage Benerville sur Mer",
       "location": "Ménage - Benerville-sur-Mer (14910)",
       "price": "15.00 € - De l'heure",
@@ -1344,7 +1328,7 @@
       "page": 5
     },
     {
-      "id": "84",
+      "id": "83",
       "title": "Petits travaux",
       "location": "Bricolage - Grenade (31330)",
       "price": "A définir",
@@ -1360,7 +1344,7 @@
       "page": 5
     },
     {
-      "id": "85",
+      "id": "84",
       "title": "Gestion d'appartements airbnb",
       "location": "Secrétariat - Albi (81000)",
       "price": "A définir",
@@ -1371,12 +1355,12 @@
       "url": "https://www.jemepropose.com/annonces/secretariat/gestion-dappartements-airbnb+10498104/",
       "is_remote": false,
       "remote_confidence": 0.95,
-      "remote_reason": "LLM: Poste basé sur Albi, présence physique exigée",
+      "remote_reason": "LLM: Poste basé sur Albi, présence physique requise",
       "analyzed_with_llm": true,
       "page": 5
     },
     {
-      "id": "86",
+      "id": "85",
       "title": "Nourrice",
       "location": "Garde d'enfants - Vidauban (83550)",
       "price": "Sur devis",
@@ -1392,7 +1376,7 @@
       "page": 5
     },
     {
-      "id": "87",
+      "id": "86",
       "title": "Recherche \"auxiliaires de vie\" ou aide-soignante",
       "location": "Auxiliaire de vie - Tours (37000)",
       "price": "13.00 € - De l'heure",
@@ -1403,12 +1387,12 @@
       "url": "https://www.jemepropose.com/annonces/auxiliaire-de-vie/recherche-auxiliaires-de-vie-ou-aide-soignante+785238/",
       "is_remote": false,
       "remote_confidence": 1.0,
-      "remote_reason": "LLM: Aide corporelle et ménage sur place",
+      "remote_reason": "LLM: Aide corporelle sur place : toilette, habillage, ménage",
       "analyzed_with_llm": true,
       "page": 5
     },
     {
-      "id": "88",
+      "id": "87",
       "title": "Serveur/euse",
       "location": "Serveuse - Moisdon-la-Rivière (44520)",
       "price": "A définir",
@@ -1424,7 +1408,7 @@
       "page": 5
     },
     {
-      "id": "89",
+      "id": "88",
       "title": "Suppression de cloisons",
       "location": "Bricolage - La Chapelle-Launay (44260)",
       "price": "A définir",
@@ -1440,7 +1424,7 @@
       "page": 5
     },
     {
-      "id": "90",
+      "id": "89",
       "title": "Ménage saisonnier",
       "location": "Ménage - Bagnères-de-Bigorre (65200)",
       "price": "A définir",
@@ -1456,7 +1440,7 @@
       "page": 5
     },
     {
-      "id": "91",
+      "id": "90",
       "title": "Adaptation de \"La psy\" de Freida McFadden",
       "location": "Comédien - Toulouse (31000)",
       "price": "A définir",
@@ -1472,7 +1456,7 @@
       "page": 5
     },
     {
-      "id": "92",
+      "id": "91",
       "title": "GARDIENNAGE GRATRUIT",
       "location": "Gardiennage de domicile - Aubagne (13400)",
       "price": "Partage",
@@ -1483,12 +1467,12 @@
       "url": "https://www.jemepropose.com/annonces/gardiennage-de-domicile/gardiennage-gratruit+10497708/",
       "is_remote": false,
       "remote_confidence": 1.0,
-      "remote_reason": "LLM: Annonce de personne cherchant un logement, pas une offre d'emploi",
+      "remote_reason": "LLM: Annonce de recherche de logement, pas une offre d'emploi",
       "analyzed_with_llm": true,
       "page": 5
     },
     {
-      "id": "93",
+      "id": "92",
       "title": "Aide à domicile",
       "location": "Ménage - Revel (31250)",
       "price": "15.00 € - De l'heure",
@@ -1504,7 +1488,7 @@
       "page": 5
     },
     {
-      "id": "94",
+      "id": "93",
       "title": "besoin d'auxiliaire de vie je peux vous aidez",
       "location": "Auxiliaire de vie - Gourlizon (29710)",
       "price": "15.00 € - De l'heure",
@@ -1520,7 +1504,7 @@
       "page": 5
     },
     {
-      "id": "95",
+      "id": "94",
       "title": "Étude de rénovation",
       "location": "Formations professionnelles - Blangy-Tronville (80440)",
       "price": "Gratuit",
@@ -1536,7 +1520,7 @@
       "page": 5
     },
     {
-      "id": "96",
+      "id": "95",
       "title": "Besoin de Kinésithérapeute",
       "location": "Aide soignante - Bois-Colombes (92270)",
       "price": "A définir",
@@ -1546,13 +1530,13 @@
       "full_description": "Numéro de mise en relation Bonjour, Besoin d'un Kinésithérapeutes, 3 fois par semaine pour une dame de 86 ans ! pour plus d'informations veuillez contacter ce numéro _______________ le fils de la dame vous répondra ! Besoin d'un Kinésithérapeutes, 3 fois par semaine pour une dame de 86 ans ! pour plus d'informations veuillez contacter ce numéro _______________ le fils de la dame vous répondra ! Soyez le premier à déposer un avis sur cette annonce.",
       "url": "https://www.jemepropose.com/annonces/aide-soignante/besoin-de-kinesitherapeute+10497571/",
       "is_remote": false,
-      "remote_confidence": 1.0,
-      "remote_reason": "LLM: Kinésithérapie exige présence physique chez la patiente",
+      "remote_confidence": 0.95,
+      "remote_reason": "LLM: Kinésithérapie = soins physiques sur place",
       "analyzed_with_llm": true,
       "page": 5
     },
     {
-      "id": "97",
+      "id": "96",
       "title": "Chauffeur de personnes en situation de handicap",
       "location": "Chauffeur - livreur - Pantin (93500)",
       "price": "A définir",
@@ -1568,7 +1552,7 @@
       "page": 5
     },
     {
-      "id": "98",
+      "id": "97",
       "title": "nous recherchons en urgence une personne pour les taches ménagères",
       "location": "Ménage - Strasbourg (67000)",
       "price": "A définir",
@@ -1584,7 +1568,7 @@
       "page": 5
     },
     {
-      "id": "99",
+      "id": "98",
       "title": "jardinier tous travaux",
       "location": "Jardinage - Nontron (24300)",
       "price": "A définir",
@@ -1600,7 +1584,7 @@
       "page": 5
     },
     {
-      "id": "100",
+      "id": "99",
       "title": "aide à la personne",
       "location": "Auxiliaire de vie - Nontron (24300)",
       "price": "A définir",
@@ -1616,7 +1600,7 @@
       "page": 5
     },
     {
-      "id": "101",
+      "id": "100",
       "title": "Serveurs/Serveuse - Polyvalents",
       "location": "Serveuse - Vénissieux (69200)",
       "price": "10.00 € - De l'heure",
@@ -1629,10 +1613,10 @@
       "remote_confidence": 1.0,
       "remote_reason": "Keyword detection: Obvious on-site work: serveur",
       "analyzed_with_llm": false,
-      "page": 6
+      "page": 5
     },
     {
-      "id": "102",
+      "id": "101",
       "title": "Recherche d'acteur pour tournage sur toulouse du 26 au 30 janvier",
       "location": "Acteur - Toulouse (31000)",
       "price": "Gratuit",
@@ -1648,7 +1632,7 @@
       "page": 6
     },
     {
-      "id": "103",
+      "id": "102",
       "title": "Un voyage de 2 jours et 1 nuit pour visiter la Baie d'Hạ Long au Vietnam.",
       "location": "Organisation de voyage - A L'Etranger",
       "price": "1170.89 € - Au mois",
@@ -1659,12 +1643,12 @@
       "url": "https://www.jemepropose.com/annonces/organisation-de-voyage/un-voyage-de-2-jours-et-1-nuit-pour-visiter-la-baie-dha-long-au-vietnam+10497486/",
       "is_remote": false,
       "remote_confidence": 1.0,
-      "remote_reason": "LLM: Offre de voyage touristique, pas d'emploi",
+      "remote_reason": "LLM: Annonce de voyage, pas une offre d'emploi",
       "analyzed_with_llm": true,
       "page": 6
     },
     {
-      "id": "104",
+      "id": "103",
       "title": "HELP - Recherche bricoleur :)",
       "location": "Bricolage - Toulouse (31000)",
       "price": "A définir",
@@ -1680,7 +1664,7 @@
       "page": 6
     },
     {
-      "id": "105",
+      "id": "104",
       "title": "Recherche femme de ménage",
       "location": "Ménage - Strasbourg (67000)",
       "price": "15.00 € - De l'heure",
@@ -1696,7 +1680,7 @@
       "page": 6
     },
     {
-      "id": "106",
+      "id": "105",
       "title": "ménage",
       "location": "Ménage - Nancy (54000)",
       "price": "A définir",
@@ -1712,7 +1696,7 @@
       "page": 6
     },
     {
-      "id": "107",
+      "id": "106",
       "title": "Recherche personne pour aide petit dménagement une demi journée",
       "location": "Déménagement - Noisy-le-Grand (93160)",
       "price": "150.00 € - Jour",
@@ -1728,7 +1712,7 @@
       "page": 6
     },
     {
-      "id": "108",
+      "id": "107",
       "title": "Cherche dame de compagnie permanente, salaire,  nourrie, logée",
       "location": "Auxiliaire de vie - Nay (64800)",
       "price": "A définir",
@@ -1739,12 +1723,12 @@
       "url": "https://www.jemepropose.com/annonces/auxiliaire-de-vie/cherche-dame-de-compagnie-permanente-salaire-nourrie-logee+10497291/",
       "is_remote": false,
       "remote_confidence": 1.0,
-      "remote_reason": "LLM: Logée chez la personne, présence physique obligatoire",
+      "remote_reason": "LLM: Logée chez la personne, présence physique requise",
       "analyzed_with_llm": true,
       "page": 6
     },
     {
-      "id": "109",
+      "id": "108",
       "title": "Fille au paire",
       "location": "Emploi étudiant - Fontenay-aux-Roses (92260)",
       "price": "A définir",
@@ -1760,7 +1744,7 @@
       "page": 6
     },
     {
-      "id": "110",
+      "id": "109",
       "title": "Recherche personne ménage + linge – Porto / Ota",
       "location": "Ménage - Ota (20150)",
       "price": "A définir",
@@ -1776,7 +1760,7 @@
       "page": 6
     },
     {
-      "id": "111",
+      "id": "110",
       "title": "recherche heures de ménage, repassage",
       "location": "Ménage - Romillé (35850)",
       "price": "13.00 € - De l'heure",
@@ -1792,7 +1776,7 @@
       "page": 6
     },
     {
-      "id": "112",
+      "id": "111",
       "title": "Cherche heures de ménage",
       "location": "Ménage - Objat (19130)",
       "price": "A définir",
@@ -1808,7 +1792,7 @@
       "page": 6
     },
     {
-      "id": "113",
+      "id": "112",
       "title": "QUE DU BONHEUR !",
       "location": "Garde d'animaux - Nîmes (30000)",
       "price": "13.00 € - Forfait",
@@ -1819,12 +1803,12 @@
       "url": "https://www.jemepropose.com/annonces/garde-d-animaux/que-du-bonheur+10497038/",
       "is_remote": false,
       "remote_confidence": 1.0,
-      "remote_reason": "LLM: Annonce d’un pet-sitter, travail sur place à Nîmes",
+      "remote_reason": "LLM: Annonce d’un pet-sitter, garde d’animaux sur place",
       "analyzed_with_llm": true,
       "page": 6
     },
     {
-      "id": "114",
+      "id": "113",
       "title": "Compagnon",
       "location": "Peintre - Siorac-de-Ribérac (24600)",
       "price": "A définir",
@@ -1840,7 +1824,7 @@
       "page": 6
     },
     {
-      "id": "115",
+      "id": "114",
       "title": "Recherche personne locale / micro-entreprise conciergerie – hameau de 3 logements à Chalencon (07240)",
       "location": "Conciergerie Airbnb - Chalencon (07240)",
       "price": "A définir",
@@ -1851,12 +1835,12 @@
       "url": "https://www.jemepropose.com/annonces/conciergerie/recherche-personne-locale-micro-entreprise-conciergerie-hameau-de-3-logements-a-chalencon-07240+10496932/",
       "is_remote": false,
       "remote_confidence": 0.95,
-      "remote_reason": "LLM: Ménage, check-in et linge sur place obligatoire",
+      "remote_reason": "LLM: Ménage, check-in et entretien sur place obligatoires",
       "analyzed_with_llm": true,
       "page": 6
     },
     {
-      "id": "116",
+      "id": "115",
       "title": "Gestion complète de votre logement par une professionnelle du tourisme & de l'hospitalité",
       "location": "Conciergerie Airbnb - Vidauban (83550)",
       "price": "A définir",
@@ -1866,13 +1850,13 @@
       "full_description": "Bonjour, Professionnelle de l’hospitalité dans le monde du luxe depuis plus de 15 ans, je gère des chambres d’hôtes et plusieurs maisons en location courte durée (type Airbnb) dans la région de Vidauban et ses alentours. Je propose mes services de conciergerie souhaitant louer leur logement en toute sérénité : – Création et gestion des annonces Airbnb / Booking / expedia ... – Accueil des voyageurs : check-in / check-out – Communication avec les locataires avant, pendant et après le séjour – Aide vérification ménage et aide à la gestion du linge et des entretiens piscines / jardins – Suivi du calendrier et optimisation des tarifs – Création de site internet vitrine pour votre logement – Aide à l’achat ou au renouvellement de matériel (vaisselle, linge, mobilier…) – Intervention ponctuelle ou gestion complète à l’année --> Lors de l'hiver, je peux passer régulièrement pour surveiller la propriété, relever le courrier ... Zone : Vidauban et ses 35km dont Saint Tropez Je m’adapte à vos besoins, que vous soyez propriétaire à l’année ou seulement en saison. Professionnelle de l’hospitalité dans le monde du luxe depuis plus de 15 ans, je gère des chambres d’hôtes et plusieurs maisons en location courte durée (type Airbnb) dans la région de Vidauban et ses alentours. Je propose mes services de conciergerie souhaitant louer leur logement en toute sérénité : – Création et gestion des annonces Airbnb / Booking / expedia ... – Accueil des voyageurs : check-in / check-out – Communication avec les locataires avant, pendant et après le séjour – Aide vérification ménage et aide à la gestion du linge et des entretiens piscines / jardins – Suivi du calendrier et optimisation des tarifs – Création de site internet vitrine pour votre logement – Aide à l’achat ou au renouvellement de matériel (vaisselle, linge, mobilier…) – Intervention ponctuelle ou gestion complète à l’année --> Lors de l'hiver, je peux passer régulièrement pour surveiller la propriété, relever le courrier ... Zone : Vidauban et ses 35km dont Saint Tropez Je m’adapte à vos besoins, que vous soyez propriétaire à l’année ou seulement en saison. Soyez le premier à déposer un avis sur cette annonce.",
       "url": "https://www.jemepropose.com/annonces/conciergerie/gestion-complete-de-votre-logement-par-une-professionnelle-du-tourisme-de-lhospitalite+10496930/",
       "is_remote": false,
-      "remote_confidence": 0.95,
-      "remote_reason": "LLM: Services de conciergerie sur place : check-in, ménage, jardin",
+      "remote_confidence": 1.0,
+      "remote_reason": "LLM: Annonce de prestation de services, pas une offre d'emploi",
       "analyzed_with_llm": true,
       "page": 6
     },
     {
-      "id": "117",
+      "id": "116",
       "title": "prestations coiffure",
       "location": "Coiffure - Blois (41000)",
       "price": "Gratuit",
@@ -1888,7 +1872,7 @@
       "page": 6
     },
     {
-      "id": "118",
+      "id": "117",
       "title": "Cherche auxilliaire de vie",
       "location": "Auxiliaire de vie - Wittenheim (68270)",
       "price": "1171.00 € - Au mois",
@@ -1899,12 +1883,12 @@
       "url": "https://www.jemepropose.com/annonces/auxiliaire-de-vie/cherche-auxilliaire-de-vie+10496748/",
       "is_remote": false,
       "remote_confidence": 1.0,
-      "remote_reason": "LLM: Garde d'enfant handicapé au domicile, présence obligatoire",
+      "remote_reason": "LLM: Garde d'enfant à domicile, présence physique obligatoire",
       "analyzed_with_llm": true,
       "page": 6
     },
     {
-      "id": "119",
+      "id": "118",
       "title": "Soutien scolaire CM2 pour enfant de 10 ans",
       "location": "Soutien scolaire - Maisons-Laffitte (78600)",
       "price": "A définir",
@@ -1920,7 +1904,7 @@
       "page": 6
     },
     {
-      "id": "120",
+      "id": "119",
       "title": "ménage , repassage",
       "location": "Ménage - Bricqueville-sur-Mer (50290)",
       "price": "13.00 € - De l'heure",
@@ -1936,7 +1920,7 @@
       "page": 6
     },
     {
-      "id": "121",
+      "id": "120",
       "title": "je recherche une personne pour le menage des parties communes d'un immeuble sur Foix",
       "location": "Ménage - Foix (09000)",
       "price": "A définir",
@@ -1949,10 +1933,10 @@
       "remote_confidence": 1.0,
       "remote_reason": "Keyword detection: Obvious on-site work: ménage",
       "analyzed_with_llm": false,
-      "page": 7
+      "page": 6
     },
     {
-      "id": "122",
+      "id": "121",
       "title": "Agent de gardiennage et entretien – Disponibilité immédiate",
       "location": "Gardiennage de domicile - Mandelieu-la-Napoule (06210)",
       "price": "A définir",
@@ -1963,12 +1947,12 @@
       "url": "https://www.jemepropose.com/annonces/gardiennage-de-domicile/agent-de-gardiennage-et-entretien-disponibilite-immediate+10496634/",
       "is_remote": false,
       "remote_confidence": 1.0,
-      "remote_reason": "LLM: Kevin cherche un emploi, pas une offre de poste",
+      "remote_reason": "LLM: Kevin cherche un emploi, pas une offre",
       "analyzed_with_llm": true,
       "page": 7
     },
     {
-      "id": "123",
+      "id": "122",
       "title": "Je cherche un travail",
       "location": "Ménage - Montcornet (02340)",
       "price": "11.00 € - De l'heure",
@@ -1984,7 +1968,7 @@
       "page": 7
     },
     {
-      "id": "124",
+      "id": "123",
       "title": "Inexpérimenté",
       "location": "Emploi étudiant - Toulouse (31000)",
       "price": "9.72 € - De l'heure",
@@ -1995,12 +1979,12 @@
       "url": "https://www.jemepropose.com/annonces/emploi-etudiant/inexperimente+10496599/",
       "is_remote": false,
       "remote_confidence": 1.0,
-      "remote_reason": "LLM: Étudiante cherche emploi, pas une offre de poste",
+      "remote_reason": "LLM: Étudiante cherche emploi, pas une offre de travail",
       "analyzed_with_llm": true,
       "page": 7
     },
     {
-      "id": "125",
+      "id": "124",
       "title": "Auxiliaire de vie",
       "location": "Auxiliaire de vie - Voinsles (77540)",
       "price": "11.00 € - De l'heure",
@@ -2016,7 +2000,7 @@
       "page": 7
     },
     {
-      "id": "126",
+      "id": "125",
       "title": "Recherche 2 acteurs parlant japonais ou coréen",
       "location": "Acteur - Mauguio (34130)",
       "price": "Gratuit",
@@ -2026,13 +2010,13 @@
       "full_description": "Bonjour, bonsoir. Dans le cadre de notre dernière année d'études à l'égole Travelling a Mauguio, nous devons réaliser un film du début à la fin en autonomie. Nous recherchons donc 2 personnes, homme ou femme, entre 18 et 35 ans, toute taille, style, et expérience sont acceptés. Le seul point demandé est de parler japonais ou coréen. Il s'agit d'un projet amateur. Ce n'est donc  malheureusement pas rémunéré. Mais c'est une occasion de travailler avec de jeunes passionnés de cinéma et de si cela est votre but également, d'acquérir de l'expérience dans ce milieu en temps qu'acteur. Le film parle d'un conflit intellectuel lors d'une partie d'échecs entre 2 héritiers d'entreprises japonaises. Il n'y a pas de dialogue en tel sur le tournage. Tout sera enregistré en voix off. Les dialogues seront leurs pensées. 1 jour de tournage en décembre pour les voix, et 2 jours vers fin janvier pour l'acting. Si intéressé  merci de me contacter :) Bonjour, bonsoir. Dans le cadre de notre dernière année d'études à l'égole Travelling a Mauguio, nous devons réaliser un film du début à la fin en autonomie. Nous recherchons donc 2 personnes, homme ou femme, entre 18 et 35 ans, toute taille, style, et expérience sont acceptés. Le seul point demandé est de parler japonais ou coréen. Il s'agit d'un projet amateur. Ce n'est donc  malheureusement pas rémunéré. Mais c'est une occasion de travailler avec de jeunes passionnés de cinéma et de si cela est votre but également, d'acquérir de l'expérience dans ce milieu en temps qu'acteur. Le film parle d'un conflit intellectuel lors d'une partie d'échecs entre 2 héritiers d'entreprises japonaises. Il n'y a pas de dialogue en tel sur le tournage. Tout sera enregistré en voix off. Les dialogues seront leurs pensées. 1 jour de tournage en décembre pour les voix, et 2 jours vers fin janvier pour l'acting. Si intéressé  merci de me contacter :) Ce serait les 2 jours de tournage. A compter également un jour pr les voix off en décembre début du mois. Soyez le premier à déposer un avis sur cette annonce.",
       "url": "https://www.jemepropose.com/annonces/acteur/recherche-2-acteurs-parlant-japonais-ou-coreen+10496514/",
       "is_remote": false,
-      "remote_confidence": 1.0,
-      "remote_reason": "LLM: Tournage physique sur place, présence obligatoire",
+      "remote_confidence": 0.95,
+      "remote_reason": "LLM: Tournage sur place à Mauguio, présence physique obligatoire",
       "analyzed_with_llm": true,
       "page": 7
     },
     {
-      "id": "127",
+      "id": "126",
       "title": "Creation site internet",
       "location": "Création site internet - Cagnes-sur-Mer (06800)",
       "price": "Gratuit",
@@ -2048,7 +2032,7 @@
       "page": 7
     },
     {
-      "id": "128",
+      "id": "127",
       "title": "Recherche aide ménagère sérieuse",
       "location": "Ménage - Le Lamentin (97232)",
       "price": "15.00 € - De l'heure",
@@ -2064,7 +2048,7 @@
       "page": 7
     },
     {
-      "id": "129",
+      "id": "128",
       "title": "Recherche ingénieur du son pour collaboration artistique",
       "location": "Ingénieur du son - Nantes (44000)",
       "price": "Partage",
@@ -2075,12 +2059,12 @@
       "url": "https://www.jemepropose.com/annonces/ingenieur-du-son/recherche-ingenieur-du-son-pour-collaboration-artistique+10496485/",
       "is_remote": false,
       "remote_confidence": 0.95,
-      "remote_reason": "LLM: Artiste cherche collaborateur, pas d'offre d'emploi",
+      "remote_reason": "LLM: Collaboration musicale : enregistrement et studio sur place",
       "analyzed_with_llm": true,
       "page": 7
     },
     {
-      "id": "130",
+      "id": "129",
       "title": "Recherche 32h cdi agent d'entretien",
       "location": "Ménage - Toulouse (31000)",
       "price": "A définir",
@@ -2096,7 +2080,7 @@
       "page": 7
     },
     {
-      "id": "131",
+      "id": "130",
       "title": "Cours de français langue étrangère (FLE) – préparation DELF B2﻿ / DALF C1﻿",
       "location": "Formations à distance - A Distance",
       "price": "A définir",
@@ -2106,13 +2090,13 @@
       "full_description": "Formatrice diplômée Master 2 en didactique du FLE, avec près de 20 ans d’expérience. J’offre un accompagnement personnalisé pour réussir les examens DELF B2 et DALF C1. Bilan initial pour définir votre niveau et objectifs. Séances ciblant les 4 compétences (écrit, oral, compréhension), avec supports variés (articles, vidéos, audios). Corrections personnalisées et suivi attentif. Cours en visioconférence, travail personnel guidé. Premier bilan offert. Contactez-moi pour construire votre parcours vers la réussite ! Pas de cours à l'unité. Cours par webcam Cours individuel Forfait préparation DELF B2 - 12h = 780€ Forfait préparation DALF C1 - 15h = 975€ Les forfaits sont conçus pour que vous puissiez réussir votre diplôme au bout de 3 mois. Cours en binôme Forfait préparation DELF B2 - 15h = 585€ par personne Forfait préparation DALF C1 - 18h = 731€ par personne CESU non acceptés Paiement par virement bancaire uniquement Formatrice diplômée Master 2 en didactique du FLE, avec près de 20 ans d’expérience. J’offre un accompagnement personnalisé pour réussir les examens DELF B2 et DALF C1. Bilan initial pour définir votre niveau et objectifs. Séances ciblant les 4 compétences (écrit, oral, compréhension), avec supports variés (articles, vidéos, audios). Corrections personnalisées et suivi attentif. Cours en visioconférence, travail personnel guidé. Premier bilan offert. Contactez-moi pour construire votre parcours vers la réussite ! Pas de cours à l'unité. Cours par webcam Cours individuel Forfait préparation DELF B2 - 12h = 780€ Forfait préparation DALF C1 - 15h = 975€ Les forfaits sont conçus pour que vous puissiez réussir votre diplôme au bout de 3 mois. Cours en binôme Forfait préparation DELF B2 - 15h = 585€ par personne Forfait préparation DALF C1 - 18h = 731€ par personne CESU non acceptés Paiement par virement bancaire uniquement Soyez le premier à déposer un avis sur cette annonce.",
       "url": "https://www.jemepropose.com/annonces/formations-a-distance/cours-de-francais-langue-etrangere-fle-preparation-delf-b2-dalf-c1+10496361/",
       "is_remote": false,
-      "remote_confidence": 0.95,
+      "remote_confidence": 1.0,
       "remote_reason": "LLM: Annonce d’une formatrice, pas une offre d’emploi",
       "analyzed_with_llm": true,
       "page": 7
     },
     {
-      "id": "132",
+      "id": "131",
       "title": "Recherche modèle pour séance photos",
       "location": "Photographe - Lyon (69000)",
       "price": "A définir",
@@ -2123,12 +2107,12 @@
       "url": "https://www.jemepropose.com/annonces/photographe/recherche-modele-pour-seance-photos+10496353/",
       "is_remote": false,
       "remote_confidence": 1.0,
-      "remote_reason": "LLM: Séance photo oblige présence physique modèle",
+      "remote_reason": "LLM: Séance photo sur place à Lyon",
       "analyzed_with_llm": true,
       "page": 7
     },
     {
-      "id": "133",
+      "id": "132",
       "title": "Ménage",
       "location": "Ménage - Sevran (93270)",
       "price": "A définir",
@@ -2144,7 +2128,7 @@
       "page": 7
     },
     {
-      "id": "134",
+      "id": "133",
       "title": "Je vais te donner les secrets des RH pour te rendre irrésistible sur le marché du travail",
       "location": "Ressources Humaines - Pérols (34470)",
       "price": "A définir",
@@ -2155,12 +2139,12 @@
       "url": "https://www.jemepropose.com/annonces/ressources-humaines/je-vais-te-donner-les-secrets-des-rh-pour-te-rendre-irresistible-sur-le-marche-du-travail+10496304/",
       "is_remote": false,
       "remote_confidence": 0.95,
-      "remote_reason": "LLM: Annonce de service RH, pas une offre d'emploi",
+      "remote_reason": "LLM: Candidat vendant un service, pas une offre d'emploi",
       "analyzed_with_llm": true,
       "page": 7
     },
     {
-      "id": "135",
+      "id": "134",
       "title": "Garde privée – Surveillance, accompagnement et aide à la personne (Annemasse / Genève / Haute-Savoie)",
       "location": "Auxiliaire de vie - Annemasse (74100)",
       "price": "Sur devis",
@@ -2170,13 +2154,13 @@
       "full_description": "Numéro de mise en relation Discrète, sérieuse et digne de confiance, je mets à votre service mon expérience dans la surveillance privée, l’accompagnement personnalisé et l’aide à la personne. J’interviens auprès de particuliers, familles ou résidences pour assurer une présence rassurante, sécurisante et bienveillante, de jour comme de nuit. Mes prestations s’adaptent à vos besoins : • Surveillance de domicile ou de biens personnels • Accompagnement confidentiel lors de déplacements • Garde de confiance pour personnes âgées ou seules • Aide à domicile et assistance quotidienne avec empathie Professionnelle, ponctuelle et très respectueuse de la confidentialité, je veille toujours à instaurer un climat de sérénité et de respect mutuel. 📍 Secteurs couverts : Annemasse – Genève – Haute-Savoie 🕒 Disponibilités : Jour / Nuit / Week-end 💶 Tarif : à partir de 18 €/h selon la prestation Discrète, sérieuse et digne de confiance, je mets à votre service mon expérience dans la surveillance privée, l’accompagnement personnalisé et l’aide à la personne. J’interviens auprès de particuliers, familles ou résidences pour assurer une présence rassurante, sécurisante et bienveillante, de jour comme de nuit. Mes prestations s’adaptent à vos besoins : • Surveillance de domicile ou de biens personnels • Accompagnement confidentiel lors de déplacements • Garde de confiance pour personnes âgées ou seules • Aide à domicile et assistance quotidienne avec empathie Professionnelle, ponctuelle et très respectueuse de la confidentialité, je veille toujours à instaurer un climat de sérénité et de respect mutuel. 📍 Secteurs couverts : Annemasse – Genève – Haute-Savoie 🕒 Disponibilités : Jour / Nuit / Week-end 💶 Tarif : à partir de 18 €/h selon la prestation Soyez le premier à déposer un avis sur cette annonce.",
       "url": "https://www.jemepropose.com/annonces/auxiliaire-de-vie/garde-privee-surveillance-accompagnement-et-aide-a-la-personne-annemasse-geneve-haute-savoie+10496293/",
       "is_remote": false,
-      "remote_confidence": 1.0,
-      "remote_reason": "LLM: Prestations sur site : surveillance, accompagnement, garde physique",
+      "remote_confidence": 0.95,
+      "remote_reason": "LLM: Interventions physiques chez les clients",
       "analyzed_with_llm": true,
       "page": 7
     },
     {
-      "id": "136",
+      "id": "135",
       "title": "Personne âgée",
       "location": "Auxiliaire de vie - Le Puy-en-Velay (43000)",
       "price": "A définir",
@@ -2192,7 +2176,7 @@
       "page": 7
     },
     {
-      "id": "137",
+      "id": "136",
       "title": "Recherche auxiliaire de vie à domicile",
       "location": "Auxiliaire de vie - Rambouillet (78120)",
       "price": "A définir",
@@ -2208,7 +2192,7 @@
       "page": 7
     },
     {
-      "id": "138",
+      "id": "137",
       "title": "Téléprospection – Énergie Renouvelable (Paris 19e)",
       "location": "Téléprospecteur - Paris (75000)",
       "price": "A définir",
@@ -2224,7 +2208,7 @@
       "page": 7
     },
     {
-      "id": "139",
+      "id": "138",
       "title": "Recherche serveur",
       "location": "Serveuse - Écouis (27440)",
       "price": "A définir",
@@ -2240,7 +2224,7 @@
       "page": 7
     },
     {
-      "id": "140",
+      "id": "139",
       "title": "AUTO ECOLE FRANCE",
       "location": "Assistance juridique - Nantes (44000)",
       "price": "Sur devis",
@@ -2251,12 +2235,12 @@
       "url": "https://www.jemepropose.com/annonces/assistance-juridique/auto-ecole-france+10496114/",
       "is_remote": false,
       "remote_confidence": 0.95,
-      "remote_reason": "LLM: Annonce d'un particulier proposant ses services",
+      "remote_reason": "LLM: Annonce d'un particulier proposant accompagnement physique démarches",
       "analyzed_with_llm": true,
       "page": 7
     },
     {
-      "id": "141",
+      "id": "140",
       "title": "ménage ,repassage",
       "location": "Ménage - Belin-Béliet (33830)",
       "price": "15.00 € - De l'heure",
@@ -2269,10 +2253,10 @@
       "remote_confidence": 1.0,
       "remote_reason": "Keyword detection: Obvious on-site work: ménage",
       "analyzed_with_llm": false,
-      "page": 8
+      "page": 7
     },
     {
-      "id": "142",
+      "id": "141",
       "title": "m'occuper de vos animaux",
       "location": "Garde d'animaux - Nancy (54000)",
       "price": "10.00 € - De l'heure",
@@ -2288,7 +2272,7 @@
       "page": 8
     },
     {
-      "id": "143",
+      "id": "142",
       "title": "Recherche cuisinière à domicile",
       "location": "Cuisine à domicile - Lyon 7e arrondissement (69007)",
       "price": "A définir",
@@ -2304,7 +2288,7 @@
       "page": 8
     },
     {
-      "id": "144",
+      "id": "143",
       "title": "cherche gardes de nuit chez personne agee",
       "location": "Auxiliaire de vie - Vendays-Montalivet (33930)",
       "price": "A définir",
@@ -2315,12 +2299,12 @@
       "url": "https://www.jemepropose.com/annonces/auxiliaire-de-vie/cherche-gardes-de-nuit-chez-personne-agee+10495975/",
       "is_remote": false,
       "remote_confidence": 1.0,
-      "remote_reason": "LLM: Garde de nuit chez la personne = présence physique obligatoire",
+      "remote_reason": "LLM: Garde de nuit chez une personne âgée : présence physique obligatoire",
       "analyzed_with_llm": true,
       "page": 8
     },
     {
-      "id": "145",
+      "id": "144",
       "title": "Maison avec jardin et piscine en gardiennage 1 mois",
       "location": "Gardiennage de domicile - Nouméa (98800)",
       "price": "Gratuit",
@@ -2331,12 +2315,12 @@
       "url": "https://www.jemepropose.com/annonces/gardiennage-de-domicile/maison-avec-jardin-et-piscine-en-gardiennage-1-mois+10495965/",
       "is_remote": false,
       "remote_confidence": 1.0,
-      "remote_reason": "LLM: Gardiennage sur place, présence physique obligatoire",
+      "remote_reason": "LLM: Gardiennage physique sur place à Nouméa",
       "analyzed_with_llm": true,
       "page": 8
     },
     {
-      "id": "146",
+      "id": "145",
       "title": "Taches ménagères et garde d'enfant",
       "location": "Garde d'enfants - Cabriès (13480)",
       "price": "15.00 € - De l'heure",
@@ -2352,7 +2336,7 @@
       "page": 8
     },
     {
-      "id": "147",
+      "id": "146",
       "title": "RECHERCHE GOUVERNANTE",
       "location": "Gouvernante - Lagraulet-du-Gers (32330)",
       "price": "A définir",
@@ -2362,13 +2346,13 @@
       "full_description": "Numéro de mise en relation Bonjour, je suis à la recherche d'une gouvernant pour une résidence principale. Les missions vont de l'entretien générale de la maison au repassage. Nous estimons qu'un 15/20 heures semaines serait idéal mais nous pourrions revoir à la hausse au besoin. Nous avons des animaux de compagnie (chien, chat). Nous ne sommes pas attaché à des horaires en particulier, cela dépendra de la personne. Si elle préfère les après-midi , pas de souci. Bonjour, je suis à la recherche d'une gouvernant pour une résidence principale. Les missions vont de l'entretien générale de la maison au repassage. Nous estimons qu'un 15/20 heures semaines serait idéal mais nous pourrions revoir à la hausse au besoin. Nous avons des animaux de compagnie (chien, chat). Nous ne sommes pas attaché à des horaires en particulier, cela dépendra de la personne. Si elle préfère les après-midi , pas de souci. Soyez le premier à déposer un avis sur cette annonce.",
       "url": "https://www.jemepropose.com/annonces/gouvernante/recherche-gouvernante+10495796/",
       "is_remote": false,
-      "remote_confidence": 0.95,
-      "remote_reason": "LLM: Gouvernante = ménage sur place, présence physique obligatoire",
+      "remote_confidence": 1.0,
+      "remote_reason": "LLM: Ménage et repassage nécessitent présence physique",
       "analyzed_with_llm": true,
       "page": 8
     },
     {
-      "id": "148",
+      "id": "147",
       "title": "MENAGE DE PRINTEMPS (ET DES 3 AUTRES SAISONS)",
       "location": "Ménage - Rennes (35000)",
       "price": "15.00 € - Forfait",
@@ -2384,7 +2368,7 @@
       "page": 8
     },
     {
-      "id": "149",
+      "id": "148",
       "title": "Secrétariat à distance",
       "location": "Secrétariat - Limoges-Fourches (77550)",
       "price": "A définir",
@@ -2400,7 +2384,7 @@
       "page": 8
     },
     {
-      "id": "150",
+      "id": "149",
       "title": "Assistant(e) d’entretien et d’accueil – Appartement haut de gamme (quartier Bourg Lévêque, Rennes)",
       "location": "Conciergerie Airbnb - Rennes (35000)",
       "price": "15.00 € - De l'heure",
@@ -2410,13 +2394,13 @@
       "full_description": "Nous recherchons une personne de confiance pour une collaboration humaine et durable autour d’un appartement haut de gamme situé à Bourg Lévêque, à Rennes. Ce n’est pas un simple “ménage” : c’est un lieu d’exception, une ambiance, une expérience à faire vivre. Nous cherchons quelqu’un qui aime le beau travail, le contact humain, et la satisfaction d’un accueil réussi. En pratique : •En octobre 2025, le logement a été occupé une douzaine de jours (6 en semaine et 6 le week-end). •L’activité monte doucement en puissance, notamment à l’approche des fêtes de fin d’année. Les missions : •Effectuer les ménages complets après chaque séjour, avec soin et sens du détail (linge, spa, ambiance, vérifications). •Accueillir les voyageurs : remise des clés, sourire, explications simples, un vrai moment agréable pour qui aime recevoir. •Gérer de petits approvisionnements (produits, bouteilles, objets de confort ou à la vente sur place). •Partager un bref retour après chaque passage (message ou photo). •Pouvoir proposer un(e) remplaçant(e) de confiance en cas d’absence. Ce que nous faisons de notre côté : Nous, les propriétaires, gérons toute la relation client, les réservations, les vérifications d’identité, la partie administrative et commerciale. Ce que nous voulons avant tout, c’est travailler main dans la main avec une personne sur qui on peut compter, avec qui on s’entend bien, et avec qui on construit une vraie relation de confiance dans la durée. Personne recherchée : •Sérieuse, bienveillante, rigoureuse et à l’aise dans un environnement haut de gamme. •Apprécie le contact humain, le sens du détail et les lieux soignés. •Habite idéalement à proximité du quartier Bourg Lévêque (déplacements simples). •Dispose déjà d’autres clients ou activités, et souhaite compléter son activité avec un lieu où l’on travaille dans le respect et la confiance mutuelle. Conditions : •Environ 12 interventions par mois, principalement le week-end mais aussi en semaine. •Planning communiqué à l’avance, avec souplesse et échanges constants. •Formation aux protocoles d’entretien et d’accueil assurée. 📩 Si cette mission vous parle, écrivez-nous quelques lignes sur votre parcours, votre quartier de résidence et vos disponibilités. Nous serons heureux de faire connaissance. Nous recherchons une personne de confiance pour une collaboration humaine et durable autour d’un appartement haut de gamme situé à Bourg Lévêque, à Rennes. Ce n’est pas un simple “ménage” : c’est un lieu d’exception, une ambiance, une expérience à faire vivre. Nous cherchons quelqu’un qui aime le beau travail, le contact humain, et la satisfaction d’un accueil réussi. En pratique : •En octobre 2025, le logement a été occupé une douzaine de jours (6 en semaine et 6 le week-end). •L’activité monte doucement en puissance, notamment à l’approche des fêtes de fin d’année. Les missions : •Effectuer les ménages complets après chaque séjour, avec soin et sens du détail (linge, spa, ambiance, vérifications). •Accueillir les voyageurs : remise des clés, sourire, explications simples, un vrai moment agréable pour qui aime recevoir. •Gérer de petits approvisionnements (produits, bouteilles, objets de confort ou à la vente sur place). •Partager un bref retour après chaque passage (message ou photo). •Pouvoir proposer un(e) remplaçant(e) de confiance en cas d’absence. Ce que nous faisons de notre côté : Nous, les propriétaires, gérons toute la relation client, les réservations, les vérifications d’identité, la partie administrative et commerciale. Ce que nous voulons avant tout, c’est travailler main dans la main avec une personne sur qui on peut compter, avec qui on s’entend bien, et avec qui on construit une vraie relation de confiance dans la durée. Personne recherchée : •Sérieuse, bienveillante, rigoureuse et à l’aise dans un environnement haut de gamme. •Apprécie le contact humain, le sens du détail et les lieux soignés. •Habite idéalement à proximité du quartier Bourg Lévêque (déplacements simples). •Dispose déjà d’autres clients ou activités, et souhaite compléter son activité avec un lieu où l’on travaille dans le respect et la confiance mutuelle. Conditions : •Environ 12 interventions par mois, principalement le week-end mais aussi en semaine. •Planning communiqué à l’avance, avec souplesse et échanges constants. •Formation aux protocoles d’entretien et d’accueil assurée. 📩 Si cette mission vous parle, écrivez-nous quelques lignes sur votre parcours, votre quartier de résidence et vos disponibilités. Nous serons heureux de faire connaissance. Soyez le premier à déposer un avis sur cette annonce.",
       "url": "https://www.jemepropose.com/annonces/conciergerie/assistante-dentretien-et-daccueil-appartement-haut-de-gamme-quartier-bourg-leveque-rennes+10495632/",
       "is_remote": false,
-      "remote_confidence": 0.95,
+      "remote_confidence": 0.98,
       "remote_reason": "LLM: Ménage et accueil physique dans l'appartement",
       "analyzed_with_llm": true,
       "page": 8
     },
     {
-      "id": "151",
+      "id": "150",
       "title": "Kreolity Hair Spa recherche une coiffeuse indépendante",
       "location": "Coiffure - Saint-François (97118)",
       "price": "A définir",
@@ -2432,7 +2416,7 @@
       "page": 8
     },
     {
-      "id": "152",
+      "id": "151",
       "title": "Recherche équipe de ménage pour locations courte durée, Ménage et gestion du linge en auto-entrepreneur. IMPERATIF !",
       "location": "Ménage - Sauve (30610)",
       "price": "A définir",
@@ -2448,23 +2432,7 @@
       "page": 8
     },
     {
-      "id": "153",
-      "title": "recherche modèle photo pour projet rémunéré",
-      "location": "Modèle photo - Paris 15e arrondissement (75015)",
-      "price": "100.00 € - De l'heure",
-      "poster": "photodartparis",
-      "date_posted": "15/10/2025",
-      "description": "Photographe passionné basé à Paris, je suis à la recherche d’une modèle pour un shooting créatif (portrait, mode, urbain, artistique,...",
-      "full_description": "Photographe passionné basé à Paris, je suis à la recherche d’une modèle pour un shooting créatif (portrait, mode, urbain, artistique, etc.). Projet rémunéré Débutante acceptée, l’essentiel est la motivation et une bonne énergie ! Si tu es intéressé(e), envoie-moi un message avec quelques photos À bientôt ! Stan Photographe passionné basé à Paris, je suis à la recherche d’une modèle pour un shooting créatif (portrait, mode, urbain, artistique, etc.). Projet rémunéré Débutante acceptée, l’essentiel est la motivation et une bonne énergie ! Si tu es intéressé(e), envoie-moi un message avec quelques photos À bientôt ! Soyez le premier à déposer un avis sur cette annonce.",
-      "url": "https://www.jemepropose.com/annonces/modele-photo/recherche-modele-photo-pour-projet-remunere+10492744/",
-      "is_remote": false,
-      "remote_confidence": 1.0,
-      "remote_reason": "LLM: Shooting photo sur place à Paris",
-      "analyzed_with_llm": true,
-      "page": 8
-    },
-    {
-      "id": "154",
+      "id": "152",
       "title": "Recherche serveurs(es) pour un mariage",
       "location": "Serveuse - Grivesnes (80250)",
       "price": "A définir",
@@ -2480,7 +2448,7 @@
       "page": 8
     },
     {
-      "id": "155",
+      "id": "153",
       "title": "Pilone",
       "location": "Conciergerie Airbnb - Vars (05560)",
       "price": "20.00 € - De l'heure",
@@ -2496,7 +2464,7 @@
       "page": 8
     },
     {
-      "id": "156",
+      "id": "154",
       "title": "Recherche modèle Homme/Femme",
       "location": "Coiffure - Rennes (35000)",
       "price": "A définir",
@@ -2512,7 +2480,7 @@
       "page": 8
     },
     {
-      "id": "157",
+      "id": "155",
       "title": "Service pour apéritif et diner anniversaire",
       "location": "Serveuse - Saint-Marcel-lès-Valence (26320)",
       "price": "19.72 € - De l'heure",
@@ -2528,7 +2496,7 @@
       "page": 8
     },
     {
-      "id": "158",
+      "id": "156",
       "title": "Garde d'enfants à domicile",
       "location": "Garde d'enfants - Asnières-sur-Seine (92600)",
       "price": "12.00 € - De l'heure",
@@ -2544,7 +2512,7 @@
       "page": 8
     },
     {
-      "id": "159",
+      "id": "157",
       "title": "Étudiante a la recherche d'un job étudiant",
       "location": "Garde d'enfants - Calais (62100)",
       "price": "10.00 € - De l'heure",
@@ -2560,7 +2528,7 @@
       "page": 8
     },
     {
-      "id": "160",
+      "id": "158",
       "title": "recherche mi temps auxiliaire de vie",
       "location": "Auxiliaire de vie - Saint-Pierre (97410)",
       "price": "A définir",
@@ -2571,12 +2539,12 @@
       "url": "https://www.jemepropose.com/annonces/auxiliaire-de-vie/recherche-mi-temps-auxiliaire-de-vie+10495250/",
       "is_remote": false,
       "remote_confidence": 0.95,
-      "remote_reason": "LLM: Accompagnement fin de vie implique présence physique",
+      "remote_reason": "LLM: Accompagnement fin de vie = présence physique obligatoire",
       "analyzed_with_llm": true,
       "page": 8
     },
     {
-      "id": "161",
+      "id": "159",
       "title": "recherche heure de repassage -retrait et retour a domicile",
       "location": "Repassage - Saint-Sulpice-de-Favières (91910)",
       "price": "18.00 € - De l'heure",
@@ -2589,10 +2557,10 @@
       "remote_confidence": 1.0,
       "remote_reason": "Keyword detection: Obvious on-site work: repassage",
       "analyzed_with_llm": false,
-      "page": 9
+      "page": 8
     },
     {
-      "id": "162",
+      "id": "160",
       "title": "Recherche",
       "location": "Conciergerie Airbnb - Granville (50400)",
       "price": "A définir",
@@ -2605,10 +2573,10 @@
       "remote_confidence": 1.0,
       "remote_reason": "LLM: Nettoyage et préparation d'appartements sur place",
       "analyzed_with_llm": true,
-      "page": 9
+      "page": 8
     },
     {
-      "id": "163",
+      "id": "161",
       "title": "Recherche personne pour ménage sur Arreau",
       "location": "Ménage - Arreau (65240)",
       "price": "A définir",
@@ -2624,7 +2592,7 @@
       "page": 9
     },
     {
-      "id": "164",
+      "id": "162",
       "title": "Recherche Télé secrétaire expérimentée",
       "location": "Secrétariat - Poitiers (86000)",
       "price": "20.00 € - De l'heure",
@@ -2634,13 +2602,13 @@
       "full_description": "Je suis à la recherche d'une personne expérimentée au poste de secrétaire à domicile. Si vous êtes disponible veuillez me contacter pour plus d'amples informations. Ps/ Pas sérieux s'abstenir Cordialement. Je suis à la recherche d'une personne expérimentée au poste de secrétaire à domicile. Si vous êtes disponible veuillez me contacter pour plus d'amples informations. Ps/ Pas sérieux s'abstenir Cordialement. Soyez le premier à déposer un avis sur cette annonce.",
       "url": "https://www.jemepropose.com/annonces/secretariat/recherche-tele-secretaire-experimentee+10494841/",
       "is_remote": false,
-      "remote_confidence": 0.9,
+      "remote_confidence": 0.75,
       "remote_reason": "LLM: Pas de mention télétravail, secrétariat à domicile ambigu",
       "analyzed_with_llm": true,
       "page": 9
     },
     {
-      "id": "165",
+      "id": "163",
       "title": "entretien d'une maison en location saisonnière",
       "location": "Conciergerie Airbnb - Nalliers (86310)",
       "price": "A définir",
@@ -2656,7 +2624,7 @@
       "page": 9
     },
     {
-      "id": "166",
+      "id": "164",
       "title": "Remplacement présence et aide au repas",
       "location": "Auxiliaire de vie - Montlaur (31450)",
       "price": "A définir",
@@ -2672,7 +2640,7 @@
       "page": 9
     },
     {
-      "id": "167",
+      "id": "165",
       "title": "Garde week-end et vacances",
       "location": "Garde d'animaux - Cheix-en-Retz (44640)",
       "price": "A définir",
@@ -2688,7 +2656,7 @@
       "page": 9
     },
     {
-      "id": "168",
+      "id": "166",
       "title": "Gardiennage et intendance de votre propriété",
       "location": "Gardiennage de domicile - Saint-Jean-d'Angély (17400)",
       "price": "Sur devis",
@@ -2699,12 +2667,12 @@
       "url": "https://www.jemepropose.com/annonces/gardiennage-de-domicile/gardiennage-et-intendance-de-votre-propriete+10494724/",
       "is_remote": false,
       "remote_confidence": 1.0,
-      "remote_reason": "LLM: Annonce d'un gardien cherchant des clients, pas une offre d'emploi",
+      "remote_reason": "LLM: Annonce d'un gardien recherchant des clients, travail sur place",
       "analyzed_with_llm": true,
       "page": 9
     },
     {
-      "id": "169",
+      "id": "167",
       "title": "je me proprose",
       "location": "Ménage - Auxerre (89000)",
       "price": "A définir",
@@ -2720,7 +2688,7 @@
       "page": 9
     },
     {
-      "id": "170",
+      "id": "168",
       "title": "Montage vidéo anniversaire 40 ans – photos + vidéos + musique",
       "location": "Montage vidéo - Brindas (69126)",
       "price": "A définir",
@@ -2731,12 +2699,12 @@
       "url": "https://www.jemepropose.com/annonces/montage-video/montage-video-anniversaire-40-ans-photos-videos-musique+10494609/",
       "is_remote": true,
       "remote_confidence": 0.95,
-      "remote_reason": "LLM: Montage vidéo entièrement réalisable à distance",
+      "remote_reason": "LLM: Montage vidéo livrable en ligne, aucune présence requise",
       "analyzed_with_llm": true,
       "page": 9
     },
     {
-      "id": "171",
+      "id": "169",
       "title": "Travaux aménagement maison",
       "location": "Bricolage - Barraute-Camu (64390)",
       "price": "12.00 € - De l'heure",
@@ -2752,7 +2720,7 @@
       "page": 9
     },
     {
-      "id": "172",
+      "id": "170",
       "title": "Recherche traiteur sur Faymoreau",
       "location": "Traiteur - Faymoreau (85240)",
       "price": "A définir",
@@ -2762,13 +2730,13 @@
       "full_description": "Numéro de mise en relation Bonjour, Nous souhaitons organiser un mariage le 29 août 2026, à Faymoreau. Nous aimerions avoir des ateliers différents, les invités étant de plusieurs pays ( Haïti, USA, Canada & France) - cocktail 130 – dîner 100. Cela serait-il possible ? Merci de me contacter pour pouvoir continuer le projet. Nous souhaitons organiser un mariage le 29 août 2026, à Faymoreau. Nous aimerions avoir des ateliers différents, les invités étant de plusieurs pays ( Haïti, USA, Canada & France) - cocktail 130 – dîner 100. Cela serait-il possible ? Merci de me contacter pour pouvoir continuer le projet. Soyez le premier à déposer un avis sur cette annonce.",
       "url": "https://www.jemepropose.com/annonces/traiteur/recherche-traiteur-sur-faymoreau+10494430/",
       "is_remote": false,
-      "remote_confidence": 1.0,
+      "remote_confidence": 0.95,
       "remote_reason": "LLM: Recherche traiteur sur place pour mariage",
       "analyzed_with_llm": true,
       "page": 9
     },
     {
-      "id": "173",
+      "id": "171",
       "title": "recrute des decembre en cdi",
       "location": "Auxiliaire de vie - Tremblay-les-Villages (28170)",
       "price": "13.00 € - De l'heure",
@@ -2784,7 +2752,7 @@
       "page": 9
     },
     {
-      "id": "174",
+      "id": "172",
       "title": "Baby sitting",
       "location": "Baby-sitting - Auxerre (89000)",
       "price": "280.00 € - À la semaine",
@@ -2800,7 +2768,7 @@
       "page": 9
     },
     {
-      "id": "175",
+      "id": "173",
       "title": "Je recherche femme de ménage",
       "location": "Ménage - Trèbes (11800)",
       "price": "15.00 € - De l'heure",
@@ -2816,7 +2784,7 @@
       "page": 9
     },
     {
-      "id": "176",
+      "id": "174",
       "title": "AIDE MENAGERE",
       "location": "Ménage - Avon (77210)",
       "price": "A définir",
@@ -2832,7 +2800,7 @@
       "page": 9
     },
     {
-      "id": "177",
+      "id": "175",
       "title": "gestion d'une maison",
       "location": "Gardiennage de domicile - Arnouville-lès-Gonesse (95400)",
       "price": "A définir",
@@ -2848,7 +2816,7 @@
       "page": 9
     },
     {
-      "id": "178",
+      "id": "176",
       "title": "Soirée",
       "location": "Serveuse - Buchy (76750)",
       "price": "A définir",
@@ -2859,12 +2827,12 @@
       "url": "https://www.jemepropose.com/annonces/serveuse/soiree+10494251/",
       "is_remote": false,
       "remote_confidence": 1.0,
-      "remote_reason": "LLM: Service soirée anniversaire : présence physique obligatoire",
+      "remote_reason": "LLM: Serveuse sur place pour soirée anniversaire",
       "analyzed_with_llm": true,
       "page": 9
     },
     {
-      "id": "179",
+      "id": "177",
       "title": "Femme de ménage",
       "location": "Ménage - Colombes (92700)",
       "price": "A définir",
@@ -2880,7 +2848,7 @@
       "page": 9
     },
     {
-      "id": "180",
+      "id": "178",
       "title": "Recherche modèle pour collaboration shooting lifestyle",
       "location": "Modèle photo - Paris (75000)",
       "price": "Échange",
@@ -2891,12 +2859,12 @@
       "url": "https://www.jemepropose.com/annonces/modele-photo/recherche-modele-pour-collaboration-shooting-lifestyle+10494156/",
       "is_remote": false,
       "remote_confidence": 1.0,
-      "remote_reason": "LLM: Shooting photo sur place à Paris, pas de télétravail",
+      "remote_reason": "LLM: Séances photos en extérieur à Paris, présence obligatoire",
       "analyzed_with_llm": true,
       "page": 9
     },
     {
-      "id": "181",
+      "id": "179",
       "title": "Recherche heures de ménage",
       "location": "Ménage - Vaux-sur-Mer (17640)",
       "price": "15.00 € - De l'heure",
@@ -2909,10 +2877,10 @@
       "remote_confidence": 1.0,
       "remote_reason": "Keyword detection: Obvious on-site work: ménage",
       "analyzed_with_llm": false,
-      "page": 10
+      "page": 9
     },
     {
-      "id": "182",
+      "id": "180",
       "title": "Cours d'anglais",
       "location": "Cours d'anglais - Marcoussis (91460)",
       "price": "10.00 € - De l'heure",
@@ -2923,12 +2891,12 @@
       "url": "https://www.jemepropose.com/annonces/cours-d-anglais/cours-danglais+10494108/",
       "is_remote": false,
       "remote_confidence": 0.95,
-      "remote_reason": "LLM: Cours particuliers, présence physique chez l'élève requise",
+      "remote_reason": "LLM: Recherche de cours particuliers, présence physique requise",
       "analyzed_with_llm": true,
-      "page": 10
+      "page": 9
     },
     {
-      "id": "183",
+      "id": "181",
       "title": "aide à l'écriture",
       "location": "Écrivain public - Valras-Plage (34350)",
       "price": "10.00 € - De l'heure",
@@ -2939,12 +2907,12 @@
       "url": "https://www.jemepropose.com/annonces/ecrivain-public/aide-a-lecriture+10494043/",
       "is_remote": false,
       "remote_confidence": 0.95,
-      "remote_reason": "LLM: Annonce de service local sur Valras-Plage",
+      "remote_reason": "LLM: Annonce de service local, pas d'offre d'emploi",
       "analyzed_with_llm": true,
       "page": 10
     },
     {
-      "id": "184",
+      "id": "182",
       "title": "Recherche chef privé à domicile",
       "location": "Chef de cuisine - Lyon (69000)",
       "price": "A définir",
@@ -2960,7 +2928,7 @@
       "page": 10
     },
     {
-      "id": "185",
+      "id": "183",
       "title": "RECHERCHE FEMME DE MENAGE",
       "location": "Ménage - Saint-Maur-des-Fossés (94100)",
       "price": "A définir",
@@ -2976,7 +2944,7 @@
       "page": 10
     },
     {
-      "id": "186",
+      "id": "184",
       "title": "Ménage à domicile",
       "location": "Ménage - Toulouse (31000)",
       "price": "15.00 € - De l'heure",
@@ -2992,7 +2960,7 @@
       "page": 10
     },
     {
-      "id": "187",
+      "id": "185",
       "title": "Aide ménagère",
       "location": "Ménage - Trézioux (63520)",
       "price": "15.00 € - De l'heure",
@@ -3008,7 +2976,7 @@
       "page": 10
     },
     {
-      "id": "188",
+      "id": "186",
       "title": "Recherche baby sitter mardi et jeudi soir",
       "location": "Garde d'enfants - Antony (92160)",
       "price": "10.00 € - De l'heure",
@@ -3024,7 +2992,7 @@
       "page": 10
     },
     {
-      "id": "189",
+      "id": "187",
       "title": "Serveuse HOtesse poir évènements",
       "location": "Serveuse - Serris (77700)",
       "price": "A définir",
@@ -3035,12 +3003,12 @@
       "url": "https://www.jemepropose.com/annonces/serveuse/serveuse-hotesse-poir-evenements+10493778/",
       "is_remote": false,
       "remote_confidence": 1.0,
-      "remote_reason": "LLM: Annonce de recherche d'emploi, pas une offre",
+      "remote_reason": "LLM: Service de serveuse événementiel, présence physique obligatoire",
       "analyzed_with_llm": true,
       "page": 10
     },
     {
-      "id": "190",
+      "id": "188",
       "title": "Recherche danseur(euse) expérimenté(e)",
       "location": "Cours de danse - Le Plessis-Bouchard (95130)",
       "price": "A définir",
@@ -3050,13 +3018,13 @@
       "full_description": "Bonjour, je recherche une personne expérimentée pouvant me proposer des cours de danse de salon, MBK, rock à un tarif raisonnable. Bonjour, je recherche une personne expérimentée pouvant me proposer des cours de danse de salon, MBK, rock à un tarif raisonnable. Soyez le premier à déposer un avis sur cette annonce.",
       "url": "https://www.jemepropose.com/annonces/cours-de-danse/recherche-danseureuse-experimentee+10493772/",
       "is_remote": false,
-      "remote_confidence": 1.0,
-      "remote_reason": "LLM: Cours de danse impliquent présence physique",
+      "remote_confidence": 0.95,
+      "remote_reason": "LLM: Cours de danse nécessite présence physique",
       "analyzed_with_llm": true,
       "page": 10
     },
     {
-      "id": "191",
+      "id": "189",
       "title": "Recherche aide ménagère 2 jours par semaine",
       "location": "Ménage - Châlons-en-Champagne (51000)",
       "price": "A définir",
@@ -3072,7 +3040,7 @@
       "page": 10
     },
     {
-      "id": "192",
+      "id": "190",
       "title": "🚸 Recherche accompagnant(e) pour trajets école → football – Décines",
       "location": "Garde d'enfants - Vaulx-en-Velin (69120)",
       "price": "A définir",
@@ -3088,7 +3056,7 @@
       "page": 10
     },
     {
-      "id": "193",
+      "id": "191",
       "title": "Emplois de menage a domicile",
       "location": "Ménage - Créteil (94000)",
       "price": "300.00 € - À la semaine",
@@ -3104,7 +3072,7 @@
       "page": 10
     },
     {
-      "id": "194",
+      "id": "192",
       "title": "massage",
       "location": "Massage & Reiki - Lieusaint (77127)",
       "price": "A définir",
@@ -3120,7 +3088,7 @@
       "page": 10
     },
     {
-      "id": "195",
+      "id": "193",
       "title": "Fixation murale équipement lourd",
       "location": "Bricolage - Feucherolles (78810)",
       "price": "A définir",
@@ -3136,7 +3104,7 @@
       "page": 10
     },
     {
-      "id": "196",
+      "id": "194",
       "title": "URGENT-AIDE AU DEMENAGEMENT",
       "location": "Déménagement - Monsempron-Libos (47500)",
       "price": "A définir",
@@ -3152,7 +3120,7 @@
       "page": 10
     },
     {
-      "id": "197",
+      "id": "195",
       "title": "Monteur meuble",
       "location": "Bricolage - Villefontaine (38090)",
       "price": "A définir",
@@ -3168,7 +3136,7 @@
       "page": 10
     },
     {
-      "id": "198",
+      "id": "196",
       "title": "joints",
       "location": "Bricolage - Moissy-Cramayel (77550)",
       "price": "A définir",
@@ -3184,7 +3152,7 @@
       "page": 10
     },
     {
-      "id": "199",
+      "id": "197",
       "title": "aide menagere",
       "location": "Ménage - Épineau-les-Voves (89400)",
       "price": "20.00 € - De l'heure",
@@ -3200,7 +3168,7 @@
       "page": 10
     },
     {
-      "id": "200",
+      "id": "198",
       "title": "détartrer la douche   et   les portes douches et jointures",
       "location": "Ménage - Lieusaint (77127)",
       "price": "Sur devis",
@@ -3212,6 +3180,38 @@
       "is_remote": false,
       "remote_confidence": 1.0,
       "remote_reason": "Keyword detection: Obvious on-site work: ménage",
+      "analyzed_with_llm": false,
+      "page": 10
+    },
+    {
+      "id": "199",
+      "title": "boucher un trou au mur",
+      "location": "Bricolage - Lieusaint (77127)",
+      "price": "A définir",
+      "poster": "SAMU77",
+      "date_posted": "09/09/2025",
+      "description": "boucher un trou au mur , mur en placo.    environ 20cm x 6 cm................ merci.........",
+      "full_description": "boucher un trou au mur , mur en placo.    environ 20cm x 6 cm................ merci.........",
+      "url": "https://www.jemepropose.com/annonces/bricolage/boucher-un-trou-au-mur+10493486/",
+      "is_remote": false,
+      "remote_confidence": 1.0,
+      "remote_reason": "Keyword detection: Obvious on-site work: bricolage",
+      "analyzed_with_llm": false,
+      "page": 10
+    },
+    {
+      "id": "200",
+      "title": "Recherche personne pour entretien jardin",
+      "location": "Jardinage - Laizy (71190)",
+      "price": "A définir",
+      "poster": "IsabelleN71",
+      "date_posted": "09/09/2025",
+      "description": "Particulier recherche une personne sérieuse et autonome pour assurer l’entretien extérieur d’une maison et effectuer de petits travaux de...",
+      "full_description": "Particulier recherche une personne sérieuse et autonome pour assurer l’entretien extérieur d’une maison et effectuer de petits travaux de...",
+      "url": "https://www.jemepropose.com/annonces/jardinage/recherche-personne-pour-entretien-jardin+10490727/",
+      "is_remote": false,
+      "remote_confidence": 1.0,
+      "remote_reason": "Keyword detection: Obvious on-site work: jardinage",
       "analyzed_with_llm": false,
       "page": 10
     }

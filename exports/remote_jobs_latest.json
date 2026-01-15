@@ -1,17 +1,17 @@
 {
   "metadata": {
-    "export_date": "2026-01-14 06:38:10",
-    "total_jobs": 3,
+    "export_date": "2026-01-15 06:37:58",
+    "total_jobs": 4,
     "analysis_mode": "LLM-Enhanced"
   },
   "statistics": {
-    "total": 3,
-    "remote": 3,
+    "total": 4,
+    "remote": 4,
     "on_site": 0,
     "remote_percentage": 100.0,
     "llm_used": true,
     "source": "https://www.jemepropose.com/annonces/?offer_type=2&provider_type=1&page=10",
-    "export_date": "2026-01-14 06:38:10"
+    "export_date": "2026-01-15 06:37:58"
   },
   "jobs": [
     {
@@ -31,7 +31,23 @@
       "page": 3
     },
     {
-      "id": "127",
+      "id": "56",
+      "title": "crée site wordpress - 18A",
+      "location": "Dépannage informatique - Pamiers (09100)",
+      "price": "Sur devis",
+      "poster": "ALPEINTRE",
+      "date_posted": "25/12/2025",
+      "description": "réseaux sociaux cherche une personne se connaissant dans création d'un site avec WordPress. un site i...",
+      "full_description": "réseaux sociaux cherche une personne se connaissant dans création d'un site avec WordPress. un site i...",
+      "url": "https://www.jemepropose.com/annonces/depannage-informatique/cree-site-wordpress-18a+10498674/",
+      "is_remote": true,
+      "remote_confidence": 0.9,
+      "remote_reason": "LLM: Création WordPress réalisable entièrement en ligne",
+      "analyzed_with_llm": true,
+      "page": 3
+    },
+    {
+      "id": "126",
       "title": "Creation site internet",
       "location": "Création site internet - Cagnes-sur-Mer (06800)",
       "price": "Gratuit",
@@ -47,7 +63,7 @@
       "page": 7
     },
     {
-      "id": "170",
+      "id": "168",
       "title": "Montage vidéo anniversaire 40 ans – photos + vidéos + musique",
       "location": "Montage vidéo - Brindas (69126)",
       "price": "A définir",
@@ -58,7 +74,7 @@
       "url": "https://www.jemepropose.com/annonces/montage-video/montage-video-anniversaire-40-ans-photos-videos-musique+10494609/",
       "is_remote": true,
       "remote_confidence": 0.95,
-      "remote_reason": "LLM: Montage vidéo entièrement réalisable à distance",
+      "remote_reason": "LLM: Montage vidéo livrable en ligne, aucune présence requise",
       "analyzed_with_llm": true,
       "page": 9
     }

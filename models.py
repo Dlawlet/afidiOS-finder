@@ -12,13 +12,13 @@ class JobListing(BaseModel):
     """Validated job listing model"""
     
     title: str = Field(..., min_length=1, max_length=500, description="Job title")
-    description: str = Field(..., min_length=10, description="Job description")
+    description: str = Field(..., min_length=1, description="Job description")  # Relaxed from 10 to 1
     url: str = Field(..., description="Job posting URL")
     location: str = Field(..., min_length=1, max_length=200, description="Job location/category")
     price: str = Field(default="N/A", max_length=100, description="Job price/rate")
     is_remote: bool = Field(..., description="Whether job is remote")
     remote_confidence: float = Field(..., ge=0.0, le=1.0, description="Confidence score (0.0-1.0)")
-    reason: str = Field(..., min_length=5, max_length=500, description="Classification reason")
+    reason: str = Field(..., min_length=3, max_length=500, description="Classification reason")  # Relaxed from 5 to 3
     scraped_at: Optional[datetime] = Field(default_factory=datetime.now, description="Scrape timestamp")
     
     @field_validator('title', 'description')

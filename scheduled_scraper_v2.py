@@ -239,7 +239,7 @@ def scrape_and_analyze_jobs_incremental(
             job_url = job_data['url']
             
             # Basic detection
-            basic_result = basic_detector.analyze(job_title, job_description, job_location)
+            basic_result = basic_detector.detect_confidence(job_title, job_description, job_location)
             
             # Fetch full description if needed
             full_description = job_description

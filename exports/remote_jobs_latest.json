@@ -1,21 +1,21 @@
 {
   "metadata": {
-    "export_date": "2026-01-16 06:38:23",
-    "total_jobs": 6,
+    "export_date": "2026-01-17 06:35:05",
+    "total_jobs": 3,
     "analysis_mode": "LLM-Enhanced"
   },
   "statistics": {
-    "total": 6,
-    "remote": 6,
+    "total": 3,
+    "remote": 3,
     "on_site": 0,
     "remote_percentage": 100.0,
     "llm_used": true,
     "source": "https://www.jemepropose.com/annonces/?offer_type=2&provider_type=1&page=10",
-    "export_date": "2026-01-16 06:38:23"
+    "export_date": "2026-01-17 06:35:05"
   },
   "jobs": [
     {
-      "id": "56",
+      "id": "58",
       "title": "Recherche personne motivée pour refonte de site web (projet créatif)",
       "location": "Création site internet - Chessy (77700)",
       "price": "A définir",
@@ -26,28 +26,12 @@
       "url": "https://www.jemepropose.com/annonces/creation-site-internet/recherche-personne-motivee-pour-refonte-de-site-web-projet-creatif+10498729/",
       "is_remote": true,
       "remote_confidence": 0.9,
-      "remote_reason": "LLM: Développement web, mission flexible, aucune contrainte de présence",
+      "remote_reason": "LLM: Développement web, aucune contrainte de lieu",
       "analyzed_with_llm": true,
       "page": 3
     },
     {
-      "id": "60",
-      "title": "crée site wordpress - 18A",
-      "location": "Dépannage informatique - Pamiers (09100)",
-      "price": "Sur devis",
-      "poster": "ALPEINTRE",
-      "date_posted": "25/12/2025",
-      "description": "réseaux sociaux cherche une personne se connaissant dans création d'un site avec WordPress. un site i...",
-      "full_description": "réseaux sociaux cherche une personne se connaissant dans création d'un site avec WordPress. un site i...",
-      "url": "https://www.jemepropose.com/annonces/depannage-informatique/cree-site-wordpress-18a+10498674/",
-      "is_remote": true,
-      "remote_confidence": 0.85,
-      "remote_reason": "LLM: Création WordPress réalisable entièrement en ligne",
-      "analyzed_with_llm": true,
-      "page": 3
-    },
-    {
-      "id": "128",
+      "id": "129",
       "title": "Creation site internet",
       "location": "Création site internet - Cagnes-sur-Mer (06800)",
       "price": "Gratuit",
@@ -63,39 +47,7 @@
       "page": 7
     },
     {
-      "id": "130",
-      "title": "Recherche ingénieur du son pour collaboration artistique",
-      "location": "Ingénieur du son - Nantes (44000)",
-      "price": "Partage",
-      "poster": "JALIA muz",
-      "date_posted": "04/11/2025",
-      "description": "Je recherche un ingénieur du son patient, créatif, sensible et ouvert, capable de comprendre la vision d’une artiste intuitive et de...",
-      "full_description": "Numéro de mise en relation Je recherche un ingénieur du son patient, créatif, sensible et ouvert, capable de comprendre la vision d’une artiste intuitive et de transformer la matière brute en quelque chose de fort, sincère et marquant . Autodidacte et intuitive, je compose et chante à l’instinct, sans connaissance du solfège. J’ai besoin d’un ingénieur du son capable de convertir les sons, mélodies et harmonies qui sortent de ma bouche en notes réelles, pour donner vie à ce que j’entends intérieurement. Si tu ressens la musique comme un langage de l’âme et que tu veux construire quelque chose d’authentique, à deux, dans un vrai esprit de création partagée, contacte-moi. ». Je protège mon art comme on protège un secret. Ce projet est encadré et chaque collaboration se fait dans la clarté et le respect. Je ne cherche pas la foule, mais la justesse. J’ai déjà sorti deux clips par le passé. Ce ne sont pas des morceaux qui reflètent mon univers actuel — je prends aujourd’hui une direction beaucoup plus dark pop, plus viscérale. Mais ces titres peuvent te donner une idée de ma voix et de ma sensibilité. C’est ma base, pas mon sommet ✦ Je cherche la bonne alchimie, pas juste une collaboration. ⚡️ .Je crois que certaines rencontres sont écrites dans le son avant d’exister dans la vie. Peut-être que nos fréquences se cherchaient déjà. Je recherche un ingénieur du son patient, créatif, sensible et ouvert, capable de comprendre la vision d’une artiste intuitive et de transformer la matière brute en quelque chose de fort, sincère et marquant . Autodidacte et intuitive, je compose et chante à l’instinct, sans connaissance du solfège. J’ai besoin d’un ingénieur du son capable de convertir les sons, mélodies et harmonies qui sortent de ma bouche en notes réelles, pour donner vie à ce que j’entends intérieurement. Si tu ressens la musique comme un langage de l’âme et que tu veux construire quelque chose d’authentique, à deux, dans un vrai esprit de création partagée, contacte-moi. ». Je protège mon art comme on protège un secret. Ce projet est encadré et chaque collaboration se fait dans la clarté et le respect. Je ne cherche pas la foule, mais la justesse. J’ai déjà sorti deux clips par le passé. Ce ne sont pas des morceaux qui reflètent mon univers actuel — je prends aujourd’hui une direction beaucoup plus dark pop, plus viscérale. Mais ces titres peuvent te donner une idée de ma voix et de ma sensibilité. C’est ma base, pas mon sommet ✦ Je cherche la bonne alchimie, pas juste une collaboration. ⚡️ .Je crois que certaines rencontres sont écrites dans le son avant d’exister dans la vie. Peut-être que nos fréquences se cherchaient déjà. Soyez le premier à déposer un avis sur cette annonce.",
-      "url": "https://www.jemepropose.com/annonces/ingenieur-du-son/recherche-ingenieur-du-son-pour-collaboration-artistique+10496485/",
-      "is_remote": true,
-      "remote_confidence": 0.85,
-      "remote_reason": "LLM: Production audio 100 % numérique, échange de fichiers possible",
-      "analyzed_with_llm": true,
-      "page": 7
-    },
-    {
-      "id": "164",
-      "title": "Recherche Télé secrétaire expérimentée",
-      "location": "Secrétariat - Poitiers (86000)",
-      "price": "20.00 € - De l'heure",
-      "poster": "emploiavenir",
-      "date_posted": "03/10/2025",
-      "description": "Je suis à la recherche d'une personne expérimentée au poste de secrétaire à domicile. Si vous êtes disponible veuillez me contacter pour...",
-      "full_description": "Je suis à la recherche d'une personne expérimentée au poste de secrétaire à domicile. Si vous êtes disponible veuillez me contacter pour plus d'amples informations. Ps/ Pas sérieux s'abstenir Cordialement. Je suis à la recherche d'une personne expérimentée au poste de secrétaire à domicile. Si vous êtes disponible veuillez me contacter pour plus d'amples informations. Ps/ Pas sérieux s'abstenir Cordialement. Soyez le premier à déposer un avis sur cette annonce.",
-      "url": "https://www.jemepropose.com/annonces/secretariat/recherche-tele-secretaire-experimentee+10494841/",
-      "is_remote": true,
-      "remote_confidence": 0.9,
-      "remote_reason": "LLM: Secrétaire à domicile = 100 % télétravail",
-      "analyzed_with_llm": true,
-      "page": 9
-    },
-    {
-      "id": "170",
+      "id": "171",
       "title": "Montage vidéo anniversaire 40 ans – photos + vidéos + musique",
       "location": "Montage vidéo - Brindas (69126)",
       "price": "A définir",

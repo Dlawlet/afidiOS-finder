@@ -1,5 +1,11 @@
 # GitHub Actions - Run scraper dans le cloud
 # PC peut être éteint, GitHub exécute le code automatiquement
+# 
+# Features:
+# - Multi-site scraping (JeMePropose + AlloVoisins)
+# - Intelligent quota management (250 LLM calls/day max)
+# - Incremental scraping (only analyze NEW jobs)
+# - Automatic quota redistribution between sites
 
 name: Daily Job Scraper
 
@@ -29,14 +35,14 @@ jobs:
       - name: Install dependencies
         run: |
           python -m pip install --upgrade pip
-          pip install requests beautifulsoup4 lxml groq spacy
+          pip install -r requirements.txt
           python -m spacy download fr_core_news_sm
       
-      - name: Run scraper
+      - name: Run multi-site scraper with intelligent quota
         env:
           GROQ_API_KEY: ${{ secrets.GROQ_API_KEY }}
         run: |
-          python scheduled_scraper.py
+          python scheduled_scraper_v3.py --sites jemepropose allovoisins --verbose
       
       - name: Commit and push results
         run: |
@@ -48,5 +54,18 @@ jobs:
 # ⚙️ Configuration requise :
 # 1. GitHub → Settings → Secrets and variables → Actions
 # 2. Ajouter: GROQ_API_KEY = votre_clé_groq
+# 
+# 📊 Quota Management:
+# - Default: 250 LLM calls/day (free tier)
+# - 2 sites = 125 calls per site
+# - Cached jobs don't count against quota
+# - Early stopping when quota exhausted
+# 
+# 🌐 Active Sites:
+# - jemepropose.com
+# - allovoisins.com
+# 
+# To add more sites, update the --sites argument:
+# python scheduled_scraper_v3.py --sites jemepropose allovoisins malt comet
 # 3. Settings → Actions → General → Workflow permissions
 #    → Cocher "Read and write permissions"

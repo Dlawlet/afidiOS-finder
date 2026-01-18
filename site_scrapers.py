@@ -509,6 +509,271 @@ class MultiSiteScraper:
                 print(f"  - {site_name}: {len(jobs)} jobs")
         
         return all_jobs
+    
+    def scrape_with_incremental_quota(
+        self, 
+        daily_quota: int,
+        enabled_sites: Optional[List[str]] = None, 
+        max_pages_per_site: Optional[int] = None,
+        incremental_filter_callback = None,
+        lookback_hours: int = 24
+    ) -> tuple:
+        """
+        Intelligent page-by-page scraping with incremental quota management
+        
+        Process:
+        1. For each site, scrape page-by-page
+        2. After each page, apply incremental filtering
+        3. Check NEW jobs against remaining quota
+        4. If quota allows, continue to next page
+        5. If site finishes with quota remaining, pass to next site
+        
+        Args:
+            daily_quota: Total LLM jobs allowed per day (e.g., 250)
+            enabled_sites: List of site names to scrape
+            max_pages_per_site: Hard limit on pages per site (None = unlimited)
+            incremental_filter_callback: Function to filter new vs cached jobs
+            lookback_hours: Hours to look back for incremental filtering
+            
+        Returns:
+            tuple: (all_scraped_jobs, jobs_to_analyze, quota_used)
+        """
+        all_scraped_jobs = []
+        all_jobs_to_analyze = []
+        all_cached_jobs = []  # Track cached jobs separately
+        sites_to_scrape = enabled_sites if enabled_sites else list(self.scrapers.keys())
+        
+        remaining_quota = daily_quota
+        num_sites = len(sites_to_scrape)
+        quota_per_site = daily_quota // num_sites if num_sites > 0 else daily_quota
+        
+        if self.verbose:
+            print(f"\n🌐 Intelligent quota-based scraping")
+            print(f"   Total daily quota: {daily_quota} LLM calls")
+            print(f"   Initial quota per site: {quota_per_site} jobs")
+            print(f"   Sites: {len(sites_to_scrape)}")
+        
+        for site_idx, site_name in enumerate(sites_to_scrape, 1):
+            if site_name not in self.scrapers:
+                self.logger.warning(f"Scraper not found: {site_name}")
+                continue
+            
+            scraper = self.scrapers[site_name]
+            
+            # Calculate quota for this site (redistribute if previous sites didn't use all)
+            sites_remaining = num_sites - site_idx + 1
+            site_quota = remaining_quota // sites_remaining if sites_remaining > 0 else remaining_quota
+            
+            if self.verbose:
+                print(f"\n📡 [{site_idx}/{num_sites}] {site_name.upper()}")
+                print(f"   🎯 Allocated quota: {site_quota} NEW jobs")
+                print(f"   💰 Remaining budget: {remaining_quota}/{daily_quota}")
+            
+            if remaining_quota <= 0:
+                if self.verbose:
+                    print(f"   🛑 No quota remaining, skipping")
+                break
+            
+            try:
+                site_scraped_jobs = []
+                site_new_jobs = []
+                site_cached_jobs = []  # Track cached jobs for this site
+                page_num = 1
+                
+                while True:
+                    # Check page limit
+                    if max_pages_per_site and page_num > max_pages_per_site:
+                        if self.verbose:
+                            print(f"   🛑 Reached page limit ({max_pages_per_site})")
+                        break
+                    
+                    # Check if we've hit site quota
+                    if len(site_new_jobs) >= site_quota:
+                        if self.verbose:
+                            print(f"   ✅ Site quota reached: {len(site_new_jobs)}/{site_quota}")
+                        break
+                    
+                    if self.verbose:
+                        print(f"   📄 Page {page_num} (NEW so far: {len(site_new_jobs)}/{site_quota})")
+                    
+                    # Scrape one page
+                    jobs, has_more = scraper.scrape_page(page_num)
+                    
+                    if not jobs:
+                        if self.verbose:
+                            print(f"      No jobs found")
+                        break
+                    
+                    if self.verbose:
+                        print(f"      Scraped: {len(jobs)} jobs")
+                    
+                    site_scraped_jobs.extend(jobs)
+                    
+                    # Apply incremental filtering to this page
+                    if incremental_filter_callback:
+                        page_new_jobs, page_cached_jobs = incremental_filter_callback(
+                            jobs, 
+                            lookback_hours
+                        )
+                        
+                        if self.verbose:
+                            print(f"      Filter: {len(page_new_jobs)} NEW, {len(page_cached_jobs)} cached")
+                        
+                        # Track cached jobs
+                        site_cached_jobs.extend(page_cached_jobs)
+                        
+                        # Add NEW jobs (respecting site quota)
+                        space_remaining = site_quota - len(site_new_jobs)
+                        jobs_to_add = page_new_jobs[:space_remaining]
+                        site_new_jobs.extend(jobs_to_add)
+                        
+                        if self.verbose and len(jobs_to_add) < len(page_new_jobs):
+                            print(f"      ⚠️  Quota limit: taking {len(jobs_to_add)}/{len(page_new_jobs)} NEW jobs")
+                    else:
+                        # No incremental filtering, count all as new
+                        space_remaining = site_quota - len(site_new_jobs)
+                        jobs_to_add = jobs[:space_remaining]
+                        site_new_jobs.extend(jobs_to_add)
+                    
+                    # Check if we hit quota
+                    if len(site_new_jobs) >= site_quota:
+                        if self.verbose:
+                            print(f"   ✅ Site quota reached after page {page_num}")
+                        break
+                    
+                    # Check if more pages available
+                    if not has_more:
+                        if self.verbose:
+                            print(f"   🏁 No more pages available")
+                        break
+                    
+                    page_num += 1
+                
+                # Update totals
+                all_scraped_jobs.extend(site_scraped_jobs)
+                all_jobs_to_analyze.extend(site_new_jobs)
+                all_cached_jobs.extend(site_cached_jobs)  # Track cached jobs
+                
+                quota_used = len(site_new_jobs)
+                remaining_quota -= quota_used
+                
+                if self.verbose:
+                    print(f"   📊 Site summary:")
+                    print(f"      Total scraped: {len(site_scraped_jobs)} jobs")
+                    print(f"      NEW jobs: {len(site_new_jobs)} (quota used)")
+                    print(f"      Quota remaining: {remaining_quota}/{daily_quota}")
+                
+            except Exception as e:
+                self.logger.error(f"Error scraping {site_name}: {e}")
+                if self.verbose:
+                    print(f"   ❌ Error: {e}")
+        
+        if self.verbose:
+            print(f"\n{'='*60}")
+            print(f"📊 Scraping complete!")
+            print(f"   Total scraped: {len(all_scraped_jobs)} jobs")
+            print(f"   NEW jobs to analyze: {len(all_jobs_to_analyze)}")
+            print(f"   Cached jobs: {len(all_cached_jobs)}")
+            print(f"   Quota used: {daily_quota - remaining_quota}/{daily_quota}")
+            print(f"   Quota remaining: {remaining_quota}")
+            print(f"{'='*60}")
+        
+        return all_scraped_jobs, all_jobs_to_analyze, all_cached_jobs, daily_quota - remaining_quota
+    
+    def scrape_with_quota(self, quota_per_site: int, enabled_sites: Optional[List[str]] = None, max_pages_per_site: Optional[int] = None) -> List[Dict]:
+        """
+        Scrape sites with intelligent quota management
+        
+        Scrapes pages dynamically until:
+        - Quota reached for that site, OR
+        - No more pages available, OR
+        - max_pages_per_site limit reached (if set)
+        
+        Args:
+            quota_per_site: Target number of jobs per site
+            enabled_sites: List of site names to scrape (None = all)
+            max_pages_per_site: Hard limit on pages (None = unlimited, stops at quota)
+            
+        Returns:
+            Unified list of all jobs with 'source' field
+        """
+        all_jobs = []
+        sites_to_scrape = enabled_sites if enabled_sites else list(self.scrapers.keys())
+        
+        if self.verbose:
+            print(f"\n🌐 Scraping {len(sites_to_scrape)} sites with quota-based pagination...")
+        
+        for site_name in sites_to_scrape:
+            if site_name not in self.scrapers:
+                self.logger.warning(f"Scraper not found: {site_name}")
+                continue
+            
+            scraper = self.scrapers[site_name]
+            
+            if self.verbose:
+                print(f"\n📡 {site_name.upper()}")
+                print(f"  🎯 Target quota: {quota_per_site} jobs")
+            
+            try:
+                site_jobs = []
+                page_num = 1
+                
+                while True:
+                    # Check page limit
+                    if max_pages_per_site and page_num > max_pages_per_site:
+                        if self.verbose:
+                            print(f"  🛑 Reached page limit ({max_pages_per_site})")
+                        break
+                    
+                    # Check quota
+                    if len(site_jobs) >= quota_per_site:
+                        if self.verbose:
+                            print(f"  ✅ Quota reached: {len(site_jobs)}/{quota_per_site} jobs")
+                        break
+                    
+                    if self.verbose:
+                        print(f"  📄 {site_name} - Page {page_num} ({len(site_jobs)}/{quota_per_site} jobs)")
+                    
+                    # Scrape page
+                    jobs, has_more = scraper.scrape_page(page_num)
+                    
+                    if not has_more or not jobs:
+                        if self.verbose:
+                            print(f"  🏁 No more jobs available")
+                        break
+                    
+                    site_jobs.extend(jobs)
+                    
+                    if self.verbose:
+                        print(f"     Found {len(jobs)} jobs ({len(site_jobs)} total)")
+                    
+                    page_num += 1
+                
+                # Limit to quota
+                if len(site_jobs) > quota_per_site:
+                    if self.verbose:
+                        print(f"  ✂️  Trimming {len(site_jobs)} jobs to quota {quota_per_site}")
+                    site_jobs = site_jobs[:quota_per_site]
+                
+                all_jobs.extend(site_jobs)
+                
+                if self.verbose:
+                    print(f"  ✅ Total: {len(site_jobs)} jobs from {site_name}")
+                
+            except Exception as e:
+                self.logger.error(f"Error scraping {site_name}: {e}")
+        
+        if self.verbose:
+            print(f"\n📊 Total jobs across all sites: {len(all_jobs)}")
+            # Count per site
+            site_counts = {}
+            for job in all_jobs:
+                site = job.get('source', 'unknown')
+                site_counts[site] = site_counts.get(site, 0) + 1
+            for site_name, count in site_counts.items():
+                print(f"  - {site_name}: {count} jobs")
+        
+        return all_jobs
 
 
 # ===== QUICK TEST =====

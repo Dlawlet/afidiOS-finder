@@ -19,27 +19,36 @@ from datetime import datetime
 import logging
 import argparse
 
+# Free tier LLM quota (jobs per day)
+DAILY_LLM_QUOTA = 250
+
 
 def scrape_multi_site(
     sites=['jemepropose'],
     use_llm=True,
     verbose=False,
-    max_pages=10,
+    max_pages=None,
     incremental=True,
-    lookback_hours=24
+    lookback_hours=24,
+    llm_quota_per_site=None
 ):
     """
-    Multi-site job scraper with incremental support
+    Multi-site job scraper with incremental support and intelligent quota management
     
     Args:
         sites: List of site names to scrape (['jemepropose', 'malt', 'freelance.com', 'comet'])
         use_llm: Whether to use Groq LLM
         verbose: Show detailed progress messages
-        max_pages: Maximum number of pages per site
+        max_pages: Maximum number of pages per site (None = unlimited, stops at quota)
         incremental: Use incremental scraping
         lookback_hours: Hours to consider job as "recent"
+        llm_quota_per_site: LLM quota per site (None = auto-calculate from DAILY_LLM_QUOTA)
     """
     logger = setup_logging(verbose)
+    
+    # Calculate fair share quota per site
+    if llm_quota_per_site is None:
+        llm_quota_per_site = DAILY_LLM_QUOTA // len(sites)
     
     # Track metrics
     metrics = {
@@ -60,19 +69,20 @@ def scrape_multi_site(
         print(f"\n{'='*60}")
         print(f"🚀 Starting MULTI-SITE job scraper - {datetime.now().strftime('%Y-%m-%d %H:%M:%S')}")
         print(f"🌐 Sites: {', '.join(sites)}")
-        print(f"📄 Max {max_pages} pages per site")
+        if max_pages:
+            print(f"📄 Max {max_pages} pages per site")
+        else:
+            print(f"📄 Default: 10 pages per site (quota applied after filtering)")
+        print(f"🎯 LLM quota per site: {llm_quota_per_site} NEW jobs")
+        print(f"🎯 Total LLM budget: {llm_quota_per_site * len(sites)} NEW jobs")
         print(f"♻️  Incremental mode: {'ENABLED' if incremental else 'DISABLED'}")
         if incremental:
             print(f"🕐 Lookback: {lookback_hours}h")
         print(f"{'='*60}\n")
     
-    logger.info(f"Starting multi-site scraper - sites: {sites}, pages: {max_pages}, incremental: {incremental}")
+    logger.info(f"Starting multi-site scraper - sites: {sites}, total_quota: {llm_quota_per_site * len(sites)}, incremental: {incremental}")
     
     try:
-        # ===== PHASE 1: SCRAPE ALL SITES =====
-        if verbose:
-            print(f"\n📡 Phase 1: Scraping job listings from {len(sites)} site(s)...")
-        
         # Initialize multi-site scraper
         multi_scraper = MultiSiteScraper(verbose=verbose)
         
@@ -87,63 +97,43 @@ def scrape_multi_site(
         
         for site_name in sites:
             if site_name in scraper_map:
-                multi_scraper.register_scraper(scraper_map[site_name](verbose=verbose))
+                multi_scraper.register_scraper(scraper_map[site_name](verbose=False))  # Turn off per-page verbosity
             else:
                 logger.warning(f"Unknown site: {site_name}")
         
-        # Scrape all sites
-        scraped_jobs = multi_scraper.scrape_all_sites_unified(
+        # ===== PHASE 1 + 2: INTELLIGENT SCRAPING WITH QUOTA =====
+        # Scrape page-by-page with incremental filtering and quota management
+        if verbose:
+            print(f"\n� Phase 1+2: Intelligent scraping with quota management...")
+        
+        # Setup incremental filter callback
+        incremental_scraper = IncrementalScraper(verbose=False) if incremental else None
+        
+        def incremental_filter_callback(jobs, lookback_hours):
+            """Callback to filter jobs incrementally"""
+            if incremental_scraper:
+                return incremental_scraper.filter_jobs_for_analysis(jobs, lookback_hours)
+            else:
+                return jobs, []  # All jobs are new if no incremental
+        
+        # Scrape with intelligent quota management
+        total_daily_quota = llm_quota_per_site * len(sites)
+        scraped_jobs, jobs_to_analyze, jobs_from_cache, quota_used = multi_scraper.scrape_with_incremental_quota(
+            daily_quota=total_daily_quota,
+            enabled_sites=sites,
             max_pages_per_site=max_pages,
-            enabled_sites=sites
+            incremental_filter_callback=incremental_filter_callback if incremental else None,
+            lookback_hours=lookback_hours
         )
         
         metrics['jobs_scraped'] = len(scraped_jobs)
+        metrics['new_jobs'] = len(jobs_to_analyze)
+        metrics['cached_jobs'] = len(jobs_from_cache)
         
         # Track per-site statistics
         for site in sites:
             site_jobs = [j for j in scraped_jobs if j.get('source') == site]
             metrics['sites_scraped'][site] = len(site_jobs)
-        
-        if verbose:
-            print(f"\n📊 Scraped {len(scraped_jobs)} total jobs")
-            for site, count in metrics['sites_scraped'].items():
-                print(f"  - {site}: {count} jobs")
-        
-        # ===== PHASE 2: INCREMENTAL FILTERING =====
-        incremental_scraper = IncrementalScraper(verbose=verbose) if incremental else None
-        
-        if incremental and incremental_scraper:
-            if verbose:
-                print(f"\n♻️  Phase 2: Incremental filtering...")
-            
-            jobs_to_analyze, jobs_from_cache = incremental_scraper.filter_jobs_for_analysis(
-                scraped_jobs,
-                lookback_hours=lookback_hours
-            )
-            
-            incremental_stats = incremental_scraper.get_stats(
-                scraped_jobs,
-                jobs_to_analyze,
-                jobs_from_cache
-            )
-            
-            metrics['new_jobs'] = len(jobs_to_analyze)
-            metrics['cached_jobs'] = len(jobs_from_cache)
-            
-            if verbose:
-                print(f"\n📊 Incremental Statistics:")
-                print(f"   Total jobs scraped: {len(scraped_jobs)}")
-                print(f"   Jobs to analyze: {len(jobs_to_analyze)} (NEW/CHANGED)")
-                print(f"   Jobs from cache: {len(jobs_from_cache)} (RECENT)")
-                print(f"   Reduction: {incremental_stats['reduction_percentage']:.1f}%")
-                print(f"   Time saved: ~{incremental_stats['estimated_time_saved_seconds']}s")
-                print(f"   API calls saved: {incremental_stats['estimated_api_calls_saved']}")
-            
-            logger.info(f"Incremental filtering: {len(jobs_to_analyze)} to analyze, {len(jobs_from_cache)} from cache")
-        else:
-            jobs_to_analyze = scraped_jobs
-            jobs_from_cache = []
-            metrics['new_jobs'] = len(jobs_to_analyze)
         
         # ===== PHASE 3: ANALYZE JOBS =====
         if verbose:
@@ -365,12 +355,14 @@ def scrape_multi_site(
 
 
 if __name__ == '__main__':
-    parser = argparse.ArgumentParser(description='Multi-Site Job Scraper with Incremental Support')
+    parser = argparse.ArgumentParser(description='Multi-Site Job Scraper with Intelligent Quota Management')
     parser.add_argument('--sites', nargs='+', default=['jemepropose'],
                        choices=['jemepropose', 'malt', 'freelance.com', 'comet', 'allovoisins'],
                        help='Sites to scrape (default: jemepropose)')
-    parser.add_argument('--pages', type=int, default=10,
-                       help='Max pages per site (default: 10)')
+    parser.add_argument('--pages', type=int, default=None,
+                       help='Max pages per site (default: None = unlimited, stops at quota)')
+    parser.add_argument('--quota', type=int, default=None,
+                       help=f'LLM quota per site (default: {DAILY_LLM_QUOTA} / num_sites)')
     parser.add_argument('--no-llm', action='store_true',
                        help='Disable LLM analysis (use NLP only)')
     parser.add_argument('--verbose', action='store_true',
@@ -388,5 +380,6 @@ if __name__ == '__main__':
         verbose=args.verbose,
         max_pages=args.pages,
         incremental=not args.no_incremental,
-        lookback_hours=args.lookback
+        lookback_hours=args.lookback,
+        llm_quota_per_site=args.quota
     )

@@ -13,7 +13,7 @@ from job_exporter import JobExporter
 from job_helpers import JobDescriptionFetcher, BasicRemoteDetector
 from incremental_scraper import IncrementalScraper
 from models import JobListing, validate_job_data, ScraperMetrics
-from site_scrapers import MultiSiteScraper, JeMeProposeScraper, MaltScraper, FreelanceComScraper, CometScraper
+from site_scrapers import MultiSiteScraper, JeMeProposeScraper, MaltScraper, FreelanceComScraper, CometScraper, AlloVoisinsScraper
 import json
 from datetime import datetime
 import logging
@@ -82,6 +82,7 @@ def scrape_multi_site(
             'malt': MaltScraper,
             'freelance.com': FreelanceComScraper,
             'comet': CometScraper,
+            'allovoisins': AlloVoisinsScraper,
         }
         
         for site_name in sites:
@@ -188,7 +189,16 @@ def scrape_multi_site(
                         stats['full_description_fetched'] += 1
                 
                 # Analyze with LLM
-                result = llm_analyzer.analyze_job(job_title, full_description, job_location)
+                analysis = llm_analyzer.analyze_with_groq(job_title, full_description, job_location, job_price)
+                
+                # Use analysis result
+                result = {
+                    'is_remote': analysis.get('is_remote', False),
+                    'confidence_score': analysis.get('remote_confidence', 0.5),
+                    'reason': analysis.get('reason', 'LLM analysis'),
+                    'confidence': 'HIGH' if analysis.get('remote_confidence', 0) > 0.8 else 'MEDIUM'
+                }
+                
                 stats['analyzed_with_llm'] += 1
                 metrics['llm_calls'] += 1
             else:
@@ -357,7 +367,7 @@ def scrape_multi_site(
 if __name__ == '__main__':
     parser = argparse.ArgumentParser(description='Multi-Site Job Scraper with Incremental Support')
     parser.add_argument('--sites', nargs='+', default=['jemepropose'],
-                       choices=['jemepropose', 'malt', 'freelance.com', 'comet'],
+                       choices=['jemepropose', 'malt', 'freelance.com', 'comet', 'allovoisins'],
                        help='Sites to scrape (default: jemepropose)')
     parser.add_argument('--pages', type=int, default=10,
                        help='Max pages per site (default: 10)')

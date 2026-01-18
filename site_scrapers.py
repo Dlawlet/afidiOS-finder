@@ -345,6 +345,90 @@ class CometScraper(BaseSiteScraper):
         return jobs
 
 
+class AlloVoisinsScraper(BaseSiteScraper):
+    """Scraper for allovoisins.com - Job rental/services platform"""
+    
+    @property
+    def site_name(self) -> str:
+        return "allovoisins"
+    
+    @property
+    def base_url(self) -> str:
+        # Clean base URL without tracking parameters
+        return "https://www.allovoisins.com/r/-3/0/33908"
+    
+    def build_page_url(self, page_num: int) -> str:
+        # URL pattern: /r/-3/0/33908/{page}/Job/location-vente
+        # Page 0 = first page (0-indexed)
+        page_index = page_num - 1
+        return f"{self.base_url}/{page_index}/Job/location-vente"
+    
+    def extract_jobs_from_page(self, soup: BeautifulSoup, page_url: str) -> List[Dict]:
+        jobs = []
+        
+        # AlloVoisins uses various possible selectors
+        # Try multiple patterns to find job cards
+        job_cards = soup.find_all('article', class_='job-card') or \
+                   soup.find_all('div', class_='job-item') or \
+                   soup.find_all('div', class_='listing-item') or \
+                   soup.find_all('article', class_='listing') or \
+                   soup.find_all('div', attrs={'data-job-id': True}) or \
+                   soup.find_all('a', class_='job-link')
+        
+        # If no specific cards found, try generic article/div containers
+        if not job_cards:
+            job_cards = soup.find_all('article') or soup.find_all('div', class_='card')
+        
+        for card in job_cards:
+            # Extract job URL
+            link_tag = card.find('a', href=True)
+            if not link_tag and card.name == 'a':
+                link_tag = card
+            job_url = urljoin(page_url, link_tag['href']) if link_tag else 'N/A'
+            
+            # Extract title (try multiple selectors)
+            title_tag = card.find('h2') or \
+                       card.find('h3') or \
+                       card.find('h4') or \
+                       card.find(class_='title') or \
+                       card.find(class_='job-title') or \
+                       card.find(class_='listing-title')
+            job_title = title_tag.get_text(strip=True) if title_tag else 'N/A'
+            
+            # Skip if no valid title
+            if job_title == 'N/A' or len(job_title) < 3:
+                continue
+            
+            # Extract description
+            desc_tag = card.find('p', class_='description') or \
+                      card.find('div', class_='description') or \
+                      card.find('p', class_='excerpt') or \
+                      card.find('div', class_='content')
+            job_description = desc_tag.get_text(strip=True) if desc_tag else 'N/A'
+            
+            # Extract location
+            location_tag = card.find(class_='location') or \
+                          card.find('span', class_='city') or \
+                          card.find(class_='address')
+            job_location = location_tag.get_text(strip=True) if location_tag else 'France'
+            
+            # Extract price
+            price_tag = card.find(class_='price') or \
+                       card.find(class_='rate') or \
+                       card.find('span', string=lambda s: s and '€' in s)
+            job_price = price_tag.get_text(strip=True) if price_tag else 'N/A'
+            
+            jobs.append({
+                'url': job_url,
+                'title': job_title,
+                'description': job_description,
+                'location': job_location,
+                'price': job_price,
+            })
+        
+        return jobs
+
+
 class MultiSiteScraper:
     """
     Orchestrator for scraping multiple job sites
@@ -440,6 +524,7 @@ if __name__ == '__main__':
     
     # Register scrapers
     multi_scraper.register_scraper(JeMeProposeScraper(verbose=True))
+    multi_scraper.register_scraper(AlloVoisinsScraper(verbose=True))  # NEW!
     # multi_scraper.register_scraper(MaltScraper(verbose=True))  # Uncomment when ready
     # multi_scraper.register_scraper(FreelanceComScraper(verbose=True))
     # multi_scraper.register_scraper(CometScraper(verbose=True))

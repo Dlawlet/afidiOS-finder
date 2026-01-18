@@ -1,21 +1,21 @@
 {
   "metadata": {
-    "export_date": "2026-01-11 11:20:57",
-    "total_jobs": 5,
+    "export_date": "2026-01-17 06:35:05",
+    "total_jobs": 3,
     "analysis_mode": "LLM-Enhanced"
   },
   "statistics": {
-    "total": 5,
-    "remote": 5,
+    "total": 3,
+    "remote": 3,
     "on_site": 0,
     "remote_percentage": 100.0,
     "llm_used": true,
     "source": "https://www.jemepropose.com/annonces/?offer_type=2&provider_type=1&page=10",
-    "export_date": "2026-01-11 11:20:57"
+    "export_date": "2026-01-17 06:35:05"
   },
   "jobs": [
     {
-      "id": "38",
+      "id": "58",
       "title": "Recherche personne motivée pour refonte de site web (projet créatif)",
       "location": "Création site internet - Chessy (77700)",
       "price": "A définir",
@@ -28,10 +28,10 @@
       "remote_confidence": 0.9,
       "remote_reason": "LLM: Développement web, aucune contrainte de lieu",
       "analyzed_with_llm": true,
-      "page": 2
+      "page": 3
     },
     {
-      "id": "119",
+      "id": "129",
       "title": "Creation site internet",
       "location": "Création site internet - Cagnes-sur-Mer (06800)",
       "price": "Gratuit",
@@ -42,44 +42,12 @@
       "url": "https://www.jemepropose.com/annonces/creation-site-internet/creation-site-internet+10496507/",
       "is_remote": true,
       "remote_confidence": 0.95,
-      "remote_reason": "LLM: Création site web seul travail, livrable en ligne",
+      "remote_reason": "LLM: Développement site web entièrement réalisable à distance",
       "analyzed_with_llm": true,
-      "page": 6
-    },
-    {
-      "id": "123",
-      "title": "Cours de français langue étrangère (FLE) – préparation DELF B2﻿ / DALF C1﻿",
-      "location": "Formations à distance - A Distance",
-      "price": "A définir",
-      "poster": "SophieFLE",
-      "date_posted": "01/11/2025",
-      "description": "Formatrice diplômée Master 2 en didactique du FLE, avec près de 20 ans d’expérience. J’offre un accompagnement personnalisé pour réussir...",
-      "full_description": "Formatrice diplômée Master 2 en didactique du FLE, avec près de 20 ans d’expérience. J’offre un accompagnement personnalisé pour réussir...",
-      "url": "https://www.jemepropose.com/annonces/formations-a-distance/cours-de-francais-langue-etrangere-fle-preparation-delf-b2-dalf-c1+10496361/",
-      "is_remote": true,
-      "remote_confidence": 1.0,
-      "remote_reason": "Keyword detection: Keyword: à distance",
-      "analyzed_with_llm": false,
       "page": 7
     },
     {
-      "id": "141",
-      "title": "Secrétariat à distance",
-      "location": "Secrétariat - Limoges-Fourches (77550)",
-      "price": "A définir",
-      "poster": "Tess@secrétariat",
-      "date_posted": "20/10/2025",
-      "description": "Vous recherchez un service de secrétariat à distance lors de vos vacances, vous avez un surplus de travail ou tout simplement vous souhaitez...",
-      "full_description": "Vous recherchez un service de secrétariat à distance lors de vos vacances, vous avez un surplus de travail ou tout simplement vous souhaitez...",
-      "url": "https://www.jemepropose.com/annonces/secretariat/secretariat-a-distance+10495683/",
-      "is_remote": true,
-      "remote_confidence": 1.0,
-      "remote_reason": "Keyword detection: Keyword: à distance",
-      "analyzed_with_llm": false,
-      "page": 8
-    },
-    {
-      "id": "162",
+      "id": "171",
       "title": "Montage vidéo anniversaire 40 ans – photos + vidéos + musique",
       "location": "Montage vidéo - Brindas (69126)",
       "price": "A définir",
@@ -90,7 +58,7 @@
       "url": "https://www.jemepropose.com/annonces/montage-video/montage-video-anniversaire-40-ans-photos-videos-musique+10494609/",
       "is_remote": true,
       "remote_confidence": 0.95,
-      "remote_reason": "LLM: Montage vidéo livrable en ligne sans déplacement",
+      "remote_reason": "LLM: Montage vidéo livrable en ligne, aucune présence requise",
       "analyzed_with_llm": true,
       "page": 9
     }

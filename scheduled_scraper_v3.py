@@ -196,6 +196,11 @@ def scrape_multi_site(
                 result = basic_result
                 stats['high_confidence_skip'] += 1
             
+            # Track confidence distribution
+            confidence_level = result.get('confidence', 'MEDIUM').lower()
+            if confidence_level in metrics['confidence_distribution']:
+                metrics['confidence_distribution'][confidence_level] += 1
+            
             # Create job object
             job_object = {
                 'title': job_title,

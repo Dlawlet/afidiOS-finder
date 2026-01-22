@@ -1,17 +1,17 @@
 {
   "metadata": {
-    "export_date": "2026-01-22 18:29:33",
-    "total_jobs": 0,
+    "export_date": "2026-01-22 22:57:36",
+    "total_jobs": 3,
     "analysis_mode": "LLM-Enhanced",
     "history_stats": {
-      "total_jobs_seen": 230,
-      "remote_jobs_seen": 0,
-      "last_update": "2026-01-22 18:29:33"
+      "total_jobs_seen": 464,
+      "remote_jobs_seen": 3,
+      "last_update": "2026-01-22 22:57:36"
     }
   },
   "statistics": {
-    "total": 0,
-    "remote": 0,
+    "total": 3,
+    "remote": 3,
     "on_site": 0,
     "remote_percentage": 100.0,
     "llm_used": true,
@@ -19,7 +19,41 @@
       "jemepropose",
       "allovoisins"
     ],
-    "export_date": "2026-01-22 18:29:33"
+    "export_date": "2026-01-22 22:57:36"
   },
-  "jobs": []
+  "jobs": [
+    {
+      "title": "Creation site internet",
+      "description": "N/A",
+      "url": "https://www.jemepropose.com/annonces/creation-site-internet/creation-site-internet+10496507/",
+      "location": "Création site internet - Cagnes-sur-Mer (06800)",
+      "price": "Gratuit",
+      "is_remote": true,
+      "remote_confidence": 0.9,
+      "reason": "LLM: Développement web réalisable entièrement en ligne",
+      "scraped_at": "2026-01-22 22:49:12.724869"
+    },
+    {
+      "title": "Recherche Télé secrétaire expérimentée",
+      "description": "N/A",
+      "url": "https://www.jemepropose.com/annonces/secretariat/recherche-tele-secretaire-experimentee+10494841/",
+      "location": "Secrétariat - Poitiers (86000)",
+      "price": "20.00 € - De l'heure",
+      "is_remote": true,
+      "remote_confidence": 0.9,
+      "reason": "LLM: Secrétaire à domicile implique télétravail total",
+      "scraped_at": "2026-01-22 22:50:31.661575"
+    },
+    {
+      "title": "Montage vidéo anniversaire 40 ans – photos + vidéos + musique",
+      "description": "N/A",
+      "url": "https://www.jemepropose.com/annonces/montage-video/montage-video-anniversaire-40-ans-photos-videos-musique+10494609/",
+      "location": "Montage vidéo - Brindas (69126)",
+      "price": "A définir",
+      "is_remote": true,
+      "remote_confidence": 0.95,
+      "reason": "LLM: Montage vidéo réalisable 100 % en ligne",
+      "scraped_at": "2026-01-22 22:50:56.397772"
+    }
+  ]
 }

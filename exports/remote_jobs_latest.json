@@ -1,12 +1,12 @@
 {
   "metadata": {
-    "export_date": "2026-01-23 08:24:47",
+    "export_date": "2026-01-23 15:33:10",
     "total_jobs": 3,
     "analysis_mode": "LLM-Enhanced",
     "history_stats": {
-      "total_jobs_seen": 705,
+      "total_jobs_seen": 836,
       "remote_jobs_seen": 3,
-      "last_update": "2026-01-23 08:24:47"
+      "last_update": "2026-01-23 15:33:10"
     }
   },
   "statistics": {
@@ -19,7 +19,7 @@
       "jemepropose",
       "allovoisins"
     ],
-    "export_date": "2026-01-23 08:24:47"
+    "export_date": "2026-01-23 15:33:10"
   },
   "jobs": [
     {

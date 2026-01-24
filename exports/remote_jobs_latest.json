@@ -1,17 +1,17 @@
 {
   "metadata": {
-    "export_date": "2026-01-23 15:33:10",
-    "total_jobs": 3,
+    "export_date": "2026-01-24 06:34:22",
+    "total_jobs": 4,
     "analysis_mode": "LLM-Enhanced",
     "history_stats": {
-      "total_jobs_seen": 836,
-      "remote_jobs_seen": 3,
-      "last_update": "2026-01-23 15:33:10"
+      "total_jobs_seen": 962,
+      "remote_jobs_seen": 4,
+      "last_update": "2026-01-24 06:34:22"
     }
   },
   "statistics": {
-    "total": 3,
-    "remote": 3,
+    "total": 4,
+    "remote": 4,
     "on_site": 0,
     "remote_percentage": 100.0,
     "llm_used": true,
@@ -19,9 +19,20 @@
       "jemepropose",
       "allovoisins"
     ],
-    "export_date": "2026-01-23 15:33:10"
+    "export_date": "2026-01-24 06:34:22"
   },
   "jobs": [
+    {
+      "title": "Offre Emploie Teleprospection BtoC",
+      "description": "N/A",
+      "url": "https://www.jemepropose.com/annonces/teleprospecteur/offre-emploie-teleprospection-btoc+10358167/",
+      "location": "Téléprospecteur - Bordeaux (33000)",
+      "price": "Sur devis",
+      "is_remote": true,
+      "remote_confidence": 0.9,
+      "reason": "LLM: Téléprospection classique, pas de déplacement requis",
+      "scraped_at": "2026-01-24 06:31:16.169341"
+    },
     {
       "url": "https://www.jemepropose.com/annonces/creation-site-internet/creation-site-internet+10496507/",
       "title": "Creation site internet",
@@ -31,7 +42,7 @@
       "source": "jemepropose",
       "is_remote": true,
       "remote_confidence": 0.99,
-      "reason": "Cached from history: RECENT (seen 7h ago)"
+      "reason": "Cached from history: RECENT (seen 14h ago)"
     },
     {
       "url": "https://www.jemepropose.com/annonces/secretariat/recherche-tele-secretaire-experimentee+10494841/",
@@ -42,7 +53,7 @@
       "source": "jemepropose",
       "is_remote": true,
       "remote_confidence": 0.99,
-      "reason": "Cached from history: RECENT (seen 7h ago)"
+      "reason": "Cached from history: RECENT (seen 14h ago)"
     },
     {
       "url": "https://www.jemepropose.com/annonces/montage-video/montage-video-anniversaire-40-ans-photos-videos-musique+10494609/",
@@ -53,7 +64,7 @@
       "source": "jemepropose",
       "is_remote": true,
       "remote_confidence": 0.99,
-      "reason": "Cached from history: RECENT (seen 7h ago)"
+      "reason": "Cached from history: RECENT (seen 14h ago)"
     }
   ]
 }

@@ -1,17 +1,17 @@
 {
   "metadata": {
-    "export_date": "2026-01-22 18:29:33",
-    "total_jobs": 0,
+    "export_date": "2026-01-24 06:34:22",
+    "total_jobs": 4,
     "analysis_mode": "LLM-Enhanced",
     "history_stats": {
-      "total_jobs_seen": 230,
-      "remote_jobs_seen": 0,
-      "last_update": "2026-01-22 18:29:33"
+      "total_jobs_seen": 962,
+      "remote_jobs_seen": 4,
+      "last_update": "2026-01-24 06:34:22"
     }
   },
   "statistics": {
-    "total": 0,
-    "remote": 0,
+    "total": 4,
+    "remote": 4,
     "on_site": 0,
     "remote_percentage": 100.0,
     "llm_used": true,
@@ -19,7 +19,52 @@
       "jemepropose",
       "allovoisins"
     ],
-    "export_date": "2026-01-22 18:29:33"
+    "export_date": "2026-01-24 06:34:22"
   },
-  "jobs": []
+  "jobs": [
+    {
+      "title": "Offre Emploie Teleprospection BtoC",
+      "description": "N/A",
+      "url": "https://www.jemepropose.com/annonces/teleprospecteur/offre-emploie-teleprospection-btoc+10358167/",
+      "location": "Téléprospecteur - Bordeaux (33000)",
+      "price": "Sur devis",
+      "is_remote": true,
+      "remote_confidence": 0.9,
+      "reason": "LLM: Téléprospection classique, pas de déplacement requis",
+      "scraped_at": "2026-01-24 06:31:16.169341"
+    },
+    {
+      "url": "https://www.jemepropose.com/annonces/creation-site-internet/creation-site-internet+10496507/",
+      "title": "Creation site internet",
+      "description": "N/A",
+      "location": "Création site internet - Cagnes-sur-Mer (06800)",
+      "price": "Gratuit",
+      "source": "jemepropose",
+      "is_remote": true,
+      "remote_confidence": 0.99,
+      "reason": "Cached from history: RECENT (seen 14h ago)"
+    },
+    {
+      "url": "https://www.jemepropose.com/annonces/secretariat/recherche-tele-secretaire-experimentee+10494841/",
+      "title": "Recherche Télé secrétaire expérimentée",
+      "description": "N/A",
+      "location": "Secrétariat - Poitiers (86000)",
+      "price": "20.00 € - De l'heure",
+      "source": "jemepropose",
+      "is_remote": true,
+      "remote_confidence": 0.99,
+      "reason": "Cached from history: RECENT (seen 14h ago)"
+    },
+    {
+      "url": "https://www.jemepropose.com/annonces/montage-video/montage-video-anniversaire-40-ans-photos-videos-musique+10494609/",
+      "title": "Montage vidéo anniversaire 40 ans – photos + vidéos + musique",
+      "description": "N/A",
+      "location": "Montage vidéo - Brindas (69126)",
+      "price": "A définir",
+      "source": "jemepropose",
+      "is_remote": true,
+      "remote_confidence": 0.99,
+      "reason": "Cached from history: RECENT (seen 14h ago)"
+    }
+  ]
 }

@@ -168,6 +168,9 @@ def scrape_multi_site(
             # Basic detection
             basic_result = basic_detector.detect_confidence(job_title, job_description, job_location)
             
+            # Track which description we'll use for export
+            final_description = job_description
+            
             # Analyze based on confidence
             if basic_result['confidence'] == 'LOW':
                 # Fetch full description if needed
@@ -176,6 +179,7 @@ def scrape_multi_site(
                     better_desc = description_fetcher.fetch_full_description(job_url)
                     if better_desc and len(better_desc) > len(job_description):
                         full_description = better_desc
+                        final_description = better_desc  # Use full description for export
                         stats['full_description_fetched'] += 1
                 
                 # Analyze with LLM
@@ -204,7 +208,7 @@ def scrape_multi_site(
             # Create job object
             job_object = {
                 'title': job_title,
-                'description': job_description,
+                'description': final_description,  # Use the better description if fetched
                 'url': job_url,
                 'location': job_location,
                 'price': job_price,

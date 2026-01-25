@@ -1,12 +1,12 @@
 {
   "metadata": {
-    "export_date": "2026-01-24 06:34:22",
+    "export_date": "2026-01-25 00:01:37",
     "total_jobs": 4,
     "analysis_mode": "LLM-Enhanced",
     "history_stats": {
-      "total_jobs_seen": 962,
+      "total_jobs_seen": 1097,
       "remote_jobs_seen": 4,
-      "last_update": "2026-01-24 06:34:22"
+      "last_update": "2026-01-25 00:01:37"
     }
   },
   "statistics": {
@@ -19,20 +19,9 @@
       "jemepropose",
       "allovoisins"
     ],
-    "export_date": "2026-01-24 06:34:22"
+    "export_date": "2026-01-25 00:01:37"
   },
   "jobs": [
-    {
-      "title": "Offre Emploie Teleprospection BtoC",
-      "description": "N/A",
-      "url": "https://www.jemepropose.com/annonces/teleprospecteur/offre-emploie-teleprospection-btoc+10358167/",
-      "location": "Téléprospecteur - Bordeaux (33000)",
-      "price": "Sur devis",
-      "is_remote": true,
-      "remote_confidence": 0.9,
-      "reason": "LLM: Téléprospection classique, pas de déplacement requis",
-      "scraped_at": "2026-01-24 06:31:16.169341"
-    },
     {
       "url": "https://www.jemepropose.com/annonces/creation-site-internet/creation-site-internet+10496507/",
       "title": "Creation site internet",
@@ -42,7 +31,7 @@
       "source": "jemepropose",
       "is_remote": true,
       "remote_confidence": 0.99,
-      "reason": "Cached from history: RECENT (seen 14h ago)"
+      "reason": "Cached from history: RECENT (seen 17h ago)"
     },
     {
       "url": "https://www.jemepropose.com/annonces/secretariat/recherche-tele-secretaire-experimentee+10494841/",
@@ -53,7 +42,7 @@
       "source": "jemepropose",
       "is_remote": true,
       "remote_confidence": 0.99,
-      "reason": "Cached from history: RECENT (seen 14h ago)"
+      "reason": "Cached from history: RECENT (seen 17h ago)"
     },
     {
       "url": "https://www.jemepropose.com/annonces/montage-video/montage-video-anniversaire-40-ans-photos-videos-musique+10494609/",
@@ -64,7 +53,18 @@
       "source": "jemepropose",
       "is_remote": true,
       "remote_confidence": 0.99,
-      "reason": "Cached from history: RECENT (seen 14h ago)"
+      "reason": "Cached from history: RECENT (seen 17h ago)"
+    },
+    {
+      "url": "https://www.jemepropose.com/annonces/teleprospecteur/offre-emploie-teleprospection-btoc+10358167/",
+      "title": "Offre Emploie Teleprospection BtoC",
+      "description": "N/A",
+      "location": "Téléprospecteur - Bordeaux (33000)",
+      "price": "Sur devis",
+      "source": "jemepropose",
+      "is_remote": true,
+      "remote_confidence": 0.99,
+      "reason": "Cached from history: RECENT (seen 17h ago)"
     }
   ]
 }

@@ -101,10 +101,23 @@ class IncrementalScraper:
                 job['remote_confidence'] = 0.99  # High confidence from history
                 job['reason'] = f"Cached from history: {reason}"
                 
-                # Restore description from history if available
+                # Restore additional fields from history if available
                 cached_description = job_history.get('description')
                 if cached_description and cached_description != 'N/A':
                     job['description'] = cached_description
+                
+                # Restore analysis fields
+                job['confidence'] = job_history.get('confidence', 'HIGH')
+                job['classification'] = job_history.get('classification', 'cached')
+                job['reasoning'] = job_history.get('reasoning', 'Restored from cache')
+                job['description_source'] = job_history.get('description_source', 'listing_page')
+                job['was_reanalyzed'] = False
+                
+                # Fields not available from listing pages
+                job['id'] = 'N/A'
+                job['category'] = 'N/A'
+                job['poster'] = 'N/A'
+                job['date_posted'] = 'N/A'
                 
                 jobs_to_skip.append(job)
                 

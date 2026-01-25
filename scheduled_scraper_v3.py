@@ -165,21 +165,31 @@ def scrape_multi_site(
             job_url = job_data['url']
             job_source = job_data['source']
             
+            # Try to get a better description upfront if listing description is missing
+            if job_description == 'N/A' or len(job_description) < 50:
+                if job_url != 'N/A':
+                    better_desc = description_fetcher.fetch_full_description(job_url)
+                    if better_desc and len(better_desc) > len(job_description):
+                        job_description = better_desc
+                        stats['full_description_fetched'] += 1
+            
             # Basic detection
             basic_result = basic_detector.detect_confidence(job_title, job_description, job_location)
             
             # Track which description we'll use for export
             final_description = job_description
+            description_source = 'listing_page' if job_description == job_data.get('description', 'N/A') else 'detail_page'
             
             # Analyze based on confidence
             if basic_result['confidence'] == 'LOW':
-                # Fetch full description if needed
+                # Fetch full description if still needed
                 full_description = job_description
-                if job_url != 'N/A':
+                if job_url != 'N/A' and (job_description == 'N/A' or len(job_description) < 100):
                     better_desc = description_fetcher.fetch_full_description(job_url)
                     if better_desc and len(better_desc) > len(job_description):
                         full_description = better_desc
                         final_description = better_desc  # Use full description for export
+                        description_source = 'detail_page'
                         stats['full_description_fetched'] += 1
                 
                 # Analyze with LLM
@@ -205,17 +215,27 @@ def scrape_multi_site(
             if confidence_level in metrics['confidence_distribution']:
                 metrics['confidence_distribution'][confidence_level] += 1
             
-            # Create job object
+            # Create job object with all required fields
             job_object = {
+                'id': 'N/A',  # Not available from listing pages
                 'title': job_title,
                 'description': final_description,  # Use the better description if fetched
                 'url': job_url,
                 'location': job_location,
+                'category': 'N/A',  # Not available from listing pages
                 'price': job_price,
+                'poster': 'N/A',  # Not available from listing pages
+                'date_posted': 'N/A',  # Not available from listing pages
                 'source': job_source,
                 'is_remote': result['is_remote'],
                 'remote_confidence': result.get('confidence_score', 0.8 if result['confidence'] == 'HIGH' else 0.5),
-                'reason': result['reason']
+                'reason': result['reason'],
+                # Additional fields for CSV export
+                'confidence': result.get('confidence', 'MEDIUM'),
+                'reasoning': result['reason'],
+                'classification': 'remote' if result['is_remote'] else 'on-site',
+                'description_source': description_source,
+                'was_reanalyzed': False  # Only true if we re-analyze an existing job
             }
             
             # Validate with Pydantic

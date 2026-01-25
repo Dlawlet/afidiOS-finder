@@ -11,14 +11,31 @@ from datetime import datetime
 class JobListing(BaseModel):
     """Validated job listing model"""
     
+    # Core fields
     title: str = Field(..., min_length=1, max_length=500, description="Job title")
     description: str = Field(..., min_length=1, description="Job description")  # Relaxed from 10 to 1
     url: str = Field(..., description="Job posting URL")
     location: str = Field(..., min_length=1, max_length=200, description="Job location/category")
     price: str = Field(default="N/A", max_length=100, description="Job price/rate")
+    
+    # Analysis fields
     is_remote: bool = Field(..., description="Whether job is remote")
     remote_confidence: float = Field(..., ge=0.0, le=1.0, description="Confidence score (0.0-1.0)")
     reason: str = Field(..., min_length=3, max_length=500, description="Classification reason")  # Relaxed from 5 to 3
+    
+    # Additional CSV export fields
+    id: str = Field(default="N/A", description="Job ID (if available)")
+    category: str = Field(default="N/A", description="Job category")
+    poster: str = Field(default="N/A", description="Job poster/employer")
+    date_posted: str = Field(default="N/A", description="Date job was posted")
+    confidence: str = Field(default="MEDIUM", description="Confidence level (HIGH/MEDIUM/LOW)")
+    classification: str = Field(default="unknown", description="Job classification (remote/on-site/cached)")
+    reasoning: str = Field(default="N/A", description="Reasoning for classification")
+    description_source: str = Field(default="listing_page", description="Source of description (listing_page/detail_page)")
+    was_reanalyzed: bool = Field(default=False, description="Whether job was reanalyzed")
+    source: Optional[str] = Field(default=None, description="Job source website")
+    
+    # Metadata
     scraped_at: Optional[datetime] = Field(default_factory=datetime.now, description="Scrape timestamp")
     
     @field_validator('title', 'description')

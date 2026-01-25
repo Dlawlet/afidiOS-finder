@@ -56,7 +56,11 @@ class JobExporter:
                     'last_seen': self.date_str,
                     'title': job.get('title'),
                     'is_remote': job.get('is_remote'),
-                    'description': job.get('description', 'N/A')  # Save description
+                    'description': job.get('description', 'N/A'),
+                    'confidence': job.get('confidence', 'MEDIUM'),
+                    'classification': job.get('classification', 'unknown'),
+                    'reasoning': job.get('reasoning', 'N/A'),
+                    'description_source': job.get('description_source', 'listing_page')
                 }
         
         history['last_update'] = self.date_str

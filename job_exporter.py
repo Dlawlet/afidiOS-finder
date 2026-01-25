@@ -48,11 +48,15 @@ class JobExporter:
         for job in jobs:
             url = job.get('url')
             if url and url != 'N/A':
+                # Preserve existing first_seen date if job was seen before
+                existing_entry = history['seen_urls'].get(url, {})
+                
                 history['seen_urls'][url] = {
-                    'first_seen': history['seen_urls'].get(url, {}).get('first_seen', self.date_str),
+                    'first_seen': existing_entry.get('first_seen', self.date_str),
                     'last_seen': self.date_str,
                     'title': job.get('title'),
-                    'is_remote': job.get('is_remote')
+                    'is_remote': job.get('is_remote'),
+                    'description': job.get('description', 'N/A')  # Save description
                 }
         
         history['last_update'] = self.date_str

@@ -100,6 +100,12 @@ class IncrementalScraper:
                 job['is_remote'] = job_history.get('is_remote', False)
                 job['remote_confidence'] = 0.99  # High confidence from history
                 job['reason'] = f"Cached from history: {reason}"
+                
+                # Restore description from history if available
+                cached_description = job_history.get('description')
+                if cached_description and cached_description != 'N/A':
+                    job['description'] = cached_description
+                
                 jobs_to_skip.append(job)
                 
                 if self.verbose:

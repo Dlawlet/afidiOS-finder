@@ -1,17 +1,17 @@
 {
   "metadata": {
-    "export_date": "2026-01-27 06:38:20",
-    "total_jobs": 9,
+    "export_date": "2026-01-28 06:39:11",
+    "total_jobs": 10,
     "analysis_mode": "LLM-Enhanced",
     "history_stats": {
-      "total_jobs_seen": 1510,
-      "remote_jobs_seen": 9,
-      "last_update": "2026-01-27 06:38:20"
+      "total_jobs_seen": 1645,
+      "remote_jobs_seen": 10,
+      "last_update": "2026-01-28 06:39:11"
     }
   },
   "statistics": {
-    "total": 9,
-    "remote": 9,
+    "total": 10,
+    "remote": 10,
     "on_site": 0,
     "remote_percentage": 100.0,
     "llm_used": true,
@@ -19,29 +19,29 @@
       "jemepropose",
       "allovoisins"
     ],
-    "export_date": "2026-01-27 06:38:20"
+    "export_date": "2026-01-28 06:39:11"
   },
   "jobs": [
     {
-      "title": "Recherche montage vidéo",
-      "description": "Je recherche un monteur vidéo pour le montage de courts shorts vidéos de moins de 2 minutes (environ 9 vidéos par mois). Je vous envoie la voix-off avec le script et je recherche un monteur qui : - ajoutera des images et vidéos d'illustration - une musique d'ambiance (si possible libre du droit) - des bruitages pour animer - les sous-titres. Total liberté pour le monteur, avec max 1 modification. N'hésitez pas à me proposer un forfait mensuel pour 9 vidéos et des exemples de production. Je recherche un monteur vidéo pour le montage de courts shorts vidéos de moins de 2 minutes (environ 9 vidéos par mois). Je vous envoie la voix-off avec le script et je recherche un monteur qui : - ajoutera des images et vidéos d'illustration - une musique d'ambiance (si possible libre du droit) - des bruitages pour animer - les sous-titres. Total liberté pour le monteur, avec max 1 modification. N'hésitez pas à me proposer un forfait mensuel pour 9 vidéos et des exemples de production. Soyez le premier à déposer un avis sur cette annonce.",
-      "url": "https://www.jemepropose.com/annonces/montage-video/recherche-montage-video+8918419/",
-      "location": "Montage vidéo - Paris (75000)",
+      "title": "Création site",
+      "description": "Numéro de mise en relation Bonjour, j'ai besoin de développer un site qui permette à un consommateur de se connecter à son compte, d'effectuer ses commandes et de payer en ligne. Je voudrais avoir après la création du site la possibilité de rajouter moi-même des produits sur le site. Vous proposez des tarifs abordables et êtes disponible ? Contactez moi. Bonjour, j'ai besoin de développer un site qui permette à un consommateur de se connecter à son compte, d'effectuer ses commandes et de payer en ligne. Je voudrais avoir après la création du site la possibilité de rajouter moi-même des produits sur le site. Vous proposez des tarifs abordables et êtes disponible ? Contactez moi. Soyez le premier à déposer un avis sur cette annonce.",
+      "url": "https://www.jemepropose.com/annonces/creation-site-internet/creation-site+8636283/",
+      "location": "Création site internet - Paris (75000)",
       "price": "A définir",
       "is_remote": true,
-      "remote_confidence": 0.95,
-      "reason": "LLM: Montage vidéo 100 % numérique, aucune présence requise",
+      "remote_confidence": 0.9,
+      "reason": "LLM: Développement web réalisable entièrement en ligne",
       "id": "N/A",
       "category": "N/A",
       "poster": "N/A",
       "date_posted": "N/A",
       "confidence": "HIGH",
       "classification": "remote",
-      "reasoning": "LLM: Montage vidéo 100 % numérique, aucune présence requise",
+      "reasoning": "LLM: Développement web réalisable entièrement en ligne",
       "description_source": "detail_page",
       "was_reanalyzed": false,
       "source": "jemepropose",
-      "scraped_at": "2026-01-27 06:35:45.071853"
+      "scraped_at": "2026-01-28 06:36:58.964345"
     },
     {
       "url": "https://www.jemepropose.com/annonces/creation-site-internet/creation-site-internet+10496507/",
@@ -196,6 +196,26 @@
       "confidence": "HIGH",
       "classification": "remote",
       "reasoning": "LLM: Création de fichiers Excel, aucune présence requise",
+      "description_source": "detail_page",
+      "was_reanalyzed": false,
+      "id": "N/A",
+      "category": "N/A",
+      "poster": "N/A",
+      "date_posted": "N/A"
+    },
+    {
+      "url": "https://www.jemepropose.com/annonces/montage-video/recherche-montage-video+8918419/",
+      "title": "Recherche montage vidéo",
+      "description": "Je recherche un monteur vidéo pour le montage de courts shorts vidéos de moins de 2 minutes (environ 9 vidéos par mois). Je vous envoie la voix-off avec le script et je recherche un monteur qui : - ajoutera des images et vidéos d'illustration - une musique d'ambiance (si possible libre du droit) - des bruitages pour animer - les sous-titres. Total liberté pour le monteur, avec max 1 modification. N'hésitez pas à me proposer un forfait mensuel pour 9 vidéos et des exemples de production. Je recherche un monteur vidéo pour le montage de courts shorts vidéos de moins de 2 minutes (environ 9 vidéos par mois). Je vous envoie la voix-off avec le script et je recherche un monteur qui : - ajoutera des images et vidéos d'illustration - une musique d'ambiance (si possible libre du droit) - des bruitages pour animer - les sous-titres. Total liberté pour le monteur, avec max 1 modification. N'hésitez pas à me proposer un forfait mensuel pour 9 vidéos et des exemples de production. Soyez le premier à déposer un avis sur cette annonce.",
+      "location": "Montage vidéo - Paris (75000)",
+      "price": "A définir",
+      "source": "jemepropose",
+      "is_remote": true,
+      "remote_confidence": 0.99,
+      "reason": "Cached from history: RECENT (seen 23h ago)",
+      "confidence": "HIGH",
+      "classification": "remote",
+      "reasoning": "LLM: Montage vidéo 100 % numérique, aucune présence requise",
       "description_source": "detail_page",
       "was_reanalyzed": false,
       "id": "N/A",

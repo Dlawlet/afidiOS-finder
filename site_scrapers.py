@@ -644,7 +644,7 @@ class MultiSiteScraper:
                     # Check if more pages available
                     if not has_more:
                         if self.verbose:
-                            print(f"   🏁 No more pages available")
+                            print(f"   🏁 Site exhausted - no more pages")
                         break
                     
                     page_num += 1
@@ -659,9 +659,22 @@ class MultiSiteScraper:
                 
                 if self.verbose:
                     print(f"   📊 Site summary:")
-                    print(f"      Total scraped: {len(site_scraped_jobs)} jobs")
-                    print(f"      NEW jobs: {len(site_new_jobs)} (quota used)")
-                    print(f"      Quota remaining: {remaining_quota}/{daily_quota}")
+                    print(f"      Total scraped: {len(site_scraped_jobs)} jobs ({page_num} pages)")
+                    print(f"      NEW jobs: {len(site_new_jobs)} (used {quota_used}/{site_quota} site quota)")
+                    print(f"      Cached jobs: {len(site_cached_jobs)}")
+                    
+                    # Show if site was exhausted or hit quota
+                    if len(site_new_jobs) < site_quota:
+                        unused = site_quota - len(site_new_jobs)
+                        print(f"      ⚠️  Site exhausted: {unused} quota unused (will redistribute)")
+                    
+                    print(f"      💰 Budget remaining: {remaining_quota}/{daily_quota}")
+                
+                # If we still have remaining quota and there are more sites, continue
+                if remaining_quota <= 0:
+                    if self.verbose:
+                        print(f"\n   🎯 Total quota reached ({daily_quota} NEW jobs)!")
+                    break
                 
             except Exception as e:
                 self.logger.error(f"Error scraping {site_name}: {e}")

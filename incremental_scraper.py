@@ -67,13 +67,14 @@ class IncrementalScraper:
             self.logger.warning(f"Date parsing error for {job_url}: {e}")
             return True, "PARSE_ERROR"
     
-    def filter_jobs_for_analysis(self, all_jobs: List[Dict], lookback_hours=24) -> Tuple[List[Dict], List[Dict]]:
+    def filter_jobs_for_analysis(self, all_jobs: List[Dict], lookback_hours=24, reanalyze_cached=False) -> Tuple[List[Dict], List[Dict]]:
         """
         Split jobs into those needing analysis vs those we can skip
         
         Args:
             all_jobs: All scraped jobs
             lookback_hours: Hours to consider job as "recent"
+            reanalyze_cached: Force re-analysis of cached jobs
             
         Returns:
             Tuple of (jobs_to_analyze, jobs_to_skip)
@@ -89,6 +90,13 @@ class IncrementalScraper:
             title = job.get('title', 'Unknown')
             
             should_analyze, reason = self.should_analyze_job(url, title, lookback_hours)
+            
+            # If reanalyze_cached is True, force analysis of all jobs seen within lookback
+            if reanalyze_cached and not should_analyze and "within lookback" in reason:
+                should_analyze = True
+                reason = f"REANALYSIS: {reason}"
+                if self.verbose:
+                    self.logger.info(f"🔄 Forcing reanalysis: {title[:50]}...")
             
             if should_analyze:
                 jobs_to_analyze.append(job)

@@ -221,22 +221,58 @@ Description: {job_description}
 YOUR TASK:
 Determine if this is a GENUINE remote work opportunity where the worker can perform 100% of their duties from home/anywhere without needing to be physically present.
 
-THINK LIKE A HUMAN:
-- Is this even a job offer, or is someone looking for work themselves?
-- Does the actual work require physical presence (visiting clients, handling physical objects, in-person meetings)?
-- Can ALL the work be done (or the final result be shared) through a computer and internet connection?
-- Are there explicit mentions of remote/télétravail, or clear indicators the work is 100% online?
-- What is the INTENT behind the words, not just the keywords?
+REMOTE-CAPABLE JOB TYPES (default: remote unless stated otherwise):
+- Web/Software development (sites web, applications, code, WordPress, HTML, CSS, JavaScript, Python, PHP, etc.)
+- Graphic design / Design graphique (logos, affiches, visuels, Photoshop, Illustrator, Canva, etc.)
+- Writing / Rédaction (articles, contenu, copywriting, traduction, blog, etc.)
+- Digital marketing (SEO, réseaux sociaux, publicité en ligne, community management, Facebook Ads)
+- Data entry / Saisie de données
+- Virtual assistance / Assistance virtuelle (administrative tasks online)
+- Online tutoring / Cours en ligne (except if explicitly requires physical classroom)
+- Video editing / Montage vidéo (except if involves mandatory on-site filming)
+- Accounting / Comptabilité (online services, bookkeeping)
+- Customer service / Service client (if online/téléphone/chat)
+- Consulting / Conseil (if deliverables are digital)
+- E-commerce management (gestion boutique en ligne)
 
-BE CONSERVATIVE:
-- If it's ambiguous or unclear → classify as NOT remote
-- If it requires ANY physical presence → NOT remote
+ALWAYS ON-SITE JOB TYPES:
+- Physical services: ménage, jardinage, coiffure, cuisine, réparation, construction, plomberie, électricité, peinture
+- Care work: garde d'enfants, aide à domicile, auxiliaire de vie, soins infirmiers, accompagnement personnes âgées
+- Transportation: livraison, déménagement, chauffeur, remorquage, transport
+- Events: animation, DJ, photographe (for events), serveur, traiteur, organisation événements
+- Manual labor: bricolage, installation, assemblage, montage meubles
+
+REMOTE INDICATORS (positive signals):
+- "télétravail", "à distance", "remote", "100% en ligne", "depuis chez vous", "mission flexible", "nomade digital"
+- "WordPress", "site web", "développement", "design", "rédaction", "marketing digital", "création de contenu"
+- "visio", "Zoom", "Google Meet", "Skype", "en ligne", "virtuel"
+- Flexible location or "France entière" without physical address requirements
+- "freelance", "indépendant", "auto-entrepreneur" for digital services
+- Digital deliverables: "logo", "site internet", "application", "contenu", "stratégie", "référencement"
+
+NOT REMOTE INDICATORS (negative signals):
+- Specific city/address requirements for physical presence ("à Paris 15ème", "sur place obligatoire")
+- "sur place", "présentiel", "déplacement requis", "visite client", "intervention physique"
+- Work that requires handling physical objects or being in specific locations
+- "nettoyage", "réparation", "installation", "montage", "garde", "soins"
+
+DECISION RULES:
+1. Digital job (web, design, writing) + NO location constraint = REMOTE ✓
+2. Digital job + "mission flexible" / "télétravail" = REMOTE ✓
+3. Physical service (ménage, garde, réparation) = ALWAYS ON-SITE ✗
+4. Job seeker posting ("Je cherche un emploi") = typically ON-SITE (unless explicitly remote)
+5. Job offer for digital work ("Je cherche développeur") = REMOTE if no location mentioned ✓
+6. Ambiguous digital job without clear signals = DEFAULT to REMOTE (web/design/writing are remote by nature)
 
 CONTEXT MATTERS:
-- "Je cherche une personne" (I'm hiring) ≠ "Je cherche un emploi" (I'm job hunting)
-- "Accompagner en visio" (remote coaching) ≠ "Accompagner sur place" (in-person)
-- "Commercial digital en ligne" (remote sales) ≠ "Commercial terrain" (field sales)
-- "A Distance" in location doesn't guarantee remote - read the actual description
+- "Refonte de site web WordPress" = REMOTE ✓ (digital deliverable)
+- "Créer un logo pour mon entreprise" = REMOTE ✓ (digital deliverable)
+- "Rédaction d'articles SEO" = REMOTE ✓ (digital deliverable)
+- "Développement application mobile" = REMOTE ✓ (digital deliverable)
+- "Je cherche un emploi de développeur" = ON-SITE (job seeker without remote mention)
+- "Développement web - Mission flexible" = REMOTE ✓
+- "Développement sur Paris + réunions hebdomadaires" = ON-SITE (location constraint)
+- "Service de ménage à domicile" = ON-SITE ✗ (physical service)
 
 RESPOND IN JSON FORMAT ONLY:
 {{

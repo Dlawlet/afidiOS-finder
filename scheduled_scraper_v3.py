@@ -30,7 +30,8 @@ def scrape_multi_site(
     max_pages=None,
     incremental=True,
     lookback_hours=24,
-    llm_quota_per_site=None
+    llm_quota_per_site=None,
+    reanalyze_cached=False
 ):
     """
     Multi-site job scraper with incremental support and intelligent quota management
@@ -43,6 +44,7 @@ def scrape_multi_site(
         incremental: Use incremental scraping
         lookback_hours: Hours to consider job as "recent"
         llm_quota_per_site: LLM quota per site (None = auto-calculate from DAILY_LLM_QUOTA)
+        reanalyze_cached: Force re-analysis of cached jobs with updated prompt
     """
     logger = setup_logging(verbose)
     
@@ -112,7 +114,7 @@ def scrape_multi_site(
         def incremental_filter_callback(jobs, lookback_hours):
             """Callback to filter jobs incrementally"""
             if incremental_scraper:
-                return incremental_scraper.filter_jobs_for_analysis(jobs, lookback_hours)
+                return incremental_scraper.filter_jobs_for_analysis(jobs, lookback_hours, reanalyze_cached)
             else:
                 return jobs, []  # All jobs are new if no incremental
         
@@ -400,6 +402,8 @@ if __name__ == '__main__':
                        help='Disable incremental scraping')
     parser.add_argument('--lookback', type=int, default=24,
                        help='Lookback window in hours (default: 24)')
+    parser.add_argument('--reanalyze', action='store_true',
+                       help='Force re-analysis of cached jobs with updated prompt')
     
     args = parser.parse_args()
     
@@ -410,5 +414,6 @@ if __name__ == '__main__':
         max_pages=args.pages,
         incremental=not args.no_incremental,
         lookback_hours=args.lookback,
-        llm_quota_per_site=args.quota
+        llm_quota_per_site=args.quota,
+        reanalyze_cached=args.reanalyze
     )

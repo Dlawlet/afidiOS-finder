@@ -1,12 +1,12 @@
 {
   "metadata": {
-    "export_date": "2026-01-30 06:49:49",
+    "export_date": "2026-01-31 06:39:19",
     "total_jobs": 3,
     "analysis_mode": "LLM-Enhanced",
     "history_stats": {
-      "total_jobs_seen": 1677,
+      "total_jobs_seen": 1686,
       "remote_jobs_seen": 10,
-      "last_update": "2026-01-30 06:49:49"
+      "last_update": "2026-01-31 06:39:19"
     }
   },
   "statistics": {
@@ -19,71 +19,68 @@
       "jemepropose",
       "allovoisins"
     ],
-    "export_date": "2026-01-30 06:49:49"
+    "export_date": "2026-01-31 06:39:19"
   },
   "jobs": [
     {
+      "url": "https://www.jemepropose.com/annonces/creation-site-internet/creation-site-internet+10496507/",
       "title": "Creation site internet",
       "description": "Numéro de mise en relation Bonjour je recherche une personne qui peut me cree un site internet droopshipping cles en main . Je prendrer le devis le moins chere car je n’est pas un gros budjet cordialement Bonjour je recherche une personne qui peut me cree un site internet droopshipping cles en main . Je prendrer le devis le moins chere car je n’est pas un gros budjet cordialement Soyez le premier à déposer un avis sur cette annonce.",
-      "url": "https://www.jemepropose.com/annonces/creation-site-internet/creation-site-internet+10496507/",
       "location": "Création site internet - Cagnes-sur-Mer (06800)",
       "price": "Gratuit",
+      "source": "jemepropose",
       "is_remote": true,
-      "remote_confidence": 0.9,
-      "reason": "LLM: Développement web réalisable entièrement en ligne",
-      "id": "N/A",
-      "category": "N/A",
-      "poster": "N/A",
-      "date_posted": "N/A",
+      "remote_confidence": 0.99,
+      "reason": "Cached from history: RECENT (seen 23h ago)",
       "confidence": "HIGH",
       "classification": "remote",
       "reasoning": "LLM: Développement web réalisable entièrement en ligne",
       "description_source": "detail_page",
       "was_reanalyzed": false,
-      "source": "jemepropose",
-      "scraped_at": "2026-01-30 06:44:53.199182"
-    },
-    {
-      "title": "Recherche Télé secrétaire expérimentée",
-      "description": "Je suis à la recherche d'une personne expérimentée au poste de secrétaire à domicile. Si vous êtes disponible veuillez me contacter pour plus d'amples informations. Ps/ Pas sérieux s'abstenir Cordialement. Je suis à la recherche d'une personne expérimentée au poste de secrétaire à domicile. Si vous êtes disponible veuillez me contacter pour plus d'amples informations. Ps/ Pas sérieux s'abstenir Cordialement. Soyez le premier à déposer un avis sur cette annonce.",
-      "url": "https://www.jemepropose.com/annonces/secretariat/recherche-tele-secretaire-experimentee+10494841/",
-      "location": "Secrétariat - Poitiers (86000)",
-      "price": "20.00 € - De l'heure",
-      "is_remote": true,
-      "remote_confidence": 0.9,
-      "reason": "LLM: Secrétaire à domicile implique télétravail total",
       "id": "N/A",
       "category": "N/A",
       "poster": "N/A",
-      "date_posted": "N/A",
+      "date_posted": "N/A"
+    },
+    {
+      "url": "https://www.jemepropose.com/annonces/secretariat/recherche-tele-secretaire-experimentee+10494841/",
+      "title": "Recherche Télé secrétaire expérimentée",
+      "description": "Je suis à la recherche d'une personne expérimentée au poste de secrétaire à domicile. Si vous êtes disponible veuillez me contacter pour plus d'amples informations. Ps/ Pas sérieux s'abstenir Cordialement. Je suis à la recherche d'une personne expérimentée au poste de secrétaire à domicile. Si vous êtes disponible veuillez me contacter pour plus d'amples informations. Ps/ Pas sérieux s'abstenir Cordialement. Soyez le premier à déposer un avis sur cette annonce.",
+      "location": "Secrétariat - Poitiers (86000)",
+      "price": "20.00 € - De l'heure",
+      "source": "jemepropose",
+      "is_remote": true,
+      "remote_confidence": 0.99,
+      "reason": "Cached from history: RECENT (seen 23h ago)",
       "confidence": "HIGH",
       "classification": "remote",
       "reasoning": "LLM: Secrétaire à domicile implique télétravail total",
       "description_source": "detail_page",
       "was_reanalyzed": false,
-      "source": "jemepropose",
-      "scraped_at": "2026-01-30 06:45:32.367430"
-    },
-    {
-      "title": "Montage vidéo anniversaire 40 ans – photos + vidéos + musique",
-      "description": "Numéro de mise en relation bonjour, Je recherche une personne capable de réaliser une vidéo d’anniversaire pour les 40 ans de ma femme. Contenu à monter : Plus de 80 photos, Quelques vidéos courtes (dont une séquence avec nos enfants), Textes humoristiques et tendres que j’ai déjà préparés, 2 à 3 musiques différentes pour rythmer la vidéo. Style recherché : Vidéo d’une durée d’environ 8 minutes, Mélange humour + émotion, Effets simples et élégants (zoom, fondu, transitions fluides), Résultat final en format MP4 Full HD, prêt à être diffusé lors de l’événement. Date limite : jeudi 2 octobre Je recherche une personne capable de réaliser une vidéo d’anniversaire pour les 40 ans de ma femme. Contenu à monter : Plus de 80 photos, Quelques vidéos courtes (dont une séquence avec nos enfants), Textes humoristiques et tendres que j’ai déjà préparés, 2 à 3 musiques différentes pour rythmer la vidéo. Style recherché : Vidéo d’une durée d’environ 8 minutes, Mélange humour + émotion, Effets simples et élégants (zoom, fondu, transitions fluides), Résultat final en format MP4 Full HD, prêt à être diffusé lors de l’événement. Date limite : jeudi 2 octobre Soyez le premier à déposer un avis sur cette annonce.",
-      "url": "https://www.jemepropose.com/annonces/montage-video/montage-video-anniversaire-40-ans-photos-videos-musique+10494609/",
-      "location": "Montage vidéo - Brindas (69126)",
-      "price": "A définir",
-      "is_remote": true,
-      "remote_confidence": 0.95,
-      "reason": "LLM: Montage vidéo réalisable 100 % en ligne",
       "id": "N/A",
       "category": "N/A",
       "poster": "N/A",
-      "date_posted": "N/A",
+      "date_posted": "N/A"
+    },
+    {
+      "url": "https://www.jemepropose.com/annonces/montage-video/montage-video-anniversaire-40-ans-photos-videos-musique+10494609/",
+      "title": "Montage vidéo anniversaire 40 ans – photos + vidéos + musique",
+      "description": "Numéro de mise en relation bonjour, Je recherche une personne capable de réaliser une vidéo d’anniversaire pour les 40 ans de ma femme. Contenu à monter : Plus de 80 photos, Quelques vidéos courtes (dont une séquence avec nos enfants), Textes humoristiques et tendres que j’ai déjà préparés, 2 à 3 musiques différentes pour rythmer la vidéo. Style recherché : Vidéo d’une durée d’environ 8 minutes, Mélange humour + émotion, Effets simples et élégants (zoom, fondu, transitions fluides), Résultat final en format MP4 Full HD, prêt à être diffusé lors de l’événement. Date limite : jeudi 2 octobre Je recherche une personne capable de réaliser une vidéo d’anniversaire pour les 40 ans de ma femme. Contenu à monter : Plus de 80 photos, Quelques vidéos courtes (dont une séquence avec nos enfants), Textes humoristiques et tendres que j’ai déjà préparés, 2 à 3 musiques différentes pour rythmer la vidéo. Style recherché : Vidéo d’une durée d’environ 8 minutes, Mélange humour + émotion, Effets simples et élégants (zoom, fondu, transitions fluides), Résultat final en format MP4 Full HD, prêt à être diffusé lors de l’événement. Date limite : jeudi 2 octobre Soyez le premier à déposer un avis sur cette annonce.",
+      "location": "Montage vidéo - Brindas (69126)",
+      "price": "A définir",
+      "source": "jemepropose",
+      "is_remote": true,
+      "remote_confidence": 0.99,
+      "reason": "Cached from history: RECENT (seen 23h ago)",
       "confidence": "HIGH",
       "classification": "remote",
       "reasoning": "LLM: Montage vidéo réalisable 100 % en ligne",
       "description_source": "detail_page",
       "was_reanalyzed": false,
-      "source": "jemepropose",
-      "scraped_at": "2026-01-30 06:45:37.518813"
+      "id": "N/A",
+      "category": "N/A",
+      "poster": "N/A",
+      "date_posted": "N/A"
     }
   ]
 }

@@ -20,7 +20,7 @@ import logging
 import argparse
 
 # Free tier LLM quota (jobs per day)
-DAILY_LLM_QUOTA = 500
+DAILY_LLM_QUOTA = 250
 
 
 def scrape_multi_site(

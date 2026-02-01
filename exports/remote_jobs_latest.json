@@ -1,17 +1,17 @@
 {
   "metadata": {
-    "export_date": "2026-01-25 09:02:31",
-    "total_jobs": 7,
+    "export_date": "2026-02-01 06:49:45",
+    "total_jobs": 0,
     "analysis_mode": "LLM-Enhanced",
     "history_stats": {
-      "total_jobs_seen": 1224,
-      "remote_jobs_seen": 7,
-      "last_update": "2026-01-25 09:02:31"
+      "total_jobs_seen": 1705,
+      "remote_jobs_seen": 10,
+      "last_update": "2026-02-01 06:49:45"
     }
   },
   "statistics": {
-    "total": 7,
-    "remote": 7,
+    "total": 0,
+    "remote": 0,
     "on_site": 0,
     "remote_percentage": 100.0,
     "llm_used": true,
@@ -19,85 +19,7 @@
       "jemepropose",
       "allovoisins"
     ],
-    "export_date": "2026-01-25 09:02:31"
+    "export_date": "2026-02-01 06:49:45"
   },
-  "jobs": [
-    {
-      "title": "FREELANCER création de SHORTS à partir de vidéos longues",
-      "description": "Bonjour, Je suis Valentin Romain, je bosse avec un projet web3 Je recherche un vidéaste pour créer des shorts de 20s à 60 secondes à partir de vidéos longues que je vous fournirai. Si vous êtes intéressé, je vous invite à me contacter pour discuter plus en détail de mon projet. Bonjour, Je suis Valentin Romain, je bosse avec un projet web3 Je recherche un vidéaste pour créer des shorts de 20s à 60 secondes à partir de vidéos longues que je vous fournirai. Si vous êtes intéressé, je vous invite à me contacter pour discuter plus en détail de mon projet. Soyez le premier à déposer un avis sur cette annonce.",
-      "url": "https://www.jemepropose.com/annonces/montage-video/freelancer-creation-de-shorts-a-partir-de-videos-longues+9576622/",
-      "location": "Montage vidéo - Laval (53000)",
-      "price": "A définir",
-      "is_remote": true,
-      "remote_confidence": 0.9,
-      "reason": "LLM: Montage vidéo 100 % numérique, aucune présence requise",
-      "scraped_at": "2026-01-25 09:00:18.836063"
-    },
-    {
-      "title": "le poste de traducteur/gestionnaire de projet",
-      "description": "Notre agence élargit son équipe et invite de nouveaux candidats pour le poste de traducteur/gestionnaire de projet. Nous proposons un poste en tant que freelance, un emploi à distance avec une embauche officielle dans notre entreprise basée au Royaume-Uni. Il existe également une possibilité de déménager au Royaume-Uni ultérieurement. Nous offrons un contrat de travail de 20 heures ou 40 heures par semaine (temps partiel ou temps plein). La connaissance de l'une des langues suivantes est requise : français, néerlandais, espagnol ou allemand. En plus de ces langues, la maîtrise de l'anglais est une exigence obligatoire pour tous les candidats. Type de poste : Temps plein Salaire : 3 400,00 EUR par mois Horaire : du lundi au vendredi, de 9h00 à 17h30 Notre agence élargit son équipe et invite de nouveaux candidats pour le poste de traducteur/gestionnaire de projet. Nous proposons un poste en tant que freelance, un emploi à distance avec une embauche officielle dans notre entreprise basée au Royaume-Uni. Il existe également une possibilité de déménager au Royaume-Uni ultérieurement. Nous offrons un contrat de travail de 20 heures ou 40 heures par semaine (temps partiel ou temps plein). La connaissance de l'une des langues suivantes est requise : français, néerlandais, espagnol ou allemand. En plus de ces langues, la maîtrise de l'anglais est une exigence obligatoire pour tous les candidats. Type de poste : Temps plein Salaire : 3 400,00 EUR par mois Horaire : du lundi au vendredi, de 9h00 à 17h30 Soyez le premier à déposer un avis sur cette annonce.",
-      "url": "https://www.jemepropose.com/annonces/service-de-traduction/le-poste-de-traducteurgestionnaire-de-projet+9547901/",
-      "location": "Service de traduction - A L'Etranger",
-      "price": "3400.00 € - Au mois",
-      "is_remote": true,
-      "remote_confidence": 0.9,
-      "reason": "LLM: emploi à distance, freelance, aucune présence physique requise",
-      "scraped_at": "2026-01-25 09:00:27.435062"
-    },
-    {
-      "title": "cherche dessinateur/trice décoration interieure",
-      "description": "Bonjour, Je recherche dessinateur/trice d'intérieur pour réaliser des plans ou des dessins manuels en vue de créer des décors et du mobilier pour les bars, restaurants, hôtels, boulangeries, coiffeurs barbiers... Je vous fournis un croquis et des mesures ainsi que les photos avant projet. Le dessin ou le plan est ensuite proposé au client pour une vue précise du futur projet. Principalement dans le style industriel et steam punk. Merci d'avance Je recherche dessinateur/trice d'intérieur pour réaliser des plans ou des dessins manuels en vue de créer des décors et du mobilier pour les bars, restaurants, hôtels, boulangeries, coiffeurs barbiers... Je vous fournis un croquis et des mesures ainsi que les photos avant projet. Le dessin ou le plan est ensuite proposé au client pour une vue précise du futur projet. Principalement dans le style industriel et steam punk. Merci d'avance Soyez le premier à déposer un avis sur cette annonce.",
-      "url": "https://www.jemepropose.com/annonces/dessinateur-industriel/cherche-dessinateurtrice-decoration-interieure+9535942/",
-      "location": "Dessinateur industriel - Quimperlé (29300)",
-      "price": "A définir",
-      "is_remote": true,
-      "remote_confidence": 0.9,
-      "reason": "LLM: Travail de dessin à partir de croquis fournis, livrable numérique",
-      "scraped_at": "2026-01-25 09:00:35.572112"
-    },
-    {
-      "url": "https://www.jemepropose.com/annonces/creation-site-internet/creation-site-internet+10496507/",
-      "title": "Creation site internet",
-      "description": "N/A",
-      "location": "Création site internet - Cagnes-sur-Mer (06800)",
-      "price": "Gratuit",
-      "source": "jemepropose",
-      "is_remote": true,
-      "remote_confidence": 0.99,
-      "reason": "Cached from history: RECENT (seen 6h ago)"
-    },
-    {
-      "url": "https://www.jemepropose.com/annonces/secretariat/recherche-tele-secretaire-experimentee+10494841/",
-      "title": "Recherche Télé secrétaire expérimentée",
-      "description": "N/A",
-      "location": "Secrétariat - Poitiers (86000)",
-      "price": "20.00 € - De l'heure",
-      "source": "jemepropose",
-      "is_remote": true,
-      "remote_confidence": 0.99,
-      "reason": "Cached from history: RECENT (seen 6h ago)"
-    },
-    {
-      "url": "https://www.jemepropose.com/annonces/montage-video/montage-video-anniversaire-40-ans-photos-videos-musique+10494609/",
-      "title": "Montage vidéo anniversaire 40 ans – photos + vidéos + musique",
-      "description": "N/A",
-      "location": "Montage vidéo - Brindas (69126)",
-      "price": "A définir",
-      "source": "jemepropose",
-      "is_remote": true,
-      "remote_confidence": 0.99,
-      "reason": "Cached from history: RECENT (seen 6h ago)"
-    },
-    {
-      "url": "https://www.jemepropose.com/annonces/teleprospecteur/offre-emploie-teleprospection-btoc+10358167/",
-      "title": "Offre Emploie Teleprospection BtoC",
-      "description": "N/A",
-      "location": "Téléprospecteur - Bordeaux (33000)",
-      "price": "Sur devis",
-      "source": "jemepropose",
-      "is_remote": true,
-      "remote_confidence": 0.99,
-      "reason": "Cached from history: RECENT (seen 6h ago)"
-    }
-  ]
+  "jobs": []
 }

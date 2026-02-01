@@ -1,12 +1,12 @@
 {
   "metadata": {
-    "export_date": "2026-01-29 23:26:01",
+    "export_date": "2026-02-01 23:56:55",
     "total_jobs": 3,
     "analysis_mode": "LLM-Enhanced",
     "history_stats": {
       "total_jobs_seen": 1730,
       "remote_jobs_seen": 10,
-      "last_update": "2026-01-29 23:26:01"
+      "last_update": "2026-02-01 23:56:55"
     }
   },
   "statistics": {
@@ -19,7 +19,7 @@
       "jemepropose",
       "allovoisins"
     ],
-    "export_date": "2026-01-29 23:26:01"
+    "export_date": "2026-02-01 23:56:55"
   },
   "jobs": [
     {
@@ -41,7 +41,7 @@
       "description_source": "detail_page",
       "was_reanalyzed": false,
       "source": "jemepropose",
-      "scraped_at": "2026-01-29 23:21:36.041215"
+      "scraped_at": "2026-02-01 23:50:30.951414"
     },
     {
       "title": "Recherche Télé secrétaire expérimentée",
@@ -62,7 +62,7 @@
       "description_source": "detail_page",
       "was_reanalyzed": false,
       "source": "jemepropose",
-      "scraped_at": "2026-01-29 23:22:14.981298"
+      "scraped_at": "2026-02-01 23:51:03.914408"
     },
     {
       "title": "Montage vidéo anniversaire 40 ans – photos + vidéos + musique",
@@ -83,7 +83,7 @@
       "description_source": "detail_page",
       "was_reanalyzed": false,
       "source": "jemepropose",
-      "scraped_at": "2026-01-29 23:22:18.867534"
+      "scraped_at": "2026-02-01 23:51:07.985827"
     }
   ]
 }

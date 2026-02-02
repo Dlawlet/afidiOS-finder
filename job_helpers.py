@@ -37,6 +37,40 @@ class JobDescriptionFetcher:
             # Find description in job page
             description = ''
             
+            # SPECIAL CASE: AlloVoisins - avoid collecting multiple listings
+            if 'allovoisins.com' in job_url:
+                # AlloVoisins shows "demandes similaires" (similar requests)
+                # We need ONLY the main request, not the similar ones
+                # IMPORTANT: If we can't extract cleanly, return empty string
+                # to use the listing page description (which is already clean)
+                
+                # Try to find the main description
+                article = soup.find('article')
+                if article:
+                    # Find all paragraphs
+                    all_paragraphs = article.find_all('p')
+                    
+                    # Strategy: Look for paragraphs that are:
+                    # 1. Not very short (>50 chars)
+                    # 2. Not starting with a quote (likely from "demandes similaires")
+                    # 3. Not part of "demandes similaires" section
+                    
+                    valid_paragraphs = []
+                    for p in all_paragraphs:
+                        text = p.get_text(strip=True)
+                        # Skip if too short, a quote, or contains "demandes similaires"
+                        if (len(text) > 50 and 
+                            not text.startswith('"') and 
+                            'demandes similaires' not in text.lower()):
+                            valid_paragraphs.append(text)
+                    
+                    # Take ONLY the first valid paragraph if found
+                    if valid_paragraphs:
+                        return valid_paragraphs[0]
+                
+                # If no clean description found, return empty to use listing description
+                return ''
+            
             # Method 1: Look for card-body (jemepropose.com structure)
             card_body = soup.find('div', class_='card-body')
             if card_body:
@@ -45,7 +79,36 @@ class JobDescriptionFetcher:
                 if paragraphs:
                     # Use separator to preserve sentence structure, filter empty paragraphs
                     texts = [p.get_text(separator=' ', strip=True) for p in paragraphs]
-                    description = ' '.join([t for t in texts if t])
+                    # DEDUPLICATE: Remove consecutive duplicates
+                    unique_texts = []
+                    for text in texts:
+                        if text and (not unique_texts or text != unique_texts[-1]):
+                            unique_texts.append(text)
+                    description = ' '.join(unique_texts)
+            
+            # Method 1b: Look for article (alternative jemepropose structure)
+            if not description:
+                article = soup.find('article')
+                if article:
+                    paragraphs = article.find_all('p')
+                    if paragraphs:
+                        # DEDUPLICATE: Remove ALL duplicates (not just consecutive)
+                        seen = set()
+                        unique_texts = []
+                        for p in paragraphs:
+                            text = p.get_text(separator=' ', strip=True)
+                            # Normalize: remove extra whitespace
+                            normalized = ' '.join(text.split())
+                            if normalized and normalized not in seen and len(normalized) > 30:
+                                seen.add(normalized)
+                                unique_texts.append(normalized)
+                        
+                        if unique_texts:
+                            # Filter out generic messages like "Soyez le premier à déposer un avis"
+                            filtered = [t for t in unique_texts if not any(phrase in t.lower() for phrase in [
+                                'soyez le premier', 'déposer un avis', 'sign in', 'log in'
+                            ])]
+                            description = ' '.join(filtered) if filtered else ' '.join(unique_texts)
             
             # Method 2: Look for description div
             if not description:

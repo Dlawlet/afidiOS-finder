@@ -167,12 +167,12 @@ def scrape_multi_site(
             job_url = job_data['url']
             job_source = job_data['source']
             
-            # Try to get a better description upfront if listing description is missing
+            # Try to get a better description upfront if listing description is missing or short
             if job_description == 'N/A' or len(job_description) < 50:
                 if job_url != 'N/A':
                     better_desc = description_fetcher.fetch_full_description(job_url)
                     if better_desc and len(better_desc) > len(job_description):
-                        job_description = better_desc
+                        job_description = better_desc  # REPLACE, don't append
                         stats['full_description_fetched'] += 1
             
             # Basic detection
@@ -189,7 +189,7 @@ def scrape_multi_site(
                 if job_url != 'N/A' and (job_description == 'N/A' or len(job_description) < 100):
                     better_desc = description_fetcher.fetch_full_description(job_url)
                     if better_desc and len(better_desc) > len(job_description):
-                        full_description = better_desc
+                        full_description = better_desc  # REPLACE the short description
                         final_description = better_desc  # Use full description for export
                         description_source = 'detail_page'
                         stats['full_description_fetched'] += 1

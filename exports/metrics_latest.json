@@ -1,17 +1,17 @@
 {
-  "timestamp": "2026-02-23 07:00:43.201879",
-  "duration_seconds": 3342,
-  "jobs_scraped": 8976,
+  "timestamp": "2026-02-24 06:56:24.007763",
+  "duration_seconds": 5430,
+  "jobs_scraped": 27468,
   "jobs_analyzed": 1500,
   "new_jobs": 1500,
-  "cached_jobs": 7460,
-  "remote_jobs": 831,
-  "llm_calls": 1068,
+  "cached_jobs": 25957,
+  "remote_jobs": 64,
+  "llm_calls": 1051,
   "cache_stats": {
-    "cache_hits": 1020,
-    "cache_misses": 48,
-    "total_requests": 1068,
-    "hit_rate_percentage": 95.51
+    "cache_hits": 1018,
+    "cache_misses": 33,
+    "total_requests": 1051,
+    "hit_rate_percentage": 96.86
   },
   "confidence_distribution": {
     "high": 1500,

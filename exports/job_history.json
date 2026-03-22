@@ -1327,7 +1327,7 @@
     },
     "https://www.allovoisins.com/r/0/169/23604/0/Roanne/service/Menage": {
       "first_seen": "2026-01-22 18:29:33",
-      "last_seen": "2026-03-20 08:51:16",
+      "last_seen": "2026-03-22 07:27:13",
       "title": "Cherche Ménage à Roanne",
       "is_remote": false,
       "description": "N/A",
@@ -1426,18 +1426,18 @@
     },
     "https://www.allovoisins.com/r/0/159/33555/0/Escoutoux/service/Reparation-voiture": {
       "first_seen": "2026-01-22 18:29:33",
-      "last_seen": "2026-03-20 08:51:16",
-      "title": "Recherche Réparation voiture à Escoutoux",
+      "last_seen": "2026-03-22 07:27:13",
+      "title": "Cherche Réparation voiture à Escoutoux",
       "is_remote": false,
       "description": "N/A",
       "confidence": "HIGH",
       "classification": "on-site",
-      "reasoning": "LLM: Réparation voiture = intervention physique sur place",
+      "reasoning": "LLM: Réparation automobile nécessite présence physique sur place",
       "description_source": "listing_page"
     },
     "https://www.allovoisins.com/r/0/159/33895/0/Peschadoires/service/Reparation-voiture": {
       "first_seen": "2026-01-22 18:29:33",
-      "last_seen": "2026-03-20 08:51:16",
+      "last_seen": "2026-03-22 07:27:13",
       "title": "Cherche Réparation voiture à Peschadoires",
       "is_remote": false,
       "description": "N/A",
@@ -1448,13 +1448,13 @@
     },
     "https://www.allovoisins.com/r/0/159/33450/0/Billom/service/Reparation-voiture": {
       "first_seen": "2026-01-22 18:29:33",
-      "last_seen": "2026-03-20 08:51:16",
+      "last_seen": "2026-03-22 07:27:13",
       "title": "Recherche Réparation voiture à Billom",
       "is_remote": false,
       "description": "N/A",
       "confidence": "HIGH",
       "classification": "on-site",
-      "reasoning": "LLM: Réparation voiture nécessite intervention physique sur site",
+      "reasoning": "LLM: Réparation voiture = intervention physique obligatoire sur place",
       "description_source": "listing_page"
     },
     "https://www.allovoisins.com/r/5331/92/23839/0/location-Salle-de-reception-salle-de-spectacle-Monistrol-sur-loire": {
@@ -1470,7 +1470,7 @@
     },
     "https://www.allovoisins.com/r/0/133/33431/0/Courpiere/service/Maconnerie": {
       "first_seen": "2026-01-22 18:29:33",
-      "last_seen": "2026-03-20 08:51:16",
+      "last_seen": "2026-03-22 07:27:13",
       "title": "Recherche Maçonnerie à Courpière",
       "is_remote": false,
       "description": "N/A",
@@ -1547,7 +1547,7 @@
     },
     "https://www.allovoisins.com/r/0/169/23889/0/Saint-julien-du-pinet/service/Menage": {
       "first_seen": "2026-01-22 18:29:33",
-      "last_seen": "2026-03-20 08:51:16",
+      "last_seen": "2026-03-22 07:27:13",
       "title": "Recherche Ménage à Saint-Julien-du-Pinet",
       "is_remote": false,
       "description": "N/A",
@@ -1608,7 +1608,7 @@
     },
     "https://www.allovoisins.com/r/0/185/33622/0/Maringues/service/Garde-chien": {
       "first_seen": "2026-01-22 18:29:33",
-      "last_seen": "2026-03-20 08:51:16",
+      "last_seen": "2026-03-22 07:27:13",
       "title": "Cherche Garde chien à Maringues",
       "is_remote": false,
       "description": "N/A",
@@ -1630,7 +1630,7 @@
     },
     "https://www.allovoisins.com/r/0/169/33716/0/Issoire/service/Menage": {
       "first_seen": "2026-01-22 18:29:33",
-      "last_seen": "2026-03-20 08:51:16",
+      "last_seen": "2026-03-22 07:27:13",
       "title": "Cherche Ménage à Issoire",
       "is_remote": false,
       "description": "N/A",
@@ -1652,7 +1652,7 @@
     },
     "https://www.allovoisins.com/r/0/133/23745/0/Montbrison/service/Maconnerie": {
       "first_seen": "2026-01-22 18:29:33",
-      "last_seen": "2026-03-20 08:51:16",
+      "last_seen": "2026-03-22 07:27:13",
       "title": "Cherche Maçonnerie à Montbrison",
       "is_remote": false,
       "description": "N/A",
@@ -1718,13 +1718,13 @@
     },
     "https://www.allovoisins.com/r/0/159/33865/0/Saint-bonnet-les-allier/service/Reparation-voiture": {
       "first_seen": "2026-01-22 18:29:33",
-      "last_seen": "2026-03-20 08:51:16",
+      "last_seen": "2026-03-22 07:27:13",
       "title": "Recherche Réparation voiture à Saint-Bonnet-lès-Allier",
       "is_remote": false,
-      "description": "Durﾃｩe : 1 jour",
+      "description": "Camillea postûˋ cette demande dans le cadre duThû´me du momentô¨J'entretiens mon vûˋhiculeô£.",
       "confidence": "HIGH",
       "classification": "on-site",
-      "reasoning": "LLM: Réparation automobile nécessite présence physique",
+      "reasoning": "LLM: Réparation automobile sur place, service physique obligatoire",
       "description_source": "detail_page"
     },
     "https://www.allovoisins.com/r/0/146/33456/0/Glaine-montaigut/service/Elagage-et-coupe-d-arbres": {
@@ -1955,7 +1955,7 @@
     },
     "https://www.allovoisins.com/r/0/124/23604/0/Roanne/service/Bricolage-et-multi-services": {
       "first_seen": "2026-01-22 18:29:33",
-      "last_seen": "2026-03-20 08:51:16",
+      "last_seen": "2026-03-22 07:27:13",
       "title": "Cherche Bricolage et multi services à Roanne",
       "is_remote": false,
       "description": "N/A",
@@ -1977,7 +1977,7 @@
     },
     "https://www.allovoisins.com/r/0/153/33716/0/Issoire/service/Depannage-electromenager": {
       "first_seen": "2026-01-22 18:29:33",
-      "last_seen": "2026-03-20 08:51:16",
+      "last_seen": "2026-03-22 07:27:13",
       "title": "Recherche Dépannage électroménager à Issoire",
       "is_remote": false,
       "description": "N/A",
@@ -2010,10 +2010,10 @@
     },
     "https://www.allovoisins.com/r/0/137/33755/0/Brassac-les-mines/service/Plomberie-installation-sanitaire": {
       "first_seen": "2026-01-22 18:29:33",
-      "last_seen": "2026-03-20 08:51:16",
+      "last_seen": "2026-03-22 07:27:13",
       "title": "Recherche Plomberie - Installation sanitaire à Brassac-les-Mines",
       "is_remote": false,
-      "description": "Durée : 1 jour",
+      "description": "Cournon-D’auvergne - Zone Vieux Bourg-La Nef-Les Vergers",
       "confidence": "HIGH",
       "classification": "on-site",
       "reasoning": "Obvious on-site work: plomberie",
@@ -2303,7 +2303,7 @@
     },
     "https://www.allovoisins.com/r/4344/88/33755/0/location-Appartement-Brassac-les-mines": {
       "first_seen": "2026-01-22 18:29:33",
-      "last_seen": "2026-03-20 08:51:16",
+      "last_seen": "2026-03-22 07:27:13",
       "title": "Louer un appartement - Brassac-les-Mines",
       "is_remote": false,
       "description": "Durée : 365 jours",
@@ -2336,7 +2336,7 @@
     },
     "https://www.allovoisins.com/r/0/130/23604/0/Roanne/service/Chauffage-climatisation": {
       "first_seen": "2026-01-22 18:29:33",
-      "last_seen": "2026-03-20 08:51:16",
+      "last_seen": "2026-03-22 07:27:13",
       "title": "Cherche Chauffage - Climatisation à Roanne",
       "is_remote": false,
       "description": "N/A",
@@ -3865,7 +3865,7 @@
     },
     "https://www.allovoisins.com/r/0/124/33450/0/Billom/service/Bricolage-et-multi-services": {
       "first_seen": "2026-01-22 22:57:36",
-      "last_seen": "2026-03-20 08:51:16",
+      "last_seen": "2026-03-22 07:27:13",
       "title": "Recherche Bricolage et multi services à Billom",
       "is_remote": false,
       "description": "N/A",
@@ -3931,13 +3931,13 @@
     },
     "https://www.allovoisins.com/r/0/159/23604/0/Roanne/service/Reparation-voiture": {
       "first_seen": "2026-01-22 22:57:36",
-      "last_seen": "2026-03-20 08:51:16",
-      "title": "Cherche Réparation voiture à Roanne",
+      "last_seen": "2026-03-22 07:27:13",
+      "title": "Recherche Réparation voiture à Roanne",
       "is_remote": false,
       "description": "N/A",
       "confidence": "HIGH",
       "classification": "on-site",
-      "reasoning": "LLM: Réparation automobile nécessite intervention physique sur site",
+      "reasoning": "LLM: Réparation voiture nécessite intervention physique sur site",
       "description_source": "listing_page"
     },
     "https://www.allovoisins.com/r/0/163/33467/0/Moissat/service/Covoiturage-partage-de-frais": {
@@ -3953,14 +3953,14 @@
     },
     "https://www.allovoisins.com/r/0/144/23745/0/Montbrison/service/Paysagiste-amenagement-du-jardin": {
       "first_seen": "2026-01-22 22:57:36",
-      "last_seen": "2026-03-20 08:51:16",
+      "last_seen": "2026-03-22 07:27:13",
       "title": "Cherche Paysagiste - Aménagement du jardin à Montbrison",
       "is_remote": false,
-      "description": "N/A",
+      "description": "Paysagiste - Aménagement du jardin Saint-Romain-le-Puy",
       "confidence": "HIGH",
       "classification": "on-site",
       "reasoning": "Obvious on-site work: ménage",
-      "description_source": "listing_page"
+      "description_source": "detail_page"
     },
     "https://www.allovoisins.com/r/0/137/33465/0/Lempty/service/Plomberie-installation-sanitaire": {
       "first_seen": "2026-01-22 22:57:36",
@@ -3997,14 +3997,14 @@
     },
     "https://www.allovoisins.com/r/0/124/33666/0/Pont-du-chateau/service/Bricolage-et-multi-services": {
       "first_seen": "2026-01-22 22:57:36",
-      "last_seen": "2026-03-20 08:51:16",
+      "last_seen": "2026-03-22 07:27:13",
       "title": "Cherche Bricolage et multi services à Pont-du-Château",
       "is_remote": false,
-      "description": "N/A",
+      "description": "Clairea posté cette demande dans le cadre duThème du moment«C'est le printemps !».",
       "confidence": "HIGH",
       "classification": "on-site",
       "reasoning": "Obvious on-site work: bricolage",
-      "description_source": "listing_page"
+      "description_source": "detail_page"
     },
     "https://www.allovoisins.com/r/0/170/33666/0/Pont-du-chateau/service/Lingerie-repassage": {
       "first_seen": "2026-01-22 22:57:36",
@@ -4074,7 +4074,7 @@
     },
     "https://www.allovoisins.com/r/0/273/23928/0/Ceaux-d-allegre/service/Partenaire-loisirs-autres-sports": {
       "first_seen": "2026-01-22 22:57:36",
-      "last_seen": "2026-03-20 08:51:16",
+      "last_seen": "2026-03-22 07:27:13",
       "title": "Recherche Partenaire Loisirs - Autres sports à Céaux-d'Allègre",
       "is_remote": false,
       "description": "N/A",
@@ -4118,7 +4118,7 @@
     },
     "https://www.allovoisins.com/r/0/159/23506/0/Le-coteau/service/Reparation-voiture": {
       "first_seen": "2026-01-22 22:57:36",
-      "last_seen": "2026-03-20 08:51:16",
+      "last_seen": "2026-03-22 07:27:13",
       "title": "Recherche Réparation voiture à Le Coteau",
       "is_remote": false,
       "description": "N/A",
@@ -4217,7 +4217,7 @@
     },
     "https://www.allovoisins.com/r/0/153/23604/0/Roanne/service/Depannage-electromenager": {
       "first_seen": "2026-01-22 22:57:36",
-      "last_seen": "2026-03-20 08:51:16",
+      "last_seen": "2026-03-22 07:27:13",
       "title": "Recherche Dépannage électroménager à Roanne",
       "is_remote": false,
       "description": "N/A",
@@ -4228,7 +4228,7 @@
     },
     "https://www.allovoisins.com/r/0/124/23552/0/Andrezieux-boutheon/service/Bricolage-et-multi-services": {
       "first_seen": "2026-01-22 22:57:36",
-      "last_seen": "2026-03-07 07:06:10",
+      "last_seen": "2026-03-22 07:27:13",
       "title": "Recherche Bricolage et multi services à Andrézieux-Bouthéon",
       "is_remote": false,
       "description": "N/A",
@@ -4426,7 +4426,7 @@
     },
     "https://www.allovoisins.com/r/0/133/23679/0/Sury-le-comtal/service/Maconnerie": {
       "first_seen": "2026-01-22 22:57:36",
-      "last_seen": "2026-03-20 08:51:16",
+      "last_seen": "2026-03-22 07:27:13",
       "title": "Recherche Maçonnerie à Sury-le-Comtal",
       "is_remote": false,
       "description": "N/A",
@@ -4492,7 +4492,7 @@
     },
     "https://www.allovoisins.com/r/0/169/23484/0/Civens/service/Menage": {
       "first_seen": "2026-01-22 22:57:36",
-      "last_seen": "2026-03-20 08:51:16",
+      "last_seen": "2026-03-22 07:27:13",
       "title": "Cherche Ménage à Civens",
       "is_remote": false,
       "description": "N/A",
@@ -4668,7 +4668,7 @@
     },
     "https://www.allovoisins.com/r/0/157/33723/0/Saint-remy-de-chargnat/service/Reparation-carrosserie": {
       "first_seen": "2026-01-22 22:57:36",
-      "last_seen": "2026-03-20 08:51:16",
+      "last_seen": "2026-03-22 07:27:13",
       "title": "Recherche Réparation carrosserie à Saint-Rémy-de-Chargnat",
       "is_remote": false,
       "description": "N/A",
@@ -4800,7 +4800,7 @@
     },
     "https://www.allovoisins.com/r/0/159/23696/0/Balbigny/service/Reparation-voiture": {
       "first_seen": "2026-01-22 22:57:36",
-      "last_seen": "2026-03-20 08:51:16",
+      "last_seen": "2026-03-22 07:27:13",
       "title": "Recherche Réparation voiture à Balbigny",
       "is_remote": false,
       "description": "N/A",
@@ -4833,7 +4833,7 @@
     },
     "https://www.allovoisins.com/r/0/137/23604/0/Roanne/service/Plomberie-installation-sanitaire": {
       "first_seen": "2026-01-22 22:57:36",
-      "last_seen": "2026-03-20 08:51:16",
+      "last_seen": "2026-03-22 07:27:13",
       "title": "Cherche Plomberie - Installation sanitaire à Roanne",
       "is_remote": false,
       "description": "N/A",
@@ -4976,7 +4976,7 @@
     },
     "https://www.allovoisins.com/r/0/159/23699/0/Nervieux/service/Reparation-voiture": {
       "first_seen": "2026-01-22 22:57:36",
-      "last_seen": "2026-03-20 08:51:16",
+      "last_seen": "2026-03-22 07:27:13",
       "title": "Cherche Réparation voiture à Nervieux",
       "is_remote": false,
       "description": "N/A",
@@ -6439,14 +6439,14 @@
     },
     "https://www.allovoisins.com/r/0/164/33716/0/Issoire/service/Livraison-transport-de-colis": {
       "first_seen": "2026-01-23 08:24:47",
-      "last_seen": "2026-03-20 08:51:16",
+      "last_seen": "2026-03-22 07:27:13",
       "title": "Cherche Livraison - Transport de colis à Issoire",
       "is_remote": false,
-      "description": "Livraison - Transport de colis Saint-Germain-Lembron",
+      "description": "N/A",
       "confidence": "HIGH",
       "classification": "on-site",
       "reasoning": "Obvious on-site work: livraison",
-      "description_source": "detail_page"
+      "description_source": "listing_page"
     },
     "https://www.allovoisins.com/r/0/151/33716/0/Issoire/service/Manutention": {
       "first_seen": "2026-01-23 08:24:47",
@@ -6637,14 +6637,14 @@
     },
     "https://www.allovoisins.com/r/0/159/23670/0/Chausseterre/service/Reparation-voiture": {
       "first_seen": "2026-01-23 08:24:47",
-      "last_seen": "2026-03-20 08:51:16",
+      "last_seen": "2026-03-22 07:27:13",
       "title": "Recherche Réparation voiture à Chausseterre",
       "is_remote": false,
-      "description": "DurÃĐe : 1 jour",
+      "description": "N/A",
       "confidence": "HIGH",
       "classification": "on-site",
-      "reasoning": "LLM: Réparation automobile sur place, service physique",
-      "description_source": "detail_page"
+      "reasoning": "LLM: Réparation voiture = intervention physique obligatoire sur place",
+      "description_source": "listing_page"
     },
     "https://www.allovoisins.com/r/0/137/33734/0/Saint-dier-d-auvergne/service/Plomberie-installation-sanitaire": {
       "first_seen": "2026-01-23 08:24:47",
@@ -6736,7 +6736,7 @@
     },
     "https://www.allovoisins.com/r/0/125/23694/0/Fraisses/service/Montage-meubles-en-kit": {
       "first_seen": "2026-01-23 08:24:47",
-      "last_seen": "2026-03-20 08:51:16",
+      "last_seen": "2026-03-22 07:27:13",
       "title": "Cherche Montage meubles en kit à Fraisses",
       "is_remote": false,
       "description": "N/A",
@@ -6901,10 +6901,10 @@
     },
     "https://www.allovoisins.com/r/0/134/24083/0/Vorey/service/Menuiserie-huisserie-agencement": {
       "first_seen": "2026-01-23 08:24:47",
-      "last_seen": "2026-03-20 08:51:16",
+      "last_seen": "2026-03-22 07:27:13",
       "title": "Recherche Menuiserie - Huisserie - Agencement à Vorey",
       "is_remote": false,
-      "description": "Menuiserie - Huisserie - Agencement Roche-la-Molière",
+      "description": "Menuiserie - Huisserie - Agencement Andrézieux-Bouthéon",
       "confidence": "HIGH",
       "classification": "on-site",
       "reasoning": "LLM: Travail manuel de menuiserie sur site",
@@ -7077,7 +7077,7 @@
     },
     "https://www.allovoisins.com/r/0/157/33716/0/Issoire/service/Reparation-carrosserie": {
       "first_seen": "2026-01-23 08:24:47",
-      "last_seen": "2026-03-20 08:51:16",
+      "last_seen": "2026-03-22 07:27:13",
       "title": "Cherche Réparation carrosserie à Issoire",
       "is_remote": false,
       "description": "N/A",
@@ -7242,7 +7242,7 @@
     },
     "https://www.allovoisins.com/r/0/164/23604/0/Roanne/service/Livraison-transport-de-colis": {
       "first_seen": "2026-01-23 08:24:47",
-      "last_seen": "2026-03-20 08:51:16",
+      "last_seen": "2026-03-22 07:27:13",
       "title": "Recherche Livraison - Transport de colis à Roanne",
       "is_remote": false,
       "description": "N/A",
@@ -7387,10 +7387,14 @@
     },
     "https://www.allovoisins.com/r/0/300/23552/0/Andrezieux-boutheon/service/Terrassement-assainissement": {
       "first_seen": "2026-01-23 08:24:47",
-      "last_seen": "2026-01-25 09:02:31",
+      "last_seen": "2026-03-22 07:27:13",
       "title": "Recherche Terrassement - Assainissement à Andrézieux-Bouthéon",
       "is_remote": false,
-      "description": "N/A"
+      "description": "N/A",
+      "confidence": "HIGH",
+      "classification": "on-site",
+      "reasoning": "LLM: Travaux de terrassement et assainissement sur site",
+      "description_source": "listing_page"
     },
     "https://www.allovoisins.com/r/0/153/23698/0/Neronde/service/Depannage-electromenager": {
       "first_seen": "2026-01-23 08:24:47",
@@ -7472,7 +7476,7 @@
     },
     "https://www.allovoisins.com/r/0/164/23823/0/Brioude/service/Livraison-transport-de-colis": {
       "first_seen": "2026-01-23 08:24:47",
-      "last_seen": "2026-03-20 08:51:16",
+      "last_seen": "2026-03-22 07:27:13",
       "title": "Cherche Livraison - Transport de colis à Brioude",
       "is_remote": false,
       "description": "N/A",
@@ -7518,14 +7522,14 @@
     },
     "https://www.allovoisins.com/r/0/185/23568/0/Montrond-les-bains/service/Garde-chien": {
       "first_seen": "2026-01-23 08:24:47",
-      "last_seen": "2026-03-20 08:51:16",
-      "title": "Cherche Garde chien à Montrond-les-Bains",
+      "last_seen": "2026-03-22 07:27:13",
+      "title": "Recherche Garde chien û Montrond-les-Bains",
       "is_remote": false,
-      "description": "N/A",
+      "description": "Durée : 1 jour",
       "confidence": "HIGH",
       "classification": "on-site",
-      "reasoning": "LLM: Garde de chien nécessite présence physique",
-      "description_source": "listing_page"
+      "reasoning": "LLM: Garde de chien, service physique sur place",
+      "description_source": "detail_page"
     },
     "https://www.allovoisins.com/r/0/246/23745/0/Montbrison/service/Conciergerie": {
       "first_seen": "2026-01-23 08:24:47",
@@ -7541,7 +7545,7 @@
     },
     "https://www.allovoisins.com/r/0/143/23604/0/Roanne/service/Jardinier": {
       "first_seen": "2026-01-23 08:24:47",
-      "last_seen": "2026-03-20 08:51:16",
+      "last_seen": "2026-03-22 07:27:13",
       "title": "Cherche Jardinier à Roanne",
       "is_remote": false,
       "description": "N/A",
@@ -8990,24 +8994,24 @@
     },
     "https://www.allovoisins.com/r/0/164/24083/0/Vorey/service/Livraison-transport-de-colis": {
       "first_seen": "2026-01-23 15:33:10",
-      "last_seen": "2026-03-20 08:51:16",
+      "last_seen": "2026-03-22 07:27:13",
       "title": "Cherche Livraison - Transport de colis à Vorey",
       "is_remote": false,
-      "description": "Livraison - Transport de colis Saint-Priest-en-Jarez",
+      "description": "Janynea posté cette demande dans le cadre duThème du moment«Je déménage».",
       "confidence": "HIGH",
       "classification": "on-site",
-      "reasoning": "Obvious on-site work: livraison",
+      "reasoning": "Obvious on-site work: ménage",
       "description_source": "detail_page"
     },
     "https://www.allovoisins.com/r/0/127/23604/0/Roanne/service/Carrelage": {
       "first_seen": "2026-01-23 15:33:10",
-      "last_seen": "2026-02-17 08:53:41",
-      "title": "Recherche Carrelage Ă Roanne",
+      "last_seen": "2026-03-22 07:27:13",
+      "title": "Cherche Carrelage à Roanne",
       "is_remote": false,
       "description": "N/A",
       "confidence": "HIGH",
       "classification": "on-site",
-      "reasoning": "LLM: Carrelage = pose physique sur place",
+      "reasoning": "LLM: Carrelage = travaux physiques sur place",
       "description_source": "listing_page"
     },
     "https://www.allovoisins.com/r/0/128/33543/0/Vic-le-comte/service/Chaudronnerie-soudure": {
@@ -11817,7 +11821,7 @@
     },
     "https://www.allovoisins.com/r/0/132/23986/0/Vergongheon/service/Installation-electrique": {
       "first_seen": "2026-01-25 00:01:37",
-      "last_seen": "2026-03-20 08:51:16",
+      "last_seen": "2026-03-22 07:27:13",
       "title": "Recherche Installation électrique à Vergongheon",
       "is_remote": false,
       "description": "N/A",
@@ -14673,7 +14677,7 @@
     },
     "https://www.allovoisins.com/r/0/159/23745/0/Montbrison/service/Reparation-voiture": {
       "first_seen": "2026-01-26 06:37:50",
-      "last_seen": "2026-03-20 08:51:16",
+      "last_seen": "2026-03-22 07:27:13",
       "title": "Cherche Réparation voiture à Montbrison",
       "is_remote": false,
       "description": "N/A",
@@ -14783,7 +14787,7 @@
     },
     "https://www.allovoisins.com/r/0/137/33716/0/Issoire/service/Plomberie-installation-sanitaire": {
       "first_seen": "2026-01-26 06:37:50",
-      "last_seen": "2026-03-20 08:51:16",
+      "last_seen": "2026-03-22 07:27:13",
       "title": "Recherche Plomberie - Installation sanitaire à Issoire",
       "is_remote": false,
       "description": "N/A",
@@ -17896,7 +17900,7 @@
     },
     "https://www.allovoisins.com/r/0/133/23586/0/Unieux/service/Maconnerie": {
       "first_seen": "2026-01-28 06:39:11",
-      "last_seen": "2026-03-20 08:51:16",
+      "last_seen": "2026-03-22 07:27:13",
       "title": "Recherche Maçonnerie à Unieux",
       "is_remote": false,
       "description": "N/A",
@@ -18292,7 +18296,7 @@
     },
     "https://www.allovoisins.com/r/0/154/23679/0/Sury-le-comtal/service/Depannage-smartphone-hifi-video-photo": {
       "first_seen": "2026-01-31 06:39:19",
-      "last_seen": "2026-03-20 08:51:16",
+      "last_seen": "2026-03-22 07:27:13",
       "title": "Recherche Dépannage smartphone - hifi - video - photo à Sury-le-Comtal",
       "is_remote": false,
       "description": "Dépannage smartphone - hifi - video - photo Saint-Symphorien-sur-Coise",
@@ -18545,7 +18549,7 @@
     },
     "https://www.allovoisins.com/r/0/130/33556/0/Thiers/service/Chauffage-climatisation": {
       "first_seen": "2026-01-29 06:49:45",
-      "last_seen": "2026-03-20 08:51:16",
+      "last_seen": "2026-03-22 07:27:13",
       "title": "Cherche Chauffage - Climatisation à Thiers",
       "is_remote": false,
       "description": "N/A",
@@ -18743,14 +18747,14 @@
     },
     "https://www.allovoisins.com/r/0/134/23837/0/Aurec-sur-loire/service/Menuiserie-huisserie-agencement": {
       "first_seen": "2026-01-29 23:26:01",
-      "last_seen": "2026-03-20 08:51:16",
+      "last_seen": "2026-03-22 07:27:13",
       "title": "Recherche Menuiserie - Huisserie - Agencement à Aurec-sur-Loire",
       "is_remote": false,
-      "description": "Menuiserie - Huisserie - Agencement Roche-la-Molière",
+      "description": "N/A",
       "confidence": "HIGH",
       "classification": "on-site",
       "reasoning": "LLM: Menuiserie-agencement nécessite présence physique sur chantier",
-      "description_source": "detail_page"
+      "description_source": "listing_page"
     },
     "https://www.allovoisins.com/r/0/134/23755/0/Saint-romain-le-puy/service/Menuiserie-huisserie-agencement": {
       "first_seen": "2026-01-29 23:26:01",
@@ -18820,7 +18824,7 @@
     },
     "https://www.allovoisins.com/r/0/127/33716/0/Issoire/service/Carrelage": {
       "first_seen": "2026-01-29 23:26:01",
-      "last_seen": "2026-03-20 08:51:16",
+      "last_seen": "2026-03-22 07:27:13",
       "title": "Recherche Carrelage à Issoire",
       "is_remote": false,
       "description": "N/A",
@@ -24903,7 +24907,7 @@
     },
     "https://www.allovoisins.com/r/0/124/23553/0/Bonson/service/Bricolage-et-multi-services": {
       "first_seen": "2026-02-02 17:33:50",
-      "last_seen": "2026-03-20 08:51:16",
+      "last_seen": "2026-03-22 07:27:13",
       "title": "Recherche Bricolage et multi services à Bonson",
       "is_remote": false,
       "description": "N/A",
@@ -36981,7 +36985,7 @@
     },
     "https://www.allovoisins.com/r/0/132/33466/0/Lezoux/service/Installation-electrique": {
       "first_seen": "2026-02-05 08:24:11",
-      "last_seen": "2026-03-03 08:10:08",
+      "last_seen": "2026-03-22 07:27:13",
       "title": "Recherche Installation électrique à Lezoux",
       "is_remote": false,
       "description": "N/A",
@@ -36992,7 +36996,7 @@
     },
     "https://www.allovoisins.com/r/0/159/23511/0/Saint-marcel-de-felines/service/Reparation-voiture": {
       "first_seen": "2026-02-05 08:24:11",
-      "last_seen": "2026-02-09 10:22:44",
+      "last_seen": "2026-03-22 07:27:13",
       "title": "Recherche Réparation voiture à Saint-Marcel-de-Félines",
       "is_remote": false,
       "description": "N/A",
@@ -37190,7 +37194,7 @@
     },
     "https://www.allovoisins.com/r/0/300/33755/0/Brassac-les-mines/service/Terrassement-assainissement": {
       "first_seen": "2026-02-06 08:44:28",
-      "last_seen": "2026-03-20 08:51:16",
+      "last_seen": "2026-03-22 07:27:13",
       "title": "Recherche Terrassement - Assainissement à Brassac-les-Mines",
       "is_remote": false,
       "description": "N/A",
@@ -37212,7 +37216,7 @@
     },
     "https://www.allovoisins.com/r/0/135/23487/0/Feurs/service/Peinture-tapisserie": {
       "first_seen": "2026-02-06 08:44:28",
-      "last_seen": "2026-03-20 08:51:16",
+      "last_seen": "2026-03-22 07:27:13",
       "title": "Cherche Peinture - Tapisserie à Feurs",
       "is_remote": false,
       "description": "N/A",
@@ -37245,14 +37249,14 @@
     },
     "https://www.allovoisins.com/r/0/143/33755/0/Brassac-les-mines/service/Jardinier": {
       "first_seen": "2026-02-06 08:44:28",
-      "last_seen": "2026-03-20 08:51:16",
+      "last_seen": "2026-03-22 07:27:13",
       "title": "Cherche Jardinier à Brassac-les-Mines",
       "is_remote": false,
-      "description": "N/A",
+      "description": "Cournon-D’auvergne - Zone Vieux Bourg-La Nef-Les Vergers",
       "confidence": "HIGH",
       "classification": "on-site",
-      "reasoning": "LLM: Jardinier : travail physique sur site",
-      "description_source": "listing_page"
+      "reasoning": "LLM: Jardinage = travail physique sur site",
+      "description_source": "detail_page"
     },
     "https://www.allovoisins.com/r/0/169/23622/0/Cuzieu/service/Menage": {
       "first_seen": "2026-02-06 08:44:28",
@@ -37487,13 +37491,13 @@
     },
     "https://www.allovoisins.com/r/436/11/33565/0/location-Broyeur-de-vegetaux-Saint-sylvestre-pragoulin": {
       "first_seen": "2026-02-07 09:18:07",
-      "last_seen": "2026-03-20 08:51:16",
-      "title": "Location broyeur de végétaux - Saint-Sylvestre-Pragoulin",
+      "last_seen": "2026-03-22 07:27:13",
+      "title": "Location broyeur de vûˋgûˋtaux - Saint-Sylvestre-Pragoulin",
       "is_remote": false,
       "description": "Durée : 1 jour",
       "confidence": "HIGH",
       "classification": "on-site",
-      "reasoning": "LLM: Travail physique de broyage sur site",
+      "reasoning": "LLM: Travail physique de broyage sur place",
       "description_source": "detail_page"
     },
     "https://www.allovoisins.com/r/0/137/23636/0/Renaison/service/Plomberie-installation-sanitaire": {
@@ -37564,7 +37568,7 @@
     },
     "https://www.allovoisins.com/r/4360/93/33716/0/location-Hivernage-caravane-hivernage-camping-car-Issoire": {
       "first_seen": "2026-02-08 09:47:44",
-      "last_seen": "2026-03-20 08:51:16",
+      "last_seen": "2026-03-22 07:27:13",
       "title": "Louer un hivernage caravane / hivernage camping-car - Issoire",
       "is_remote": false,
       "description": "Durée : 365 jours",
@@ -37608,7 +37612,7 @@
     },
     "https://www.allovoisins.com/r/0/143/23808/0/Montagny/service/Jardinier": {
       "first_seen": "2026-02-08 09:47:44",
-      "last_seen": "2026-03-20 08:51:16",
+      "last_seen": "2026-03-22 07:27:13",
       "title": "Recherche Jardinier à Montagny",
       "is_remote": false,
       "description": "N/A",
@@ -37685,7 +37689,7 @@
     },
     "https://www.allovoisins.com/r/0/185/23696/0/Balbigny/service/Garde-chien": {
       "first_seen": "2026-02-09 10:22:44",
-      "last_seen": "2026-03-20 08:51:16",
+      "last_seen": "2026-03-22 07:27:13",
       "title": "Cherche Garde chien à Balbigny",
       "is_remote": false,
       "description": "N/A",
@@ -37696,7 +37700,7 @@
     },
     "https://www.allovoisins.com/r/0/146/23735/0/Chalain-d-uzore/service/Elagage-et-coupe-d-arbres": {
       "first_seen": "2026-02-09 10:22:44",
-      "last_seen": "2026-03-20 08:51:16",
+      "last_seen": "2026-03-22 07:27:13",
       "title": "Cherche Elagage et coupe d'arbres à Chalain-d'Uzore",
       "is_remote": false,
       "description": "N/A",
@@ -38048,7 +38052,7 @@
     },
     "https://www.allovoisins.com/r/0/137/33450/0/Billom/service/Plomberie-installation-sanitaire": {
       "first_seen": "2026-02-12 07:51:27",
-      "last_seen": "2026-03-20 08:51:16",
+      "last_seen": "2026-03-22 07:27:13",
       "title": "Recherche Plomberie - Installation sanitaire à Billom",
       "is_remote": false,
       "description": "N/A",
@@ -38125,7 +38129,7 @@
     },
     "https://www.allovoisins.com/r/0/124/33716/0/Issoire/service/Bricolage-et-multi-services": {
       "first_seen": "2026-02-12 07:51:27",
-      "last_seen": "2026-03-20 08:51:16",
+      "last_seen": "2026-03-22 07:27:13",
       "title": "Recherche Bricolage et multi services à Issoire",
       "is_remote": false,
       "description": "N/A",
@@ -38312,7 +38316,7 @@
     },
     "https://www.allovoisins.com/r/0/154/33450/0/Billom/service/Depannage-smartphone-hifi-video-photo": {
       "first_seen": "2026-02-13 07:34:13",
-      "last_seen": "2026-03-20 08:51:16",
+      "last_seen": "2026-03-22 07:27:13",
       "title": "Cherche Dépannage smartphone - hifi - video - photo à Billom",
       "is_remote": false,
       "description": "N/A",
@@ -38565,18 +38569,18 @@
     },
     "https://www.allovoisins.com/r/0/136/33450/0/Billom/service/Platrerie-murs-plafonds": {
       "first_seen": "2026-02-15 07:31:05",
-      "last_seen": "2026-03-20 08:51:16",
-      "title": "Recherche Plâtrerie - Murs - Plafonds à Billom",
+      "last_seen": "2026-03-22 07:27:13",
+      "title": "Recherche PlûÂtrerie - Murs - Plafonds û Billom",
       "is_remote": false,
       "description": "N/A",
       "confidence": "HIGH",
       "classification": "on-site",
-      "reasoning": "LLM: Travail manuel de plâtrerie sur site",
+      "reasoning": "LLM: Plâtrerie : travaux physiques sur site obligatoire",
       "description_source": "listing_page"
     },
     "https://www.allovoisins.com/r/0/130/33895/0/Peschadoires/service/Chauffage-climatisation": {
       "first_seen": "2026-02-15 07:31:05",
-      "last_seen": "2026-03-20 08:51:16",
+      "last_seen": "2026-03-22 07:27:13",
       "title": "Cherche Chauffage - Climatisation à Peschadoires",
       "is_remote": false,
       "description": "N/A",
@@ -38598,14 +38602,14 @@
     },
     "https://www.allovoisins.com/r/0/159/23668/0/Saint-marcel-d-urfe/service/Reparation-voiture": {
       "first_seen": "2026-02-15 07:31:05",
-      "last_seen": "2026-03-20 08:51:16",
+      "last_seen": "2026-03-22 07:27:13",
       "title": "Recherche Réparation voiture à Saint-Marcel-d'Urfé",
       "is_remote": false,
-      "description": "Durée : 1 jour",
+      "description": "N/A",
       "confidence": "HIGH",
       "classification": "on-site",
-      "reasoning": "LLM: Réparation automobile nécessite présence physique",
-      "description_source": "detail_page"
+      "reasoning": "LLM: Réparation automobile nécessite intervention physique sur place",
+      "description_source": "listing_page"
     },
     "https://www.allovoisins.com/r/0/159/23823/0/Brioude/service/Reparation-voiture": {
       "first_seen": "2026-02-15 07:31:05",
@@ -39049,7 +39053,7 @@
     },
     "https://www.allovoisins.com/r/0/144/23553/0/Bonson/service/Paysagiste-amenagement-du-jardin": {
       "first_seen": "2026-02-19 07:26:11",
-      "last_seen": "2026-03-20 08:51:16",
+      "last_seen": "2026-03-22 07:27:13",
       "title": "Cherche Paysagiste - Aménagement du jardin à Bonson",
       "is_remote": false,
       "description": "N/A",
@@ -39071,7 +39075,7 @@
     },
     "https://www.allovoisins.com/r/0/124/33894/0/Vertaizon/service/Bricolage-et-multi-services": {
       "first_seen": "2026-02-19 07:26:11",
-      "last_seen": "2026-03-20 08:51:16",
+      "last_seen": "2026-03-22 07:27:13",
       "title": "Cherche Bricolage et multi services à Vertaizon",
       "is_remote": false,
       "description": "N/A",
@@ -39159,10 +39163,10 @@
     },
     "https://www.allovoisins.com/r/0/137/81974/0/Vezelin-sur-loire/service/Plomberie-installation-sanitaire": {
       "first_seen": "2026-02-19 07:26:11",
-      "last_seen": "2026-03-20 08:51:16",
+      "last_seen": "2026-03-22 07:27:13",
       "title": "Cherche Plomberie - Installation sanitaire à Vézelin-sur-Loire",
       "is_remote": false,
-      "description": "Annicka posté cette demande dans le cadre duThème du moment«Je rénove ma salle de bain».",
+      "description": "Plomberie - Installation sanitaire Vindry-sur-Turdine",
       "confidence": "HIGH",
       "classification": "on-site",
       "reasoning": "Obvious on-site work: plomberie",
@@ -39203,7 +39207,7 @@
     },
     "https://www.allovoisins.com/r/0/143/23679/0/Sury-le-comtal/service/Jardinier": {
       "first_seen": "2026-02-19 07:26:11",
-      "last_seen": "2026-03-20 08:51:16",
+      "last_seen": "2026-03-22 07:27:13",
       "title": "Cherche Jardinier à Sury-le-Comtal",
       "is_remote": false,
       "description": "N/A",
@@ -39346,7 +39350,7 @@
     },
     "https://www.allovoisins.com/r/0/159/45993/0/Saint-just-saint-rambert/service/Reparation-voiture": {
       "first_seen": "2026-02-19 07:26:11",
-      "last_seen": "2026-03-20 08:51:16",
+      "last_seen": "2026-03-22 07:27:13",
       "title": "Cherche Réparation voiture à Saint-Just-Saint-Rambert",
       "is_remote": false,
       "description": "N/A",
@@ -39401,8 +39405,8 @@
     },
     "https://www.allovoisins.com/r/0/293/23487/0/Feurs/service/Vendeur-commercial": {
       "first_seen": "2026-02-20 07:19:21",
-      "last_seen": "2026-03-20 08:51:16",
-      "title": "Cherche Vendeur - Commercial à Feurs",
+      "last_seen": "2026-03-22 07:27:13",
+      "title": "Cherche Vendeur - Commercial û Feurs",
       "is_remote": false,
       "description": "N/A",
       "confidence": "HIGH",
@@ -39500,7 +39504,7 @@
     },
     "https://www.allovoisins.com/r/0/252/33716/0/Issoire/service/Coiffure-a-domicile": {
       "first_seen": "2026-02-20 07:19:21",
-      "last_seen": "2026-03-20 08:51:16",
+      "last_seen": "2026-03-22 07:27:13",
       "title": "Recherche Coiffure à domicile à Issoire",
       "is_remote": false,
       "description": "N/A",
@@ -39896,14 +39900,14 @@
     },
     "https://www.allovoisins.com/r/0/159/46790/0/Boen-sur-lignon/service/Reparation-voiture": {
       "first_seen": "2026-02-23 07:56:26",
-      "last_seen": "2026-03-20 08:51:16",
+      "last_seen": "2026-03-22 07:27:13",
       "title": "Recherche Réparation voiture à Boën-sur-Lignon",
       "is_remote": false,
-      "description": "N/A",
+      "description": "Durée : 1 jour",
       "confidence": "HIGH",
       "classification": "on-site",
-      "reasoning": "LLM: Réparation automobile nécessite présence physique",
-      "description_source": "listing_page"
+      "reasoning": "LLM: Réparation voiture nécessite intervention physique sur place",
+      "description_source": "detail_page"
     },
     "https://www.allovoisins.com/r/0/148/23678/0/Les-salles/service/Entretien-piscine": {
       "first_seen": "2026-02-23 07:56:26",
@@ -40127,8 +40131,8 @@
     },
     "https://www.allovoisins.com/r/0/137/45993/0/Saint-just-saint-rambert/service/Plomberie-installation-sanitaire": {
       "first_seen": "2026-02-24 08:26:54",
-      "last_seen": "2026-03-20 08:51:16",
-      "title": "Recherche Plomberie - Installation sanitaire à Saint-Just-Saint-Rambert",
+      "last_seen": "2026-03-22 07:27:13",
+      "title": "Cherche Plomberie - Installation sanitaire à Saint-Just-Saint-Rambert",
       "is_remote": false,
       "description": "N/A",
       "confidence": "HIGH",
@@ -40325,7 +40329,7 @@
     },
     "https://www.allovoisins.com/r/0/159/23551/0/Villemontais/service/Reparation-voiture": {
       "first_seen": "2026-02-25 09:06:31",
-      "last_seen": "2026-03-20 08:51:16",
+      "last_seen": "2026-03-22 07:27:13",
       "title": "Recherche Réparation voiture à Villemontais",
       "is_remote": false,
       "description": "N/A",
@@ -40347,7 +40351,7 @@
     },
     "https://www.allovoisins.com/r/5142/78/33556/0/location-Vehicule-utilitaire-camionnette-Thiers": {
       "first_seen": "2026-02-25 09:06:31",
-      "last_seen": "2026-03-20 08:51:16",
+      "last_seen": "2026-03-22 07:27:13",
       "title": "Louer un véhicule utilitaire / camionnette - Thiers",
       "is_remote": false,
       "description": "Durée : 1 jour",
@@ -40358,14 +40362,14 @@
     },
     "https://www.allovoisins.com/r/0/133/23736/0/Chalain-le-comtal/service/Maconnerie": {
       "first_seen": "2026-02-25 09:06:31",
-      "last_seen": "2026-03-20 08:51:16",
+      "last_seen": "2026-03-22 07:27:13",
       "title": "Recherche Maçonnerie à Chalain-le-Comtal",
       "is_remote": false,
-      "description": "N/A",
+      "description": "Durée : 1 jour",
       "confidence": "HIGH",
       "classification": "on-site",
       "reasoning": "Obvious on-site work: maçon",
-      "description_source": "listing_page"
+      "description_source": "detail_page"
     },
     "https://www.allovoisins.com/r/257/3/70726/0/location-Pelleteuse-minipelle-mini-pelle-Saint-hilaire-cusson-la-valmitte": {
       "first_seen": "2026-02-25 09:06:31",
@@ -40380,8 +40384,8 @@
     },
     "https://www.allovoisins.com/r/0/144/23891/0/Yssingeaux/service/Paysagiste-amenagement-du-jardin": {
       "first_seen": "2026-02-25 09:06:31",
-      "last_seen": "2026-03-20 08:51:16",
-      "title": "Cherche Paysagiste - Aménagement du jardin à Yssingeaux",
+      "last_seen": "2026-03-22 07:27:13",
+      "title": "Recherche Paysagiste - Aménagement du jardin à Yssingeaux",
       "is_remote": false,
       "description": "N/A",
       "confidence": "HIGH",
@@ -40501,7 +40505,7 @@
     },
     "https://www.allovoisins.com/r/0/140/33863/0/Perignat-sur-allier/service/Taille-de-pierre-marbrerie": {
       "first_seen": "2026-02-27 07:26:10",
-      "last_seen": "2026-03-20 08:51:16",
+      "last_seen": "2026-03-22 07:27:13",
       "title": "Cherche Taille de pierre - Marbrerie à Pérignat-sur-Allier",
       "is_remote": false,
       "description": "N/A",
@@ -40512,7 +40516,7 @@
     },
     "https://www.allovoisins.com/r/0/169/23918/0/Sainte-florine/service/Menage": {
       "first_seen": "2026-02-27 07:26:10",
-      "last_seen": "2026-03-20 08:51:16",
+      "last_seen": "2026-03-22 07:27:13",
       "title": "Recherche Ménage à Sainte-Florine",
       "is_remote": false,
       "description": "N/A",
@@ -40545,7 +40549,7 @@
     },
     "https://www.allovoisins.com/r/0/155/23636/0/Renaison/service/Reparation-outillage": {
       "first_seen": "2026-02-27 07:26:10",
-      "last_seen": "2026-03-20 08:51:16",
+      "last_seen": "2026-03-22 07:27:13",
       "title": "Recherche Réparation outillage à Renaison",
       "is_remote": false,
       "description": "N/A",
@@ -40567,7 +40571,7 @@
     },
     "https://www.allovoisins.com/r/0/151/23584/0/Saint-maurice-en-gourgois/service/Manutention": {
       "first_seen": "2026-02-27 07:26:10",
-      "last_seen": "2026-03-20 08:51:16",
+      "last_seen": "2026-03-22 07:27:13",
       "title": "Cherche Manutention à Saint-Maurice-en-Gourgois",
       "is_remote": false,
       "description": "Andreaa posté cette demande dans le cadre duThème du moment«Je déménage».",
@@ -40578,7 +40582,7 @@
     },
     "https://www.allovoisins.com/r/0/159/23692/0/Saint-symphorien-de-lay/service/Reparation-voiture": {
       "first_seen": "2026-02-27 07:26:10",
-      "last_seen": "2026-03-20 08:51:16",
+      "last_seen": "2026-03-22 07:27:13",
       "title": "Cherche Réparation voiture à Saint-Symphorien-de-Lay",
       "is_remote": false,
       "description": "N/A",
@@ -40589,7 +40593,7 @@
     },
     "https://www.allovoisins.com/r/0/159/23759/0/Regny/service/Reparation-voiture": {
       "first_seen": "2026-02-27 07:26:10",
-      "last_seen": "2026-03-20 08:51:16",
+      "last_seen": "2026-03-22 07:27:13",
       "title": "Recherche Réparation voiture à Régny",
       "is_remote": false,
       "description": "N/A",
@@ -40600,7 +40604,7 @@
     },
     "https://www.allovoisins.com/r/5242/79/23520/0/location-Pont-elevateur-Marcilly-le-chatel": {
       "first_seen": "2026-02-27 07:26:10",
-      "last_seen": "2026-03-20 08:51:16",
+      "last_seen": "2026-03-22 07:27:13",
       "title": "Louer un pont élévateur - Marcilly-le-Châtel",
       "is_remote": false,
       "description": "Durée : 1 jour",
@@ -40611,7 +40615,7 @@
     },
     "https://www.allovoisins.com/r/0/153/23778/0/Saint-marcellin-en-forez/service/Depannage-electromenager": {
       "first_seen": "2026-02-27 07:26:10",
-      "last_seen": "2026-03-20 08:51:16",
+      "last_seen": "2026-03-22 07:27:13",
       "title": "Cherche Dépannage électroménager à Saint-Marcellin-en-Forez",
       "is_remote": false,
       "description": "N/A",
@@ -40622,18 +40626,18 @@
     },
     "https://www.allovoisins.com/r/0/186/24008/0/Vezezoux/service/Garde-chat": {
       "first_seen": "2026-02-27 07:26:10",
-      "last_seen": "2026-03-20 08:51:16",
+      "last_seen": "2026-03-22 07:27:13",
       "title": "Recherche Garde chat à Vézézoux",
       "is_remote": false,
-      "description": "N/A",
+      "description": "Durée : 1 jour",
       "confidence": "HIGH",
       "classification": "on-site",
-      "reasoning": "LLM: Garde d'animaux, service physique sur place",
-      "description_source": "listing_page"
+      "reasoning": "LLM: Garde d'animaux sur place à Vézézoux",
+      "description_source": "detail_page"
     },
     "https://www.allovoisins.com/r/0/134/33544/0/Yronde-et-buron/service/Menuiserie-huisserie-agencement": {
       "first_seen": "2026-02-27 07:26:10",
-      "last_seen": "2026-03-20 08:51:16",
+      "last_seen": "2026-03-22 07:27:13",
       "title": "Recherche Menuiserie - Huisserie - Agencement à Yronde-et-Buron",
       "is_remote": false,
       "description": "N/A",
@@ -40666,7 +40670,7 @@
     },
     "https://www.allovoisins.com/r/0/130/33466/0/Lezoux/service/Chauffage-climatisation": {
       "first_seen": "2026-02-27 07:26:10",
-      "last_seen": "2026-03-20 08:51:16",
+      "last_seen": "2026-03-22 07:27:13",
       "title": "Recherche Chauffage - Climatisation à Lezoux",
       "is_remote": false,
       "description": "N/A",
@@ -40677,7 +40681,7 @@
     },
     "https://www.allovoisins.com/r/0/126/33708/0/Sauxillanges/service/Pose-de-parquet-revetement-de-sol": {
       "first_seen": "2026-02-27 07:26:10",
-      "last_seen": "2026-03-20 08:51:16",
+      "last_seen": "2026-03-22 07:27:13",
       "title": "Cherche Pose de parquet - Revêtement de sol à Sauxillanges",
       "is_remote": false,
       "description": "N/A",
@@ -40699,7 +40703,7 @@
     },
     "https://www.allovoisins.com/r/0/160/23679/0/Sury-le-comtal/service/Reparation-velo-moto": {
       "first_seen": "2026-02-27 07:26:10",
-      "last_seen": "2026-03-20 08:51:16",
+      "last_seen": "2026-03-22 07:27:13",
       "title": "Cherche Réparation vélo - moto à Sury-le-Comtal",
       "is_remote": false,
       "description": "N/A",
@@ -40710,7 +40714,7 @@
     },
     "https://www.allovoisins.com/r/0/297/23604/0/Roanne/service/Architecte-maitre-d-oeuvre": {
       "first_seen": "2026-02-27 07:26:10",
-      "last_seen": "2026-03-20 08:51:16",
+      "last_seen": "2026-03-22 07:27:13",
       "title": "Cherche Architecte - Maître d'oeuvre à Roanne",
       "is_remote": false,
       "description": "N/A",
@@ -40721,7 +40725,7 @@
     },
     "https://www.allovoisins.com/r/488/11/61111/0/location-Motoculteur-Saint-just-en-bas": {
       "first_seen": "2026-02-27 07:26:10",
-      "last_seen": "2026-03-20 08:51:16",
+      "last_seen": "2026-03-22 07:27:13",
       "title": "Prêt motoculteur - Saint-Just-en-Bas",
       "is_remote": false,
       "description": "Durée : 1 jour",
@@ -40732,7 +40736,7 @@
     },
     "https://www.allovoisins.com/r/0/131/33466/0/Lezoux/service/Couverture-toiture": {
       "first_seen": "2026-02-27 07:26:10",
-      "last_seen": "2026-03-20 08:51:16",
+      "last_seen": "2026-03-22 07:27:13",
       "title": "Recherche Couverture - Toiture à Lezoux",
       "is_remote": false,
       "description": "N/A",
@@ -40743,18 +40747,18 @@
     },
     "https://www.allovoisins.com/r/0/157/23696/0/Balbigny/service/Reparation-carrosserie": {
       "first_seen": "2026-02-27 07:26:10",
-      "last_seen": "2026-03-20 08:51:16",
+      "last_seen": "2026-03-22 07:27:13",
       "title": "Cherche Réparation carrosserie à Balbigny",
       "is_remote": false,
-      "description": "N/A",
+      "description": "Isabellea postĂ© cette demande dans le cadre duThĂ¨me du momentÂ«J'entretiens mon vĂ©hiculeÂ».",
       "confidence": "HIGH",
       "classification": "on-site",
       "reasoning": "LLM: Réparation carrosserie = intervention physique obligatoire sur place",
-      "description_source": "listing_page"
+      "description_source": "detail_page"
     },
     "https://www.allovoisins.com/r/515/11/23549/0/location-Scarificateur-Saint-leger-sur-roanne": {
       "first_seen": "2026-02-27 07:26:10",
-      "last_seen": "2026-03-20 08:51:16",
+      "last_seen": "2026-03-22 07:27:13",
       "title": "Louer un scarificateur - Saint-Léger-sur-Roanne",
       "is_remote": false,
       "description": "Durée : 1 jour",
@@ -40798,7 +40802,7 @@
     },
     "https://www.allovoisins.com/r/5142/78/23491/0/location-Vehicule-utilitaire-camionnette-Pouilly-les-feurs": {
       "first_seen": "2026-02-28 07:03:06",
-      "last_seen": "2026-03-20 08:51:16",
+      "last_seen": "2026-03-22 07:27:13",
       "title": "Location véhicule utilitaire / camionnette - Pouilly-lès-Feurs",
       "is_remote": false,
       "description": "Durée : 1 jour",
@@ -40809,7 +40813,7 @@
     },
     "https://www.allovoisins.com/r/0/147/23918/0/Sainte-florine/service/Cloture-grillage": {
       "first_seen": "2026-02-28 07:03:06",
-      "last_seen": "2026-03-20 08:51:16",
+      "last_seen": "2026-03-22 07:27:13",
       "title": "Cherche Clôture Grillage à Sainte-Florine",
       "is_remote": false,
       "description": "Durée : 1 jour",
@@ -40820,7 +40824,7 @@
     },
     "https://www.allovoisins.com/r/0/135/23553/0/Bonson/service/Peinture-tapisserie": {
       "first_seen": "2026-02-28 07:03:06",
-      "last_seen": "2026-03-20 08:51:16",
+      "last_seen": "2026-03-22 07:27:13",
       "title": "Recherche Peinture - Tapisserie à Bonson",
       "is_remote": false,
       "description": "N/A",
@@ -40831,14 +40835,14 @@
     },
     "https://www.allovoisins.com/r/0/132/33602/0/Charbonnier-les-mines/service/Installation-electrique": {
       "first_seen": "2026-02-28 07:03:06",
-      "last_seen": "2026-03-20 08:51:16",
+      "last_seen": "2026-03-22 07:27:13",
       "title": "Recherche Installation électrique à Charbonnier-les-Mines",
       "is_remote": false,
-      "description": "Cournon-D’auvergne - Zone Rte de Clermont-Avenue de la Gare",
+      "description": "N/A",
       "confidence": "HIGH",
       "classification": "on-site",
-      "reasoning": "LLM: Installation électrique sur site, travail physique obligatoire",
-      "description_source": "detail_page"
+      "reasoning": "LLM: Installation électrique nécessite intervention physique sur site",
+      "description_source": "listing_page"
     },
     "https://www.allovoisins.com/r/0/130/23544/0/Riorges/service/Chauffage-climatisation": {
       "first_seen": "2026-02-28 07:03:06",
@@ -40853,7 +40857,7 @@
     },
     "https://www.allovoisins.com/r/0/124/23713/0/Saint-just-la-pendue/service/Bricolage-et-multi-services": {
       "first_seen": "2026-02-28 07:03:06",
-      "last_seen": "2026-03-20 08:51:16",
+      "last_seen": "2026-03-22 07:27:13",
       "title": "Recherche Bricolage et multi services à Saint-Just-la-Pendue",
       "is_remote": false,
       "description": "N/A",
@@ -40864,18 +40868,18 @@
     },
     "https://www.allovoisins.com/r/0/147/33431/0/Courpiere/service/Cloture-grillage": {
       "first_seen": "2026-02-28 07:03:06",
-      "last_seen": "2026-03-20 08:51:16",
+      "last_seen": "2026-03-22 07:27:13",
       "title": "Recherche Clôture Grillage à Courpière",
       "is_remote": false,
-      "description": "Durée : 1 jour",
+      "description": "N/A",
       "confidence": "HIGH",
       "classification": "on-site",
-      "reasoning": "LLM: Installation physique de grillage sur site",
-      "description_source": "detail_page"
+      "reasoning": "LLM: Travail physique d'installation de grillage sur site",
+      "description_source": "listing_page"
     },
     "https://www.allovoisins.com/r/0/161/23604/0/Roanne/service/Entretien-reparation-autres-vehicules": {
       "first_seen": "2026-02-28 07:03:06",
-      "last_seen": "2026-03-20 08:51:16",
+      "last_seen": "2026-03-22 07:27:13",
       "title": "Cherche Entretien - Réparation autres véhicules à Roanne",
       "is_remote": false,
       "description": "N/A",
@@ -40886,7 +40890,7 @@
     },
     "https://www.allovoisins.com/r/282/3/33666/0/location-Trancheuse-de-sols-Pont-du-chateau": {
       "first_seen": "2026-02-28 07:03:06",
-      "last_seen": "2026-03-20 08:51:16",
+      "last_seen": "2026-03-22 07:27:13",
       "title": "Louer une trancheuse de sols - Pont-du-Château",
       "is_remote": false,
       "description": "Durée : 1 jour",
@@ -40897,18 +40901,18 @@
     },
     "https://www.allovoisins.com/r/0/147/33555/0/Escoutoux/service/Cloture-grillage": {
       "first_seen": "2026-02-28 07:03:06",
-      "last_seen": "2026-03-20 08:51:16",
+      "last_seen": "2026-03-22 07:27:13",
       "title": "Recherche Clôture Grillage à Escoutoux",
       "is_remote": false,
-      "description": "Durée : 1 jour",
+      "description": "N/A",
       "confidence": "HIGH",
       "classification": "on-site",
-      "reasoning": "LLM: Travail de pose de grillage sur site",
-      "description_source": "detail_page"
+      "reasoning": "LLM: Installation de grillage nécessite présence physique sur site",
+      "description_source": "listing_page"
     },
     "https://www.allovoisins.com/r/488/11/23679/0/location-Motoculteur-Sury-le-comtal": {
       "first_seen": "2026-02-28 07:03:06",
-      "last_seen": "2026-03-20 08:51:16",
+      "last_seen": "2026-03-22 07:27:13",
       "title": "Location motoculteur - Sury-le-Comtal",
       "is_remote": false,
       "description": "Durée : 1 jour",
@@ -40919,7 +40923,7 @@
     },
     "https://www.allovoisins.com/r/0/169/33665/0/Les-martres-d-artiere/service/Menage": {
       "first_seen": "2026-02-28 07:03:06",
-      "last_seen": "2026-03-20 08:51:16",
+      "last_seen": "2026-03-22 07:27:13",
       "title": "Recherche Ménage à Les Martres-d'Artière",
       "is_remote": false,
       "description": "N/A",
@@ -40941,7 +40945,7 @@
     },
     "https://www.allovoisins.com/r/0/148/33551/0/Paslieres/service/Entretien-piscine": {
       "first_seen": "2026-02-28 07:03:06",
-      "last_seen": "2026-03-20 08:51:16",
+      "last_seen": "2026-03-22 07:27:13",
       "title": "Cherche Entretien piscine à Paslières",
       "is_remote": false,
       "description": "N/A",
@@ -40952,18 +40956,18 @@
     },
     "https://www.allovoisins.com/r/0/127/23566/0/L-hopital-le-grand/service/Carrelage": {
       "first_seen": "2026-02-28 07:03:06",
-      "last_seen": "2026-03-20 08:51:16",
+      "last_seen": "2026-03-22 07:27:13",
       "title": "Recherche Carrelage à L'Hôpital-le-Grand",
       "is_remote": false,
-      "description": "Durée : 1 jour",
+      "description": "N/A",
       "confidence": "HIGH",
       "classification": "on-site",
-      "reasoning": "LLM: Pose de carrelage, travail physique sur site",
-      "description_source": "detail_page"
+      "reasoning": "LLM: Carrelage = travaux physiques sur site",
+      "description_source": "listing_page"
     },
     "https://www.allovoisins.com/r/0/143/23544/0/Riorges/service/Jardinier": {
       "first_seen": "2026-02-28 07:03:06",
-      "last_seen": "2026-03-20 08:51:16",
+      "last_seen": "2026-03-22 07:27:13",
       "title": "Cherche Jardinier à Riorges",
       "is_remote": false,
       "description": "N/A",
@@ -40974,7 +40978,7 @@
     },
     "https://www.allovoisins.com/r/0/153/23679/0/Sury-le-comtal/service/Depannage-electromenager": {
       "first_seen": "2026-03-01 07:11:34",
-      "last_seen": "2026-03-20 08:51:16",
+      "last_seen": "2026-03-22 07:27:13",
       "title": "Recherche Dépannage électroménager à Sury-le-Comtal",
       "is_remote": false,
       "description": "N/A",
@@ -40985,14 +40989,14 @@
     },
     "https://www.allovoisins.com/r/0/155/23679/0/Sury-le-comtal/service/Reparation-outillage": {
       "first_seen": "2026-03-01 07:11:34",
-      "last_seen": "2026-03-20 08:51:16",
+      "last_seen": "2026-03-22 07:27:13",
       "title": "Cherche Réparation outillage à Sury-le-Comtal",
       "is_remote": false,
-      "description": "N/A",
+      "description": "Durée : 1 jour",
       "confidence": "HIGH",
       "classification": "on-site",
-      "reasoning": "LLM: Réparation d'outils nécessite présence physique sur site",
-      "description_source": "listing_page"
+      "reasoning": "LLM: Réparation d'outils, service physique sur place",
+      "description_source": "detail_page"
     },
     "https://www.allovoisins.com/r/488/11/23835/0/location-Motoculteur-Saint-laurent-chabreuges": {
       "first_seen": "2026-03-01 07:11:34",
@@ -41007,7 +41011,7 @@
     },
     "https://www.allovoisins.com/r/0/185/33620/0/Joze/service/Garde-chien": {
       "first_seen": "2026-03-01 07:11:34",
-      "last_seen": "2026-03-20 08:51:16",
+      "last_seen": "2026-03-22 07:27:13",
       "title": "Cherche Garde chien à Joze",
       "is_remote": false,
       "description": "N/A",
@@ -41040,7 +41044,7 @@
     },
     "https://www.allovoisins.com/r/0/133/33539/0/Parent/service/Maconnerie": {
       "first_seen": "2026-03-01 07:11:34",
-      "last_seen": "2026-03-20 08:51:16",
+      "last_seen": "2026-03-22 07:27:13",
       "title": "Cherche Maçonnerie à Parent",
       "is_remote": false,
       "description": "N/A",
@@ -41051,7 +41055,7 @@
     },
     "https://www.allovoisins.com/r/466/11/23569/0/location-Fendeur-de-buches-Saint-andre-le-puy": {
       "first_seen": "2026-03-01 07:11:34",
-      "last_seen": "2026-03-20 08:51:16",
+      "last_seen": "2026-03-22 07:27:13",
       "title": "Louer un fendeur de bûches - Saint-André-le-Puy",
       "is_remote": false,
       "description": "Durée : 1 jour",
@@ -41062,7 +41066,7 @@
     },
     "https://www.allovoisins.com/r/0/133/33566/0/Villeneuve-les-cerfs/service/Maconnerie": {
       "first_seen": "2026-03-01 07:11:34",
-      "last_seen": "2026-03-20 08:51:16",
+      "last_seen": "2026-03-22 07:27:13",
       "title": "Cherche Maçonnerie à Villeneuve-les-Cerfs",
       "is_remote": false,
       "description": "N/A",
@@ -41084,7 +41088,7 @@
     },
     "https://www.allovoisins.com/r/0/169/23650/0/Saint-bonnet-le-chateau/service/Menage": {
       "first_seen": "2026-03-01 07:11:34",
-      "last_seen": "2026-03-20 08:51:16",
+      "last_seen": "2026-03-22 07:27:13",
       "title": "Recherche Ménage à Saint-Bonnet-le-Château",
       "is_remote": false,
       "description": "N/A",
@@ -41095,7 +41099,7 @@
     },
     "https://www.allovoisins.com/r/0/124/23836/0/Vieille-brioude/service/Bricolage-et-multi-services": {
       "first_seen": "2026-03-01 07:11:34",
-      "last_seen": "2026-03-20 08:51:16",
+      "last_seen": "2026-03-22 07:27:13",
       "title": "Recherche Bricolage et multi services à Vieille-Brioude",
       "is_remote": false,
       "description": "N/A",
@@ -41106,7 +41110,7 @@
     },
     "https://www.allovoisins.com/r/525/11/33541/0/location-Taille-haies-Saint-maurice": {
       "first_seen": "2026-03-01 07:11:34",
-      "last_seen": "2026-03-20 08:51:16",
+      "last_seen": "2026-03-22 07:27:13",
       "title": "Louer un taille-haies - Saint-Maurice",
       "is_remote": false,
       "description": "Durée : 1 jour",
@@ -41117,7 +41121,7 @@
     },
     "https://www.allovoisins.com/r/0/146/33832/0/Chappes/service/Elagage-et-coupe-d-arbres": {
       "first_seen": "2026-03-01 07:11:34",
-      "last_seen": "2026-03-20 08:51:16",
+      "last_seen": "2026-03-22 07:27:13",
       "title": "Recherche Elagage et coupe d'arbres à Chappes",
       "is_remote": false,
       "description": "N/A",
@@ -41150,7 +41154,7 @@
     },
     "https://www.allovoisins.com/r/0/298/23891/0/Yssingeaux/service/Artisan-tout-corps-d-etat-renovation": {
       "first_seen": "2026-03-02 07:37:43",
-      "last_seen": "2026-03-20 08:51:16",
+      "last_seen": "2026-03-22 07:27:13",
       "title": "Cherche Artisan tout corps d'état - Rénovation à Yssingeaux",
       "is_remote": false,
       "description": "N/A",
@@ -41161,7 +41165,7 @@
     },
     "https://www.allovoisins.com/r/0/124/33895/0/Peschadoires/service/Bricolage-et-multi-services": {
       "first_seen": "2026-03-02 07:37:43",
-      "last_seen": "2026-03-20 08:51:16",
+      "last_seen": "2026-03-22 07:27:13",
       "title": "Recherche Bricolage et multi services à Peschadoires",
       "is_remote": false,
       "description": "N/A",
@@ -41172,7 +41176,7 @@
     },
     "https://www.allovoisins.com/r/0/300/23735/0/Chalain-d-uzore/service/Terrassement-assainissement": {
       "first_seen": "2026-03-02 07:37:43",
-      "last_seen": "2026-03-20 08:51:16",
+      "last_seen": "2026-03-22 07:27:13",
       "title": "Cherche Terrassement - Assainissement à Chalain-d'Uzore",
       "is_remote": false,
       "description": "N/A",
@@ -41183,7 +41187,7 @@
     },
     "https://www.allovoisins.com/r/0/160/23735/0/Chalain-d-uzore/service/Reparation-velo-moto": {
       "first_seen": "2026-03-02 07:37:43",
-      "last_seen": "2026-03-20 08:51:16",
+      "last_seen": "2026-03-22 07:27:13",
       "title": "Cherche Réparation vélo - moto à Chalain-d'Uzore",
       "is_remote": false,
       "description": "N/A",
@@ -41194,7 +41198,7 @@
     },
     "https://www.allovoisins.com/r/436/11/33666/0/location-Broyeur-de-vegetaux-Pont-du-chateau": {
       "first_seen": "2026-03-02 07:37:43",
-      "last_seen": "2026-03-20 08:51:16",
+      "last_seen": "2026-03-22 07:27:13",
       "title": "Louer un broyeur de végétaux - Pont-du-Château",
       "is_remote": false,
       "description": "Durée : 1 jour",
@@ -41205,7 +41209,7 @@
     },
     "https://www.allovoisins.com/r/0/154/23493/0/Sainte-foy-saint-sulpice/service/Depannage-smartphone-hifi-video-photo": {
       "first_seen": "2026-03-02 07:37:43",
-      "last_seen": "2026-03-20 08:51:16",
+      "last_seen": "2026-03-22 07:27:13",
       "title": "Recherche Dépannage smartphone - hifi - video - photo à Sainte-Foy-Saint-Sulpice",
       "is_remote": false,
       "description": "Dépannage smartphone - hifi - video - photo Saint-Symphorien-sur-Coise",
@@ -41227,7 +41231,7 @@
     },
     "https://www.allovoisins.com/r/0/159/23509/0/Perreux/service/Reparation-voiture": {
       "first_seen": "2026-03-02 07:37:43",
-      "last_seen": "2026-03-20 08:51:16",
+      "last_seen": "2026-03-22 07:27:13",
       "title": "Recherche Réparation voiture à Perreux",
       "is_remote": false,
       "description": "N/A",
@@ -41238,14 +41242,14 @@
     },
     "https://www.allovoisins.com/r/0/296/23491/0/Pouilly-les-feurs/service/Evacuation-dechets-gravats": {
       "first_seen": "2026-03-02 07:37:43",
-      "last_seen": "2026-03-20 08:51:16",
+      "last_seen": "2026-03-22 07:27:13",
       "title": "Recherche Évacuation déchets - Gravats à Pouilly-lès-Feurs",
       "is_remote": false,
-      "description": "Durée : 1 jour",
+      "description": "N/A",
       "confidence": "HIGH",
       "classification": "on-site",
       "reasoning": "LLM: Évacuation de gravats : service physique sur place",
-      "description_source": "detail_page"
+      "description_source": "listing_page"
     },
     "https://www.jemepropose.com/annonces/manucure/poste-de-formateurrice-a-pourvoir+10501726/": {
       "first_seen": "2026-03-03 08:10:08",
@@ -41381,7 +41385,7 @@
     },
     "https://www.allovoisins.com/r/0/300/33450/0/Billom/service/Terrassement-assainissement": {
       "first_seen": "2026-03-03 08:10:08",
-      "last_seen": "2026-03-20 08:51:16",
+      "last_seen": "2026-03-22 07:27:13",
       "title": "Cherche Terrassement - Assainissement à Billom",
       "is_remote": false,
       "description": "N/A",
@@ -41392,7 +41396,7 @@
     },
     "https://www.allovoisins.com/r/0/125/23552/0/Andrezieux-boutheon/service/Montage-meubles-en-kit": {
       "first_seen": "2026-03-03 08:10:08",
-      "last_seen": "2026-03-20 08:51:16",
+      "last_seen": "2026-03-22 07:27:13",
       "title": "Cherche Montage meubles en kit à Andrézieux-Bouthéon",
       "is_remote": false,
       "description": "N/A",
@@ -41403,7 +41407,7 @@
     },
     "https://www.allovoisins.com/r/0/137/23758/0/Pradines/service/Plomberie-installation-sanitaire": {
       "first_seen": "2026-03-03 08:10:08",
-      "last_seen": "2026-03-20 08:51:16",
+      "last_seen": "2026-03-22 07:27:13",
       "title": "Recherche Plomberie - Installation sanitaire à Pradines",
       "is_remote": false,
       "description": "N/A",
@@ -41414,7 +41418,7 @@
     },
     "https://www.allovoisins.com/r/0/300/23568/0/Montrond-les-bains/service/Terrassement-assainissement": {
       "first_seen": "2026-03-03 08:10:08",
-      "last_seen": "2026-03-20 08:51:16",
+      "last_seen": "2026-03-22 07:27:13",
       "title": "Recherche Terrassement - Assainissement à Montrond-les-Bains",
       "is_remote": false,
       "description": "N/A",
@@ -41425,18 +41429,18 @@
     },
     "https://www.allovoisins.com/r/0/145/81665/0/Chalmazel-jeansagniere/service/Tonte-de-pelouse-debroussaillage": {
       "first_seen": "2026-03-03 08:10:08",
-      "last_seen": "2026-03-20 08:51:16",
+      "last_seen": "2026-03-22 07:27:13",
       "title": "Recherche Tonte de pelouse - Débroussaillage à Chalmazel-Jeansagnière",
       "is_remote": false,
-      "description": "Tonte de pelouse - Débroussaillage Andrézieux-Bouthéon",
+      "description": "Clairea posté cette demande dans le cadre duThème du moment«C'est le printemps !».",
       "confidence": "HIGH",
       "classification": "on-site",
-      "reasoning": "LLM: Tonte de pelouse nécessite présence physique sur site",
+      "reasoning": "LLM: Tonte de pelouse : travail physique sur site",
       "description_source": "detail_page"
     },
     "https://www.allovoisins.com/r/0/295/81665/0/Chalmazel-jeansagniere/service/Taille-de-haies-et-d-arbustes": {
       "first_seen": "2026-03-03 08:10:08",
-      "last_seen": "2026-03-20 08:51:16",
+      "last_seen": "2026-03-22 07:27:13",
       "title": "Cherche Taille de haies et d'arbustes à Chalmazel-Jeansagnière",
       "is_remote": false,
       "description": "N/A",
@@ -41447,7 +41451,7 @@
     },
     "https://www.allovoisins.com/r/0/143/81665/0/Chalmazel-jeansagniere/service/Jardinier": {
       "first_seen": "2026-03-03 08:10:08",
-      "last_seen": "2026-03-20 08:51:16",
+      "last_seen": "2026-03-22 07:27:13",
       "title": "Cherche Jardinier à Chalmazel-Jeansagnière",
       "is_remote": false,
       "description": "N/A",
@@ -41458,18 +41462,18 @@
     },
     "https://www.allovoisins.com/r/0/155/33602/0/Charbonnier-les-mines/service/Reparation-outillage": {
       "first_seen": "2026-03-03 08:10:08",
-      "last_seen": "2026-03-20 08:51:16",
+      "last_seen": "2026-03-22 07:27:13",
       "title": "Cherche Réparation outillage à Charbonnier-les-Mines",
       "is_remote": false,
-      "description": "N/A",
+      "description": "Sylviea posté cette demande dans le cadre duThème du moment«J'ai besoin d'une réparation».",
       "confidence": "HIGH",
       "classification": "on-site",
-      "reasoning": "LLM: Réparation d'outils, service physique sur place",
-      "description_source": "listing_page"
+      "reasoning": "LLM: Demande de réparation physique sur place",
+      "description_source": "detail_page"
     },
     "https://www.allovoisins.com/r/0/126/33566/0/Villeneuve-les-cerfs/service/Pose-de-parquet-revetement-de-sol": {
       "first_seen": "2026-03-03 08:10:08",
-      "last_seen": "2026-03-20 08:51:16",
+      "last_seen": "2026-03-22 07:27:13",
       "title": "Cherche Pose de parquet - Revêtement de sol à Villeneuve-les-Cerfs",
       "is_remote": false,
       "description": "Pose de parquet - Revêtement de sol Clermont-Ferrand",
@@ -41480,7 +41484,7 @@
     },
     "https://www.allovoisins.com/r/0/150/23679/0/Sury-le-comtal/service/Demenageurs-et-aide-au-demenagement": {
       "first_seen": "2026-03-03 08:10:08",
-      "last_seen": "2026-03-20 08:51:16",
+      "last_seen": "2026-03-22 07:27:13",
       "title": "Cherche Déménageurs et aide au déménagement à Sury-le-Comtal",
       "is_remote": false,
       "description": "N/A",
@@ -41491,7 +41495,7 @@
     },
     "https://www.allovoisins.com/r/0/129/33552/0/Puy-guillaume/service/Charpente": {
       "first_seen": "2026-03-03 08:10:08",
-      "last_seen": "2026-03-20 08:51:16",
+      "last_seen": "2026-03-22 07:27:13",
       "title": "Cherche Charpente à Puy-Guillaume",
       "is_remote": false,
       "description": "N/A",
@@ -41502,7 +41506,7 @@
     },
     "https://www.allovoisins.com/r/0/171/33833/0/Chavaroux/service/Couturiere": {
       "first_seen": "2026-03-03 08:10:08",
-      "last_seen": "2026-03-20 08:51:16",
+      "last_seen": "2026-03-22 07:27:13",
       "title": "Cherche Couturière à Chavaroux",
       "is_remote": false,
       "description": "N/A",
@@ -41513,7 +41517,7 @@
     },
     "https://www.allovoisins.com/r/0/135/24061/0/Beauzac/service/Peinture-tapisserie": {
       "first_seen": "2026-03-03 08:10:08",
-      "last_seen": "2026-03-20 08:51:16",
+      "last_seen": "2026-03-22 07:27:13",
       "title": "Recherche Peinture - Tapisserie à Beauzac",
       "is_remote": false,
       "description": "N/A",
@@ -41524,7 +41528,7 @@
     },
     "https://www.allovoisins.com/r/0/295/24061/0/Beauzac/service/Taille-de-haies-et-d-arbustes": {
       "first_seen": "2026-03-03 08:10:08",
-      "last_seen": "2026-03-20 08:51:16",
+      "last_seen": "2026-03-22 07:27:13",
       "title": "Recherche Taille de haies et d'arbustes à Beauzac",
       "is_remote": false,
       "description": "N/A",
@@ -41535,7 +41539,7 @@
     },
     "https://www.allovoisins.com/r/488/11/23491/0/location-Motoculteur-Pouilly-les-feurs": {
       "first_seen": "2026-03-03 08:10:08",
-      "last_seen": "2026-03-20 08:51:16",
+      "last_seen": "2026-03-22 07:27:13",
       "title": "Location motoculteur - Pouilly-lès-Feurs",
       "is_remote": false,
       "description": "Durée : 1 jour",
@@ -41546,7 +41550,7 @@
     },
     "https://www.allovoisins.com/r/0/131/33716/0/Issoire/service/Couverture-toiture": {
       "first_seen": "2026-03-03 08:10:08",
-      "last_seen": "2026-03-20 08:51:16",
+      "last_seen": "2026-03-22 07:27:13",
       "title": "Cherche Couverture - Toiture à Issoire",
       "is_remote": false,
       "description": "N/A",
@@ -41557,7 +41561,7 @@
     },
     "https://www.allovoisins.com/r/0/153/23524/0/Saint-etienne-le-molard/service/Depannage-electromenager": {
       "first_seen": "2026-03-03 08:10:08",
-      "last_seen": "2026-03-20 08:51:16",
+      "last_seen": "2026-03-22 07:27:13",
       "title": "Cherche Dépannage électroménager à Saint-Étienne-le-Molard",
       "is_remote": false,
       "description": "N/A",
@@ -41568,7 +41572,7 @@
     },
     "https://www.allovoisins.com/r/0/124/23491/0/Pouilly-les-feurs/service/Bricolage-et-multi-services": {
       "first_seen": "2026-03-03 08:10:08",
-      "last_seen": "2026-03-20 08:51:16",
+      "last_seen": "2026-03-22 07:27:13",
       "title": "Cherche Bricolage et multi services à Pouilly-lès-Feurs",
       "is_remote": false,
       "description": "N/A",
@@ -41579,7 +41583,7 @@
     },
     "https://www.allovoisins.com/r/0/159/23487/0/Feurs/service/Reparation-voiture": {
       "first_seen": "2026-03-03 08:10:08",
-      "last_seen": "2026-03-20 08:51:16",
+      "last_seen": "2026-03-22 07:27:13",
       "title": "Cherche Réparation voiture à Feurs",
       "is_remote": false,
       "description": "N/A",
@@ -41590,7 +41594,7 @@
     },
     "https://www.allovoisins.com/r/288/4/33895/0/location-Echafaudage-Peschadoires": {
       "first_seen": "2026-03-03 08:10:08",
-      "last_seen": "2026-03-20 08:51:16",
+      "last_seen": "2026-03-22 07:27:13",
       "title": "Location echafaudage - Peschadoires",
       "is_remote": false,
       "description": "Durée : 3 jours",
@@ -41601,7 +41605,7 @@
     },
     "https://www.allovoisins.com/r/0/169/61486/0/Saint-jean-saint-maurice-sur-loire/service/Menage": {
       "first_seen": "2026-03-03 08:10:08",
-      "last_seen": "2026-03-20 08:51:16",
+      "last_seen": "2026-03-22 07:27:13",
       "title": "Recherche Ménage à Saint-Jean-Saint-Maurice-sur-Loire",
       "is_remote": false,
       "description": "N/A",
@@ -41645,7 +41649,7 @@
     },
     "https://www.allovoisins.com/r/0/154/45993/0/Saint-just-saint-rambert/service/Depannage-smartphone-hifi-video-photo": {
       "first_seen": "2026-03-04 08:50:10",
-      "last_seen": "2026-03-20 08:51:16",
+      "last_seen": "2026-03-22 07:27:13",
       "title": "Cherche Dépannage smartphone - hifi - video - photo à Saint-Just-Saint-Rambert",
       "is_remote": false,
       "description": "Dépannage smartphone - hifi - video - photo Sury-le-Comtal",
@@ -41667,18 +41671,18 @@
     },
     "https://www.allovoisins.com/r/0/135/23491/0/Pouilly-les-feurs/service/Peinture-tapisserie": {
       "first_seen": "2026-03-04 08:50:10",
-      "last_seen": "2026-03-20 08:51:16",
+      "last_seen": "2026-03-22 07:27:13",
       "title": "Recherche Peinture - Tapisserie à Pouilly-lès-Feurs",
       "is_remote": false,
-      "description": "N/A",
+      "description": "Gregorya posté cette demande dans le cadre duThème du moment«C'est le printemps !».",
       "confidence": "HIGH",
       "classification": "on-site",
       "reasoning": "Obvious on-site work: peinture",
-      "description_source": "listing_page"
+      "description_source": "detail_page"
     },
     "https://www.allovoisins.com/r/0/137/33468/0/Orleat/service/Plomberie-installation-sanitaire": {
       "first_seen": "2026-03-04 08:50:10",
-      "last_seen": "2026-03-20 08:51:16",
+      "last_seen": "2026-03-22 07:27:13",
       "title": "Cherche Plomberie - Installation sanitaire à Orléat",
       "is_remote": false,
       "description": "N/A",
@@ -41689,18 +41693,18 @@
     },
     "https://www.allovoisins.com/r/0/155/23605/0/Villerest/service/Reparation-outillage": {
       "first_seen": "2026-03-04 08:50:10",
-      "last_seen": "2026-03-20 08:51:16",
+      "last_seen": "2026-03-22 07:27:13",
       "title": "Cherche Réparation outillage à Villerest",
       "is_remote": false,
-      "description": "N/A",
+      "description": "Durée : 1 jour",
       "confidence": "HIGH",
       "classification": "on-site",
-      "reasoning": "LLM: Réparation d'outils nécessite intervention physique sur site",
-      "description_source": "listing_page"
+      "reasoning": "LLM: Réparation d'outils, intervention physique obligatoire",
+      "description_source": "detail_page"
     },
     "https://www.allovoisins.com/r/0/133/24005/0/Auzon/service/Maconnerie": {
       "first_seen": "2026-03-04 08:50:10",
-      "last_seen": "2026-03-20 08:51:16",
+      "last_seen": "2026-03-22 07:27:13",
       "title": "Cherche Maçonnerie à Auzon",
       "is_remote": false,
       "description": "N/A",
@@ -41711,7 +41715,7 @@
     },
     "https://www.allovoisins.com/r/0/143/33551/0/Paslieres/service/Jardinier": {
       "first_seen": "2026-03-04 08:50:10",
-      "last_seen": "2026-03-20 08:51:16",
+      "last_seen": "2026-03-22 07:27:13",
       "title": "Recherche Jardinier à Paslières",
       "is_remote": false,
       "description": "N/A",
@@ -41722,7 +41726,7 @@
     },
     "https://www.allovoisins.com/r/0/127/33551/0/Paslieres/service/Carrelage": {
       "first_seen": "2026-03-04 08:50:10",
-      "last_seen": "2026-03-20 08:51:16",
+      "last_seen": "2026-03-22 07:27:13",
       "title": "Recherche Carrelage à Paslières",
       "is_remote": false,
       "description": "N/A",
@@ -41733,7 +41737,7 @@
     },
     "https://www.allovoisins.com/r/0/157/33471/0/Seychalles/service/Reparation-carrosserie": {
       "first_seen": "2026-03-04 08:50:10",
-      "last_seen": "2026-03-20 08:51:16",
+      "last_seen": "2026-03-22 07:27:13",
       "title": "Recherche Réparation carrosserie à Seychalles",
       "is_remote": false,
       "description": "N/A",
@@ -41744,7 +41748,7 @@
     },
     "https://www.allovoisins.com/r/5296/79/33776/0/location-Van-chevaux-camion-chevaux-Ambert": {
       "first_seen": "2026-03-04 08:50:10",
-      "last_seen": "2026-03-20 08:51:16",
+      "last_seen": "2026-03-22 07:27:13",
       "title": "Louer un van chevaux / camion chevaux - Ambert",
       "is_remote": false,
       "description": "Durée : 1 jour",
@@ -41755,7 +41759,7 @@
     },
     "https://www.allovoisins.com/r/4344/88/33453/0/location-Appartement-Egliseneuve-pres-billom": {
       "first_seen": "2026-03-04 08:50:10",
-      "last_seen": "2026-03-20 08:51:16",
+      "last_seen": "2026-03-22 07:27:13",
       "title": "Location appartement - Égliseneuve-prés-Billom",
       "is_remote": false,
       "description": "Durée : 365 jours",
@@ -41766,7 +41770,7 @@
     },
     "https://www.allovoisins.com/r/488/11/23636/0/location-Motoculteur-Renaison": {
       "first_seen": "2026-03-04 08:50:10",
-      "last_seen": "2026-03-20 08:51:16",
+      "last_seen": "2026-03-22 07:27:13",
       "title": "Location motoculteur - Renaison",
       "is_remote": false,
       "description": "Durée : 1 jour",
@@ -41843,7 +41847,7 @@
     },
     "https://www.allovoisins.com/r/0/174/33774/0/Cunlhat/service/Aide-a-domicile": {
       "first_seen": "2026-03-06 07:18:10",
-      "last_seen": "2026-03-20 08:51:16",
+      "last_seen": "2026-03-22 07:27:13",
       "title": "Recherche Aide à domicile à Cunlhat",
       "is_remote": false,
       "description": "N/A",
@@ -41854,7 +41858,7 @@
     },
     "https://www.allovoisins.com/r/869/18/23837/0/location-Plateau-Aurec-sur-loire": {
       "first_seen": "2026-03-06 07:18:10",
-      "last_seen": "2026-03-20 08:51:16",
+      "last_seen": "2026-03-22 07:27:13",
       "title": "Louer un plateau - Aurec-sur-Loire",
       "is_remote": false,
       "description": "Durée : 1 jour",
@@ -41865,18 +41869,18 @@
     },
     "https://www.allovoisins.com/r/0/146/23701/0/Saint-georges-de-baroille/service/Elagage-et-coupe-d-arbres": {
       "first_seen": "2026-03-06 07:18:10",
-      "last_seen": "2026-03-20 08:51:16",
+      "last_seen": "2026-03-22 07:27:13",
       "title": "Cherche Elagage et coupe d'arbres à Saint-Georges-de-Baroille",
       "is_remote": false,
-      "description": "N/A",
+      "description": "Christinea posté cette demande dans le cadre duThème du moment«Je prépare mon jardin pour le printemps».",
       "confidence": "HIGH",
       "classification": "on-site",
-      "reasoning": "LLM: Travail d'élagage physique, nécessite présence sur le terrain",
-      "description_source": "listing_page"
+      "reasoning": "LLM: Travail physique d'élagage sur place à Saint-Georges-de-Baroille",
+      "description_source": "detail_page"
     },
     "https://www.allovoisins.com/r/5142/78/23568/0/location-Vehicule-utilitaire-camionnette-Montrond-les-bains": {
       "first_seen": "2026-03-06 07:18:10",
-      "last_seen": "2026-03-20 08:51:16",
+      "last_seen": "2026-03-22 07:27:13",
       "title": "Louer un véhicule utilitaire / camionnette - Montrond-les-Bains",
       "is_remote": false,
       "description": "Durée : 1 jour",
@@ -41887,7 +41891,7 @@
     },
     "https://www.allovoisins.com/r/487/11/81360/0/location-Motobineuse-Le-vernet-chameane": {
       "first_seen": "2026-03-06 07:18:10",
-      "last_seen": "2026-03-20 08:51:16",
+      "last_seen": "2026-03-22 07:27:13",
       "title": "Location motobineuse - Le Vernet-Chaméane",
       "is_remote": false,
       "description": "Durée : 1 jour",
@@ -41898,7 +41902,7 @@
     },
     "https://www.allovoisins.com/r/364/7/33600/0/location-Diable-Le-breuil-sur-couze": {
       "first_seen": "2026-03-06 07:18:10",
-      "last_seen": "2026-03-20 08:51:16",
+      "last_seen": "2026-03-22 07:27:13",
       "title": "Louer un diable - Le Breuil-sur-Couze",
       "is_remote": false,
       "description": "Durée : 1 jour",
@@ -41909,18 +41913,18 @@
     },
     "https://www.allovoisins.com/r/0/137/79782/0/Mur-sur-allier/service/Plomberie-installation-sanitaire": {
       "first_seen": "2026-03-06 07:18:10",
-      "last_seen": "2026-03-20 08:51:16",
+      "last_seen": "2026-03-22 07:27:13",
       "title": "Recherche Plomberie - Installation sanitaire à Mur-sur-Allier",
       "is_remote": false,
-      "description": "N/A",
+      "description": "Cournon-D’auvergne - Zone Vieux Bourg-La Nef-Les Vergers",
       "confidence": "HIGH",
       "classification": "on-site",
       "reasoning": "Obvious on-site work: plomberie",
-      "description_source": "listing_page"
+      "description_source": "detail_page"
     },
     "https://www.allovoisins.com/r/0/187/23742/0/Lezigneux/service/Garde-animaux": {
       "first_seen": "2026-03-06 07:18:10",
-      "last_seen": "2026-03-20 08:51:16",
+      "last_seen": "2026-03-22 07:27:13",
       "title": "Recherche Garde animaux à Lézigneux",
       "is_remote": false,
       "description": "N/A",
@@ -41964,29 +41968,29 @@
     },
     "https://www.allovoisins.com/r/0/145/23505/0/Commelle-vernay/service/Tonte-de-pelouse-debroussaillage": {
       "first_seen": "2026-03-06 07:18:10",
-      "last_seen": "2026-03-20 08:51:16",
+      "last_seen": "2026-03-22 07:27:13",
       "title": "Recherche Tonte de pelouse - Débroussaillage à Commelle-Vernay",
       "is_remote": false,
-      "description": "Tonte de pelouse - Débroussaillage Saint-Romain-de-Popey",
+      "description": "Durée : 1 jour",
       "confidence": "HIGH",
       "classification": "on-site",
-      "reasoning": "LLM: Tonte et débroussaillage nécessitent présence physique sur le terrain",
+      "reasoning": "LLM: Tonte de pelouse : travail physique sur place",
       "description_source": "detail_page"
     },
     "https://www.allovoisins.com/r/0/185/33552/0/Puy-guillaume/service/Garde-chien": {
       "first_seen": "2026-03-06 07:18:10",
-      "last_seen": "2026-03-20 08:51:16",
+      "last_seen": "2026-03-22 07:27:13",
       "title": "Cherche Garde chien à Puy-Guillaume",
       "is_remote": false,
-      "description": "N/A",
+      "description": "Durée : 1 jour",
       "confidence": "HIGH",
       "classification": "on-site",
-      "reasoning": "LLM: Garde de chien, service physique sur place",
-      "description_source": "listing_page"
+      "reasoning": "LLM: Garde d’animaux nécessite présence physique",
+      "description_source": "detail_page"
     },
     "https://www.allovoisins.com/r/0/143/33611/0/Saint-germain-lembron/service/Jardinier": {
       "first_seen": "2026-03-06 07:18:10",
-      "last_seen": "2026-03-20 08:51:16",
+      "last_seen": "2026-03-22 07:27:13",
       "title": "Recherche Jardinier à Saint-Germain-Lembron",
       "is_remote": false,
       "description": "N/A",
@@ -41997,7 +42001,7 @@
     },
     "https://www.allovoisins.com/r/0/163/33556/0/Thiers/service/Covoiturage-partage-de-frais": {
       "first_seen": "2026-03-06 07:18:10",
-      "last_seen": "2026-03-20 08:51:16",
+      "last_seen": "2026-03-22 07:27:13",
       "title": "Cherche Covoiturage (partage de frais) à Thiers",
       "is_remote": false,
       "description": "N/A",
@@ -42008,7 +42012,7 @@
     },
     "https://www.allovoisins.com/r/0/175/33556/0/Thiers/service/Livraison-de-courses": {
       "first_seen": "2026-03-06 07:18:10",
-      "last_seen": "2026-03-20 08:51:16",
+      "last_seen": "2026-03-22 07:27:13",
       "title": "Cherche Livraison de courses à Thiers",
       "is_remote": false,
       "description": "N/A",
@@ -42019,7 +42023,7 @@
     },
     "https://www.allovoisins.com/r/0/132/33556/0/Thiers/service/Installation-electrique": {
       "first_seen": "2026-03-06 07:18:10",
-      "last_seen": "2026-03-20 08:51:16",
+      "last_seen": "2026-03-22 07:27:13",
       "title": "Recherche Installation électrique à Thiers",
       "is_remote": false,
       "description": "N/A",
@@ -42030,7 +42034,7 @@
     },
     "https://www.allovoisins.com/r/0/178/33450/0/Billom/service/Baby-sitting": {
       "first_seen": "2026-03-06 07:18:10",
-      "last_seen": "2026-03-20 08:51:16",
+      "last_seen": "2026-03-22 07:27:13",
       "title": "Cherche Baby sitting à Billom",
       "is_remote": false,
       "description": "N/A",
@@ -42041,7 +42045,7 @@
     },
     "https://www.allovoisins.com/r/0/155/23745/0/Montbrison/service/Reparation-outillage": {
       "first_seen": "2026-03-06 07:18:10",
-      "last_seen": "2026-03-20 08:51:16",
+      "last_seen": "2026-03-22 07:27:13",
       "title": "Cherche Réparation outillage à Montbrison",
       "is_remote": false,
       "description": "Durée : 1 jour",
@@ -42085,7 +42089,7 @@
     },
     "https://www.allovoisins.com/r/0/132/33450/0/Billom/service/Installation-electrique": {
       "first_seen": "2026-03-07 07:06:10",
-      "last_seen": "2026-03-20 08:51:16",
+      "last_seen": "2026-03-22 07:27:13",
       "title": "Recherche Installation électrique à Billom",
       "is_remote": false,
       "description": "N/A",
@@ -42096,18 +42100,18 @@
     },
     "https://www.allovoisins.com/r/0/166/33431/0/Courpiere/service/Transport-de-vehicules-remorquage": {
       "first_seen": "2026-03-07 07:06:10",
-      "last_seen": "2026-03-20 08:51:16",
+      "last_seen": "2026-03-22 07:27:13",
       "title": "Recherche Transport de véhicules - Remorquage à Courpière",
       "is_remote": false,
-      "description": "N/A",
+      "description": "Transport de véhicules - Remorquage Clermont-Ferrand",
       "confidence": "HIGH",
       "classification": "on-site",
       "reasoning": "LLM: Transport/remorquage nécessite présence physique",
-      "description_source": "listing_page"
+      "description_source": "detail_page"
     },
     "https://www.allovoisins.com/r/0/143/46790/0/Boen-sur-lignon/service/Jardinier": {
       "first_seen": "2026-03-07 07:06:10",
-      "last_seen": "2026-03-20 08:51:16",
+      "last_seen": "2026-03-22 07:27:13",
       "title": "Cherche Jardinier à Boën-sur-Lignon",
       "is_remote": false,
       "description": "N/A",
@@ -42118,7 +42122,7 @@
     },
     "https://www.allovoisins.com/r/0/136/23552/0/Andrezieux-boutheon/service/Platrerie-murs-plafonds": {
       "first_seen": "2026-03-07 07:06:10",
-      "last_seen": "2026-03-20 08:51:16",
+      "last_seen": "2026-03-22 07:27:13",
       "title": "Recherche Plâtrerie - Murs - Plafonds à Andrézieux-Bouthéon",
       "is_remote": false,
       "description": "N/A",
@@ -42129,7 +42133,7 @@
     },
     "https://www.allovoisins.com/r/0/133/23713/0/Saint-just-la-pendue/service/Maconnerie": {
       "first_seen": "2026-03-07 07:06:10",
-      "last_seen": "2026-03-20 08:51:16",
+      "last_seen": "2026-03-22 07:27:13",
       "title": "Cherche Maçonnerie à Saint-Just-la-Pendue",
       "is_remote": false,
       "description": "N/A",
@@ -42140,7 +42144,7 @@
     },
     "https://www.allovoisins.com/r/5357/49/33453/0/location-Poule-Egliseneuve-pres-billom": {
       "first_seen": "2026-03-07 07:06:10",
-      "last_seen": "2026-03-20 08:51:16",
+      "last_seen": "2026-03-22 07:27:13",
       "title": "Location poule - Égliseneuve-prés-Billom",
       "is_remote": false,
       "description": "N/A",
@@ -42151,7 +42155,7 @@
     },
     "https://www.allovoisins.com/r/0/135/23642/0/Aboen/service/Peinture-tapisserie": {
       "first_seen": "2026-03-07 07:06:10",
-      "last_seen": "2026-03-20 08:51:16",
+      "last_seen": "2026-03-22 07:27:13",
       "title": "Recherche Peinture - Tapisserie à Aboën",
       "is_remote": false,
       "description": "N/A",
@@ -42173,7 +42177,7 @@
     },
     "https://www.allovoisins.com/r/0/143/45993/0/Saint-just-saint-rambert/service/Jardinier": {
       "first_seen": "2026-03-07 07:06:10",
-      "last_seen": "2026-03-20 08:51:16",
+      "last_seen": "2026-03-22 07:27:13",
       "title": "Recherche Jardinier à Saint-Just-Saint-Rambert",
       "is_remote": false,
       "description": "N/A",
@@ -42184,18 +42188,18 @@
     },
     "https://www.allovoisins.com/r/0/145/23552/0/Andrezieux-boutheon/service/Tonte-de-pelouse-debroussaillage": {
       "first_seen": "2026-03-07 07:06:10",
-      "last_seen": "2026-03-20 08:51:16",
+      "last_seen": "2026-03-22 07:27:13",
       "title": "Cherche Tonte de pelouse - Débroussaillage à Andrézieux-Bouthéon",
       "is_remote": false,
-      "description": "Tonte de pelouse - Débroussaillage Andrézieux-Bouthéon",
+      "description": "Loetitiaa posté cette demande dans le cadre duThème du moment«Je prépare mon jardin pour le printemps».",
       "confidence": "HIGH",
       "classification": "on-site",
-      "reasoning": "LLM: Tonte de pelouse nécessite présence physique",
+      "reasoning": "LLM: Tonte de pelouse : travail physique sur place",
       "description_source": "detail_page"
     },
     "https://www.allovoisins.com/r/0/296/44493/0/Auzat-la-combelle/service/Evacuation-dechets-gravats": {
       "first_seen": "2026-03-08 07:16:28",
-      "last_seen": "2026-03-20 08:51:16",
+      "last_seen": "2026-03-22 07:27:13",
       "title": "Recherche Évacuation déchets - Gravats à Auzat-la-Combelle",
       "is_remote": false,
       "description": "N/A",
@@ -42206,7 +42210,7 @@
     },
     "https://www.allovoisins.com/r/535/11/33716/0/location-Tronconneuse-Issoire": {
       "first_seen": "2026-03-08 07:16:28",
-      "last_seen": "2026-03-20 08:51:16",
+      "last_seen": "2026-03-22 07:27:13",
       "title": "Louer une tronçonneuse - Issoire",
       "is_remote": false,
       "description": "Durée : 1 jour",
@@ -42217,10 +42221,10 @@
     },
     "https://www.allovoisins.com/r/0/150/33558/0/Beaumont-les-randan/service/Demenageurs-et-aide-au-demenagement": {
       "first_seen": "2026-03-08 07:16:28",
-      "last_seen": "2026-03-20 08:51:16",
+      "last_seen": "2026-03-22 07:27:13",
       "title": "Cherche Déménageurs et aide au déménagement à Beaumont-lès-Randan",
       "is_remote": false,
-      "description": "DÃĐmÃĐnageurs et aide au dÃĐmÃĐnagement Clermont-Ferrand",
+      "description": "Carolinea posté cette demande dans le cadre duThème du moment«Je déménage».",
       "confidence": "HIGH",
       "classification": "on-site",
       "reasoning": "Obvious on-site work: ménage",
@@ -42228,7 +42232,7 @@
     },
     "https://www.allovoisins.com/r/0/164/33558/0/Beaumont-les-randan/service/Livraison-transport-de-colis": {
       "first_seen": "2026-03-08 07:16:28",
-      "last_seen": "2026-03-20 08:51:16",
+      "last_seen": "2026-03-22 07:27:13",
       "title": "Cherche Livraison - Transport de colis à Beaumont-lès-Randan",
       "is_remote": false,
       "description": "N/A",
@@ -42239,7 +42243,7 @@
     },
     "https://www.allovoisins.com/r/5328/3/23694/0/location-Dalle-pvc-Fraisses": {
       "first_seen": "2026-03-08 07:16:28",
-      "last_seen": "2026-03-20 08:51:16",
+      "last_seen": "2026-03-22 07:27:13",
       "title": "Acheter une dalle pvc - Fraisses",
       "is_remote": false,
       "description": "N/A",
@@ -42272,7 +42276,7 @@
     },
     "https://www.allovoisins.com/r/513/11/23837/0/location-Rouleau-a-gazon-Aurec-sur-loire": {
       "first_seen": "2026-03-08 07:16:28",
-      "last_seen": "2026-03-20 08:51:16",
+      "last_seen": "2026-03-22 07:27:13",
       "title": "Location rouleau à gazon - Aurec-sur-Loire",
       "is_remote": false,
       "description": "Durée : 1 jour",
@@ -42283,18 +42287,18 @@
     },
     "https://www.allovoisins.com/r/0/155/33894/0/Vertaizon/service/Reparation-outillage": {
       "first_seen": "2026-03-08 07:16:28",
-      "last_seen": "2026-03-20 08:51:16",
+      "last_seen": "2026-03-22 07:27:13",
       "title": "Recherche Réparation outillage à Vertaizon",
       "is_remote": false,
-      "description": "Naimaa posté cette demande dans le cadre duThème du moment«J'ai besoin d'une réparation».",
+      "description": "N/A",
       "confidence": "HIGH",
       "classification": "on-site",
-      "reasoning": "LLM: Réparation d'outils : intervention physique obligatoire sur site",
-      "description_source": "detail_page"
+      "reasoning": "LLM: Réparation outillage = intervention physique sur site",
+      "description_source": "listing_page"
     },
     "https://www.allovoisins.com/r/0/174/33466/0/Lezoux/service/Aide-a-domicile": {
       "first_seen": "2026-03-08 07:16:28",
-      "last_seen": "2026-03-20 08:51:16",
+      "last_seen": "2026-03-22 07:27:13",
       "title": "Recherche Aide à domicile à Lezoux",
       "is_remote": false,
       "description": "N/A",
@@ -42305,7 +42309,7 @@
     },
     "https://www.allovoisins.com/r/0/145/23544/0/Riorges/service/Tonte-de-pelouse-debroussaillage": {
       "first_seen": "2026-03-09 07:31:27",
-      "last_seen": "2026-03-20 08:51:16",
+      "last_seen": "2026-03-22 07:27:13",
       "title": "Recherche Tonte de pelouse - Débroussaillage à Riorges",
       "is_remote": false,
       "description": "N/A",
@@ -42316,7 +42320,7 @@
     },
     "https://www.allovoisins.com/r/0/295/23628/0/Veauchette/service/Taille-de-haies-et-d-arbustes": {
       "first_seen": "2026-03-09 07:31:27",
-      "last_seen": "2026-03-20 08:51:16",
+      "last_seen": "2026-03-22 07:27:13",
       "title": "Cherche Taille de haies et d'arbustes à Veauchette",
       "is_remote": false,
       "description": "N/A",
@@ -42327,7 +42331,7 @@
     },
     "https://www.allovoisins.com/r/0/145/23547/0/Pouilly-les-nonains/service/Tonte-de-pelouse-debroussaillage": {
       "first_seen": "2026-03-09 07:31:27",
-      "last_seen": "2026-03-20 08:51:16",
+      "last_seen": "2026-03-22 07:27:13",
       "title": "Recherche Tonte de pelouse - Débroussaillage à Pouilly-les-Nonains",
       "is_remote": false,
       "description": "N/A",
@@ -42338,29 +42342,29 @@
     },
     "https://www.allovoisins.com/r/0/127/23735/0/Chalain-d-uzore/service/Carrelage": {
       "first_seen": "2026-03-09 07:31:27",
-      "last_seen": "2026-03-20 08:51:16",
+      "last_seen": "2026-03-22 07:27:13",
       "title": "Cherche Carrelage à Chalain-d'Uzore",
       "is_remote": false,
-      "description": "Durée : 1 jour",
+      "description": "N/A",
       "confidence": "HIGH",
       "classification": "on-site",
-      "reasoning": "LLM: Pose de carrelage, intervention physique obligatoire sur place",
-      "description_source": "detail_page"
+      "reasoning": "LLM: Carrelage = pose physique sur place",
+      "description_source": "listing_page"
     },
     "https://www.allovoisins.com/r/0/159/23999/0/Lavoute-chilhac/service/Reparation-voiture": {
       "first_seen": "2026-03-09 07:31:27",
-      "last_seen": "2026-03-20 08:51:16",
+      "last_seen": "2026-03-22 07:27:13",
       "title": "Recherche Réparation voiture à Lavoûte-Chilhac",
       "is_remote": false,
-      "description": "Durée : 1 jour",
+      "description": "N/A",
       "confidence": "HIGH",
       "classification": "on-site",
-      "reasoning": "LLM: Réparation voiture = intervention physique obligatoire sur place",
-      "description_source": "detail_page"
+      "reasoning": "LLM: Réparation automobile nécessite présence physique sur place",
+      "description_source": "listing_page"
     },
     "https://www.allovoisins.com/r/0/169/33611/0/Saint-germain-lembron/service/Menage": {
       "first_seen": "2026-03-09 07:31:27",
-      "last_seen": "2026-03-20 08:51:16",
+      "last_seen": "2026-03-22 07:27:13",
       "title": "Recherche Ménage à Saint-Germain-Lembron",
       "is_remote": false,
       "description": "N/A",
@@ -42371,7 +42375,7 @@
     },
     "https://www.allovoisins.com/r/4356/93/23506/0/location-Garage-Le-coteau": {
       "first_seen": "2026-03-09 07:31:27",
-      "last_seen": "2026-03-20 08:51:16",
+      "last_seen": "2026-03-22 07:27:13",
       "title": "Louer un garage - Le Coteau",
       "is_remote": false,
       "description": "Durée : 365 jours",
@@ -42382,7 +42386,7 @@
     },
     "https://www.allovoisins.com/r/0/143/33894/0/Vertaizon/service/Jardinier": {
       "first_seen": "2026-03-09 07:31:27",
-      "last_seen": "2026-03-20 08:51:16",
+      "last_seen": "2026-03-22 07:27:13",
       "title": "Cherche Jardinier à Vertaizon",
       "is_remote": false,
       "description": "N/A",
@@ -42393,7 +42397,7 @@
     },
     "https://www.allovoisins.com/r/0/145/44493/0/Auzat-la-combelle/service/Tonte-de-pelouse-debroussaillage": {
       "first_seen": "2026-03-09 07:31:27",
-      "last_seen": "2026-03-20 08:51:16",
+      "last_seen": "2026-03-22 07:27:13",
       "title": "Cherche Tonte de pelouse - Débroussaillage à Auzat-la-Combelle",
       "is_remote": false,
       "description": "N/A",
@@ -42558,29 +42562,29 @@
     },
     "https://www.allovoisins.com/r/0/144/23605/0/Villerest/service/Paysagiste-amenagement-du-jardin": {
       "first_seen": "2026-03-10 08:09:23",
-      "last_seen": "2026-03-20 08:51:16",
+      "last_seen": "2026-03-22 07:27:13",
       "title": "Recherche Paysagiste - Aménagement du jardin à Villerest",
       "is_remote": false,
-      "description": "N/A",
+      "description": "Paysagiste - Aménagement du jardin Saint-Romain-le-Puy",
       "confidence": "HIGH",
       "classification": "on-site",
       "reasoning": "Obvious on-site work: ménage",
-      "description_source": "listing_page"
+      "description_source": "detail_page"
     },
     "https://www.allovoisins.com/r/0/192/33430/0/Aubusson-d-auvergne/service/Depannage-informatique": {
       "first_seen": "2026-03-10 08:09:23",
-      "last_seen": "2026-03-20 08:51:16",
+      "last_seen": "2026-03-22 07:27:13",
       "title": "Cherche Dépannage informatique à Aubusson-d'Auvergne",
       "is_remote": false,
-      "description": "Clairea posté cette demande dans le cadre duThème du moment«J'ai un problème informatique».",
+      "description": "Philippea posté cette demande dans le cadre duThème du moment«J'ai un problème informatique».",
       "confidence": "HIGH",
       "classification": "on-site",
-      "reasoning": "LLM: Demande locale de dépannage informatique, intervention sur place",
+      "reasoning": "LLM: Demande locale de dépannage informatique sur place",
       "description_source": "detail_page"
     },
     "https://www.allovoisins.com/r/488/11/23549/0/location-Motoculteur-Saint-leger-sur-roanne": {
       "first_seen": "2026-03-10 08:09:23",
-      "last_seen": "2026-03-20 08:51:16",
+      "last_seen": "2026-03-22 07:27:13",
       "title": "Louer un motoculteur - Saint-Léger-sur-Roanne",
       "is_remote": false,
       "description": "Durée : 1 jour",
@@ -42591,18 +42595,18 @@
     },
     "https://www.allovoisins.com/r/0/153/23505/0/Commelle-vernay/service/Depannage-electromenager": {
       "first_seen": "2026-03-10 08:09:23",
-      "last_seen": "2026-03-20 08:51:16",
+      "last_seen": "2026-03-22 07:27:13",
       "title": "Recherche Dépannage électroménager à Commelle-Vernay",
       "is_remote": false,
-      "description": "N/A",
+      "description": "Durée : 1 jour",
       "confidence": "HIGH",
       "classification": "on-site",
       "reasoning": "Obvious on-site work: ménage",
-      "description_source": "listing_page"
+      "description_source": "detail_page"
     },
     "https://www.allovoisins.com/r/0/134/23588/0/Bully/service/Menuiserie-huisserie-agencement": {
       "first_seen": "2026-03-10 08:09:23",
-      "last_seen": "2026-03-20 08:51:16",
+      "last_seen": "2026-03-22 07:27:13",
       "title": "Cherche Menuiserie - Huisserie - Agencement à Bully",
       "is_remote": false,
       "description": "N/A",
@@ -42613,7 +42617,7 @@
     },
     "https://www.allovoisins.com/r/0/150/23506/0/Le-coteau/service/Demenageurs-et-aide-au-demenagement": {
       "first_seen": "2026-03-10 08:09:23",
-      "last_seen": "2026-03-20 08:51:16",
+      "last_seen": "2026-03-22 07:27:13",
       "title": "Recherche Déménageurs et aide au déménagement à Le Coteau",
       "is_remote": false,
       "description": "N/A",
@@ -42624,7 +42628,7 @@
     },
     "https://www.allovoisins.com/r/0/130/45993/0/Saint-just-saint-rambert/service/Chauffage-climatisation": {
       "first_seen": "2026-03-10 08:09:23",
-      "last_seen": "2026-03-20 08:51:16",
+      "last_seen": "2026-03-22 07:27:13",
       "title": "Cherche Chauffage - Climatisation à Saint-Just-Saint-Rambert",
       "is_remote": false,
       "description": "N/A",
@@ -42635,18 +42639,18 @@
     },
     "https://www.allovoisins.com/r/0/145/23745/0/Montbrison/service/Tonte-de-pelouse-debroussaillage": {
       "first_seen": "2026-03-10 08:09:23",
-      "last_seen": "2026-03-20 08:51:16",
+      "last_seen": "2026-03-22 07:27:13",
       "title": "Recherche Tonte de pelouse - Débroussaillage à Montbrison",
       "is_remote": false,
-      "description": "Tonte de pelouse - Débroussaillage Andrézieux-Bouthéon",
+      "description": "N/A",
       "confidence": "HIGH",
       "classification": "on-site",
-      "reasoning": "LLM: Tonte de pelouse nécessite présence physique sur site",
-      "description_source": "detail_page"
+      "reasoning": "LLM: Tonte de pelouse nécessite présence physique obligatoire",
+      "description_source": "listing_page"
     },
     "https://www.allovoisins.com/r/0/300/33666/0/Pont-du-chateau/service/Terrassement-assainissement": {
       "first_seen": "2026-03-10 08:09:23",
-      "last_seen": "2026-03-20 08:51:16",
+      "last_seen": "2026-03-22 07:27:13",
       "title": "Recherche Terrassement - Assainissement à Pont-du-Château",
       "is_remote": false,
       "description": "N/A",
@@ -42657,7 +42661,7 @@
     },
     "https://www.allovoisins.com/r/0/132/23565/0/Craintilleux/service/Installation-electrique": {
       "first_seen": "2026-03-10 08:09:23",
-      "last_seen": "2026-03-20 08:51:16",
+      "last_seen": "2026-03-22 07:27:13",
       "title": "Cherche Installation électrique à Craintilleux",
       "is_remote": false,
       "description": "N/A",
@@ -42679,7 +42683,7 @@
     },
     "https://www.allovoisins.com/r/0/169/23839/0/Monistrol-sur-loire/service/Menage": {
       "first_seen": "2026-03-10 08:09:23",
-      "last_seen": "2026-03-20 08:51:16",
+      "last_seen": "2026-03-22 07:27:13",
       "title": "Cherche Ménage à Monistrol-sur-Loire",
       "is_remote": false,
       "description": "N/A",
@@ -42701,7 +42705,7 @@
     },
     "https://www.allovoisins.com/r/0/300/33430/0/Aubusson-d-auvergne/service/Terrassement-assainissement": {
       "first_seen": "2026-03-10 08:09:23",
-      "last_seen": "2026-03-20 08:51:16",
+      "last_seen": "2026-03-22 07:27:13",
       "title": "Recherche Terrassement - Assainissement à Aubusson-d'Auvergne",
       "is_remote": false,
       "description": "N/A",
@@ -42712,7 +42716,7 @@
     },
     "https://www.allovoisins.com/r/0/145/23724/0/Soleymieux/service/Tonte-de-pelouse-debroussaillage": {
       "first_seen": "2026-03-10 08:09:23",
-      "last_seen": "2026-03-20 08:51:16",
+      "last_seen": "2026-03-22 07:27:13",
       "title": "Recherche Tonte de pelouse - Débroussaillage à Soleymieux",
       "is_remote": false,
       "description": "N/A",
@@ -42833,7 +42837,7 @@
     },
     "https://www.allovoisins.com/r/0/169/23544/0/Riorges/service/Menage": {
       "first_seen": "2026-03-11 08:42:35",
-      "last_seen": "2026-03-20 08:51:16",
+      "last_seen": "2026-03-22 07:27:13",
       "title": "Recherche Ménage à Riorges",
       "is_remote": false,
       "description": "N/A",
@@ -42855,7 +42859,7 @@
     },
     "https://www.allovoisins.com/r/0/136/23645/0/Luriecq/service/Platrerie-murs-plafonds": {
       "first_seen": "2026-03-11 08:42:35",
-      "last_seen": "2026-03-20 08:51:16",
+      "last_seen": "2026-03-22 07:27:13",
       "title": "Cherche Plâtrerie - Murs - Plafonds à Luriecq",
       "is_remote": false,
       "description": "N/A",
@@ -42888,7 +42892,7 @@
     },
     "https://www.allovoisins.com/r/0/134/33552/0/Puy-guillaume/service/Menuiserie-huisserie-agencement": {
       "first_seen": "2026-03-11 08:42:35",
-      "last_seen": "2026-03-20 08:51:16",
+      "last_seen": "2026-03-22 07:27:13",
       "title": "Recherche Menuiserie - Huisserie - Agencement à Puy-Guillaume",
       "is_remote": false,
       "description": "N/A",
@@ -42899,7 +42903,7 @@
     },
     "https://www.allovoisins.com/r/0/300/45993/0/Saint-just-saint-rambert/service/Terrassement-assainissement": {
       "first_seen": "2026-03-11 08:42:35",
-      "last_seen": "2026-03-20 08:51:16",
+      "last_seen": "2026-03-22 07:27:13",
       "title": "Cherche Terrassement - Assainissement à Saint-Just-Saint-Rambert",
       "is_remote": false,
       "description": "N/A",
@@ -43119,7 +43123,7 @@
     },
     "https://www.allovoisins.com/r/0/145/23506/0/Le-coteau/service/Tonte-de-pelouse-debroussaillage": {
       "first_seen": "2026-03-13 07:28:41",
-      "last_seen": "2026-03-20 08:51:16",
+      "last_seen": "2026-03-22 07:27:13",
       "title": "Recherche Tonte de pelouse - Débroussaillage à Le Coteau",
       "is_remote": false,
       "description": "N/A",
@@ -43130,7 +43134,7 @@
     },
     "https://www.allovoisins.com/r/0/147/23584/0/Saint-maurice-en-gourgois/service/Cloture-grillage": {
       "first_seen": "2026-03-13 07:28:41",
-      "last_seen": "2026-03-20 08:51:16",
+      "last_seen": "2026-03-22 07:27:13",
       "title": "Cherche Clôture Grillage à Saint-Maurice-en-Gourgois",
       "is_remote": false,
       "description": "N/A",
@@ -43141,14 +43145,14 @@
     },
     "https://www.allovoisins.com/r/0/133/23584/0/Saint-maurice-en-gourgois/service/Maconnerie": {
       "first_seen": "2026-03-13 07:28:41",
-      "last_seen": "2026-03-20 08:51:16",
+      "last_seen": "2026-03-22 07:27:13",
       "title": "Recherche Maçonnerie à Saint-Maurice-en-Gourgois",
       "is_remote": false,
-      "description": "N/A",
+      "description": "Durée : 1 jour",
       "confidence": "HIGH",
       "classification": "on-site",
       "reasoning": "Obvious on-site work: maçon",
-      "description_source": "listing_page"
+      "description_source": "detail_page"
     },
     "https://www.allovoisins.com/r/0/166/33450/0/Billom/service/Transport-de-vehicules-remorquage": {
       "first_seen": "2026-03-13 07:28:41",
@@ -43163,7 +43167,7 @@
     },
     "https://www.allovoisins.com/r/0/141/33450/0/Billom/service/Artisan-d-art": {
       "first_seen": "2026-03-13 07:28:41",
-      "last_seen": "2026-03-20 08:51:16",
+      "last_seen": "2026-03-22 07:27:13",
       "title": "Cherche Artisan d'art à Billom",
       "is_remote": false,
       "description": "N/A",
@@ -43174,7 +43178,7 @@
     },
     "https://www.allovoisins.com/r/0/127/23808/0/Montagny/service/Carrelage": {
       "first_seen": "2026-03-13 07:28:41",
-      "last_seen": "2026-03-20 08:51:16",
+      "last_seen": "2026-03-22 07:27:13",
       "title": "Cherche Carrelage à Montagny",
       "is_remote": false,
       "description": "N/A",
@@ -43185,7 +43189,7 @@
     },
     "https://www.allovoisins.com/r/0/187/33466/0/Lezoux/service/Garde-animaux": {
       "first_seen": "2026-03-13 07:28:41",
-      "last_seen": "2026-03-20 08:51:16",
+      "last_seen": "2026-03-22 07:27:13",
       "title": "Recherche Garde animaux à Lezoux",
       "is_remote": false,
       "description": "N/A",
@@ -43196,7 +43200,7 @@
     },
     "https://www.allovoisins.com/r/4201/75/33453/0/location-Citadine-petite-voiture-voiture-economique-Egliseneuve-pres-billom": {
       "first_seen": "2026-03-13 07:28:41",
-      "last_seen": "2026-03-20 08:51:16",
+      "last_seen": "2026-03-22 07:27:13",
       "title": "Louer une citadine / petite voiture / voiture économique - Égliseneuve-prés-Billom",
       "is_remote": false,
       "description": "Durée : 1 jour",
@@ -43229,7 +43233,7 @@
     },
     "https://www.allovoisins.com/r/0/135/33622/0/Maringues/service/Peinture-tapisserie": {
       "first_seen": "2026-03-13 07:28:41",
-      "last_seen": "2026-03-20 08:51:16",
+      "last_seen": "2026-03-22 07:27:13",
       "title": "Recherche Peinture - Tapisserie à Maringues",
       "is_remote": false,
       "description": "N/A",
@@ -43240,8 +43244,8 @@
     },
     "https://www.allovoisins.com/r/5262/3/23745/0/location-Gravier-gravat-Montbrison": {
       "first_seen": "2026-03-13 07:28:41",
-      "last_seen": "2026-03-20 08:51:16",
-      "title": "Acheter des gravier / gravât   - Montbrison",
+      "last_seen": "2026-03-22 07:27:13",
+      "title": "Acheter des gravier / gravât - Montbrison",
       "is_remote": false,
       "description": "N/A",
       "confidence": "HIGH",
@@ -43251,7 +43255,7 @@
     },
     "https://www.allovoisins.com/r/0/223/23645/0/Luriecq/service/Cours-de-maths": {
       "first_seen": "2026-03-13 07:28:41",
-      "last_seen": "2026-03-20 08:51:16",
+      "last_seen": "2026-03-22 07:27:13",
       "title": "Cherche Cours de maths à Luriecq",
       "is_remote": false,
       "description": "N/A",
@@ -43262,7 +43266,7 @@
     },
     "https://www.allovoisins.com/r/5233/79/23508/0/location-Chargeur-de-batterie-auto-moto-Parigny": {
       "first_seen": "2026-03-13 07:28:41",
-      "last_seen": "2026-03-20 08:51:16",
+      "last_seen": "2026-03-22 07:27:13",
       "title": "Location chargeur de batterie auto moto - Parigny",
       "is_remote": false,
       "description": "Durée : 1 jour",
@@ -43273,8 +43277,8 @@
     },
     "https://www.allovoisins.com/r/0/132/24083/0/Vorey/service/Installation-electrique": {
       "first_seen": "2026-03-13 07:28:41",
-      "last_seen": "2026-03-20 08:51:16",
-      "title": "Cherche Installation électrique à Vorey",
+      "last_seen": "2026-03-22 07:27:13",
+      "title": "Recherche Installation électrique à Vorey",
       "is_remote": false,
       "description": "N/A",
       "confidence": "HIGH",
@@ -43284,7 +43288,7 @@
     },
     "https://www.allovoisins.com/r/0/150/23745/0/Montbrison/service/Demenageurs-et-aide-au-demenagement": {
       "first_seen": "2026-03-13 07:28:41",
-      "last_seen": "2026-03-20 08:51:16",
+      "last_seen": "2026-03-22 07:27:13",
       "title": "Cherche Déménageurs et aide au déménagement à Montbrison",
       "is_remote": false,
       "description": "N/A",
@@ -43295,7 +43299,7 @@
     },
     "https://www.allovoisins.com/r/0/193/23604/0/Roanne/service/Assistance-informatique": {
       "first_seen": "2026-03-13 07:28:41",
-      "last_seen": "2026-03-20 08:51:16",
+      "last_seen": "2026-03-22 07:27:13",
       "title": "Recherche Assistance informatique à Roanne",
       "is_remote": false,
       "description": "N/A",
@@ -43306,7 +43310,7 @@
     },
     "https://www.allovoisins.com/r/5219/15/33737/0/location-Chevre-Trezioux": {
       "first_seen": "2026-03-13 07:28:41",
-      "last_seen": "2026-03-20 08:51:16",
+      "last_seen": "2026-03-22 07:27:13",
       "title": "Louer une chèvre - Trézioux",
       "is_remote": false,
       "description": "Durée : 1 jour",
@@ -43317,7 +43321,7 @@
     },
     "https://www.allovoisins.com/r/0/164/23487/0/Feurs/service/Livraison-transport-de-colis": {
       "first_seen": "2026-03-13 07:28:41",
-      "last_seen": "2026-03-20 08:51:16",
+      "last_seen": "2026-03-22 07:27:13",
       "title": "Cherche Livraison - Transport de colis à Feurs",
       "is_remote": false,
       "description": "N/A",
@@ -43328,7 +43332,7 @@
     },
     "https://www.allovoisins.com/r/513/11/23552/0/location-Rouleau-a-gazon-Andrezieux-boutheon": {
       "first_seen": "2026-03-13 07:28:41",
-      "last_seen": "2026-03-20 08:51:16",
+      "last_seen": "2026-03-22 07:27:13",
       "title": "Louer un rouleau à gazon - Andrézieux-Bouthéon",
       "is_remote": false,
       "description": "Durée : 1 jour",
@@ -43339,7 +43343,7 @@
     },
     "https://www.allovoisins.com/r/0/132/33894/0/Vertaizon/service/Installation-electrique": {
       "first_seen": "2026-03-13 07:28:41",
-      "last_seen": "2026-03-20 08:51:16",
+      "last_seen": "2026-03-22 07:27:13",
       "title": "Cherche Installation électrique à Vertaizon",
       "is_remote": false,
       "description": "N/A",
@@ -43350,7 +43354,7 @@
     },
     "https://www.allovoisins.com/r/288/4/23826/0/location-Echafaudage-Fontannes": {
       "first_seen": "2026-03-13 07:28:41",
-      "last_seen": "2026-03-20 08:51:16",
+      "last_seen": "2026-03-22 07:27:13",
       "title": "Louer un echafaudage - Fontannes",
       "is_remote": false,
       "description": "Durée : 3 jours",
@@ -43361,18 +43365,18 @@
     },
     "https://www.allovoisins.com/r/0/164/23836/0/Vieille-brioude/service/Livraison-transport-de-colis": {
       "first_seen": "2026-03-13 07:28:41",
-      "last_seen": "2026-03-20 08:51:16",
+      "last_seen": "2026-03-22 07:27:13",
       "title": "Cherche Livraison - Transport de colis à Vieille-Brioude",
       "is_remote": false,
-      "description": "Livraison - Transport de colis Saint-Germain-Lembron",
+      "description": "N/A",
       "confidence": "HIGH",
       "classification": "on-site",
       "reasoning": "Obvious on-site work: livraison",
-      "description_source": "detail_page"
+      "description_source": "listing_page"
     },
     "https://www.allovoisins.com/r/0/131/33755/0/Brassac-les-mines/service/Couverture-toiture": {
       "first_seen": "2026-03-13 07:28:41",
-      "last_seen": "2026-03-20 08:51:16",
+      "last_seen": "2026-03-22 07:27:13",
       "title": "Cherche Couverture - Toiture à Brassac-les-Mines",
       "is_remote": false,
       "description": "N/A",
@@ -43383,7 +43387,7 @@
     },
     "https://www.allovoisins.com/r/0/159/33885/0/Olliergues/service/Reparation-voiture": {
       "first_seen": "2026-03-13 07:28:41",
-      "last_seen": "2026-03-20 08:51:16",
+      "last_seen": "2026-03-22 07:27:13",
       "title": "Recherche Réparation voiture à Olliergues",
       "is_remote": false,
       "description": "N/A",
@@ -43394,7 +43398,7 @@
     },
     "https://www.allovoisins.com/r/0/131/33450/0/Billom/service/Couverture-toiture": {
       "first_seen": "2026-03-13 07:28:41",
-      "last_seen": "2026-03-20 08:51:16",
+      "last_seen": "2026-03-22 07:27:13",
       "title": "Recherche Couverture - Toiture à Billom",
       "is_remote": false,
       "description": "N/A",
@@ -43405,18 +43409,18 @@
     },
     "https://www.allovoisins.com/r/488/11/33892/0/location-Motoculteur-Bouzel": {
       "first_seen": "2026-03-13 07:28:41",
-      "last_seen": "2026-03-20 08:51:16",
+      "last_seen": "2026-03-22 07:27:13",
       "title": "Louer un motoculteur - Bouzel",
       "is_remote": false,
-      "description": "Durée : 2 jours",
+      "description": "Durée : 1 jour",
       "confidence": "HIGH",
       "classification": "on-site",
-      "reasoning": "LLM: Location motoculteur : service physique sur place",
+      "reasoning": "LLM: Location physique requise pour louer un motoculteur",
       "description_source": "detail_page"
     },
     "https://www.allovoisins.com/r/0/201/23730/0/Saint-jodard/service/Photographe": {
       "first_seen": "2026-03-13 07:28:41",
-      "last_seen": "2026-03-20 08:51:16",
+      "last_seen": "2026-03-22 07:27:13",
       "title": "Recherche Photographe à Saint-Jodard",
       "is_remote": false,
       "description": "N/A",
@@ -43427,7 +43431,7 @@
     },
     "https://www.allovoisins.com/r/0/132/23604/0/Roanne/service/Installation-electrique": {
       "first_seen": "2026-03-13 07:28:41",
-      "last_seen": "2026-03-20 08:51:16",
+      "last_seen": "2026-03-22 07:27:13",
       "title": "Cherche Installation électrique à Roanne",
       "is_remote": false,
       "description": "N/A",
@@ -43482,7 +43486,7 @@
     },
     "https://www.allovoisins.com/r/0/130/23745/0/Montbrison/service/Chauffage-climatisation": {
       "first_seen": "2026-03-14 07:14:11",
-      "last_seen": "2026-03-20 08:51:16",
+      "last_seen": "2026-03-22 07:27:13",
       "title": "Cherche Chauffage - Climatisation à Montbrison",
       "is_remote": false,
       "description": "N/A",
@@ -43504,7 +43508,7 @@
     },
     "https://www.allovoisins.com/r/257/3/23553/0/location-Pelleteuse-minipelle-mini-pelle-Bonson": {
       "first_seen": "2026-03-14 07:14:11",
-      "last_seen": "2026-03-20 08:51:16",
+      "last_seen": "2026-03-22 07:27:13",
       "title": "Louer une pelleteuse / minipelle / mini pelle - Bonson",
       "is_remote": false,
       "description": "Durée : 1 jour",
@@ -43515,7 +43519,7 @@
     },
     "https://www.allovoisins.com/r/515/11/23778/0/location-Scarificateur-Saint-marcellin-en-forez": {
       "first_seen": "2026-03-14 07:14:11",
-      "last_seen": "2026-03-20 08:51:16",
+      "last_seen": "2026-03-22 07:27:13",
       "title": "Location scarificateur - Saint-Marcellin-en-Forez",
       "is_remote": false,
       "description": "Durée : 1 jour",
@@ -43537,18 +43541,18 @@
     },
     "https://www.allovoisins.com/r/0/163/33736/0/Saint-jean-des-ollieres/service/Covoiturage-partage-de-frais": {
       "first_seen": "2026-03-15 07:25:58",
-      "last_seen": "2026-03-20 08:51:16",
+      "last_seen": "2026-03-22 07:27:13",
       "title": "Cherche Covoiturage (partage de frais) à Saint-Jean-des-Ollières",
       "is_remote": false,
-      "description": "Durﾃｩe : 1 jour",
+      "description": "DurĆ©e : 1 jour",
       "confidence": "HIGH",
       "classification": "on-site",
-      "reasoning": "LLM: Covoiturage = transport physique, nécessite présence",
+      "reasoning": "LLM: Demande de covoiturage, pas une offre d'emploi",
       "description_source": "detail_page"
     },
     "https://www.allovoisins.com/r/0/169/33559/0/Mons/service/Menage": {
       "first_seen": "2026-03-15 07:25:58",
-      "last_seen": "2026-03-20 08:51:16",
+      "last_seen": "2026-03-22 07:27:13",
       "title": "Cherche Ménage à Mons",
       "is_remote": false,
       "description": "N/A",
@@ -43559,7 +43563,7 @@
     },
     "https://www.allovoisins.com/r/579/12/23604/0/location-Tente-Roanne": {
       "first_seen": "2026-03-15 07:25:58",
-      "last_seen": "2026-03-20 08:51:16",
+      "last_seen": "2026-03-22 07:27:13",
       "title": "Louer une tente - Roanne",
       "is_remote": false,
       "description": "Durée : 7 jours",
@@ -43570,7 +43574,7 @@
     },
     "https://www.allovoisins.com/r/0/159/23807/0/Combre/service/Reparation-voiture": {
       "first_seen": "2026-03-15 07:25:58",
-      "last_seen": "2026-03-20 08:51:16",
+      "last_seen": "2026-03-22 07:27:13",
       "title": "Recherche Réparation voiture à Combre",
       "is_remote": false,
       "description": "N/A",
@@ -43581,7 +43585,7 @@
     },
     "https://www.allovoisins.com/r/0/132/23737/0/Champdieu/service/Installation-electrique": {
       "first_seen": "2026-03-15 07:25:58",
-      "last_seen": "2026-03-20 08:51:16",
+      "last_seen": "2026-03-22 07:27:13",
       "title": "Recherche Installation électrique à Champdieu",
       "is_remote": false,
       "description": "N/A",
@@ -43592,7 +43596,7 @@
     },
     "https://www.allovoisins.com/r/0/160/23487/0/Feurs/service/Reparation-velo-moto": {
       "first_seen": "2026-03-15 07:25:58",
-      "last_seen": "2026-03-20 08:51:16",
+      "last_seen": "2026-03-22 07:27:13",
       "title": "Recherche Réparation vélo - moto à Feurs",
       "is_remote": false,
       "description": "N/A",
@@ -43603,7 +43607,7 @@
     },
     "https://www.allovoisins.com/r/0/169/23829/0/Lavaudieu/service/Menage": {
       "first_seen": "2026-03-15 07:25:58",
-      "last_seen": "2026-03-20 08:51:16",
+      "last_seen": "2026-03-22 07:27:13",
       "title": "Recherche Ménage à Lavaudieu",
       "is_remote": false,
       "description": "N/A",
@@ -43614,7 +43618,7 @@
     },
     "https://www.allovoisins.com/r/0/130/23679/0/Sury-le-comtal/service/Chauffage-climatisation": {
       "first_seen": "2026-03-15 07:25:58",
-      "last_seen": "2026-03-20 08:51:16",
+      "last_seen": "2026-03-22 07:27:13",
       "title": "Recherche Chauffage - Climatisation à Sury-le-Comtal",
       "is_remote": false,
       "description": "N/A",
@@ -43636,7 +43640,7 @@
     },
     "https://www.allovoisins.com/r/0/246/23552/0/Andrezieux-boutheon/service/Conciergerie": {
       "first_seen": "2026-03-16 08:08:52",
-      "last_seen": "2026-03-20 08:51:16",
+      "last_seen": "2026-03-22 07:27:13",
       "title": "Cherche Conciergerie à Andrézieux-Bouthéon",
       "is_remote": false,
       "description": "N/A",
@@ -43647,29 +43651,29 @@
     },
     "https://www.allovoisins.com/r/0/145/23713/0/Saint-just-la-pendue/service/Tonte-de-pelouse-debroussaillage": {
       "first_seen": "2026-03-16 08:08:52",
-      "last_seen": "2026-03-20 08:51:16",
+      "last_seen": "2026-03-22 07:27:13",
       "title": "Cherche Tonte de pelouse - Débroussaillage à Saint-Just-la-Pendue",
       "is_remote": false,
-      "description": "Tonte de pelouse - Débroussaillage Saint-Romain-de-Popey",
+      "description": "Loetitiaa posté cette demande dans le cadre duThème du moment«Je prépare mon jardin pour le printemps».",
       "confidence": "HIGH",
       "classification": "on-site",
-      "reasoning": "LLM: Tonte et débroussaillage nécessitent présence physique sur place",
+      "reasoning": "LLM: Tonte de pelouse nécessite présence physique sur site",
       "description_source": "detail_page"
     },
     "https://www.allovoisins.com/r/0/125/33558/0/Beaumont-les-randan/service/Montage-meubles-en-kit": {
       "first_seen": "2026-03-16 08:08:52",
-      "last_seen": "2026-03-20 08:51:16",
+      "last_seen": "2026-03-22 07:27:13",
       "title": "Recherche Montage meubles en kit à Beaumont-lès-Randan",
       "is_remote": false,
-      "description": "Chama posté cette demande dans le cadre duThème du moment«J'ai besoin d'aide pour des petits travaux».",
+      "description": "N/A",
       "confidence": "HIGH",
       "classification": "on-site",
-      "reasoning": "LLM: Montage meubles = intervention physique obligatoire",
-      "description_source": "detail_page"
+      "reasoning": "LLM: Montage meubles nécessite présence physique",
+      "description_source": "listing_page"
     },
     "https://www.allovoisins.com/r/529/11/33716/0/location-Tondeuse-a-gazon-Issoire": {
       "first_seen": "2026-03-16 08:08:52",
-      "last_seen": "2026-03-20 08:51:16",
+      "last_seen": "2026-03-22 07:27:13",
       "title": "Louer une tondeuse à gazon - Issoire",
       "is_remote": false,
       "description": "Durée : 1 jour",
@@ -43680,7 +43684,7 @@
     },
     "https://www.allovoisins.com/r/0/158/23755/0/Saint-romain-le-puy/service/Lavage-auto": {
       "first_seen": "2026-03-16 08:08:52",
-      "last_seen": "2026-03-20 08:51:16",
+      "last_seen": "2026-03-22 07:27:13",
       "title": "Cherche Lavage auto à Saint-Romain-le-Puy",
       "is_remote": false,
       "description": "N/A",
@@ -43713,7 +43717,7 @@
     },
     "https://www.allovoisins.com/r/0/153/23694/0/Fraisses/service/Depannage-electromenager": {
       "first_seen": "2026-03-16 08:08:52",
-      "last_seen": "2026-03-20 08:51:16",
+      "last_seen": "2026-03-22 07:27:13",
       "title": "Cherche Dépannage électroménager à Fraisses",
       "is_remote": false,
       "description": "N/A",
@@ -43724,7 +43728,7 @@
     },
     "https://www.allovoisins.com/r/107/2/33560/0/location-Kit-des-principaux-outils-Randan": {
       "first_seen": "2026-03-16 08:08:52",
-      "last_seen": "2026-03-20 08:51:16",
+      "last_seen": "2026-03-22 07:27:13",
       "title": "Location kit des principaux outils - Randan",
       "is_remote": false,
       "description": "Durée : 1 jour",
@@ -43735,7 +43739,7 @@
     },
     "https://www.allovoisins.com/r/0/143/33466/0/Lezoux/service/Jardinier": {
       "first_seen": "2026-03-16 08:08:52",
-      "last_seen": "2026-03-20 08:51:16",
+      "last_seen": "2026-03-22 07:27:13",
       "title": "Recherche Jardinier à Lezoux",
       "is_remote": false,
       "description": "N/A",
@@ -43746,7 +43750,7 @@
     },
     "https://www.allovoisins.com/r/0/127/23759/0/Regny/service/Carrelage": {
       "first_seen": "2026-03-16 08:08:52",
-      "last_seen": "2026-03-20 08:51:16",
+      "last_seen": "2026-03-22 07:27:13",
       "title": "Recherche Carrelage à Régny",
       "is_remote": false,
       "description": "N/A",
@@ -43757,7 +43761,7 @@
     },
     "https://www.allovoisins.com/r/210/2/23569/0/location-Tariere-Saint-andre-le-puy": {
       "first_seen": "2026-03-16 08:08:52",
-      "last_seen": "2026-03-20 08:51:16",
+      "last_seen": "2026-03-22 07:27:13",
       "title": "Louer une tarière - Saint-André-le-Puy",
       "is_remote": false,
       "description": "Durée : 1 jour",
@@ -43779,7 +43783,7 @@
     },
     "https://www.allovoisins.com/r/0/150/33844/0/Mirefleurs/service/Demenageurs-et-aide-au-demenagement": {
       "first_seen": "2026-03-16 08:08:52",
-      "last_seen": "2026-03-20 08:51:16",
+      "last_seen": "2026-03-22 07:27:13",
       "title": "Recherche Déménageurs et aide au déménagement à Mirefleurs",
       "is_remote": false,
       "description": "N/A",
@@ -43790,7 +43794,7 @@
     },
     "https://www.allovoisins.com/r/0/151/33844/0/Mirefleurs/service/Manutention": {
       "first_seen": "2026-03-16 08:08:52",
-      "last_seen": "2026-03-20 08:51:16",
+      "last_seen": "2026-03-22 07:27:13",
       "title": "Recherche Manutention à Mirefleurs",
       "is_remote": false,
       "description": "N/A",
@@ -43812,7 +43816,7 @@
     },
     "https://www.allovoisins.com/r/0/133/23638/0/Saint-andre-d-apchon/service/Maconnerie": {
       "first_seen": "2026-03-16 08:08:52",
-      "last_seen": "2026-03-20 08:51:16",
+      "last_seen": "2026-03-22 07:27:13",
       "title": "Cherche Maçonnerie à Saint-André-d'Apchon",
       "is_remote": false,
       "description": "N/A",
@@ -43823,7 +43827,7 @@
     },
     "https://www.allovoisins.com/r/0/201/33716/0/Issoire/service/Photographe": {
       "first_seen": "2026-03-16 08:08:52",
-      "last_seen": "2026-03-20 08:51:16",
+      "last_seen": "2026-03-22 07:27:13",
       "title": "Recherche Photographe à Issoire",
       "is_remote": false,
       "description": "N/A",
@@ -43834,7 +43838,7 @@
     },
     "https://www.allovoisins.com/r/0/146/23665/0/Cherier/service/Elagage-et-coupe-d-arbres": {
       "first_seen": "2026-03-16 08:08:52",
-      "last_seen": "2026-03-20 08:51:16",
+      "last_seen": "2026-03-22 07:27:13",
       "title": "Recherche Elagage et coupe d'arbres à Cherier",
       "is_remote": false,
       "description": "N/A",
@@ -44043,7 +44047,7 @@
     },
     "https://www.allovoisins.com/r/0/171/33897/0/Augerolles/service/Couturiere": {
       "first_seen": "2026-03-17 07:41:14",
-      "last_seen": "2026-03-20 08:51:16",
+      "last_seen": "2026-03-22 07:27:13",
       "title": "Recherche Couturière à Augerolles",
       "is_remote": false,
       "description": "N/A",
@@ -44076,7 +44080,7 @@
     },
     "https://www.allovoisins.com/r/0/300/33465/0/Lempty/service/Terrassement-assainissement": {
       "first_seen": "2026-03-17 07:41:14",
-      "last_seen": "2026-03-20 08:51:16",
+      "last_seen": "2026-03-22 07:27:13",
       "title": "Recherche Terrassement - Assainissement à Lempty",
       "is_remote": false,
       "description": "N/A",
@@ -44087,7 +44091,7 @@
     },
     "https://www.allovoisins.com/r/0/136/23554/0/Saint-cyprien/service/Platrerie-murs-plafonds": {
       "first_seen": "2026-03-17 07:41:14",
-      "last_seen": "2026-03-20 08:51:16",
+      "last_seen": "2026-03-22 07:27:13",
       "title": "Recherche Plâtrerie - Murs - Plafonds à Saint-Cyprien",
       "is_remote": false,
       "description": "N/A",
@@ -44098,7 +44102,7 @@
     },
     "https://www.allovoisins.com/r/488/11/23569/0/location-Motoculteur-Saint-andre-le-puy": {
       "first_seen": "2026-03-17 07:41:14",
-      "last_seen": "2026-03-20 08:51:16",
+      "last_seen": "2026-03-22 07:27:13",
       "title": "Louer un motoculteur - Saint-André-le-Puy",
       "is_remote": false,
       "description": "Durée : 1 jour",
@@ -44120,7 +44124,7 @@
     },
     "https://www.allovoisins.com/r/0/159/23590/0/Cremeaux/service/Reparation-voiture": {
       "first_seen": "2026-03-17 07:41:14",
-      "last_seen": "2026-03-20 08:51:16",
+      "last_seen": "2026-03-22 07:27:13",
       "title": "Cherche Réparation voiture à Cremeaux",
       "is_remote": false,
       "description": "N/A",
@@ -44131,7 +44135,7 @@
     },
     "https://www.allovoisins.com/r/0/164/23586/0/Unieux/service/Livraison-transport-de-colis": {
       "first_seen": "2026-03-17 07:41:14",
-      "last_seen": "2026-03-20 08:51:16",
+      "last_seen": "2026-03-22 07:27:13",
       "title": "Cherche Livraison - Transport de colis à Unieux",
       "is_remote": false,
       "description": "N/A",
@@ -44142,7 +44146,7 @@
     },
     "https://www.allovoisins.com/r/0/171/33770/0/Valz-sous-chateauneuf/service/Couturiere": {
       "first_seen": "2026-03-17 07:41:14",
-      "last_seen": "2026-03-20 08:51:16",
+      "last_seen": "2026-03-22 07:27:13",
       "title": "Recherche Couturière à Valz-sous-Châteauneuf",
       "is_remote": false,
       "description": "N/A",
@@ -44164,7 +44168,7 @@
     },
     "https://www.allovoisins.com/r/0/126/23553/0/Bonson/service/Pose-de-parquet-revetement-de-sol": {
       "first_seen": "2026-03-17 07:41:14",
-      "last_seen": "2026-03-20 08:51:16",
+      "last_seen": "2026-03-22 07:27:13",
       "title": "Recherche Pose de parquet - Revêtement de sol à Bonson",
       "is_remote": false,
       "description": "N/A",
@@ -44175,7 +44179,7 @@
     },
     "https://www.allovoisins.com/r/690/17/23569/0/location-Nettoyeur-de-vitres-Saint-andre-le-puy": {
       "first_seen": "2026-03-17 07:41:14",
-      "last_seen": "2026-03-20 08:51:16",
+      "last_seen": "2026-03-22 07:27:13",
       "title": "Location nettoyeur de vitres - Saint-André-le-Puy",
       "is_remote": false,
       "description": "Durée : 1 jour",
@@ -44252,8 +44256,8 @@
     },
     "https://www.allovoisins.com/r/0/151/23604/0/Roanne/service/Manutention": {
       "first_seen": "2026-03-18 08:16:22",
-      "last_seen": "2026-03-20 08:51:16",
-      "title": "Recherche Manutention à Roanne",
+      "last_seen": "2026-03-22 07:27:13",
+      "title": "Recherche Manutention û Roanne",
       "is_remote": false,
       "description": "N/A",
       "confidence": "HIGH",
@@ -44263,18 +44267,18 @@
     },
     "https://www.allovoisins.com/r/0/130/33621/0/Luzillat/service/Chauffage-climatisation": {
       "first_seen": "2026-03-18 08:16:22",
-      "last_seen": "2026-03-20 08:51:16",
-      "title": "Recherche Chauffage - Climatisation à Luzillat",
+      "last_seen": "2026-03-22 07:27:13",
+      "title": "Recherche Chauffage - Climatisation û Luzillat",
       "is_remote": false,
-      "description": "Durée : 1 jour",
+      "description": "N/A",
       "confidence": "HIGH",
       "classification": "on-site",
-      "reasoning": "LLM: Installation chauffage/clim : intervention physique obligatoire",
-      "description_source": "detail_page"
+      "reasoning": "LLM: Installation chauffage/clim : intervention physique sur site",
+      "description_source": "listing_page"
     },
     "https://www.allovoisins.com/r/488/11/23808/0/location-Motoculteur-Montagny": {
       "first_seen": "2026-03-18 08:16:22",
-      "last_seen": "2026-03-20 08:51:16",
+      "last_seen": "2026-03-22 07:27:13",
       "title": "Louer un motoculteur - Montagny",
       "is_remote": false,
       "description": "Durée : 1 jour",
@@ -44285,7 +44289,7 @@
     },
     "https://www.allovoisins.com/r/0/130/23545/0/Lentigny/service/Chauffage-climatisation": {
       "first_seen": "2026-03-18 08:16:22",
-      "last_seen": "2026-03-20 08:51:16",
+      "last_seen": "2026-03-22 07:27:13",
       "title": "Recherche Chauffage - Climatisation à Lentigny",
       "is_remote": false,
       "description": "N/A",
@@ -44296,7 +44300,7 @@
     },
     "https://www.allovoisins.com/r/0/159/23586/0/Unieux/service/Reparation-voiture": {
       "first_seen": "2026-03-18 08:16:22",
-      "last_seen": "2026-03-20 08:51:16",
+      "last_seen": "2026-03-22 07:27:13",
       "title": "Recherche Réparation voiture à Unieux",
       "is_remote": false,
       "description": "N/A",
@@ -44307,7 +44311,7 @@
     },
     "https://www.allovoisins.com/r/0/164/33611/0/Saint-germain-lembron/service/Livraison-transport-de-colis": {
       "first_seen": "2026-03-18 08:16:22",
-      "last_seen": "2026-03-20 08:51:16",
+      "last_seen": "2026-03-22 07:27:13",
       "title": "Cherche Livraison - Transport de colis à Saint-Germain-Lembron",
       "is_remote": false,
       "description": "N/A",
@@ -44318,7 +44322,7 @@
     },
     "https://www.allovoisins.com/r/0/296/33471/0/Seychalles/service/Evacuation-dechets-gravats": {
       "first_seen": "2026-03-18 08:16:22",
-      "last_seen": "2026-03-20 08:51:16",
+      "last_seen": "2026-03-22 07:27:13",
       "title": "Cherche Évacuation déchets - Gravats à Seychalles",
       "is_remote": false,
       "description": "N/A",
@@ -44329,7 +44333,7 @@
     },
     "https://www.allovoisins.com/r/0/300/33566/0/Villeneuve-les-cerfs/service/Terrassement-assainissement": {
       "first_seen": "2026-03-18 08:16:22",
-      "last_seen": "2026-03-20 08:51:16",
+      "last_seen": "2026-03-22 07:27:13",
       "title": "Recherche Terrassement - Assainissement à Villeneuve-les-Cerfs",
       "is_remote": false,
       "description": "N/A",
@@ -44340,7 +44344,7 @@
     },
     "https://www.allovoisins.com/r/70/2/33543/0/location-Decolleuse-a-papier-peint-Vic-le-comte": {
       "first_seen": "2026-03-18 08:16:22",
-      "last_seen": "2026-03-20 08:51:16",
+      "last_seen": "2026-03-22 07:27:13",
       "title": "Location décolleuse à papier peint - Vic-le-Comte",
       "is_remote": false,
       "description": "Durée : 3 jours",
@@ -44406,29 +44410,29 @@
     },
     "https://www.allovoisins.com/r/0/133/33452/0/Chas/service/Maconnerie": {
       "first_seen": "2026-03-19 08:54:36",
-      "last_seen": "2026-03-20 08:51:16",
-      "title": "Cherche MaĂ§onnerie Ă  Chas",
+      "last_seen": "2026-03-22 07:27:13",
+      "title": "Cherche Maçonnerie à Chas",
       "is_remote": false,
       "description": "N/A",
       "confidence": "HIGH",
       "classification": "on-site",
-      "reasoning": "LLM: Maçonnerie = travaux physiques sur chantier",
+      "reasoning": "Obvious on-site work: maçon",
       "description_source": "listing_page"
     },
     "https://www.allovoisins.com/r/0/127/33602/0/Charbonnier-les-mines/service/Carrelage": {
       "first_seen": "2026-03-19 08:54:36",
-      "last_seen": "2026-03-20 08:51:16",
-      "title": "Cherche Carrelage Ă  Charbonnier-les-Mines",
+      "last_seen": "2026-03-22 07:27:13",
+      "title": "Cherche Carrelage à Charbonnier-les-Mines",
       "is_remote": false,
       "description": "N/A",
       "confidence": "HIGH",
       "classification": "on-site",
-      "reasoning": "LLM: Carrelage = pose physique sur place",
+      "reasoning": "LLM: Carrelage = pose physique sur chantier",
       "description_source": "listing_page"
     },
     "https://www.allovoisins.com/r/4234/79/33556/0/location-Remorque-auto-Thiers": {
       "first_seen": "2026-03-19 08:54:36",
-      "last_seen": "2026-03-20 08:51:16",
+      "last_seen": "2026-03-22 07:27:13",
       "title": "Louer une remorque auto - Thiers",
       "is_remote": false,
       "description": "Durée : 1 jour",
@@ -44439,18 +44443,18 @@
     },
     "https://www.allovoisins.com/r/691/17/23568/0/location-Nettoyeur-vapeur-menager-Montrond-les-bains": {
       "first_seen": "2026-03-19 08:54:36",
-      "last_seen": "2026-03-20 08:51:16",
-      "title": "Louer un nettoyeur vapeur mĂ©nager - Montrond-les-Bains",
+      "last_seen": "2026-03-22 07:27:13",
+      "title": "Louer un nettoyeur vapeur ménager - Montrond-les-Bains",
       "is_remote": false,
       "description": "Durée : 1 jour",
       "confidence": "HIGH",
       "classification": "on-site",
-      "reasoning": "LLM: Location physique requise pour nettoyage vapeur",
+      "reasoning": "Obvious on-site work: ménage",
       "description_source": "detail_page"
     },
     "https://www.allovoisins.com/r/199/2/23568/0/location-Shampouineuse-Montrond-les-bains": {
       "first_seen": "2026-03-19 08:54:36",
-      "last_seen": "2026-03-20 08:51:16",
+      "last_seen": "2026-03-22 07:27:13",
       "title": "Location shampouineuse - Montrond-les-Bains",
       "is_remote": false,
       "description": "Durée : 1 jour",
@@ -44461,8 +44465,8 @@
     },
     "https://www.allovoisins.com/r/0/282/23721/0/Margerie-chantagret/service/Traiteur": {
       "first_seen": "2026-03-19 08:54:36",
-      "last_seen": "2026-03-20 08:51:16",
-      "title": "Recherche Traiteur Ă  Margerie-Chantagret",
+      "last_seen": "2026-03-22 07:27:13",
+      "title": "Recherche Traiteur à Margerie-Chantagret",
       "is_remote": false,
       "description": "N/A",
       "confidence": "HIGH",
@@ -44472,18 +44476,18 @@
     },
     "https://www.allovoisins.com/r/0/124/33437/0/Vollore-ville/service/Bricolage-et-multi-services": {
       "first_seen": "2026-03-19 08:54:36",
-      "last_seen": "2026-03-20 08:51:16",
-      "title": "Recherche Bricolage et multi services Ă  Vollore-Ville",
+      "last_seen": "2026-03-22 07:27:13",
+      "title": "Recherche Bricolage et multi services û Vollore-Ville",
       "is_remote": false,
-      "description": "N/A",
+      "description": "Clairea posté cette demande dans le cadre duThème du moment«C'est le printemps !».",
       "confidence": "HIGH",
       "classification": "on-site",
       "reasoning": "Obvious on-site work: bricolage",
-      "description_source": "listing_page"
+      "description_source": "detail_page"
     },
     "https://www.allovoisins.com/r/488/11/23487/0/location-Motoculteur-Feurs": {
       "first_seen": "2026-03-19 08:54:36",
-      "last_seen": "2026-03-20 08:51:16",
+      "last_seen": "2026-03-22 07:27:13",
       "title": "Louer un motoculteur - Feurs",
       "is_remote": false,
       "description": "Durée : 1 jour",
@@ -44494,57 +44498,57 @@
     },
     "https://www.allovoisins.com/r/0/153/23803/0/Rozier-en-donzy/service/Depannage-electromenager": {
       "first_seen": "2026-03-19 08:54:36",
-      "last_seen": "2026-03-20 08:51:16",
-      "title": "Recherche DĂ©pannage Ă©lectromĂ©nager Ă  Rozier-en-Donzy",
-      "is_remote": false,
-      "description": "N/A",
-      "confidence": "HIGH",
-      "classification": "on-site",
-      "reasoning": "LLM: Réparation électroménager = intervention physique sur place",
-      "description_source": "listing_page"
-    },
-    "https://www.allovoisins.com/r/0/169/33551/0/Paslieres/service/Menage": {
-      "first_seen": "2026-03-19 08:54:36",
-      "last_seen": "2026-03-20 08:51:16",
-      "title": "Recherche MĂ©nage Ă  PasliĂ¨res",
-      "is_remote": false,
-      "description": "N/A",
-      "confidence": "HIGH",
-      "classification": "on-site",
-      "reasoning": "LLM: Ménage = service physique obligatoirement sur place",
-      "description_source": "listing_page"
-    },
-    "https://www.allovoisins.com/r/0/159/44493/0/Auzat-la-combelle/service/Reparation-voiture": {
-      "first_seen": "2026-03-19 08:54:36",
-      "last_seen": "2026-03-20 08:51:16",
-      "title": "Recherche RĂ©paration voiture Ă  Auzat-la-Combelle",
-      "is_remote": false,
-      "description": "N/A",
-      "confidence": "HIGH",
-      "classification": "on-site",
-      "reasoning": "LLM: Réparation automobile sur place, service physique obligatoire",
-      "description_source": "listing_page"
-    },
-    "https://www.allovoisins.com/r/5291/3/33453/0/location-Micro-tracteur-Egliseneuve-pres-billom": {
-      "first_seen": "2026-03-19 08:54:36",
-      "last_seen": "2026-03-20 08:51:16",
-      "title": "Louer une micro tracteur - Égliseneuve-prés-Billom",
+      "last_seen": "2026-03-22 07:27:13",
+      "title": "Recherche Dûˋpannage ûˋlectromûˋnager û Rozier-en-Donzy",
       "is_remote": false,
       "description": "Durée : 1 jour",
       "confidence": "HIGH",
       "classification": "on-site",
-      "reasoning": "LLM: Location d’un micro-tracteur : service physique sur place",
+      "reasoning": "LLM: Réparation électroménager sur place, intervention physique",
+      "description_source": "detail_page"
+    },
+    "https://www.allovoisins.com/r/0/169/33551/0/Paslieres/service/Menage": {
+      "first_seen": "2026-03-19 08:54:36",
+      "last_seen": "2026-03-22 07:27:13",
+      "title": "Recherche Mûˋnage û Pasliû´res",
+      "is_remote": false,
+      "description": "N/A",
+      "confidence": "HIGH",
+      "classification": "on-site",
+      "reasoning": "LLM: Ménage = service physique sur place",
+      "description_source": "listing_page"
+    },
+    "https://www.allovoisins.com/r/0/159/44493/0/Auzat-la-combelle/service/Reparation-voiture": {
+      "first_seen": "2026-03-19 08:54:36",
+      "last_seen": "2026-03-22 07:27:13",
+      "title": "Recherche Rûˋparation voiture û Auzat-la-Combelle",
+      "is_remote": false,
+      "description": "N/A",
+      "confidence": "HIGH",
+      "classification": "on-site",
+      "reasoning": "LLM: Réparation automobile nécessite présence physique",
+      "description_source": "listing_page"
+    },
+    "https://www.allovoisins.com/r/5291/3/33453/0/location-Micro-tracteur-Egliseneuve-pres-billom": {
+      "first_seen": "2026-03-19 08:54:36",
+      "last_seen": "2026-03-22 07:27:13",
+      "title": "Louer une micro tracteur - ûgliseneuve-prûˋs-Billom",
+      "is_remote": false,
+      "description": "Durée : 1 jour",
+      "confidence": "HIGH",
+      "classification": "on-site",
+      "reasoning": "LLM: Location d'un micro-tracteur, service physique sur place",
       "description_source": "detail_page"
     },
     "https://www.allovoisins.com/r/557/12/33453/0/location-Housse-de-protection-et-bache-jardin-Egliseneuve-pres-billom": {
       "first_seen": "2026-03-19 08:54:36",
-      "last_seen": "2026-03-20 08:51:16",
-      "title": "Louer une housse de protection et bâche (jardin) - Égliseneuve-prés-Billom",
+      "last_seen": "2026-03-22 07:27:13",
+      "title": "Louer une housse de protection et bûÂche (jardin) - ûgliseneuve-prûˋs-Billom",
       "is_remote": false,
       "description": "Housse de protection et bâche (jardin) Égliseneuve-prés-Billom",
       "confidence": "HIGH",
       "classification": "on-site",
-      "reasoning": "LLM: Location physique d'une housse de jardin",
+      "reasoning": "LLM: Location physique, objet réel, service local",
       "description_source": "detail_page"
     },
     "https://www.allovoisins.com/r/0/143/33431/0/Courpiere/service/Jardinier": {
@@ -44560,18 +44564,18 @@
     },
     "https://www.allovoisins.com/r/0/136/33708/0/Sauxillanges/service/Platrerie-murs-plafonds": {
       "first_seen": "2026-03-19 08:54:36",
-      "last_seen": "2026-03-20 08:51:16",
-      "title": "Cherche Plâtrerie - Murs - Plafonds à Sauxillanges",
+      "last_seen": "2026-03-22 07:27:13",
+      "title": "Cherche PlûÂtrerie - Murs - Plafonds û Sauxillanges",
       "is_remote": false,
       "description": "N/A",
       "confidence": "HIGH",
       "classification": "on-site",
-      "reasoning": "LLM: Plâtrerie : travaux physiques sur site, impossible à distance",
+      "reasoning": "LLM: Plâtrerie : travaux physiques sur site obligatoire",
       "description_source": "listing_page"
     },
     "https://www.allovoisins.com/r/4360/93/33755/0/location-Hivernage-caravane-hivernage-camping-car-Brassac-les-mines": {
       "first_seen": "2026-03-19 08:54:36",
-      "last_seen": "2026-03-20 08:51:16",
+      "last_seen": "2026-03-22 07:27:13",
       "title": "Location hivernage caravane / hivernage camping-car - Brassac-les-Mines",
       "is_remote": false,
       "description": "Durée : 365 jours",
@@ -44604,7 +44608,7 @@
     },
     "https://www.allovoisins.com/r/172/2/23604/0/location-Regle-a-emarger-Roanne": {
       "first_seen": "2026-03-20 08:51:16",
-      "last_seen": "2026-03-20 08:51:16",
+      "last_seen": "2026-03-22 07:27:13",
       "title": "Louer une règle à émarger - Roanne",
       "is_remote": false,
       "description": "Durée : 1 jour",
@@ -44615,7 +44619,7 @@
     },
     "https://www.allovoisins.com/r/515/11/23555/0/location-Scarificateur-Chambles": {
       "first_seen": "2026-03-20 08:51:16",
-      "last_seen": "2026-03-20 08:51:16",
+      "last_seen": "2026-03-22 07:27:13",
       "title": "Louer un scarificateur - Chambles",
       "is_remote": false,
       "description": "Durée : 1 jour",
@@ -44626,7 +44630,7 @@
     },
     "https://www.allovoisins.com/r/0/132/23970/0/Saint-ferreol-d-auroure/service/Installation-electrique": {
       "first_seen": "2026-03-20 08:51:16",
-      "last_seen": "2026-03-20 08:51:16",
+      "last_seen": "2026-03-22 07:27:13",
       "title": "Cherche Installation électrique à Saint-Ferréol-d'Auroure",
       "is_remote": false,
       "description": "N/A",
@@ -44637,7 +44641,7 @@
     },
     "https://www.allovoisins.com/r/0/134/23552/0/Andrezieux-boutheon/service/Menuiserie-huisserie-agencement": {
       "first_seen": "2026-03-20 08:51:16",
-      "last_seen": "2026-03-20 08:51:16",
+      "last_seen": "2026-03-22 07:27:13",
       "title": "Cherche Menuiserie - Huisserie - Agencement à Andrézieux-Bouthéon",
       "is_remote": false,
       "description": "N/A",
@@ -44648,18 +44652,18 @@
     },
     "https://www.allovoisins.com/r/0/295/33431/0/Courpiere/service/Taille-de-haies-et-d-arbustes": {
       "first_seen": "2026-03-20 08:51:16",
-      "last_seen": "2026-03-20 08:51:16",
+      "last_seen": "2026-03-22 07:27:13",
       "title": "Recherche Taille de haies et d'arbustes à Courpière",
       "is_remote": false,
-      "description": "Durée : 1 jour",
+      "description": "N/A",
       "confidence": "HIGH",
       "classification": "on-site",
-      "reasoning": "LLM: Taille de haies : travail physique sur site",
-      "description_source": "detail_page"
+      "reasoning": "LLM: Taille de haies nécessite présence physique",
+      "description_source": "listing_page"
     },
     "https://www.allovoisins.com/r/0/169/33542/0/Salledes/service/Menage": {
       "first_seen": "2026-03-20 08:51:16",
-      "last_seen": "2026-03-20 08:51:16",
+      "last_seen": "2026-03-22 07:27:13",
       "title": "Cherche Ménage à Sallèdes",
       "is_remote": false,
       "description": "N/A",
@@ -44670,7 +44674,7 @@
     },
     "https://www.allovoisins.com/r/0/185/23840/0/Retournac/service/Garde-chien": {
       "first_seen": "2026-03-20 08:51:16",
-      "last_seen": "2026-03-20 08:51:16",
+      "last_seen": "2026-03-22 07:27:13",
       "title": "Recherche Garde chien à Retournac",
       "is_remote": false,
       "description": "Georginaa posté cette demande dans le cadre duThème du moment«Je fais garder mon animal».",
@@ -44681,7 +44685,7 @@
     },
     "https://www.allovoisins.com/r/569/12/33755/0/location-Robot-de-piscine-Brassac-les-mines": {
       "first_seen": "2026-03-20 08:51:16",
-      "last_seen": "2026-03-20 08:51:16",
+      "last_seen": "2026-03-22 07:27:13",
       "title": "Location robot de piscine - Brassac-les-Mines",
       "is_remote": false,
       "description": "Durée : 1 jour",
@@ -44703,7 +44707,7 @@
     },
     "https://www.allovoisins.com/r/0/133/33558/0/Beaumont-les-randan/service/Maconnerie": {
       "first_seen": "2026-03-20 08:51:16",
-      "last_seen": "2026-03-20 08:51:16",
+      "last_seen": "2026-03-22 07:27:13",
       "title": "Cherche Maçonnerie à Beaumont-lès-Randan",
       "is_remote": false,
       "description": "N/A",
@@ -44714,7 +44718,7 @@
     },
     "https://www.allovoisins.com/r/5389/93/23604/0/location-Local-commercial-Roanne": {
       "first_seen": "2026-03-20 08:51:16",
-      "last_seen": "2026-03-20 08:51:16",
+      "last_seen": "2026-03-22 07:27:13",
       "title": "Location local commercial - Roanne",
       "is_remote": false,
       "description": "Durée : 365 jours",
@@ -44725,21 +44729,21 @@
     },
     "https://www.allovoisins.com/r/0/157/33555/0/Escoutoux/service/Reparation-carrosserie": {
       "first_seen": "2026-03-20 08:51:16",
-      "last_seen": "2026-03-20 08:51:16",
-      "title": "Recherche Réparation carrosserie à Escoutoux",
+      "last_seen": "2026-03-22 07:27:13",
+      "title": "Cherche Réparation carrosserie à Escoutoux",
       "is_remote": false,
       "description": "N/A",
       "confidence": "HIGH",
       "classification": "on-site",
-      "reasoning": "LLM: Réparation carrosserie nécessite présence physique obligatoire",
+      "reasoning": "LLM: Réparation carrosserie = intervention physique obligatoire sur place",
       "description_source": "listing_page"
     },
     "https://www.allovoisins.com/r/0/144/23970/0/Saint-ferreol-d-auroure/service/Paysagiste-amenagement-du-jardin": {
       "first_seen": "2026-03-20 08:51:16",
-      "last_seen": "2026-03-20 08:51:16",
-      "title": "Cherche Paysagiste - AmĂ©nagement du jardin Ă Saint-FerrĂ©ol-d'Auroure",
+      "last_seen": "2026-03-22 07:27:13",
+      "title": "Cherche Paysagiste - Aménagement du jardin à Saint-Ferréol-d'Auroure",
       "is_remote": false,
-      "description": "Paysagiste - Aménagement du jardin Saint-Ferréol-d'Auroure",
+      "description": "Paysagiste - Aménagement du jardin Saint-Romain-le-Puy",
       "confidence": "HIGH",
       "classification": "on-site",
       "reasoning": "Obvious on-site work: ménage",
@@ -44747,18 +44751,18 @@
     },
     "https://www.allovoisins.com/r/0/145/33716/0/Issoire/service/Tonte-de-pelouse-debroussaillage": {
       "first_seen": "2026-03-20 08:51:16",
-      "last_seen": "2026-03-20 08:51:16",
-      "title": "Recherche Tonte de pelouse - DĂ©broussaillage Ă Issoire",
+      "last_seen": "2026-03-22 07:27:13",
+      "title": "Recherche Tonte de pelouse - Débroussaillage à Issoire",
       "is_remote": false,
       "description": "N/A",
       "confidence": "HIGH",
       "classification": "on-site",
-      "reasoning": "LLM: Tonte de pelouse : travail physique sur site",
+      "reasoning": "LLM: Tonte de pelouse nécessite présence physique",
       "description_source": "listing_page"
     },
     "https://www.allovoisins.com/r/257/3/33560/0/location-Pelleteuse-minipelle-mini-pelle-Randan": {
       "first_seen": "2026-03-20 08:51:16",
-      "last_seen": "2026-03-20 08:51:16",
+      "last_seen": "2026-03-22 07:27:13",
       "title": "Location pelleteuse / minipelle / mini pelle - Randan",
       "is_remote": false,
       "description": "Durée : 1 jour",
@@ -44769,15 +44773,191 @@
     },
     "https://www.allovoisins.com/r/5219/15/33617/0/location-Chevre-Bulhon": {
       "first_seen": "2026-03-20 08:51:16",
-      "last_seen": "2026-03-20 08:51:16",
-      "title": "Louer une chĂ¨vre - Bulhon",
+      "last_seen": "2026-03-22 07:27:13",
+      "title": "Louer une chèvre - Bulhon",
       "is_remote": false,
       "description": "Durée : 1 jour",
       "confidence": "HIGH",
       "classification": "on-site",
-      "reasoning": "LLM: Location physique requise pour louer une chèvre",
+      "reasoning": "LLM: Location physique obligatoire pour louer une chèvre",
+      "description_source": "detail_page"
+    },
+    "https://www.allovoisins.com/r/0/143/23598/0/Saint-martin-la-sauvete/service/Jardinier": {
+      "first_seen": "2026-03-22 07:27:13",
+      "last_seen": "2026-03-22 07:27:13",
+      "title": "Recherche Jardinier à Saint-Martin-la-Sauveté",
+      "is_remote": false,
+      "description": "N/A",
+      "confidence": "HIGH",
+      "classification": "on-site",
+      "reasoning": "LLM: Jardinage = travail physique sur site",
+      "description_source": "listing_page"
+    },
+    "https://www.allovoisins.com/r/0/150/23544/0/Riorges/service/Demenageurs-et-aide-au-demenagement": {
+      "first_seen": "2026-03-22 07:27:13",
+      "last_seen": "2026-03-22 07:27:13",
+      "title": "Recherche Déménageurs et aide au déménagement à Riorges",
+      "is_remote": false,
+      "description": "N/A",
+      "confidence": "HIGH",
+      "classification": "on-site",
+      "reasoning": "Obvious on-site work: ménage",
+      "description_source": "listing_page"
+    },
+    "https://www.allovoisins.com/r/0/143/33666/0/Pont-du-chateau/service/Jardinier": {
+      "first_seen": "2026-03-22 07:27:13",
+      "last_seen": "2026-03-22 07:27:13",
+      "title": "Recherche Jardinier à Pont-du-Château",
+      "is_remote": false,
+      "description": "N/A",
+      "confidence": "HIGH",
+      "classification": "on-site",
+      "reasoning": "LLM: Jardinage nécessite présence physique sur site",
+      "description_source": "listing_page"
+    },
+    "https://www.allovoisins.com/r/0/133/23553/0/Bonson/service/Maconnerie": {
+      "first_seen": "2026-03-22 07:27:13",
+      "last_seen": "2026-03-22 07:27:13",
+      "title": "Cherche Maçonnerie à Bonson",
+      "is_remote": false,
+      "description": "N/A",
+      "confidence": "HIGH",
+      "classification": "on-site",
+      "reasoning": "Obvious on-site work: maçon",
+      "description_source": "listing_page"
+    },
+    "https://www.allovoisins.com/r/0/133/23487/0/Feurs/service/Maconnerie": {
+      "first_seen": "2026-03-22 07:27:13",
+      "last_seen": "2026-03-22 07:27:13",
+      "title": "Recherche Maçonnerie à Feurs",
+      "is_remote": false,
+      "description": "N/A",
+      "confidence": "HIGH",
+      "classification": "on-site",
+      "reasoning": "Obvious on-site work: maçon",
+      "description_source": "listing_page"
+    },
+    "https://www.allovoisins.com/r/529/11/33556/0/location-Tondeuse-a-gazon-Thiers": {
+      "first_seen": "2026-03-22 07:27:13",
+      "last_seen": "2026-03-22 07:27:13",
+      "title": "Location tondeuse à gazon - Thiers",
+      "is_remote": false,
+      "description": "Durée : 1 jour",
+      "confidence": "HIGH",
+      "classification": "on-site",
+      "reasoning": "LLM: Tonte de gazon, travail physique sur site",
+      "description_source": "detail_page"
+    },
+    "https://www.allovoisins.com/r/0/145/33543/0/Vic-le-comte/service/Tonte-de-pelouse-debroussaillage": {
+      "first_seen": "2026-03-22 07:27:13",
+      "last_seen": "2026-03-22 07:27:13",
+      "title": "Cherche Tonte de pelouse - Débroussaillage à Vic-le-Comte",
+      "is_remote": false,
+      "description": "Clairea posté cette demande dans le cadre duThème du moment«C'est le printemps !».",
+      "confidence": "HIGH",
+      "classification": "on-site",
+      "reasoning": "LLM: Tonte de pelouse : service physique obligatoirement sur place",
+      "description_source": "detail_page"
+    },
+    "https://www.allovoisins.com/r/0/157/33894/0/Vertaizon/service/Reparation-carrosserie": {
+      "first_seen": "2026-03-22 07:27:13",
+      "last_seen": "2026-03-22 07:27:13",
+      "title": "Recherche Réparation carrosserie à Vertaizon",
+      "is_remote": false,
+      "description": "N/A",
+      "confidence": "HIGH",
+      "classification": "on-site",
+      "reasoning": "LLM: Réparation carrosserie = intervention physique obligatoire sur site",
+      "description_source": "listing_page"
+    },
+    "https://www.allovoisins.com/r/0/131/33727/0/Varennes-sur-usson/service/Couverture-toiture": {
+      "first_seen": "2026-03-22 07:27:13",
+      "last_seen": "2026-03-22 07:27:13",
+      "title": "Cherche Couverture - Toiture à Varennes-sur-Usson",
+      "is_remote": false,
+      "description": "N/A",
+      "confidence": "HIGH",
+      "classification": "on-site",
+      "reasoning": "LLM: Travaux de toiture, intervention physique sur site",
+      "description_source": "listing_page"
+    },
+    "https://www.allovoisins.com/r/5235/14/44142/0/location-Paille-Lempdes-sur-allagnon": {
+      "first_seen": "2026-03-22 07:27:13",
+      "last_seen": "2026-03-22 07:27:13",
+      "title": "Acheter une paille - Lempdes-sur-Allagnon",
+      "is_remote": false,
+      "description": "N/A",
+      "confidence": "HIGH",
+      "classification": "on-site",
+      "reasoning": "LLM: Titre ambigu, sans description ni télétravail",
+      "description_source": "listing_page"
+    },
+    "https://www.allovoisins.com/r/0/144/23755/0/Saint-romain-le-puy/service/Paysagiste-amenagement-du-jardin": {
+      "first_seen": "2026-03-22 07:27:13",
+      "last_seen": "2026-03-22 07:27:13",
+      "title": "Cherche Paysagiste - Aménagement du jardin à Saint-Romain-le-Puy",
+      "is_remote": false,
+      "description": "Paysagiste - Aménagement du jardin Saint-Romain-le-Puy",
+      "confidence": "HIGH",
+      "classification": "on-site",
+      "reasoning": "Obvious on-site work: ménage",
+      "description_source": "detail_page"
+    },
+    "https://www.allovoisins.com/r/0/171/33622/0/Maringues/service/Couturiere": {
+      "first_seen": "2026-03-22 07:27:13",
+      "last_seen": "2026-03-22 07:27:13",
+      "title": "Cherche Couturière à Maringues",
+      "is_remote": false,
+      "description": "N/A",
+      "confidence": "HIGH",
+      "classification": "on-site",
+      "reasoning": "LLM: Couturière = travail physique sur machine à coudre",
+      "description_source": "listing_page"
+    },
+    "https://www.allovoisins.com/r/0/157/23736/0/Chalain-le-comtal/service/Reparation-carrosserie": {
+      "first_seen": "2026-03-22 07:27:13",
+      "last_seen": "2026-03-22 07:27:13",
+      "title": "Recherche Réparation carrosserie à Chalain-le-Comtal",
+      "is_remote": false,
+      "description": "Isabellea postﾃｩ cette demande dans le cadre duThﾃｨme du momentﾂｫJ'entretiens mon vﾃｩhiculeﾂｻ.",
+      "confidence": "HIGH",
+      "classification": "on-site",
+      "reasoning": "LLM: Réparation carrosserie = intervention physique obligatoire sur place",
+      "description_source": "detail_page"
+    },
+    "https://www.allovoisins.com/r/0/157/23506/0/Le-coteau/service/Reparation-carrosserie": {
+      "first_seen": "2026-03-22 07:27:13",
+      "last_seen": "2026-03-22 07:27:13",
+      "title": "Recherche Réparation carrosserie à Le Coteau",
+      "is_remote": false,
+      "description": "N/A",
+      "confidence": "HIGH",
+      "classification": "on-site",
+      "reasoning": "LLM: Réparation carrosserie = intervention physique obligatoire sur véhicule",
+      "description_source": "listing_page"
+    },
+    "https://www.allovoisins.com/r/0/295/23679/0/Sury-le-comtal/service/Taille-de-haies-et-d-arbustes": {
+      "first_seen": "2026-03-22 07:27:13",
+      "last_seen": "2026-03-22 07:27:13",
+      "title": "Cherche Taille de haies et d'arbustes à Sury-le-Comtal",
+      "is_remote": false,
+      "description": "N/A",
+      "confidence": "HIGH",
+      "classification": "on-site",
+      "reasoning": "LLM: Travail physique de jardinage sur place",
+      "description_source": "listing_page"
+    },
+    "https://www.allovoisins.com/r/5572/3/33453/0/location-Chutes-materiaux-de-recuperation-Egliseneuve-pres-billom": {
+      "first_seen": "2026-03-22 07:27:13",
+      "last_seen": "2026-03-22 07:27:13",
+      "title": "Louer des chutes - matériaux de récupération - Égliseneuve-prés-Billom",
+      "is_remote": false,
+      "description": "Chutes - matériaux de récupération Égliseneuve-prés-Billom",
+      "confidence": "HIGH",
+      "classification": "on-site",
+      "reasoning": "LLM: Vente de matériaux de récupération, nécessite présence physique",
       "description_source": "detail_page"
     }
   },
-  "last_update": "2026-03-20 08:51:16"
+  "last_update": "2026-03-22 07:27:13"
 }

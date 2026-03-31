@@ -264,6 +264,22 @@ DECISION RULES:
 5. Job offer for digital work ("Je cherche développeur") = REMOTE if no location mentioned ✓
 6. Ambiguous digital job without clear signals = DEFAULT to REMOTE (web/design/writing are remote by nature)
 
+POSTER TYPE DETECTION:
+Determine if this listing is posted by an EMPLOYER (client seeking to hire/commission work) or by an EMPLOYEE/SELF-PROMOTER (individual advertising their own skills to be hired).
+
+EMPLOYER indicators:
+- "Je cherche", "Je recherche", "Nous cherchons", "Besoin de", "À la recherche de"
+- "Pour mon entreprise", "Pour mon projet", "Mon site web a besoin"
+- Describing a project/mission to be completed: "Créer un site", "Développer une app", "Rédiger des articles"
+- The subject is the work to be done, not the person
+
+EMPLOYEE/SELF-PROMOTER indicators:
+- "Je propose mes services", "Je suis développeur", "Je suis graphiste"
+- "Je mets à votre disposition mes compétences", "Mes compétences"
+- "Disponible pour", "Je peux réaliser", "Expert en"
+- The subject is themselves: "Fort de X années d'expérience", "Passionné par"
+- CV-style listings with their own qualifications, skills, rates
+
 CONTEXT MATTERS:
 - "Refonte de site web WordPress" = REMOTE ✓ (digital deliverable)
 - "Créer un logo pour mon entreprise" = REMOTE ✓ (digital deliverable)
@@ -278,6 +294,7 @@ RESPOND IN JSON FORMAT ONLY:
 {{
     "is_remote": true/false,
     "confidence": 0.0-1.0,
+    "poster_type": "employer|employee|unknown",
     "reason": "clear explanation in French (max 12 words)"
 }}"""
 
@@ -317,6 +334,7 @@ RESPOND IN JSON FORMAT ONLY:
         return {
             'is_remote': result.get('is_remote', False),
             'remote_confidence': float(confidence),
+            'poster_type': result.get('poster_type', 'unknown'),
             'reason': f"LLM: {result.get('reason', 'No reason provided')}"
         }
     
@@ -429,32 +447,61 @@ RESPOND IN JSON FORMAT ONLY:
         
         if self.verbose:
             print(f"    📊 NLP Scores - Remote: {remote_score}, On-site: {onsite_score}")
-        
+
         self.logger.debug(f"NLP Analysis - Remote score: {remote_score}, On-site score: {onsite_score}")
-        
+
+        # Detect poster_type: is this from an employer or an employee self-promoting?
+        employee_signals = [
+            'je propose mes services', 'je suis disponible', 'je mets à disposition',
+            'mes compétences', 'mon expérience', 'je peux réaliser', 'je suis développeur',
+            'je suis graphiste', 'je suis rédacteur', 'fort de', 'années d\'expérience',
+            'expert en', 'spécialisé en', 'je maîtrise', 'mon portfolio', 'mes réalisations',
+            'tarif journalier', 'mon taux journalier', 'tjm'
+        ]
+        employer_signals = [
+            'je cherche', 'je recherche', 'nous cherchons', 'besoin de', 'à la recherche de',
+            'pour mon projet', 'pour mon entreprise', 'pour mon site', 'mission pour',
+            'cherche développeur', 'cherche graphiste', 'cherche rédacteur', 'cherche freelance',
+            'prestataire recherché', 'appel à candidatures'
+        ]
+
+        employee_score = sum(1 for kw in employee_signals if kw in text)
+        employer_score = sum(1 for kw in employer_signals if kw in text)
+
+        if employee_score > employer_score:
+            poster_type = 'employee'
+        elif employer_score > 0:
+            poster_type = 'employer'
+        else:
+            poster_type = 'unknown'
+
         # Decision logic with lower threshold
         if remote_score > onsite_score + 1:
             return {
                 'is_remote': True,
                 'remote_confidence': 0.8,
+                'poster_type': poster_type,
                 'reason': f'NLP Analysis: Strong remote indicators (score: {remote_score} vs {onsite_score})'
             }
         elif remote_score > onsite_score:
             return {
                 'is_remote': True,
                 'remote_confidence': 0.6,
+                'poster_type': poster_type,
                 'reason': f'NLP Analysis: Likely remote work (score: {remote_score} vs {onsite_score})'
             }
         elif onsite_score > remote_score + 1:
             return {
                 'is_remote': False,
                 'remote_confidence': 0.2,
+                'poster_type': poster_type,
                 'reason': f'NLP Analysis: Strong on-site indicators (score: {onsite_score} vs {remote_score})'
             }
         elif onsite_score > remote_score:
             return {
                 'is_remote': False,
                 'remote_confidence': 0.4,
+                'poster_type': poster_type,
                 'reason': f'NLP Analysis: Likely on-site work (score: {onsite_score} vs {remote_score})'
             }
         else:
@@ -462,6 +509,7 @@ RESPOND IN JSON FORMAT ONLY:
             return {
                 'is_remote': False,
                 'remote_confidence': 0.3,
+                'poster_type': poster_type,
                 'reason': f'NLP Analysis: Ambiguous signals (remote: {remote_score}, onsite: {onsite_score})'
             }
     

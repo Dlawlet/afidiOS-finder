@@ -33,6 +33,7 @@ class JobListing(BaseModel):
     reasoning: str = Field(default="N/A", description="Reasoning for classification")
     description_source: str = Field(default="listing_page", description="Source of description (listing_page/detail_page)")
     was_reanalyzed: bool = Field(default=False, description="Whether job was reanalyzed")
+    poster_type: str = Field(default="unknown", description="Whether post is from employer or employee/self-promoter (employer/employee/unknown)")
     source: Optional[str] = Field(default=None, description="Job source website")
     
     # Metadata
@@ -104,7 +105,10 @@ class ScraperMetrics(BaseModel):
     cache_stats: dict
     confidence_distribution: dict
     errors: list[str] = Field(default_factory=list)
-    
+    validation_errors: int = Field(default=0, ge=0)
+    incremental_enabled: bool = Field(default=True)
+    sites_scraped: dict = Field(default_factory=dict)
+
     class Config:
         json_schema_extra = {
             "example": {

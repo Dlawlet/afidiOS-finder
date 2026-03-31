@@ -92,7 +92,7 @@ class IncrementalScraper:
             should_analyze, reason = self.should_analyze_job(url, title, lookback_hours)
             
             # If reanalyze_cached is True, force analysis of all jobs seen within lookback
-            if reanalyze_cached and not should_analyze and "within lookback" in reason:
+            if reanalyze_cached and not should_analyze:
                 should_analyze = True
                 reason = f"REANALYSIS: {reason}"
                 if self.verbose:
@@ -120,7 +120,8 @@ class IncrementalScraper:
                 job['reasoning'] = job_history.get('reasoning', 'Restored from cache')
                 job['description_source'] = job_history.get('description_source', 'listing_page')
                 job['was_reanalyzed'] = False
-                
+                job['poster_type'] = job_history.get('poster_type', 'unknown')
+
                 # Fields not available from listing pages
                 job['id'] = 'N/A'
                 job['category'] = 'N/A'

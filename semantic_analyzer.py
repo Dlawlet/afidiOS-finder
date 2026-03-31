@@ -197,13 +197,38 @@ class SemanticJobAnalyzer:
         """Get cache hit/miss statistics"""
         total = self.cache_stats['hits'] + self.cache_stats['misses']
         hit_rate = (self.cache_stats['hits'] / total * 100) if total > 0 else 0
-        
+
         return {
             'cache_hits': self.cache_stats['hits'],
             'cache_misses': self.cache_stats['misses'],
             'total_requests': total,
             'hit_rate_percentage': round(hit_rate, 2)
         }
+
+    def cleanup_old_cache(self, days: int = 60) -> int:
+        """
+        Remove LLM cache files not accessed in the last N days.
+        Uses file modification time as proxy for last use.
+
+        Returns:
+            Number of cache files removed
+        """
+        import os
+        cutoff = time.time() - (days * 86400)
+        removed = 0
+
+        for cache_file in self.cache_dir.glob('*.json'):
+            try:
+                if os.path.getmtime(cache_file) < cutoff:
+                    cache_file.unlink()
+                    removed += 1
+            except OSError:
+                pass
+
+        if removed > 0:
+            self.logger.info(f"LLM cache cleanup: removed {removed} files older than {days} days")
+
+        return removed
     
     @retry_with_backoff(max_retries=3, base_delay=2)
     def _analyze_with_groq_impl(self, job_title: str, job_description: str, 

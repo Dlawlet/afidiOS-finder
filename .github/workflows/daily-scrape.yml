@@ -2,10 +2,12 @@
 # PC peut être éteint, GitHub exécute le code automatiquement
 #
 # Features:
-# - Multi-site scraping (JeMePropose + AlloVoisins)
+# - Multi-site scraping (JeMePropose + AlloVoisins + Codeur + RemoteOK)
 # - Intelligent quota management (1500 LLM calls/day max)
 # - Incremental scraping (only analyze NEW jobs)
 # - Automatic quota redistribution between sites
+# - RemoteOK uses JSON API (zero LLM quota cost — always remote employer posts)
+# - Codeur.com is employer-only (poster_type hardcoded, LLM only for is_remote)
 
 name: Daily Job Scraper
 
@@ -50,7 +52,7 @@ jobs:
         env:
           GROQ_API_KEY: ${{ secrets.GROQ_API_KEY }}
         run: |
-          python scheduled_scraper_v3.py --sites jemepropose allovoisins --verbose
+          python scheduled_scraper_v3.py --sites jemepropose allovoisins codeur remoteok --verbose
 
       - name: Commit and push results
         run: |
@@ -65,15 +67,18 @@ jobs:
 #
 # 📊 Quota Management:
 # - Default: 1500 LLM calls/day (free tier)
-# - 2 sites = 750 calls per site
-# - Cached jobs don't count against quota
-# - Early stopping when quota exhausted
+# - LLM sites (jemepropose, allovoisins, codeur): quota split equally among them
+# - remoteok: ZERO quota cost (pre-classified, skips LLM entirely)
+# - Incremental cache avoids re-analyzing jobs seen in last 24h
+# - LLM content-hash cache avoids re-calling API for same job content (permanent)
+# - Both caches cleaned periodically (history: 30d, LLM files: 60d)
 #
 # 🌐 Active Sites:
-# - jemepropose.com
-# - allovoisins.com
+# - jemepropose.com  (French freelance missions, employers only, offer_type=2)
+# - allovoisins.com  (French local services, all France, zone=0)
+# - codeur.com       (French project board, employer postings, digital work)
+# - remoteok.com     (International remote jobs API, no LLM cost)
 #
-# To add more sites, update the --sites argument:
-# python scheduled_scraper_v3.py --sites jemepropose allovoisins malt comet
+# To disable a site, remove it from --sites argument
 # 3. Settings → Actions → General → Workflow permissions
 #    → Cocher "Read and write permissions"

@@ -816,6 +816,186 @@ class MultiSiteScraper:
         return all_jobs
 
 
+class CodeurScraper(BaseSiteScraper):
+    """
+    Scraper for codeur.com — France's main French-language project marketplace.
+    All listings are employer/client posts seeking freelancers for digital work.
+    poster_type is hardcoded to 'employer'; LLM still used to verify is_remote.
+    """
+
+    @property
+    def site_name(self) -> str:
+        return "codeur"
+
+    @property
+    def base_url(self) -> str:
+        # Public project listing, no login required, server-side rendered for SEO
+        return "https://www.codeur.com/projects"
+
+    def build_page_url(self, page_num: int) -> str:
+        if page_num == 1:
+            return self.base_url
+        return f"{self.base_url}?page={page_num}"
+
+    def extract_jobs_from_page(self, soup: BeautifulSoup, page_url: str) -> List[Dict]:
+        jobs = []
+
+        # Codeur.com project card selectors (multiple fallbacks for resilience)
+        job_cards = (
+            soup.find_all('div', class_='project') or
+            soup.find_all('article', class_='project') or
+            soup.find_all('div', class_='project-item') or
+            soup.find_all('li', class_='project') or
+            # Generic fallback: any container with a project link
+            [a.parent for a in soup.find_all('a', href=lambda h: h and '/projects/' in h)]
+        )
+
+        # Deduplicate cards that may appear twice from the fallback
+        seen_elements = set()
+        unique_cards = []
+        for card in job_cards:
+            card_id = id(card)
+            if card_id not in seen_elements:
+                seen_elements.add(card_id)
+                unique_cards.append(card)
+
+        for card in unique_cards:
+            # URL
+            link_tag = card.find('a', href=lambda h: h and '/projects/' in h)
+            if not link_tag:
+                continue
+            job_url = urljoin(page_url, link_tag['href'])
+
+            # Title
+            title_tag = (
+                card.find('h2') or
+                card.find('h3') or
+                card.find(class_='project-title') or
+                card.find(class_='title') or
+                link_tag
+            )
+            job_title = title_tag.get_text(strip=True) if title_tag else 'N/A'
+            if not job_title or len(job_title) < 3:
+                continue
+
+            # Description
+            desc_tag = (
+                card.find('p', class_='description') or
+                card.find('div', class_='description') or
+                card.find('p', class_='excerpt') or
+                card.find('p')
+            )
+            job_description = desc_tag.get_text(strip=True) if desc_tag else 'N/A'
+
+            # Budget
+            price_tag = (
+                card.find(class_='budget') or
+                card.find(class_='price') or
+                card.find('span', string=lambda s: s and '€' in s)
+            )
+            job_price = price_tag.get_text(strip=True) if price_tag else 'N/A'
+
+            # Location — codeur projects are usually "France entière" (remote)
+            location_tag = card.find(class_='location') or card.find(class_='city')
+            job_location = location_tag.get_text(strip=True) if location_tag else 'France'
+
+            jobs.append({
+                'url': job_url,
+                'title': job_title,
+                'description': job_description,
+                'location': job_location,
+                'price': job_price,
+                'poster_type': 'employer',  # Codeur only has client/employer postings
+            })
+
+        return jobs
+
+
+class RemoteOKScraper(BaseSiteScraper):
+    """
+    Scraper for remoteok.com — international remote-only jobs via their public JSON API.
+    All jobs are remote by definition and from verified employer postings.
+    Sets skip_analysis=True so the main loop never calls the LLM — zero quota cost.
+    """
+
+    @property
+    def site_name(self) -> str:
+        return "remoteok"
+
+    @property
+    def base_url(self) -> str:
+        return "https://remoteok.com/api"
+
+    def build_page_url(self, page_num: int) -> str:
+        # API returns all jobs at once — only one "page"
+        return self.base_url if page_num == 1 else None
+
+    def scrape_page(self, page_num: int) -> tuple:
+        """Override to consume JSON API instead of HTML."""
+        if page_num > 1:
+            return [], False  # Single-page API
+
+        url = self.base_url
+        try:
+            self.headers['User-Agent'] = random.choice([
+                'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/120.0.0.0 Safari/537.36',
+                'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/120.0.0.0 Safari/537.36',
+            ])
+            time.sleep(random.uniform(1.0, 2.0))  # RemoteOK asks for politeness
+            response = requests.get(url, headers=self.headers, timeout=30)
+            response.raise_for_status()
+
+            raw = response.json()
+            # First element is API metadata, skip it
+            entries = [e for e in raw if isinstance(e, dict) and e.get('position')]
+
+            import re
+            jobs = []
+            for item in entries:
+                job_url = item.get('url', '')
+                if not job_url.startswith('http'):
+                    job_url = f"https://remoteok.com{job_url}"
+
+                # Strip HTML from description
+                raw_desc = item.get('description', '')
+                description = re.sub(r'<[^>]+>', ' ', raw_desc)
+                description = ' '.join(description.split())[:600]
+
+                tags = item.get('tags', [])
+                if tags:
+                    description = f"{description} | Skills: {', '.join(tags[:8])}"
+
+                location = item.get('location') or 'Remote / Worldwide'
+                if location.lower() in ('', 'anywhere', 'worldwide', 'remote'):
+                    location = 'Remote / Worldwide'
+
+                salary = 'N/A'
+                if item.get('salary_min') or item.get('salary_max'):
+                    salary = f"${item.get('salary_min', '?')} - ${item.get('salary_max', '?')}/year"
+
+                jobs.append({
+                    'url': job_url,
+                    'title': item.get('position', 'N/A'),
+                    'description': description or 'Remote position',
+                    'location': location,
+                    'price': salary,
+                    'is_remote': True,
+                    'poster_type': 'employer',
+                    'skip_analysis': True,  # Never call LLM — saves 100% of quota for these jobs
+                })
+
+            return jobs, False  # Always single page
+
+        except Exception as e:
+            self.logger.error(f"RemoteOK API error: {e}")
+            return [], False
+
+    def extract_jobs_from_page(self, soup: BeautifulSoup, page_url: str) -> List[Dict]:
+        """Unused — RemoteOK uses JSON API via overridden scrape_page."""
+        _ = soup, page_url  # Required by abstract interface; this scraper uses JSON API
+        return []
+
+
 # ===== QUICK TEST =====
 if __name__ == '__main__':
     """Test the multi-site scraper"""

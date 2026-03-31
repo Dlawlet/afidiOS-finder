@@ -13,7 +13,7 @@ from job_exporter import JobExporter
 from job_helpers import JobDescriptionFetcher, BasicRemoteDetector
 from incremental_scraper import IncrementalScraper
 from models import JobListing, validate_job_data, ScraperMetrics
-from site_scrapers import MultiSiteScraper, JeMeProposeScraper, MaltScraper, FreelanceComScraper, CometScraper, AlloVoisinsScraper
+from site_scrapers import MultiSiteScraper, JeMeProposeScraper, MaltScraper, FreelanceComScraper, CometScraper, AlloVoisinsScraper, CodeurScraper, RemoteOKScraper
 import json
 from datetime import datetime
 import logging
@@ -95,6 +95,8 @@ def scrape_multi_site(
             'freelance.com': FreelanceComScraper,
             'comet': CometScraper,
             'allovoisins': AlloVoisinsScraper,
+            'codeur': CodeurScraper,
+            'remoteok': RemoteOKScraper,
         }
         
         for site_name in sites:
@@ -167,46 +169,55 @@ def scrape_multi_site(
             job_url = job_data['url']
             job_source = job_data['source']
             
-            # Basic detection
-            basic_result = basic_detector.detect_confidence(job_title, job_description, job_location)
-
             # Track which description we'll use for export
             final_description = job_description
             description_source = 'listing_page'
 
-            # Analyze based on confidence
-            if basic_result['confidence'] == 'LOW':
-                # Fetch full description if still needed
-                full_description = job_description
-                if job_url != 'N/A' and (job_description == 'N/A' or len(job_description) < 100):
-                    better_desc = description_fetcher.fetch_full_description(job_url)
-                    if better_desc and len(better_desc) > len(job_description):
-                        full_description = better_desc  # REPLACE the short description
-                        final_description = better_desc  # Use full description for export
-                        description_source = 'detail_page'
-                        stats['full_description_fetched'] += 1
-
-                # Analyze with LLM
-                analysis = llm_analyzer.analyze_with_groq(job_title, full_description, job_location, job_price)
-
-                # Extract poster_type from LLM analysis
-                poster_type = analysis.get('poster_type', 'unknown')
-
-                # Use analysis result
+            # FAST PATH: job pre-classified by scraper (e.g. RemoteOK — always remote employer posts)
+            # These sites guarantee remote + employer, no LLM needed — saves quota entirely
+            if job_data.get('skip_analysis'):
+                poster_type = job_data.get('poster_type', 'employer')
                 result = {
-                    'is_remote': analysis.get('is_remote', False),
-                    'confidence_score': analysis.get('remote_confidence', 0.5),
-                    'reason': analysis.get('reason', 'LLM analysis'),
-                    'confidence': 'HIGH' if analysis.get('remote_confidence', 0) > 0.8 else 'MEDIUM'
+                    'is_remote': job_data.get('is_remote', True),
+                    'confidence_score': 0.99,
+                    'reason': f"Pre-classified by {job_source} scraper",
+                    'confidence': 'HIGH'
                 }
-
-                stats['analyzed_with_llm'] += 1
-                metrics['llm_calls'] += 1
-            else:
-                # High confidence - skip LLM
-                result = basic_result
-                poster_type = 'unknown'  # BasicRemoteDetector doesn't detect poster type
                 stats['high_confidence_skip'] += 1
+            else:
+                # Basic detection
+                basic_result = basic_detector.detect_confidence(job_title, job_description, job_location)
+
+                # Analyze based on confidence
+                if basic_result['confidence'] == 'LOW':
+                    # Fetch full description if still needed
+                    full_description = job_description
+                    if job_url != 'N/A' and (job_description == 'N/A' or len(job_description) < 100):
+                        better_desc = description_fetcher.fetch_full_description(job_url)
+                        if better_desc and len(better_desc) > len(job_description):
+                            full_description = better_desc
+                            final_description = better_desc
+                            description_source = 'detail_page'
+                            stats['full_description_fetched'] += 1
+
+                    # Analyze with LLM
+                    analysis = llm_analyzer.analyze_with_groq(job_title, full_description, job_location, job_price)
+
+                    poster_type = analysis.get('poster_type', 'unknown')
+                    result = {
+                        'is_remote': analysis.get('is_remote', False),
+                        'confidence_score': analysis.get('remote_confidence', 0.5),
+                        'reason': analysis.get('reason', 'LLM analysis'),
+                        'confidence': 'HIGH' if analysis.get('remote_confidence', 0) > 0.8 else 'MEDIUM'
+                    }
+
+                    stats['analyzed_with_llm'] += 1
+                    metrics['llm_calls'] += 1
+                else:
+                    # High confidence on-site keyword — skip LLM
+                    result = basic_result
+                    poster_type = 'unknown'
+                    stats['high_confidence_skip'] += 1
             
             # Track confidence distribution
             confidence_level = result.get('confidence', 'MEDIUM').lower()
@@ -332,7 +343,10 @@ def scrape_multi_site(
             'export_date': datetime.now().strftime('%Y-%m-%d %H:%M:%S')
         }
         
-        remote_jobs = [job for job in all_jobs if job['is_remote']]
+        remote_jobs = [
+            job for job in all_jobs
+            if job['is_remote'] and job.get('poster_type', 'unknown') != 'employee'
+        ]
         
         stats_remote = {
             'total': len(remote_jobs),
@@ -344,8 +358,9 @@ def scrape_multi_site(
             'export_date': datetime.now().strftime('%Y-%m-%d %H:%M:%S')
         }
         
-        # Clean up history entries older than 30 days
+        # Clean up stale history and LLM cache entries
         exporter.cleanup_old_history(days=30)
+        llm_analyzer.cleanup_old_cache(days=60)
 
         # Export
         json_all = exporter.export_to_json(all_jobs, stats_all, filename='jobs_latest.json')
@@ -388,7 +403,7 @@ def scrape_multi_site(
 if __name__ == '__main__':
     parser = argparse.ArgumentParser(description='Multi-Site Job Scraper with Intelligent Quota Management')
     parser.add_argument('--sites', nargs='+', default=['jemepropose'],
-                       choices=['jemepropose', 'malt', 'freelance.com', 'comet', 'allovoisins'],
+                       choices=['jemepropose', 'malt', 'freelance.com', 'comet', 'allovoisins', 'codeur', 'remoteok'],
                        help='Sites to scrape (default: jemepropose)')
     parser.add_argument('--pages', type=int, default=None,
                        help='Max pages per site (default: None = unlimited, stops at quota)')

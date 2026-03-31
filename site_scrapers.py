@@ -10,6 +10,8 @@ import requests
 from bs4 import BeautifulSoup
 from urllib.parse import urljoin
 import logging
+import random
+import time
 
 
 class BaseSiteScraper(ABC):
@@ -21,10 +23,22 @@ class BaseSiteScraper(ABC):
     def __init__(self, verbose: bool = False):
         self.verbose = verbose
         self.logger = logging.getLogger(self.__class__.__name__)
+
+        _user_agents = [
+            'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/120.0.0.0 Safari/537.36',
+            'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/119.0.0.0 Safari/537.36',
+            'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/120.0.0.0 Safari/537.36',
+            'Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:121.0) Gecko/20100101 Firefox/121.0',
+            'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/605.1.15 (KHTML, like Gecko) Version/17.2 Safari/605.1.15',
+            'Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/120.0.0.0 Safari/537.36',
+        ]
+
         self.headers = {
-            'User-Agent': 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36',
-            'Accept': 'text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8',
+            'User-Agent': random.choice(_user_agents),
+            'Accept': 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,*/*;q=0.8',
             'Accept-Language': 'fr-FR,fr;q=0.9,en-US;q=0.8,en;q=0.7',
+            'Accept-Encoding': 'gzip, deflate, br',
+            'Connection': 'keep-alive',
         }
     
     @property
@@ -72,7 +86,20 @@ class BaseSiteScraper(ABC):
         try:
             if self.verbose:
                 self.logger.debug(f"Scraping {url}")
-            
+
+            # Rotate User-Agent on every request
+            self.headers['User-Agent'] = random.choice([
+                'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/120.0.0.0 Safari/537.36',
+                'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/119.0.0.0 Safari/537.36',
+                'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/120.0.0.0 Safari/537.36',
+                'Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:121.0) Gecko/20100101 Firefox/121.0',
+                'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/605.1.15 (KHTML, like Gecko) Version/17.2 Safari/605.1.15',
+                'Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/120.0.0.0 Safari/537.36',
+            ])
+
+            # Polite delay to avoid rate limiting
+            time.sleep(random.uniform(0.5, 1.5))
+
             response = requests.get(url, headers=self.headers, timeout=30)
             response.raise_for_status()
             
@@ -354,11 +381,11 @@ class AlloVoisinsScraper(BaseSiteScraper):
     
     @property
     def base_url(self) -> str:
-        # Clean base URL without tracking parameters
-        return "https://www.allovoisins.com/r/-3/0/33908"
-    
+        # Zone 0 = France entière (all regions nationwide)
+        return "https://www.allovoisins.com/r/-3/0/0"
+
     def build_page_url(self, page_num: int) -> str:
-        # URL pattern: /r/-3/0/33908/{page}/Job/location-vente
+        # URL pattern: /r/-3/0/0/{page}/Job/location-vente
         # Page 0 = first page (0-indexed)
         page_index = page_num - 1
         return f"{self.base_url}/{page_index}/Job/location-vente"

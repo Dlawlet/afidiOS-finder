@@ -56,6 +56,7 @@ class JobExporter:
                     'last_seen': self.date_str,
                     'title': job.get('title'),
                     'is_remote': job.get('is_remote'),
+                    'poster_type': job.get('poster_type', 'unknown'),
                     'description': job.get('description', 'N/A'),
                     'confidence': job.get('confidence', 'MEDIUM'),
                     'classification': job.get('classification', 'unknown'),
@@ -144,7 +145,8 @@ class JobExporter:
                 'export_date': self.date_str,
                 'total_jobs': stats['total'],
                 'analysis_mode': 'LLM-Enhanced' if stats.get('llm_used', False) else 'NLP-Only',
-                'history_stats': history_stats
+                'history_stats': history_stats,
+                'employee_posts_filtered': sum(1 for j in jobs if j.get('poster_type') == 'employee'),
             },
             'statistics': stats,
             'jobs': jobs
@@ -183,6 +185,8 @@ class JobExporter:
             'price',
             'poster',
             'date_posted',
+            'source',           # which site the job came from
+            'poster_type',      # employer/employee/unknown
             'classification',
             'confidence',
             'is_remote',
@@ -207,6 +211,8 @@ class JobExporter:
                     'price': job.get('price', 'N/A'),
                     'poster': job.get('poster', 'N/A'),
                     'date_posted': job.get('date_posted', 'N/A'),
+                    'source': job.get('source', 'N/A'),
+                    'poster_type': job.get('poster_type', 'unknown'),
                     'classification': job.get('classification', 'N/A'),
                     'confidence': job.get('confidence', 'N/A'),
                     'is_remote': 'Yes' if job.get('is_remote', False) else 'No',
@@ -251,7 +257,10 @@ class JobExporter:
         Returns:
             Dictionary with paths to exported files
         """
-        remote_jobs = [job for job in jobs if job.get('is_remote', False)]
+        remote_jobs = [
+            job for job in jobs
+            if job.get('is_remote', False) and job.get('poster_type', 'unknown') != 'employee'
+        ]
         
         # Update stats for remote-only export
         remote_stats = stats.copy()
@@ -354,3 +363,27 @@ class JobExporter:
         }
         
         return summary
+
+    def cleanup_old_history(self, days=30):
+        """Remove jobs from history that haven't been seen in N days"""
+        history = self.load_job_history()
+        seen_urls = history.get('seen_urls', {})
+
+        cutoff = datetime.now() - timedelta(days=days)
+        original_count = len(seen_urls)
+
+        history['seen_urls'] = {
+            url: data for url, data in seen_urls.items()
+            if datetime.strptime(data.get('last_seen', '2000-01-01 00:00:00'), '%Y-%m-%d %H:%M:%S') > cutoff
+        }
+
+        removed = original_count - len(history['seen_urls'])
+
+        if removed > 0:
+            try:
+                with open(self.history_file, 'w', encoding='utf-8') as f:
+                    json.dump(history, f, ensure_ascii=False, indent=2)
+            except IOError as e:
+                print(f"⚠️  Could not update history during cleanup: {e}")
+
+        return removed

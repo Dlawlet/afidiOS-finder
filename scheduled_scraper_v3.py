@@ -201,7 +201,7 @@ def scrape_multi_site(
                             stats['full_description_fetched'] += 1
 
                     # Analyze with LLM
-                    analysis = llm_analyzer.analyze_with_groq(job_title, full_description, job_location, job_price)
+                    analysis = llm_analyzer.analyze_with_groq(job_title, full_description, job_location)
 
                     poster_type = analysis.get('poster_type', 'unknown')
                     result = {
@@ -257,16 +257,19 @@ def scrape_multi_site(
                 all_jobs.append(job_object)
                 metrics['validation_errors'] += 1
             
-            if result['is_remote']:
+            if result['is_remote'] and poster_type != 'employee':
                 remote_count += 1
-            
+
             metrics['jobs_analyzed'] += 1
-        
+
         # Add cached jobs to results
         all_jobs.extend(jobs_from_cache)
         if jobs_from_cache:
-            # Count remote jobs from cache
-            remote_count += sum(1 for job in jobs_from_cache if job.get('is_remote'))
+            # Count remote jobs from cache — exclude employee self-promoters
+            remote_count += sum(
+                1 for job in jobs_from_cache
+                if job.get('is_remote') and job.get('poster_type', 'unknown') != 'employee'
+            )
         
         logger.info(f"Analysis complete - Total: {len(all_jobs)}, Remote: {remote_count}")
         
@@ -332,27 +335,32 @@ def scrape_multi_site(
         
         exporter = JobExporter()
         
+        # Count employee posts here while we still have the full list
+        employee_posts_count = sum(1 for j in all_jobs if j.get('poster_type') == 'employee')
+
         stats_all = {
             'total': len(all_jobs),
             'remote': remote_count,
             'on_site': len(all_jobs) - remote_count,
             'remote_percentage': round(remote_count / len(all_jobs) * 100, 2) if all_jobs else 0,
+            'employee_posts_filtered': employee_posts_count,
             'llm_used': use_llm,
             'incremental_enabled': incremental,
             'sites': list(metrics['sites_scraped'].keys()),
             'export_date': datetime.now().strftime('%Y-%m-%d %H:%M:%S')
         }
-        
+
         remote_jobs = [
             job for job in all_jobs
             if job['is_remote'] and job.get('poster_type', 'unknown') != 'employee'
         ]
-        
+
         stats_remote = {
             'total': len(remote_jobs),
             'remote': len(remote_jobs),
             'on_site': 0,
             'remote_percentage': 100.0,
+            'employee_posts_filtered': employee_posts_count,  # same run-level count
             'llm_used': use_llm,
             'sites': list(metrics['sites_scraped'].keys()),
             'export_date': datetime.now().strftime('%Y-%m-%d %H:%M:%S')

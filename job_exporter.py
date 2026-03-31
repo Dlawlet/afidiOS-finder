@@ -6,7 +6,6 @@ Enhanced with job history tracking
 
 import json
 import csv
-import os
 from datetime import datetime, timedelta
 from pathlib import Path
 
@@ -146,7 +145,8 @@ class JobExporter:
                 'total_jobs': stats['total'],
                 'analysis_mode': 'LLM-Enhanced' if stats.get('llm_used', False) else 'NLP-Only',
                 'history_stats': history_stats,
-                'employee_posts_filtered': sum(1 for j in jobs if j.get('poster_type') == 'employee'),
+                # Provided by caller in stats so it reflects the full run, not just this slice
+                'employee_posts_filtered': stats.get('employee_posts_filtered', 0),
             },
             'statistics': stats,
             'jobs': jobs

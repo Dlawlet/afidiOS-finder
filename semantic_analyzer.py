@@ -231,8 +231,8 @@ class SemanticJobAnalyzer:
         return removed
     
     @retry_with_backoff(max_retries=3, base_delay=2)
-    def _analyze_with_groq_impl(self, job_title: str, job_description: str, 
-                                 job_location: str, current_classification: str) -> Dict:
+    def _analyze_with_groq_impl(self, job_title: str, job_description: str,
+                                 job_location: str, current_classification: str = "") -> Dict:
         """
         Internal implementation of Groq analysis (wrapped with retry logic)
         """
@@ -363,19 +363,19 @@ RESPOND IN JSON FORMAT ONLY:
             'reason': f"LLM: {result.get('reason', 'No reason provided')}"
         }
     
-    def analyze_with_groq(self, job_title: str, job_description: str, 
-                          job_location: str, current_classification: str) -> Dict:
+    def analyze_with_groq(self, job_title: str, job_description: str,
+                          job_location: str, current_classification: str = "") -> Dict:
         """
-        Analyze job using Groq LLM with caching
-        
+        Analyze job using Groq LLM with caching.
+
         Args:
             job_title: Job title
             job_description: Job description
             job_location: Job location/category
-            current_classification: Current classification (e.g., "ON-SITE LOW")
-            
+            current_classification: Unused — kept for backwards compatibility
+
         Returns:
-            dict with 'is_remote', 'confidence', 'reason'
+            dict with 'is_remote', 'remote_confidence', 'poster_type', 'reason'
         """
         # Check cache first
         job_hash = self._get_job_hash(job_title, job_description, job_location)

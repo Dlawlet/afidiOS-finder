@@ -186,7 +186,11 @@ class JobExporter:
             'poster',
             'date_posted',
             'source',           # which site the job came from
-            'poster_type',      # employer/employee/unknown
+            'vertical',         # general | tutoring
+            'poster_type',      # employer/employee/student/teacher/unknown
+            'subject_category', # tutoring: math_science|languages|music|...  general: N/A
+            'instruction_lang', # tutoring: french|english|both|other          general: N/A
+            'level',            # tutoring: primary|secondary|...              general: N/A
             'classification',
             'confidence',
             'is_remote',
@@ -196,13 +200,12 @@ class JobExporter:
             'was_reanalyzed',
             'url'
         ]
-        
+
         with open(filepath, 'w', newline='', encoding='utf-8-sig') as f:
             writer = csv.DictWriter(f, fieldnames=fieldnames)
             writer.writeheader()
-            
+
             for job in jobs:
-                # Prepare row data
                 row = {
                     'id': job.get('id', 'N/A'),
                     'title': job.get('title', 'N/A'),
@@ -212,7 +215,11 @@ class JobExporter:
                     'poster': job.get('poster', 'N/A'),
                     'date_posted': job.get('date_posted', 'N/A'),
                     'source': job.get('source', 'N/A'),
+                    'vertical': job.get('vertical', 'general'),
                     'poster_type': job.get('poster_type', 'unknown'),
+                    'subject_category': job.get('subject_category', 'N/A'),
+                    'instruction_lang': job.get('instruction_lang', 'N/A'),
+                    'level': job.get('level', 'N/A'),
                     'classification': job.get('classification', 'N/A'),
                     'confidence': job.get('confidence', 'N/A'),
                     'is_remote': 'Yes' if job.get('is_remote', False) else 'No',
@@ -245,6 +252,45 @@ class JobExporter:
             'csv': csv_path
         }
     
+    def export_tutoring_opportunities(self, all_jobs: list, run_stats: dict) -> dict:
+        """
+        Export the tutoring opportunities slice: vertical=tutoring, is_online=True,
+        poster_type=student (or unknown — we don't drop unknowns since on dedicated
+        sites like VosCours all cards are students).
+
+        Written to tutoring_opportunities_latest.json/csv so downstream consumers
+        can consume it independently without re-filtering jobs_latest.
+
+        Args:
+            all_jobs: The full merged job list (general + tutoring)
+            run_stats: Stats dict from the tutoring run
+
+        Returns:
+            dict with 'json', 'csv', 'count'
+        """
+        opportunities = [
+            job for job in all_jobs
+            if (
+                job.get('vertical') == 'tutoring'
+                and job.get('is_remote', False)
+                and job.get('poster_type', 'unknown') != 'teacher'
+                and job.get('poster_type', 'unknown') != 'institution'
+            )
+        ]
+
+        stats = run_stats.copy()
+        stats['total'] = len(opportunities)
+        stats['filter'] = 'vertical=tutoring AND is_remote=True AND poster_type!=teacher'
+
+        json_path = self.export_to_json(
+            opportunities, stats, filename='tutoring_opportunities_latest.json'
+        )
+        csv_path = self.export_to_csv(
+            opportunities, filename='tutoring_opportunities_latest.csv'
+        )
+
+        return {'json': json_path, 'csv': csv_path, 'count': len(opportunities)}
+
     def export_remote_only(self, jobs, stats, filename_prefix='remote_jobs'):
         """
         Export only remote jobs to separate files

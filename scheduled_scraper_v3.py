@@ -245,7 +245,12 @@ def scrape_multi_site(
                 'classification': 'remote' if result['is_remote'] else 'on-site',
                 'description_source': description_source,
                 'poster_type': poster_type,
-                'was_reanalyzed': False  # Only true if we re-analyze an existing job
+                'was_reanalyzed': False,  # Only true if we re-analyze an existing job
+                # Tutoring vertical fields — always N/A for general pipeline
+                'vertical': 'general',
+                'subject_category': 'N/A',
+                'instruction_lang': 'N/A',
+                'level': 'N/A',
             }
             
             # Validate with Pydantic

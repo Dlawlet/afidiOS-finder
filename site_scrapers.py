@@ -816,6 +816,104 @@ class MultiSiteScraper:
         return all_jobs
 
 
+class _ClassgapStudentScraper(BaseSiteScraper):
+    """
+    Base scraper for Classgap-group student-request boards.
+
+    Both voscours.fr and findtutors.co.uk are operated by the same company and
+    share identical HTML structure:
+      - Listing grid:  div.graella-new-student-cards
+      - Individual card: div.student-card  (data-id attribute)
+      - Subject:        div.subject  (first text node, e.g. "Mathématiques")
+      - Location:       div.location
+      - Date:           p.grid-date
+      - Student name:   p.name
+      - Request title:  p.title  (the actual tutoring request text)
+
+    Pagination: ?page=N  (1-indexed, page=1 == no param)
+    All cards are student requests — poster_type hardcoded to 'student'.
+    """
+
+    # Subclasses must define _BASE and _SITE_NAME
+    _BASE: str = ""
+    _SITE_NAME: str = ""
+
+    @property
+    def site_name(self) -> str:
+        return self._SITE_NAME
+
+    @property
+    def base_url(self) -> str:
+        return self._BASE
+
+    def build_page_url(self, page_num: int) -> str:
+        if page_num == 1:
+            return self._BASE
+        return f"{self._BASE}?page={page_num}"
+
+    def extract_jobs_from_page(self, soup: BeautifulSoup, page_url: str) -> List[Dict]:
+        jobs = []
+
+        grid = soup.find(class_='graella-new-student-cards')
+        if not grid:
+            return jobs
+
+        for card in grid.find_all('div', class_='student-card'):
+            data_id = card.get('data-id', 'N/A')
+
+            subject_el = card.select_one('div.subject')
+            subject = subject_el.get_text(strip=True) if subject_el else 'N/A'
+
+            location_el = card.select_one('div.location')
+            location = location_el.get_text(strip=True) if location_el else 'N/A'
+
+            date_el = card.select_one('p.grid-date')
+            date_posted = date_el.get_text(strip=True) if date_el else 'N/A'
+
+            name_el = card.select_one('p.name')
+            student_name = name_el.get_text(strip=True) if name_el else 'N/A'
+
+            title_el = card.select_one('p.title')
+            title = title_el.get_text(strip=True) if title_el else subject
+
+            # Build absolute URL — cards don't always have a direct link;
+            # use data-id to construct the detail URL pattern
+            link_tag = card.find('a', href=True)
+            if link_tag:
+                job_url = urljoin(page_url, link_tag['href'])
+            elif data_id != 'N/A':
+                # Construct from known URL pattern on both platforms
+                domain = page_url.split('/')[2]  # e.g. www.voscours.fr
+                job_url = f"https://{domain}/annonces/eleves/{data_id}"
+            else:
+                job_url = page_url
+
+            jobs.append({
+                'url': job_url,
+                'title': title if title else subject,
+                'description': title,   # title IS the request description on these cards
+                'location': location,
+                'price': 'N/A',
+                'date_posted': date_posted,
+                'poster': student_name,
+                'poster_type': 'student',   # hardcoded — this section is student requests only
+            })
+
+        return jobs
+
+
+class VosCoursScraper(_ClassgapStudentScraper):
+    """Scraper for voscours.fr student tutoring requests (France/EU)."""
+    _SITE_NAME = "voscours"
+    _BASE = "https://www.voscours.fr/annonces/eleves"
+
+
+class FindTutorsUKScraper(_ClassgapStudentScraper):
+    """Scraper for findtutors.co.uk student tutoring requests (UK)."""
+    _SITE_NAME = "findtutors_uk"
+    _BASE = "https://www.findtutors.co.uk/browse/pupils"
+
+
 class CodeurScraper(BaseSiteScraper):
     """
     Scraper for codeur.com — France's main French-language project marketplace.

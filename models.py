@@ -35,7 +35,13 @@ class JobListing(BaseModel):
     was_reanalyzed: bool = Field(default=False, description="Whether job was reanalyzed")
     poster_type: str = Field(default="unknown", description="Whether post is from employer or employee/self-promoter (employer/employee/unknown)")
     source: Optional[str] = Field(default=None, description="Job source website")
-    
+
+    # Tutoring vertical fields — 'N/A' for general pipeline jobs
+    vertical: str = Field(default="general", description="Pipeline that produced this job: general|tutoring")
+    subject_category: str = Field(default="N/A", description="Tutoring subject bucket (math_science|languages|music|arts_humanities|technology|test_prep|other|N/A)")
+    instruction_lang: str = Field(default="N/A", description="Language of instruction (french|english|both|other|N/A)")
+    level: str = Field(default="N/A", description="Education level (primary|secondary|university|adult|all_levels|unknown|N/A)")
+
     # Metadata
     scraped_at: Optional[datetime] = Field(default_factory=datetime.now, description="Scrape timestamp")
     

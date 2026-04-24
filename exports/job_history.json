@@ -3884,17 +3884,6 @@
       "reasoning": "Obvious on-site work: livraison",
       "description_source": "listing_page"
     },
-    "https://www.allovoisins.com/r/0/159/23670/0/Chausseterre/service/Reparation-voiture": {
-      "first_seen": "2026-01-23 08:24:47",
-      "last_seen": "2026-03-25 07:30:16",
-      "title": "Recherche Réparation voiture à Chausseterre",
-      "is_remote": false,
-      "description": "N/A",
-      "confidence": "HIGH",
-      "classification": "on-site",
-      "reasoning": "LLM: Réparation voiture = intervention physique obligatoire sur place",
-      "description_source": "listing_page"
-    },
     "https://www.allovoisins.com/r/279/3/23544/0/location-Surfaceuse-ponceuse-de-sol-Riorges": {
       "first_seen": "2026-01-23 08:24:47",
       "last_seen": "2026-04-06 11:26:02",
@@ -34171,28 +34160,6 @@
       "reasoning": "Obvious on-site work: nettoyage",
       "description_source": "detail_page"
     },
-    "https://www.jemepropose.com/annonces/coiffure/coiffeur-de-theatre-ancien-pour-homme+10501578/": {
-      "first_seen": "2026-02-25 09:06:31",
-      "last_seen": "2026-03-25 07:30:16",
-      "title": "Coiffeur de théâtre ancien (pour homme)",
-      "is_remote": false,
-      "description": "Bonjour, Je suis à la recherche d'un coiffeur de théâtre expérimenté pour réaliser une coiffure démodée depuis des siècles. Il faut débuter sur une base de cheveux mi longs pas encore assez longs pour réaliser la coupe, mais il faut faire un travail intermédiaire pour une transition non ingrate dans l'attente de la bonne longueur de cheveux. Ensuite il faudra entretenir la coupe régulièrement. Ce n'est donc pas un emploi continu, car je suis seulement un client qui veut un coiffeur particulier. Coiffure chez vous, chez moi, ou ailleurs si vous le désirez. La photo ci jointe ne montre pas exactement ce que je veux, notamment dans la masse de cheveux à l'arrière, mais on ne sera pas loin de ça... Merci. Je suis à la recherche d'un coiffeur de théâtre expérimenté pour réaliser une coiffure démodée depuis des siècles. Il faut débuter sur une base de cheveux mi longs pas encore assez longs pour réaliser la coupe, mais il faut faire un travail intermédiaire pour une transition non ingrate dans l'attente de la bonne longueur de cheveux. Ensuite il faudra entretenir la coupe régulièrement. Ce n'est donc pas un emploi continu, car je suis seulement un client qui veut un coiffeur particulier. Coiffure chez vous, chez moi, ou ailleurs si vous le désirez. La photo ci jointe ne montre pas exactement ce que je veux, notamment dans la masse de cheveux à l'arrière, mais on ne sera pas loin de ça...",
-      "confidence": "HIGH",
-      "classification": "on-site",
-      "reasoning": "Obvious on-site work: coiffure",
-      "description_source": "detail_page"
-    },
-    "https://www.jemepropose.com/annonces/auxiliaire-de-vie/recherche-emploi-auxiliaire-de-vie+10501577/": {
-      "first_seen": "2026-02-25 09:06:31",
-      "last_seen": "2026-03-25 07:30:16",
-      "title": "Recherche emploi auxiliaire de vie",
-      "is_remote": false,
-      "description": "Bonjour je suis auxiliaire de vie depuis 3ans je vous propose mes services pour tout type de prestations dans l'aide à la personne Paiement en CESU 😊 Disponibilité à convenir Bonjour je suis auxiliaire de vie depuis 3ans je vous propose mes services pour tout type de prestations dans l'aide à la personne",
-      "confidence": "HIGH",
-      "classification": "on-site",
-      "reasoning": "LLM: Auxiliaire de vie = soins physiques sur place",
-      "description_source": "detail_page"
-    },
     "https://www.jemepropose.com/annonces/coiffure/modele-pour-lissage-indien-ou-botox+10501576/": {
       "first_seen": "2026-02-25 09:06:31",
       "last_seen": "2026-03-31 08:46:25",
@@ -34202,28 +34169,6 @@
       "confidence": "HIGH",
       "classification": "on-site",
       "reasoning": "Obvious on-site work: coiffure",
-      "description_source": "detail_page"
-    },
-    "https://www.jemepropose.com/annonces/chauffagiste/purge-radiateur+10501570/": {
-      "first_seen": "2026-02-25 09:06:31",
-      "last_seen": "2026-03-25 07:30:16",
-      "title": "PURGE RADIATEUR",
-      "is_remote": false,
-      "description": "Bonjour je suis en chauffage collectif et j'ai de l'air dans le radiateur mais j'ai pas de purgeur sur mon radiateur , je cherche une personne pour venir le purger merci.",
-      "confidence": "HIGH",
-      "classification": "on-site",
-      "reasoning": "LLM: Travail de plomberie sur place à Lorient",
-      "description_source": "detail_page"
-    },
-    "https://www.jemepropose.com/annonces/cours-a-domicile/gestion-operationnelle+10501568/": {
-      "first_seen": "2026-02-25 09:06:31",
-      "last_seen": "2026-03-25 07:30:16",
-      "title": "Gestion opérationnelle",
-      "is_remote": false,
-      "description": "Recherche cours de soutien en gestion opérationnelle (BTS Management commercial opérationnel)",
-      "confidence": "HIGH",
-      "classification": "on-site",
-      "reasoning": "LLM: Cours à domicile implique présence physique chez l'élève",
       "description_source": "detail_page"
     },
     "https://www.jemepropose.com/annonces/plombier/jai-besoin-daide+10501560/": {
@@ -34236,83 +34181,6 @@
       "confidence": "HIGH",
       "classification": "on-site",
       "reasoning": "LLM: Travail de plomberie sur place",
-      "description_source": "detail_page"
-    },
-    "https://www.jemepropose.com/annonces/menage/recherche-aide-pour-entretient-dune-maison+10501559/": {
-      "first_seen": "2026-02-25 09:06:31",
-      "last_seen": "2026-03-25 07:30:16",
-      "title": "recherche aide pour entretient d'une maison",
-      "is_remote": false,
-      "description": "je cherche une personne pour réaliser 3à4 h par semaine de ménage toute les semaines à St Pastous 65400 je n'ai pas de préférences pour le jour merci pour vos réponses je cherche une personne pour réaliser 3à4 h par semaine de ménage toute les semaines à St Pastous 65400 je n'ai pas de préférences pour le jour",
-      "confidence": "HIGH",
-      "classification": "on-site",
-      "reasoning": "Obvious on-site work: ménage",
-      "description_source": "detail_page"
-    },
-    "https://www.jemepropose.com/annonces/garde-d-enfants/garde-denfant+10501558/": {
-      "first_seen": "2026-02-25 09:06:31",
-      "last_seen": "2026-03-25 07:30:16",
-      "title": "GARDE D'ENFANT",
-      "is_remote": false,
-      "description": "Nous recherchons une personne douce, fiable et attentionnée pour s'occuper d'un petit garçon de 2 ans à Asnières-sur-Seine. Jours et horaires : - Lundi, mardi, mercredi et vendredi - De 16h15 à 18h15 Vos missions : - Aller le récupérer à la crèche - Lui proposer des activités adaptées à son âge (jeux, lecture, moments calmes) - Veiller à son bien-être et à sa sécurité - Lui donner le goûter si besoin Nous recherchons une personne ponctuelle, bienveillante et expérimentée avec les jeunes enfants. Une première expérience en garde d'enfants ou dans la petite enfance est souhaitée. Si vous êtes intéressé(e), n'hésitez pas à postuler, nous serions ravis d'échanger avec vous. Nous recherchons une personne douce, fiable et attentionnée pour s'occuper d'un petit garçon de 2 ans à Asnières-sur-Seine. Jours et horaires : - Lundi, mardi, mercredi et vendredi - De 16h15 à 18h15 - Aller le récupérer à la crèche - Lui proposer des activités adaptées à son âge (jeux, lecture, moments calmes) - Veiller à son bien-être et à sa sécurité - Lui donner le goûter si besoin Nous recherchons une personne ponctuelle, bienveillante et expérimentée avec les jeunes enfants. Une première expérience en garde d'enfants ou dans la petite enfance est souhaitée. Si vous êtes intéressé(e), n'hésitez pas à postuler, nous serions ravis d'échanger avec vous.",
-      "confidence": "HIGH",
-      "classification": "on-site",
-      "reasoning": "Obvious on-site work: garde d'enfant",
-      "description_source": "detail_page"
-    },
-    "https://www.jemepropose.com/annonces/garde-d-enfants/garde-denfant-menage+10501556/": {
-      "first_seen": "2026-02-25 09:06:31",
-      "last_seen": "2026-03-25 07:30:16",
-      "title": "GARDE D'ENFANT/ MENAGE",
-      "is_remote": false,
-      "description": "Nous cherchons une personne de confiance pour assurer la garde d'un petit garçon de 5 ans, ainsi que l'entretien du domicile, situé à Clichy. Horaire : * Mercredi : 9H30 à 17H30 Vos responsabilités : * Veiller à la sécurité et le confort de l'enfant * Aller chercher l'enfant à l'école * Préparer le repas si nécessaire * Organiser des activités ludiques * Assurer l'entretien de la maison (rangement, ménage, gestion du linge) Vous êtes le profil idéale si : * Vous êtes une personne organisé(e), fiable et responsable * Vous avez de l'expérience dans la garde d'enfant * Vous avez de l'expérience dans le ménage à domicile Nous cherchons une personne de confiance pour assurer la garde d'un petit garçon de 5 ans, ainsi que l'entretien du domicile, situé à Clichy. Horaire : * Mercredi : 9H30 à 17H30 Vos responsabilités : * Veiller à la sécurité et le confort de l'enfant * Aller chercher l'enfant à l'école * Préparer le repas si nécessaire * Organiser des activités ludiques * Assurer l'entretien de la maison (rangement, ménage, gestion du linge) Vous êtes le profil idéale si : * Vous êtes une personne organisé(e), fiable et responsable * Vous avez de l'expérience dans la garde d'enfant * Vous avez de l'expérience dans le ménage à domicile",
-      "confidence": "HIGH",
-      "classification": "on-site",
-      "reasoning": "Obvious on-site work: ménage",
-      "description_source": "detail_page"
-    },
-    "https://www.jemepropose.com/annonces/garde-d-enfants/garde-denfants-moins-de-3-ans+10501555/": {
-      "first_seen": "2026-02-25 09:06:31",
-      "last_seen": "2026-03-25 07:30:16",
-      "title": "Garde d'enfants moins de 3 ans",
-      "is_remote": false,
-      "description": "Garde d'enfants moins de 3 ans Vous aimez les enfants, prendre soin d'eux et les voir sourire. Passez du temps avec eux est une source de bonheur & non une corvée. Vous avez le sens des responsabilités, une bonne conscience de la façon dont vous devez vous occupez des tous petits. Pour le secteur d'Annecy, nous recherchons un(e) Garde d'enfants (h/f) pour un enfant de - de 3 ans. Nous recherchons une personne douce & bienveillante, ayant déjà une expérience avec les nourrissons. Vos missions : Préparation des biberons Toilette du nourrisson Partager des moments de convivialité Déplacement de la crèche au domicile des parents Veille du sommeil du nourrisson. Vous aimez les enfants, prendre soin d'eux et les voir sourire. Passez du temps avec eux est une source de bonheur & non une corvée. Vous avez le sens des responsabilités, une bonne conscience de la façon dont vous devez vous occupez des tous petits. Pour le secteur d'Annecy, nous recherchons un(e) Garde d'enfants (h/f) pour un enfant de - de 3 ans. Nous recherchons une personne douce & bienveillante, ayant déjà une expérience avec les nourrissons. Vos missions : Préparation des biberons Toilette du nourrisson Partager des moments de convivialité Déplacement de la crèche au domicile des parents Veille du sommeil du nourrisson.",
-      "confidence": "HIGH",
-      "classification": "on-site",
-      "reasoning": "Obvious on-site work: garde d'enfant",
-      "description_source": "detail_page"
-    },
-    "https://www.jemepropose.com/annonces/garde-d-enfants/garde-denfant-a-domicile+10501554/": {
-      "first_seen": "2026-02-25 09:06:31",
-      "last_seen": "2026-03-25 07:30:16",
-      "title": "Garde d'enfant à domicile",
-      "is_remote": false,
-      "description": "Nous recherchons une personne de confiance pour s'occuper de nos deux enfants de trois ans actuellement en maternelle (sortie d'école) - dès avril 2026. Missions principales : - Aller chercher les enfants à l'école à partir de 16h30 (possible à pied -600m) - Les accompagner à la maison. - Préparer le repas et donner le dîner. - S'occuper de la douche des enfants. - Jouer avec eux et encadrer les temps calmes. - Veiller à la sécurité et assurer la surveillance des enfants. Horaires : - Idéalement de 16h15 à 18h15 (horaires adaptables selon disponibilités). - Les jours peuvent être définis ensemble : lundi, mardi, jeudi, vendredi - Possibilité de quelques heures le mercredi matin dans une moindre mesure Nous recherchons une personne de confiance pour s'occuper de nos deux enfants de trois ans actuellement en maternelle (sortie d'école) - dès avril 2026. Missions principales : - Aller chercher les enfants à l'école à partir de 16h30 (possible à pied -600m) - Les accompagner à la maison. - Préparer le repas et donner le dîner. - S'occuper de la douche des enfants. - Jouer avec eux et encadrer les temps calmes. - Veiller à la sécurité et assurer la surveillance des enfants. Horaires : - Idéalement de 16h15 à 18h15 (horaires adaptables selon disponibilités). - Les jours peuvent être définis ensemble : lundi, mardi, jeudi, vendredi - Possibilité de quelques heures le mercredi matin dans une moindre mesure",
-      "confidence": "HIGH",
-      "classification": "on-site",
-      "reasoning": "Obvious on-site work: garde d'enfant",
-      "description_source": "detail_page"
-    },
-    "https://www.jemepropose.com/annonces/garde-d-enfants/garde-denfant-a-domicile+10501552/": {
-      "first_seen": "2026-02-25 09:06:31",
-      "last_seen": "2026-03-25 07:30:16",
-      "title": "GARDE D'ENFANT A DOMICILE",
-      "is_remote": false,
-      "description": "Garde d'enfant à domicile à Marseille. Et possibilité heure de ménage pour atteindre un temps plein Mission: Envie d'exercer une activité utile et de faire grandir les enfants des familles que vous accompagnez ? Votre mission sera de vous occuper d'enfants de plus de 3 ans ou moins de 3 ans, de les emmener et les rechercher à l'école. Vous devez amener les enfants à leurs activités périscolaires. Vous proposerez des activités adaptées à leur âge, grâce à notre méthode de garde d'enfants. Horaires du lundi au vendredi de 8h00 à 9h00 et 17h30 à 18h30 Garde d'enfant à domicile à Marseille. Et possibilité heure de ménage pour atteindre un temps plein Mission: Envie d'exercer une activité utile et de faire grandir les enfants des familles que vous accompagnez ? Votre mission sera de vous occuper d'enfants de plus de 3 ans ou moins de 3 ans, de les emmener et les rechercher à l'école. Vous devez amener les enfants à leurs activités périscolaires. Vous proposerez des activités adaptées à leur âge, grâce à notre méthode de garde d'enfants. Horaires du lundi au vendredi de 8h00 à 9h00 et 17h30 à 18h30",
-      "confidence": "HIGH",
-      "classification": "on-site",
-      "reasoning": "Obvious on-site work: ménage",
-      "description_source": "detail_page"
-    },
-    "https://www.jemepropose.com/annonces/guide-touristique/cracovie+10501551/": {
-      "first_seen": "2026-02-25 09:06:31",
-      "last_seen": "2026-03-25 07:30:16",
-      "title": "Cracovie",
-      "is_remote": false,
-      "description": "Bonjour je recherche une personne à cracovie pour nous accompagner à Auchwitz fin mars Merci Bonjour je recherche une personne à cracovie pour nous accompagner à Auchwitz fin mars",
-      "confidence": "HIGH",
-      "classification": "on-site",
-      "reasoning": "LLM: Mission sur place à Cracovie, accompagnement physique",
       "description_source": "detail_page"
     },
     "https://www.jemepropose.com/annonces/couture/recherche-couturiere-freelance+10501685/": {
@@ -34588,149 +34456,6 @@
       "reasoning": "LLM: Terrassement et assainissement sont des travaux physiques sur site",
       "description_source": "listing_page"
     },
-    "https://www.allovoisins.com/r/0/125/23552/0/Andrezieux-boutheon/service/Montage-meubles-en-kit": {
-      "first_seen": "2026-03-03 08:10:08",
-      "last_seen": "2026-03-25 07:30:16",
-      "title": "Cherche Montage meubles en kit à Andrézieux-Bouthéon",
-      "is_remote": false,
-      "description": "N/A",
-      "confidence": "HIGH",
-      "classification": "on-site",
-      "reasoning": "LLM: Montage meubles nécessite présence physique",
-      "description_source": "listing_page"
-    },
-    "https://www.allovoisins.com/r/0/137/23758/0/Pradines/service/Plomberie-installation-sanitaire": {
-      "first_seen": "2026-03-03 08:10:08",
-      "last_seen": "2026-03-25 07:30:16",
-      "title": "Recherche Plomberie - Installation sanitaire à Pradines",
-      "is_remote": false,
-      "description": "N/A",
-      "confidence": "HIGH",
-      "classification": "on-site",
-      "reasoning": "Obvious on-site work: plomberie",
-      "description_source": "listing_page"
-    },
-    "https://www.allovoisins.com/r/0/300/23568/0/Montrond-les-bains/service/Terrassement-assainissement": {
-      "first_seen": "2026-03-03 08:10:08",
-      "last_seen": "2026-03-25 07:30:16",
-      "title": "Recherche Terrassement - Assainissement à Montrond-les-Bains",
-      "is_remote": false,
-      "description": "N/A",
-      "confidence": "HIGH",
-      "classification": "on-site",
-      "reasoning": "LLM: Travaux de terrassement et assainissement sur site",
-      "description_source": "listing_page"
-    },
-    "https://www.allovoisins.com/r/0/145/81665/0/Chalmazel-jeansagniere/service/Tonte-de-pelouse-debroussaillage": {
-      "first_seen": "2026-03-03 08:10:08",
-      "last_seen": "2026-03-25 07:30:16",
-      "title": "Recherche Tonte de pelouse - Débroussaillage à Chalmazel-Jeansagnière",
-      "is_remote": false,
-      "description": "Clairea posté cette demande dans le cadre duThème du moment«C'est le printemps !».",
-      "confidence": "HIGH",
-      "classification": "on-site",
-      "reasoning": "LLM: Tonte de pelouse : travail physique sur site",
-      "description_source": "detail_page"
-    },
-    "https://www.allovoisins.com/r/0/295/81665/0/Chalmazel-jeansagniere/service/Taille-de-haies-et-d-arbustes": {
-      "first_seen": "2026-03-03 08:10:08",
-      "last_seen": "2026-03-25 07:30:16",
-      "title": "Cherche Taille de haies et d'arbustes à Chalmazel-Jeansagnière",
-      "is_remote": false,
-      "description": "N/A",
-      "confidence": "HIGH",
-      "classification": "on-site",
-      "reasoning": "LLM: Taille de haies : travail physique sur site",
-      "description_source": "listing_page"
-    },
-    "https://www.allovoisins.com/r/0/143/81665/0/Chalmazel-jeansagniere/service/Jardinier": {
-      "first_seen": "2026-03-03 08:10:08",
-      "last_seen": "2026-03-25 07:30:16",
-      "title": "Cherche Jardinier à Chalmazel-Jeansagnière",
-      "is_remote": false,
-      "description": "N/A",
-      "confidence": "HIGH",
-      "classification": "on-site",
-      "reasoning": "LLM: Jardinage = travail physique sur site",
-      "description_source": "listing_page"
-    },
-    "https://www.allovoisins.com/r/0/155/33602/0/Charbonnier-les-mines/service/Reparation-outillage": {
-      "first_seen": "2026-03-03 08:10:08",
-      "last_seen": "2026-03-25 07:30:16",
-      "title": "Cherche Réparation outillage à Charbonnier-les-Mines",
-      "is_remote": false,
-      "description": "Sylviea posté cette demande dans le cadre duThème du moment«J'ai besoin d'une réparation».",
-      "confidence": "HIGH",
-      "classification": "on-site",
-      "reasoning": "LLM: Demande de réparation physique sur place",
-      "description_source": "detail_page"
-    },
-    "https://www.allovoisins.com/r/0/126/33566/0/Villeneuve-les-cerfs/service/Pose-de-parquet-revetement-de-sol": {
-      "first_seen": "2026-03-03 08:10:08",
-      "last_seen": "2026-03-25 07:30:16",
-      "title": "Cherche Pose de parquet - Revêtement de sol à Villeneuve-les-Cerfs",
-      "is_remote": false,
-      "description": "Pose de parquet - Revêtement de sol Clermont-Ferrand",
-      "confidence": "HIGH",
-      "classification": "on-site",
-      "reasoning": "LLM: Pose de parquet : travail physique sur site obligatoire",
-      "description_source": "detail_page"
-    },
-    "https://www.allovoisins.com/r/0/150/23679/0/Sury-le-comtal/service/Demenageurs-et-aide-au-demenagement": {
-      "first_seen": "2026-03-03 08:10:08",
-      "last_seen": "2026-03-25 07:30:16",
-      "title": "Cherche Déménageurs et aide au déménagement à Sury-le-Comtal",
-      "is_remote": false,
-      "description": "N/A",
-      "confidence": "HIGH",
-      "classification": "on-site",
-      "reasoning": "Obvious on-site work: ménage",
-      "description_source": "listing_page"
-    },
-    "https://www.allovoisins.com/r/0/129/33552/0/Puy-guillaume/service/Charpente": {
-      "first_seen": "2026-03-03 08:10:08",
-      "last_seen": "2026-03-25 07:30:16",
-      "title": "Cherche Charpente à Puy-Guillaume",
-      "is_remote": false,
-      "description": "N/A",
-      "confidence": "HIGH",
-      "classification": "on-site",
-      "reasoning": "Obvious on-site work: charpente",
-      "description_source": "listing_page"
-    },
-    "https://www.allovoisins.com/r/0/171/33833/0/Chavaroux/service/Couturiere": {
-      "first_seen": "2026-03-03 08:10:08",
-      "last_seen": "2026-03-25 07:30:16",
-      "title": "Cherche Couturière à Chavaroux",
-      "is_remote": false,
-      "description": "N/A",
-      "confidence": "HIGH",
-      "classification": "on-site",
-      "reasoning": "LLM: Couturière = travail manuel sur place",
-      "description_source": "listing_page"
-    },
-    "https://www.allovoisins.com/r/0/135/24061/0/Beauzac/service/Peinture-tapisserie": {
-      "first_seen": "2026-03-03 08:10:08",
-      "last_seen": "2026-03-25 07:30:16",
-      "title": "Recherche Peinture - Tapisserie à Beauzac",
-      "is_remote": false,
-      "description": "N/A",
-      "confidence": "HIGH",
-      "classification": "on-site",
-      "reasoning": "Obvious on-site work: peinture",
-      "description_source": "listing_page"
-    },
-    "https://www.allovoisins.com/r/0/295/24061/0/Beauzac/service/Taille-de-haies-et-d-arbustes": {
-      "first_seen": "2026-03-03 08:10:08",
-      "last_seen": "2026-03-25 07:30:16",
-      "title": "Recherche Taille de haies et d'arbustes à Beauzac",
-      "is_remote": false,
-      "description": "N/A",
-      "confidence": "HIGH",
-      "classification": "on-site",
-      "reasoning": "LLM: Taille de haies : travail physique sur site",
-      "description_source": "listing_page"
-    },
     "https://www.allovoisins.com/r/0/159/23487/0/Feurs/service/Reparation-voiture": {
       "first_seen": "2026-03-03 08:10:08",
       "last_seen": "2026-03-31 08:46:25",
@@ -34830,50 +34555,6 @@
       "classification": "on-site",
       "reasoning": "LLM: Carrelage = travaux physiques sur place",
       "description_source": "listing_page"
-    },
-    "https://www.allovoisins.com/r/0/157/33471/0/Seychalles/service/Reparation-carrosserie": {
-      "first_seen": "2026-03-04 08:50:10",
-      "last_seen": "2026-03-25 07:30:16",
-      "title": "Recherche Réparation carrosserie à Seychalles",
-      "is_remote": false,
-      "description": "N/A",
-      "confidence": "HIGH",
-      "classification": "on-site",
-      "reasoning": "LLM: Réparation carrosserie = intervention physique obligatoire sur place",
-      "description_source": "listing_page"
-    },
-    "https://www.allovoisins.com/r/5296/79/33776/0/location-Van-chevaux-camion-chevaux-Ambert": {
-      "first_seen": "2026-03-04 08:50:10",
-      "last_seen": "2026-03-25 07:30:16",
-      "title": "Louer un van chevaux / camion chevaux - Ambert",
-      "is_remote": false,
-      "description": "Durée : 1 jour",
-      "confidence": "HIGH",
-      "classification": "on-site",
-      "reasoning": "Obvious on-site work: camion",
-      "description_source": "detail_page"
-    },
-    "https://www.allovoisins.com/r/4344/88/33453/0/location-Appartement-Egliseneuve-pres-billom": {
-      "first_seen": "2026-03-04 08:50:10",
-      "last_seen": "2026-03-25 07:30:16",
-      "title": "Location appartement - Égliseneuve-prés-Billom",
-      "is_remote": false,
-      "description": "Durée : 365 jours",
-      "confidence": "HIGH",
-      "classification": "on-site",
-      "reasoning": "LLM: Location d'appartement, pas une offre d'emploi",
-      "description_source": "detail_page"
-    },
-    "https://www.allovoisins.com/r/488/11/23636/0/location-Motoculteur-Renaison": {
-      "first_seen": "2026-03-04 08:50:10",
-      "last_seen": "2026-03-25 07:30:16",
-      "title": "Location motoculteur - Renaison",
-      "is_remote": false,
-      "description": "Durée : 1 jour",
-      "confidence": "HIGH",
-      "classification": "on-site",
-      "reasoning": "LLM: Location de matériel agricole, nécessite présence physique",
-      "description_source": "detail_page"
     },
     "https://www.jemepropose.com/annonces/soutien-scolaire/animatrice-petite-enfance+10502017/": {
       "first_seen": "2026-03-06 07:18:10",
@@ -35980,17 +35661,6 @@
       "reasoning": "Obvious on-site work: coiffure",
       "description_source": "listing_page"
     },
-    "https://www.jemepropose.com/annonces/gardiennage-de-domicile/couple-de-gardien-cherche-gardiennage-autour-de-toulon+10502253/": {
-      "first_seen": "2026-03-13 07:28:41",
-      "last_seen": "2026-03-25 07:30:16",
-      "title": "couple de gardien cherche gardiennage autour de toulon",
-      "is_remote": false,
-      "description": "Bonjour nous sommes un couple éxpérimenté 58 ans gardien depuis 21 ans sur toulon cherchons un nouveau gardiennage a l année services en échange d un logement indépendant , monsieur pour surveillance entretien espaces verts piscine petits travaux de maintenance bricolage chauffeur homme toutes mains , madame travail en entreprise de néttoyage nous pouvons faire un peu de ménage nous sommes un couple de confiance non fumeur sobre merci",
-      "confidence": "HIGH",
-      "classification": "on-site",
-      "reasoning": "Obvious on-site work: ménage",
-      "description_source": "detail_page"
-    },
     "https://www.jemepropose.com/annonces/jardinage/recherche-jardinier-mission-ponctuelle-remuneree+10502250/": {
       "first_seen": "2026-03-13 07:28:41",
       "last_seen": "2026-04-22 08:23:21",
@@ -36503,17 +36173,6 @@
       "classification": "on-site",
       "reasoning": "LLM: Tonte de pelouse nécessite présence physique sur site",
       "description_source": "detail_page"
-    },
-    "https://www.allovoisins.com/r/0/125/33558/0/Beaumont-les-randan/service/Montage-meubles-en-kit": {
-      "first_seen": "2026-03-16 08:08:52",
-      "last_seen": "2026-03-25 07:30:16",
-      "title": "Recherche Montage meubles en kit à Beaumont-lès-Randan",
-      "is_remote": false,
-      "description": "N/A",
-      "confidence": "HIGH",
-      "classification": "on-site",
-      "reasoning": "LLM: Montage meubles nécessite présence physique",
-      "description_source": "listing_page"
     },
     "https://www.allovoisins.com/r/529/11/33716/0/location-Tondeuse-a-gazon-Issoire": {
       "first_seen": "2026-03-16 08:08:52",
@@ -37963,17 +37622,6 @@
       "reasoning": "Obvious on-site work: ménage",
       "description_source": "listing_page"
     },
-    "https://www.jemepropose.com/annonces/bricolage/demontage-terrasse-bois-et-remontage-5-m2-petit-terrassement-8m-pour-faire-passer-des-tuyaux+10502697/": {
-      "first_seen": "2026-03-24 07:30:49",
-      "last_seen": "2026-03-25 07:30:16",
-      "title": "Démontage terrasse bois et remontage ( 5 m²)+ petit terrassement 8m pour faire passer des tuyaux",
-      "is_remote": false,
-      "description": "Bonjour, je recherche une personne pour déplacer un local technique de piscine actuellement enterré vers un cabanon de jardin. Travaux attendus: - Démonter 3 à 4 m² de terrasse bois sur lambourde et plot directement sur la terre. Puis remonter la terrasse bois. - faire une tranchée de 8 m environ vers le cabanon en bois existant, puis la reboucher - Passer les tuyaux ( 3) + cable electrique - faire un socle en béton/parpaing dans le cabanon en bois. 1m² - déplacer le matériel de piscine vers,le cabanon de jardin. Vous pouvez me joindre au zero six, soixante six, quatorze, soixante quinze, quatre-vingt onze",
-      "confidence": "HIGH",
-      "classification": "on-site",
-      "reasoning": "Obvious on-site work: bricolage",
-      "description_source": "detail_page"
-    },
     "https://www.jemepropose.com/annonces/menage/repassage+10502689/": {
       "first_seen": "2026-03-24 07:30:49",
       "last_seen": "2026-04-23 10:28:43",
@@ -38243,17 +37891,6 @@
       "reasoning": "LLM: Jardinage nécessite présence physique sur le terrain",
       "description_source": "listing_page"
     },
-    "https://www.allovoisins.com/r/0/126/23692/0/Saint-symphorien-de-lay/service/Pose-de-parquet-revetement-de-sol": {
-      "first_seen": "2026-03-24 07:30:49",
-      "last_seen": "2026-03-25 07:30:16",
-      "title": "Recherche Pose de parquet - Revêtement de sol à Saint-Symphorien-de-Lay",
-      "is_remote": false,
-      "description": "Pose de parquet - Revêtement de sol Saint-Symphorien-de-Lay",
-      "confidence": "HIGH",
-      "classification": "on-site",
-      "reasoning": "LLM: Pose de parquet : travail physique sur site",
-      "description_source": "detail_page"
-    },
     "https://www.jemepropose.com/annonces/demenagement/demenagement-entre-le-10-et-le-20-avril+10502788/": {
       "first_seen": "2026-03-25 07:30:16",
       "last_seen": "2026-04-22 08:23:21",
@@ -38289,17 +37926,6 @@
       "classification": "remote",
       "reasoning": "LLM: Clairement indiqué « à distance »",
       "description_source": "detail_page"
-    },
-    "https://www.allovoisins.com/r/0/164/33714/0/Le-broc/service/Livraison-transport-de-colis": {
-      "first_seen": "2026-03-25 07:30:16",
-      "last_seen": "2026-03-25 07:30:16",
-      "title": "Recherche Livraison - Transport de colis à Le Broc",
-      "is_remote": false,
-      "description": "N/A",
-      "confidence": "HIGH",
-      "classification": "on-site",
-      "reasoning": "Obvious on-site work: livraison",
-      "description_source": "listing_page"
     },
     "https://www.allovoisins.com/r/0/192/33611/0/Saint-germain-lembron/service/Depannage-informatique": {
       "first_seen": "2026-03-25 07:30:16",
@@ -39388,8 +39014,8 @@
     },
     "https://www.allovoisins.com/v/home-sitting-accueil-gardiennage": {
       "first_seen": "2026-04-01 09:30:40",
-      "last_seen": "2026-04-24 07:28:49",
-      "title": "Recherche Home sitting - Accueil - Gardiennage à Perpignan",
+      "last_seen": "2026-04-24 08:55:18",
+      "title": "Recherche Home sitting - Accueil - Gardiennage à Rognes",
       "is_remote": false,
       "poster_type": "unknown",
       "description": "N/A",
@@ -39400,8 +39026,8 @@
     },
     "https://www.allovoisins.com/v/platrerie-murs-plafonds": {
       "first_seen": "2026-04-01 09:30:40",
-      "last_seen": "2026-04-24 07:28:49",
-      "title": "Cherche Plâtrerie - Murs - Plafonds à Villecresnes",
+      "last_seen": "2026-04-24 08:55:18",
+      "title": "Recherche Plâtrerie - Murs - Plafonds à Guignen",
       "is_remote": false,
       "poster_type": "unknown",
       "description": "N/A",
@@ -39424,7 +39050,7 @@
     },
     "https://www.allovoisins.com/v/demenagement": {
       "first_seen": "2026-04-01 09:30:40",
-      "last_seen": "2026-04-24 07:28:49",
+      "last_seen": "2026-04-24 08:55:18",
       "title": "Cherche Déménageurs et aide au déménagement à Alata",
       "is_remote": false,
       "poster_type": "unknown",
@@ -39436,8 +39062,8 @@
     },
     "https://www.allovoisins.com/v/installation-electrique": {
       "first_seen": "2026-04-01 09:30:40",
-      "last_seen": "2026-04-24 07:28:49",
-      "title": "Cherche Installation électrique à Saint-Chamas",
+      "last_seen": "2026-04-24 08:55:18",
+      "title": "Recherche Installation électrique à Brionne",
       "is_remote": false,
       "poster_type": "unknown",
       "description": "N/A",
@@ -39448,8 +39074,8 @@
     },
     "https://www.allovoisins.com/v/chauffage-climatisation": {
       "first_seen": "2026-04-01 09:30:40",
-      "last_seen": "2026-04-24 07:28:49",
-      "title": "Recherche Chauffage - Climatisation à Roupeldange",
+      "last_seen": "2026-04-24 08:55:18",
+      "title": "Cherche Chauffage - Climatisation à Concarneau",
       "is_remote": false,
       "poster_type": "employer",
       "description": "N/A",
@@ -39460,8 +39086,8 @@
     },
     "https://www.allovoisins.com/v/bricolage-petits-travaux": {
       "first_seen": "2026-04-01 09:30:40",
-      "last_seen": "2026-04-24 07:28:49",
-      "title": "Recherche Bricolage et multi services à Ibos",
+      "last_seen": "2026-04-24 08:55:18",
+      "title": "Recherche Bricolage et multi services à Évry-Courcouronnes",
       "is_remote": false,
       "poster_type": "unknown",
       "description": "N/A",
@@ -39472,8 +39098,8 @@
     },
     "https://www.allovoisins.com/v/evacuation-dechets-gravats": {
       "first_seen": "2026-04-01 09:30:40",
-      "last_seen": "2026-04-24 07:28:49",
-      "title": "Recherche Évacuation déchets - Gravats à Marseille",
+      "last_seen": "2026-04-24 08:55:18",
+      "title": "Recherche Évacuation déchets - Gravats à Saint-Maur-des-Fossés",
       "is_remote": false,
       "poster_type": "unknown",
       "description": "N/A",
@@ -39484,8 +39110,8 @@
     },
     "https://www.allovoisins.com/v/livraison-transport-de-colis": {
       "first_seen": "2026-04-01 09:30:40",
-      "last_seen": "2026-04-24 07:28:49",
-      "title": "Recherche Livraison - Transport de colis à Les Angles",
+      "last_seen": "2026-04-24 08:55:18",
+      "title": "Recherche Livraison - Transport de colis à Manosque",
       "is_remote": false,
       "poster_type": "unknown",
       "description": "N/A",
@@ -39496,8 +39122,8 @@
     },
     "https://www.allovoisins.com/v/reparation-velo-moto": {
       "first_seen": "2026-04-01 09:30:40",
-      "last_seen": "2026-04-24 07:28:49",
-      "title": "Recherche Réparation vélo - moto à Tournan-en-Brie",
+      "last_seen": "2026-04-24 08:55:18",
+      "title": "Recherche Réparation vélo - moto à Port-Louis",
       "is_remote": false,
       "poster_type": "unknown",
       "description": "N/A",
@@ -39508,7 +39134,7 @@
     },
     "https://www.allovoisins.com/v/coiffure-a-domicile": {
       "first_seen": "2026-04-01 09:30:40",
-      "last_seen": "2026-04-24 07:28:49",
+      "last_seen": "2026-04-24 08:55:18",
       "title": "Recherche Coiffure à domicile à Bry-sur-Marne",
       "is_remote": false,
       "poster_type": "unknown",
@@ -39520,8 +39146,8 @@
     },
     "https://www.allovoisins.com/v/jardinier": {
       "first_seen": "2026-04-01 09:30:40",
-      "last_seen": "2026-04-24 07:28:49",
-      "title": "Recherche Jardinier à Moëlan-sur-Mer",
+      "last_seen": "2026-04-24 08:55:18",
+      "title": "Cherche Jardinier à Montboucher-sur-Jabron",
       "is_remote": false,
       "poster_type": "unknown",
       "description": "N/A",
@@ -39532,8 +39158,8 @@
     },
     "https://www.allovoisins.com/v/depannage-electromenager": {
       "first_seen": "2026-04-01 09:30:40",
-      "last_seen": "2026-04-24 07:28:49",
-      "title": "Recherche Dépannage électroménager à Montévrain",
+      "last_seen": "2026-04-24 08:55:18",
+      "title": "Cherche DĂ©pannage Ă©lectromĂ©nager Ă  Nogent-l'Artaud",
       "is_remote": false,
       "poster_type": "unknown",
       "description": "N/A",
@@ -39544,8 +39170,8 @@
     },
     "https://www.allovoisins.com/v/tonte-de-pelouse-debroussaillage": {
       "first_seen": "2026-04-01 09:30:40",
-      "last_seen": "2026-04-24 07:28:49",
-      "title": "Cherche Tonte de pelouse - Débroussaillage à Pers-Jussy",
+      "last_seen": "2026-04-24 08:55:18",
+      "title": "Cherche Tonte de pelouse - Débroussaillage à Torcé",
       "is_remote": false,
       "poster_type": "unknown",
       "description": "N/A",
@@ -39556,8 +39182,8 @@
     },
     "https://www.allovoisins.com/v/reparation-voiture": {
       "first_seen": "2026-04-01 09:30:40",
-      "last_seen": "2026-04-24 07:28:49",
-      "title": "Recherche Réparation voiture à Le Cannet",
+      "last_seen": "2026-04-24 08:55:18",
+      "title": "Recherche Réparation voiture à Gouesnou",
       "is_remote": false,
       "poster_type": "unknown",
       "description": "N/A",
@@ -39568,8 +39194,8 @@
     },
     "https://www.allovoisins.com/v/montage-meubles-en-kit": {
       "first_seen": "2026-04-01 09:30:40",
-      "last_seen": "2026-04-24 07:28:49",
-      "title": "Cherche Montage meubles en kit à Hendaye",
+      "last_seen": "2026-04-24 08:55:18",
+      "title": "Cherche Montage meubles en kit Ă  Castries",
       "is_remote": false,
       "poster_type": "unknown",
       "description": "N/A",
@@ -39580,8 +39206,8 @@
     },
     "https://www.allovoisins.com/v/lavage-auto": {
       "first_seen": "2026-04-01 09:30:40",
-      "last_seen": "2026-04-24 07:28:49",
-      "title": "Recherche Lavage auto à Ézy-sur-Eure",
+      "last_seen": "2026-04-24 08:55:18",
+      "title": "Cherche Lavage auto à Nice",
       "is_remote": false,
       "poster_type": "unknown",
       "description": "N/A",
@@ -39592,8 +39218,8 @@
     },
     "https://www.allovoisins.com/v/femme-de-menage": {
       "first_seen": "2026-04-01 09:30:40",
-      "last_seen": "2026-04-24 07:28:49",
-      "title": "Cherche Ménage à Boé",
+      "last_seen": "2026-04-24 08:55:18",
+      "title": "Recherche Ménage à Vallauris",
       "is_remote": false,
       "poster_type": "unknown",
       "description": "N/A",
@@ -39604,8 +39230,8 @@
     },
     "https://www.allovoisins.com/v/carrelage": {
       "first_seen": "2026-04-01 09:30:40",
-      "last_seen": "2026-04-24 07:28:49",
-      "title": "Cherche Carrelage à Riaillé",
+      "last_seen": "2026-04-24 08:55:18",
+      "title": "Recherche Carrelage Ă  Saint-Laurent",
       "is_remote": false,
       "poster_type": "unknown",
       "description": "N/A",
@@ -39616,8 +39242,8 @@
     },
     "https://www.allovoisins.com/v/reparation-carrosserie": {
       "first_seen": "2026-04-01 09:30:40",
-      "last_seen": "2026-04-24 07:28:49",
-      "title": "Recherche Réparation carrosserie à Jussy",
+      "last_seen": "2026-04-24 08:55:18",
+      "title": "Cherche Réparation carrosserie à La Grande-Paroisse",
       "is_remote": false,
       "poster_type": "unknown",
       "description": "N/A",
@@ -39652,8 +39278,8 @@
     },
     "https://www.allovoisins.com/v/menuiserie-huisserie-agencement": {
       "first_seen": "2026-04-01 09:30:40",
-      "last_seen": "2026-04-24 07:28:49",
-      "title": "Recherche Menuiserie - Huisserie - Agencement à Lège-Cap-Ferret",
+      "last_seen": "2026-04-24 08:55:18",
+      "title": "Recherche Menuiserie - Huisserie - Agencement à Angers",
       "is_remote": false,
       "poster_type": "unknown",
       "description": "N/A",
@@ -39664,8 +39290,8 @@
     },
     "https://www.allovoisins.com/v/serrurerie": {
       "first_seen": "2026-04-01 09:30:40",
-      "last_seen": "2026-04-24 07:28:49",
-      "title": "Recherche Serrurerie à Carrières-sous-Poissy",
+      "last_seen": "2026-04-24 08:55:18",
+      "title": "Cherche Serrurerie à Roubaix",
       "is_remote": false,
       "poster_type": "unknown",
       "description": "N/A",
@@ -39676,8 +39302,8 @@
     },
     "https://www.allovoisins.com/v/covoiturage-partage-de-frais": {
       "first_seen": "2026-04-01 09:30:40",
-      "last_seen": "2026-04-24 07:28:49",
-      "title": "Recherche Covoiturage (partage de frais) à Mont-de-Marsan",
+      "last_seen": "2026-04-24 08:55:18",
+      "title": "Cherche Covoiturage (partage de frais) à Beaumont-sur-Oise",
       "is_remote": false,
       "poster_type": "unknown",
       "description": "N/A",
@@ -39700,8 +39326,8 @@
     },
     "https://www.allovoisins.com/v/chaudronnerie-soudure": {
       "first_seen": "2026-04-01 09:30:40",
-      "last_seen": "2026-04-24 07:28:49",
-      "title": "Cherche Chaudronnerie - Soudure à Valenciennes",
+      "last_seen": "2026-04-24 08:55:18",
+      "title": "Cherche Chaudronnerie - Soudure à Taverny",
       "is_remote": false,
       "poster_type": "employer",
       "description": "N/A",
@@ -39712,7 +39338,7 @@
     },
     "https://www.allovoisins.com/v/lingerie-repassage": {
       "first_seen": "2026-04-01 09:30:40",
-      "last_seen": "2026-04-24 07:28:49",
+      "last_seen": "2026-04-24 08:55:18",
       "title": "Cherche Lingerie - Repassage à Beauval-en-Caux",
       "is_remote": false,
       "poster_type": "unknown",
@@ -39724,8 +39350,8 @@
     },
     "https://www.allovoisins.com/v/artisan-tout-corps-d-etat-renovation": {
       "first_seen": "2026-04-01 09:30:40",
-      "last_seen": "2026-04-24 07:28:49",
-      "title": "Cherche Artisan tout corps d'état - Rénovation à Paris",
+      "last_seen": "2026-04-24 08:55:18",
+      "title": "Recherche Artisan tout corps d'état - Rénovation à Bordeaux",
       "is_remote": false,
       "poster_type": "employer",
       "description": "N/A",
@@ -39736,8 +39362,8 @@
     },
     "https://www.allovoisins.com/v/plomberie-installation-sanitaire": {
       "first_seen": "2026-04-01 09:30:40",
-      "last_seen": "2026-04-24 07:28:49",
-      "title": "Cherche Plomberie - Installation sanitaire à Montreuil",
+      "last_seen": "2026-04-24 08:55:18",
+      "title": "Cherche Plomberie - Installation sanitaire à Oberschaeffolsheim",
       "is_remote": false,
       "poster_type": "unknown",
       "description": "N/A",
@@ -39748,8 +39374,8 @@
     },
     "https://www.allovoisins.com/v/entretien-piscine": {
       "first_seen": "2026-04-01 09:30:40",
-      "last_seen": "2026-04-24 07:28:49",
-      "title": "Cherche Entretien piscine à Nervieux",
+      "last_seen": "2026-04-24 08:55:18",
+      "title": "Cherche Entretien piscine à Villemoustaussou",
       "is_remote": false,
       "poster_type": "unknown",
       "description": "N/A",
@@ -39760,8 +39386,8 @@
     },
     "https://www.allovoisins.com/v/couturiere": {
       "first_seen": "2026-04-01 09:30:40",
-      "last_seen": "2026-04-24 07:28:49",
-      "title": "Cherche Couturière à Lannion",
+      "last_seen": "2026-04-24 08:55:18",
+      "title": "Recherche Couturière à Sausset-les-Pins",
       "is_remote": false,
       "poster_type": "unknown",
       "description": "N/A",
@@ -39784,8 +39410,8 @@
     },
     "https://www.allovoisins.com/v/garde-chien": {
       "first_seen": "2026-04-01 09:30:40",
-      "last_seen": "2026-04-24 07:28:49",
-      "title": "Cherche Garde chien à Saint-Martin-d'Uriage",
+      "last_seen": "2026-04-24 08:55:18",
+      "title": "Cherche Garde chien à Riom",
       "is_remote": false,
       "poster_type": "unknown",
       "description": "N/A",
@@ -39808,8 +39434,8 @@
     },
     "https://www.allovoisins.com/v/manutention": {
       "first_seen": "2026-04-01 09:30:40",
-      "last_seen": "2026-04-24 07:28:49",
-      "title": "Cherche Manutention à Le Crès",
+      "last_seen": "2026-04-24 08:55:18",
+      "title": "Cherche Manutention à Vitry-sur-Orne",
       "is_remote": false,
       "poster_type": "unknown",
       "description": "N/A",
@@ -39832,8 +39458,8 @@
     },
     "https://www.allovoisins.com/v/traiteur": {
       "first_seen": "2026-04-01 09:30:40",
-      "last_seen": "2026-04-24 07:28:49",
-      "title": "Recherche Traiteur à Béziers",
+      "last_seen": "2026-04-24 08:55:18",
+      "title": "Recherche Traiteur à Uchaud",
       "is_remote": false,
       "poster_type": "unknown",
       "description": "N/A",
@@ -39844,8 +39470,8 @@
     },
     "https://www.allovoisins.com/v/maconnerie": {
       "first_seen": "2026-04-01 09:30:40",
-      "last_seen": "2026-04-24 07:28:49",
-      "title": "Recherche Maçonnerie à Trouillas",
+      "last_seen": "2026-04-24 08:55:18",
+      "title": "Recherche Maçonnerie à Mondelange",
       "is_remote": false,
       "poster_type": "unknown",
       "description": "N/A",
@@ -39856,8 +39482,8 @@
     },
     "https://www.allovoisins.com/v/peinture-tapisserie": {
       "first_seen": "2026-04-01 09:30:40",
-      "last_seen": "2026-04-24 07:28:49",
-      "title": "Cherche Peinture - Tapisserie à Saint-Germain-au-Mont-d'Or",
+      "last_seen": "2026-04-24 08:55:18",
+      "title": "Cherche Peinture - Tapisserie Ă  VĂ©traz-Monthoux",
       "is_remote": false,
       "poster_type": "unknown",
       "description": "N/A",
@@ -39916,8 +39542,8 @@
     },
     "https://www.allovoisins.com/v/elagage-et-coupe-d-arbres": {
       "first_seen": "2026-04-01 09:30:40",
-      "last_seen": "2026-04-24 07:28:49",
-      "title": "Cherche Elagage et coupe d'arbres à Boissy-sous-Saint-Yon",
+      "last_seen": "2026-04-24 08:55:18",
+      "title": "Recherche Elagage et coupe d'arbres Ă  CourriĂ¨res",
       "is_remote": false,
       "poster_type": "unknown",
       "description": "N/A",
@@ -39928,7 +39554,7 @@
     },
     "https://www.allovoisins.com/v/couverture-toiture": {
       "first_seen": "2026-04-01 09:30:40",
-      "last_seen": "2026-04-24 07:28:49",
+      "last_seen": "2026-04-24 08:55:18",
       "title": "Recherche Couverture - Toiture à Parempuyre",
       "is_remote": false,
       "poster_type": "unknown",
@@ -39952,8 +39578,8 @@
     },
     "https://www.allovoisins.com/v/terrassement-assainissement": {
       "first_seen": "2026-04-01 09:30:40",
-      "last_seen": "2026-04-24 07:28:49",
-      "title": "Recherche Terrassement - Assainissement à Saint-Sulpice-la-Forêt",
+      "last_seen": "2026-04-24 08:55:18",
+      "title": "Cherche Terrassement - Assainissement à Sigean",
       "is_remote": false,
       "poster_type": "unknown",
       "description": "N/A",
@@ -39976,8 +39602,8 @@
     },
     "https://www.allovoisins.com/v/reparation-outillage": {
       "first_seen": "2026-04-01 09:30:40",
-      "last_seen": "2026-04-24 07:28:49",
-      "title": "Recherche Réparation outillage à Saint-Ouen-sur-Seine",
+      "last_seen": "2026-04-24 08:55:18",
+      "title": "Recherche Réparation outillage à Le Crocq",
       "is_remote": false,
       "poster_type": "unknown",
       "description": "N/A",
@@ -40012,8 +39638,8 @@
     },
     "https://www.allovoisins.com/v/garde-animaux": {
       "first_seen": "2026-04-01 09:30:40",
-      "last_seen": "2026-04-24 07:28:49",
-      "title": "Recherche Garde animaux à La Mouche",
+      "last_seen": "2026-04-24 08:55:18",
+      "title": "Cherche Garde animaux à Castelnau-le-Lez",
       "is_remote": false,
       "poster_type": "unknown",
       "description": "N/A",
@@ -40048,8 +39674,8 @@
     },
     "https://www.allovoisins.com/v/depannage-smartphone-hifi-video-photo": {
       "first_seen": "2026-04-01 09:30:40",
-      "last_seen": "2026-04-24 07:28:49",
-      "title": "Cherche Dépannage smartphone - hifi - video - photo à Saint-Hilaire-du-Harcouët",
+      "last_seen": "2026-04-24 08:55:18",
+      "title": "Cherche Dépannage smartphone - hifi - video - photo à Alès",
       "is_remote": false,
       "poster_type": "unknown",
       "description": "N/A",
@@ -40096,7 +39722,7 @@
     },
     "https://www.allovoisins.com/v/cloture-grillage": {
       "first_seen": "2026-04-01 09:30:40",
-      "last_seen": "2026-04-24 07:28:49",
+      "last_seen": "2026-04-24 08:55:18",
       "title": "Recherche Clôture Grillage à Vigneux-de-Bretagne",
       "is_remote": false,
       "poster_type": "employer",
@@ -40144,8 +39770,8 @@
     },
     "https://www.allovoisins.com/v/depannage-informatique": {
       "first_seen": "2026-04-01 09:30:40",
-      "last_seen": "2026-04-24 07:28:49",
-      "title": "Cherche Dépannage informatique à Quimper",
+      "last_seen": "2026-04-24 08:55:18",
+      "title": "Recherche Dépannage informatique à Saint-Jean-de-Losne",
       "is_remote": false,
       "poster_type": "unknown",
       "description": "N/A",
@@ -40156,8 +39782,8 @@
     },
     "https://www.allovoisins.com/v/paysagiste-amenagement-du-jardin": {
       "first_seen": "2026-04-01 09:30:40",
-      "last_seen": "2026-04-24 07:28:49",
-      "title": "Cherche Paysagiste - Aménagement du jardin à Tournefeuille",
+      "last_seen": "2026-04-24 08:55:18",
+      "title": "Cherche Paysagiste - Aménagement du jardin à Brezolles",
       "is_remote": false,
       "poster_type": "unknown",
       "description": "N/A",
@@ -40192,8 +39818,8 @@
     },
     "https://www.allovoisins.com/v/serveur-maitre-d-hotel": {
       "first_seen": "2026-04-01 09:30:40",
-      "last_seen": "2026-04-24 07:28:49",
-      "title": "Cherche Serveur - Maître d'hôtel à La Jarrie-Audouin",
+      "last_seen": "2026-04-24 08:55:18",
+      "title": "Recherche Serveur - Maître d'hôtel à Les Lilas",
       "is_remote": false,
       "poster_type": "unknown",
       "description": "N/A",
@@ -40204,8 +39830,8 @@
     },
     "https://www.allovoisins.com/v/entretien-reparation-autres-vehicules": {
       "first_seen": "2026-04-01 09:30:40",
-      "last_seen": "2026-04-24 07:28:49",
-      "title": "Cherche Entretien - Réparation autres véhicules à Ille-sur-Têt",
+      "last_seen": "2026-04-24 08:55:18",
+      "title": "Recherche Entretien - Réparation autres véhicules à Kembs",
       "is_remote": false,
       "poster_type": "unknown",
       "description": "N/A",
@@ -40324,8 +39950,8 @@
     },
     "https://www.allovoisins.com/v/aide-a-domicile": {
       "first_seen": "2026-04-01 09:30:40",
-      "last_seen": "2026-04-24 07:28:49",
-      "title": "Recherche Aide à domicile à Caux",
+      "last_seen": "2026-04-24 08:55:18",
+      "title": "Recherche Aide à domicile à Paris",
       "is_remote": false,
       "poster_type": "unknown",
       "description": "N/A",
@@ -40372,8 +39998,8 @@
     },
     "https://www.allovoisins.com/v/pose-de-parquet-revetement-de-sol": {
       "first_seen": "2026-04-01 09:30:40",
-      "last_seen": "2026-04-24 07:28:49",
-      "title": "Cherche Pose de parquet - Revêtement de sol à Lanester",
+      "last_seen": "2026-04-24 08:55:18",
+      "title": "Cherche Pose de parquet - Revêtement de sol à Hazebrouck",
       "is_remote": false,
       "poster_type": "unknown",
       "description": "N/A",
@@ -40804,7 +40430,7 @@
     },
     "https://www.allovoisins.com/v/baby-sitting": {
       "first_seen": "2026-04-02 11:00:23",
-      "last_seen": "2026-04-24 07:28:49",
+      "last_seen": "2026-04-24 08:55:18",
       "title": "Recherche Baby sitting Ă  Amboise",
       "is_remote": false,
       "poster_type": "unknown",
@@ -40996,8 +40622,8 @@
     },
     "https://www.allovoisins.com/v/transport-de-vehicules-remorquage": {
       "first_seen": "2026-04-02 11:00:23",
-      "last_seen": "2026-04-24 07:28:49",
-      "title": "Recherche Transport de véhicules - Remorquage à Fenouillet",
+      "last_seen": "2026-04-24 08:55:18",
+      "title": "Recherche Transport de véhicules - Remorquage à La Roche-Jaudy",
       "is_remote": false,
       "poster_type": "unknown",
       "description": "N/A",
@@ -41188,8 +40814,8 @@
     },
     "https://www.allovoisins.com/v/taille-de-haies-et-d-arbustes": {
       "first_seen": "2026-04-02 11:00:23",
-      "last_seen": "2026-04-24 07:28:49",
-      "title": "Cherche Taille de haies et d'arbustes à Saint-Martin-d'Hères",
+      "last_seen": "2026-04-24 08:55:18",
+      "title": "Recherche Taille de haies et d'arbustes à Houlgate",
       "is_remote": false,
       "poster_type": "employer",
       "description": "N/A",
@@ -41488,7 +41114,7 @@
     },
     "https://www.codeur.com/projects/479211-creation-site-web": {
       "first_seen": "2026-04-02 11:00:23",
-      "last_seen": "2026-04-02 11:00:23",
+      "last_seen": "2026-04-24 08:55:18",
       "title": "Creation site web",
       "is_remote": true,
       "poster_type": "unknown",
@@ -41560,8 +41186,8 @@
     },
     "https://www.allovoisins.com/r/0/93/0/0/location-vente/Parking-stockage-hivernage": {
       "first_seen": "2026-04-03 06:36:56",
-      "last_seen": "2026-04-24 07:28:49",
-      "title": "Louer un local stockage / garde meuble / local entreposage - Mantes-la-Ville",
+      "last_seen": "2026-04-24 08:55:18",
+      "title": "Prêt place de parking / parking - Tillé",
       "is_remote": false,
       "poster_type": "unknown",
       "description": "Durée : 365 jours",
@@ -41584,8 +41210,8 @@
     },
     "https://www.allovoisins.com/r/0/11/0/0/location-vente/Outillage": {
       "first_seen": "2026-04-03 06:36:56",
-      "last_seen": "2026-04-24 07:28:49",
-      "title": "Louer une taille haie thermique - Sainte-Foy",
+      "last_seen": "2026-04-24 08:55:18",
+      "title": "Location motoculteur - Brumath",
       "is_remote": false,
       "poster_type": "employer",
       "description": "Durée : 1 jour",
@@ -41620,8 +41246,8 @@
     },
     "https://www.allovoisins.com/r/0/17/0/0/location-vente/Electromenager": {
       "first_seen": "2026-04-03 06:36:56",
-      "last_seen": "2026-04-18 06:42:58",
-      "title": "Louer un aspirateur - Paris",
+      "last_seen": "2026-04-24 08:55:18",
+      "title": "Louer un nettoyeur vapeur mĂ©nager - Franconville",
       "is_remote": false,
       "poster_type": "unknown",
       "description": "Durée : 1 jour",
@@ -41752,7 +41378,7 @@
     },
     "https://www.allovoisins.com/v/livraison-de-courses": {
       "first_seen": "2026-04-03 06:36:56",
-      "last_seen": "2026-04-24 07:28:49",
+      "last_seen": "2026-04-24 08:55:18",
       "title": "Recherche Livraison de courses à Cosne-Cours-sur-Loire",
       "is_remote": false,
       "poster_type": "unknown",
@@ -42376,8 +42002,8 @@
     },
     "https://www.allovoisins.com/r/0/2/0/0/location-vente/Outillage-entretien": {
       "first_seen": "2026-04-03 06:36:56",
-      "last_seen": "2026-04-23 10:28:43",
-      "title": "Louer une pompe (outillage) - Sainte-Savine",
+      "last_seen": "2026-04-24 08:55:18",
+      "title": "Louer une agrafeuse cloueuse électrique - Ballaison",
       "is_remote": false,
       "poster_type": "unknown",
       "description": "Durée : 1 jour",
@@ -42400,15 +42026,15 @@
     },
     "https://www.allovoisins.com/r/0/79/0/0/location-vente/Remorque-accessoires-auto": {
       "first_seen": "2026-04-03 06:36:56",
-      "last_seen": "2026-04-21 10:59:04",
-      "title": "Location chargeur de batterie auto moto - Toulouse",
+      "last_seen": "2026-04-24 08:55:18",
+      "title": "Location remorque auto - Salies-du-Salat",
       "is_remote": false,
       "poster_type": "unknown",
-      "description": "N/A",
+      "description": "Durée : 1 jour",
       "confidence": "MEDIUM",
       "classification": "on-site",
-      "reasoning": "NLP fallback classification",
-      "description_source": "listing_page"
+      "reasoning": "NLP Analysis: Ambiguous signals (remote: 0, onsite: 0)",
+      "description_source": "detail_page"
     },
     "https://www.allovoisins.com/r/0/12/0/0/location-vente/Equipement-piscine": {
       "first_seen": "2026-04-03 06:36:56",
@@ -42472,14 +42098,14 @@
     },
     "https://www.codeur.com/projects/480441-recherche-developpeur": {
       "first_seen": "2026-04-03 06:36:56",
-      "last_seen": "2026-04-03 06:36:56",
+      "last_seen": "2026-04-24 08:55:18",
       "title": "Recherche développeur",
-      "is_remote": true,
+      "is_remote": false,
       "poster_type": "employer",
-      "description": "94 freelances ont répondu à ce projet 52 propositions de devis en moins de 2h Montant moyen des devis proposés : 23 650 € Estimation du délai : 32 jours",
-      "confidence": "HIGH",
-      "classification": "remote",
-      "reasoning": "LLM: Développeur = travail digital sans contrainte lieu",
+      "description": "99 freelances ont répondu à ce projet 52 propositions de devis en moins de 2h Montant moyen des devis proposés : 23 000 € Estimation du délai : 33 jours",
+      "confidence": "MEDIUM",
+      "classification": "on-site",
+      "reasoning": "NLP Analysis: Ambiguous signals (remote: 0, onsite: 0)",
       "description_source": "detail_page"
     },
     "https://www.codeur.com/projects/480322": {
@@ -42664,7 +42290,7 @@
     },
     "https://www.allovoisins.com/v/garde-chat": {
       "first_seen": "2026-04-03 08:20:55",
-      "last_seen": "2026-04-24 07:28:49",
+      "last_seen": "2026-04-24 08:55:18",
       "title": "Cherche Garde chat à Houchin",
       "is_remote": false,
       "poster_type": "unknown",
@@ -46420,7 +46046,7 @@
     },
     "https://www.allovoisins.com/v/manucure": {
       "first_seen": "2026-04-04 06:33:05",
-      "last_seen": "2026-04-24 07:28:49",
+      "last_seen": "2026-04-24 08:55:18",
       "title": "Cherche Manucure à Le Mans",
       "is_remote": false,
       "poster_type": "unknown",
@@ -46924,7 +46550,7 @@
     },
     "https://www.allovoisins.com/v/comptabilite": {
       "first_seen": "2026-04-04 07:49:49",
-      "last_seen": "2026-04-24 07:28:49",
+      "last_seen": "2026-04-24 08:55:18",
       "title": "Recherche Comptabilité à Libourne",
       "is_remote": false,
       "poster_type": "unknown",
@@ -47104,8 +46730,8 @@
     },
     "https://www.allovoisins.com/r/0/3/0/0/location-vente/Btp-chantier": {
       "first_seen": "2026-04-04 07:49:49",
-      "last_seen": "2026-04-24 07:28:49",
-      "title": "Louer une pelleteuse / minipelle / mini pelle - Le Vignau",
+      "last_seen": "2026-04-24 08:55:18",
+      "title": "Location clôture mobile de chantier - Dieppe",
       "is_remote": false,
       "poster_type": "unknown",
       "description": "Durée : 1 jour",
@@ -50344,8 +49970,8 @@
     },
     "https://www.allovoisins.com/v/architecte-maitre-d-oeuvre": {
       "first_seen": "2026-04-05 06:47:59",
-      "last_seen": "2026-04-23 10:28:43",
-      "title": "Recherche Architecte - Maître d'oeuvre à Segré-en-Anjou Bleu",
+      "last_seen": "2026-04-24 08:55:18",
+      "title": "Cherche Architecte - Maître d'oeuvre à Le Pallet",
       "is_remote": false,
       "poster_type": "unknown",
       "description": "N/A",
@@ -51040,8 +50666,8 @@
     },
     "https://www.allovoisins.com/v/artisan-d-art": {
       "first_seen": "2026-04-05 06:47:59",
-      "last_seen": "2026-04-17 10:28:55",
-      "title": "Recherche Artisan d'art à Soulangis",
+      "last_seen": "2026-04-24 08:55:18",
+      "title": "Cherche Artisan d'art à Poitiers",
       "is_remote": false,
       "poster_type": "unknown",
       "description": "N/A",
@@ -51256,8 +50882,8 @@
     },
     "https://www.allovoisins.com/v/preparation-nettoyage-de-salle": {
       "first_seen": "2026-04-05 07:30:26",
-      "last_seen": "2026-04-24 07:28:49",
-      "title": "Cherche PrĂ©paration - nettoyage de salle Ă Itteville",
+      "last_seen": "2026-04-24 08:55:18",
+      "title": "Cherche PrĂ©paration - nettoyage de salle Ă  Itteville",
       "is_remote": false,
       "poster_type": "unknown",
       "description": "N/A",
@@ -54076,8 +53702,8 @@
     },
     "https://www.allovoisins.com/r/0/94/0/0/location-vente/Jardin-jardin-potager": {
       "first_seen": "2026-04-07 09:30:21",
-      "last_seen": "2026-04-23 10:28:43",
-      "title": "Location jardin / espace vert - Angerville-la-Campagne",
+      "last_seen": "2026-04-24 08:55:18",
+      "title": "Location jardin à cultiver / jardin ouvrier / jardin potager / lopin de terre - Poitiers",
       "is_remote": false,
       "poster_type": "unknown",
       "description": "N/A",
@@ -54124,14 +53750,14 @@
     },
     "https://www.codeur.com/projects/480595-expert-reseaux-informatiques-pour-tpe": {
       "first_seen": "2026-04-07 09:30:21",
-      "last_seen": "2026-04-07 11:21:29",
+      "last_seen": "2026-04-24 08:55:18",
       "title": "Expert réseaux informatiques pour TPE",
-      "is_remote": true,
-      "poster_type": "employer",
+      "is_remote": false,
+      "poster_type": "unknown",
       "description": "7 freelances ont répondu à ce projet 6 propositions de devis en moins de 2h Montant moyen des devis proposés : 3 100 € Estimation du délai : 5 jours",
-      "confidence": "HIGH",
-      "classification": "remote",
-      "reasoning": "LLM: Projet réseaux informatiques freelance, sans contrainte lieu",
+      "confidence": "MEDIUM",
+      "classification": "on-site",
+      "reasoning": "NLP Analysis: Ambiguous signals (remote: 0, onsite: 0)",
       "description_source": "detail_page"
     },
     "https://www.codeur.com/projects/480477-besoin-d-aide-seo": {
@@ -57652,14 +57278,14 @@
     },
     "https://www.codeur.com/projects/481024-recherche-developpeur-web": {
       "first_seen": "2026-04-10 09:39:13",
-      "last_seen": "2026-04-10 11:23:30",
+      "last_seen": "2026-04-24 08:55:18",
       "title": "Recherche développeur web",
       "is_remote": true,
       "poster_type": "employer",
-      "description": "101 freelances ont répondu à ce projet 59 propositions de devis en moins de 2h Montant moyen des devis proposés : 3 400 € Estimation du délai : 17 jours",
-      "confidence": "HIGH",
+      "description": "103 freelances ont répondu à ce projet 60 propositions de devis en moins de 2h Montant moyen des devis proposés : 3 400 € Estimation du délai : 17 jours",
+      "confidence": "MEDIUM",
       "classification": "remote",
-      "reasoning": "LLM: Développement web sans contrainte de lieu",
+      "reasoning": "NLP Analysis: Strong remote indicators (score: 5 vs 0)",
       "description_source": "detail_page"
     },
     "https://www.codeur.com/projects/480848-recherche-un-developpeur-en-e-commerce": {
@@ -58240,8 +57866,8 @@
     },
     "https://www.allovoisins.com/v/conseil-fiscal-declaration-d-impots": {
       "first_seen": "2026-04-11 07:08:29",
-      "last_seen": "2026-04-22 08:23:21",
-      "title": "Recherche Conseil fiscal - Déclaration d'impôts à Vichy",
+      "last_seen": "2026-04-24 08:55:18",
+      "title": "Recherche Conseil fiscal - DĂ©claration d'impĂ´ts Ă Beaucourt",
       "is_remote": false,
       "poster_type": "unknown",
       "description": "N/A",
@@ -61480,7 +61106,7 @@
     },
     "https://www.allovoisins.com/r/0/87/0/0/location-vente/Maison": {
       "first_seen": "2026-04-17 07:54:20",
-      "last_seen": "2026-04-24 07:28:49",
+      "last_seen": "2026-04-24 08:55:18",
       "title": "Location maison / villa - Soye-en-Septaine",
       "is_remote": false,
       "poster_type": "unknown",
@@ -64660,7 +64286,7 @@
     },
     "https://www.codeur.com/projects/470580-creation-de-site-wordpress-sous-elementor": {
       "first_seen": "2026-04-22 08:23:21",
-      "last_seen": "2026-04-22 08:23:21",
+      "last_seen": "2026-04-24 08:55:18",
       "title": "Création de site wordpress sous ELEMENTOR",
       "is_remote": false,
       "poster_type": "unknown",
@@ -65980,7 +65606,7 @@
     },
     "https://www.allovoisins.com/r/199/2/41662/0/location-Shampouineuse-Aussillon": {
       "first_seen": "2026-04-24 07:28:49",
-      "last_seen": "2026-04-24 07:28:49",
+      "last_seen": "2026-04-24 08:55:18",
       "title": "Location shampouineuse - Aussillon",
       "is_remote": false,
       "poster_type": "unknown",
@@ -65992,7 +65618,7 @@
     },
     "https://www.allovoisins.com/r/54/2/12492/0/location-Coupe-carreaux-carrelette-La-rochelle": {
       "first_seen": "2026-04-24 07:28:49",
-      "last_seen": "2026-04-24 07:28:49",
+      "last_seen": "2026-04-24 08:55:18",
       "title": "Location coupe carreaux / carrelette - La Rochelle",
       "is_remote": false,
       "poster_type": "unknown",
@@ -66004,7 +65630,7 @@
     },
     "https://www.allovoisins.com/r/571/12/42117/0/location-Salon-de-jardin-tables-et-chaises-Sollies-ville": {
       "first_seen": "2026-04-24 07:28:49",
-      "last_seen": "2026-04-24 07:28:49",
+      "last_seen": "2026-04-24 08:55:18",
       "title": "Location salon de jardin (tables et chaises) - Solliès-Ville",
       "is_remote": false,
       "poster_type": "unknown",
@@ -66016,7 +65642,7 @@
     },
     "https://www.allovoisins.com/r/4201/75/43167/0/location-Citadine-petite-voiture-voiture-economique-Vaujours": {
       "first_seen": "2026-04-24 07:28:49",
-      "last_seen": "2026-04-24 07:28:49",
+      "last_seen": "2026-04-24 08:55:18",
       "title": "Location citadine / petite voiture / voiture économique - Vaujours",
       "is_remote": false,
       "poster_type": "unknown",
@@ -66028,7 +65654,7 @@
     },
     "https://www.allovoisins.com/r/158/2/42819/0/location-Ponceuse-La-chapelle-mouliere": {
       "first_seen": "2026-04-24 07:28:49",
-      "last_seen": "2026-04-24 07:28:49",
+      "last_seen": "2026-04-24 08:55:18",
       "title": "Louer une ponceuse - La Chapelle-Moulière",
       "is_remote": false,
       "poster_type": "unknown",
@@ -66040,7 +65666,7 @@
     },
     "https://www.allovoisins.com/r/436/11/38687/0/location-Broyeur-de-vegetaux-Feternes": {
       "first_seen": "2026-04-24 07:28:49",
-      "last_seen": "2026-04-24 07:28:49",
+      "last_seen": "2026-04-24 08:55:18",
       "title": "Louer un broyeur de végétaux - Féternes",
       "is_remote": false,
       "poster_type": "unknown",
@@ -66052,7 +65678,7 @@
     },
     "https://www.allovoisins.com/r/4356/93/19918/0/location-Garage-Cenon": {
       "first_seen": "2026-04-24 07:28:49",
-      "last_seen": "2026-04-24 07:28:49",
+      "last_seen": "2026-04-24 08:55:18",
       "title": "Louer un garage - Cenon",
       "is_remote": false,
       "poster_type": "unknown",
@@ -66076,7 +65702,7 @@
     },
     "https://www.allovoisins.com/r/1324/25/42337/0/location-Chaise-evenementiel-Cavaillon": {
       "first_seen": "2026-04-24 07:28:49",
-      "last_seen": "2026-04-24 07:28:49",
+      "last_seen": "2026-04-24 08:55:18",
       "title": "Louer une chaise (evènementiel) - Cavaillon",
       "is_remote": false,
       "poster_type": "unknown",
@@ -66088,7 +65714,7 @@
     },
     "https://www.allovoisins.com/r/436/11/28043/0/location-Broyeur-de-vegetaux-Ahuille": {
       "first_seen": "2026-04-24 07:28:49",
-      "last_seen": "2026-04-24 07:28:49",
+      "last_seen": "2026-04-24 08:55:18",
       "title": "Location broyeur de vĂ©gĂ©taux - AhuillĂ©",
       "is_remote": false,
       "poster_type": "unknown",
@@ -66100,7 +65726,7 @@
     },
     "https://www.allovoisins.com/r/436/11/16795/0/location-Broyeur-de-vegetaux-Rochefort-samson": {
       "first_seen": "2026-04-24 07:28:49",
-      "last_seen": "2026-04-24 07:28:49",
+      "last_seen": "2026-04-24 08:55:18",
       "title": "Location broyeur de vĂ©gĂ©taux - Rochefort-Samson",
       "is_remote": false,
       "poster_type": "unknown",
@@ -66112,7 +65738,7 @@
     },
     "https://www.allovoisins.com/r/199/2/40198/0/location-Shampouineuse-Jouy-en-josas": {
       "first_seen": "2026-04-24 07:28:49",
-      "last_seen": "2026-04-24 07:28:49",
+      "last_seen": "2026-04-24 08:55:18",
       "title": "Louer une shampouineuse - Jouy-en-Josas",
       "is_remote": false,
       "poster_type": "unknown",
@@ -66124,7 +65750,7 @@
     },
     "https://www.allovoisins.com/r/4361/93/40307/0/location-Local-stockage-garde-meuble-local-entreposage-Mantes-la-ville": {
       "first_seen": "2026-04-24 07:28:49",
-      "last_seen": "2026-04-24 07:28:49",
+      "last_seen": "2026-04-24 08:55:18",
       "title": "Louer un local stockage / garde meuble / local entreposage - Mantes-la-Ville",
       "is_remote": false,
       "poster_type": "unknown",
@@ -66136,7 +65762,7 @@
     },
     "https://www.allovoisins.com/r/4201/75/20441/0/location-Citadine-petite-voiture-voiture-economique-Montpellier": {
       "first_seen": "2026-04-24 07:28:49",
-      "last_seen": "2026-04-24 07:28:49",
+      "last_seen": "2026-04-24 08:55:18",
       "title": "Louer une citadine / petite voiture / voiture économique - Montpellier",
       "is_remote": false,
       "poster_type": "unknown",
@@ -66148,7 +65774,7 @@
     },
     "https://www.allovoisins.com/r/4344/88/10878/0/location-Appartement-Aix-en-provence": {
       "first_seen": "2026-04-24 07:28:49",
-      "last_seen": "2026-04-24 07:28:49",
+      "last_seen": "2026-04-24 08:55:18",
       "title": "Acheter un appartement - Aix-en-Provence",
       "is_remote": false,
       "poster_type": "unknown",
@@ -66160,7 +65786,7 @@
     },
     "https://www.allovoisins.com/r/4930/11/33358/0/location-Debroussailleuse-Campagne-les-hesdin": {
       "first_seen": "2026-04-24 07:28:49",
-      "last_seen": "2026-04-24 07:28:49",
+      "last_seen": "2026-04-24 08:55:18",
       "title": "Location débroussailleuse - Campagne-lès-Hesdin",
       "is_remote": false,
       "poster_type": "unknown",
@@ -66172,7 +65798,7 @@
     },
     "https://www.allovoisins.com/r/2/2/38446/0/location-Agrafeuse-outillage-Annecy": {
       "first_seen": "2026-04-24 07:28:49",
-      "last_seen": "2026-04-24 07:28:49",
+      "last_seen": "2026-04-24 08:55:18",
       "title": "Location agrafeuse (outillage) - Annecy",
       "is_remote": false,
       "poster_type": "unknown",
@@ -66184,7 +65810,7 @@
     },
     "https://www.allovoisins.com/r/5261/79/24210/0/location-Remorque-refrigeree-fourgon-frigorifique-Reze": {
       "first_seen": "2026-04-24 07:28:49",
-      "last_seen": "2026-04-24 07:28:49",
+      "last_seen": "2026-04-24 08:55:18",
       "title": "Location remorque réfrigérée / fourgon frigorifique - Rezé",
       "is_remote": false,
       "poster_type": "unknown",
@@ -66220,7 +65846,7 @@
     },
     "https://www.allovoisins.com/r/642/17/24084/0/location-Centrifugeuse-Nantes": {
       "first_seen": "2026-04-24 07:28:49",
-      "last_seen": "2026-04-24 07:28:49",
+      "last_seen": "2026-04-24 08:55:18",
       "title": "Location centrifugeuse - Nantes",
       "is_remote": false,
       "poster_type": "unknown",
@@ -66232,7 +65858,7 @@
     },
     "https://www.allovoisins.com/r/5259/2/34423/0/location-Scie-sabre-Anglet": {
       "first_seen": "2026-04-24 07:28:49",
-      "last_seen": "2026-04-24 07:28:49",
+      "last_seen": "2026-04-24 08:55:18",
       "title": "Louer une scie sabre - Anglet",
       "is_remote": false,
       "poster_type": "unknown",
@@ -66268,7 +65894,7 @@
     },
     "https://www.allovoisins.com/r/613/14/14829/0/location-Plante-d-exterieur-plan-de-legume-Plemet": {
       "first_seen": "2026-04-24 07:28:49",
-      "last_seen": "2026-04-24 07:28:49",
+      "last_seen": "2026-04-24 08:55:18",
       "title": "Location plante d'extérieur / plan de légume - Plémet",
       "is_remote": false,
       "poster_type": "unknown",
@@ -66280,7 +65906,7 @@
     },
     "https://www.allovoisins.com/r/4361/93/33560/0/location-Local-stockage-garde-meuble-local-entreposage-Randan": {
       "first_seen": "2026-04-24 07:28:49",
-      "last_seen": "2026-04-24 07:28:49",
+      "last_seen": "2026-04-24 08:55:18",
       "title": "Louer un local stockage / garde meuble / local entreposage - Randan",
       "is_remote": false,
       "poster_type": "unknown",
@@ -66292,7 +65918,7 @@
     },
     "https://www.allovoisins.com/r/4222/79/41757/0/location-Coffre-et-barres-de-toit-Carmaux": {
       "first_seen": "2026-04-24 07:28:49",
-      "last_seen": "2026-04-24 07:28:49",
+      "last_seen": "2026-04-24 08:55:18",
       "title": "Location coffre et barres de toit - Carmaux",
       "is_remote": false,
       "poster_type": "unknown",
@@ -66304,7 +65930,7 @@
     },
     "https://www.allovoisins.com/r/980/19/25792/0/location-Chaise-usage-domestique-Distre": {
       "first_seen": "2026-04-24 07:28:49",
-      "last_seen": "2026-04-24 07:28:49",
+      "last_seen": "2026-04-24 08:55:18",
       "title": "Location chaise (usage domestique) - Distré",
       "is_remote": false,
       "poster_type": "unknown",
@@ -66316,7 +65942,7 @@
     },
     "https://www.allovoisins.com/r/490/11/21388/0/location-Nettoyeur-haute-pression-karcher-Veuil": {
       "first_seen": "2026-04-24 07:28:49",
-      "last_seen": "2026-04-24 07:28:49",
+      "last_seen": "2026-04-24 08:55:18",
       "title": "Louer un nettoyeur haute pression / karcher - Veuil",
       "is_remote": false,
       "poster_type": "unknown",
@@ -66436,7 +66062,7 @@
     },
     "https://www.allovoisins.com/r/228/3/31961/0/location-Betonniere-toupie-a-beton-Saint-germer-de-fly": {
       "first_seen": "2026-04-24 07:28:49",
-      "last_seen": "2026-04-24 07:28:49",
+      "last_seen": "2026-04-24 08:55:18",
       "title": "Louer une bétonnière / toupie à béton - Saint-Germer-de-Fly",
       "is_remote": false,
       "poster_type": "unknown",
@@ -66637,7 +66263,367 @@
       "classification": "remote",
       "reasoning": "NLP Analysis: Strong remote indicators (score: 5 vs 0)",
       "description_source": "detail_page"
+    },
+    "https://www.allovoisins.com/r/257/3/29351/0/location-Pelleteuse-minipelle-mini-pelle-Malguenac": {
+      "first_seen": "2026-04-24 08:55:18",
+      "last_seen": "2026-04-24 08:55:18",
+      "title": "Prêt pelleteuse / minipelle / mini pelle - Malguénac",
+      "is_remote": false,
+      "poster_type": "unknown",
+      "description": "Durée : 1 jour",
+      "confidence": "MEDIUM",
+      "classification": "on-site",
+      "reasoning": "NLP Analysis: Ambiguous signals (remote: 0, onsite: 0)",
+      "description_source": "detail_page"
+    },
+    "https://www.allovoisins.com/r/490/11/31818/0/location-Nettoyeur-haute-pression-karcher-Orry-la-ville": {
+      "first_seen": "2026-04-24 08:55:18",
+      "last_seen": "2026-04-24 08:55:18",
+      "title": "Location nettoyeur haute pression / karcher - Orry-la-Ville",
+      "is_remote": false,
+      "poster_type": "unknown",
+      "description": "Durée : 1 jour",
+      "confidence": "MEDIUM",
+      "classification": "on-site",
+      "reasoning": "NLP Analysis: Ambiguous signals (remote: 0, onsite: 0)",
+      "description_source": "detail_page"
+    },
+    "https://www.allovoisins.com/r/4356/93/29313/0/location-Garage-Noyal-muzillac": {
+      "first_seen": "2026-04-24 08:55:18",
+      "last_seen": "2026-04-24 08:55:18",
+      "title": "Location garage - Noyal-Muzillac",
+      "is_remote": false,
+      "poster_type": "unknown",
+      "description": "Durée : 365 jours",
+      "confidence": "MEDIUM",
+      "classification": "on-site",
+      "reasoning": "NLP Analysis: Ambiguous signals (remote: 0, onsite: 0)",
+      "description_source": "detail_page"
+    },
+    "https://www.allovoisins.com/r/487/11/19367/0/location-Motobineuse-Castelginest": {
+      "first_seen": "2026-04-24 08:55:18",
+      "last_seen": "2026-04-24 08:55:18",
+      "title": "Location motobineuse - Castelginest",
+      "is_remote": false,
+      "poster_type": "unknown",
+      "description": "Durée : 1 jour",
+      "confidence": "MEDIUM",
+      "classification": "on-site",
+      "reasoning": "NLP Analysis: Ambiguous signals (remote: 0, onsite: 0)",
+      "description_source": "detail_page"
+    },
+    "https://www.allovoisins.com/r/387/7/36415/0/location-Sangles-de-transport-Orlienas": {
+      "first_seen": "2026-04-24 08:55:18",
+      "last_seen": "2026-04-24 08:55:18",
+      "title": "Location sangles de transport - Orliénas",
+      "is_remote": false,
+      "poster_type": "unknown",
+      "description": "Durée : 1 jour",
+      "confidence": "MEDIUM",
+      "classification": "on-site",
+      "reasoning": "NLP Analysis: Ambiguous signals (remote: 0, onsite: 0)",
+      "description_source": "detail_page"
+    },
+    "https://www.allovoisins.com/r/158/2/33862/0/location-Ponceuse-Cournon-d-auvergne": {
+      "first_seen": "2026-04-24 08:55:18",
+      "last_seen": "2026-04-24 08:55:18",
+      "title": "Louer une ponceuse - Cournon-d'Auvergne",
+      "is_remote": false,
+      "poster_type": "unknown",
+      "description": "Durée : 1 jour",
+      "confidence": "MEDIUM",
+      "classification": "on-site",
+      "reasoning": "NLP Analysis: Ambiguous signals (remote: 0, onsite: 0)",
+      "description_source": "detail_page"
+    },
+    "https://www.allovoisins.com/r/3/2/38471/0/location-Agrafeuse-cloueuse-electrique-Ballaison": {
+      "first_seen": "2026-04-24 08:55:18",
+      "last_seen": "2026-04-24 08:55:18",
+      "title": "Louer une agrafeuse cloueuse électrique - Ballaison",
+      "is_remote": false,
+      "poster_type": "unknown",
+      "description": "Durée : 1 jour",
+      "confidence": "MEDIUM",
+      "classification": "on-site",
+      "reasoning": "NLP Analysis: Ambiguous signals (remote: 0, onsite: 0)",
+      "description_source": "detail_page"
+    },
+    "https://www.allovoisins.com/r/5142/78/66021/0/location-Vehicule-utilitaire-camionnette-Dijon": {
+      "first_seen": "2026-04-24 08:55:18",
+      "last_seen": "2026-04-24 08:55:18",
+      "title": "Location véhicule utilitaire / camionnette - Dijon",
+      "is_remote": false,
+      "poster_type": "unknown",
+      "description": "N/A",
+      "confidence": "HIGH",
+      "classification": "on-site",
+      "reasoning": "Obvious on-site work: camion",
+      "description_source": "listing_page"
+    },
+    "https://www.allovoisins.com/r/506/11/76474/0/location-Pulverisateur-thermique-Le-malesherbois": {
+      "first_seen": "2026-04-24 08:55:18",
+      "last_seen": "2026-04-24 08:55:18",
+      "title": "Location pulvérisateur thermique - Le Malesherbois",
+      "is_remote": false,
+      "poster_type": "unknown",
+      "description": "Durée : 1 jour",
+      "confidence": "MEDIUM",
+      "classification": "on-site",
+      "reasoning": "NLP Analysis: Ambiguous signals (remote: 0, onsite: 0)",
+      "description_source": "detail_page"
+    },
+    "https://www.allovoisins.com/r/4234/79/32499/0/location-Remorque-auto-Calais": {
+      "first_seen": "2026-04-24 08:55:18",
+      "last_seen": "2026-04-24 08:55:18",
+      "title": "Louer une remorque auto - Calais",
+      "is_remote": false,
+      "poster_type": "unknown",
+      "description": "Durée : 1 jour",
+      "confidence": "MEDIUM",
+      "classification": "on-site",
+      "reasoning": "NLP Analysis: Ambiguous signals (remote: 0, onsite: 0)",
+      "description_source": "detail_page"
+    },
+    "https://www.allovoisins.com/r/76/2/82393/0/location-Douille-Lamballe-armor": {
+      "first_seen": "2026-04-24 08:55:18",
+      "last_seen": "2026-04-24 08:55:18",
+      "title": "Location douille - Lamballe-Armor",
+      "is_remote": false,
+      "poster_type": "unknown",
+      "description": "Durée : 1 jour",
+      "confidence": "MEDIUM",
+      "classification": "on-site",
+      "reasoning": "NLP Analysis: Ambiguous signals (remote: 0, onsite: 0)",
+      "description_source": "detail_page"
+    },
+    "https://www.allovoisins.com/r/5363/78/24194/0/location-Remorque-plateau-Saint-etienne-de-montluc": {
+      "first_seen": "2026-04-24 08:55:18",
+      "last_seen": "2026-04-24 08:55:18",
+      "title": "Louer une remorque plateau - Saint-Étienne-de-Montluc",
+      "is_remote": false,
+      "poster_type": "unknown",
+      "description": "Durée : 1 jour",
+      "confidence": "MEDIUM",
+      "classification": "on-site",
+      "reasoning": "NLP Analysis: Strong on-site indicators (score: 2 vs 0)",
+      "description_source": "detail_page"
+    },
+    "https://www.allovoisins.com/r/4343/87/13212/0/location-Maison-villa-Soye-en-septaine": {
+      "first_seen": "2026-04-24 08:55:18",
+      "last_seen": "2026-04-24 08:55:18",
+      "title": "Location maison / villa - Soye-en-Septaine",
+      "is_remote": false,
+      "poster_type": "unknown",
+      "description": "Durée : 365 jours",
+      "confidence": "MEDIUM",
+      "classification": "on-site",
+      "reasoning": "NLP Analysis: Strong on-site indicators (score: 2 vs 0)",
+      "description_source": "detail_page"
+    },
+    "https://www.allovoisins.com/r/4361/93/29313/0/location-Local-stockage-garde-meuble-local-entreposage-Noyal-muzillac": {
+      "first_seen": "2026-04-24 08:55:18",
+      "last_seen": "2026-04-24 08:55:18",
+      "title": "Location local stockage / garde meuble / local entreposage - Noyal-Muzillac",
+      "is_remote": false,
+      "poster_type": "unknown",
+      "description": "Durée : 365 jours",
+      "confidence": "MEDIUM",
+      "classification": "on-site",
+      "reasoning": "NLP Analysis: Ambiguous signals (remote: 0, onsite: 0)",
+      "description_source": "detail_page"
+    },
+    "https://www.allovoisins.com/r/257/3/6917/0/location-Pelleteuse-minipelle-mini-pelle-Chery-chartreuve": {
+      "first_seen": "2026-04-24 08:55:18",
+      "last_seen": "2026-04-24 08:55:18",
+      "title": "Location pelleteuse / minipelle / mini pelle - Chéry-Chartreuve",
+      "is_remote": false,
+      "poster_type": "unknown",
+      "description": "Durée : 1 jour",
+      "confidence": "MEDIUM",
+      "classification": "on-site",
+      "reasoning": "NLP Analysis: Ambiguous signals (remote: 0, onsite: 0)",
+      "description_source": "detail_page"
+    },
+    "https://www.allovoisins.com/r/103/2/49517/0/location-Kit-d-outils-du-plombier-Lille": {
+      "first_seen": "2026-04-24 08:55:18",
+      "last_seen": "2026-04-24 08:55:18",
+      "title": "Location kit d'outils du plombier - Lille",
+      "is_remote": false,
+      "poster_type": "unknown",
+      "description": "Durée : 1 jour",
+      "confidence": "MEDIUM",
+      "classification": "on-site",
+      "reasoning": "NLP Analysis: Ambiguous signals (remote: 0, onsite: 0)",
+      "description_source": "detail_page"
+    },
+    "https://www.allovoisins.com/r/5142/78/49517/0/location-Vehicule-utilitaire-camionnette-Lille": {
+      "first_seen": "2026-04-24 08:55:18",
+      "last_seen": "2026-04-24 08:55:18",
+      "title": "Location véhicule utilitaire / camionnette - Lille",
+      "is_remote": false,
+      "poster_type": "unknown",
+      "description": "N/A",
+      "confidence": "HIGH",
+      "classification": "on-site",
+      "reasoning": "Obvious on-site work: camion",
+      "description_source": "listing_page"
+    },
+    "https://www.allovoisins.com/r/5142/78/23183/0/location-Vehicule-utilitaire-camionnette-Blois": {
+      "first_seen": "2026-04-24 08:55:18",
+      "last_seen": "2026-04-24 08:55:18",
+      "title": "Louer un véhicule utilitaire / camionnette - Blois",
+      "is_remote": false,
+      "poster_type": "unknown",
+      "description": "N/A",
+      "confidence": "HIGH",
+      "classification": "on-site",
+      "reasoning": "Obvious on-site work: camion",
+      "description_source": "listing_page"
+    },
+    "https://www.allovoisins.com/r/0/28/0/0/location-vente/Deguisement": {
+      "first_seen": "2026-04-24 08:55:18",
+      "last_seen": "2026-04-24 08:55:18",
+      "title": "Louer des chaussures / bottes femme (déguisement) - Sennecey-le-Grand",
+      "is_remote": false,
+      "poster_type": "unknown",
+      "description": "Durée : 2 jours",
+      "confidence": "MEDIUM",
+      "classification": "on-site",
+      "reasoning": "NLP Analysis: Ambiguous signals (remote: 0, onsite: 0)",
+      "description_source": "detail_page"
+    },
+    "https://www.codeur.com/projects/482212-realisation-video-reportage-photo-evenement-corporate-kapstone": {
+      "first_seen": "2026-04-24 08:55:18",
+      "last_seen": "2026-04-24 08:55:18",
+      "title": "Réalisation vidéo + reportage photo – Événement corporate (Kapstone)",
+      "is_remote": false,
+      "poster_type": "unknown",
+      "description": "5 freelances ont répondu à ce projet 5 propositions de devis en moins de 2h Montant moyen des devis proposés : 1 000 € Estimation du délai : 2 jours",
+      "confidence": "MEDIUM",
+      "classification": "on-site",
+      "reasoning": "NLP Analysis: Ambiguous signals (remote: 0, onsite: 0)",
+      "description_source": "detail_page"
+    },
+    "https://www.codeur.com/projects/482096-application-web-cv-design": {
+      "first_seen": "2026-04-24 08:55:18",
+      "last_seen": "2026-04-24 08:55:18",
+      "title": "Application Web CV Design",
+      "is_remote": true,
+      "poster_type": "unknown",
+      "description": "41 freelances ont répondu à ce projet 41 propositions de devis en moins de 2h Montant moyen des devis proposés : 1 300 € Estimation du délai : 8 jours",
+      "confidence": "MEDIUM",
+      "classification": "remote",
+      "reasoning": "NLP Analysis: Strong remote indicators (score: 7 vs 0)",
+      "description_source": "detail_page"
+    },
+    "https://www.codeur.com/projects/481968-specialiste-youtube": {
+      "first_seen": "2026-04-24 08:55:18",
+      "last_seen": "2026-04-24 08:55:18",
+      "title": "Spécialiste Youtube",
+      "is_remote": false,
+      "poster_type": "unknown",
+      "description": "7 freelances ont répondu à ce projet 7 propositions de devis en moins de 2h Montant moyen des devis proposés : 300 € Estimation du délai : 9 jours",
+      "confidence": "MEDIUM",
+      "classification": "on-site",
+      "reasoning": "NLP Analysis: Ambiguous signals (remote: 0, onsite: 0)",
+      "description_source": "detail_page"
+    },
+    "https://www.codeur.com/projects/481842-portage-d-un-logiciel-avec-l-aide-de-l-ia": {
+      "first_seen": "2026-04-24 08:55:18",
+      "last_seen": "2026-04-24 08:55:18",
+      "title": "Portage d'un logiciel avec l'aide de l'ia",
+      "is_remote": true,
+      "poster_type": "unknown",
+      "description": "13 freelances ont répondu à ce projet 10 propositions de devis en moins de 2h Montant moyen des devis proposés : 900 € Estimation du délai : 8 jours",
+      "confidence": "MEDIUM",
+      "classification": "remote",
+      "reasoning": "NLP Analysis: Strong remote indicators (score: 2 vs 0)",
+      "description_source": "detail_page"
+    },
+    "https://www.codeur.com/projects/481698-page-de-paiement-externe-evolution-du-site-wordpress-divi": {
+      "first_seen": "2026-04-24 08:55:18",
+      "last_seen": "2026-04-24 08:55:18",
+      "title": "Page de paiement externe + évolution du site WordPress (Divi)",
+      "is_remote": false,
+      "poster_type": "unknown",
+      "description": "42 freelances ont répondu à ce projet 28 propositions de devis en moins de 2h Montant moyen des devis proposés : 800 € Estimation du délai : 8 jours",
+      "confidence": "MEDIUM",
+      "classification": "on-site",
+      "reasoning": "NLP Analysis: Ambiguous signals (remote: 0, onsite: 0)",
+      "description_source": "detail_page"
+    },
+    "https://www.codeur.com/projects/481537-consultant-en-structuration-d-entreprise-juridique-administratif": {
+      "first_seen": "2026-04-24 08:55:18",
+      "last_seen": "2026-04-24 08:55:18",
+      "title": "Consultant en structuration d’entreprise (juridique + administratif),",
+      "is_remote": false,
+      "poster_type": "unknown",
+      "description": "12 freelances ont répondu à ce projet 8 propositions de devis en moins de 2h Montant moyen des devis proposés : 800 € Estimation du délai : 7 jours",
+      "confidence": "MEDIUM",
+      "classification": "on-site",
+      "reasoning": "NLP Analysis: Ambiguous signals (remote: 0, onsite: 0)",
+      "description_source": "detail_page"
+    },
+    "https://www.codeur.com/projects/481388-expert-prestashop": {
+      "first_seen": "2026-04-24 08:55:18",
+      "last_seen": "2026-04-24 08:55:18",
+      "title": "Expert PrestaShop",
+      "is_remote": false,
+      "poster_type": "unknown",
+      "description": "40 freelances ont répondu à ce projet 32 propositions de devis en moins de 2h Montant moyen des devis proposés : 450 € Estimation du délai : 1 jour",
+      "confidence": "MEDIUM",
+      "classification": "on-site",
+      "reasoning": "NLP Analysis: Ambiguous signals (remote: 0, onsite: 0)",
+      "description_source": "detail_page"
+    },
+    "https://www.codeur.com/projects/481234-recherche-prestataire-pour-montage-de-dossiers-administratifs-ao-btp": {
+      "first_seen": "2026-04-24 08:55:18",
+      "last_seen": "2026-04-24 08:55:18",
+      "title": "\"Recherche prestataire pour montage de dossiers administratifs AO BTP",
+      "is_remote": false,
+      "poster_type": "unknown",
+      "description": "9 freelances ont répondu à ce projet 6 propositions de devis en moins de 2h Montant moyen des devis proposés : 700 € Estimation du délai : 3 jours",
+      "confidence": "MEDIUM",
+      "classification": "on-site",
+      "reasoning": "NLP Analysis: Ambiguous signals (remote: 0, onsite: 0)",
+      "description_source": "detail_page"
+    },
+    "https://www.codeur.com/projects/480825-e-commerce": {
+      "first_seen": "2026-04-24 08:55:18",
+      "last_seen": "2026-04-24 08:55:18",
+      "title": "E-commerce",
+      "is_remote": false,
+      "poster_type": "unknown",
+      "description": "41 freelances ont répondu à ce projet 33 propositions de devis en moins de 2h Montant moyen des devis proposés : 500 € Estimation du délai : 5 jours",
+      "confidence": "MEDIUM",
+      "classification": "on-site",
+      "reasoning": "NLP Analysis: Ambiguous signals (remote: 0, onsite: 0)",
+      "description_source": "detail_page"
+    },
+    "https://www.codeur.com/projects/480713-creation-video-courte-pour-les-reseaux-sociaux": {
+      "first_seen": "2026-04-24 08:55:18",
+      "last_seen": "2026-04-24 08:55:18",
+      "title": "Création vidéo courte pour les réseaux sociaux",
+      "is_remote": false,
+      "poster_type": "unknown",
+      "description": "21 freelances ont répondu à ce projet 18 propositions de devis en moins de 2h Montant moyen des devis proposés : 500 € Estimation du délai : 8 jours",
+      "confidence": "MEDIUM",
+      "classification": "on-site",
+      "reasoning": "NLP Analysis: Ambiguous signals (remote: 0, onsite: 0)",
+      "description_source": "detail_page"
+    },
+    "https://www.codeur.com/projects/480292-claude-ia-specialiste-en-generative-site-web-seo": {
+      "first_seen": "2026-04-24 08:55:18",
+      "last_seen": "2026-04-24 08:55:18",
+      "title": "Claude IA *Spécialiste en générative site web - Seo",
+      "is_remote": true,
+      "poster_type": "unknown",
+      "description": "21 freelances ont répondu à ce projet 19 propositions de devis en moins de 2h Montant moyen des devis proposés : 750 € Estimation du délai : 5 jours",
+      "confidence": "MEDIUM",
+      "classification": "remote",
+      "reasoning": "NLP Analysis: Strong remote indicators (score: 5 vs 0)",
+      "description_source": "detail_page"
     }
   },
-  "last_update": "2026-04-24 07:28:49"
+  "last_update": "2026-04-24 08:55:18"
 }

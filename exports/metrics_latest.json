@@ -1,21 +1,21 @@
 {
-  "timestamp": "2026-04-27 07:30:59.343114",
-  "duration_seconds": 2124,
-  "jobs_scraped": 11876,
-  "jobs_analyzed": 516,
-  "new_jobs": 516,
-  "cached_jobs": 11360,
+  "timestamp": "2026-04-27 08:17:07.923954",
+  "duration_seconds": 4134,
+  "jobs_scraped": 27376,
+  "jobs_analyzed": 502,
+  "new_jobs": 502,
+  "cached_jobs": 26874,
   "remote_jobs": 6,
-  "llm_calls": 392,
+  "llm_calls": 499,
   "cache_stats": {
     "cache_hits": 0,
-    "cache_misses": 392,
-    "total_requests": 392,
+    "cache_misses": 499,
+    "total_requests": 499,
     "hit_rate_percentage": 0.0
   },
   "confidence_distribution": {
-    "high": 124,
-    "medium": 392,
+    "high": 3,
+    "medium": 499,
     "low": 0
   },
   "errors": [],
@@ -23,7 +23,7 @@
   "incremental_enabled": true,
   "sites_scraped": {
     "jemepropose": 0,
-    "allovoisins": 11860,
+    "allovoisins": 27360,
     "codeur": 16,
     "remoteok": 0
   }

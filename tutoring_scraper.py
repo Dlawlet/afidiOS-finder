@@ -49,7 +49,7 @@ from site_scrapers import (
 TUTORING_LLM_QUOTA = int(os.getenv('TUTORING_LLM_QUOTA', '500'))
 
 # Job history retention
-HISTORY_RETENTION_DAYS = int(os.getenv('HISTORY_RETENTION_DAYS', '90'))
+JOB_HISTORY_RETENTION_DAYS = int(os.getenv('HISTORY_RETENTION_DAYS', '90'))
 
 # Sites that are dedicated tutoring platforms — TutoringPreFilter is SKIPPED for these
 # because every listing is already a student request.
@@ -320,7 +320,7 @@ def scrape_tutoring(
         run_stats['remote_percentage'] = round(run_stats['remote'] / len(merged_jobs) * 100, 2)
 
     exporter = JobExporter()
-    exporter.cleanup_old_history(days=HISTORY_RETENTION_DAYS)
+    exporter.cleanup_old_history(days=JOB_HISTORY_RETENTION_DAYS)
 
     tutoring_opportunities = [
         job for job in merged_jobs

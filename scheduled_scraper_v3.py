@@ -34,14 +34,14 @@ import argparse
 
 # Groq token budget configuration (approximate LLM call capacity)
 DEFAULT_DAILY_TOKEN_BUDGET = int(os.getenv('GROQ_DAILY_TOKEN_BUDGET', '300000'))
-EST_TOKENS_PER_CALL = int(os.getenv('GROQ_EST_TOKENS_PER_CALL', '900'))
+EST_TOKENS_PER_CALL = max(int(os.getenv('GROQ_EST_TOKENS_PER_CALL', '900')), 1)
 DEFAULT_DAILY_LLM_QUOTA = max(1, DEFAULT_DAILY_TOKEN_BUDGET // EST_TOKENS_PER_CALL)
 
 # Optional direct override (jobs per day)
 DAILY_LLM_QUOTA = int(os.getenv('GROQ_DAILY_LLM_QUOTA', str(DEFAULT_DAILY_LLM_QUOTA)))
 
 # Job history retention
-HISTORY_RETENTION_DAYS = int(os.getenv('HISTORY_RETENTION_DAYS', '90'))
+JOB_HISTORY_RETENTION_DAYS = int(os.getenv('HISTORY_RETENTION_DAYS', '90'))
 
 # Sources that are pre-classified and should not consume LLM quota
 LLM_EXEMPT_SITES = {'remoteok', 'remotive', 'workingnomads', 'arbeitnow'}
@@ -434,7 +434,7 @@ def scrape_multi_site(
         }
         
         # Clean up stale history and LLM cache entries
-        exporter.cleanup_old_history(days=HISTORY_RETENTION_DAYS)
+        exporter.cleanup_old_history(days=JOB_HISTORY_RETENTION_DAYS)
         llm_analyzer.cleanup_old_cache(days=60)
 
         # Export

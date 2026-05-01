@@ -344,11 +344,13 @@ class JobExporter:
         archive_dir.mkdir(exist_ok=True)
         timestamp = datetime.now().strftime('%Y%m%d_%H%M%S')
 
-        json_path = archive_dir / f"{filename_prefix}_{timestamp}.json"
-        csv_path = archive_dir / f"{filename_prefix}_{timestamp}.csv"
+        json_filename = f"archive/{filename_prefix}_{timestamp}.json"
+        csv_filename = f"archive/{filename_prefix}_{timestamp}.csv"
+        json_path = self.output_dir / json_filename
+        csv_path = self.output_dir / csv_filename
 
-        self.export_to_json(jobs, stats, filename=str(json_path.relative_to(self.output_dir)), update_history=False)
-        self.export_to_csv(jobs, filename=str(csv_path.relative_to(self.output_dir)))
+        self.export_to_json(jobs, stats, filename=json_filename, update_history=False)
+        self.export_to_csv(jobs, filename=csv_filename)
 
         return {'json': json_path, 'csv': csv_path}
 

@@ -34,7 +34,11 @@ import argparse
 
 # Groq token budget configuration (approximate LLM call capacity)
 DEFAULT_DAILY_TOKEN_BUDGET = int(os.getenv('GROQ_DAILY_TOKEN_BUDGET', '300000'))
-EST_TOKENS_PER_CALL = max(int(os.getenv('GROQ_EST_TOKENS_PER_CALL', '900')), 1)
+try:
+    _est_tokens = int(os.getenv('GROQ_EST_TOKENS_PER_CALL', '900'))
+except ValueError:
+    _est_tokens = 900
+EST_TOKENS_PER_CALL = max(_est_tokens, 1)
 DEFAULT_DAILY_LLM_QUOTA = max(1, DEFAULT_DAILY_TOKEN_BUDGET // EST_TOKENS_PER_CALL)
 
 # Optional direct override (jobs per day)
@@ -79,8 +83,7 @@ def scrape_multi_site(
 
     # Calculate fair share quota per LLM site
     if llm_quota_per_site is None:
-        divisor = llm_site_count if llm_site_count > 0 else 1
-        llm_quota_per_site = DAILY_LLM_QUOTA // divisor
+        llm_quota_per_site = DAILY_LLM_QUOTA // max(llm_site_count, 1)
     
     # Track metrics
     metrics = {

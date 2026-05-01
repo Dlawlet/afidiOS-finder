@@ -18,6 +18,15 @@ import re
 MAX_DESCRIPTION_LENGTH = 800
 
 
+def clean_html_description(raw_text: str) -> str:
+    """Strip HTML, normalize whitespace, and truncate."""
+    if not raw_text:
+        return ''
+    cleaned = re.sub(r'<[^>]+>', ' ', raw_text)
+    cleaned = html.unescape(' '.join(cleaned.split()))
+    return cleaned[:MAX_DESCRIPTION_LENGTH]
+
+
 class BaseSiteScraper(ABC):
     """
     Abstract base class for all site scrapers
@@ -575,7 +584,7 @@ class MultiSiteScraper:
         all_jobs_to_analyze = []
         all_cached_jobs = []  # Track cached jobs separately
         sites_to_scrape = enabled_sites if enabled_sites else list(self.scrapers.keys())
-        quota_exempt_sources = set(quota_exempt_sources or [])  # O(1) membership checks
+        quota_exempt_sources = set(quota_exempt_sources or [])
         llm_sites = [s for s in sites_to_scrape if s not in quota_exempt_sources]
         
         remaining_quota = daily_quota
@@ -1093,9 +1102,7 @@ class RemotiveScraper(BaseSiteScraper):
 
             jobs = []
             for item in entries:
-                raw_desc = item.get('description', '')
-                description = re.sub(r'<[^>]+>', ' ', raw_desc)
-                description = html.unescape(' '.join(description.split()))[:MAX_DESCRIPTION_LENGTH]
+                description = clean_html_description(item.get('description', ''))
 
                 location = item.get('candidate_required_location') or item.get('location') or 'Remote / Worldwide'
 
@@ -1152,9 +1159,7 @@ class WorkingNomadsScraper(BaseSiteScraper):
 
             jobs = []
             for item in entries:
-                raw_desc = item.get('description', '') or item.get('content', '')
-                description = re.sub(r'<[^>]+>', ' ', raw_desc)
-                description = html.unescape(' '.join(description.split()))[:MAX_DESCRIPTION_LENGTH]
+                description = clean_html_description(item.get('description', '') or item.get('content', ''))
 
                 jobs.append({
                     'url': item.get('url', 'N/A'),
@@ -1209,9 +1214,7 @@ class ArbeitnowScraper(BaseSiteScraper):
                 if not item.get('remote', False):
                     continue
 
-                raw_desc = item.get('description', '')
-                description = re.sub(r'<[^>]+>', ' ', raw_desc)
-                description = html.unescape(' '.join(description.split()))[:MAX_DESCRIPTION_LENGTH]
+                description = clean_html_description(item.get('description', ''))
 
                 job_url = item.get('url') or item.get('slug') or 'N/A'
                 if job_url and not str(job_url).startswith('http'):

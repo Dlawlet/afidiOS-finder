@@ -135,10 +135,9 @@ class JobExporter:
         
         filepath = self.output_dir / filename
         
-        history_stats = self.get_history_stats()
         if update_history:
             self.update_job_history(jobs)
-            history_stats = self.get_history_stats()
+        history_stats = self.get_history_stats()
         
         export_data = {
             'metadata': {

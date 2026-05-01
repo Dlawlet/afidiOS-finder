@@ -70,4 +70,4 @@ https://raw.githubusercontent.com/Dlawlet/afidiOS-finder/main/exports/tutoring_s
 
 ## Mise à jour
 
-Automatiquement mis à jour chaque jour via GitHub Actions.
+Automatiquement mis à jour chaque jour à 6h UTC via GitHub Actions.

@@ -367,6 +367,31 @@ def scrape_tutoring(
         stem_opportunities, stem_stats, filename_prefix='tutoring_stem_opportunities'
     )
 
+    # ── Tutoring metrics export ──────────────────────────────────────────────
+    tutoring_metrics = {
+        'timestamp': metrics['start_time'].isoformat(),
+        'duration_seconds': duration,
+        'sites': list(sites),
+        'llm_quota': quota,
+        'llm_calls': metrics['llm_calls'],
+        'llm_utilisation_pct': round(metrics['llm_calls'] / quota * 100, 1) if quota else 0,
+        'scraped': metrics['scraped'],
+        'pre_filtered_out': metrics['pre_filtered_out'],
+        'incremental_skipped': metrics['incremental_skipped'],
+        'stem_priority_count': metrics['stem_priority'],
+        'quota_trimmed': metrics['quota_trimmed'],
+        'tutoring_posts_new': len(all_jobs),
+        'tutoring_opportunities': tutoring_export['count'],
+        'stem_opportunities': stem_export['count'],
+        'errors': metrics['errors'],
+    }
+    tutoring_metrics_path = Path('exports/tutoring_metrics_latest.json')
+    try:
+        with open(tutoring_metrics_path, 'w', encoding='utf-8') as f:
+            json.dump(tutoring_metrics, f, indent=2, ensure_ascii=False, default=str)
+    except Exception as e:
+        logger.warning(f"Could not write tutoring metrics: {e}")
+
     if verbose:
         print(f"💾 Exported:")
         print(f"   {json_all}  ({len(merged_jobs)} total jobs)")
@@ -378,6 +403,8 @@ def scrape_tutoring(
         print(f"   {archive_all['json']}")
         print(f"   {archive_tutoring['json']}")
         print(f"   {archive_stem['json']}")
+        print(f"   {tutoring_metrics_path}  (LLM {metrics['llm_calls']}/{quota}, "
+              f"STEM {stem_export['count']})")
 
     return {
         'success': True,

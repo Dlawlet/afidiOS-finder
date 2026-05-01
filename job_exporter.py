@@ -330,6 +330,7 @@ class JobExporter:
     def export_archive_snapshot(self, jobs, stats, filename_prefix):
         """
         Export timestamped archive snapshots without overwriting latest files.
+        History is not updated for archive snapshots to avoid duplicate history writes.
 
         Args:
             jobs: List of job dictionaries

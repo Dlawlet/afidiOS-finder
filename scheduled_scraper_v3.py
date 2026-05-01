@@ -32,20 +32,30 @@ from datetime import datetime
 import logging
 import argparse
 
+
+def _env_int(name: str, default: int) -> int:
+    raw = os.getenv(name)
+    if raw is None:
+        return default
+    try:
+        return int(raw)
+    except ValueError:
+        logging.getLogger(__name__).warning(
+            f"Invalid integer for {name}='{raw}', using default {default}"
+        )
+        return default
+
 # Groq token budget configuration (approximate LLM call capacity)
-DEFAULT_DAILY_TOKEN_BUDGET = int(os.getenv('GROQ_DAILY_TOKEN_BUDGET', '300000'))
-try:
-    _est_tokens = int(os.getenv('GROQ_EST_TOKENS_PER_CALL', '900'))
-except ValueError:
-    _est_tokens = 900
+DEFAULT_DAILY_TOKEN_BUDGET = _env_int('GROQ_DAILY_TOKEN_BUDGET', 300000)
+_est_tokens = _env_int('GROQ_EST_TOKENS_PER_CALL', 900)
 EST_TOKENS_PER_CALL = max(_est_tokens, 1)
 DEFAULT_DAILY_LLM_QUOTA = max(1, DEFAULT_DAILY_TOKEN_BUDGET // EST_TOKENS_PER_CALL)
 
 # Optional direct override (jobs per day)
-DAILY_LLM_QUOTA = int(os.getenv('GROQ_DAILY_LLM_QUOTA', str(DEFAULT_DAILY_LLM_QUOTA)))
+DAILY_LLM_QUOTA = _env_int('GROQ_DAILY_LLM_QUOTA', DEFAULT_DAILY_LLM_QUOTA)
 
 # Job history retention
-JOB_HISTORY_RETENTION_DAYS = int(os.getenv('HISTORY_RETENTION_DAYS', '90'))
+JOB_HISTORY_RETENTION_DAYS = _env_int('HISTORY_RETENTION_DAYS', 90)
 
 # Sources that are pre-classified and should not consume LLM quota
 LLM_EXEMPT_SITES = {'remoteok', 'remotive', 'workingnomads', 'arbeitnow'}
@@ -192,10 +202,12 @@ def scrape_multi_site(
                 job for job in jobs_from_cache
                 if job.get('url') not in reanalyze_urls
             ]
-            for job in to_reanalyze:
-                job['was_reanalyzed'] = True
-            jobs_to_analyze.extend(to_reanalyze)
-            metrics['reanalyzed_jobs'] = len(to_reanalyze)
+            reanalyzed_jobs = [
+                {**job, 'was_reanalyzed': True}
+                for job in to_reanalyze
+            ]
+            jobs_to_analyze.extend(reanalyzed_jobs)
+            metrics['reanalyzed_jobs'] = len(reanalyzed_jobs)
             metrics['cached_jobs'] = len(jobs_from_cache)
             if verbose and to_reanalyze:
                 print(f"🔄 Reanalyzing {len(to_reanalyze)} cached jobs to fill LLM budget")

@@ -30,6 +30,19 @@ import os
 from datetime import datetime
 from pathlib import Path
 
+
+def _env_int(name: str, default: int) -> int:
+    raw = os.getenv(name)
+    if raw is None:
+        return default
+    try:
+        return int(raw)
+    except ValueError:
+        logging.getLogger(__name__).warning(
+            f"Invalid integer for {name}='{raw}', using default {default}"
+        )
+        return default
+
 from semantic_analyzer import setup_logging
 from job_exporter import JobExporter
 from incremental_scraper import IncrementalScraper
@@ -46,10 +59,10 @@ from site_scrapers import (
 
 # Tutoring pipeline LLM budget (separate from general pipeline's budget).
 # Both share the same Groq key; run at different UTC times to avoid rate collision.
-TUTORING_LLM_QUOTA = int(os.getenv('TUTORING_LLM_QUOTA', '500'))
+TUTORING_LLM_QUOTA = _env_int('TUTORING_LLM_QUOTA', 500)
 
 # Job history retention
-JOB_HISTORY_RETENTION_DAYS = int(os.getenv('HISTORY_RETENTION_DAYS', '90'))
+JOB_HISTORY_RETENTION_DAYS = _env_int('HISTORY_RETENTION_DAYS', 90)
 
 # Sites that are dedicated tutoring platforms — TutoringPreFilter is SKIPPED for these
 # because every listing is already a student request.

@@ -336,18 +336,6 @@
       "reasoning": "Obvious on-site work: bricolage",
       "description_source": "listing_page"
     },
-    "https://www.jemepropose.com/annonces/assistance-comptable/1er-exercice-comptable-dune-association+10498945/": {
-      "first_seen": "2026-01-22 18:29:33",
-      "last_seen": "2026-04-01 09:30:40",
-      "title": "1er exercice comptable d'une association",
-      "is_remote": false,
-      "poster_type": "unknown",
-      "description": "Bonjour, Je recherche une personne pour m'accompagner dans la réalisation du 1er exercice de comptabilité de mon association.",
-      "confidence": "HIGH",
-      "classification": "on-site",
-      "reasoning": "LLM: Comptabilité sur place, association locale, besoin documents physiques",
-      "description_source": "detail_page"
-    },
     "https://www.jemepropose.com/annonces/menage/menage-et-garde-denfants+10498934/": {
       "first_seen": "2026-01-22 18:29:33",
       "last_seen": "2026-04-22 08:23:21",
@@ -33096,18 +33084,6 @@
       "reasoning": "LLM: Footballeur pro : présence physique obligatoire sur terrain",
       "description_source": "detail_page"
     },
-    "https://www.jemepropose.com/annonces/manucure/poste-de-formateurrice-a-pourvoir+10501726/": {
-      "first_seen": "2026-03-03 08:10:08",
-      "last_seen": "2026-04-01 09:30:40",
-      "title": "Poste de formateur/rice à pourvoir",
-      "is_remote": false,
-      "poster_type": "unknown",
-      "description": "Bonjour Beauty Queen - Centre de formations est à la recherche d’un/e prothésiste ongulaire ayant au mois 2 ans d’expérience pour un poste de FORMATEUR/RICE à Paris 13. Le centre de formations en prothesie ongulaire est certifié QUALIOPI. Il s’agit de formations pour débutantes, une formation de 2 semaines avec un examen final avec du jury, une certification très sérieuse et reconnue par l’Etat. Merci de me contacter si intéressé(e) Beauty Queen - Centre de formations est à la recherche d’un/e prothésiste ongulaire ayant au mois 2 ans d’expérience pour un poste de FORMATEUR/RICE à Paris 13. Le centre de formations en prothesie ongulaire est certifié QUALIOPI. Il s’agit de formations pour débutantes, une formation de 2 semaines avec un examen final avec du jury, une certification très sérieuse et reconnue par l’Etat. Merci de me contacter si intéressé(e)",
-      "confidence": "HIGH",
-      "classification": "on-site",
-      "reasoning": "Obvious on-site work: manucure",
-      "description_source": "detail_page"
-    },
     "https://www.jemepropose.com/annonces/auxiliaire-de-vie/cherche-auxiliaire-de-vie+10501835/": {
       "first_seen": "2026-03-03 08:10:08",
       "last_seen": "2026-04-22 08:23:21",
@@ -33178,18 +33154,6 @@
       "confidence": "MEDIUM",
       "classification": "on-site",
       "reasoning": "NLP Analysis: Strong on-site indicators (score: 2 vs 0)",
-      "description_source": "detail_page"
-    },
-    "https://www.jemepropose.com/annonces/menage/recherche-auto-entrepreneur-en-menage-chateaubriant-et-alentours+10501860/": {
-      "first_seen": "2026-03-04 08:50:10",
-      "last_seen": "2026-04-01 09:30:40",
-      "title": "🚀 Recherche auto-entrepreneur en ménage 📍 Châteaubriant et alentours",
-      "is_remote": false,
-      "poster_type": "unknown",
-      "description": "Je suis actuellement en cours de création d’une conciergerie spécialisée dans la location courte durée sur le secteur de Châteaubriant. Dans ce cadre, je recherche un(e) auto-entrepreneur déjà en activité dans le domaine de l’entretien. 👉 L’activité démarrera progressivement. Cela conviendra donc à une personne indépendante, ayant déjà d’autres clients, et souhaitant compléter son planning. Missions : • Nettoyage et préparation de logements • Respect d’un cahier des charges précis • Réactivité selon les réservations • Communication simple et professionnelle Profil recherché : ✔️ Sérieux(se) ✔️ Autonome ✔️ Rigoureux(se) ✔️ Mobile sur le secteur Objectif : construire une collaboration durable avec un partenaire fiable, dans une activité amenée à se développer. 📩 Me contacter en message privé pour échanger. Je suis actuellement en cours de création d’une conciergerie spécialisée dans la location courte durée sur le secteur de Châteaubriant. Dans ce cadre, je recherche un(e) auto-entrepreneur déjà en activité dans le domaine de l’entretien. 👉 L’activité démarrera progressivement. Cela conviendra donc à une personne indépendante, ayant déjà d’autres clients, et souhaitant compléter son planning. • Nettoyage et préparation de logements • Respect d’un cahier des charges précis • Réactivité selon les réservations • Communication simple et professionnelle Objectif : construire une collaboration durable avec un partenaire fiable, dans une activité amenée à se développer. 📩 Me contacter en message privé pour échanger.",
-      "confidence": "HIGH",
-      "classification": "on-site",
-      "reasoning": "Obvious on-site work: ménage",
       "description_source": "detail_page"
     },
     "https://www.jemepropose.com/annonces/soutien-scolaire/animatrice-petite-enfance+10502017/": {
@@ -34538,7 +34502,7 @@
     },
     "https://www.allovoisins.com/v/platrerie-murs-plafonds": {
       "first_seen": "2026-04-01 09:30:40",
-      "last_seen": "2026-05-01 08:31:45",
+      "last_seen": "2026-05-01 10:36:06",
       "title": "Cherche Plâtrerie - Murs - Plafonds à Cousances-les-Forges",
       "is_remote": false,
       "poster_type": "unknown",
@@ -34562,7 +34526,7 @@
     },
     "https://www.allovoisins.com/v/demenagement": {
       "first_seen": "2026-04-01 09:30:40",
-      "last_seen": "2026-05-01 08:31:45",
+      "last_seen": "2026-05-01 10:36:06",
       "title": "Cherche Déménageurs et aide au déménagement à Marseille",
       "is_remote": false,
       "poster_type": "unknown",
@@ -34574,7 +34538,7 @@
     },
     "https://www.allovoisins.com/v/installation-electrique": {
       "first_seen": "2026-04-01 09:30:40",
-      "last_seen": "2026-05-01 08:31:45",
+      "last_seen": "2026-05-01 10:36:06",
       "title": "Recherche Installation électrique à Solgne",
       "is_remote": false,
       "poster_type": "unknown",
@@ -34586,7 +34550,7 @@
     },
     "https://www.allovoisins.com/v/chauffage-climatisation": {
       "first_seen": "2026-04-01 09:30:40",
-      "last_seen": "2026-05-01 08:31:45",
+      "last_seen": "2026-05-01 10:36:06",
       "title": "Recherche Chauffage - Climatisation à Houilles",
       "is_remote": false,
       "poster_type": "employer",
@@ -34598,7 +34562,7 @@
     },
     "https://www.allovoisins.com/v/bricolage-petits-travaux": {
       "first_seen": "2026-04-01 09:30:40",
-      "last_seen": "2026-05-01 08:31:45",
+      "last_seen": "2026-05-01 10:36:06",
       "title": "Recherche Bricolage et multi services à Amiens",
       "is_remote": false,
       "poster_type": "unknown",
@@ -34610,7 +34574,7 @@
     },
     "https://www.allovoisins.com/v/evacuation-dechets-gravats": {
       "first_seen": "2026-04-01 09:30:40",
-      "last_seen": "2026-05-01 08:31:45",
+      "last_seen": "2026-05-01 10:36:06",
       "title": "Recherche Évacuation déchets - Gravats à Saint-Germain-en-Laye",
       "is_remote": false,
       "poster_type": "unknown",
@@ -34622,7 +34586,7 @@
     },
     "https://www.allovoisins.com/v/livraison-transport-de-colis": {
       "first_seen": "2026-04-01 09:30:40",
-      "last_seen": "2026-05-01 08:31:45",
+      "last_seen": "2026-05-01 10:36:06",
       "title": "Recherche Livraison - Transport de colis à Jebsheim",
       "is_remote": false,
       "poster_type": "unknown",
@@ -34634,7 +34598,7 @@
     },
     "https://www.allovoisins.com/v/reparation-velo-moto": {
       "first_seen": "2026-04-01 09:30:40",
-      "last_seen": "2026-05-01 08:31:45",
+      "last_seen": "2026-05-01 10:36:06",
       "title": "Cherche Réparation vélo - moto à Lambersart",
       "is_remote": false,
       "poster_type": "unknown",
@@ -34646,7 +34610,7 @@
     },
     "https://www.allovoisins.com/v/coiffure-a-domicile": {
       "first_seen": "2026-04-01 09:30:40",
-      "last_seen": "2026-05-01 08:31:45",
+      "last_seen": "2026-05-01 10:36:06",
       "title": "Cherche Coiffure à domicile à Créteil",
       "is_remote": false,
       "poster_type": "unknown",
@@ -34658,7 +34622,7 @@
     },
     "https://www.allovoisins.com/v/jardinier": {
       "first_seen": "2026-04-01 09:30:40",
-      "last_seen": "2026-05-01 08:31:45",
+      "last_seen": "2026-05-01 10:36:06",
       "title": "Recherche Jardinier à Yutz",
       "is_remote": false,
       "poster_type": "unknown",
@@ -34670,7 +34634,7 @@
     },
     "https://www.allovoisins.com/v/depannage-electromenager": {
       "first_seen": "2026-04-01 09:30:40",
-      "last_seen": "2026-05-01 08:31:45",
+      "last_seen": "2026-05-01 10:36:06",
       "title": "Recherche Dépannage électroménager à Haubourdin",
       "is_remote": false,
       "poster_type": "unknown",
@@ -34682,7 +34646,7 @@
     },
     "https://www.allovoisins.com/v/tonte-de-pelouse-debroussaillage": {
       "first_seen": "2026-04-01 09:30:40",
-      "last_seen": "2026-05-01 08:31:45",
+      "last_seen": "2026-05-01 10:36:06",
       "title": "Cherche Tonte de pelouse - Débroussaillage à Ferreux-Quincey",
       "is_remote": false,
       "poster_type": "unknown",
@@ -34694,7 +34658,7 @@
     },
     "https://www.allovoisins.com/v/reparation-voiture": {
       "first_seen": "2026-04-01 09:30:40",
-      "last_seen": "2026-05-01 08:31:45",
+      "last_seen": "2026-05-01 10:36:06",
       "title": "Cherche Réparation voiture à Boissy-Saint-Léger",
       "is_remote": false,
       "poster_type": "unknown",
@@ -34706,7 +34670,7 @@
     },
     "https://www.allovoisins.com/v/montage-meubles-en-kit": {
       "first_seen": "2026-04-01 09:30:40",
-      "last_seen": "2026-05-01 08:31:45",
+      "last_seen": "2026-05-01 10:36:06",
       "title": "Recherche Montage meubles en kit à Toulouse",
       "is_remote": false,
       "poster_type": "unknown",
@@ -34718,7 +34682,7 @@
     },
     "https://www.allovoisins.com/v/lavage-auto": {
       "first_seen": "2026-04-01 09:30:40",
-      "last_seen": "2026-05-01 08:31:45",
+      "last_seen": "2026-05-01 10:36:06",
       "title": "Recherche Lavage auto à Tulle",
       "is_remote": false,
       "poster_type": "unknown",
@@ -34730,7 +34694,7 @@
     },
     "https://www.allovoisins.com/v/femme-de-menage": {
       "first_seen": "2026-04-01 09:30:40",
-      "last_seen": "2026-05-01 08:31:45",
+      "last_seen": "2026-05-01 10:36:06",
       "title": "Recherche Ménage à Pontault-Combault",
       "is_remote": false,
       "poster_type": "unknown",
@@ -34742,7 +34706,7 @@
     },
     "https://www.allovoisins.com/v/carrelage": {
       "first_seen": "2026-04-01 09:30:40",
-      "last_seen": "2026-05-01 08:31:45",
+      "last_seen": "2026-05-01 10:36:06",
       "title": "Cherche Carrelage à Cergy",
       "is_remote": false,
       "poster_type": "unknown",
@@ -34754,7 +34718,7 @@
     },
     "https://www.allovoisins.com/v/reparation-carrosserie": {
       "first_seen": "2026-04-01 09:30:40",
-      "last_seen": "2026-05-01 08:31:45",
+      "last_seen": "2026-05-01 10:36:06",
       "title": "Cherche Réparation carrosserie à Fléac",
       "is_remote": false,
       "poster_type": "unknown",
@@ -34766,7 +34730,7 @@
     },
     "https://www.allovoisins.com/v/nounou": {
       "first_seen": "2026-04-01 09:30:40",
-      "last_seen": "2026-05-01 08:31:45",
+      "last_seen": "2026-05-01 10:36:06",
       "title": "Cherche Nounou à Saint-Germain-en-Laye",
       "is_remote": false,
       "poster_type": "unknown",
@@ -34776,21 +34740,9 @@
       "reasoning": "Obvious on-site work: nounou",
       "description_source": "listing_page"
     },
-    "https://www.allovoisins.com/r/210/2/26307/0/location-Tariere-Ver": {
-      "first_seen": "2026-04-01 09:30:40",
-      "last_seen": "2026-04-01 09:30:40",
-      "title": "Prêt tarière - Ver",
-      "is_remote": false,
-      "poster_type": "unknown",
-      "description": "Durée : 1 jour",
-      "confidence": "HIGH",
-      "classification": "on-site",
-      "reasoning": "LLM: Travail de forage/tarière, intervention physique sur site",
-      "description_source": "detail_page"
-    },
     "https://www.allovoisins.com/v/menuiserie-huisserie-agencement": {
       "first_seen": "2026-04-01 09:30:40",
-      "last_seen": "2026-05-01 08:31:45",
+      "last_seen": "2026-05-01 10:36:06",
       "title": "Recherche Menuiserie - Huisserie - Agencement à Mainvilliers",
       "is_remote": false,
       "poster_type": "unknown",
@@ -34802,7 +34754,7 @@
     },
     "https://www.allovoisins.com/v/serrurerie": {
       "first_seen": "2026-04-01 09:30:40",
-      "last_seen": "2026-05-01 08:31:45",
+      "last_seen": "2026-05-01 10:36:06",
       "title": "Cherche Serrurerie à Les Sorinières",
       "is_remote": false,
       "poster_type": "unknown",
@@ -34814,7 +34766,7 @@
     },
     "https://www.allovoisins.com/v/covoiturage-partage-de-frais": {
       "first_seen": "2026-04-01 09:30:40",
-      "last_seen": "2026-05-01 08:31:45",
+      "last_seen": "2026-05-01 10:36:06",
       "title": "Recherche Covoiturage (partage de frais) à Toulouse",
       "is_remote": false,
       "poster_type": "unknown",
@@ -34824,21 +34776,9 @@
       "reasoning": "NLP Analysis: Ambiguous signals (remote: 0, onsite: 0)",
       "description_source": "listing_page"
     },
-    "https://www.allovoisins.com/r/582/12/33539/0/location-Tonnelle-Parent": {
-      "first_seen": "2026-04-01 09:30:40",
-      "last_seen": "2026-04-01 09:30:40",
-      "title": "Acheter une tonnelle - Parent",
-      "is_remote": false,
-      "poster_type": "employer",
-      "description": "Durée : 2 jours",
-      "confidence": "HIGH",
-      "classification": "on-site",
-      "reasoning": "LLM: Achat d'une tonnelle : mission physique sur place",
-      "description_source": "detail_page"
-    },
     "https://www.allovoisins.com/v/chaudronnerie-soudure": {
       "first_seen": "2026-04-01 09:30:40",
-      "last_seen": "2026-05-01 08:31:45",
+      "last_seen": "2026-05-01 10:36:06",
       "title": "Cherche Chaudronnerie - Soudure à Toulouse",
       "is_remote": false,
       "poster_type": "unknown",
@@ -34850,7 +34790,7 @@
     },
     "https://www.allovoisins.com/v/lingerie-repassage": {
       "first_seen": "2026-04-01 09:30:40",
-      "last_seen": "2026-05-01 08:31:45",
+      "last_seen": "2026-05-01 10:36:06",
       "title": "Cherche Lingerie - Repassage à Éragny",
       "is_remote": false,
       "poster_type": "unknown",
@@ -34862,7 +34802,7 @@
     },
     "https://www.allovoisins.com/v/artisan-tout-corps-d-etat-renovation": {
       "first_seen": "2026-04-01 09:30:40",
-      "last_seen": "2026-05-01 08:31:45",
+      "last_seen": "2026-05-01 10:36:06",
       "title": "Recherche Artisan tout corps d'état - Rénovation à Toulouse",
       "is_remote": false,
       "poster_type": "employer",
@@ -34874,7 +34814,7 @@
     },
     "https://www.allovoisins.com/v/plomberie-installation-sanitaire": {
       "first_seen": "2026-04-01 09:30:40",
-      "last_seen": "2026-05-01 08:31:45",
+      "last_seen": "2026-05-01 10:36:06",
       "title": "Recherche Plomberie - Installation sanitaire à Corbeil-Essonnes",
       "is_remote": false,
       "poster_type": "unknown",
@@ -34886,7 +34826,7 @@
     },
     "https://www.allovoisins.com/v/entretien-piscine": {
       "first_seen": "2026-04-01 09:30:40",
-      "last_seen": "2026-05-01 08:31:45",
+      "last_seen": "2026-05-01 10:36:06",
       "title": "Cherche Entretien piscine à Plan-d'Aups-Sainte-Baume",
       "is_remote": false,
       "poster_type": "unknown",
@@ -34898,7 +34838,7 @@
     },
     "https://www.allovoisins.com/v/couturiere": {
       "first_seen": "2026-04-01 09:30:40",
-      "last_seen": "2026-05-01 08:31:45",
+      "last_seen": "2026-05-01 10:36:06",
       "title": "Recherche Couturière à Val de Briey",
       "is_remote": false,
       "poster_type": "unknown",
@@ -34908,21 +34848,9 @@
       "reasoning": "NLP Analysis: Ambiguous signals (remote: 0, onsite: 0)",
       "description_source": "listing_page"
     },
-    "https://www.allovoisins.com/r/286/4/39270/0/location-Camion-nacelle-Mesnil-panneville": {
-      "first_seen": "2026-04-01 09:30:40",
-      "last_seen": "2026-04-01 09:30:40",
-      "title": "Location camion nacelle - Mesnil-Panneville",
-      "is_remote": false,
-      "poster_type": "unknown",
-      "description": "N/A",
-      "confidence": "HIGH",
-      "classification": "on-site",
-      "reasoning": "Obvious on-site work: camion",
-      "description_source": "listing_page"
-    },
     "https://www.allovoisins.com/v/garde-chien": {
       "first_seen": "2026-04-01 09:30:40",
-      "last_seen": "2026-05-01 08:31:45",
+      "last_seen": "2026-05-01 10:36:06",
       "title": "Cherche Garde chien à Saujon",
       "is_remote": false,
       "poster_type": "unknown",
@@ -34934,7 +34862,7 @@
     },
     "https://www.allovoisins.com/v/ramonage-fumiste": {
       "first_seen": "2026-04-01 09:30:40",
-      "last_seen": "2026-05-01 08:31:45",
+      "last_seen": "2026-05-01 10:36:06",
       "title": "Recherche Ramonage - Fumiste à La Rochelle",
       "is_remote": false,
       "poster_type": "unknown",
@@ -34946,7 +34874,7 @@
     },
     "https://www.allovoisins.com/v/manutention": {
       "first_seen": "2026-04-01 09:30:40",
-      "last_seen": "2026-05-01 08:31:45",
+      "last_seen": "2026-05-01 10:36:06",
       "title": "Recherche Manutention à Payssous",
       "is_remote": false,
       "poster_type": "unknown",
@@ -34955,18 +34883,6 @@
       "classification": "on-site",
       "reasoning": "NLP Analysis: Ambiguous signals (remote: 0, onsite: 0)",
       "description_source": "listing_page"
-    },
-    "https://www.allovoisins.com/r/210/2/40406/0/location-Tariere-Saint-jean-de-thouars": {
-      "first_seen": "2026-04-01 09:30:40",
-      "last_seen": "2026-04-01 09:30:40",
-      "title": "Location tariĆØre - Saint-Jean-de-Thouars",
-      "is_remote": false,
-      "poster_type": "unknown",
-      "description": "Durée : 1 jour",
-      "confidence": "HIGH",
-      "classification": "on-site",
-      "reasoning": "LLM: Tarière = outil de forage, travail forcément sur site",
-      "description_source": "detail_page"
     },
     "https://www.allovoisins.com/v/traiteur": {
       "first_seen": "2026-04-01 09:30:40",
@@ -34982,7 +34898,7 @@
     },
     "https://www.allovoisins.com/v/maconnerie": {
       "first_seen": "2026-04-01 09:30:40",
-      "last_seen": "2026-05-01 08:31:45",
+      "last_seen": "2026-05-01 10:36:06",
       "title": "Cherche Maçonnerie à Trégunc",
       "is_remote": false,
       "poster_type": "unknown",
@@ -34994,7 +34910,7 @@
     },
     "https://www.allovoisins.com/v/peinture-tapisserie": {
       "first_seen": "2026-04-01 09:30:40",
-      "last_seen": "2026-05-01 08:31:45",
+      "last_seen": "2026-05-01 10:36:06",
       "title": "Recherche Peinture - Tapisserie à Villeneuve-Loubet",
       "is_remote": false,
       "poster_type": "unknown",
@@ -35003,30 +34919,6 @@
       "classification": "on-site",
       "reasoning": "Obvious on-site work: peinture",
       "description_source": "listing_page"
-    },
-    "https://www.allovoisins.com/r/5142/78/38839/0/location-Vehicule-utilitaire-camionnette-Mont-saint-aignan": {
-      "first_seen": "2026-04-01 09:30:40",
-      "last_seen": "2026-04-01 09:30:40",
-      "title": "Location véhicule utilitaire / camionnette - Mont-Saint-Aignan",
-      "is_remote": false,
-      "poster_type": "unknown",
-      "description": "N/A",
-      "confidence": "HIGH",
-      "classification": "on-site",
-      "reasoning": "Obvious on-site work: camion",
-      "description_source": "listing_page"
-    },
-    "https://www.allovoisins.com/r/210/2/20326/0/location-Tariere-Saint-ciers-de-canesse": {
-      "first_seen": "2026-04-01 09:30:40",
-      "last_seen": "2026-04-01 09:30:40",
-      "title": "Louer une tarière - Saint-Ciers-de-Canesse",
-      "is_remote": false,
-      "poster_type": "employer",
-      "description": "Durée : 1 jour",
-      "confidence": "HIGH",
-      "classification": "on-site",
-      "reasoning": "LLM: Location d'outil physique, nécessite présence sur place",
-      "description_source": "detail_page"
     },
     "https://www.allovoisins.com/r/0/221/0/0/service/Jongleur": {
       "first_seen": "2026-04-01 09:30:40",
@@ -35040,21 +34932,9 @@
       "reasoning": "NLP Analysis: Ambiguous signals (remote: 0, onsite: 0)",
       "description_source": "listing_page"
     },
-    "https://www.allovoisins.com/r/5228/5/65781/0/location-Bois-bois-de-chauffage-bastaing-Saint-martin-du-vieux-belleme": {
-      "first_seen": "2026-04-01 09:30:40",
-      "last_seen": "2026-04-01 09:30:40",
-      "title": "Louer des bois / bois de chauffage / bastaing - Saint-Martin-du-Vieux-Bellême",
-      "is_remote": false,
-      "poster_type": "unknown",
-      "description": "Bois / Bois de chauffage / Bastaing Saint-Martin-du-Vieux-Bellême",
-      "confidence": "HIGH",
-      "classification": "on-site",
-      "reasoning": "LLM: Vente de bois, nécessite stockage et livraison physique",
-      "description_source": "detail_page"
-    },
     "https://www.allovoisins.com/v/elagage-et-coupe-d-arbres": {
       "first_seen": "2026-04-01 09:30:40",
-      "last_seen": "2026-05-01 08:31:45",
+      "last_seen": "2026-05-01 10:36:06",
       "title": "Recherche Elagage et coupe d'arbres à Colomiers",
       "is_remote": false,
       "poster_type": "unknown",
@@ -35066,7 +34946,7 @@
     },
     "https://www.allovoisins.com/v/couverture-toiture": {
       "first_seen": "2026-04-01 09:30:40",
-      "last_seen": "2026-05-01 08:31:45",
+      "last_seen": "2026-05-01 10:36:06",
       "title": "Cherche Couverture - Toiture à Audun-le-Roman",
       "is_remote": false,
       "poster_type": "unknown",
@@ -35076,21 +34956,9 @@
       "reasoning": "NLP Analysis: Ambiguous signals (remote: 0, onsite: 0)",
       "description_source": "listing_page"
     },
-    "https://www.allovoisins.com/r/869/18/20173/0/location-Plateau-Le-teich": {
-      "first_seen": "2026-04-01 09:30:40",
-      "last_seen": "2026-04-01 09:30:40",
-      "title": "Location plateau - Le Teich",
-      "is_remote": false,
-      "poster_type": "unknown",
-      "description": "Durée : 1 jour",
-      "confidence": "HIGH",
-      "classification": "on-site",
-      "reasoning": "LLM: Mission d'un jour sur un plateau audiovisuel",
-      "description_source": "detail_page"
-    },
     "https://www.allovoisins.com/v/terrassement-assainissement": {
       "first_seen": "2026-04-01 09:30:40",
-      "last_seen": "2026-05-01 08:31:45",
+      "last_seen": "2026-05-01 10:36:06",
       "title": "Cherche Terrassement - Assainissement à Messei",
       "is_remote": false,
       "poster_type": "unknown",
@@ -35114,7 +34982,7 @@
     },
     "https://www.allovoisins.com/v/reparation-outillage": {
       "first_seen": "2026-04-01 09:30:40",
-      "last_seen": "2026-05-01 08:31:45",
+      "last_seen": "2026-05-01 10:36:06",
       "title": "Recherche Réparation outillage à Roquefort",
       "is_remote": false,
       "poster_type": "unknown",
@@ -35126,7 +34994,7 @@
     },
     "https://www.allovoisins.com/v/estheticienne": {
       "first_seen": "2026-04-01 09:30:40",
-      "last_seen": "2026-05-01 08:31:45",
+      "last_seen": "2026-05-01 10:36:06",
       "title": "Recherche Esthéticienne à Paris",
       "is_remote": false,
       "poster_type": "unknown",
@@ -35135,18 +35003,6 @@
       "classification": "on-site",
       "reasoning": "NLP Analysis: Ambiguous signals (remote: 0, onsite: 0)",
       "description_source": "listing_page"
-    },
-    "https://www.allovoisins.com/r/4201/75/13054/0/location-Citadine-petite-voiture-voiture-economique-Sancergues": {
-      "first_seen": "2026-04-01 09:30:40",
-      "last_seen": "2026-04-01 09:30:40",
-      "title": "Location citadine / petite voiture / voiture ├®conomique - Sancergues",
-      "is_remote": false,
-      "poster_type": "unknown",
-      "description": "Durée : 1 jour",
-      "confidence": "HIGH",
-      "classification": "on-site",
-      "reasoning": "LLM: Location de voiture, nécessite présence physique",
-      "description_source": "detail_page"
     },
     "https://www.allovoisins.com/v/garde-animaux": {
       "first_seen": "2026-04-01 09:30:40",
@@ -35159,18 +35015,6 @@
       "classification": "on-site",
       "reasoning": "NLP Analysis: Ambiguous signals (remote: 0, onsite: 0)",
       "description_source": "listing_page"
-    },
-    "https://www.allovoisins.com/r/4355/93/42917/0/location-Cave-Boulogne-billancourt": {
-      "first_seen": "2026-04-01 09:30:40",
-      "last_seen": "2026-04-01 09:30:40",
-      "title": "Pr├¬t cave - Boulogne-Billancourt",
-      "is_remote": false,
-      "poster_type": "unknown",
-      "description": "Durée : 365 jours",
-      "confidence": "HIGH",
-      "classification": "on-site",
-      "reasoning": "LLM: Prêt cave = stockage physique, nécessite présence sur place",
-      "description_source": "detail_page"
     },
     "https://www.allovoisins.com/r/0/274/0/0/service/Prof-de-tennis": {
       "first_seen": "2026-04-01 09:30:40",
@@ -35186,7 +35030,7 @@
     },
     "https://www.allovoisins.com/v/depannage-smartphone-hifi-video-photo": {
       "first_seen": "2026-04-01 09:30:40",
-      "last_seen": "2026-05-01 08:31:45",
+      "last_seen": "2026-05-01 10:36:06",
       "title": "Recherche DĂ©pannage smartphone - hifi - video - photo Ă  Bihorel",
       "is_remote": false,
       "poster_type": "unknown",
@@ -35196,21 +35040,9 @@
       "reasoning": "NLP Analysis: Ambiguous signals (remote: 0, onsite: 0)",
       "description_source": "listing_page"
     },
-    "https://www.allovoisins.com/r/5236/49/20782/0/location-Chat-chaton-Lattes": {
-      "first_seen": "2026-04-01 09:30:40",
-      "last_seen": "2026-04-01 09:30:40",
-      "title": "Location chat / chaton - Lattes",
-      "is_remote": false,
-      "poster_type": "unknown",
-      "description": "N/A",
-      "confidence": "HIGH",
-      "classification": "on-site",
-      "reasoning": "LLM: Garde d'animaux sur place à Lattes",
-      "description_source": "listing_page"
-    },
     "https://www.allovoisins.com/v/conciergerie": {
       "first_seen": "2026-04-01 09:30:40",
-      "last_seen": "2026-05-01 08:31:45",
+      "last_seen": "2026-05-01 10:36:06",
       "title": "Cherche Conciergerie à Le Porge",
       "is_remote": false,
       "poster_type": "unknown",
@@ -35219,18 +35051,6 @@
       "classification": "on-site",
       "reasoning": "NLP Analysis: Ambiguous signals (remote: 0, onsite: 0)",
       "description_source": "listing_page"
-    },
-    "https://www.allovoisins.com/r/436/11/8361/0/location-Broyeur-de-vegetaux-Le-bar-sur-loup": {
-      "first_seen": "2026-04-01 09:30:40",
-      "last_seen": "2026-04-01 09:30:40",
-      "title": "Louer un broyeur de végétaux - Le Bar-sur-Loup",
-      "is_remote": false,
-      "poster_type": "employer",
-      "description": "Durée : 1 jour",
-      "confidence": "HIGH",
-      "classification": "on-site",
-      "reasoning": "LLM: Location broyeur, intervention sur place",
-      "description_source": "detail_page"
     },
     "https://www.allovoisins.com/v/cloture-grillage": {
       "first_seen": "2026-04-01 09:30:40",
@@ -35243,30 +35063,6 @@
       "classification": "on-site",
       "reasoning": "NLP Analysis: Ambiguous signals (remote: 0, onsite: 0)",
       "description_source": "listing_page"
-    },
-    "https://www.allovoisins.com/r/5377/11/20200/0/location-Gyrobroyeur-Bassens": {
-      "first_seen": "2026-04-01 09:30:40",
-      "last_seen": "2026-04-01 09:30:40",
-      "title": "Louer un gyrobroyeur - Bassens",
-      "is_remote": false,
-      "poster_type": "employer",
-      "description": "Durée : 1 jour",
-      "confidence": "HIGH",
-      "classification": "on-site",
-      "reasoning": "LLM: Location de matériel agricole, nécessite présence physique",
-      "description_source": "detail_page"
-    },
-    "https://www.allovoisins.com/r/297/4/24122/0/location-Escabeau-marchepied-Pontchateau": {
-      "first_seen": "2026-04-01 09:30:40",
-      "last_seen": "2026-04-01 09:30:40",
-      "title": "Location escabeau / marchepied - Pontchâteau",
-      "is_remote": false,
-      "poster_type": "employer",
-      "description": "Durée : 1 jour",
-      "confidence": "HIGH",
-      "classification": "on-site",
-      "reasoning": "LLM: Location d'escabeau, service physique sur place",
-      "description_source": "detail_page"
     },
     "https://www.allovoisins.com/v/architecte-d-interieur-decorateur-d-interieur": {
       "first_seen": "2026-04-01 09:30:40",
@@ -35294,7 +35090,7 @@
     },
     "https://www.allovoisins.com/v/paysagiste-amenagement-du-jardin": {
       "first_seen": "2026-04-01 09:30:40",
-      "last_seen": "2026-05-01 08:31:45",
+      "last_seen": "2026-05-01 10:36:06",
       "title": "Recherche Paysagiste - Aménagement du jardin à Saint-Cyr-sur-Morin",
       "is_remote": false,
       "poster_type": "unknown",
@@ -35303,30 +35099,6 @@
       "classification": "on-site",
       "reasoning": "NLP Analysis: Ambiguous signals (remote: 0, onsite: 0)",
       "description_source": "listing_page"
-    },
-    "https://www.allovoisins.com/r/262/3/81799/0/location-Plaque-vibrante-Le-lesme": {
-      "first_seen": "2026-04-01 09:30:40",
-      "last_seen": "2026-04-01 09:30:40",
-      "title": "Louer une plaque vibrante - Le Lesme",
-      "is_remote": false,
-      "poster_type": "employer",
-      "description": "Durée : 1 jour",
-      "confidence": "HIGH",
-      "classification": "on-site",
-      "reasoning": "LLM: Location de matériel, nécessite présence physique",
-      "description_source": "detail_page"
-    },
-    "https://www.allovoisins.com/r/4208/78/38167/0/location-Fourgonette-9-12-m3-Cognin": {
-      "first_seen": "2026-04-01 09:30:40",
-      "last_seen": "2026-04-01 09:30:40",
-      "title": "Location fourgonette 9/12 m3 - Cognin",
-      "is_remote": false,
-      "poster_type": "employer",
-      "description": "Durée : 1 jour",
-      "confidence": "HIGH",
-      "classification": "on-site",
-      "reasoning": "LLM: Location de fourgonnette, service physique sur place",
-      "description_source": "detail_page"
     },
     "https://www.allovoisins.com/v/serveur-maitre-d-hotel": {
       "first_seen": "2026-04-01 09:30:40",
@@ -35342,7 +35114,7 @@
     },
     "https://www.allovoisins.com/v/entretien-reparation-autres-vehicules": {
       "first_seen": "2026-04-01 09:30:40",
-      "last_seen": "2026-05-01 08:31:45",
+      "last_seen": "2026-05-01 10:36:06",
       "title": "Cherche Entretien - Réparation autres véhicules à Eysines",
       "is_remote": false,
       "poster_type": "unknown",
@@ -35352,21 +35124,9 @@
       "reasoning": "NLP Analysis: Ambiguous signals (remote: 0, onsite: 0)",
       "description_source": "listing_page"
     },
-    "https://www.allovoisins.com/r/373/7/10860/0/location-Leve-plaques-Marseille-7e-arrondissement": {
-      "first_seen": "2026-04-01 09:30:40",
-      "last_seen": "2026-04-01 09:30:40",
-      "title": "Location lève plaques - Marseille",
-      "is_remote": false,
-      "poster_type": "employer",
-      "description": "Durée : 1 jour",
-      "confidence": "HIGH",
-      "classification": "on-site",
-      "reasoning": "LLM: Location de matériel, nécessite présence physique sur chantier",
-      "description_source": "detail_page"
-    },
     "https://www.allovoisins.com/v/cours-de-maths": {
       "first_seen": "2026-04-01 09:30:40",
-      "last_seen": "2026-05-01 08:31:45",
+      "last_seen": "2026-05-01 10:36:06",
       "title": "Cherche Cours de maths à Fuveau",
       "is_remote": false,
       "poster_type": "unknown",
@@ -35376,93 +35136,9 @@
       "reasoning": "NLP Analysis: Ambiguous signals (remote: 0, onsite: 0)",
       "description_source": "listing_page"
     },
-    "https://www.allovoisins.com/r/1504/27/42134/0/location-Kit-materiel-de-casino-materiel-d-animation-La-mole": {
-      "first_seen": "2026-04-01 09:30:40",
-      "last_seen": "2026-04-01 09:30:40",
-      "title": "Louer un kit matériel de casino (matériel d'animation) - La Môle",
-      "is_remote": false,
-      "poster_type": "employer",
-      "description": "Durée : 1 jour",
-      "confidence": "HIGH",
-      "classification": "on-site",
-      "reasoning": "LLM: Location physique obligatoire pour louer du matériel",
-      "description_source": "detail_page"
-    },
-    "https://www.allovoisins.com/r/4201/75/21502/0/location-Citadine-petite-voiture-voiture-economique-Luynes": {
-      "first_seen": "2026-04-01 09:30:40",
-      "last_seen": "2026-04-01 09:30:40",
-      "title": "Location citadine / petite voiture / voiture économique - Luynes",
-      "is_remote": false,
-      "poster_type": "unknown",
-      "description": "Durée : 1 jour",
-      "confidence": "HIGH",
-      "classification": "on-site",
-      "reasoning": "LLM: Location de voiture physique, nécessite présence sur place",
-      "description_source": "detail_page"
-    },
-    "https://www.allovoisins.com/r/404/8/19401/0/location-Gants-de-menage-Labarthe-sur-leze": {
-      "first_seen": "2026-04-01 09:30:40",
-      "last_seen": "2026-04-01 09:30:40",
-      "title": "Prêt gants de ménage - Labarthe-sur-Lèze",
-      "is_remote": false,
-      "poster_type": "unknown",
-      "description": "N/A",
-      "confidence": "HIGH",
-      "classification": "on-site",
-      "reasoning": "Obvious on-site work: ménage",
-      "description_source": "listing_page"
-    },
-    "https://www.allovoisins.com/r/535/11/41558/0/location-Tronconneuse-Albi": {
-      "first_seen": "2026-04-01 09:30:40",
-      "last_seen": "2026-04-01 09:30:40",
-      "title": "Louer une tronçonneuse - Albi",
-      "is_remote": false,
-      "poster_type": "employer",
-      "description": "Durée : 1 jour",
-      "confidence": "HIGH",
-      "classification": "on-site",
-      "reasoning": "LLM: Location d'outil physique, nécessite présence sur place",
-      "description_source": "detail_page"
-    },
-    "https://www.allovoisins.com/r/246/3/13205/0/location-Etai-btp-Levet": {
-      "first_seen": "2026-04-01 09:30:40",
-      "last_seen": "2026-04-01 09:30:40",
-      "title": "Louer un etai (btp) - Levet",
-      "is_remote": false,
-      "poster_type": "employer",
-      "description": "Durée : 3 jours",
-      "confidence": "HIGH",
-      "classification": "on-site",
-      "reasoning": "LLM: Location d’étais BTP, nécessite présence chantier",
-      "description_source": "detail_page"
-    },
-    "https://www.allovoisins.com/r/4344/88/43877/0/location-Appartement-Saint-michel-sur-orge": {
-      "first_seen": "2026-04-01 09:30:40",
-      "last_seen": "2026-04-01 09:30:40",
-      "title": "Louer un appartement - Saint-Michel-sur-Orge",
-      "is_remote": false,
-      "poster_type": "unknown",
-      "description": "Durée : 365 jours",
-      "confidence": "HIGH",
-      "classification": "on-site",
-      "reasoning": "LLM: Location d'appartement, pas un emploi",
-      "description_source": "detail_page"
-    },
-    "https://www.allovoisins.com/r/288/4/66153/0/location-Echafaudage-Fontainebleau": {
-      "first_seen": "2026-04-01 09:30:40",
-      "last_seen": "2026-04-01 09:30:40",
-      "title": "Louer un echafaudage - Fontainebleau",
-      "is_remote": false,
-      "poster_type": "unknown",
-      "description": "Durée : 1 jour",
-      "confidence": "MEDIUM",
-      "classification": "on-site",
-      "reasoning": "NLP Analysis: Ambiguous signals (remote: 0, onsite: 0)",
-      "description_source": "detail_page"
-    },
     "https://www.allovoisins.com/v/aide-a-domicile": {
       "first_seen": "2026-04-01 09:30:40",
-      "last_seen": "2026-05-01 08:31:45",
+      "last_seen": "2026-05-01 10:36:06",
       "title": "Recherche Aide à domicile à Lyon",
       "is_remote": false,
       "poster_type": "unknown",
@@ -35471,18 +35147,6 @@
       "classification": "on-site",
       "reasoning": "Obvious on-site work: aide à domicile",
       "description_source": "listing_page"
-    },
-    "https://www.allovoisins.com/r/257/3/66553/0/location-Pelleteuse-minipelle-mini-pelle-Ancourteville-sur-hericourt": {
-      "first_seen": "2026-04-01 09:30:40",
-      "last_seen": "2026-04-01 09:30:40",
-      "title": "Location pelleteuse / minipelle / mini pelle - Ancourteville-sur-Hﾃｩricourt",
-      "is_remote": false,
-      "poster_type": "unknown",
-      "description": "Durée : 1 jour",
-      "confidence": "MEDIUM",
-      "classification": "on-site",
-      "reasoning": "NLP Analysis: Ambiguous signals (remote: 0, onsite: 0)",
-      "description_source": "detail_page"
     },
     "https://www.allovoisins.com/v/aide-aux-devoirs": {
       "first_seen": "2026-04-01 09:30:40",
@@ -35496,21 +35160,9 @@
       "reasoning": "NLP Analysis: Ambiguous signals (remote: 0, onsite: 0)",
       "description_source": "listing_page"
     },
-    "https://www.allovoisins.com/r/296/4/18816/0/location-Elevateur-Bagneres-de-luchon": {
-      "first_seen": "2026-04-01 09:30:40",
-      "last_seen": "2026-04-01 09:30:40",
-      "title": "Location elévateur - Bagnères-de-Luchon",
-      "is_remote": false,
-      "poster_type": "unknown",
-      "description": "Durée : 1 jour",
-      "confidence": "MEDIUM",
-      "classification": "on-site",
-      "reasoning": "NLP Analysis: Ambiguous signals (remote: 0, onsite: 0)",
-      "description_source": "detail_page"
-    },
     "https://www.allovoisins.com/v/pose-de-parquet-revetement-de-sol": {
       "first_seen": "2026-04-01 09:30:40",
-      "last_seen": "2026-05-01 08:31:45",
+      "last_seen": "2026-05-01 10:36:06",
       "title": "Cherche Pose de parquet - Revêtement de sol à Sainte-Soulle",
       "is_remote": false,
       "poster_type": "unknown",
@@ -35531,66 +35183,6 @@
       "classification": "on-site",
       "reasoning": "NLP fallback classification",
       "description_source": "listing_page"
-    },
-    "https://www.allovoisins.com/r/5142/78/24593/0/location-Vehicule-utilitaire-camionnette-Checy": {
-      "first_seen": "2026-04-01 09:30:40",
-      "last_seen": "2026-04-01 09:30:40",
-      "title": "Louer un véhicule utilitaire / camionnette - Chécy",
-      "is_remote": false,
-      "poster_type": "unknown",
-      "description": "N/A",
-      "confidence": "HIGH",
-      "classification": "on-site",
-      "reasoning": "Obvious on-site work: camion",
-      "description_source": "listing_page"
-    },
-    "https://www.allovoisins.com/r/4291/82/24430/0/location-Caravane-Chatillon-coligny": {
-      "first_seen": "2026-04-01 09:30:40",
-      "last_seen": "2026-04-01 09:30:40",
-      "title": "Acheter une caravane - Châtillon-Coligny",
-      "is_remote": false,
-      "poster_type": "unknown",
-      "description": "Durée : 30 jours",
-      "confidence": "MEDIUM",
-      "classification": "on-site",
-      "reasoning": "NLP Analysis: Ambiguous signals (remote: 0, onsite: 0)",
-      "description_source": "detail_page"
-    },
-    "https://www.codeur.com/projects/477052-recherche-developpeur-creation-d-un-site-web-qui-sera-une-plateforme": {
-      "first_seen": "2026-04-01 09:30:40",
-      "last_seen": "2026-04-01 09:30:40",
-      "title": "Recherche développeur création d’un site web qui sera une plateforme",
-      "is_remote": true,
-      "poster_type": "employer",
-      "description": "91 freelances ont répondu à ce projet 72 propositions de devis en moins de 2h Montant moyen des devis proposés : 3 850 € Estimation du délai : 19 jours",
-      "confidence": "MEDIUM",
-      "classification": "remote",
-      "reasoning": "NLP Analysis: Strong remote indicators (score: 5 vs 0)",
-      "description_source": "detail_page"
-    },
-    "https://www.codeur.com/projects/480590-refonte-complete-du-simulateur-en-vrai-tunnel-de-vente-sur-odoo": {
-      "first_seen": "2026-04-01 09:30:40",
-      "last_seen": "2026-04-01 09:30:40",
-      "title": "Refonte complète du simulateur en vrai tunnel de vente sur Odoo",
-      "is_remote": false,
-      "poster_type": "unknown",
-      "description": "27 freelances ont répondu à ce projet 26 propositions de devis en moins de 2h Montant moyen des devis proposés : 9 500 € Estimation du délai : 12 jours",
-      "confidence": "MEDIUM",
-      "classification": "on-site",
-      "reasoning": "NLP Analysis: Ambiguous signals (remote: 0, onsite: 0)",
-      "description_source": "detail_page"
-    },
-    "https://www.codeur.com/projects/480476": {
-      "first_seen": "2026-04-01 09:30:40",
-      "last_seen": "2026-04-01 09:30:40",
-      "title": "Problème tracking conversions Google Ads / Analytics sur PrestaShop 8.",
-      "is_remote": false,
-      "poster_type": "unknown",
-      "description": "15 freelances ont répondu à ce projet 12 propositions de devis en moins de 2h Montant moyen des devis proposés : 300 € Estimation du délai : 2 jours",
-      "confidence": "MEDIUM",
-      "classification": "on-site",
-      "reasoning": "NLP Analysis: Ambiguous signals (remote: 0, onsite: 0)",
-      "description_source": "detail_page"
     },
     "https://www.codeur.com/projects/480363-video-courte-montage-reseau-sociaux": {
       "first_seen": "2026-04-01 09:30:40",
@@ -35616,18 +35208,6 @@
       "reasoning": "NLP Analysis: Ambiguous signals (remote: 0, onsite: 0)",
       "description_source": "detail_page"
     },
-    "https://www.codeur.com/projects/480059-recherche-photographe-secteur-bordeaux-landes": {
-      "first_seen": "2026-04-01 09:30:40",
-      "last_seen": "2026-04-01 09:30:40",
-      "title": "Recherche photographe - secteur Bordeaux/Landes",
-      "is_remote": false,
-      "poster_type": "unknown",
-      "description": "3 freelances ont répondu à ce projet 2 propositions de devis en moins de 2h",
-      "confidence": "MEDIUM",
-      "classification": "on-site",
-      "reasoning": "NLP Analysis: Ambiguous signals (remote: 0, onsite: 0)",
-      "description_source": "detail_page"
-    },
     "https://www.codeur.com/projects/479899-web-designer-pour-une-application-web": {
       "first_seen": "2026-04-01 09:30:40",
       "last_seen": "2026-04-27 11:26:15",
@@ -35638,30 +35218,6 @@
       "confidence": "MEDIUM",
       "classification": "remote",
       "reasoning": "NLP Analysis: Strong remote indicators (score: 7 vs 0)",
-      "description_source": "detail_page"
-    },
-    "https://www.codeur.com/projects/479737-client-mail": {
-      "first_seen": "2026-04-01 09:30:40",
-      "last_seen": "2026-04-01 09:30:40",
-      "title": "Client mail",
-      "is_remote": false,
-      "poster_type": "unknown",
-      "description": "26 freelances ont répondu à ce projet 23 propositions de devis en moins de 2h Montant moyen des devis proposés : 11 250 € Estimation du délai : 23 jours",
-      "confidence": "MEDIUM",
-      "classification": "on-site",
-      "reasoning": "NLP Analysis: Ambiguous signals (remote: 0, onsite: 0)",
-      "description_source": "detail_page"
-    },
-    "https://www.codeur.com/projects/479606-recherche-expert-wordpress-elementor-seo-sea-long-terme": {
-      "first_seen": "2026-04-01 09:30:40",
-      "last_seen": "2026-04-01 09:30:40",
-      "title": "Recherche Expert WordPress Elementor + SEO/SEA LONG TERME",
-      "is_remote": false,
-      "poster_type": "unknown",
-      "description": "53 freelances ont répondu à ce projet 45 propositions de devis en moins de 2h Montant moyen des devis proposés : 3 000 € Estimation du délai : 9 jours",
-      "confidence": "MEDIUM",
-      "classification": "on-site",
-      "reasoning": "NLP Analysis: Ambiguous signals (remote: 0, onsite: 0)",
       "description_source": "detail_page"
     },
     "https://www.codeur.com/projects/479469-recherche-consultant-cybersecurite": {
@@ -35686,78 +35242,6 @@
       "confidence": "HIGH",
       "classification": "remote",
       "reasoning": "LLM: Projet digital freelance sans contrainte de lieu",
-      "description_source": "detail_page"
-    },
-    "https://www.codeur.com/projects/479203-creation-application-web-saas-accessible-via-navigateur-responsive": {
-      "first_seen": "2026-04-01 09:30:40",
-      "last_seen": "2026-04-01 09:30:40",
-      "title": "Création application web (SaaS) accessible via navigateur, responsive",
-      "is_remote": true,
-      "poster_type": "unknown",
-      "description": "66 freelances ont répondu à ce projet 56 propositions de devis en moins de 2h Montant moyen des devis proposés : 10 000 € Estimation du délai : 19 jours",
-      "confidence": "MEDIUM",
-      "classification": "remote",
-      "reasoning": "NLP Analysis: Strong remote indicators (score: 5 vs 0)",
-      "description_source": "detail_page"
-    },
-    "https://www.codeur.com/projects/479061-recherche-developpeur-full-stack-mvp-saas-maintenance-b2b": {
-      "first_seen": "2026-04-01 09:30:40",
-      "last_seen": "2026-04-01 09:30:40",
-      "title": "Recherche développeur full stack – MVP SaaS maintenance B2B",
-      "is_remote": false,
-      "poster_type": "employer",
-      "description": "97 freelances ont répondu à ce projet 87 propositions de devis en moins de 2h Montant moyen des devis proposés : 15 900 € Estimation du délai : 15 jours",
-      "confidence": "MEDIUM",
-      "classification": "on-site",
-      "reasoning": "NLP Analysis: Ambiguous signals (remote: 0, onsite: 0)",
-      "description_source": "detail_page"
-    },
-    "https://www.codeur.com/projects/478920-restructuration-de-campagnes-et-pilotage": {
-      "first_seen": "2026-04-01 09:30:40",
-      "last_seen": "2026-04-01 09:30:40",
-      "title": "Restructuration de campagnes et pilotage",
-      "is_remote": false,
-      "poster_type": "unknown",
-      "description": "37 freelances ont répondu à ce projet 24 propositions de devis en moins de 2h Montant moyen des devis proposés : 41 600 € Estimation du délai : 22 jours",
-      "confidence": "MEDIUM",
-      "classification": "on-site",
-      "reasoning": "NLP Analysis: Ambiguous signals (remote: 0, onsite: 0)",
-      "description_source": "detail_page"
-    },
-    "https://www.codeur.com/projects/478781-developper-un-script-java-afin-d-analyser-des-photo-de-materiaux": {
-      "first_seen": "2026-04-01 09:30:40",
-      "last_seen": "2026-04-01 09:30:40",
-      "title": "Developper un script java afin d'analyser des photo de matériaux",
-      "is_remote": false,
-      "poster_type": "unknown",
-      "description": "11 freelances ont répondu à ce projet 6 propositions de devis en moins de 2h Montant moyen des devis proposés : 750 € Estimation du délai : 4 jours",
-      "confidence": "MEDIUM",
-      "classification": "on-site",
-      "reasoning": "NLP Analysis: Ambiguous signals (remote: 0, onsite: 0)",
-      "description_source": "detail_page"
-    },
-    "https://www.codeur.com/projects/478624-application-gestion-d-outils-de-jardinage-de-quartier": {
-      "first_seen": "2026-04-01 09:30:40",
-      "last_seen": "2026-04-01 09:30:40",
-      "title": "Application - Gestion d’outils de jardinage de quartier",
-      "is_remote": false,
-      "poster_type": "unknown",
-      "description": "N/A",
-      "confidence": "HIGH",
-      "classification": "on-site",
-      "reasoning": "Obvious on-site work: jardinage",
-      "description_source": "listing_page"
-    },
-    "https://www.codeur.com/projects/477032-editeur-et-administrateur-de-site-wp": {
-      "first_seen": "2026-04-01 09:30:40",
-      "last_seen": "2026-04-01 09:30:40",
-      "title": "Editeur et administrateur de site WP",
-      "is_remote": false,
-      "poster_type": "unknown",
-      "description": "81 freelances ont répondu à ce projet 72 propositions de devis en moins de 2h Montant moyen des devis proposés : 8 550 € Estimation du délai : 58 jours",
-      "confidence": "MEDIUM",
-      "classification": "on-site",
-      "reasoning": "NLP Analysis: Ambiguous signals (remote: 0, onsite: 0)",
       "description_source": "detail_page"
     },
     "https://www.codeur.com/projects/460890-app-web-controle-automat-utilise-esp32-ou-rasberry": {
@@ -35858,7 +35342,7 @@
     },
     "https://www.allovoisins.com/v/cours-de-francais": {
       "first_seen": "2026-04-02 11:00:23",
-      "last_seen": "2026-05-01 08:31:45",
+      "last_seen": "2026-05-01 10:36:06",
       "title": "Recherche Cours de français à Fuveau",
       "is_remote": false,
       "poster_type": "unknown",
@@ -35870,7 +35354,7 @@
     },
     "https://www.allovoisins.com/r/0/78/0/0/location-vente/Vehicule-utilitaire": {
       "first_seen": "2026-04-02 11:00:23",
-      "last_seen": "2026-05-01 08:31:45",
+      "last_seen": "2026-05-01 10:36:06",
       "title": "Location fourgonette 3m3 - Argent-sur-Sauldre",
       "is_remote": false,
       "poster_type": "unknown",
@@ -35942,7 +35426,7 @@
     },
     "https://www.allovoisins.com/v/baby-sitting": {
       "first_seen": "2026-04-02 11:00:23",
-      "last_seen": "2026-05-01 08:31:45",
+      "last_seen": "2026-05-01 10:36:06",
       "title": "Cherche Baby sitting à Granville",
       "is_remote": false,
       "poster_type": "unknown",
@@ -36038,7 +35522,7 @@
     },
     "https://www.allovoisins.com/v/dj-disc-jockey": {
       "first_seen": "2026-04-02 11:00:23",
-      "last_seen": "2026-05-01 08:31:45",
+      "last_seen": "2026-05-01 10:36:06",
       "title": "Cherche DJ - Disc Jockey à Nantes",
       "is_remote": false,
       "poster_type": "unknown",
@@ -36110,7 +35594,7 @@
     },
     "https://www.allovoisins.com/v/musicien-goupe-de-musique": {
       "first_seen": "2026-04-02 11:00:23",
-      "last_seen": "2026-05-01 08:31:45",
+      "last_seen": "2026-05-01 10:36:06",
       "title": "Recherche Musicien - Groupe de musique à Le Plessis-Dorin",
       "is_remote": false,
       "poster_type": "unknown",
@@ -36134,7 +35618,7 @@
     },
     "https://www.allovoisins.com/v/transport-de-vehicules-remorquage": {
       "first_seen": "2026-04-02 11:00:23",
-      "last_seen": "2026-05-01 08:31:45",
+      "last_seen": "2026-05-01 10:36:06",
       "title": "Recherche Transport de véhicules - Remorquage à Guéret",
       "is_remote": false,
       "poster_type": "unknown",
@@ -36146,7 +35630,7 @@
     },
     "https://www.allovoisins.com/v/charpente": {
       "first_seen": "2026-04-02 11:00:23",
-      "last_seen": "2026-05-01 08:31:45",
+      "last_seen": "2026-05-01 10:36:06",
       "title": "Recherche Charpente à Ploemeur",
       "is_remote": false,
       "poster_type": "unknown",
@@ -36326,7 +35810,7 @@
     },
     "https://www.allovoisins.com/v/taille-de-haies-et-d-arbustes": {
       "first_seen": "2026-04-02 11:00:23",
-      "last_seen": "2026-05-01 08:31:45",
+      "last_seen": "2026-05-01 10:36:06",
       "title": "Cherche Taille de haies et d'arbustes à Casseneuil",
       "is_remote": false,
       "poster_type": "employer",
@@ -36350,7 +35834,7 @@
     },
     "https://www.allovoisins.com/r/0/289/0/0/service/Coach-autres-sports": {
       "first_seen": "2026-04-02 11:00:23",
-      "last_seen": "2026-05-01 08:31:45",
+      "last_seen": "2026-05-01 10:36:06",
       "title": "Recherche Coach autres sports à Pézenas",
       "is_remote": false,
       "poster_type": "unknown",
@@ -36698,7 +36182,7 @@
     },
     "https://www.allovoisins.com/r/0/93/0/0/location-vente/Parking-stockage-hivernage": {
       "first_seen": "2026-04-03 06:36:56",
-      "last_seen": "2026-05-01 08:31:45",
+      "last_seen": "2026-05-01 10:36:06",
       "title": "Louer un local stockage / garde meuble / local entreposage - Nice",
       "is_remote": false,
       "poster_type": "unknown",
@@ -36710,7 +36194,7 @@
     },
     "https://www.allovoisins.com/v/toilettage": {
       "first_seen": "2026-04-03 06:36:56",
-      "last_seen": "2026-05-01 08:31:45",
+      "last_seen": "2026-05-01 10:36:06",
       "title": "Cherche Toilettage à Fontevraud-l'Abbaye",
       "is_remote": false,
       "poster_type": "unknown",
@@ -36722,7 +36206,7 @@
     },
     "https://www.allovoisins.com/r/0/11/0/0/location-vente/Outillage": {
       "first_seen": "2026-04-03 06:36:56",
-      "last_seen": "2026-05-01 08:31:45",
+      "last_seen": "2026-05-01 10:36:06",
       "title": "Location tondeuse à gazon - Grenoble",
       "is_remote": false,
       "poster_type": "employer",
@@ -36890,7 +36374,7 @@
     },
     "https://www.allovoisins.com/v/livraison-de-courses": {
       "first_seen": "2026-04-03 06:36:56",
-      "last_seen": "2026-05-01 08:31:45",
+      "last_seen": "2026-05-01 10:36:06",
       "title": "Recherche Livraison de courses à Pontoise",
       "is_remote": false,
       "poster_type": "unknown",
@@ -37346,7 +36830,7 @@
     },
     "https://www.allovoisins.com/v/assistance-informatique": {
       "first_seen": "2026-04-03 06:36:56",
-      "last_seen": "2026-05-01 08:31:45",
+      "last_seen": "2026-05-01 10:36:06",
       "title": "Cherche Assistance informatique à Marseille",
       "is_remote": false,
       "poster_type": "unknown",
@@ -37502,7 +36986,7 @@
     },
     "https://www.allovoisins.com/v/secretariat": {
       "first_seen": "2026-04-03 06:36:56",
-      "last_seen": "2026-05-01 08:31:45",
+      "last_seen": "2026-05-01 10:36:06",
       "title": "Cherche Secrétariat à Abbecourt",
       "is_remote": true,
       "poster_type": "unknown",
@@ -37514,7 +36998,7 @@
     },
     "https://www.allovoisins.com/r/0/2/0/0/location-vente/Outillage-entretien": {
       "first_seen": "2026-04-03 06:36:56",
-      "last_seen": "2026-05-01 08:31:45",
+      "last_seen": "2026-05-01 10:36:06",
       "title": "Location pince à sertir - Corneilla-la-Rivière",
       "is_remote": false,
       "poster_type": "unknown",
@@ -37790,7 +37274,7 @@
     },
     "https://www.allovoisins.com/r/0/5/0/0/location-vente/Chauffage-climatisation": {
       "first_seen": "2026-04-03 08:20:55",
-      "last_seen": "2026-05-01 08:31:45",
+      "last_seen": "2026-05-01 10:36:06",
       "title": "Acheter des bois / bois de chauffage / bastaing - Cugand-la-Bernardière",
       "is_remote": false,
       "poster_type": "unknown",
@@ -37802,7 +37286,7 @@
     },
     "https://www.allovoisins.com/v/garde-chat": {
       "first_seen": "2026-04-03 08:20:55",
-      "last_seen": "2026-05-01 08:31:45",
+      "last_seen": "2026-05-01 10:36:06",
       "title": "Cherche Garde chat à Elbeuf",
       "is_remote": false,
       "poster_type": "unknown",
@@ -38078,7 +37562,7 @@
     },
     "https://www.voscours.fr/annonces/eleves/6889101": {
       "first_seen": "2026-04-03 10:39:34",
-      "last_seen": "2026-04-29 11:13:55",
+      "last_seen": "2026-05-01 10:36:06",
       "title": "Je suis quentin vermeren et handicapé je peux aider vos chiens chiens",
       "is_remote": false,
       "poster_type": "student",
@@ -38090,7 +37574,7 @@
     },
     "https://www.voscours.fr/annonces/eleves/6848365": {
       "first_seen": "2026-04-03 10:39:34",
-      "last_seen": "2026-04-29 11:13:55",
+      "last_seen": "2026-05-01 10:36:06",
       "title": "Préparation au daeu (bac littéraire) français et philo",
       "is_remote": false,
       "poster_type": "student",
@@ -38102,7 +37586,7 @@
     },
     "https://www.voscours.fr/annonces/eleves/6803091": {
       "first_seen": "2026-04-03 10:39:34",
-      "last_seen": "2026-04-29 11:13:55",
+      "last_seen": "2026-05-01 10:36:06",
       "title": "Cherche prof de math 1ère générale spe maths",
       "is_remote": false,
       "poster_type": "student",
@@ -38114,7 +37598,7 @@
     },
     "https://www.voscours.fr/annonces/eleves/6888895": {
       "first_seen": "2026-04-03 10:39:34",
-      "last_seen": "2026-04-29 11:13:55",
+      "last_seen": "2026-05-01 10:36:06",
       "title": "Hello we're in a search for a spanish expert for a lesson",
       "is_remote": false,
       "poster_type": "student",
@@ -38126,7 +37610,7 @@
     },
     "https://www.voscours.fr/annonces/eleves/6888780": {
       "first_seen": "2026-04-03 10:39:34",
-      "last_seen": "2026-04-29 11:13:55",
+      "last_seen": "2026-05-01 10:36:06",
       "title": "We're in need of a tutor for a calisthenia tutor",
       "is_remote": false,
       "poster_type": "student",
@@ -38138,7 +37622,7 @@
     },
     "https://www.voscours.fr/annonces/eleves/6753973": {
       "first_seen": "2026-04-03 10:39:34",
-      "last_seen": "2026-04-29 11:13:55",
+      "last_seen": "2026-05-01 10:36:06",
       "title": "Conversation téléphonique en anglais, c'est urgent",
       "is_remote": false,
       "poster_type": "student",
@@ -38150,7 +37634,7 @@
     },
     "https://www.voscours.fr/annonces/eleves/6847824": {
       "first_seen": "2026-04-03 10:39:34",
-      "last_seen": "2026-04-29 11:13:55",
+      "last_seen": "2026-05-01 10:36:06",
       "title": "Professeur danse contemporaine et break dance",
       "is_remote": false,
       "poster_type": "student",
@@ -38162,7 +37646,7 @@
     },
     "https://www.voscours.fr/annonces/eleves/6411829": {
       "first_seen": "2026-04-03 10:39:34",
-      "last_seen": "2026-04-29 11:13:55",
+      "last_seen": "2026-05-01 10:36:06",
       "title": "Recherche prof particulier pour ma fille de 5 ans à domicile",
       "is_remote": false,
       "poster_type": "student",
@@ -38198,7 +37682,7 @@
     },
     "https://www.voscours.fr/annonces/eleves/6802138": {
       "first_seen": "2026-04-03 10:39:34",
-      "last_seen": "2026-04-29 11:13:55",
+      "last_seen": "2026-05-01 10:36:06",
       "title": "Cherche professeur de chimie général pour préparer le concours vétérinaire voie b",
       "is_remote": false,
       "poster_type": "student",
@@ -38234,7 +37718,7 @@
     },
     "https://www.voscours.fr/annonces/eleves/6503800": {
       "first_seen": "2026-04-03 10:39:34",
-      "last_seen": "2026-04-29 11:13:55",
+      "last_seen": "2026-05-01 10:36:06",
       "title": "Association sur colombes cherche une enseignante de langue arabe",
       "is_remote": false,
       "poster_type": "student",
@@ -38246,7 +37730,7 @@
     },
     "https://www.voscours.fr/annonces/eleves/6802019": {
       "first_seen": "2026-04-03 10:39:34",
-      "last_seen": "2026-04-29 11:13:55",
+      "last_seen": "2026-05-01 10:36:06",
       "title": "Professeur chinois pour notre fils",
       "is_remote": false,
       "poster_type": "student",
@@ -38258,7 +37742,7 @@
     },
     "https://www.voscours.fr/annonces/eleves/6802014": {
       "first_seen": "2026-04-03 10:39:34",
-      "last_seen": "2026-04-29 11:13:55",
+      "last_seen": "2026-05-01 10:36:06",
       "title": "Je souhaite des cours pour la communication, échanger pour trouver une autonomie avec l’anglais",
       "is_remote": false,
       "poster_type": "student",
@@ -38270,7 +37754,7 @@
     },
     "https://www.voscours.fr/annonces/eleves/6822210": {
       "first_seen": "2026-04-03 10:39:34",
-      "last_seen": "2026-04-29 11:13:55",
+      "last_seen": "2026-05-01 10:36:06",
       "title": "Demande pour cours d'informatique pour senior 79 ans à domicile 12 de environ",
       "is_remote": false,
       "poster_type": "student",
@@ -38282,7 +37766,7 @@
     },
     "https://www.voscours.fr/annonces/eleves/6847261": {
       "first_seen": "2026-04-03 10:39:34",
-      "last_seen": "2026-04-29 11:13:55",
+      "last_seen": "2026-05-01 10:36:06",
       "title": "Je recherche des cours de lecture et orthographe pour mon fils à domicile",
       "is_remote": false,
       "poster_type": "student",
@@ -38306,7 +37790,7 @@
     },
     "https://www.voscours.fr/annonces/eleves/6887785": {
       "first_seen": "2026-04-03 10:39:34",
-      "last_seen": "2026-04-29 11:13:55",
+      "last_seen": "2026-05-01 10:36:06",
       "title": "Cherche prof de maths à toulouse, pour maths college",
       "is_remote": false,
       "poster_type": "student",
@@ -38318,7 +37802,7 @@
     },
     "https://www.voscours.fr/annonces/eleves/6847049": {
       "first_seen": "2026-04-03 10:39:34",
-      "last_seen": "2026-04-29 11:13:55",
+      "last_seen": "2026-05-01 10:36:06",
       "title": "Je cherche cours pour moi meme pour reussir",
       "is_remote": false,
       "poster_type": "student",
@@ -38330,7 +37814,7 @@
     },
     "https://www.voscours.fr/annonces/eleves/6887704": {
       "first_seen": "2026-04-03 10:39:34",
-      "last_seen": "2026-04-29 11:13:55",
+      "last_seen": "2026-05-01 10:36:06",
       "title": "Je recherche un professeur d'anglais et un professeur de français. pourrions-nous discuter de vos disponibilités ?",
       "is_remote": false,
       "poster_type": "student",
@@ -38390,7 +37874,7 @@
     },
     "https://www.voscours.fr/annonces/eleves/6886872": {
       "first_seen": "2026-04-03 10:39:34",
-      "last_seen": "2026-04-29 11:13:55",
+      "last_seen": "2026-05-01 10:36:06",
       "title": "Chercher personne pour améliorer ma méthodologies",
       "is_remote": false,
       "poster_type": "student",
@@ -38414,7 +37898,7 @@
     },
     "https://www.voscours.fr/annonces/eleves/6846383": {
       "first_seen": "2026-04-03 10:39:34",
-      "last_seen": "2026-04-29 11:13:55",
+      "last_seen": "2026-05-01 10:36:06",
       "title": "Cherche professeur pour mon fils au collège en 5e 1h30 les mercredis après midi et samedi matin",
       "is_remote": false,
       "poster_type": "student",
@@ -38426,7 +37910,7 @@
     },
     "https://www.voscours.fr/annonces/eleves/6846361": {
       "first_seen": "2026-04-03 10:39:34",
-      "last_seen": "2026-04-29 11:13:55",
+      "last_seen": "2026-05-01 10:36:06",
       "title": "Recherche prof de maths pour élève de 3ème",
       "is_remote": false,
       "poster_type": "student",
@@ -38438,7 +37922,7 @@
     },
     "https://www.voscours.fr/annonces/eleves/6802033": {
       "first_seen": "2026-04-03 10:39:34",
-      "last_seen": "2026-04-29 11:13:55",
+      "last_seen": "2026-05-01 10:36:06",
       "title": "Un professeur chinois pour notre fils age de 13 ans",
       "is_remote": false,
       "poster_type": "student",
@@ -38450,7 +37934,7 @@
     },
     "https://www.voscours.fr/annonces/eleves/6886955": {
       "first_seen": "2026-04-03 10:39:34",
-      "last_seen": "2026-04-29 11:13:55",
+      "last_seen": "2026-05-01 10:36:06",
       "title": "Je cherche un professeur de mathématiques",
       "is_remote": false,
       "poster_type": "student",
@@ -38474,7 +37958,7 @@
     },
     "https://www.voscours.fr/annonces/eleves/6845978": {
       "first_seen": "2026-04-03 10:39:34",
-      "last_seen": "2026-04-29 11:13:55",
+      "last_seen": "2026-05-01 10:36:06",
       "title": "Cherche aide aux devoirs élève niveau 6 ème",
       "is_remote": false,
       "poster_type": "student",
@@ -38486,7 +37970,7 @@
     },
     "https://www.voscours.fr/annonces/eleves/6845934": {
       "first_seen": "2026-04-03 10:39:34",
-      "last_seen": "2026-04-29 11:13:55",
+      "last_seen": "2026-05-01 10:36:06",
       "title": "Russian teachers are currently needed for homework",
       "is_remote": false,
       "poster_type": "student",
@@ -38498,7 +37982,7 @@
     },
     "https://www.voscours.fr/annonces/eleves/6886658": {
       "first_seen": "2026-04-03 10:39:34",
-      "last_seen": "2026-04-29 11:13:55",
+      "last_seen": "2026-05-01 10:36:06",
       "title": "Cherche professeur de mathématiques. pour collégienne de 3eme",
       "is_remote": false,
       "poster_type": "student",
@@ -38510,7 +37994,7 @@
     },
     "https://www.voscours.fr/annonces/eleves/6799749": {
       "first_seen": "2026-04-03 10:39:34",
-      "last_seen": "2026-04-29 11:13:55",
+      "last_seen": "2026-05-01 10:36:06",
       "title": "Je recherche un professeur de droit pénal qui pourrait m’aider à la rédaction d’un commentaire d’arrêt demain",
       "is_remote": false,
       "poster_type": "student",
@@ -38522,7 +38006,7 @@
     },
     "https://www.voscours.fr/annonces/eleves/6886606": {
       "first_seen": "2026-04-03 10:39:34",
-      "last_seen": "2026-04-29 11:13:55",
+      "last_seen": "2026-05-01 10:36:06",
       "title": "Recherche une personne pour aide aux devoirs garcon 4eme : francais svt anglais techno",
       "is_remote": false,
       "poster_type": "student",
@@ -38534,7 +38018,7 @@
     },
     "https://www.voscours.fr/annonces/eleves/6845703": {
       "first_seen": "2026-04-03 10:39:34",
-      "last_seen": "2026-04-29 11:13:55",
+      "last_seen": "2026-05-01 10:36:06",
       "title": "Cherche professeur natif anglais merci bien",
       "is_remote": false,
       "poster_type": "student",
@@ -38546,7 +38030,7 @@
     },
     "https://www.voscours.fr/annonces/eleves/6799482": {
       "first_seen": "2026-04-03 10:39:34",
-      "last_seen": "2026-04-29 11:13:55",
+      "last_seen": "2026-05-01 10:36:06",
       "title": "Recherche prof de piano pour mon enfant de 10ans",
       "is_remote": false,
       "poster_type": "student",
@@ -38558,7 +38042,7 @@
     },
     "https://www.voscours.fr/annonces/eleves/6845644": {
       "first_seen": "2026-04-03 10:39:34",
-      "last_seen": "2026-04-29 11:13:55",
+      "last_seen": "2026-05-01 10:36:06",
       "title": "Je recherche un professeur particulier pour des cours de terminale stmg",
       "is_remote": false,
       "poster_type": "student",
@@ -38570,7 +38054,7 @@
     },
     "https://www.voscours.fr/annonces/eleves/6886218": {
       "first_seen": "2026-04-03 10:39:34",
-      "last_seen": "2026-04-29 11:13:55",
+      "last_seen": "2026-05-01 10:36:06",
       "title": "Recherche prof physique chimie pour 2 mois",
       "is_remote": false,
       "poster_type": "student",
@@ -38582,7 +38066,7 @@
     },
     "https://www.voscours.fr/annonces/eleves/6669366": {
       "first_seen": "2026-04-03 10:39:34",
-      "last_seen": "2026-04-29 11:13:55",
+      "last_seen": "2026-05-01 10:36:06",
       "title": "Je cherche des cours d'arabe pour mon fils de 5 ans",
       "is_remote": false,
       "poster_type": "student",
@@ -38594,7 +38078,7 @@
     },
     "https://www.voscours.fr/annonces/eleves/6885907": {
       "first_seen": "2026-04-03 10:39:34",
-      "last_seen": "2026-04-29 11:13:55",
+      "last_seen": "2026-05-01 10:36:06",
       "title": "Hello. i am looking for available french tutor for tutoring",
       "is_remote": false,
       "poster_type": "student",
@@ -38606,7 +38090,7 @@
     },
     "https://www.voscours.fr/annonces/eleves/6632397": {
       "first_seen": "2026-04-03 10:39:34",
-      "last_seen": "2026-04-29 11:13:55",
+      "last_seen": "2026-05-01 10:36:06",
       "title": "Je cherche des cours pour ma fille en première spécialité mathematique lycee de tres bon niveau",
       "is_remote": false,
       "poster_type": "student",
@@ -38618,7 +38102,7 @@
     },
     "https://www.voscours.fr/annonces/eleves/6593886": {
       "first_seen": "2026-04-03 10:39:34",
-      "last_seen": "2026-04-29 11:13:55",
+      "last_seen": "2026-05-01 10:36:06",
       "title": "Je cherche un professeur de maths et de physique",
       "is_remote": false,
       "poster_type": "student",
@@ -38630,7 +38114,7 @@
     },
     "https://www.voscours.fr/annonces/eleves/6631987": {
       "first_seen": "2026-04-03 10:39:34",
-      "last_seen": "2026-04-29 11:13:55",
+      "last_seen": "2026-05-01 10:36:06",
       "title": "Je cherche un professeur de russe à tours ou environs",
       "is_remote": false,
       "poster_type": "student",
@@ -38654,7 +38138,7 @@
     },
     "https://www.voscours.fr/annonces/eleves/6885348": {
       "first_seen": "2026-04-03 10:39:34",
-      "last_seen": "2026-04-29 11:13:55",
+      "last_seen": "2026-05-01 10:36:06",
       "title": "Recherche en france uniquement un professeur de langue japonaise h/f",
       "is_remote": false,
       "poster_type": "student",
@@ -38666,7 +38150,7 @@
     },
     "https://www.voscours.fr/annonces/eleves/6797878": {
       "first_seen": "2026-04-03 10:39:34",
-      "last_seen": "2026-04-29 11:13:55",
+      "last_seen": "2026-05-01 10:36:06",
       "title": "Recherche coach foot perfectionnement technique",
       "is_remote": false,
       "poster_type": "student",
@@ -38678,7 +38162,7 @@
     },
     "https://www.voscours.fr/annonces/eleves/6885176": {
       "first_seen": "2026-04-03 10:39:34",
-      "last_seen": "2026-04-29 11:13:55",
+      "last_seen": "2026-05-01 10:36:06",
       "title": "Looking for a fun and exciting english teacher",
       "is_remote": false,
       "poster_type": "student",
@@ -38690,7 +38174,7 @@
     },
     "https://www.voscours.fr/annonces/eleves/6885202": {
       "first_seen": "2026-04-03 10:39:34",
-      "last_seen": "2026-04-29 11:13:55",
+      "last_seen": "2026-05-01 10:36:06",
       "title": "Cherche prof pour la matière de français pour passer le diplôme du daeu a",
       "is_remote": false,
       "poster_type": "student",
@@ -38714,7 +38198,7 @@
     },
     "https://www.voscours.fr/annonces/eleves/6592649": {
       "first_seen": "2026-04-03 10:39:34",
-      "last_seen": "2026-04-29 11:13:55",
+      "last_seen": "2026-05-01 10:36:06",
       "title": "Cherche cours de chinois débutant pour enfant 7 ans",
       "is_remote": false,
       "poster_type": "student",
@@ -38726,7 +38210,7 @@
     },
     "https://www.voscours.fr/annonces/eleves/5826568": {
       "first_seen": "2026-04-03 10:39:34",
-      "last_seen": "2026-04-21 10:59:04",
+      "last_seen": "2026-05-01 10:36:06",
       "title": "Cherche professeur néerlandais dans le val d’oise ou proche",
       "is_remote": false,
       "poster_type": "student",
@@ -38738,7 +38222,7 @@
     },
     "https://www.voscours.fr/annonces/eleves/6797349": {
       "first_seen": "2026-04-03 10:39:34",
-      "last_seen": "2026-04-29 11:13:55",
+      "last_seen": "2026-05-01 10:36:06",
       "title": "We're in a sesrch of an italian expert for a lesson",
       "is_remote": false,
       "poster_type": "student",
@@ -38750,7 +38234,7 @@
     },
     "https://www.voscours.fr/annonces/eleves/6797324": {
       "first_seen": "2026-04-03 10:39:34",
-      "last_seen": "2026-04-29 11:13:55",
+      "last_seen": "2026-05-01 10:36:06",
       "title": "We're in a search for a catalan expert for a lesson",
       "is_remote": false,
       "poster_type": "student",
@@ -38762,7 +38246,7 @@
     },
     "https://www.voscours.fr/annonces/eleves/6797321": {
       "first_seen": "2026-04-03 10:39:34",
-      "last_seen": "2026-04-29 11:13:55",
+      "last_seen": "2026-05-01 10:36:06",
       "title": "We're in search for an catalan expert for a lesson",
       "is_remote": false,
       "poster_type": "student",
@@ -38774,7 +38258,7 @@
     },
     "https://www.voscours.fr/annonces/eleves/6844070": {
       "first_seen": "2026-04-03 10:39:34",
-      "last_seen": "2026-04-29 11:13:55",
+      "last_seen": "2026-05-01 10:36:06",
       "title": "Cherche prof de maths pour une élève de 3eme",
       "is_remote": false,
       "poster_type": "student",
@@ -38786,7 +38270,7 @@
     },
     "https://www.voscours.fr/annonces/eleves/6878034": {
       "first_seen": "2026-04-03 10:39:34",
-      "last_seen": "2026-04-29 11:13:55",
+      "last_seen": "2026-05-01 10:36:06",
       "title": "Un n professeur natif anglais qui pourra m'amener à bien parler l'anglais",
       "is_remote": false,
       "poster_type": "student",
@@ -38798,7 +38282,7 @@
     },
     "https://www.voscours.fr/annonces/eleves/6696509": {
       "first_seen": "2026-04-03 10:39:34",
-      "last_seen": "2026-04-29 11:13:55",
+      "last_seen": "2026-05-01 10:36:06",
       "title": "Je cherche un ou une professeur de droit des obligations et de droit pénal",
       "is_remote": false,
       "poster_type": "student",
@@ -38822,7 +38306,7 @@
     },
     "https://www.voscours.fr/annonces/eleves/6843756": {
       "first_seen": "2026-04-03 10:39:34",
-      "last_seen": "2026-04-29 11:13:55",
+      "last_seen": "2026-05-01 10:36:06",
       "title": "French literature teachers are currently needed for some literature homework",
       "is_remote": false,
       "poster_type": "student",
@@ -38834,7 +38318,7 @@
     },
     "https://www.voscours.fr/annonces/eleves/6843737": {
       "first_seen": "2026-04-03 10:39:34",
-      "last_seen": "2026-04-29 11:13:55",
+      "last_seen": "2026-05-01 10:36:06",
       "title": "Biochemistry tutors are needed for classes and homework",
       "is_remote": false,
       "poster_type": "student",
@@ -39554,7 +39038,7 @@
     },
     "https://www.findtutors.co.uk/annonces/eleves/6803315": {
       "first_seen": "2026-04-03 10:39:34",
-      "last_seen": "2026-04-29 11:13:55",
+      "last_seen": "2026-05-01 10:36:06",
       "title": "I am looking for English teacher .For my daughter",
       "is_remote": false,
       "poster_type": "student",
@@ -39578,7 +39062,7 @@
     },
     "https://www.findtutors.co.uk/annonces/eleves/6848435": {
       "first_seen": "2026-04-03 10:39:34",
-      "last_seen": "2026-04-29 11:13:55",
+      "last_seen": "2026-05-01 10:36:06",
       "title": "Early Morning Music Teacher Needed – Chertsey - Electric Guitar | Piano | Drums",
       "is_remote": false,
       "poster_type": "student",
@@ -39590,7 +39074,7 @@
     },
     "https://www.findtutors.co.uk/annonces/eleves/6848367": {
       "first_seen": "2026-04-03 10:39:34",
-      "last_seen": "2026-04-29 11:13:55",
+      "last_seen": "2026-05-01 10:36:06",
       "title": "Adult Piano Lessons Wanted, based in Nottingham!",
       "is_remote": false,
       "poster_type": "student",
@@ -39602,7 +39086,7 @@
     },
     "https://www.findtutors.co.uk/annonces/eleves/6802952": {
       "first_seen": "2026-04-03 10:39:34",
-      "last_seen": "2026-04-29 11:13:55",
+      "last_seen": "2026-05-01 10:36:06",
       "title": "Seeking a summer internship in education-focused research or programme evaluation",
       "is_remote": false,
       "poster_type": "student",
@@ -39614,7 +39098,7 @@
     },
     "https://www.findtutors.co.uk/annonces/eleves/6753868": {
       "first_seen": "2026-04-03 10:39:34",
-      "last_seen": "2026-04-29 11:13:55",
+      "last_seen": "2026-05-01 10:36:06",
       "title": "Student nurse seeking academic writing help",
       "is_remote": false,
       "poster_type": "student",
@@ -39626,7 +39110,7 @@
     },
     "https://www.findtutors.co.uk/annonces/eleves/6596898": {
       "first_seen": "2026-04-03 10:39:34",
-      "last_seen": "2026-04-29 11:13:55",
+      "last_seen": "2026-05-01 10:36:06",
       "title": "teacherr pleasee, Teach me a lessonn",
       "is_remote": false,
       "poster_type": "student",
@@ -39638,7 +39122,7 @@
     },
     "https://www.findtutors.co.uk/annonces/eleves/6596793": {
       "first_seen": "2026-04-03 10:39:34",
-      "last_seen": "2026-04-29 11:13:55",
+      "last_seen": "2026-05-01 10:36:06",
       "title": "I am looking for a chef to help me with learning a few recipes and perfecting my craft and help me with building menu",
       "is_remote": false,
       "poster_type": "student",
@@ -39650,7 +39134,7 @@
     },
     "https://www.findtutors.co.uk/annonces/eleves/6847256": {
       "first_seen": "2026-04-03 10:39:34",
-      "last_seen": "2026-04-29 11:13:55",
+      "last_seen": "2026-05-01 10:36:06",
       "title": "I want psycho teacher for my son please contact",
       "is_remote": false,
       "poster_type": "student",
@@ -39662,7 +39146,7 @@
     },
     "https://www.findtutors.co.uk/annonces/eleves/6701699": {
       "first_seen": "2026-04-03 10:39:34",
-      "last_seen": "2026-04-29 11:13:55",
+      "last_seen": "2026-05-01 10:36:06",
       "title": "Start My Japanese Journey",
       "is_remote": false,
       "poster_type": "student",
@@ -39674,7 +39158,7 @@
     },
     "https://www.findtutors.co.uk/annonces/eleves/6847223": {
       "first_seen": "2026-04-03 10:39:34",
-      "last_seen": "2026-04-29 11:13:55",
+      "last_seen": "2026-05-01 10:36:06",
       "title": "I’m looking for a tutor to come to my house",
       "is_remote": false,
       "poster_type": "student",
@@ -39686,7 +39170,7 @@
     },
     "https://www.findtutors.co.uk/annonces/eleves/6698252": {
       "first_seen": "2026-04-03 10:39:34",
-      "last_seen": "2026-04-29 11:13:55",
+      "last_seen": "2026-05-01 10:36:06",
       "title": "I am looking for a Maths teacher for my son who is in Secondary school -year 10, Secondary school",
       "is_remote": true,
       "poster_type": "student",
@@ -39698,7 +39182,7 @@
     },
     "https://www.findtutors.co.uk/annonces/eleves/6603118": {
       "first_seen": "2026-04-03 10:39:34",
-      "last_seen": "2026-04-29 11:13:55",
+      "last_seen": "2026-05-01 10:36:06",
       "title": "I'm looking for someone to teach me piano at home in person",
       "is_remote": false,
       "poster_type": "student",
@@ -39710,7 +39194,7 @@
     },
     "https://www.findtutors.co.uk/annonces/eleves/6800597": {
       "first_seen": "2026-04-03 10:39:34",
-      "last_seen": "2026-04-29 11:13:55",
+      "last_seen": "2026-05-01 10:36:06",
       "title": "I am looking for a teacher for my 3.5 year old",
       "is_remote": false,
       "poster_type": "student",
@@ -39722,7 +39206,7 @@
     },
     "https://www.findtutors.co.uk/annonces/eleves/6887228": {
       "first_seen": "2026-04-03 10:39:34",
-      "last_seen": "2026-04-29 11:13:55",
+      "last_seen": "2026-05-01 10:36:06",
       "title": "I am an adult looking for a one to one tutor of italian in tiverton. I have some knowledge of the language. Thankyou",
       "is_remote": false,
       "poster_type": "student",
@@ -39734,7 +39218,7 @@
     },
     "https://www.findtutors.co.uk/annonces/eleves/6551911": {
       "first_seen": "2026-04-03 10:39:34",
-      "last_seen": "2026-04-29 11:13:55",
+      "last_seen": "2026-05-01 10:36:06",
       "title": "Need Tutor for autistic child",
       "is_remote": false,
       "poster_type": "student",
@@ -39746,7 +39230,7 @@
     },
     "https://www.findtutors.co.uk/annonces/eleves/6886886": {
       "first_seen": "2026-04-03 10:39:34",
-      "last_seen": "2026-04-29 11:13:55",
+      "last_seen": "2026-05-01 10:36:06",
       "title": "I am looking for an A Level Physics Tutor for exam board OCR A",
       "is_remote": false,
       "poster_type": "student",
@@ -39758,7 +39242,7 @@
     },
     "https://www.findtutors.co.uk/annonces/eleves/6699183": {
       "first_seen": "2026-04-03 10:39:34",
-      "last_seen": "2026-04-29 11:13:55",
+      "last_seen": "2026-05-01 10:36:06",
       "title": "Am looking for an experienced boxer as i have fights coming up and need the extra training",
       "is_remote": false,
       "poster_type": "student",
@@ -39770,7 +39254,7 @@
     },
     "https://www.findtutors.co.uk/annonces/eleves/6595072": {
       "first_seen": "2026-04-03 10:39:34",
-      "last_seen": "2026-04-29 11:13:55",
+      "last_seen": "2026-05-01 10:36:06",
       "title": "I am looking for a tutor to support me in my 4th year uni - Scottish tutor",
       "is_remote": false,
       "poster_type": "student",
@@ -39782,7 +39266,7 @@
     },
     "https://www.findtutors.co.uk/annonces/eleves/6502218": {
       "first_seen": "2026-04-03 10:39:34",
-      "last_seen": "2026-04-29 11:13:55",
+      "last_seen": "2026-05-01 10:36:06",
       "title": "I’m looking for somebody teach me accounting and finance at master degree level",
       "is_remote": false,
       "poster_type": "student",
@@ -39794,7 +39278,7 @@
     },
     "https://www.findtutors.co.uk/annonces/eleves/6313563": {
       "first_seen": "2026-04-03 10:39:34",
-      "last_seen": "2026-04-29 11:13:55",
+      "last_seen": "2026-05-01 10:36:06",
       "title": "I'm looking for a physics tutor and I hope you can speak chinese",
       "is_remote": false,
       "poster_type": "student",
@@ -39806,7 +39290,7 @@
     },
     "https://www.findtutors.co.uk/annonces/eleves/6886593": {
       "first_seen": "2026-04-03 10:39:34",
-      "last_seen": "2026-04-29 11:13:55",
+      "last_seen": "2026-05-01 10:36:06",
       "title": "i am looking for a tutor for A-Level psychology",
       "is_remote": false,
       "poster_type": "student",
@@ -39818,7 +39302,7 @@
     },
     "https://www.findtutors.co.uk/annonces/eleves/6845837": {
       "first_seen": "2026-04-03 10:39:34",
-      "last_seen": "2026-04-29 11:13:55",
+      "last_seen": "2026-05-01 10:36:06",
       "title": "Looking for a tutor to help with my AAT",
       "is_remote": false,
       "poster_type": "student",
@@ -39830,7 +39314,7 @@
     },
     "https://www.findtutors.co.uk/annonces/eleves/6848010": {
       "first_seen": "2026-04-03 10:39:34",
-      "last_seen": "2026-04-29 11:13:55",
+      "last_seen": "2026-05-01 10:36:06",
       "title": "Adult beginner is looking for in-person piano lessons in Rochester",
       "is_remote": false,
       "poster_type": "student",
@@ -39842,7 +39326,7 @@
     },
     "https://www.findtutors.co.uk/annonces/eleves/6750431": {
       "first_seen": "2026-04-03 10:39:34",
-      "last_seen": "2026-04-29 11:13:55",
+      "last_seen": "2026-05-01 10:36:06",
       "title": "Spanish lessons for my 16 yo son, who is currently looking at a grade 7 gcse",
       "is_remote": false,
       "poster_type": "student",
@@ -39854,7 +39338,7 @@
     },
     "https://www.findtutors.co.uk/annonces/eleves/6447818": {
       "first_seen": "2026-04-03 10:39:34",
-      "last_seen": "2026-04-29 11:13:55",
+      "last_seen": "2026-05-01 10:36:06",
       "title": "Looking for my Wife's English course at home",
       "is_remote": false,
       "poster_type": "student",
@@ -39866,7 +39350,7 @@
     },
     "https://www.findtutors.co.uk/annonces/eleves/6698006": {
       "first_seen": "2026-04-03 10:39:34",
-      "last_seen": "2026-04-29 11:13:55",
+      "last_seen": "2026-05-01 10:36:06",
       "title": "I am looking for someone who can cover the IGCSE maths syllabus for exams in May 2026",
       "is_remote": false,
       "poster_type": "student",
@@ -39902,7 +39386,7 @@
     },
     "https://www.findtutors.co.uk/annonces/eleves/6593365": {
       "first_seen": "2026-04-03 10:39:34",
-      "last_seen": "2026-04-29 11:13:55",
+      "last_seen": "2026-05-01 10:36:06",
       "title": "I am looking for ks1 for English to help with pencil control and reading",
       "is_remote": false,
       "poster_type": "student",
@@ -39914,7 +39398,7 @@
     },
     "https://www.findtutors.co.uk/annonces/eleves/6549675": {
       "first_seen": "2026-04-03 10:39:34",
-      "last_seen": "2026-04-29 11:13:55",
+      "last_seen": "2026-05-01 10:36:06",
       "title": "My daughter needs help with English school work",
       "is_remote": false,
       "poster_type": "student",
@@ -39938,7 +39422,7 @@
     },
     "https://www.findtutors.co.uk/annonces/eleves/6347938": {
       "first_seen": "2026-04-03 10:39:34",
-      "last_seen": "2026-04-29 11:13:55",
+      "last_seen": "2026-05-01 10:36:06",
       "title": "Looking for a primary teacher for 6 yo daughter",
       "is_remote": false,
       "poster_type": "student",
@@ -39950,7 +39434,7 @@
     },
     "https://www.findtutors.co.uk/annonces/eleves/6884860": {
       "first_seen": "2026-04-03 10:39:34",
-      "last_seen": "2026-04-29 11:13:55",
+      "last_seen": "2026-05-01 10:36:06",
       "title": "maths tutor needed for year 13 student, 6 sessions a week , i am a cambdrige offer holder",
       "is_remote": false,
       "poster_type": "student",
@@ -41630,7 +41114,7 @@
     },
     "https://www.codeur.com/projects/480694-creation-site-internet": {
       "first_seen": "2026-04-04 06:33:05",
-      "last_seen": "2026-05-01 08:31:45",
+      "last_seen": "2026-05-01 10:36:06",
       "title": "Création site internet",
       "is_remote": true,
       "poster_type": "unknown",
@@ -41930,7 +41414,7 @@
     },
     "https://www.allovoisins.com/v/photographe": {
       "first_seen": "2026-04-04 07:49:49",
-      "last_seen": "2026-05-01 08:31:45",
+      "last_seen": "2026-05-01 10:36:06",
       "title": "Recherche Photographe à Nantes",
       "is_remote": false,
       "poster_type": "unknown",
@@ -42086,7 +41570,7 @@
     },
     "https://www.allovoisins.com/v/soutien-scolaire": {
       "first_seen": "2026-04-04 07:49:49",
-      "last_seen": "2026-05-01 08:31:45",
+      "last_seen": "2026-05-01 10:36:06",
       "title": "Recherche Soutien scolaire à Fuveau",
       "is_remote": false,
       "poster_type": "unknown",
@@ -42242,7 +41726,7 @@
     },
     "https://www.allovoisins.com/r/0/3/0/0/location-vente/Btp-chantier": {
       "first_seen": "2026-04-04 07:49:49",
-      "last_seen": "2026-05-01 08:31:45",
+      "last_seen": "2026-05-01 10:36:06",
       "title": "Location bétonnière / toupie à béton - Gujan-Mestras",
       "is_remote": false,
       "poster_type": "unknown",
@@ -42662,7 +42146,7 @@
     },
     "https://www.voscours.fr/annonces/eleves/6449999": {
       "first_seen": "2026-04-04 10:49:18",
-      "last_seen": "2026-04-28 11:17:15",
+      "last_seen": "2026-05-01 10:36:06",
       "title": "Je recherche un professeur d'italien à villeneuve les avignon pour mon fils de 11 ans",
       "is_remote": false,
       "poster_type": "student",
@@ -42674,7 +42158,7 @@
     },
     "https://www.voscours.fr/offre-emploi-maths-lyon/-devenez-tuteur-lyon-flexibilite-remuneration-attractive-impact-reel-gostudent-6670010": {
       "first_seen": "2026-04-04 10:49:18",
-      "last_seen": "2026-04-28 11:17:15",
+      "last_seen": "2026-05-01 10:36:06",
       "title": "🚀 devenez tuteur à lyon : flexibilité, rémunération attractive & impact réel | gostudent",
       "is_remote": false,
       "poster_type": "student",
@@ -42686,7 +42170,7 @@
     },
     "https://www.voscours.fr/offre-emploi-mathematiques-appliquees-lyon/-devenez-tuteur-lyon-flexibilite-remuneration-attractive-impact-reel-gostudent-6670015": {
       "first_seen": "2026-04-04 10:49:18",
-      "last_seen": "2026-04-28 11:17:15",
+      "last_seen": "2026-05-01 10:36:06",
       "title": "🚀 devenez tuteur à lyon : flexibilité, rémunération attractive & impact réel | gostudent",
       "is_remote": false,
       "poster_type": "student",
@@ -42698,7 +42182,7 @@
     },
     "https://www.voscours.fr/offre-emploi-anglais-lyon/-devenez-tuteur-lyon-flexibilite-remuneration-attractive-impact-reel-gostudent-6670007": {
       "first_seen": "2026-04-04 10:49:18",
-      "last_seen": "2026-04-28 11:17:15",
+      "last_seen": "2026-05-01 10:36:06",
       "title": "🚀 devenez tuteur à lyon : flexibilité, rémunération attractive & impact réel | gostudent",
       "is_remote": false,
       "poster_type": "student",
@@ -42710,7 +42194,7 @@
     },
     "https://www.voscours.fr/offre-emploi-francais-lyon/-devenez-tuteur-lyon-flexibilite-remuneration-attractive-impact-reel-gostudent-6670012": {
       "first_seen": "2026-04-04 10:49:18",
-      "last_seen": "2026-04-28 11:17:15",
+      "last_seen": "2026-05-01 10:36:06",
       "title": "🚀 devenez tuteur à lyon : flexibilité, rémunération attractive & impact réel | gostudent",
       "is_remote": false,
       "poster_type": "student",
@@ -42722,7 +42206,7 @@
     },
     "https://www.voscours.fr/offre-emploi-physique-lyon/-devenez-tuteur-lyon-flexibilite-remuneration-attractive-impact-reel-gostudent-6670013": {
       "first_seen": "2026-04-04 10:49:18",
-      "last_seen": "2026-04-28 11:17:15",
+      "last_seen": "2026-05-01 10:36:06",
       "title": "🚀 devenez tuteur à lyon : flexibilité, rémunération attractive & impact réel | gostudent",
       "is_remote": false,
       "poster_type": "student",
@@ -42734,7 +42218,7 @@
     },
     "https://www.voscours.fr/offre-emploi-chimie-lyon/-devenez-tuteur-lyon-flexibilite-remuneration-attractive-impact-reel-gostudent-6670014": {
       "first_seen": "2026-04-04 10:49:18",
-      "last_seen": "2026-04-28 11:17:15",
+      "last_seen": "2026-05-01 10:36:06",
       "title": "🚀 devenez tuteur à lyon : flexibilité, rémunération attractive & impact réel | gostudent",
       "is_remote": false,
       "poster_type": "student",
@@ -42746,7 +42230,7 @@
     },
     "https://www.voscours.fr/annonces/eleves/6848932": {
       "first_seen": "2026-04-04 10:49:18",
-      "last_seen": "2026-04-28 11:17:15",
+      "last_seen": "2026-05-01 10:36:06",
       "title": "Cherche professeur de mathématiques poyr ma fille de 3 eme",
       "is_remote": false,
       "poster_type": "student",
@@ -42758,7 +42242,7 @@
     },
     "https://www.voscours.fr/annonces/eleves/6672290": {
       "first_seen": "2026-04-04 10:49:18",
-      "last_seen": "2026-04-28 11:17:15",
+      "last_seen": "2026-05-01 10:36:06",
       "title": "Je cherche un professeur d'anglais pour ma fille en classe de 5ème",
       "is_remote": false,
       "poster_type": "student",
@@ -42770,7 +42254,7 @@
     },
     "https://www.voscours.fr/annonces/eleves/6803709": {
       "first_seen": "2026-04-04 10:49:18",
-      "last_seen": "2026-04-28 11:17:15",
+      "last_seen": "2026-05-01 10:36:06",
       "title": "Recherche professeur d’anglais – niveau débutant (objectif professionnel)",
       "is_remote": false,
       "poster_type": "student",
@@ -43862,7 +43346,7 @@
     },
     "https://www.voscours.fr/annonces/eleves/6819584": {
       "first_seen": "2026-04-04 10:49:18",
-      "last_seen": "2026-04-20 11:09:52",
+      "last_seen": "2026-05-01 10:36:06",
       "title": "French tutors is needed for a french course",
       "is_remote": false,
       "poster_type": "student",
@@ -43874,7 +43358,7 @@
     },
     "https://www.voscours.fr/annonces/eleves/6819434": {
       "first_seen": "2026-04-04 10:49:18",
-      "last_seen": "2026-04-20 11:09:52",
+      "last_seen": "2026-05-01 10:36:06",
       "title": "Demande d'un(e) enseignant(e) expérimenté(e) pour suivi scolaire individualisé",
       "is_remote": false,
       "poster_type": "student",
@@ -43886,7 +43370,7 @@
     },
     "https://www.voscours.fr/annonces/eleves/6861619": {
       "first_seen": "2026-04-04 10:49:18",
-      "last_seen": "2026-04-20 11:09:52",
+      "last_seen": "2026-05-01 10:36:06",
       "title": "Je cherche un(e) professeur(e) pour appendre ukulélée",
       "is_remote": false,
       "poster_type": "student",
@@ -43898,7 +43382,7 @@
     },
     "https://www.voscours.fr/annonces/eleves/6720457": {
       "first_seen": "2026-04-04 10:49:18",
-      "last_seen": "2026-04-20 11:09:52",
+      "last_seen": "2026-05-01 10:36:06",
       "title": "Je cherche des heures cours particulier de maths pour ma fille de tle",
       "is_remote": false,
       "poster_type": "student",
@@ -43910,7 +43394,7 @@
     },
     "https://www.voscours.fr/annonces/eleves/6819137": {
       "first_seen": "2026-04-04 10:49:18",
-      "last_seen": "2026-04-20 11:09:52",
+      "last_seen": "2026-05-01 10:36:06",
       "title": "Je cherche un professeur d'allemand pour m'aider",
       "is_remote": false,
       "poster_type": "student",
@@ -43922,7 +43406,7 @@
     },
     "https://www.voscours.fr/annonces/eleves/6818954": {
       "first_seen": "2026-04-04 10:49:18",
-      "last_seen": "2026-04-20 11:09:52",
+      "last_seen": "2026-05-01 10:36:06",
       "title": "Je cherche un/une professeur d’informatique",
       "is_remote": false,
       "poster_type": "student",
@@ -43934,7 +43418,7 @@
     },
     "https://www.voscours.fr/annonces/eleves/6861224": {
       "first_seen": "2026-04-04 10:49:18",
-      "last_seen": "2026-04-20 11:09:52",
+      "last_seen": "2026-05-01 10:36:06",
       "title": "Hello we're in need of a tutor for a lesson on hebrew",
       "is_remote": false,
       "poster_type": "student",
@@ -43946,7 +43430,7 @@
     },
     "https://www.voscours.fr/annonces/eleves/6720470": {
       "first_seen": "2026-04-04 10:49:18",
-      "last_seen": "2026-04-20 11:09:52",
+      "last_seen": "2026-05-01 10:36:06",
       "title": "Cherche cours particulier de mathématiques niveau terminale",
       "is_remote": false,
       "poster_type": "student",
@@ -43958,7 +43442,7 @@
     },
     "https://www.findtutors.co.uk/annonces/eleves/6455026": {
       "first_seen": "2026-04-04 10:49:18",
-      "last_seen": "2026-04-29 11:13:55",
+      "last_seen": "2026-05-01 10:36:06",
       "title": "Computer science year 12 / A-levels",
       "is_remote": false,
       "poster_type": "student",
@@ -43970,7 +43454,7 @@
     },
     "https://www.findtutors.co.uk/annonces/eleves/6849789": {
       "first_seen": "2026-04-04 10:49:18",
-      "last_seen": "2026-04-29 11:13:55",
+      "last_seen": "2026-05-01 10:36:06",
       "title": "Looking for a tutor for a 6 year old child",
       "is_remote": false,
       "poster_type": "student",
@@ -43982,7 +43466,7 @@
     },
     "https://www.findtutors.co.uk/annonces/eleves/6804825": {
       "first_seen": "2026-04-04 10:49:18",
-      "last_seen": "2026-04-29 11:13:55",
+      "last_seen": "2026-05-01 10:36:06",
       "title": "I need a A level OCR physical Education teacher for my son",
       "is_remote": false,
       "poster_type": "student",
@@ -43994,7 +43478,7 @@
     },
     "https://www.findtutors.co.uk/annonces/eleves/6703987": {
       "first_seen": "2026-04-04 10:49:18",
-      "last_seen": "2026-04-29 11:13:55",
+      "last_seen": "2026-05-01 10:36:06",
       "title": "Looking for a Spanish tutor for me and my 6 year old son",
       "is_remote": false,
       "poster_type": "student",
@@ -44006,7 +43490,7 @@
     },
     "https://www.findtutors.co.uk/annonces/eleves/6599119": {
       "first_seen": "2026-04-04 10:49:18",
-      "last_seen": "2026-04-29 11:13:55",
+      "last_seen": "2026-05-01 10:36:06",
       "title": "I am looking for an Italian tutor… 3 months to learn basics!",
       "is_remote": true,
       "poster_type": "student",
@@ -44018,7 +43502,7 @@
     },
     "https://www.findtutors.co.uk/annonces/eleves/6849330": {
       "first_seen": "2026-04-04 10:49:18",
-      "last_seen": "2026-04-29 11:13:55",
+      "last_seen": "2026-05-01 10:36:06",
       "title": "1-1 Math and English year 4 @ King’s Road Library, Chelsea",
       "is_remote": false,
       "poster_type": "student",
@@ -44030,7 +43514,7 @@
     },
     "https://www.findtutors.co.uk/annonces/eleves/6598412": {
       "first_seen": "2026-04-04 10:49:18",
-      "last_seen": "2026-04-29 11:13:55",
+      "last_seen": "2026-05-01 10:36:06",
       "title": "hello, interested in a tutor for data structures and algorithms (practice questions)",
       "is_remote": false,
       "poster_type": "student",
@@ -44042,7 +43526,7 @@
     },
     "https://www.findtutors.co.uk/annonces/eleves/6755284": {
       "first_seen": "2026-04-04 10:49:18",
-      "last_seen": "2026-04-29 11:13:55",
+      "last_seen": "2026-05-01 10:36:06",
       "title": "Im looking for in person tutor for Computing information Technology level 3",
       "is_remote": false,
       "poster_type": "student",
@@ -44150,7 +43634,7 @@
     },
     "https://www.findtutors.co.uk/annonces/eleves/6484068": {
       "first_seen": "2026-04-04 10:49:18",
-      "last_seen": "2026-04-29 11:13:55",
+      "last_seen": "2026-05-01 10:36:06",
       "title": "Looking for a business studies tutor- A-levels tutor",
       "is_remote": false,
       "poster_type": "student",
@@ -44162,7 +43646,7 @@
     },
     "https://www.findtutors.co.uk/annonces/eleves/6138860": {
       "first_seen": "2026-04-04 10:49:18",
-      "last_seen": "2026-04-29 11:13:55",
+      "last_seen": "2026-05-01 10:36:06",
       "title": "CCEA A/S level History & Politics revision for mocks",
       "is_remote": true,
       "poster_type": "student",
@@ -44342,7 +43826,7 @@
     },
     "https://www.findtutors.co.uk/annonces/eleves/6526881": {
       "first_seen": "2026-04-04 10:49:18",
-      "last_seen": "2026-04-29 11:13:55",
+      "last_seen": "2026-05-01 10:36:06",
       "title": "I am looking for KS3 Maths and English Tutor with understanding of Dyslexia",
       "is_remote": false,
       "poster_type": "student",
@@ -45278,7 +44762,7 @@
     },
     "https://www.findtutors.co.uk/annonces/eleves/6719143": {
       "first_seen": "2026-04-04 10:49:18",
-      "last_seen": "2026-04-24 10:34:10",
+      "last_seen": "2026-05-01 10:36:06",
       "title": "Looking for an in-person Italian tutor in Bristol",
       "is_remote": false,
       "poster_type": "student",
@@ -45290,7 +44774,7 @@
     },
     "https://www.findtutors.co.uk/annonces/eleves/6861907": {
       "first_seen": "2026-04-04 10:49:18",
-      "last_seen": "2026-04-24 10:34:10",
+      "last_seen": "2026-05-01 10:36:06",
       "title": "Looking for a tutor to offer extra support for reception aged child",
       "is_remote": false,
       "poster_type": "student",
@@ -45302,7 +44786,7 @@
     },
     "https://www.findtutors.co.uk/annonces/eleves/6569451": {
       "first_seen": "2026-04-04 10:49:18",
-      "last_seen": "2026-04-24 10:34:10",
+      "last_seen": "2026-05-01 10:36:06",
       "title": "Need help with gcse englishone to one tuition at home preferably. Lives in Rumney",
       "is_remote": false,
       "poster_type": "student",
@@ -45314,7 +44798,7 @@
     },
     "https://www.findtutors.co.uk/annonces/eleves/6718878": {
       "first_seen": "2026-04-04 10:49:18",
-      "last_seen": "2026-04-24 10:34:10",
+      "last_seen": "2026-05-01 10:36:06",
       "title": "Basic to Intermediate Level",
       "is_remote": false,
       "poster_type": "student",
@@ -45326,7 +44810,7 @@
     },
     "https://www.findtutors.co.uk/annonces/eleves/6772523": {
       "first_seen": "2026-04-04 10:49:18",
-      "last_seen": "2026-04-24 10:34:10",
+      "last_seen": "2026-05-01 10:36:06",
       "title": "Any one help me with math gcse I really need help",
       "is_remote": false,
       "poster_type": "student",
@@ -45338,7 +44822,7 @@
     },
     "https://www.findtutors.co.uk/annonces/eleves/6718745": {
       "first_seen": "2026-04-04 10:49:18",
-      "last_seen": "2026-04-24 10:34:10",
+      "last_seen": "2026-05-01 10:36:06",
       "title": "After School French Club Teacher/Tutor for SW18 on Tuesdays",
       "is_remote": false,
       "poster_type": "student",
@@ -45350,7 +44834,7 @@
     },
     "https://www.findtutors.co.uk/annonces/eleves/6256585": {
       "first_seen": "2026-04-04 10:49:18",
-      "last_seen": "2026-04-24 10:34:10",
+      "last_seen": "2026-05-01 10:36:06",
       "title": "basic French tutor sought for my 7 year old son",
       "is_remote": false,
       "poster_type": "student",
@@ -45362,7 +44846,7 @@
     },
     "https://www.findtutors.co.uk/annonces/eleves/6718391": {
       "first_seen": "2026-04-04 10:49:18",
-      "last_seen": "2026-04-24 10:34:10",
+      "last_seen": "2026-05-01 10:36:06",
       "title": "After School French Club Tutor, SW18, Tuesdays",
       "is_remote": false,
       "poster_type": "student",
@@ -45374,7 +44858,7 @@
     },
     "https://www.findtutors.co.uk/annonces/eleves/6771952": {
       "first_seen": "2026-04-04 10:49:18",
-      "last_seen": "2026-04-24 10:34:10",
+      "last_seen": "2026-05-01 10:36:06",
       "title": "Looking to learn European Portuguese for family reasons",
       "is_remote": false,
       "poster_type": "student",
@@ -45386,7 +44870,7 @@
     },
     "https://www.findtutors.co.uk/annonces/eleves/6648871": {
       "first_seen": "2026-04-04 10:49:18",
-      "last_seen": "2026-04-24 10:34:10",
+      "last_seen": "2026-05-01 10:36:06",
       "title": "Do you teach opera to six year olds?",
       "is_remote": true,
       "poster_type": "student",
@@ -45398,7 +44882,7 @@
     },
     "https://www.findtutors.co.uk/annonces/eleves/6771403": {
       "first_seen": "2026-04-04 10:49:18",
-      "last_seen": "2026-04-24 10:34:10",
+      "last_seen": "2026-05-01 10:36:06",
       "title": "Looking for a biology teacher for access course",
       "is_remote": false,
       "poster_type": "student",
@@ -45410,7 +44894,7 @@
     },
     "https://www.findtutors.co.uk/annonces/eleves/6568355": {
       "first_seen": "2026-04-04 10:49:18",
-      "last_seen": "2026-04-24 10:34:10",
+      "last_seen": "2026-05-01 10:36:06",
       "title": "I am looking for a tutor for my daughter who is currently in year 12",
       "is_remote": true,
       "poster_type": "student",
@@ -45422,7 +44906,7 @@
     },
     "https://www.findtutors.co.uk/annonces/eleves/6422138": {
       "first_seen": "2026-04-04 10:49:18",
-      "last_seen": "2026-04-24 10:34:10",
+      "last_seen": "2026-05-01 10:36:06",
       "title": "I'm online English ,maths and quran teacher and looking for Students who needs online classes and passionate to learn",
       "is_remote": true,
       "poster_type": "student",
@@ -45434,7 +44918,7 @@
     },
     "https://www.findtutors.co.uk/annonces/eleves/6818411": {
       "first_seen": "2026-04-04 10:49:18",
-      "last_seen": "2026-04-20 11:09:52",
+      "last_seen": "2026-05-01 10:36:06",
       "title": "Looking for a tutor to help me out with AQA Business, I’m in Year 13",
       "is_remote": false,
       "poster_type": "student",
@@ -45482,7 +44966,7 @@
     },
     "https://www.allovoisins.com/v/architecte-maitre-d-oeuvre": {
       "first_seen": "2026-04-05 06:47:59",
-      "last_seen": "2026-05-01 08:31:45",
+      "last_seen": "2026-05-01 10:36:06",
       "title": "Recherche Architecte - Maître d'oeuvre à Launaguet",
       "is_remote": false,
       "poster_type": "unknown",
@@ -46178,7 +45662,7 @@
     },
     "https://www.allovoisins.com/v/artisan-d-art": {
       "first_seen": "2026-04-05 06:47:59",
-      "last_seen": "2026-05-01 08:31:45",
+      "last_seen": "2026-05-01 10:36:06",
       "title": "Cherche Artisan d'art à Nantes",
       "is_remote": false,
       "poster_type": "unknown",
@@ -46706,7 +46190,7 @@
     },
     "https://www.findtutors.co.uk/annonces/eleves/6414260": {
       "first_seen": "2026-04-05 11:10:19",
-      "last_seen": "2026-04-29 11:13:55",
+      "last_seen": "2026-05-01 10:36:06",
       "title": "Seeking Experienced Tutor for Year 6 & 7 Boys – Home Sessions in Harborne",
       "is_remote": false,
       "poster_type": "student",
@@ -46718,7 +46202,7 @@
     },
     "https://www.findtutors.co.uk/annonces/eleves/6705646": {
       "first_seen": "2026-04-05 11:10:19",
-      "last_seen": "2026-04-29 11:13:55",
+      "last_seen": "2026-05-01 10:36:06",
       "title": "I am looking for an a level chemistry tutor asap",
       "is_remote": false,
       "poster_type": "student",
@@ -46730,7 +46214,7 @@
     },
     "https://www.findtutors.co.uk/annonces/eleves/6600486": {
       "first_seen": "2026-04-05 11:10:19",
-      "last_seen": "2026-04-29 11:13:55",
+      "last_seen": "2026-05-01 10:36:06",
       "title": "I am looking for a tutor for my year 5 child. English and maths. He’s fallen behind so back to basics",
       "is_remote": false,
       "poster_type": "student",
@@ -46742,7 +46226,7 @@
     },
     "https://www.findtutors.co.uk/annonces/eleves/6806351": {
       "first_seen": "2026-04-05 11:10:19",
-      "last_seen": "2026-04-29 11:13:55",
+      "last_seen": "2026-05-01 10:36:06",
       "title": "Im looking for a home tutor",
       "is_remote": false,
       "poster_type": "student",
@@ -46754,7 +46238,7 @@
     },
     "https://www.findtutors.co.uk/annonces/eleves/6890934": {
       "first_seen": "2026-04-05 11:10:19",
-      "last_seen": "2026-04-29 11:13:55",
+      "last_seen": "2026-05-01 10:36:06",
       "title": "I have been trying to decide on an instrument to play for years, I have decided on the piano. I’m 21, so still time to learn",
       "is_remote": false,
       "poster_type": "student",
@@ -46766,7 +46250,7 @@
     },
     "https://www.findtutors.co.uk/annonces/eleves/6600302": {
       "first_seen": "2026-04-05 11:10:19",
-      "last_seen": "2026-04-29 11:13:55",
+      "last_seen": "2026-05-01 10:36:06",
       "title": "Looking for a private tutor in Medicine? I am a qualified Doctor with 5 years of experience!",
       "is_remote": false,
       "poster_type": "student",
@@ -46778,7 +46262,7 @@
     },
     "https://www.findtutors.co.uk/annonces/eleves/6705212": {
       "first_seen": "2026-04-05 11:10:19",
-      "last_seen": "2026-04-29 11:13:55",
+      "last_seen": "2026-05-01 10:36:06",
       "title": "I looking for a tutor that would be able to aid me in economics",
       "is_remote": false,
       "poster_type": "student",
@@ -46790,7 +46274,7 @@
     },
     "https://www.findtutors.co.uk/annonces/eleves/6757765": {
       "first_seen": "2026-04-05 11:10:19",
-      "last_seen": "2026-04-29 11:13:55",
+      "last_seen": "2026-05-01 10:36:06",
       "title": "Advice needed asap followed by regular lessons to excel at A-Level Spanish using AQA. Must be familiar with board requirements",
       "is_remote": false,
       "poster_type": "student",
@@ -46802,7 +46286,7 @@
     },
     "https://www.findtutors.co.uk/annonces/eleves/6637932": {
       "first_seen": "2026-04-05 11:10:19",
-      "last_seen": "2026-04-29 11:13:55",
+      "last_seen": "2026-05-01 10:36:06",
       "title": "English classes for a little french boy year 10 that arrived in the UK 2 months and a half ago",
       "is_remote": false,
       "poster_type": "student",
@@ -46814,7 +46298,7 @@
     },
     "https://www.findtutors.co.uk/annonces/eleves/6850493": {
       "first_seen": "2026-04-05 11:10:19",
-      "last_seen": "2026-04-29 11:13:55",
+      "last_seen": "2026-05-01 10:36:06",
       "title": "Looking for a Maths Tutor – In-Person Classes in Hazel Grove",
       "is_remote": false,
       "poster_type": "student",
@@ -46826,7 +46310,7 @@
     },
     "https://www.findtutors.co.uk/annonces/eleves/6805715": {
       "first_seen": "2026-04-05 11:10:19",
-      "last_seen": "2026-04-29 11:13:55",
+      "last_seen": "2026-05-01 10:36:06",
       "title": "Adult learner. Looking for a Japanese tutor for beginners online. Would like half an hour lessons",
       "is_remote": true,
       "poster_type": "student",
@@ -46838,7 +46322,7 @@
     },
     "https://www.findtutors.co.uk/annonces/eleves/6757332": {
       "first_seen": "2026-04-05 11:10:19",
-      "last_seen": "2026-04-29 11:13:55",
+      "last_seen": "2026-05-01 10:36:06",
       "title": "I am a second year Accounting and Law student looking for help with undergraduate law",
       "is_remote": false,
       "poster_type": "student",
@@ -46850,7 +46334,7 @@
     },
     "https://www.findtutors.co.uk/annonces/eleves/6850169": {
       "first_seen": "2026-04-05 11:10:19",
-      "last_seen": "2026-04-29 11:13:55",
+      "last_seen": "2026-05-01 10:36:06",
       "title": "I'm requiring help in Medical Genetics subject for myself a mature student, I've returned to studying, improve my career prospect",
       "is_remote": false,
       "poster_type": "student",
@@ -48506,7 +47990,7 @@
     },
     "https://www.findtutors.co.uk/annonces/eleves/6852920": {
       "first_seen": "2026-04-06 11:26:02",
-      "last_seen": "2026-04-29 11:13:55",
+      "last_seen": "2026-05-01 10:36:06",
       "title": "I am looking for an Interior design tutor degree level",
       "is_remote": false,
       "poster_type": "student",
@@ -48518,7 +48002,7 @@
     },
     "https://www.findtutors.co.uk/annonces/eleves/6559001": {
       "first_seen": "2026-04-06 11:26:02",
-      "last_seen": "2026-04-29 11:13:55",
+      "last_seen": "2026-05-01 10:36:06",
       "title": "I am looking for Tutors in Essex to teach 1:1",
       "is_remote": false,
       "poster_type": "student",
@@ -48530,7 +48014,7 @@
     },
     "https://www.findtutors.co.uk/annonces/eleves/6852586": {
       "first_seen": "2026-04-06 11:26:02",
-      "last_seen": "2026-04-29 11:13:55",
+      "last_seen": "2026-05-01 10:36:06",
       "title": "I am looking for a primary English tutor",
       "is_remote": false,
       "poster_type": "student",
@@ -48542,7 +48026,7 @@
     },
     "https://www.findtutors.co.uk/annonces/eleves/6248018": {
       "first_seen": "2026-04-06 11:26:02",
-      "last_seen": "2026-04-29 11:13:55",
+      "last_seen": "2026-05-01 10:36:06",
       "title": "Maths teacher available on Sundays for face to face session.No online please",
       "is_remote": true,
       "poster_type": "student",
@@ -48554,7 +48038,7 @@
     },
     "https://www.findtutors.co.uk/annonces/eleves/6853271": {
       "first_seen": "2026-04-06 11:26:02",
-      "last_seen": "2026-04-29 11:13:55",
+      "last_seen": "2026-05-01 10:36:06",
       "title": "We are seeking a Mentor to work with primary aged boy in the family home",
       "is_remote": false,
       "poster_type": "student",
@@ -48566,7 +48050,7 @@
     },
     "https://www.findtutors.co.uk/annonces/eleves/6559004": {
       "first_seen": "2026-04-06 11:26:02",
-      "last_seen": "2026-04-29 11:13:55",
+      "last_seen": "2026-05-01 10:36:06",
       "title": "Tutors Wanted Across Essex (Self-Employed | Term-Time | School Hours)",
       "is_remote": false,
       "poster_type": "student",
@@ -48578,7 +48062,7 @@
     },
     "https://www.findtutors.co.uk/annonces/eleves/6852080": {
       "first_seen": "2026-04-06 11:26:02",
-      "last_seen": "2026-04-29 11:13:55",
+      "last_seen": "2026-05-01 10:36:06",
       "title": "im looking for an in person tutor for maths gcse",
       "is_remote": false,
       "poster_type": "student",
@@ -48602,7 +48086,7 @@
     },
     "https://www.findtutors.co.uk/annonces/eleves/6807911": {
       "first_seen": "2026-04-06 11:26:02",
-      "last_seen": "2026-04-29 11:13:55",
+      "last_seen": "2026-05-01 10:36:06",
       "title": "I am looking for a maths tutor for my daughter age 15",
       "is_remote": false,
       "poster_type": "student",
@@ -48614,7 +48098,7 @@
     },
     "https://www.findtutors.co.uk/annonces/eleves/6601604": {
       "first_seen": "2026-04-06 11:26:02",
-      "last_seen": "2026-04-29 11:13:55",
+      "last_seen": "2026-05-01 10:36:06",
       "title": "I'm looking for a tutor in person 2 times per week and with homework for my daughter. Next year she have the GSCE",
       "is_remote": false,
       "poster_type": "student",
@@ -48626,7 +48110,7 @@
     },
     "https://www.findtutors.co.uk/annonces/eleves/6807666": {
       "first_seen": "2026-04-06 11:26:02",
-      "last_seen": "2026-04-29 11:13:55",
+      "last_seen": "2026-05-01 10:36:06",
       "title": "1:1 maths tutor wanted for S2 student, Edinburgh. In-person preferred",
       "is_remote": false,
       "poster_type": "student",
@@ -48638,7 +48122,7 @@
     },
     "https://www.findtutors.co.uk/annonces/eleves/6807641": {
       "first_seen": "2026-04-06 11:26:02",
-      "last_seen": "2026-04-29 11:13:55",
+      "last_seen": "2026-05-01 10:36:06",
       "title": "Looking for 1 on 1 Spanish lessons (in person ideally but online ok)",
       "is_remote": true,
       "poster_type": "student",
@@ -48650,7 +48134,7 @@
     },
     "https://www.findtutors.co.uk/annonces/eleves/6674537": {
       "first_seen": "2026-04-06 11:26:02",
-      "last_seen": "2026-04-29 11:13:55",
+      "last_seen": "2026-05-01 10:36:06",
       "title": "I am looking for a native English tutor",
       "is_remote": false,
       "poster_type": "student",
@@ -48662,7 +48146,7 @@
     },
     "https://www.findtutors.co.uk/annonces/eleves/6759248": {
       "first_seen": "2026-04-06 11:26:02",
-      "last_seen": "2026-04-29 11:13:55",
+      "last_seen": "2026-05-01 10:36:06",
       "title": "A tutor for my autistic and possibly dyslexic daughter. She would like to learn italian as a hobby",
       "is_remote": false,
       "poster_type": "student",
@@ -48674,7 +48158,7 @@
     },
     "https://www.findtutors.co.uk/annonces/eleves/6759194": {
       "first_seen": "2026-04-06 11:26:02",
-      "last_seen": "2026-04-29 11:13:55",
+      "last_seen": "2026-05-01 10:36:06",
       "title": "IELTS tutor to support with strategies",
       "is_remote": true,
       "poster_type": "student",
@@ -48686,7 +48170,7 @@
     },
     "https://www.findtutors.co.uk/annonces/eleves/6756987": {
       "first_seen": "2026-04-06 11:26:02",
-      "last_seen": "2026-04-29 11:13:55",
+      "last_seen": "2026-05-01 10:36:06",
       "title": "Looking for a LONDON based tutor for my 6yo daughter- SEN experience ideal as she has verbal dyspraxia",
       "is_remote": false,
       "poster_type": "student",
@@ -48698,7 +48182,7 @@
     },
     "https://www.findtutors.co.uk/annonces/eleves/6674429": {
       "first_seen": "2026-04-06 11:26:02",
-      "last_seen": "2026-04-29 11:13:55",
+      "last_seen": "2026-05-01 10:36:06",
       "title": "I'm looking for a Japanese tutor who is able to do lessons online and able to help me go from",
       "is_remote": true,
       "poster_type": "student",
@@ -48710,7 +48194,7 @@
     },
     "https://www.findtutors.co.uk/annonces/eleves/6758956": {
       "first_seen": "2026-04-06 11:26:02",
-      "last_seen": "2026-04-29 11:13:55",
+      "last_seen": "2026-05-01 10:36:06",
       "title": "Preparing for a relocation to Turkey in 2027",
       "is_remote": false,
       "poster_type": "student",
@@ -48722,7 +48206,7 @@
     },
     "https://www.findtutors.co.uk/annonces/eleves/6414569": {
       "first_seen": "2026-04-06 11:26:02",
-      "last_seen": "2026-04-29 11:13:55",
+      "last_seen": "2026-05-01 10:36:06",
       "title": "Looking for GCSE English for group session",
       "is_remote": false,
       "poster_type": "student",
@@ -48734,7 +48218,7 @@
     },
     "https://www.findtutors.co.uk/annonces/eleves/6706208": {
       "first_seen": "2026-04-06 11:26:02",
-      "last_seen": "2026-04-29 11:13:55",
+      "last_seen": "2026-05-01 10:36:06",
       "title": "Looking for a higher art tutor specific to abstract art, my higher project is due in 2 wks and I'm in desperate need of assistance",
       "is_remote": false,
       "poster_type": "student",
@@ -48746,7 +48230,7 @@
     },
     "https://www.findtutors.co.uk/annonces/eleves/6706137": {
       "first_seen": "2026-04-06 11:26:02",
-      "last_seen": "2026-04-29 11:13:55",
+      "last_seen": "2026-05-01 10:36:06",
       "title": "Am looking for Eduqcas specific English lesson teacher",
       "is_remote": false,
       "poster_type": "student",
@@ -48758,7 +48242,7 @@
     },
     "https://www.findtutors.co.uk/annonces/eleves/6674333": {
       "first_seen": "2026-04-06 11:26:02",
-      "last_seen": "2026-04-29 11:13:55",
+      "last_seen": "2026-05-01 10:36:06",
       "title": "I am looking for a English tutor and everyday communication",
       "is_remote": false,
       "poster_type": "student",
@@ -49214,7 +48698,7 @@
     },
     "https://www.allovoisins.com/r/0/94/0/0/location-vente/Jardin-jardin-potager": {
       "first_seen": "2026-04-07 09:30:21",
-      "last_seen": "2026-05-01 08:31:45",
+      "last_seen": "2026-05-01 10:36:06",
       "title": "Acheter un terre / terreau / fumier - Montlouis-sur-Loire",
       "is_remote": false,
       "poster_type": "unknown",
@@ -49802,7 +49286,7 @@
     },
     "https://www.findtutors.co.uk/annonces/eleves/6602257": {
       "first_seen": "2026-04-07 11:21:29",
-      "last_seen": "2026-04-29 11:13:55",
+      "last_seen": "2026-05-01 10:36:06",
       "title": "I urgently need tuition in Step maths for a university application. The test is next June",
       "is_remote": false,
       "poster_type": "student",
@@ -50498,7 +49982,7 @@
     },
     "https://www.voscours.fr/annonces/eleves/6855849": {
       "first_seen": "2026-04-08 11:26:43",
-      "last_seen": "2026-04-29 11:13:55",
+      "last_seen": "2026-05-01 10:36:06",
       "title": "Recherche professeur de chinois h/f",
       "is_remote": false,
       "poster_type": "student",
@@ -50510,7 +49994,7 @@
     },
     "https://www.voscours.fr/annonces/eleves/6814824": {
       "first_seen": "2026-04-08 11:26:43",
-      "last_seen": "2026-04-29 11:13:55",
+      "last_seen": "2026-05-01 10:36:06",
       "title": "Cherche un professeur.e italien.ne natif.ve",
       "is_remote": false,
       "poster_type": "student",
@@ -50522,7 +50006,7 @@
     },
     "https://www.voscours.fr/annonces/eleves/6857573": {
       "first_seen": "2026-04-08 11:26:43",
-      "last_seen": "2026-04-29 11:13:55",
+      "last_seen": "2026-05-01 10:36:06",
       "title": "J'ai besoins d'aide pour ma fille en physique",
       "is_remote": false,
       "poster_type": "student",
@@ -50534,7 +50018,7 @@
     },
     "https://www.voscours.fr/annonces/eleves/6857471": {
       "first_seen": "2026-04-08 11:26:43",
-      "last_seen": "2026-04-29 11:13:55",
+      "last_seen": "2026-05-01 10:36:06",
       "title": "Cours en présentiel d'histoire et géographie",
       "is_remote": false,
       "poster_type": "student",
@@ -50546,7 +50030,7 @@
     },
     "https://www.voscours.fr/annonces/eleves/6857461": {
       "first_seen": "2026-04-08 11:26:43",
-      "last_seen": "2026-04-29 11:13:55",
+      "last_seen": "2026-05-01 10:36:06",
       "title": "Cour de basse pour une élève de 16 ans, débutante",
       "is_remote": false,
       "poster_type": "student",
@@ -50558,7 +50042,7 @@
     },
     "https://www.voscours.fr/annonces/eleves/6714194": {
       "first_seen": "2026-04-08 11:26:43",
-      "last_seen": "2026-04-29 11:13:55",
+      "last_seen": "2026-05-01 10:36:06",
       "title": "Recherche professeur de français niveau 5ème",
       "is_remote": false,
       "poster_type": "student",
@@ -50570,7 +50054,7 @@
     },
     "https://www.voscours.fr/annonces/eleves/6463224": {
       "first_seen": "2026-04-08 11:26:43",
-      "last_seen": "2026-04-29 11:13:55",
+      "last_seen": "2026-05-01 10:36:06",
       "title": "Searching native speaker english teacher with experience for our 8 years old son twice a week at our home at nice ouest",
       "is_remote": false,
       "poster_type": "student",
@@ -50582,7 +50066,7 @@
     },
     "https://www.voscours.fr/annonces/eleves/6813949": {
       "first_seen": "2026-04-08 11:26:43",
-      "last_seen": "2026-04-29 11:13:55",
+      "last_seen": "2026-05-01 10:36:06",
       "title": "Je recherche un professeur de boxe qui pourrait m’aider à",
       "is_remote": false,
       "poster_type": "student",
@@ -50594,7 +50078,7 @@
     },
     "https://www.voscours.fr/annonces/eleves/6896076": {
       "first_seen": "2026-04-08 11:26:43",
-      "last_seen": "2026-04-29 11:13:55",
+      "last_seen": "2026-05-01 10:36:06",
       "title": "Recherche professeur pour une remise à niveau intensive pour une élève de 5 eme",
       "is_remote": false,
       "poster_type": "student",
@@ -50606,7 +50090,7 @@
     },
     "https://www.voscours.fr/annonces/eleves/6856894": {
       "first_seen": "2026-04-08 11:26:43",
-      "last_seen": "2026-04-29 11:13:55",
+      "last_seen": "2026-05-01 10:36:06",
       "title": "We're seeking experienced english tutors for private classes",
       "is_remote": false,
       "poster_type": "student",
@@ -50618,7 +50102,7 @@
     },
     "https://www.voscours.fr/annonces/eleves/6895514": {
       "first_seen": "2026-04-08 11:26:43",
-      "last_seen": "2026-04-29 11:13:55",
+      "last_seen": "2026-05-01 10:36:06",
       "title": "Besoin de cours de stats pour psychologie bsc",
       "is_remote": false,
       "poster_type": "student",
@@ -50630,7 +50114,7 @@
     },
     "https://www.voscours.fr/annonces/eleves/6895486": {
       "first_seen": "2026-04-08 11:26:43",
-      "last_seen": "2026-04-29 11:13:55",
+      "last_seen": "2026-05-01 10:36:06",
       "title": "Recherche d’un(e) répétiteur(trice) sérieux(se) et motivé(e)",
       "is_remote": false,
       "poster_type": "student",
@@ -50642,7 +50126,7 @@
     },
     "https://www.voscours.fr/annonces/eleves/6895469": {
       "first_seen": "2026-04-08 11:26:43",
-      "last_seen": "2026-04-29 11:13:55",
+      "last_seen": "2026-05-01 10:36:06",
       "title": "Cherche professeur d'italien en partie à domicile pour renforcer capacité à l'oral mais en alternance en ligne. secteur enghien",
       "is_remote": false,
       "poster_type": "student",
@@ -50654,7 +50138,7 @@
     },
     "https://www.voscours.fr/annonces/eleves/6813109": {
       "first_seen": "2026-04-08 11:26:43",
-      "last_seen": "2026-04-29 11:13:55",
+      "last_seen": "2026-05-01 10:36:06",
       "title": "Recherche professeur de français h/femme",
       "is_remote": false,
       "poster_type": "student",
@@ -50678,7 +50162,7 @@
     },
     "https://www.voscours.fr/annonces/eleves/6677215": {
       "first_seen": "2026-04-08 11:26:43",
-      "last_seen": "2026-04-29 11:13:55",
+      "last_seen": "2026-05-01 10:36:06",
       "title": "Cours tous les dimanches après-midi à paris 20ème",
       "is_remote": false,
       "poster_type": "student",
@@ -50690,7 +50174,7 @@
     },
     "https://www.voscours.fr/annonces/eleves/6895111": {
       "first_seen": "2026-04-08 11:26:43",
-      "last_seen": "2026-04-29 11:13:55",
+      "last_seen": "2026-05-01 10:36:06",
       "title": "Je recherche des cours de maths pour ma fille",
       "is_remote": false,
       "poster_type": "student",
@@ -50726,7 +50210,7 @@
     },
     "https://www.findtutors.co.uk/annonces/eleves/6767276": {
       "first_seen": "2026-04-08 11:26:43",
-      "last_seen": "2026-04-29 11:13:55",
+      "last_seen": "2026-05-01 10:36:06",
       "title": "My son in secondary school year 7, finding a bit difficult in his advance maths,an easy way techniques. Reasonable price Leicester",
       "is_remote": false,
       "poster_type": "student",
@@ -50762,7 +50246,7 @@
     },
     "https://www.findtutors.co.uk/annonces/eleves/6518936": {
       "first_seen": "2026-04-08 11:26:43",
-      "last_seen": "2026-04-29 11:13:55",
+      "last_seen": "2026-05-01 10:36:06",
       "title": "I am looking for an A Level Biology tutor in evenings or Weekends",
       "is_remote": false,
       "poster_type": "student",
@@ -50774,7 +50258,7 @@
     },
     "https://www.findtutors.co.uk/annonces/eleves/6463588": {
       "first_seen": "2026-04-08 11:26:43",
-      "last_seen": "2026-04-29 11:13:55",
+      "last_seen": "2026-05-01 10:36:06",
       "title": "Hiring a virtual assistant for cleaning services business in United Kingdom",
       "is_remote": true,
       "poster_type": "student",
@@ -50786,7 +50270,7 @@
     },
     "https://www.findtutors.co.uk/annonces/eleves/6857107": {
       "first_seen": "2026-04-08 11:26:43",
-      "last_seen": "2026-04-29 11:13:55",
+      "last_seen": "2026-05-01 10:36:06",
       "title": "I am looking for a woman Quran and Arabic tutor",
       "is_remote": false,
       "poster_type": "student",
@@ -50798,7 +50282,7 @@
     },
     "https://www.findtutors.co.uk/annonces/eleves/6857053": {
       "first_seen": "2026-04-08 11:26:43",
-      "last_seen": "2026-04-29 11:13:55",
+      "last_seen": "2026-05-01 10:36:06",
       "title": "I am looking for a Maths teacher who can help with someone who is struggling to catch up",
       "is_remote": false,
       "poster_type": "student",
@@ -50810,7 +50294,7 @@
     },
     "https://www.findtutors.co.uk/annonces/eleves/6463167": {
       "first_seen": "2026-04-08 11:26:43",
-      "last_seen": "2026-04-29 11:13:55",
+      "last_seen": "2026-05-01 10:36:06",
       "title": "Seeking Physics Tutor (A Level)",
       "is_remote": false,
       "poster_type": "student",
@@ -50822,7 +50306,7 @@
     },
     "https://www.findtutors.co.uk/annonces/eleves/6563668": {
       "first_seen": "2026-04-08 11:26:43",
-      "last_seen": "2026-04-29 11:13:55",
+      "last_seen": "2026-05-01 10:36:06",
       "title": "I am looking for an experianced math GCSE tutor to build confidence and improve grands",
       "is_remote": false,
       "poster_type": "student",
@@ -50834,7 +50318,7 @@
     },
     "https://www.findtutors.co.uk/annonces/eleves/6261240": {
       "first_seen": "2026-04-08 11:26:43",
-      "last_seen": "2026-04-29 11:13:55",
+      "last_seen": "2026-05-01 10:36:06",
       "title": "Looking for a English teacher for face to face session for KS2 on weekends",
       "is_remote": false,
       "poster_type": "student",
@@ -50846,7 +50330,7 @@
     },
     "https://www.findtutors.co.uk/annonces/eleves/6712485": {
       "first_seen": "2026-04-08 11:26:43",
-      "last_seen": "2026-04-29 11:13:55",
+      "last_seen": "2026-05-01 10:36:06",
       "title": "Looking for assistance with refining my essays for my English literature a level",
       "is_remote": false,
       "poster_type": "student",
@@ -50858,7 +50342,7 @@
     },
     "https://www.findtutors.co.uk/annonces/eleves/6605549": {
       "first_seen": "2026-04-08 11:26:43",
-      "last_seen": "2026-04-29 11:13:55",
+      "last_seen": "2026-05-01 10:36:06",
       "title": "I am looking for English tutor I live in Lincoln- Gainsborough",
       "is_remote": false,
       "poster_type": "student",
@@ -50870,7 +50354,7 @@
     },
     "https://www.findtutors.co.uk/annonces/eleves/6514842": {
       "first_seen": "2026-04-08 11:26:43",
-      "last_seen": "2026-04-29 11:13:55",
+      "last_seen": "2026-05-01 10:36:06",
       "title": "I am looking for in-person English tutor for 11+ in Harrow",
       "is_remote": false,
       "poster_type": "student",
@@ -51026,7 +50510,7 @@
     },
     "https://www.voscours.fr/annonces/eleves/6897534": {
       "first_seen": "2026-04-09 11:12:37",
-      "last_seen": "2026-04-29 11:13:55",
+      "last_seen": "2026-05-01 10:36:06",
       "title": "Je chercher des cours de mathématique pour mon fils",
       "is_remote": false,
       "poster_type": "student",
@@ -51194,7 +50678,7 @@
     },
     "https://www.findtutors.co.uk/annonces/eleves/6713740": {
       "first_seen": "2026-04-09 11:12:37",
-      "last_seen": "2026-04-29 11:13:55",
+      "last_seen": "2026-05-01 10:36:06",
       "title": "in person Tutor for 6year old in caddington, Luton",
       "is_remote": false,
       "poster_type": "student",
@@ -52106,14 +51590,14 @@
     },
     "https://www.allovoisins.com/r/0/237/0/0/service/Cours-de-cuisine": {
       "first_seen": "2026-04-10 09:39:13",
-      "last_seen": "2026-04-26 10:18:17",
-      "title": "Cherche Cours de cuisine à Saint-Nazaire",
+      "last_seen": "2026-05-01 10:36:06",
+      "title": "Recherche Cours de cuisine à Rouen",
       "is_remote": false,
       "poster_type": "unknown",
       "description": "N/A",
-      "confidence": "HIGH",
+      "confidence": "MEDIUM",
       "classification": "on-site",
-      "reasoning": "Obvious on-site work: cuisine",
+      "reasoning": "NLP fallback classification",
       "description_source": "listing_page"
     },
     "https://www.allovoisins.com/r/199/2/46150/0/location-Shampouineuse-Saint-junien": {
@@ -52922,7 +52406,7 @@
     },
     "https://www.voscours.fr/annonces/eleves/6901918": {
       "first_seen": "2026-04-10 11:23:30",
-      "last_seen": "2026-04-20 11:09:52",
+      "last_seen": "2026-05-01 10:36:06",
       "title": "J’ai besoin du soutien scolaire pour le niveau collège",
       "is_remote": false,
       "poster_type": "student",
@@ -52958,7 +52442,7 @@
     },
     "https://www.voscours.fr/annonces/eleves/6901572": {
       "first_seen": "2026-04-10 11:23:30",
-      "last_seen": "2026-04-20 11:09:52",
+      "last_seen": "2026-05-01 10:36:06",
       "title": "We are in need of an online tutor, a calisthenia tutor",
       "is_remote": true,
       "poster_type": "student",
@@ -52970,7 +52454,7 @@
     },
     "https://www.voscours.fr/annonces/eleves/6901474": {
       "first_seen": "2026-04-10 11:23:30",
-      "last_seen": "2026-04-20 11:09:52",
+      "last_seen": "2026-05-01 10:36:06",
       "title": "We're in need of a romano tutor for a course",
       "is_remote": false,
       "poster_type": "student",
@@ -52982,7 +52466,7 @@
     },
     "https://www.voscours.fr/annonces/eleves/6901467": {
       "first_seen": "2026-04-10 11:23:30",
-      "last_seen": "2026-04-20 11:09:52",
+      "last_seen": "2026-05-01 10:36:06",
       "title": "Hello tutor are needed for a language task",
       "is_remote": false,
       "poster_type": "student",
@@ -52994,7 +52478,7 @@
     },
     "https://www.voscours.fr/annonces/eleves/6901460": {
       "first_seen": "2026-04-10 11:23:30",
-      "last_seen": "2026-04-20 11:09:52",
+      "last_seen": "2026-05-01 10:36:06",
       "title": "We are in search of english tutor for private classes",
       "is_remote": false,
       "poster_type": "student",
@@ -53006,7 +52490,7 @@
     },
     "https://www.voscours.fr/annonces/eleves/6901459": {
       "first_seen": "2026-04-10 11:23:30",
-      "last_seen": "2026-04-20 11:09:52",
+      "last_seen": "2026-05-01 10:36:06",
       "title": "Hello tutors are needed for a lesson on italiano",
       "is_remote": false,
       "poster_type": "student",
@@ -53018,7 +52502,7 @@
     },
     "https://www.voscours.fr/annonces/eleves/6901096": {
       "first_seen": "2026-04-10 11:23:30",
-      "last_seen": "2026-04-20 11:09:52",
+      "last_seen": "2026-05-01 10:36:06",
       "title": "Recherche un professeur d'arabe vivent en france pour ma femme",
       "is_remote": false,
       "poster_type": "student",
@@ -53042,7 +52526,7 @@
     },
     "https://www.voscours.fr/annonces/eleves/6818491": {
       "first_seen": "2026-04-10 11:23:30",
-      "last_seen": "2026-04-20 11:09:52",
+      "last_seen": "2026-05-01 10:36:06",
       "title": "Online biology tutors are urgently needed for classes",
       "is_remote": true,
       "poster_type": "student",
@@ -53054,7 +52538,7 @@
     },
     "https://www.voscours.fr/annonces/eleves/6900715": {
       "first_seen": "2026-04-10 11:23:30",
-      "last_seen": "2026-04-20 11:09:52",
+      "last_seen": "2026-05-01 10:36:06",
       "title": "Cherche profeseur d'anglais",
       "is_remote": false,
       "poster_type": "student",
@@ -53066,7 +52550,7 @@
     },
     "https://www.voscours.fr/annonces/eleves/6860785": {
       "first_seen": "2026-04-10 11:23:30",
-      "last_seen": "2026-04-20 11:09:52",
+      "last_seen": "2026-05-01 10:36:06",
       "title": "Russian teachers are in need for personal classes",
       "is_remote": false,
       "poster_type": "student",
@@ -53126,7 +52610,7 @@
     },
     "https://www.voscours.fr/annonces/eleves/6187019": {
       "first_seen": "2026-04-10 11:23:30",
-      "last_seen": "2026-04-20 11:09:52",
+      "last_seen": "2026-05-01 10:36:06",
       "title": "Cours d'anglais pour eleve en cm1 ecole ejm paris",
       "is_remote": false,
       "poster_type": "student",
@@ -53138,7 +52622,7 @@
     },
     "https://www.voscours.fr/annonces/eleves/6817898": {
       "first_seen": "2026-04-10 11:23:30",
-      "last_seen": "2026-04-20 11:09:52",
+      "last_seen": "2026-05-01 10:36:06",
       "title": "Je cherche des cours de dessin pour mon plaisir personnel",
       "is_remote": false,
       "poster_type": "student",
@@ -53150,7 +52634,7 @@
     },
     "https://www.voscours.fr/annonces/eleves/6770548": {
       "first_seen": "2026-04-10 11:23:30",
-      "last_seen": "2026-04-20 11:09:52",
+      "last_seen": "2026-05-01 10:36:06",
       "title": "Je cherche des cours de maths pour mon fils",
       "is_remote": false,
       "poster_type": "student",
@@ -53186,7 +52670,7 @@
     },
     "https://www.findtutors.co.uk/annonces/eleves/6901401": {
       "first_seen": "2026-04-10 11:23:30",
-      "last_seen": "2026-04-24 10:34:10",
+      "last_seen": "2026-05-01 10:36:06",
       "title": "GCSE English tutor for dyslexic child weak in English but strong analytically",
       "is_remote": false,
       "poster_type": "student",
@@ -53198,7 +52682,7 @@
     },
     "https://www.findtutors.co.uk/annonces/eleves/6257631": {
       "first_seen": "2026-04-10 11:23:30",
-      "last_seen": "2026-04-20 11:09:52",
+      "last_seen": "2026-05-01 10:36:06",
       "title": "maths tutor for a 7 year old boy. 40 minutes , weekdays 5 pm approx",
       "is_remote": false,
       "poster_type": "student",
@@ -53210,7 +52694,7 @@
     },
     "https://www.findtutors.co.uk/annonces/eleves/6257635": {
       "first_seen": "2026-04-10 11:23:30",
-      "last_seen": "2026-04-20 11:09:52",
+      "last_seen": "2026-05-01 10:36:06",
       "title": "french tutor for a 7 year old boy. 40 minutes , weekdays 5 pm approx",
       "is_remote": false,
       "poster_type": "student",
@@ -53222,7 +52706,7 @@
     },
     "https://www.findtutors.co.uk/annonces/eleves/6900352": {
       "first_seen": "2026-04-10 11:23:30",
-      "last_seen": "2026-04-20 11:09:52",
+      "last_seen": "2026-05-01 10:36:06",
       "title": "Creative Writing Tutor — Find Your Voice at Any Age",
       "is_remote": false,
       "poster_type": "student",
@@ -53234,7 +52718,7 @@
     },
     "https://www.findtutors.co.uk/annonces/eleves/6568083": {
       "first_seen": "2026-04-10 11:23:30",
-      "last_seen": "2026-04-20 11:09:52",
+      "last_seen": "2026-05-01 10:36:06",
       "title": "Looking for an English tutor for ESOL student",
       "is_remote": false,
       "poster_type": "student",
@@ -53246,7 +52730,7 @@
     },
     "https://www.findtutors.co.uk/annonces/eleves/6717218": {
       "first_seen": "2026-04-10 11:23:30",
-      "last_seen": "2026-04-20 11:09:52",
+      "last_seen": "2026-05-01 10:36:06",
       "title": "I am looking for a photography tutor",
       "is_remote": false,
       "poster_type": "student",
@@ -53258,7 +52742,7 @@
     },
     "https://www.findtutors.co.uk/annonces/eleves/6900113": {
       "first_seen": "2026-04-10 11:23:30",
-      "last_seen": "2026-04-20 11:09:52",
+      "last_seen": "2026-05-01 10:36:06",
       "title": "Seeking Professional Supervisor & Mentor (PEDR – RIBA Part 3 Pathway)",
       "is_remote": false,
       "poster_type": "student",
@@ -53270,7 +52754,7 @@
     },
     "https://www.findtutors.co.uk/annonces/eleves/6717034": {
       "first_seen": "2026-04-10 11:23:30",
-      "last_seen": "2026-04-20 11:09:52",
+      "last_seen": "2026-05-01 10:36:06",
       "title": "Looking for in-person tutor asap Central London",
       "is_remote": false,
       "poster_type": "student",
@@ -53282,7 +52766,7 @@
     },
     "https://www.findtutors.co.uk/annonces/eleves/6899879": {
       "first_seen": "2026-04-10 11:23:30",
-      "last_seen": "2026-04-20 11:09:52",
+      "last_seen": "2026-05-01 10:36:06",
       "title": "I am looking for a tutor to conduct GCSE Turkish Assessment",
       "is_remote": false,
       "poster_type": "student",
@@ -53294,7 +52778,7 @@
     },
     "https://www.findtutors.co.uk/annonces/eleves/6899299": {
       "first_seen": "2026-04-10 11:23:30",
-      "last_seen": "2026-04-20 11:09:52",
+      "last_seen": "2026-05-01 10:36:06",
       "title": "Looking for a prenatal Pilates instructor !",
       "is_remote": false,
       "poster_type": "student",
@@ -53306,7 +52790,7 @@
     },
     "https://www.findtutors.co.uk/annonces/eleves/6716734": {
       "first_seen": "2026-04-10 11:23:30",
-      "last_seen": "2026-04-20 11:09:52",
+      "last_seen": "2026-05-01 10:36:06",
       "title": "Looking for maths tutor for S1 daughter (KS3&4)",
       "is_remote": false,
       "poster_type": "student",
@@ -54230,7 +53714,7 @@
     },
     "https://www.voscours.fr/annonces/eleves/6903717": {
       "first_seen": "2026-04-12 11:13:18",
-      "last_seen": "2026-04-20 11:09:52",
+      "last_seen": "2026-05-01 10:36:06",
       "title": "Cherche de l’aide en maths pour ma fille",
       "is_remote": false,
       "poster_type": "student",
@@ -55790,7 +55274,7 @@
     },
     "https://www.codeur.com/projects/480810-recherche-developpeur-web-full-stack": {
       "first_seen": "2026-04-16 07:18:42",
-      "last_seen": "2026-05-01 08:31:45",
+      "last_seen": "2026-05-01 10:36:06",
       "title": "Recherche développeur web / full-stack",
       "is_remote": true,
       "poster_type": "employer",
@@ -56798,7 +56282,7 @@
     },
     "https://www.allovoisins.com/v/videaste": {
       "first_seen": "2026-04-17 07:54:20",
-      "last_seen": "2026-05-01 08:31:45",
+      "last_seen": "2026-05-01 10:36:06",
       "title": "Cherche Vidéaste à Nantes",
       "is_remote": false,
       "poster_type": "unknown",
@@ -60914,7 +60398,7 @@
     },
     "https://www.voscours.fr/annonces/eleves/6928565": {
       "first_seen": "2026-04-23 10:28:43",
-      "last_seen": "2026-04-29 11:13:55",
+      "last_seen": "2026-05-01 10:36:06",
       "title": "Cours de soutien à un garcon de 15 pour préparer le brevet des collèges",
       "is_remote": false,
       "poster_type": "student",
@@ -60926,7 +60410,7 @@
     },
     "https://www.voscours.fr/annonces/eleves/6928389": {
       "first_seen": "2026-04-23 10:28:43",
-      "last_seen": "2026-04-29 11:13:55",
+      "last_seen": "2026-05-01 10:36:06",
       "title": "Je cherche professeur de langue d'anglais femme ou homme pour son travail",
       "is_remote": false,
       "poster_type": "student",
@@ -60938,7 +60422,7 @@
     },
     "https://www.voscours.fr/annonces/eleves/6928579": {
       "first_seen": "2026-04-23 10:28:43",
-      "last_seen": "2026-04-29 11:13:55",
+      "last_seen": "2026-05-01 10:36:06",
       "title": "Cours de soutien à la maison pour un ados de 15 ans",
       "is_remote": false,
       "poster_type": "student",
@@ -60950,7 +60434,7 @@
     },
     "https://www.voscours.fr/annonces/eleves/6927950": {
       "first_seen": "2026-04-23 10:28:43",
-      "last_seen": "2026-04-29 11:13:55",
+      "last_seen": "2026-05-01 10:36:06",
       "title": "Cours de piano à domicile pour fille de 14 ans",
       "is_remote": false,
       "poster_type": "student",
@@ -60962,7 +60446,7 @@
     },
     "https://www.voscours.fr/annonces/eleves/6927089": {
       "first_seen": "2026-04-23 10:28:43",
-      "last_seen": "2026-04-29 11:13:55",
+      "last_seen": "2026-05-01 10:36:06",
       "title": "Cherche prof marseille pour physique svp",
       "is_remote": false,
       "poster_type": "student",
@@ -60974,7 +60458,7 @@
     },
     "https://www.voscours.fr/annonces/eleves/6925684": {
       "first_seen": "2026-04-23 10:28:43",
-      "last_seen": "2026-04-29 11:13:55",
+      "last_seen": "2026-05-01 10:36:06",
       "title": "We're are in need of an online tutor, a calisthenia tutor",
       "is_remote": true,
       "poster_type": "student",
@@ -60986,7 +60470,7 @@
     },
     "https://www.voscours.fr/annonces/eleves/6925511": {
       "first_seen": "2026-04-23 10:28:43",
-      "last_seen": "2026-04-29 11:13:55",
+      "last_seen": "2026-05-01 10:36:06",
       "title": "Je recherche un etudiant , un prof ou un natif chinois resident en france pour des cours en chinois. raisons professionelles",
       "is_remote": false,
       "poster_type": "student",
@@ -60998,7 +60482,7 @@
     },
     "https://www.voscours.fr/annonces/eleves/6925482": {
       "first_seen": "2026-04-23 10:28:43",
-      "last_seen": "2026-04-29 11:13:55",
+      "last_seen": "2026-05-01 10:36:06",
       "title": "I'm searching for skilled and experienced russian tutors for online classes",
       "is_remote": true,
       "poster_type": "student",
@@ -61094,7 +60578,7 @@
     },
     "https://www.findtutors.co.uk/annonces/eleves/6927196": {
       "first_seen": "2026-04-23 10:28:43",
-      "last_seen": "2026-04-29 11:13:55",
+      "last_seen": "2026-05-01 10:36:06",
       "title": "I am looking for a GCSE science tutor. Somewhere from Coventry, Nuneaton or preferably from Bedworth",
       "is_remote": false,
       "poster_type": "student",
@@ -62150,7 +61634,7 @@
     },
     "https://www.voscours.fr/annonces/eleves/6930125": {
       "first_seen": "2026-04-24 10:34:10",
-      "last_seen": "2026-04-29 11:13:55",
+      "last_seen": "2026-05-01 10:36:06",
       "title": "Je cherche des cours de mathematique , remise à niveau et aide aux devoir pour mon fils à notre domicile 2 à 3fois en semaine",
       "is_remote": false,
       "poster_type": "student",
@@ -63074,7 +62558,7 @@
     },
     "https://www.findtutors.co.uk/annonces/eleves/6931096": {
       "first_seen": "2026-04-25 10:09:44",
-      "last_seen": "2026-04-29 11:13:55",
+      "last_seen": "2026-05-01 10:36:06",
       "title": "Looking for a Portuguese teacher for a 5 year old child. In person classes at my house",
       "is_remote": false,
       "poster_type": "student",
@@ -63614,7 +63098,7 @@
     },
     "https://www.codeur.com/projects/481613-monteur-yt": {
       "first_seen": "2026-04-26 07:21:58",
-      "last_seen": "2026-05-01 08:31:45",
+      "last_seen": "2026-05-01 10:36:06",
       "title": "Monteur YT",
       "is_remote": false,
       "poster_type": "unknown",
@@ -65042,7 +64526,7 @@
     },
     "https://www.findtutors.co.uk/annonces/eleves/6935390": {
       "first_seen": "2026-04-27 11:26:15",
-      "last_seen": "2026-04-29 11:13:55",
+      "last_seen": "2026-05-01 10:36:06",
       "title": "Adult looking for French conversation practice and help with developing business French - currently level A2/B1",
       "is_remote": false,
       "poster_type": "student",
@@ -65054,7 +64538,7 @@
     },
     "https://www.findtutors.co.uk/annonces/eleves/6935339": {
       "first_seen": "2026-04-27 11:26:15",
-      "last_seen": "2026-04-29 11:13:55",
+      "last_seen": "2026-05-01 10:36:06",
       "title": "Tutor Support Needed – KS3/KS4 (Starting ASAP)",
       "is_remote": false,
       "poster_type": "student",
@@ -65066,7 +64550,7 @@
     },
     "https://www.findtutors.co.uk/annonces/eleves/6934249": {
       "first_seen": "2026-04-27 11:26:15",
-      "last_seen": "2026-04-29 11:13:55",
+      "last_seen": "2026-05-01 10:36:06",
       "title": "Looking for a patient tutor for my 6 year old who has experience with neuro diverse children",
       "is_remote": false,
       "poster_type": "student",
@@ -65090,7 +64574,7 @@
     },
     "https://www.findtutors.co.uk/annonces/eleves/6933829": {
       "first_seen": "2026-04-27 11:26:15",
-      "last_seen": "2026-04-29 11:13:55",
+      "last_seen": "2026-05-01 10:36:06",
       "title": "I need a face-to-face English tutor in the Norwich area, near the city centre and the riverside",
       "is_remote": false,
       "poster_type": "student",
@@ -65102,7 +64586,7 @@
     },
     "https://www.findtutors.co.uk/annonces/eleves/6933765": {
       "first_seen": "2026-04-27 11:26:15",
-      "last_seen": "2026-04-29 11:13:55",
+      "last_seen": "2026-05-01 10:36:06",
       "title": "I am looking for an English tutor to help me pass my GCSE",
       "is_remote": false,
       "poster_type": "student",
@@ -66530,7 +66014,7 @@
     },
     "https://www.allovoisins.com/r/364/7/20441/0/location-Diable-Montpellier": {
       "first_seen": "2026-04-29 07:45:43",
-      "last_seen": "2026-05-01 08:31:45",
+      "last_seen": "2026-05-01 10:36:06",
       "title": "Louer un diable - Montpellier",
       "is_remote": false,
       "poster_type": "unknown",
@@ -66614,7 +66098,7 @@
     },
     "https://www.codeur.com/projects/482083-creation-site-e-commerce-complet-servantes-d-outils-personnalisee": {
       "first_seen": "2026-04-29 07:45:43",
-      "last_seen": "2026-05-01 08:31:45",
+      "last_seen": "2026-05-01 10:36:06",
       "title": "Création site e-commerce complet (servantes d’outils personnalisée)",
       "is_remote": false,
       "poster_type": "unknown",
@@ -66710,7 +66194,7 @@
     },
     "https://www.codeur.com/projects/482488-application-web-de-covoiturage-pour-evenement-privee": {
       "first_seen": "2026-04-29 08:37:50",
-      "last_seen": "2026-05-01 08:31:45",
+      "last_seen": "2026-05-01 10:36:06",
       "title": "Application web de covoiturage pour événement privée",
       "is_remote": true,
       "poster_type": "unknown",
@@ -66866,7 +66350,7 @@
     },
     "https://www.voscours.fr/annonces/eleves/6938883": {
       "first_seen": "2026-04-29 11:13:55",
-      "last_seen": "2026-04-29 11:13:55",
+      "last_seen": "2026-05-01 10:36:06",
       "title": "Cours guitare électrique pour un groupe de 3 personnes",
       "is_remote": false,
       "poster_type": "student",
@@ -66878,7 +66362,7 @@
     },
     "https://www.voscours.fr/annonces/eleves/6938424": {
       "first_seen": "2026-04-29 11:13:55",
-      "last_seen": "2026-04-29 11:13:55",
+      "last_seen": "2026-05-01 10:36:06",
       "title": "Recherche prof de français pour dictée et vocabulaire et lecture",
       "is_remote": false,
       "poster_type": "student",
@@ -66890,7 +66374,7 @@
     },
     "https://www.voscours.fr/annonces/eleves/6935982": {
       "first_seen": "2026-04-29 11:13:55",
-      "last_seen": "2026-04-29 11:13:55",
+      "last_seen": "2026-05-01 10:36:06",
       "title": "Je suis activement à la recherche d’un professeur d’histoire géo résidant en france le plus rapidement possible 🤗🌹👏🏻",
       "is_remote": false,
       "poster_type": "student",
@@ -66902,7 +66386,7 @@
     },
     "https://www.voscours.fr/annonces/eleves/6938073": {
       "first_seen": "2026-04-29 11:13:55",
-      "last_seen": "2026-04-29 11:13:55",
+      "last_seen": "2026-05-01 10:36:06",
       "title": "Je recherche un professeur de langue portugais",
       "is_remote": false,
       "poster_type": "student",
@@ -66914,7 +66398,7 @@
     },
     "https://www.findtutors.co.uk/annonces/eleves/6939870": {
       "first_seen": "2026-04-29 11:13:55",
-      "last_seen": "2026-04-29 11:13:55",
+      "last_seen": "2026-05-01 10:36:06",
       "title": "A level in person at home Tw3 Hounslow Area",
       "is_remote": false,
       "poster_type": "student",
@@ -66926,11 +66410,11 @@
     },
     "https://www.findtutors.co.uk/annonces/eleves/6939075": {
       "first_seen": "2026-04-29 11:13:55",
-      "last_seen": "2026-04-29 11:13:55",
-      "title": "Looking for a tutor who is willing/able to teach science to my daughter (basically from scratch), please",
+      "last_seen": "2026-05-01 10:36:06",
+      "title": "Looking for a tutor who is willing/able to teach GCSE science to my daughter (basically from scratch), please",
       "is_remote": false,
       "poster_type": "student",
-      "description": "Looking for a tutor who is willing/able to teach science to my daughter (basically from scratch), please",
+      "description": "Looking for a tutor who is willing/able to teach GCSE science to my daughter (basically from scratch), please",
       "confidence": "MEDIUM",
       "classification": "on-site",
       "reasoning": "NLP fallback classification",
@@ -67934,7 +67418,7 @@
     },
     "https://www.allovoisins.com/r/488/11/21199/0/location-Motoculteur-Coings": {
       "first_seen": "2026-05-01 07:46:39",
-      "last_seen": "2026-05-01 08:31:45",
+      "last_seen": "2026-05-01 10:36:06",
       "title": "Location motoculteur - Coings",
       "is_remote": false,
       "poster_type": "unknown",
@@ -67946,7 +67430,7 @@
     },
     "https://www.allovoisins.com/r/5298/4/29278/0/location-Camion-plateau-camion-porte-voiture-Peaule": {
       "first_seen": "2026-05-01 07:46:39",
-      "last_seen": "2026-05-01 08:31:45",
+      "last_seen": "2026-05-01 10:36:06",
       "title": "Location camion plateau / camion porte-voiture - PĂ©aule",
       "is_remote": false,
       "poster_type": "unknown",
@@ -67958,7 +67442,7 @@
     },
     "https://www.allovoisins.com/r/4910/89/8283/0/location-Logement-Cannes": {
       "first_seen": "2026-05-01 07:46:39",
-      "last_seen": "2026-05-01 08:31:45",
+      "last_seen": "2026-05-01 10:36:06",
       "title": "Location logement - Cannes",
       "is_remote": false,
       "poster_type": "unknown",
@@ -67970,7 +67454,7 @@
     },
     "https://www.allovoisins.com/r/525/11/22891/0/location-Taille-haies-Soustons": {
       "first_seen": "2026-05-01 07:46:39",
-      "last_seen": "2026-05-01 08:31:45",
+      "last_seen": "2026-05-01 10:36:06",
       "title": "Louer un taille-haies - Soustons",
       "is_remote": false,
       "poster_type": "unknown",
@@ -67982,7 +67466,7 @@
     },
     "https://www.allovoisins.com/r/210/2/25131/0/location-Tariere-Saint-sauveur-de-meilhan": {
       "first_seen": "2026-05-01 07:46:39",
-      "last_seen": "2026-05-01 08:31:45",
+      "last_seen": "2026-05-01 10:36:06",
       "title": "Location tarière - Saint-Sauveur-de-Meilhan",
       "is_remote": false,
       "poster_type": "unknown",
@@ -67994,7 +67478,7 @@
     },
     "https://www.allovoisins.com/r/4969/80/44123/0/location-Remorque-moto-La-frette-sur-seine": {
       "first_seen": "2026-05-01 07:46:39",
-      "last_seen": "2026-05-01 08:31:45",
+      "last_seen": "2026-05-01 10:36:06",
       "title": "Louer une remorque moto - La Frette-sur-Seine",
       "is_remote": false,
       "poster_type": "unknown",
@@ -68006,7 +67490,7 @@
     },
     "https://www.allovoisins.com/r/4354/93/8228/0/location-Box-ferme-parking-ferme-garage-ferme-Nice": {
       "first_seen": "2026-05-01 07:46:39",
-      "last_seen": "2026-05-01 08:31:45",
+      "last_seen": "2026-05-01 10:36:06",
       "title": "Prêt box fermé / parking fermé / garage fermé - Nice",
       "is_remote": false,
       "poster_type": "unknown",
@@ -68018,7 +67502,7 @@
     },
     "https://www.allovoisins.com/r/535/11/17719/0/location-Tronconneuse-Dreux": {
       "first_seen": "2026-05-01 07:46:39",
-      "last_seen": "2026-05-01 08:31:45",
+      "last_seen": "2026-05-01 10:36:06",
       "title": "Location tronçonneuse - Dreux",
       "is_remote": false,
       "poster_type": "unknown",
@@ -68030,7 +67514,7 @@
     },
     "https://www.allovoisins.com/r/488/11/42139/0/location-Motoculteur-Evenos": {
       "first_seen": "2026-05-01 07:46:39",
-      "last_seen": "2026-05-01 08:31:45",
+      "last_seen": "2026-05-01 10:36:06",
       "title": "Location motoculteur - Évenos",
       "is_remote": false,
       "poster_type": "unknown",
@@ -68042,7 +67526,7 @@
     },
     "https://www.allovoisins.com/r/5142/78/34474/0/location-Vehicule-utilitaire-camionnette-Tarbes": {
       "first_seen": "2026-05-01 07:46:39",
-      "last_seen": "2026-05-01 08:31:45",
+      "last_seen": "2026-05-01 10:36:06",
       "title": "Louer un véhicule utilitaire / camionnette - Tarbes",
       "is_remote": false,
       "poster_type": "unknown",
@@ -68078,7 +67562,7 @@
     },
     "https://www.allovoisins.com/r/1400/25/49700/0/location-Table-evenementiel-Paris-17e-arrondissement": {
       "first_seen": "2026-05-01 07:46:39",
-      "last_seen": "2026-05-01 08:31:45",
+      "last_seen": "2026-05-01 10:36:06",
       "title": "Location table (evènementiel) - Paris",
       "is_remote": false,
       "poster_type": "unknown",
@@ -68090,7 +67574,7 @@
     },
     "https://www.allovoisins.com/r/4930/11/80129/0/location-Debroussailleuse-Les-villages-voveens": {
       "first_seen": "2026-05-01 07:46:39",
-      "last_seen": "2026-05-01 08:31:45",
+      "last_seen": "2026-05-01 10:36:06",
       "title": "Louer une débroussailleuse - Les Villages Vovéens",
       "is_remote": false,
       "poster_type": "unknown",
@@ -68102,7 +67586,7 @@
     },
     "https://www.allovoisins.com/r/529/11/80129/0/location-Tondeuse-a-gazon-Les-villages-voveens": {
       "first_seen": "2026-05-01 07:46:39",
-      "last_seen": "2026-05-01 08:31:45",
+      "last_seen": "2026-05-01 10:36:06",
       "title": "Location tondeuse à gazon - Les Villages Vovéens",
       "is_remote": false,
       "poster_type": "unknown",
@@ -68114,7 +67598,7 @@
     },
     "https://www.allovoisins.com/r/2773/46/66315/0/location-Matelas-gonflable-Valenton": {
       "first_seen": "2026-05-01 07:46:39",
-      "last_seen": "2026-05-01 08:31:45",
+      "last_seen": "2026-05-01 10:36:06",
       "title": "Louer un matelas gonflable - Valenton",
       "is_remote": false,
       "poster_type": "unknown",
@@ -68126,7 +67610,7 @@
     },
     "https://www.allovoisins.com/r/5142/78/42129/0/location-Vehicule-utilitaire-camionnette-Draguignan": {
       "first_seen": "2026-05-01 07:46:39",
-      "last_seen": "2026-05-01 08:31:45",
+      "last_seen": "2026-05-01 10:36:06",
       "title": "Louer un véhicule utilitaire / camionnette - Draguignan",
       "is_remote": false,
       "poster_type": "unknown",
@@ -68138,7 +67622,7 @@
     },
     "https://www.allovoisins.com/r/5285/3/25238/0/location-Auguille-vibrante-vibreur-beton-Saint-robert": {
       "first_seen": "2026-05-01 07:46:39",
-      "last_seen": "2026-05-01 08:31:45",
+      "last_seen": "2026-05-01 10:36:06",
       "title": "Louer une auguille vibrante / vibreur béton - Saint-Robert",
       "is_remote": false,
       "poster_type": "unknown",
@@ -68150,7 +67634,7 @@
     },
     "https://www.allovoisins.com/r/613/14/10965/0/location-Plante-d-exterieur-plan-de-legume-Martigues": {
       "first_seen": "2026-05-01 07:46:39",
-      "last_seen": "2026-05-01 08:31:45",
+      "last_seen": "2026-05-01 10:36:06",
       "title": "Location plante d'extérieur / plan de légume - Martigues",
       "is_remote": false,
       "poster_type": "unknown",
@@ -68162,7 +67646,7 @@
     },
     "https://www.allovoisins.com/r/529/11/30761/0/location-Tondeuse-a-gazon-Croix": {
       "first_seen": "2026-05-01 07:46:39",
-      "last_seen": "2026-05-01 08:31:45",
+      "last_seen": "2026-05-01 10:36:06",
       "title": "Location tondeuse à gazon - Croix",
       "is_remote": false,
       "poster_type": "unknown",
@@ -68174,7 +67658,7 @@
     },
     "https://www.allovoisins.com/r/580/12/27113/0/location-Tente-de-reception-barnum-chapiteau-usage-domestique-Rilly-la-montagne": {
       "first_seen": "2026-05-01 07:46:39",
-      "last_seen": "2026-05-01 08:31:45",
+      "last_seen": "2026-05-01 10:36:06",
       "title": "Location tente de réception / barnum / chapiteau (usage domestique) - Rilly-la-Montagne",
       "is_remote": false,
       "poster_type": "unknown",
@@ -68186,7 +67670,7 @@
     },
     "https://www.allovoisins.com/r/488/11/9617/0/location-Motoculteur-Troyes": {
       "first_seen": "2026-05-01 07:46:39",
-      "last_seen": "2026-05-01 08:31:45",
+      "last_seen": "2026-05-01 10:36:06",
       "title": "Location motoculteur - Troyes",
       "is_remote": false,
       "poster_type": "unknown",
@@ -68198,7 +67682,7 @@
     },
     "https://www.allovoisins.com/r/512/11/9617/0/location-Rotovator-Troyes": {
       "first_seen": "2026-05-01 07:46:39",
-      "last_seen": "2026-05-01 08:31:45",
+      "last_seen": "2026-05-01 10:36:06",
       "title": "Louer un rotovator - Troyes",
       "is_remote": false,
       "poster_type": "unknown",
@@ -68234,7 +67718,7 @@
     },
     "https://www.allovoisins.com/r/671/17/25315/0/location-Grill-pierrade-plancha-Pont-du-casse": {
       "first_seen": "2026-05-01 07:46:39",
-      "last_seen": "2026-05-01 08:31:45",
+      "last_seen": "2026-05-01 10:36:06",
       "title": "Location grill / pierrade / plancha - Pont-du-Casse",
       "is_remote": false,
       "poster_type": "unknown",
@@ -68246,7 +67730,7 @@
     },
     "https://www.allovoisins.com/r/5244/79/30866/0/location-Piece-auto-piece-moto-Nivelle": {
       "first_seen": "2026-05-01 07:46:39",
-      "last_seen": "2026-05-01 08:31:45",
+      "last_seen": "2026-05-01 10:36:06",
       "title": "Acheter une pièce auto / pièce moto - Nivelle",
       "is_remote": false,
       "poster_type": "unknown",
@@ -68258,7 +67742,7 @@
     },
     "https://www.allovoisins.com/r/530/11/24149/0/location-Tondeuse-a-main-Saint-brevin-les-pins": {
       "first_seen": "2026-05-01 07:46:39",
-      "last_seen": "2026-05-01 08:31:45",
+      "last_seen": "2026-05-01 10:36:06",
       "title": "Location tondeuse à main - Saint-Brevin-les-Pins",
       "is_remote": false,
       "poster_type": "unknown",
@@ -68270,7 +67754,7 @@
     },
     "https://www.allovoisins.com/r/4201/75/76028/0/location-Citadine-petite-voiture-voiture-economique-Thiezac": {
       "first_seen": "2026-05-01 07:46:39",
-      "last_seen": "2026-05-01 08:31:45",
+      "last_seen": "2026-05-01 10:36:06",
       "title": "Location citadine / petite voiture / voiture économique - Thiézac",
       "is_remote": false,
       "poster_type": "unknown",
@@ -68282,7 +67766,7 @@
     },
     "https://www.allovoisins.com/r/210/2/38117/0/location-Tariere-Chambery": {
       "first_seen": "2026-05-01 07:46:39",
-      "last_seen": "2026-05-01 08:31:45",
+      "last_seen": "2026-05-01 10:36:06",
       "title": "Louer une tarière - Chambéry",
       "is_remote": false,
       "poster_type": "unknown",
@@ -68294,7 +67778,7 @@
     },
     "https://www.allovoisins.com/r/3305/56/20161/0/location-Dvd-serie-Saint-loubes": {
       "first_seen": "2026-05-01 07:46:39",
-      "last_seen": "2026-05-01 08:31:45",
+      "last_seen": "2026-05-01 10:36:06",
       "title": "Acheter un dvd série - Saint-Loubès",
       "is_remote": false,
       "poster_type": "unknown",
@@ -68306,7 +67790,7 @@
     },
     "https://www.allovoisins.com/r/4201/75/43913/0/location-Citadine-petite-voiture-voiture-economique-Saint-andre-de-la-roche": {
       "first_seen": "2026-05-01 07:46:39",
-      "last_seen": "2026-05-01 08:31:45",
+      "last_seen": "2026-05-01 10:36:06",
       "title": "Louer une citadine / petite voiture / voiture économique - Saint-André-de-la-Roche",
       "is_remote": false,
       "poster_type": "unknown",
@@ -68318,7 +67802,7 @@
     },
     "https://www.allovoisins.com/r/1039/19/10143/0/location-Lit-evolutif-Rieux-minervois": {
       "first_seen": "2026-05-01 07:46:39",
-      "last_seen": "2026-05-01 08:31:45",
+      "last_seen": "2026-05-01 10:36:06",
       "title": "Location lit évolutif - Rieux-Minervois",
       "is_remote": false,
       "poster_type": "unknown",
@@ -68330,7 +67814,7 @@
     },
     "https://www.allovoisins.com/r/1204/21/30761/0/location-Chaise-de-bain-medical-Croix": {
       "first_seen": "2026-05-01 07:46:39",
-      "last_seen": "2026-05-01 08:31:45",
+      "last_seen": "2026-05-01 10:36:06",
       "title": "Location chaise de bain (médical) - Croix",
       "is_remote": false,
       "poster_type": "unknown",
@@ -68342,7 +67826,7 @@
     },
     "https://www.allovoisins.com/r/257/3/43894/0/location-Pelleteuse-minipelle-mini-pelle-Stains": {
       "first_seen": "2026-05-01 07:46:39",
-      "last_seen": "2026-05-01 08:31:45",
+      "last_seen": "2026-05-01 10:36:06",
       "title": "Louer une pelleteuse / minipelle / mini pelle - Stains",
       "is_remote": false,
       "poster_type": "unknown",
@@ -68354,7 +67838,7 @@
     },
     "https://www.allovoisins.com/r/156/2/49357/0/location-Pompe-outillage-Montpellier": {
       "first_seen": "2026-05-01 07:46:39",
-      "last_seen": "2026-05-01 08:31:45",
+      "last_seen": "2026-05-01 10:36:06",
       "title": "Louer une pompe (outillage) - Montpellier",
       "is_remote": false,
       "poster_type": "unknown",
@@ -68366,7 +67850,7 @@
     },
     "https://www.allovoisins.com/r/677/17/34394/0/location-Lave-linge-machine-a-laver-Ciboure": {
       "first_seen": "2026-05-01 07:46:39",
-      "last_seen": "2026-05-01 08:31:45",
+      "last_seen": "2026-05-01 10:36:06",
       "title": "Location lave-linge / machine à laver - Ciboure",
       "is_remote": false,
       "poster_type": "unknown",
@@ -68378,7 +67862,7 @@
     },
     "https://www.allovoisins.com/r/2714/46/21136/0/location-Chariot-de-transport-Pleurtuit": {
       "first_seen": "2026-05-01 07:46:39",
-      "last_seen": "2026-05-01 08:31:45",
+      "last_seen": "2026-05-01 10:36:06",
       "title": "Louer un chariot de transport - Pleurtuit",
       "is_remote": false,
       "poster_type": "unknown",
@@ -68390,7 +67874,7 @@
     },
     "https://www.allovoisins.com/r/5142/78/21063/0/location-Vehicule-utilitaire-camionnette-Miniac-morvan": {
       "first_seen": "2026-05-01 07:46:39",
-      "last_seen": "2026-05-01 08:31:45",
+      "last_seen": "2026-05-01 10:36:06",
       "title": "Location véhicule utilitaire / camionnette - Miniac-Morvan",
       "is_remote": false,
       "poster_type": "unknown",
@@ -68402,7 +67886,7 @@
     },
     "https://www.allovoisins.com/r/4364/94/32967/0/location-Jardin-espace-vert-Lens": {
       "first_seen": "2026-05-01 07:46:39",
-      "last_seen": "2026-05-01 08:31:45",
+      "last_seen": "2026-05-01 10:36:06",
       "title": "Louer un jardin / espace vert - Lens",
       "is_remote": false,
       "poster_type": "unknown",
@@ -68414,7 +67898,7 @@
     },
     "https://www.allovoisins.com/r/5142/78/42722/0/location-Vehicule-utilitaire-camionnette-Poitiers": {
       "first_seen": "2026-05-01 07:46:39",
-      "last_seen": "2026-05-01 08:31:45",
+      "last_seen": "2026-05-01 10:36:06",
       "title": "Louer un véhicule utilitaire / camionnette - Poitiers",
       "is_remote": false,
       "poster_type": "unknown",
@@ -68426,7 +67910,7 @@
     },
     "https://www.allovoisins.com/r/529/11/50101/0/location-Tondeuse-a-gazon-Lille": {
       "first_seen": "2026-05-01 07:46:39",
-      "last_seen": "2026-05-01 08:31:45",
+      "last_seen": "2026-05-01 10:36:06",
       "title": "Louer une tondeuse à gazon - Lille",
       "is_remote": false,
       "poster_type": "unknown",
@@ -68438,7 +67922,7 @@
     },
     "https://www.allovoisins.com/r/4354/93/11152/0/location-Box-ferme-parking-ferme-garage-ferme-Ouistreham": {
       "first_seen": "2026-05-01 07:46:39",
-      "last_seen": "2026-05-01 08:31:45",
+      "last_seen": "2026-05-01 10:36:06",
       "title": "Location box fermé / parking fermé / garage fermé - Ouistreham",
       "is_remote": false,
       "poster_type": "unknown",
@@ -68450,7 +67934,7 @@
     },
     "https://www.allovoisins.com/r/262/3/10940/0/location-Plaque-vibrante-Saint-martin-de-crau": {
       "first_seen": "2026-05-01 07:46:39",
-      "last_seen": "2026-05-01 08:31:45",
+      "last_seen": "2026-05-01 10:36:06",
       "title": "Location plaque vibrante - Saint-Martin-de-Crau",
       "is_remote": false,
       "poster_type": "unknown",
@@ -68462,7 +67946,7 @@
     },
     "https://www.allovoisins.com/r/299/4/16649/0/location-Monte-charge-Chabeuil": {
       "first_seen": "2026-05-01 07:46:39",
-      "last_seen": "2026-05-01 08:31:45",
+      "last_seen": "2026-05-01 10:36:06",
       "title": "Location monte charge - Chabeuil",
       "is_remote": false,
       "poster_type": "unknown",
@@ -68474,7 +67958,7 @@
     },
     "https://www.allovoisins.com/r/257/3/18071/0/location-Pelleteuse-minipelle-mini-pelle-Ouerre": {
       "first_seen": "2026-05-01 07:46:39",
-      "last_seen": "2026-05-01 08:31:45",
+      "last_seen": "2026-05-01 10:36:06",
       "title": "Louer une pelleteuse / minipelle / mini pelle - Ouerre",
       "is_remote": false,
       "poster_type": "unknown",
@@ -68486,7 +67970,7 @@
     },
     "https://www.allovoisins.com/r/490/11/21411/0/location-Nettoyeur-haute-pression-karcher-Tours": {
       "first_seen": "2026-05-01 07:46:39",
-      "last_seen": "2026-05-01 08:31:45",
+      "last_seen": "2026-05-01 10:36:06",
       "title": "Location nettoyeur haute pression / karcher - Tours",
       "is_remote": false,
       "poster_type": "unknown",
@@ -68498,7 +67982,7 @@
     },
     "https://www.allovoisins.com/r/678/17/20440/0/location-Lave-linge-sechant-Montpellier": {
       "first_seen": "2026-05-01 07:46:39",
-      "last_seen": "2026-05-01 08:31:45",
+      "last_seen": "2026-05-01 10:36:06",
       "title": "Acheter un lave-linge séchant - Montpellier",
       "is_remote": false,
       "poster_type": "unknown",
@@ -68522,7 +68006,7 @@
     },
     "https://www.codeur.com/projects/482592-developpeur-projet-ia": {
       "first_seen": "2026-05-01 07:46:39",
-      "last_seen": "2026-05-01 08:31:45",
+      "last_seen": "2026-05-01 10:36:06",
       "title": "Developpeur projet IA",
       "is_remote": false,
       "poster_type": "unknown",
@@ -68534,7 +68018,7 @@
     },
     "https://www.codeur.com/projects/482367-ecris-developpeur-marketplace-dans-la-premiere-case": {
       "first_seen": "2026-05-01 07:46:39",
-      "last_seen": "2026-05-01 08:31:45",
+      "last_seen": "2026-05-01 10:36:06",
       "title": "Écris \"Développeur Marketplace\" dans la première case.",
       "is_remote": false,
       "poster_type": "unknown",
@@ -68546,7 +68030,7 @@
     },
     "https://www.codeur.com/projects/482222-creation-d-un-petit-temoignage-court-metrage-apres-un-cancer": {
       "first_seen": "2026-05-01 07:46:39",
-      "last_seen": "2026-05-01 08:31:45",
+      "last_seen": "2026-05-01 10:36:06",
       "title": "Création d’un petit témoignage / court métrage après un cancer",
       "is_remote": false,
       "poster_type": "unknown",
@@ -68558,7 +68042,7 @@
     },
     "https://www.codeur.com/projects/481926-montage-video-voyage-en-famille-1-montage-par-pays-12-pays": {
       "first_seen": "2026-05-01 07:46:39",
-      "last_seen": "2026-05-01 08:31:45",
+      "last_seen": "2026-05-01 10:36:06",
       "title": "Montage vidéo voyage en famille : 1 montage par pays / 12 pays",
       "is_remote": false,
       "poster_type": "unknown",
@@ -68570,7 +68054,7 @@
     },
     "https://www.codeur.com/projects/481777-creation-de-site-web-wordpress-elementor-pour-societe-de-securite": {
       "first_seen": "2026-05-01 07:46:39",
-      "last_seen": "2026-05-01 08:31:45",
+      "last_seen": "2026-05-01 10:36:06",
       "title": "Création de site web wordpress elementor pour société de sécurité",
       "is_remote": true,
       "poster_type": "unknown",
@@ -68582,7 +68066,7 @@
     },
     "https://www.codeur.com/projects/481425-expert-seo": {
       "first_seen": "2026-05-01 07:46:39",
-      "last_seen": "2026-05-01 08:31:45",
+      "last_seen": "2026-05-01 10:36:06",
       "title": "Expert SEO",
       "is_remote": false,
       "poster_type": "unknown",
@@ -68594,7 +68078,7 @@
     },
     "https://www.codeur.com/projects/481252-application-mobile-achat-en-ligne-et-livraison": {
       "first_seen": "2026-05-01 07:46:39",
-      "last_seen": "2026-05-01 08:31:45",
+      "last_seen": "2026-05-01 10:36:06",
       "title": "Application mobile achat en ligne et livraison",
       "is_remote": false,
       "poster_type": "unknown",
@@ -68606,7 +68090,7 @@
     },
     "https://www.codeur.com/projects/481027-automatisation-whatsapp": {
       "first_seen": "2026-05-01 07:46:39",
-      "last_seen": "2026-05-01 08:31:45",
+      "last_seen": "2026-05-01 10:36:06",
       "title": "Automatisation whatsapp",
       "is_remote": false,
       "poster_type": "unknown",
@@ -68618,7 +68102,7 @@
     },
     "https://www.codeur.com/projects/478267-projet-laravel-chronometrage-sportif": {
       "first_seen": "2026-05-01 07:46:39",
-      "last_seen": "2026-05-01 08:31:45",
+      "last_seen": "2026-05-01 10:36:06",
       "title": "Projet Laravel Chronométrage sportif",
       "is_remote": false,
       "poster_type": "unknown",
@@ -68630,7 +68114,7 @@
     },
     "https://www.codeur.com/projects/432760-mise-en-place-authentification-ldap-v3-sur-projet-filemaker-server": {
       "first_seen": "2026-05-01 07:46:39",
-      "last_seen": "2026-05-01 08:31:45",
+      "last_seen": "2026-05-01 10:36:06",
       "title": "Mise en place authentification LDAP v3 sur projet FileMaker Server",
       "is_remote": false,
       "poster_type": "unknown",
@@ -68642,7 +68126,7 @@
     },
     "https://www.allovoisins.com/r/488/11/10984/0/location-Motoculteur-Le-puy-sainte-reparade": {
       "first_seen": "2026-05-01 08:31:45",
-      "last_seen": "2026-05-01 08:31:45",
+      "last_seen": "2026-05-01 10:36:06",
       "title": "Louer un motoculteur - Le Puy-Sainte-Réparade",
       "is_remote": false,
       "poster_type": "unknown",
@@ -68654,7 +68138,7 @@
     },
     "https://www.allovoisins.com/r/4356/93/11152/0/location-Garage-Ouistreham": {
       "first_seen": "2026-05-01 08:31:45",
-      "last_seen": "2026-05-01 08:31:45",
+      "last_seen": "2026-05-01 10:36:06",
       "title": "Louer un garage - Ouistreham",
       "is_remote": false,
       "poster_type": "unknown",
@@ -68663,7 +68147,199 @@
       "classification": "on-site",
       "reasoning": "NLP Analysis: Ambiguous signals (remote: 0, onsite: 0)",
       "description_source": "detail_page"
+    },
+    "https://www.voscours.fr/annonces/eleves/6944166": {
+      "first_seen": "2026-05-01 10:36:06",
+      "last_seen": "2026-05-01 10:36:06",
+      "title": "Professeur d'anglais strict et méthodique",
+      "is_remote": false,
+      "poster_type": "student",
+      "description": "Professeur d'anglais strict et méthodique",
+      "confidence": "MEDIUM",
+      "classification": "on-site",
+      "reasoning": "NLP fallback classification",
+      "description_source": "listing_page"
+    },
+    "https://www.voscours.fr/annonces/eleves/6944133": {
+      "first_seen": "2026-05-01 10:36:06",
+      "last_seen": "2026-05-01 10:36:06",
+      "title": "Cours de chinois en présentiel",
+      "is_remote": false,
+      "poster_type": "student",
+      "description": "Cours de chinois en présentiel",
+      "confidence": "MEDIUM",
+      "classification": "on-site",
+      "reasoning": "NLP fallback classification",
+      "description_source": "listing_page"
+    },
+    "https://www.voscours.fr/annonces/eleves/6944125": {
+      "first_seen": "2026-05-01 10:36:06",
+      "last_seen": "2026-05-01 10:36:06",
+      "title": "Hello we're in a search for a france expert for a lesson",
+      "is_remote": false,
+      "poster_type": "student",
+      "description": "Hello we're in a search for a france expert for a lesson",
+      "confidence": "MEDIUM",
+      "classification": "on-site",
+      "reasoning": "NLP fallback classification",
+      "description_source": "listing_page"
+    },
+    "https://www.voscours.fr/annonces/eleves/6944121": {
+      "first_seen": "2026-05-01 10:36:06",
+      "last_seen": "2026-05-01 10:36:06",
+      "title": "Hello we're in a search for a france expert for a lesson",
+      "is_remote": false,
+      "poster_type": "student",
+      "description": "Hello we're in a search for a france expert for a lesson",
+      "confidence": "MEDIUM",
+      "classification": "on-site",
+      "reasoning": "NLP fallback classification",
+      "description_source": "listing_page"
+    },
+    "https://www.voscours.fr/annonces/eleves/6944120": {
+      "first_seen": "2026-05-01 10:36:06",
+      "last_seen": "2026-05-01 10:36:06",
+      "title": "Hello we're in a search for a france expert for a lesson",
+      "is_remote": false,
+      "poster_type": "student",
+      "description": "Hello we're in a search for a france expert for a lesson",
+      "confidence": "MEDIUM",
+      "classification": "on-site",
+      "reasoning": "NLP fallback classification",
+      "description_source": "listing_page"
+    },
+    "https://www.voscours.fr/annonces/eleves/6943985": {
+      "first_seen": "2026-05-01 10:36:06",
+      "last_seen": "2026-05-01 10:36:06",
+      "title": "Skilled french language tutors are urgently needed for teaching position",
+      "is_remote": false,
+      "poster_type": "student",
+      "description": "Skilled french language tutors are urgently needed for teaching position",
+      "confidence": "MEDIUM",
+      "classification": "on-site",
+      "reasoning": "NLP fallback classification",
+      "description_source": "listing_page"
+    },
+    "https://www.voscours.fr/annonces/eleves/6943817": {
+      "first_seen": "2026-05-01 10:36:06",
+      "last_seen": "2026-05-01 10:36:06",
+      "title": "We are in need of a tutor for online course",
+      "is_remote": true,
+      "poster_type": "student",
+      "description": "We are in need of a tutor for online course",
+      "confidence": "MEDIUM",
+      "classification": "remote",
+      "reasoning": "NLP fallback classification",
+      "description_source": "listing_page"
+    },
+    "https://www.voscours.fr/annonces/eleves/6943793": {
+      "first_seen": "2026-05-01 10:36:06",
+      "last_seen": "2026-05-01 10:36:06",
+      "title": "We are in need of a tutor for online course",
+      "is_remote": true,
+      "poster_type": "student",
+      "description": "We are in need of a tutor for online course",
+      "confidence": "MEDIUM",
+      "classification": "remote",
+      "reasoning": "NLP fallback classification",
+      "description_source": "listing_page"
+    },
+    "https://www.voscours.fr/annonces/eleves/6943769": {
+      "first_seen": "2026-05-01 10:36:06",
+      "last_seen": "2026-05-01 10:36:06",
+      "title": "Hello we need candidates for a lesson on espanol",
+      "is_remote": false,
+      "poster_type": "student",
+      "description": "Hello we need candidates for a lesson on espanol",
+      "confidence": "MEDIUM",
+      "classification": "on-site",
+      "reasoning": "NLP fallback classification",
+      "description_source": "listing_page"
+    },
+    "https://www.voscours.fr/annonces/eleves/6943203": {
+      "first_seen": "2026-05-01 10:36:06",
+      "last_seen": "2026-05-01 10:36:06",
+      "title": "Bonjour à tous, je recherche des cours de français. je souhaite améliorer mon français écrit et oral",
+      "is_remote": false,
+      "poster_type": "student",
+      "description": "Bonjour à tous, je recherche des cours de français. je souhaite améliorer mon français écrit et oral",
+      "confidence": "MEDIUM",
+      "classification": "on-site",
+      "reasoning": "NLP fallback classification",
+      "description_source": "listing_page"
+    },
+    "https://www.voscours.fr/annonces/eleves/6941495": {
+      "first_seen": "2026-05-01 10:36:06",
+      "last_seen": "2026-05-01 10:36:06",
+      "title": "Je cherche un professeur de mathématiques j’aimerais que le professeur soit en france s’il vous plait",
+      "is_remote": false,
+      "poster_type": "student",
+      "description": "Je cherche un professeur de mathématiques j’aimerais que le professeur soit en france s’il vous plait",
+      "confidence": "MEDIUM",
+      "classification": "on-site",
+      "reasoning": "NLP fallback classification",
+      "description_source": "listing_page"
+    },
+    "https://www.voscours.fr/annonces/eleves/6942757": {
+      "first_seen": "2026-05-01 10:36:06",
+      "last_seen": "2026-05-01 10:36:06",
+      "title": "Je suis de toute urgence à la recherche d’un professeur d’italien pour apprendre la langue .je cherche quelqu’un qui vie en france",
+      "is_remote": false,
+      "poster_type": "student",
+      "description": "Je suis de toute urgence à la recherche d’un professeur d’italien pour apprendre la langue .je cherche quelqu’un qui vie en france",
+      "confidence": "MEDIUM",
+      "classification": "on-site",
+      "reasoning": "NLP fallback classification",
+      "description_source": "listing_page"
+    },
+    "https://www.voscours.fr/annonces/eleves/6942748": {
+      "first_seen": "2026-05-01 10:36:06",
+      "last_seen": "2026-05-01 10:36:06",
+      "title": "Cherche professeur de langue italienne résidant en france d’urgence",
+      "is_remote": false,
+      "poster_type": "student",
+      "description": "Cherche professeur de langue italienne résidant en france d’urgence",
+      "confidence": "MEDIUM",
+      "classification": "on-site",
+      "reasoning": "NLP fallback classification",
+      "description_source": "listing_page"
+    },
+    "https://www.findtutors.co.uk/annonces/eleves/6943785": {
+      "first_seen": "2026-05-01 10:36:06",
+      "last_seen": "2026-05-01 10:36:06",
+      "title": "Teacher Cantonese/ mandarin to 5 and 7 yrs",
+      "is_remote": false,
+      "poster_type": "student",
+      "description": "Teacher Cantonese/ mandarin to 5 and 7 yrs",
+      "confidence": "MEDIUM",
+      "classification": "on-site",
+      "reasoning": "NLP fallback classification",
+      "description_source": "listing_page"
+    },
+    "https://www.findtutors.co.uk/annonces/eleves/6943482": {
+      "first_seen": "2026-05-01 10:36:06",
+      "last_seen": "2026-05-01 10:36:06",
+      "title": "I am looking for a GCSE tutor in maths and english language",
+      "is_remote": false,
+      "poster_type": "student",
+      "description": "I am looking for a GCSE tutor in maths and english language",
+      "confidence": "MEDIUM",
+      "classification": "on-site",
+      "reasoning": "NLP fallback classification",
+      "description_source": "listing_page"
+    },
+    "https://www.findtutors.co.uk/annonces/eleves/6943358": {
+      "first_seen": "2026-05-01 10:36:06",
+      "last_seen": "2026-05-01 10:36:06",
+      "title": "Tutor needed for Year 4 (English & Maths)",
+      "is_remote": false,
+      "poster_type": "student",
+      "description": "Tutor needed for Year 4 (English & Maths)",
+      "confidence": "MEDIUM",
+      "classification": "on-site",
+      "reasoning": "NLP fallback classification",
+      "description_source": "listing_page"
     }
   },
-  "last_update": "2026-05-01 08:31:45"
+  "last_update": "2026-05-01 10:36:06"
 }

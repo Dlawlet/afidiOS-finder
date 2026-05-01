@@ -106,8 +106,10 @@ class ScraperMetrics(BaseModel):
     jobs_analyzed: int = Field(..., ge=0)
     new_jobs: int = Field(..., ge=0)
     cached_jobs: int = Field(..., ge=0)
+    reanalyzed_jobs: int = Field(default=0, ge=0)
     remote_jobs: int = Field(..., ge=0)
     llm_calls: int = Field(..., ge=0)
+    llm_budget: int = Field(default=0, ge=0)
     cache_stats: dict
     confidence_distribution: dict
     errors: list[str] = Field(default_factory=list)

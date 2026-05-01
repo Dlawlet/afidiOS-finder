@@ -1,0 +1,36 @@
+PLAN OF ACTION
+
+A) Workflow scheduling and trigger hygiene
+1. Replace the dual-cron DST workaround in daily-scrape.yml with a single daily schedule.
+2. Keep daily-tutoring.yml on its own single daily schedule, maintaining the separation window.
+3. Add explicit documentation in workflows for the single schedule decision and expected run count.
+
+B) Groq utilization and quota strategy
+1. Separate LLM quota accounting from non-LLM sources so RemoteOK no longer consumes LLM quota.
+2. Increase effective LLM budget for real LLM-needed sources by reallocating unused quota from
+   pre-classified/skip-analysis sources.
+3. Make LLM quota configurable via workflow env/flags to tune daily usage toward the 300k token budget.
+4. Adjust incremental lookback and/or reanalysis cadence to allow more new or stale jobs to be analyzed
+   when the daily budget is underused.
+
+C) Tutoring STEM priority queue
+1. Introduce a STEM priority filter for tutoring posts based on subject_category and STEM keyword signals.
+2. Ensure STEM tutoring posts are processed first when LLM quota is limited.
+3. Create a dedicated STEM tutoring export (JSON/CSV) for downstream consumption.
+4. Expand tutoring keyword lists to cover math/physics/chemistry/CS/actuarial/statistics explicitly.
+
+D) Scraping source expansion and restructuring
+1. Add additional remote-first sources with stable APIs/RSS feeds for EU/US coverage.
+2. Prefer API-based sources where possible to increase volume and reduce parsing fragility.
+3. Tag new sources as pre-classified remote-only when the source guarantees remote postings.
+4. Keep general local-service boards but reduce their share of LLM budget if they produce low remote yield.
+
+E) Volume and storage maximization
+1. Preserve daily snapshots by adding a timestamped archive export alongside the “latest” files.
+2. Extend or make configurable job_history retention to avoid losing older unique jobs.
+3. Ensure de-duplication across sources includes stable identifiers beyond URL where available.
+
+F) Validation and monitoring
+1. Run existing repo checks (if any) before and after changes.
+2. Add metrics output that explicitly reports LLM utilization vs budget and STEM tutoring counts.
+3. Verify workflow run count is reduced to expected daily cadence.

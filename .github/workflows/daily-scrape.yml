@@ -13,8 +13,7 @@ name: Daily Job Scraper
 
 on:
   schedule:
-    - cron: '0 6 * * *'  # 7h Paris hiver (UTC+1)
-    - cron: '0 5 * * *'  # 7h Paris été (UTC+2)
+    - cron: '0 6 * * *'  # Run once daily (UTC)
   workflow_dispatch:
 
 concurrency:
@@ -51,8 +50,11 @@ jobs:
       - name: Run multi-site scraper with intelligent quota
         env:
           GROQ_API_KEY: ${{ secrets.GROQ_API_KEY }}
+          GROQ_DAILY_TOKEN_BUDGET: '300000'
+          GROQ_EST_TOKENS_PER_CALL: '900'
+          HISTORY_RETENTION_DAYS: '90'
         run: |
-          python scheduled_scraper_v3.py --sites jemepropose allovoisins codeur remoteok --verbose
+          python scheduled_scraper_v3.py --sites jemepropose allovoisins codeur remoteok remotive workingnomads arbeitnow --verbose
 
       - name: Commit and push results
         run: |

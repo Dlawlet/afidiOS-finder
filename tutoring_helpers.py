@@ -25,7 +25,8 @@ class TutoringPreFilter:
         'répétiteur', 'répétitrices',
         # Academic subjects FR
         'mathématiques', 'maths', 'math ', 'algèbre', 'géométrie', 'calcul',
-        'physique', 'chimie', 'biologie', 'svt', 'sciences',
+        'physique', 'chimie', 'biologie', 'svt', 'sciences', 'statistiques',
+        'probabilités', 'actuariat', 'actuariel', 'actuaire',
         'histoire', 'géographie', 'histoire-géo',
         'philosophie', 'philo',
         'français', 'littérature', 'grammaire', 'orthographe', 'rédaction',
@@ -60,9 +61,29 @@ class TutoringPreFilter:
         'guitar lesson', 'piano lesson', 'violin lesson', 'music lesson',
         'drum lesson', 'singing lesson', 'voice lesson',
         'coding lesson', 'programming lesson',
+        'statistics tutor', 'actuarial', 'data science',
         # Test prep EN
         'test prep', 'sat prep', 'gre prep', 'ielts', 'toefl', 'gcse', 'a-level',
     ]
+
+    STEM_KEYWORDS_FR = [
+        'mathématiques', 'maths', 'algèbre', 'géométrie', 'calcul', 'analyse',
+        'physique', 'chimie', 'biologie', 'svt', 'sciences', 'science',
+        'informatique', 'programmation', 'algorithmique', 'code', 'codage',
+        'statistiques', 'probabilités', 'data science', 'science des données',
+        'actuariat', 'actuariel', 'actuaire', 'ingénierie', 'ingénieur',
+    ]
+
+    STEM_KEYWORDS_EN = [
+        'mathematics', 'math', 'algebra', 'geometry', 'calculus',
+        'physics', 'chemistry', 'biology', 'science',
+        'computer science', 'programming', 'coding', 'software',
+        'statistics', 'probability', 'data science', 'machine learning',
+        'actuarial', 'actuary', 'engineering',
+    ]
+
+    STEM_SUBJECT_CATEGORIES = {'math_science', 'technology', 'test_prep'}
+    STEM_KEYWORDS = STEM_KEYWORDS_FR + STEM_KEYWORDS_EN
 
     def is_tutoring_related(self, title: str, description: str, location: str) -> bool:
         """
@@ -97,3 +118,13 @@ class TutoringPreFilter:
             else:
                 discarded.append(job)
         return tutoring, discarded
+
+    def is_stem_related(self, title: str, description: str, location: str) -> bool:
+        """
+        Returns True if the post is likely STEM tutoring-related.
+        """
+        text = f"{title} {description} {location}".lower()
+        for kw in self.STEM_KEYWORDS:
+            if kw in text:
+                return True
+        return False

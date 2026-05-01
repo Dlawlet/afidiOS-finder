@@ -12,6 +12,19 @@ from urllib.parse import urljoin
 import logging
 import random
 import time
+import html
+import re
+
+MAX_DESCRIPTION_LENGTH = 800
+
+
+def clean_html_description(raw_text: str) -> str:
+    """Strip HTML, normalize whitespace, and truncate."""
+    if not raw_text:
+        return ''
+    cleaned = re.sub(r'<[^>]+>', ' ', raw_text)
+    cleaned = html.unescape(' '.join(cleaned.split()))
+    return cleaned[:MAX_DESCRIPTION_LENGTH]
 
 
 class BaseSiteScraper(ABC):
@@ -543,7 +556,8 @@ class MultiSiteScraper:
         enabled_sites: Optional[List[str]] = None, 
         max_pages_per_site: Optional[int] = None,
         incremental_filter_callback = None,
-        lookback_hours: int = 24
+        lookback_hours: int = 24,
+        quota_exempt_sources: Optional[List[str]] = None
     ) -> tuple:
         """
         Intelligent page-by-page scraping with incremental quota management
@@ -561,6 +575,7 @@ class MultiSiteScraper:
             max_pages_per_site: Hard limit on pages per site (None = unlimited)
             incremental_filter_callback: Function to filter new vs cached jobs
             lookback_hours: Hours to look back for incremental filtering
+            quota_exempt_sources: Site names that should not consume LLM quota
             
         Returns:
             tuple: (all_scraped_jobs, jobs_to_analyze, quota_used)
@@ -569,34 +584,47 @@ class MultiSiteScraper:
         all_jobs_to_analyze = []
         all_cached_jobs = []  # Track cached jobs separately
         sites_to_scrape = enabled_sites if enabled_sites else list(self.scrapers.keys())
+        quota_exempt_sources = set(quota_exempt_sources or [])
+        llm_sites = [s for s in sites_to_scrape if s not in quota_exempt_sources]
+        llm_sites_set = set(llm_sites)
         
         remaining_quota = daily_quota
         num_sites = len(sites_to_scrape)
-        quota_per_site = daily_quota // num_sites if num_sites > 0 else daily_quota
+        llm_sites_remaining = len(llm_sites)
         
         if self.verbose:
             print(f"\n🌐 Intelligent quota-based scraping")
             print(f"   Total daily quota: {daily_quota} LLM calls")
-            print(f"   Initial quota per site: {quota_per_site} jobs")
             print(f"   Sites: {len(sites_to_scrape)}")
+            if quota_exempt_sources:
+                print(f"   LLM-exempt sites: {', '.join(sorted(quota_exempt_sources))}")
         
         for site_idx, site_name in enumerate(sites_to_scrape, 1):
             if site_name not in self.scrapers:
                 self.logger.warning(f"Scraper not found: {site_name}")
+                if site_name in llm_sites_set:
+                    llm_sites_remaining = max(llm_sites_remaining - 1, 0)
                 continue
             
             scraper = self.scrapers[site_name]
+            is_quota_exempt = site_name not in llm_sites_set
             
             # Calculate quota for this site (redistribute if previous sites didn't use all)
-            sites_remaining = num_sites - site_idx + 1
-            site_quota = remaining_quota // sites_remaining if sites_remaining > 0 else remaining_quota
+            if is_quota_exempt:
+                site_quota = None
+            else:
+                sites_remaining = llm_sites_remaining if llm_sites_remaining > 0 else 1
+                site_quota = remaining_quota // sites_remaining if sites_remaining > 0 else remaining_quota
             
             if self.verbose:
                 print(f"\n📡 [{site_idx}/{num_sites}] {site_name.upper()}")
-                print(f"   🎯 Allocated quota: {site_quota} NEW jobs")
-                print(f"   💰 Remaining budget: {remaining_quota}/{daily_quota}")
+                if is_quota_exempt:
+                    print("   🎯 LLM quota: EXEMPT (pre-classified)")
+                else:
+                    print(f"   🎯 Allocated quota: {site_quota} LLM jobs")
+                    print(f"   💰 Remaining budget: {remaining_quota}/{daily_quota}")
             
-            if remaining_quota <= 0:
+            if remaining_quota <= 0 and not is_quota_exempt:
                 if self.verbose:
                     print(f"   🛑 No quota remaining, skipping")
                 break
@@ -604,6 +632,7 @@ class MultiSiteScraper:
             try:
                 site_scraped_jobs = []
                 site_new_jobs = []
+                site_llm_jobs_count = 0
                 site_cached_jobs = []  # Track cached jobs for this site
                 page_num = 1
                 
@@ -615,13 +644,16 @@ class MultiSiteScraper:
                         break
                     
                     # Check if we've hit site quota
-                    if len(site_new_jobs) >= site_quota:
+                    if not is_quota_exempt and site_llm_jobs_count >= site_quota:
                         if self.verbose:
-                            print(f"   ✅ Site quota reached: {len(site_new_jobs)}/{site_quota}")
+                            print(f"   ✅ Site quota reached: {site_llm_jobs_count}/{site_quota}")
                         break
                     
                     if self.verbose:
-                        print(f"   📄 Page {page_num} (NEW so far: {len(site_new_jobs)}/{site_quota})")
+                        if is_quota_exempt:
+                            print(f"   📄 Page {page_num} (LLM-exempt)")
+                        else:
+                            print(f"   📄 Page {page_num} (LLM so far: {site_llm_jobs_count}/{site_quota})")
                     
                     # Scrape one page
                     jobs, has_more = scraper.scrape_page(page_num)
@@ -649,21 +681,47 @@ class MultiSiteScraper:
                         # Track cached jobs
                         site_cached_jobs.extend(page_cached_jobs)
                         
-                        # Add NEW jobs (respecting site quota)
-                        space_remaining = site_quota - len(site_new_jobs)
-                        jobs_to_add = page_new_jobs[:space_remaining]
-                        site_new_jobs.extend(jobs_to_add)
-                        
-                        if self.verbose and len(jobs_to_add) < len(page_new_jobs):
-                            print(f"      ⚠️  Quota limit: taking {len(jobs_to_add)}/{len(page_new_jobs)} NEW jobs")
+                        # Add NEW jobs (respecting LLM quota, skip_analysis jobs are exempt)
+                        if is_quota_exempt:
+                            site_new_jobs.extend(page_new_jobs)
+                        else:
+                            exempt_jobs = []
+                            llm_jobs = []
+                            for job in page_new_jobs:
+                                if job.get('skip_analysis'):
+                                    exempt_jobs.append(job)
+                                else:
+                                    llm_jobs.append(job)
+                            
+                            site_new_jobs.extend(exempt_jobs)
+                            space_remaining = site_quota - site_llm_jobs_count
+                            jobs_to_add = llm_jobs[:space_remaining]
+                            site_new_jobs.extend(jobs_to_add)
+                            site_llm_jobs_count += len(jobs_to_add)
+                            
+                            if self.verbose and len(jobs_to_add) < len(llm_jobs):
+                                print(f"      ⚠️  Quota limit: taking {len(jobs_to_add)}/{len(llm_jobs)} LLM jobs")
                     else:
                         # No incremental filtering, count all as new
-                        space_remaining = site_quota - len(site_new_jobs)
-                        jobs_to_add = jobs[:space_remaining]
-                        site_new_jobs.extend(jobs_to_add)
+                        if is_quota_exempt:
+                            site_new_jobs.extend(jobs)
+                        else:
+                            exempt_jobs = []
+                            llm_jobs = []
+                            for job in jobs:
+                                if job.get('skip_analysis'):
+                                    exempt_jobs.append(job)
+                                else:
+                                    llm_jobs.append(job)
+                            
+                            site_new_jobs.extend(exempt_jobs)
+                            space_remaining = site_quota - site_llm_jobs_count
+                            jobs_to_add = llm_jobs[:space_remaining]
+                            site_new_jobs.extend(jobs_to_add)
+                            site_llm_jobs_count += len(jobs_to_add)
                     
                     # Check if we hit quota
-                    if len(site_new_jobs) >= site_quota:
+                    if not is_quota_exempt and site_llm_jobs_count >= site_quota:
                         if self.verbose:
                             print(f"   ✅ Site quota reached after page {page_num}")
                         break
@@ -681,27 +739,34 @@ class MultiSiteScraper:
                 all_jobs_to_analyze.extend(site_new_jobs)
                 all_cached_jobs.extend(site_cached_jobs)  # Track cached jobs
                 
-                quota_used = len(site_new_jobs)
+                quota_used = site_llm_jobs_count if not is_quota_exempt else 0
                 remaining_quota -= quota_used
                 
                 if self.verbose:
                     print(f"   📊 Site summary:")
                     print(f"      Total scraped: {len(site_scraped_jobs)} jobs ({page_num} pages)")
-                    print(f"      NEW jobs: {len(site_new_jobs)} (used {quota_used}/{site_quota} site quota)")
+                    if is_quota_exempt:
+                        print(f"      NEW jobs: {len(site_new_jobs)} (LLM-exempt)")
+                    else:
+                        print(f"      NEW jobs: {len(site_new_jobs)} (used {quota_used}/{site_quota} LLM quota)")
                     print(f"      Cached jobs: {len(site_cached_jobs)}")
                     
                     # Show if site was exhausted or hit quota
-                    if len(site_new_jobs) < site_quota:
-                        unused = site_quota - len(site_new_jobs)
+                    if not is_quota_exempt and site_llm_jobs_count < site_quota:
+                        unused = site_quota - site_llm_jobs_count
                         print(f"      ⚠️  Site exhausted: {unused} quota unused (will redistribute)")
                     
-                    print(f"      💰 Budget remaining: {remaining_quota}/{daily_quota}")
+                    if not is_quota_exempt:
+                        print(f"      💰 Budget remaining: {remaining_quota}/{daily_quota}")
                 
                 # If we still have remaining quota and there are more sites, continue
                 if remaining_quota <= 0:
                     if self.verbose:
                         print(f"\n   🎯 Total quota reached ({daily_quota} NEW jobs)!")
                     break
+                
+                if not is_quota_exempt:
+                    llm_sites_remaining = max(llm_sites_remaining - 1, 0)
                 
             except Exception as e:
                 self.logger.error(f"Error scraping {site_name}: {e}")
@@ -1009,6 +1074,176 @@ class CodeurScraper(BaseSiteScraper):
         return jobs
 
 
+class RemotiveScraper(BaseSiteScraper):
+    """
+    Scraper for remotive.com — public JSON API (remote-only jobs).
+    All jobs are remote; skip_analysis avoids LLM usage.
+    """
+
+    @property
+    def site_name(self) -> str:
+        return "remotive"
+
+    @property
+    def base_url(self) -> str:
+        return "https://remotive.com/api/remote-jobs"
+
+    def build_page_url(self, page_num: int) -> str:
+        return self.base_url if page_num == 1 else None
+
+    def scrape_page(self, page_num: int) -> tuple:
+        if page_num > 1:
+            return [], False
+
+        try:
+            response = requests.get(self.base_url, headers=self.headers, timeout=30)
+            response.raise_for_status()
+            payload = response.json()
+            entries = payload.get('jobs', [])
+
+            jobs = []
+            for item in entries:
+                description = clean_html_description(item.get('description', ''))
+
+                location = item.get('candidate_required_location') or item.get('location') or 'Remote / Worldwide'
+
+                jobs.append({
+                    'url': item.get('url', 'N/A'),
+                    'title': item.get('title', 'N/A'),
+                    'description': description or 'Remote position',
+                    'location': location,
+                    'price': item.get('salary', 'N/A'),
+                    'source': self.site_name,
+                    'is_remote': True,
+                    'poster_type': 'employer',
+                    'skip_analysis': True,
+                })
+
+            return jobs, False
+        except Exception as e:
+            self.logger.error(f"Remotive API error: {e}")
+            return [], False
+
+    def extract_jobs_from_page(self, soup: BeautifulSoup, page_url: str) -> List[Dict]:
+        _ = soup, page_url
+        return []
+
+
+class WorkingNomadsScraper(BaseSiteScraper):
+    """
+    Scraper for workingnomads.com — public JSON API (remote-only jobs).
+    """
+
+    PAGE_SIZE = 100
+
+    @property
+    def site_name(self) -> str:
+        return "workingnomads"
+
+    @property
+    def base_url(self) -> str:
+        return "https://www.workingnomads.com/jobsapi/jobposts"
+
+    def build_page_url(self, page_num: int) -> str:
+        offset = (page_num - 1) * self.PAGE_SIZE
+        return f"{self.base_url}?count={self.PAGE_SIZE}&offset={offset}"
+
+    def scrape_page(self, page_num: int) -> tuple:
+        url = self.build_page_url(page_num)
+        try:
+            response = requests.get(url, headers=self.headers, timeout=30)
+            response.raise_for_status()
+            entries = response.json()
+
+            if not entries:
+                return [], False
+
+            jobs = []
+            for item in entries:
+                description = clean_html_description(item.get('description', '') or item.get('content', ''))
+
+                jobs.append({
+                    'url': item.get('url', 'N/A'),
+                    'title': item.get('title', 'N/A'),
+                    'description': description or 'Remote position',
+                    'location': item.get('location') or 'Remote / Worldwide',
+                    'price': item.get('salary', 'N/A'),
+                    'source': self.site_name,
+                    'is_remote': True,
+                    'poster_type': 'employer',
+                    'skip_analysis': True,
+                })
+
+            has_more = len(entries) >= self.PAGE_SIZE
+            return jobs, has_more
+        except Exception as e:
+            self.logger.error(f"WorkingNomads API error: {e}")
+            return [], False
+
+    def extract_jobs_from_page(self, soup: BeautifulSoup, page_url: str) -> List[Dict]:
+        _ = soup, page_url
+        return []
+
+
+class ArbeitnowScraper(BaseSiteScraper):
+    """
+    Scraper for arbeitnow.com — EU-focused job board API.
+    Filters to remote-only jobs and skips LLM analysis.
+    """
+
+    @property
+    def site_name(self) -> str:
+        return "arbeitnow"
+
+    @property
+    def base_url(self) -> str:
+        return "https://www.arbeitnow.com/api/job-board-api"
+
+    def build_page_url(self, page_num: int) -> str:
+        return self.base_url if page_num == 1 else f"{self.base_url}?page={page_num}"
+
+    def scrape_page(self, page_num: int) -> tuple:
+        url = self.build_page_url(page_num)
+        try:
+            response = requests.get(url, headers=self.headers, timeout=30)
+            response.raise_for_status()
+            payload = response.json()
+            entries = payload.get('data', [])
+
+            jobs = []
+            for item in entries:
+                if not item.get('remote', False):
+                    continue
+
+                description = clean_html_description(item.get('description', ''))
+
+                job_url = item.get('url') or item.get('slug') or 'N/A'
+                if job_url and not str(job_url).startswith('http'):
+                    job_url = f"https://www.arbeitnow.com/jobs/{job_url}"
+
+                jobs.append({
+                    'url': job_url,
+                    'title': item.get('title', 'N/A'),
+                    'description': description or 'Remote position',
+                    'location': item.get('location') or 'Remote / Europe',
+                    'price': 'N/A',
+                    'source': self.site_name,
+                    'is_remote': True,
+                    'poster_type': 'employer',
+                    'skip_analysis': True,
+                })
+
+            has_more = bool(payload.get('links', {}).get('next'))
+            return jobs, has_more
+        except Exception as e:
+            self.logger.error(f"Arbeitnow API error: {e}")
+            return [], False
+
+    def extract_jobs_from_page(self, soup: BeautifulSoup, page_url: str) -> List[Dict]:
+        _ = soup, page_url
+        return []
+
+
 class RemoteOKScraper(BaseSiteScraper):
     """
     Scraper for remoteok.com — international remote-only jobs via their public JSON API.
@@ -1077,6 +1312,7 @@ class RemoteOKScraper(BaseSiteScraper):
                     'description': description or 'Remote position',
                     'location': location,
                     'price': salary,
+                    'source': self.site_name,
                     'is_remote': True,
                     'poster_type': 'employer',
                     'skip_analysis': True,  # Never call LLM — saves 100% of quota for these jobs

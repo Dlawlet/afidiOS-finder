@@ -16,8 +16,7 @@ name: Daily Tutoring Scraper
 
 on:
   schedule:
-    - cron: '0 9 * * *'   # 11h Paris hiver (UTC+1) / 10h été (UTC+2)
-                            # General scraper runs at 6h UTC — 3h gap avoids rate collision
+    - cron: '0 9 * * *'   # Run once daily (UTC); 3h after general scraper
   workflow_dispatch:        # Allow manual trigger for testing
 
 concurrency:
@@ -57,6 +56,8 @@ jobs:
       - name: Run tutoring scraper
         env:
           GROQ_API_KEY: ${{ secrets.GROQ_API_KEY }}
+          TUTORING_LLM_QUOTA: '500'
+          HISTORY_RETENTION_DAYS: '90'
         run: |
           python tutoring_scraper.py \
             --sites voscours findtutors_uk jemepropose allovoisins \

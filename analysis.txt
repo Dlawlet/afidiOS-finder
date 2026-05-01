@@ -1,0 +1,89 @@
+JOB SCRAPER AUTOMATION AUDIT (2026-05-01)
+
+Scope
+- Repo: /home/runner/work/afidiOS-finder/afidiOS-finder
+- Workflows reviewed: .github/workflows/daily-scrape.yml, daily-tutoring.yml
+- Pipelines reviewed: scheduled_scraper_v3.py (general), tutoring_scraper.py (tutoring)
+- Core components: site_scrapers.py, semantic_analyzer.py, incremental_scraper.py,
+  tutoring_helpers.py, tutoring_classifier.py, job_exporter.py, job_helpers.py
+
+1) Pipeline over-triggering (3 runs/day)
+Findings
+- daily-scrape.yml defines TWO cron schedules:
+  - 0 6 * * * (UTC)
+  - 0 5 * * * (UTC)
+  These are intended to cover DST, but they both run every day.
+- daily-tutoring.yml has its own cron schedule at 0 9 * * * (UTC).
+- Result: 2 runs/day for the general scraper + 1 run/day for tutoring = 3 runs/day.
+- workflow_dispatch is also enabled, adding manual runs.
+Impact
+- Over-triggering is explained by deliberate double-cron for DST + separate tutoring workflow.
+- This inflates Actions usage and can collide with Groq usage windows.
+
+2) Gross underutilization of the Groq API
+Findings
+- General pipeline LLM quota is hardcoded at DAILY_LLM_QUOTA = 1500 (jobs/day).
+  Tutoring pipeline quota is TUTORING_LLM_QUOTA = 500.
+- Incremental scraper skips any job seen in the last 24 hours; cached jobs are not re-analyzed.
+- content-hash cache (cache/*.json) bypasses repeated LLM calls across runs.
+- BasicRemoteDetector only sends LOW-confidence jobs to the LLM, but most savings come from
+  incremental caching rather than the prefilter.
+- RemoteOK is pre-classified and skip_analysis=True, but in scrape_with_incremental_quota
+  RemoteOK still consumes per-site quota despite not using the LLM.
+- The general workflow currently runs the sites: jemepropose, allovoisins, codeur, remoteok.
+  Many of these are not remote-first and yield low volumes of LLM-eligible new jobs.
+Impact
+- Effective Groq usage is capped by: limited daily quota, incremental caching, and the
+  remoteok quota “tax” even though it is LLM-free.
+- Daily volume of new jobs appears low (site mix + incremental), leading to <1,500 tokens/day
+  despite a 300k/day token budget.
+
+3) Tutoring & STEM job focus (priority vertical)
+Findings
+- There is a dedicated tutoring pipeline (tutoring_scraper.py) and exports
+  tutoring_opportunities_latest.json/csv.
+- Tutoring pre-filter uses broad tutoring keywords, but there is no explicit STEM focus filter.
+- TutoringClassifier does classify subject_category (math_science, technology, etc.),
+  but no prioritization or separate queue exists for STEM.
+- General pipeline does not implement a tutoring STEM priority queue.
+Impact
+- Tutoring is separated but STEM priority is not enforced.
+- No dedicated export or priority processing for math/physics/chemistry/CS/actuarial science.
+
+4) Scraping process re-evaluation (sources, logic, coverage)
+Findings
+- Active sources in production are limited to:
+  - jemepropose.com (general French services marketplace)
+  - allovoisins.com (general French services marketplace)
+  - codeur.com (French project marketplace)
+  - remoteok.com (remote-only tech jobs via API)
+  - tutoring: voscours.fr + findtutors.co.uk + pre-filtered general sites
+- Other scrapers (malt, freelance.com, comet) are template selectors and not used in workflows.
+- Most sources are France-centric, not Europe/US wide; only remoteok is global.
+- No dedicated US/EU remote job boards beyond RemoteOK.
+- No deduplication across sources except URL-based history (job_history.json).
+Impact
+- Coverage is insufficient for the stated goals (EU/US remote at max volume).
+- Over-reliance on local services boards yields low remote volume and high on-site noise.
+
+5) Volume & storage maximization
+Findings
+- Outputs are overwritten daily (jobs_latest.json/csv, remote_jobs_latest.json/csv).
+- job_history.json retains URL-level history but is pruned after 30 days.
+- Scraper reduces total volume via incremental filtering and conservative quotas.
+- RemoteOK jobs count against quota even though LLM is skipped.
+Impact
+- Storage is not maximizing historical volume (daily overwrite + 30-day history cleanup).
+- Total volume is constrained by quotas and limited source breadth.
+
+Summary of what works
+- Incremental caching and content-hash cache reduce redundant LLM calls.
+- RemoteOK API integration is stable and LLM-free.
+- Tutoring pipeline exists and writes a tutoring-specific export.
+
+Summary of what is broken/underperforming
+- Over-triggering due to duplicate cron entries + separate tutoring schedule.
+- Groq capacity is not used due to quota design, caching, and source mix.
+- No STEM priority queue despite classification support.
+- Source mix and geography do not match EU/US remote volume goals.
+- Storage strategy overwrites daily results and prunes history aggressively.

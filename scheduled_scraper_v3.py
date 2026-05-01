@@ -6,6 +6,7 @@ Supports multiple job platforms with incremental scraping and validation
 
 import sys
 import io
+import os
 sys.stdout = io.TextIOWrapper(sys.stdout.buffer, encoding='utf-8')
 
 from semantic_analyzer import SemanticJobAnalyzer, setup_logging
@@ -13,14 +14,37 @@ from job_exporter import JobExporter
 from job_helpers import JobDescriptionFetcher, BasicRemoteDetector
 from incremental_scraper import IncrementalScraper
 from models import JobListing, validate_job_data, ScraperMetrics
-from site_scrapers import MultiSiteScraper, JeMeProposeScraper, MaltScraper, FreelanceComScraper, CometScraper, AlloVoisinsScraper, CodeurScraper, RemoteOKScraper
+from site_scrapers import (
+    MultiSiteScraper,
+    JeMeProposeScraper,
+    MaltScraper,
+    FreelanceComScraper,
+    CometScraper,
+    AlloVoisinsScraper,
+    CodeurScraper,
+    RemoteOKScraper,
+    RemotiveScraper,
+    WorkingNomadsScraper,
+    ArbeitnowScraper,
+)
 import json
 from datetime import datetime
 import logging
 import argparse
 
-# Free tier LLM quota (jobs per day)
-DAILY_LLM_QUOTA = 1500
+# Groq token budget configuration (approximate LLM call capacity)
+DEFAULT_DAILY_TOKEN_BUDGET = int(os.getenv('GROQ_DAILY_TOKEN_BUDGET', '300000'))
+EST_TOKENS_PER_CALL = int(os.getenv('GROQ_EST_TOKENS_PER_CALL', '900'))
+DEFAULT_DAILY_LLM_QUOTA = max(1, DEFAULT_DAILY_TOKEN_BUDGET // EST_TOKENS_PER_CALL)
+
+# Optional direct override (jobs per day)
+DAILY_LLM_QUOTA = int(os.getenv('GROQ_DAILY_LLM_QUOTA', str(DEFAULT_DAILY_LLM_QUOTA)))
+
+# Job history retention
+HISTORY_RETENTION_DAYS = int(os.getenv('HISTORY_RETENTION_DAYS', '90'))
+
+# Sources that are pre-classified and should not consume LLM quota
+LLM_EXEMPT_SITES = {'remoteok', 'remotive', 'workingnomads', 'arbeitnow'}
 
 
 def scrape_multi_site(
@@ -31,7 +55,8 @@ def scrape_multi_site(
     incremental=True,
     lookback_hours=24,
     llm_quota_per_site=None,
-    reanalyze_cached=False
+    reanalyze_cached=False,
+    fill_quota=True
 ):
     """
     Multi-site job scraper with incremental support and intelligent quota management
@@ -45,12 +70,17 @@ def scrape_multi_site(
         lookback_hours: Hours to consider job as "recent"
         llm_quota_per_site: LLM quota per site (None = auto-calculate from DAILY_LLM_QUOTA)
         reanalyze_cached: Force re-analysis of cached jobs with updated prompt
+        fill_quota: Reanalyze cached jobs to use remaining LLM budget
     """
     logger = setup_logging(verbose)
     
-    # Calculate fair share quota per site
+    llm_sites = [site for site in sites if site not in LLM_EXEMPT_SITES]
+    llm_site_count = len(llm_sites)
+
+    # Calculate fair share quota per LLM site
     if llm_quota_per_site is None:
-        llm_quota_per_site = DAILY_LLM_QUOTA // len(sites)
+        divisor = llm_site_count if llm_site_count > 0 else 1
+        llm_quota_per_site = DAILY_LLM_QUOTA // divisor
     
     # Track metrics
     metrics = {
@@ -59,6 +89,7 @@ def scrape_multi_site(
         'jobs_analyzed': 0,
         'new_jobs': 0,
         'cached_jobs': 0,
+        'reanalyzed_jobs': 0,
         'llm_calls': 0,
         'cache_hits': 0,
         'validation_errors': 0,
@@ -75,14 +106,14 @@ def scrape_multi_site(
             print(f"📄 Max {max_pages} pages per site")
         else:
             print(f"📄 Default: 10 pages per site (quota applied after filtering)")
-        print(f"🎯 LLM quota per site: {llm_quota_per_site} NEW jobs")
-        print(f"🎯 Total LLM budget: {llm_quota_per_site * len(sites)} NEW jobs")
+        print(f"🎯 LLM quota per LLM site: {llm_quota_per_site} NEW jobs")
+        print(f"🎯 Total LLM budget: {llm_quota_per_site * llm_site_count} NEW jobs")
         print(f"♻️  Incremental mode: {'ENABLED' if incremental else 'DISABLED'}")
         if incremental:
             print(f"🕐 Lookback: {lookback_hours}h")
         print(f"{'='*60}\n")
     
-    logger.info(f"Starting multi-site scraper - sites: {sites}, total_quota: {llm_quota_per_site * len(sites)}, incremental: {incremental}")
+    logger.info(f"Starting multi-site scraper - sites: {sites}, total_quota: {llm_quota_per_site * llm_site_count}, incremental: {incremental}")
     
     try:
         # Initialize multi-site scraper
@@ -97,6 +128,9 @@ def scrape_multi_site(
             'allovoisins': AlloVoisinsScraper,
             'codeur': CodeurScraper,
             'remoteok': RemoteOKScraper,
+            'remotive': RemotiveScraper,
+            'workingnomads': WorkingNomadsScraper,
+            'arbeitnow': ArbeitnowScraper,
         }
         
         for site_name in sites:
@@ -121,23 +155,47 @@ def scrape_multi_site(
                 return jobs, []  # All jobs are new if no incremental
         
         # Scrape with intelligent quota management
-        total_daily_quota = llm_quota_per_site * len(sites)
+        total_daily_quota = llm_quota_per_site * llm_site_count
         scraped_jobs, jobs_to_analyze, jobs_from_cache, quota_used = multi_scraper.scrape_with_incremental_quota(
             daily_quota=total_daily_quota,
             enabled_sites=sites,
             max_pages_per_site=max_pages,
             incremental_filter_callback=incremental_filter_callback if incremental else None,
-            lookback_hours=lookback_hours
+            lookback_hours=lookback_hours,
+            quota_exempt_sources=LLM_EXEMPT_SITES
         )
         
         metrics['jobs_scraped'] = len(scraped_jobs)
         metrics['new_jobs'] = len(jobs_to_analyze)
         metrics['cached_jobs'] = len(jobs_from_cache)
+        metrics['llm_budget'] = total_daily_quota
         
         # Track per-site statistics
         for site in sites:
             site_jobs = [j for j in scraped_jobs if j.get('source') == site]
             metrics['sites_scraped'][site] = len(site_jobs)
+
+        # Optional backfill: reanalyze cached jobs to use remaining LLM budget
+        llm_jobs_initial = [job for job in jobs_to_analyze if not job.get('skip_analysis')]
+        remaining_llm_budget = max(total_daily_quota - len(llm_jobs_initial), 0)
+        if use_llm and fill_quota and remaining_llm_budget > 0 and jobs_from_cache:
+            reanalyze_candidates = [
+                job for job in jobs_from_cache
+                if not job.get('skip_analysis')
+            ]
+            to_reanalyze = reanalyze_candidates[:remaining_llm_budget]
+            reanalyze_urls = {job.get('url') for job in to_reanalyze}
+            jobs_from_cache = [
+                job for job in jobs_from_cache
+                if job.get('url') not in reanalyze_urls
+            ]
+            for job in to_reanalyze:
+                job['was_reanalyzed'] = True
+            jobs_to_analyze.extend(to_reanalyze)
+            metrics['reanalyzed_jobs'] = len(to_reanalyze)
+            metrics['cached_jobs'] = len(jobs_from_cache)
+            if verbose and to_reanalyze:
+                print(f"🔄 Reanalyzing {len(to_reanalyze)} cached jobs to fill LLM budget")
         
         # ===== PHASE 3: ANALYZE JOBS =====
         if verbose:
@@ -245,7 +303,7 @@ def scrape_multi_site(
                 'classification': 'remote' if result['is_remote'] else 'on-site',
                 'description_source': description_source,
                 'poster_type': poster_type,
-                'was_reanalyzed': False,  # Only true if we re-analyze an existing job
+                'was_reanalyzed': job_data.get('was_reanalyzed', False),
                 # Tutoring vertical fields — always N/A for general pipeline
                 'vertical': 'general',
                 'subject_category': 'N/A',
@@ -291,6 +349,8 @@ def scrape_multi_site(
             print(f"      - Analyzed with LLM: {stats['analyzed_with_llm']}")
             print(f"      - High confidence skip: {stats['high_confidence_skip']}")
             print(f"      - Full descriptions fetched: {stats['full_description_fetched']}")
+            if metrics.get('reanalyzed_jobs'):
+                print(f"      - Reanalyzed cached jobs: {metrics['reanalyzed_jobs']}")
             if incremental:
                 print(f"      - Incremental reduction: {metrics['cached_jobs']}/{len(all_jobs)} ({round(metrics['cached_jobs']/len(all_jobs)*100, 1) if all_jobs else 0}%)")
             if metrics['validation_errors'] > 0:
@@ -309,8 +369,10 @@ def scrape_multi_site(
             'jobs_analyzed': metrics['jobs_analyzed'],
             'new_jobs': metrics['new_jobs'],
             'cached_jobs': metrics['cached_jobs'],
+            'reanalyzed_jobs': metrics['reanalyzed_jobs'],
             'remote_jobs': remote_count,
             'llm_calls': metrics['llm_calls'],
+            'llm_budget': metrics.get('llm_budget', total_daily_quota),
             'cache_stats': cache_stats,
             'confidence_distribution': metrics['confidence_distribution'],
             'validation_errors': metrics['validation_errors'],
@@ -372,7 +434,7 @@ def scrape_multi_site(
         }
         
         # Clean up stale history and LLM cache entries
-        exporter.cleanup_old_history(days=30)
+        exporter.cleanup_old_history(days=HISTORY_RETENTION_DAYS)
         llm_analyzer.cleanup_old_cache(days=60)
 
         # Export
@@ -380,6 +442,8 @@ def scrape_multi_site(
         csv_all = exporter.export_to_csv(all_jobs, filename='jobs_latest.csv')
         json_remote = exporter.export_to_json(remote_jobs, stats_remote, filename='remote_jobs_latest.json')
         csv_remote = exporter.export_to_csv(remote_jobs, filename='remote_jobs_latest.csv')
+        archive_all = exporter.export_archive_snapshot(all_jobs, stats_all, filename_prefix='jobs')
+        archive_remote = exporter.export_archive_snapshot(remote_jobs, stats_remote, filename_prefix='remote_jobs')
         
         if verbose:
             print(f"\n💾 Exported to:")
@@ -387,6 +451,8 @@ def scrape_multi_site(
             print(f"   - {csv_all}")
             print(f"   - {json_remote}")
             print(f"   - {csv_remote}")
+            print(f"   - {archive_all['json']}")
+            print(f"   - {archive_remote['json']}")
             print(f"   - exports/metrics_latest.json")
         
         logger.info(f"Export complete - Duration: {duration}s")
@@ -416,12 +482,12 @@ def scrape_multi_site(
 if __name__ == '__main__':
     parser = argparse.ArgumentParser(description='Multi-Site Job Scraper with Intelligent Quota Management')
     parser.add_argument('--sites', nargs='+', default=['jemepropose'],
-                       choices=['jemepropose', 'malt', 'freelance.com', 'comet', 'allovoisins', 'codeur', 'remoteok'],
+                       choices=['jemepropose', 'malt', 'freelance.com', 'comet', 'allovoisins', 'codeur', 'remoteok', 'remotive', 'workingnomads', 'arbeitnow'],
                        help='Sites to scrape (default: jemepropose)')
     parser.add_argument('--pages', type=int, default=None,
                        help='Max pages per site (default: None = unlimited, stops at quota)')
     parser.add_argument('--quota', type=int, default=None,
-                       help=f'LLM quota per site (default: {DAILY_LLM_QUOTA} / num_sites)')
+                       help=f'LLM quota per LLM site (default: {DAILY_LLM_QUOTA} / llm_sites)')
     parser.add_argument('--no-llm', action='store_true',
                        help='Disable LLM analysis (use NLP only)')
     parser.add_argument('--verbose', action='store_true',
@@ -432,6 +498,8 @@ if __name__ == '__main__':
                        help='Lookback window in hours (default: 24)')
     parser.add_argument('--reanalyze', action='store_true',
                        help='Force re-analysis of cached jobs with updated prompt')
+    parser.add_argument('--no-fill-quota', action='store_true',
+                       help='Disable reanalysis backfill when LLM budget remains')
     
     args = parser.parse_args()
     
@@ -443,5 +511,6 @@ if __name__ == '__main__':
         incremental=not args.no_incremental,
         lookback_hours=args.lookback,
         llm_quota_per_site=args.quota,
-        reanalyze_cached=args.reanalyze
+        reanalyze_cached=args.reanalyze,
+        fill_quota=not args.no_fill_quota
     )

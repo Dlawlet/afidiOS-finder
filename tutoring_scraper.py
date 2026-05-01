@@ -26,6 +26,7 @@ sys.stdout = io.TextIOWrapper(sys.stdout.buffer, encoding='utf-8')
 import argparse
 import json
 import logging
+import os
 from datetime import datetime
 from pathlib import Path
 
@@ -43,9 +44,12 @@ from site_scrapers import (
     AlloVoisinsScraper,
 )
 
-# Tutoring pipeline LLM budget (separate from general pipeline's 1500/day).
+# Tutoring pipeline LLM budget (separate from general pipeline's budget).
 # Both share the same Groq key; run at different UTC times to avoid rate collision.
-TUTORING_LLM_QUOTA = 500
+TUTORING_LLM_QUOTA = int(os.getenv('TUTORING_LLM_QUOTA', '500'))
+
+# Job history retention
+HISTORY_RETENTION_DAYS = int(os.getenv('HISTORY_RETENTION_DAYS', '90'))
 
 # Sites that are dedicated tutoring platforms — TutoringPreFilter is SKIPPED for these
 # because every listing is already a student request.
@@ -85,6 +89,8 @@ def scrape_tutoring(
         'pre_filtered_out': 0,
         'incremental_skipped': 0,
         'llm_calls': 0,
+        'stem_priority': 0,
+        'quota_trimmed': 0,
         'errors': [],
     }
 
@@ -151,6 +157,31 @@ def scrape_tutoring(
     if verbose:
         print(f"Pre-filter: {len(jobs_to_analyze_raw)} → {len(jobs_to_analyze)} tutoring posts "
               f"({metrics['pre_filtered_out']} dropped)")
+
+    # ── STEM priority queue ────────────────────────────────────────────────
+    stem_priority_jobs = []
+    standard_jobs = []
+    for job in jobs_to_analyze:
+        if pre_filter.is_stem_related(
+            job.get('title', ''),
+            job.get('description', ''),
+            job.get('location', ''),
+        ):
+            stem_priority_jobs.append(job)
+        else:
+            standard_jobs.append(job)
+
+    metrics['stem_priority'] = len(stem_priority_jobs)
+    jobs_to_analyze = stem_priority_jobs + standard_jobs
+
+    if quota and len(jobs_to_analyze) > quota:
+        metrics['quota_trimmed'] = len(jobs_to_analyze) - quota
+        jobs_to_analyze = jobs_to_analyze[:quota]
+
+    if verbose:
+        print(f"STEM priority: {metrics['stem_priority']} posts queued first")
+        if metrics['quota_trimmed'] > 0:
+            print(f"Quota trim: {metrics['quota_trimmed']} posts deferred")
 
     # ── Classify ────────────────────────────────────────────────────────────
     classifier = TutoringClassifier(verbose=verbose) if use_llm else None
@@ -282,16 +313,46 @@ def scrape_tutoring(
         'sites': list(sites),
         'export_date': datetime.now().strftime('%Y-%m-%d %H:%M:%S'),
         'duration_seconds': duration,
+        'stem_priority': metrics['stem_priority'],
+        'quota_trimmed': metrics['quota_trimmed'],
     }
     if merged_jobs:
         run_stats['remote_percentage'] = round(run_stats['remote'] / len(merged_jobs) * 100, 2)
 
     exporter = JobExporter()
-    exporter.cleanup_old_history(days=30)
+    exporter.cleanup_old_history(days=HISTORY_RETENTION_DAYS)
+
+    tutoring_opportunities = [
+        job for job in merged_jobs
+        if (
+            job.get('vertical') == 'tutoring'
+            and job.get('is_remote', False)
+            and job.get('poster_type', 'unknown') not in ('teacher', 'institution')
+        )
+    ]
+    stem_categories = {'math_science', 'technology', 'test_prep'}
+    stem_opportunities = [
+        job for job in tutoring_opportunities
+        if job.get('subject_category') in stem_categories
+    ]
+    tutoring_stats = run_stats.copy()
+    tutoring_stats['total'] = len(tutoring_opportunities)
+    tutoring_stats['filter'] = 'vertical=tutoring AND is_remote=True AND poster_type!=teacher'
+    stem_stats = run_stats.copy()
+    stem_stats['total'] = len(stem_opportunities)
+    stem_stats['filter'] = 'vertical=tutoring AND is_remote=True AND subject_category in STEM'
 
     json_all = exporter.export_to_json(merged_jobs, run_stats, filename='jobs_latest.json')
     csv_all = exporter.export_to_csv(merged_jobs, filename='jobs_latest.csv')
     tutoring_export = exporter.export_tutoring_opportunities(merged_jobs, run_stats)
+    stem_export = exporter.export_tutoring_stem_opportunities(merged_jobs, run_stats)
+    archive_all = exporter.export_archive_snapshot(merged_jobs, run_stats, filename_prefix='jobs')
+    archive_tutoring = exporter.export_archive_snapshot(
+        tutoring_opportunities, tutoring_stats, filename_prefix='tutoring_opportunities'
+    )
+    archive_stem = exporter.export_archive_snapshot(
+        stem_opportunities, stem_stats, filename_prefix='tutoring_stem_opportunities'
+    )
 
     if verbose:
         print(f"💾 Exported:")
@@ -299,12 +360,18 @@ def scrape_tutoring(
         print(f"   {csv_all}")
         print(f"   {tutoring_export['json']}  ({tutoring_export['count']} opportunities)")
         print(f"   {tutoring_export['csv']}")
+        print(f"   {stem_export['json']}  ({stem_export['count']} STEM opportunities)")
+        print(f"   {stem_export['csv']}")
+        print(f"   {archive_all['json']}")
+        print(f"   {archive_tutoring['json']}")
+        print(f"   {archive_stem['json']}")
 
     return {
         'success': True,
         'tutoring_jobs': all_jobs,
         'merged_total': len(merged_jobs),
         'opportunities': tutoring_export['count'],
+        'stem_opportunities': stem_export['count'],
         'metrics': run_stats,
     }
 

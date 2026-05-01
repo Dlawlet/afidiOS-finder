@@ -118,7 +118,7 @@ class JobExporter:
             'last_update': history.get('last_update', 'Never')
         }
     
-    def export_to_json(self, jobs, stats, filename=None):
+    def export_to_json(self, jobs, stats, filename=None, update_history=True):
         """
         Export job results to JSON format
         
@@ -135,9 +135,10 @@ class JobExporter:
         
         filepath = self.output_dir / filename
         
-        # Update history
-        self.update_job_history(jobs)
         history_stats = self.get_history_stats()
+        if update_history:
+            self.update_job_history(jobs)
+            history_stats = self.get_history_stats()
         
         export_data = {
             'metadata': {
@@ -290,6 +291,66 @@ class JobExporter:
         )
 
         return {'json': json_path, 'csv': csv_path, 'count': len(opportunities)}
+
+    def export_tutoring_stem_opportunities(self, all_jobs: list, run_stats: dict) -> dict:
+        """
+        Export the STEM tutoring opportunities slice: vertical=tutoring, is_remote=True,
+        poster_type not teacher/institution, and subject_category in STEM buckets.
+
+        Args:
+            all_jobs: The full merged job list (general + tutoring)
+            run_stats: Stats dict from the tutoring run
+
+        Returns:
+            dict with 'json', 'csv', 'count'
+        """
+        stem_categories = {'math_science', 'technology', 'test_prep'}
+        opportunities = [
+            job for job in all_jobs
+            if (
+                job.get('vertical') == 'tutoring'
+                and job.get('is_remote', False)
+                and job.get('poster_type', 'unknown') not in ('teacher', 'institution')
+                and job.get('subject_category') in stem_categories
+            )
+        ]
+
+        stats = run_stats.copy()
+        stats['total'] = len(opportunities)
+        stats['filter'] = 'vertical=tutoring AND is_remote=True AND subject_category in STEM'
+
+        json_path = self.export_to_json(
+            opportunities, stats, filename='tutoring_stem_opportunities_latest.json'
+        )
+        csv_path = self.export_to_csv(
+            opportunities, filename='tutoring_stem_opportunities_latest.csv'
+        )
+
+        return {'json': json_path, 'csv': csv_path, 'count': len(opportunities)}
+
+    def export_archive_snapshot(self, jobs, stats, filename_prefix):
+        """
+        Export timestamped archive snapshots without overwriting latest files.
+
+        Args:
+            jobs: List of job dictionaries
+            stats: Statistics dictionary
+            filename_prefix: Prefix for archive files (e.g., jobs, remote_jobs)
+
+        Returns:
+            Dictionary with paths to archived files
+        """
+        archive_dir = self.output_dir / 'archive'
+        archive_dir.mkdir(exist_ok=True)
+        timestamp = datetime.now().strftime('%Y%m%d_%H%M%S')
+
+        json_path = archive_dir / f"{filename_prefix}_{timestamp}.json"
+        csv_path = archive_dir / f"{filename_prefix}_{timestamp}.csv"
+
+        self.export_to_json(jobs, stats, filename=str(json_path.relative_to(self.output_dir)), update_history=False)
+        self.export_to_csv(jobs, filename=str(csv_path.relative_to(self.output_dir)))
+
+        return {'json': json_path, 'csv': csv_path}
 
     def export_remote_only(self, jobs, stats, filename_prefix='remote_jobs'):
         """

@@ -374,7 +374,7 @@ def scrape_tutoring(
         'sites': list(sites),
         'llm_quota': quota,
         'llm_calls': metrics['llm_calls'],
-        'llm_utilisation_pct': round(metrics['llm_calls'] / quota * 100, 1) if quota else 0,
+        'llm_utilisation_pct': round(metrics['llm_calls'] / quota * 100, 1) if quota and quota > 0 else 0,
         'scraped': metrics['scraped'],
         'pre_filtered_out': metrics['pre_filtered_out'],
         'incremental_skipped': metrics['incremental_skipped'],

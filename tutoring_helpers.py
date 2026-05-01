@@ -82,6 +82,9 @@ class TutoringPreFilter:
         'actuarial', 'actuary', 'engineering',
     ]
 
+    STEM_SUBJECT_CATEGORIES = {'math_science', 'technology', 'test_prep'}
+    STEM_KEYWORDS = STEM_KEYWORDS_FR + STEM_KEYWORDS_EN
+
     def is_tutoring_related(self, title: str, description: str, location: str) -> bool:
         """
         Returns True if the post is likely tutoring-related.
@@ -121,7 +124,7 @@ class TutoringPreFilter:
         Returns True if the post is likely STEM tutoring-related.
         """
         text = f"{title} {description} {location}".lower()
-        for kw in self.STEM_KEYWORDS_FR + self.STEM_KEYWORDS_EN:
+        for kw in self.STEM_KEYWORDS:
             if kw in text:
                 return True
         return False

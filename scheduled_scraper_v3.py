@@ -48,6 +48,11 @@ def _env_int(name: str, default: int) -> int:
 # Groq token budget configuration (approximate LLM call capacity)
 DEFAULT_DAILY_TOKEN_BUDGET = _env_int('GROQ_DAILY_TOKEN_BUDGET', 300000)
 _est_tokens = _env_int('GROQ_EST_TOKENS_PER_CALL', 900)
+if _est_tokens <= 0:
+    logging.getLogger(__name__).warning(
+        f"GROQ_EST_TOKENS_PER_CALL must be positive, using 1 instead of {_est_tokens}"
+    )
+    _est_tokens = 1
 EST_TOKENS_PER_CALL = max(_est_tokens, 1)
 DEFAULT_DAILY_LLM_QUOTA = max(1, DEFAULT_DAILY_TOKEN_BUDGET // EST_TOKENS_PER_CALL)
 

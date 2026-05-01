@@ -586,6 +586,7 @@ class MultiSiteScraper:
         sites_to_scrape = enabled_sites if enabled_sites else list(self.scrapers.keys())
         quota_exempt_sources = set(quota_exempt_sources or [])
         llm_sites = [s for s in sites_to_scrape if s not in quota_exempt_sources]
+        llm_sites_set = set(llm_sites)
         
         remaining_quota = daily_quota
         num_sites = len(sites_to_scrape)
@@ -601,12 +602,12 @@ class MultiSiteScraper:
         for site_idx, site_name in enumerate(sites_to_scrape, 1):
             if site_name not in self.scrapers:
                 self.logger.warning(f"Scraper not found: {site_name}")
-                if site_name in llm_sites:
+                if site_name in llm_sites_set:
                     llm_sites_remaining = max(llm_sites_remaining - 1, 0)
                 continue
             
             scraper = self.scrapers[site_name]
-            is_quota_exempt = site_name in quota_exempt_sources
+            is_quota_exempt = site_name not in llm_sites_set
             
             # Calculate quota for this site (redistribute if previous sites didn't use all)
             if is_quota_exempt:

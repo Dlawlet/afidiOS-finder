@@ -343,7 +343,7 @@ def scrape_tutoring(
             and job.get('poster_type', 'unknown') not in ('teacher', 'institution')
         )
     ]
-    stem_categories = {'math_science', 'technology', 'test_prep'}
+    stem_categories = TutoringPreFilter.STEM_SUBJECT_CATEGORIES
     stem_opportunities = [
         job for job in tutoring_opportunities
         if job.get('subject_category') in stem_categories

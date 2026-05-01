@@ -9,6 +9,8 @@ import csv
 from datetime import datetime, timedelta
 from pathlib import Path
 
+from tutoring_helpers import TutoringPreFilter
+
 
 class JobExporter:
     """Handle exporting job analysis results to various formats"""
@@ -303,7 +305,7 @@ class JobExporter:
         Returns:
             dict with 'json', 'csv', 'count'
         """
-        stem_categories = {'math_science', 'technology', 'test_prep'}
+        stem_categories = TutoringPreFilter.STEM_SUBJECT_CATEGORIES
         opportunities = [
             job for job in all_jobs
             if (

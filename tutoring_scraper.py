@@ -90,8 +90,8 @@ def scrape_tutoring(
       2. For general sites: apply TutoringPreFilter (drop non-tutoring posts)
       3. Apply incremental filter (skip recently-seen URLs)
       4. Classify remaining posts with TutoringClassifier (LLM or NLP fallback)
-      5. Merge into jobs_latest.json/csv alongside general jobs
-      6. Write tutoring_opportunities_latest.json/csv (is_online + student posts)
+      5. Merge into jobs_latest.json/csv alongside general missions
+         (tutoring missions are NOT written to separate files)
     """
     logger = setup_logging(verbose)
     quota = llm_quota or TUTORING_LLM_QUOTA
@@ -335,37 +335,18 @@ def scrape_tutoring(
     exporter = JobExporter()
     exporter.cleanup_old_history(days=JOB_HISTORY_RETENTION_DAYS)
 
-    tutoring_opportunities = [
-        job for job in merged_jobs
-        if (
-            job.get('vertical') == 'tutoring'
-            and job.get('is_remote', False)
-            and job.get('poster_type', 'unknown') not in ('teacher', 'institution')
-        )
-    ]
+    # Tutoring missions are saved in the same jobs_latest files as all other missions.
+    # Filter counts are tracked in metrics only — no separate export files.
+    tutoring_count = sum(1 for j in merged_jobs if j.get('vertical') == 'tutoring')
     stem_categories = TutoringPreFilter.STEM_SUBJECT_CATEGORIES
-    stem_opportunities = [
-        job for job in tutoring_opportunities
-        if job.get('subject_category') in stem_categories
-    ]
-    tutoring_stats = run_stats.copy()
-    tutoring_stats['total'] = len(tutoring_opportunities)
-    tutoring_stats['filter'] = 'vertical=tutoring AND is_remote=True AND poster_type!=teacher'
-    stem_stats = run_stats.copy()
-    stem_stats['total'] = len(stem_opportunities)
-    stem_stats['filter'] = 'vertical=tutoring AND is_remote=True AND subject_category in STEM'
+    stem_count = sum(
+        1 for j in merged_jobs
+        if j.get('vertical') == 'tutoring' and j.get('subject_category') in stem_categories
+    )
 
     json_all = exporter.export_to_json(merged_jobs, run_stats, filename='jobs_latest.json')
     csv_all = exporter.export_to_csv(merged_jobs, filename='jobs_latest.csv')
-    tutoring_export = exporter.export_tutoring_opportunities(merged_jobs, run_stats)
-    stem_export = exporter.export_tutoring_stem_opportunities(merged_jobs, run_stats)
     archive_all = exporter.export_archive_snapshot(merged_jobs, run_stats, filename_prefix='jobs')
-    archive_tutoring = exporter.export_archive_snapshot(
-        tutoring_opportunities, tutoring_stats, filename_prefix='tutoring_opportunities'
-    )
-    archive_stem = exporter.export_archive_snapshot(
-        stem_opportunities, stem_stats, filename_prefix='tutoring_stem_opportunities'
-    )
 
     # ── Tutoring metrics export ──────────────────────────────────────────────
     tutoring_metrics = {
@@ -381,8 +362,8 @@ def scrape_tutoring(
         'stem_priority_count': metrics['stem_priority'],
         'quota_trimmed': metrics['quota_trimmed'],
         'tutoring_posts_new': len(all_jobs),
-        'tutoring_opportunities': tutoring_export['count'],
-        'stem_opportunities': stem_export['count'],
+        'tutoring_posts_total': tutoring_count,
+        'stem_posts_total': stem_count,
         'errors': metrics['errors'],
     }
     tutoring_metrics_path = Path('exports/tutoring_metrics_latest.json')
@@ -394,24 +375,17 @@ def scrape_tutoring(
 
     if verbose:
         print(f"💾 Exported:")
-        print(f"   {json_all}  ({len(merged_jobs)} total jobs)")
+        print(f"   {json_all}  ({len(merged_jobs)} total jobs, {tutoring_count} tutoring, {stem_count} STEM)")
         print(f"   {csv_all}")
-        print(f"   {tutoring_export['json']}  ({tutoring_export['count']} opportunities)")
-        print(f"   {tutoring_export['csv']}")
-        print(f"   {stem_export['json']}  ({stem_export['count']} STEM opportunities)")
-        print(f"   {stem_export['csv']}")
         print(f"   {archive_all['json']}")
-        print(f"   {archive_tutoring['json']}")
-        print(f"   {archive_stem['json']}")
-        print(f"   {tutoring_metrics_path}  (LLM {metrics['llm_calls']}/{quota}, "
-              f"STEM {stem_export['count']})")
+        print(f"   {tutoring_metrics_path}  (LLM {metrics['llm_calls']}/{quota})")
 
     return {
         'success': True,
         'tutoring_jobs': all_jobs,
         'merged_total': len(merged_jobs),
-        'opportunities': tutoring_export['count'],
-        'stem_opportunities': stem_export['count'],
+        'tutoring_total': tutoring_count,
+        'stem_total': stem_count,
         'metrics': run_stats,
     }
 

@@ -2,12 +2,15 @@
 # PC peut être éteint, GitHub exécute le code automatiquement
 #
 # Features:
-# - Multi-site scraping (JeMePropose + AlloVoisins + Codeur + RemoteOK)
+# - Multi-site scraping of neighborhood help / small-mission platforms
 # - Intelligent quota management (1500 LLM calls/day max)
 # - Incremental scraping (only analyze NEW jobs)
 # - Automatic quota redistribution between sites
-# - RemoteOK uses JSON API (zero LLM quota cost — always remote employer posts)
-# - Codeur.com is employer-only (poster_type hardcoded, LLM only for is_remote)
+#
+# Active Sites (neighborhood help / small missions only):
+# - jemepropose.com  (French freelance missions, employers only, offer_type=2)
+# - allovoisins.com  (French local services, all France, zone=0)
+# - ringtwice.be     (Belgian neighborhood help / small missions)
 
 name: Daily Job Scraper
 
@@ -54,7 +57,7 @@ jobs:
           GROQ_EST_TOKENS_PER_CALL: '900'
           HISTORY_RETENTION_DAYS: '90'
         run: |
-          python scheduled_scraper_v3.py --sites jemepropose allovoisins codeur remoteok remotive workingnomads arbeitnow --verbose
+          python scheduled_scraper_v3.py --sites jemepropose allovoisins ringtwice --verbose
 
       - name: Commit and push results
         run: |
@@ -69,18 +72,16 @@ jobs:
 #
 # 📊 Quota Management:
 # - Default: 1500 LLM calls/day (free tier)
-# - LLM sites (jemepropose, allovoisins, codeur): quota split equally among them
-# - remoteok: ZERO quota cost (pre-classified, skips LLM entirely)
+# - LLM quota split equally among all sites
 # - Incremental cache avoids re-analyzing jobs seen in last 24h
 # - LLM content-hash cache avoids re-calling API for same job content (permanent)
 # - Both caches cleaned periodically (history: 30d, LLM files: 60d)
 #
-# 🌐 Active Sites:
-# - jemepropose.com  (French freelance missions, employers only, offer_type=2)
-# - allovoisins.com  (French local services, all France, zone=0)
-# - codeur.com       (French project board, employer postings, digital work)
-# - remoteok.com     (International remote jobs API, no LLM cost)
+# 🌐 Active Sites (neighborhood help / small missions):
+# - jemepropose.com  (French local services marketplace)
+# - allovoisins.com  (French neighborhood help, all regions)
+# - ringtwice.be     (Belgian neighborhood help / small missions)
 #
-# To disable a site, remove it from --sites argument
+# To add a site, add it to --sites (choices: jemepropose allovoisins ringtwice)
 # 3. Settings → Actions → General → Workflow permissions
 #    → Cocher "Read and write permissions"

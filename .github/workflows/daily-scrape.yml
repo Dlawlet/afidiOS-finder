@@ -23,6 +23,9 @@ concurrency:
   group: daily-scraper
   cancel-in-progress: false
 
+env:
+  FORCE_JAVASCRIPT_ACTIONS_TO_NODE24: true
+
 jobs:
   scrape:
     runs-on: ubuntu-latest
@@ -53,6 +56,7 @@ jobs:
       - name: Run multi-site scraper with intelligent quota
         env:
           GROQ_API_KEY: ${{ secrets.GROQ_API_KEY }}
+          GROQ_MODEL: 'llama-3.3-70b-versatile'
           GROQ_DAILY_TOKEN_BUDGET: '300000'
           GROQ_EST_TOKENS_PER_CALL: '900'
           HISTORY_RETENTION_DAYS: '90'
@@ -64,7 +68,9 @@ jobs:
           git config --global user.name "GitHub Actions Bot"
           git config --global user.email "actions@github.com"
           git add exports/
-          git diff --quiet && git diff --staged --quiet || (git commit -m "🤖 Auto-update: $(date +'%Y-%m-%d %H:%M')" && git push)
+          git diff --quiet && git diff --staged --quiet || \
+            (git commit -m "🤖 Auto-update: $(date +'%Y-%m-%d %H:%M')" && \
+             git pull --rebase origin main && git push)
 
 # ⚙️ Configuration requise :
 # 1. GitHub → Settings → Secrets and variables → Actions

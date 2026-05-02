@@ -72,7 +72,7 @@ class SemanticJobAnalyzer:
     def __init__(self, use_groq=True, groq_api_key=None, verbose=False):
         """
         Initialize the semantic analyzer
-        
+
         Args:
             use_groq: Whether to use Groq API (True) or local NLP (False)
             groq_api_key: Groq API key (optional, can be set in environment)
@@ -83,24 +83,30 @@ class SemanticJobAnalyzer:
         self.groq_client = None
         self.nlp_model = None
         self.verbose = verbose
-        
+
+        # Model name: configurable via GROQ_MODEL env variable
+        self.groq_model = os.getenv('GROQ_MODEL', 'llama-3.3-70b-versatile')
+
         # Initialize cache directory
         self.cache_dir = Path('cache')
         self.cache_dir.mkdir(exist_ok=True)
-        
+
         # Cache statistics
-        self.cache_stats = {'hits': 0, 'misses': 0}
-        
+        self.cache_stats = {'hits': 0, 'misses': 0, 'nlp_fallbacks': 0}
+
         # Setup logging
         self.logger = logging.getLogger(__name__)
-        
+
         if self.use_groq and self.groq_api_key:
             try:
                 from groq import Groq
                 self.groq_client = Groq(api_key=self.groq_api_key)
-                if self.verbose:
-                    print("✅ Groq API initialized successfully")
-                self.logger.info("Groq API initialized successfully")
+                # Validate model availability with a lightweight check
+                self._validate_model()
+                if self.use_groq and self.verbose:
+                    print(f"✅ Groq API initialized (model: {self.groq_model})")
+                if self.use_groq:
+                    self.logger.info(f"Groq API initialized (model: {self.groq_model})")
             except ImportError:
                 if self.verbose:
                     print("⚠️  Groq library not installed. Run: pip install groq")
@@ -118,10 +124,36 @@ class SemanticJobAnalyzer:
                 print("ℹ️  Using local NLP (no Groq API key provided)")
             self.logger.info("Using local NLP (no Groq API key provided)")
             self.use_groq = False
-        
+
         # Initialize local NLP as fallback
         if not self.use_groq:
             self._init_local_nlp()
+
+    def _validate_model(self):
+        """Verify the configured Groq model is accessible before processing jobs."""
+        try:
+            self.groq_client.chat.completions.create(
+                messages=[{"role": "user", "content": "ok"}],
+                model=self.groq_model,
+                max_tokens=1,
+            )
+        except Exception as e:
+            error_str = str(e)
+            # 404 = model not found; surface a clear message and disable Groq
+            if '404' in error_str or 'model_not_found' in error_str or 'does not exist' in error_str:
+                self.logger.error(
+                    f"[FATAL] Groq model '{self.groq_model}' is unavailable: {e}. "
+                    "Set the GROQ_MODEL environment variable to a valid model name "
+                    "(e.g. llama-3.3-70b-versatile). Falling back to local NLP."
+                )
+                print(
+                    f"[FATAL] Groq model '{self.groq_model}' not found. "
+                    "Set GROQ_MODEL env var to a valid Groq model. Falling back to NLP."
+                )
+                self.groq_client = None
+                self.use_groq = False
+                self._init_local_nlp()
+            # Rate limit on the validation call is fine — model exists
     
     def _init_local_nlp(self):
         """Initialize local spaCy NLP model"""
@@ -197,12 +229,19 @@ class SemanticJobAnalyzer:
         """Get cache hit/miss statistics"""
         total = self.cache_stats['hits'] + self.cache_stats['misses']
         hit_rate = (self.cache_stats['hits'] / total * 100) if total > 0 else 0
+        nlp_fallbacks = self.cache_stats.get('nlp_fallbacks', 0)
+        llm_calls = self.cache_stats['misses'] - nlp_fallbacks
+        fallback_rate = (nlp_fallbacks / max(llm_calls + nlp_fallbacks, 1)) * 100
 
         return {
             'cache_hits': self.cache_stats['hits'],
             'cache_misses': self.cache_stats['misses'],
             'total_requests': total,
-            'hit_rate_percentage': round(hit_rate, 2)
+            'hit_rate_percentage': round(hit_rate, 2),
+            'nlp_fallbacks': nlp_fallbacks,
+            'llm_calls': max(llm_calls, 0),
+            'nlp_fallback_rate_percentage': round(fallback_rate, 2),
+            'model': self.groq_model if self.use_groq else 'local-nlp',
         }
 
     def cleanup_old_cache(self, days: int = 60) -> int:
@@ -334,7 +373,7 @@ RESPOND IN JSON FORMAT ONLY:
                     "content": prompt
                 }
             ],
-            model="moonshotai/kimi-k2-instruct",
+            model=self.groq_model,
             temperature=0.1,
             max_tokens=200,
         )
@@ -415,44 +454,68 @@ RESPOND IN JSON FORMAT ONLY:
                 self.logger.error(f"Groq API error: {e}", exc_info=True)
             
             return self._analyze_with_nlp(job_title, job_description, job_location)
-    
-    def _analyze_with_nlp(self, job_title: str, job_description: str, 
+
+    def _analyze_with_nlp(self, job_title: str, job_description: str,
                           job_location: str) -> Dict:
         """
         Analyze job using local NLP (fallback method)
-        
+
         Uses keyword frequency and context analysis
         """
+        self.cache_stats['nlp_fallbacks'] += 1
         text = f"{job_title} {job_description} {job_location}".lower()
-        
+
         # Enhanced keyword lists
         strong_remote_keywords = [
             'télétravail', 'remote', 'distance', 'en ligne', 'online',
             'visio', 'zoom', 'numérique', 'digital', 'internet',
             'email', 'virtuel', 'ordinateur', 'computer', 'web',
             'logiciel', 'software', 'données', 'data', 'rédaction',
-            'traduction', 'graphisme', 'design', 'marketing'
+            'traduction', 'graphisme', 'design', 'marketing',
+            'cours particuliers', 'par téléphone', 'e-learning',
+            'formation en ligne', 'en visio',
         ]
-        
+
         strong_onsite_keywords = [
             'sur place', 'physique', 'présentiel', 'déplacement',
-            'maison', 'domicile', 'appartement', 'bureau',
+            'à votre domicile', 'à domicile', 'intervention à',
             'nettoyer', 'réparer', 'construire', 'installer',
-            'tournage', 'plateau', 'terrain', 'chantier'
+            'tournage', 'plateau', 'terrain', 'chantier',
+            'ménage', 'jardinage', 'garde d\'enfant', 'livraison',
+            'coiffure', 'déménagement', 'aide à domicile',
         ]
-        
+
+        # Explicit physical-service job types (always on-site regardless of description)
+        onsite_job_types = [
+            'jardinier', 'jardinage', 'ménage', 'nettoyage', 'repassage',
+            'garde d\'enfant', 'baby-sitting', 'babysitting', 'nounou',
+            'aide-soignant', 'aide soignant', 'auxiliaire de vie',
+            'déménagement', 'déménageur', 'livraison', 'chauffeur',
+            'plombier', 'plomberie', 'électricien', 'électricité',
+            'peintre', 'peinture', 'maçon', 'maçonnerie',
+            'coiffeur', 'coiffeuse', 'esthétique', 'massage',
+            'cuisiner', 'cuisinier', 'traiteur',
+        ]
+
         # Special remote-friendly job categories
         remote_job_types = [
             'comptable', 'comptabilité', 'assistance comptable',
             'secrétariat', 'télésecrétariat', 'saisie',
             'rédaction', 'traduction', 'graphisme',
-            'développement', 'programmation', 'web'
+            'développement', 'programmation', 'web',
+            'référencement', 'seo', 'community manager',
+            'montage vidéo', 'retouche photo', 'modélisation',
         ]
-        
+
         # Count keyword occurrences
         remote_score = sum(2 for kw in strong_remote_keywords if kw in text)
         onsite_score = sum(2 for kw in strong_onsite_keywords if kw in text)
-        
+
+        # Check for explicit physical-service types (strong on-site signal)
+        for job_type in onsite_job_types:
+            if job_type in text:
+                onsite_score += 4
+
         # Check for remote job types
         for job_type in remote_job_types:
             if job_type in text:
@@ -530,12 +593,13 @@ RESPOND IN JSON FORMAT ONLY:
                 'reason': f'NLP Analysis: Likely on-site work (score: {onsite_score} vs {remote_score})'
             }
         else:
-            # Equal scores - default based on job category context
+            # Equal scores — neighbourhood-help platforms are predominantly physical;
+            # default to on-site when there are no positive remote signals.
             return {
                 'is_remote': False,
                 'remote_confidence': 0.3,
                 'poster_type': poster_type,
-                'reason': f'NLP Analysis: Ambiguous signals (remote: {remote_score}, onsite: {onsite_score})'
+                'reason': f'NLP Analysis: No clear remote/on-site signals — defaulting to on-site (scores tied at {remote_score})'
             }
     
     def reanalyze_low_confidence(self, job_data: Dict, current_result: Dict) -> Dict:

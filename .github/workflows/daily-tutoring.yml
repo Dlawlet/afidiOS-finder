@@ -10,7 +10,7 @@
 #   - allovoisins.com      (filtered via TutoringPreFilter — ~5% signal)
 #
 # Output lands in the SAME exports/jobs_latest.json/csv as the general pipeline,
-# tagged with vertical='tutoring'. Also writes tutoring_opportunities_latest.json/csv.
+# tagged with vertical='tutoring'. No separate tutoring-specific export files.
 
 name: Daily Tutoring Scraper
 
@@ -84,5 +84,4 @@ jobs:
 # - Incremental + content-hash cache prevents re-analysis of unchanged posts
 #
 # 🎓 Output files:
-# - exports/jobs_latest.json/csv         (merged general + tutoring, filter by vertical)
-# - exports/tutoring_opportunities_latest.json/csv  (is_online=True, poster_type=student)
+# - exports/jobs_latest.json/csv  (merged general + tutoring, filter by vertical='tutoring')

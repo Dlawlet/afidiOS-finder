@@ -26,6 +26,7 @@ from site_scrapers import (
     RemotiveScraper,
     WorkingNomadsScraper,
     ArbeitnowScraper,
+    RingTwiceScraper,
 )
 import json
 from datetime import datetime
@@ -144,6 +145,7 @@ def scrape_multi_site(
             'freelance.com': FreelanceComScraper,
             'comet': CometScraper,
             'allovoisins': AlloVoisinsScraper,
+            'ringtwice': RingTwiceScraper,
             'codeur': CodeurScraper,
             'remoteok': RemoteOKScraper,
             'remotive': RemotiveScraper,
@@ -500,10 +502,10 @@ def scrape_multi_site(
 
 
 if __name__ == '__main__':
-    parser = argparse.ArgumentParser(description='Multi-Site Job Scraper with Intelligent Quota Management')
-    parser.add_argument('--sites', nargs='+', default=['jemepropose'],
-                       choices=['jemepropose', 'malt', 'freelance.com', 'comet', 'allovoisins', 'codeur', 'remoteok', 'remotive', 'workingnomads', 'arbeitnow'],
-                       help='Sites to scrape (default: jemepropose)')
+    parser = argparse.ArgumentParser(description='Multi-Site Job Scraper — neighborhood help / small missions')
+    parser.add_argument('--sites', nargs='+', default=['jemepropose', 'allovoisins', 'ringtwice'],
+                       choices=['jemepropose', 'allovoisins', 'ringtwice'],
+                       help='Sites to scrape (default: jemepropose allovoisins ringtwice)')
     parser.add_argument('--pages', type=int, default=None,
                        help='Max pages per site (default: None = unlimited, stops at quota)')
     parser.add_argument('--quota', type=int, default=None,

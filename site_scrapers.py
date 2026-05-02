@@ -386,12 +386,12 @@ class CometScraper(BaseSiteScraper):
 
 
 class AlloVoisinsScraper(BaseSiteScraper):
-    """Scraper for allovoisins.com - Job rental/services platform"""
-    
+    """Scraper for allovoisins.com - French neighborhood help / small missions platform"""
+
     @property
     def site_name(self) -> str:
         return "allovoisins"
-    
+
     @property
     def base_url(self) -> str:
         # Zone 0 = France entière (all regions nationwide)
@@ -466,6 +466,115 @@ class AlloVoisinsScraper(BaseSiteScraper):
                 'price': job_price,
             })
         
+        return jobs
+
+
+class RingTwiceScraper(BaseSiteScraper):
+    """
+    Scraper for ringtwice.be — Belgian neighborhood help / small missions platform.
+
+    Ring Twice connects people who need small tasks done (cleaning, gardening, moving,
+    DIY, etc.) with neighbours who can help. All listings are small, one-off missions —
+    NOT full-time or part-time employment.
+
+    The site is bilingual (FR/NL); we scrape the French-language mission board.
+    Pagination: ?page=N (1-indexed).
+    """
+
+    @property
+    def site_name(self) -> str:
+        return "ringtwice"
+
+    @property
+    def base_url(self) -> str:
+        return "https://www.ringtwice.be/fr/missions"
+
+    def build_page_url(self, page_num: int) -> str:
+        if page_num == 1:
+            return self.base_url
+        return f"{self.base_url}?page={page_num}"
+
+    def extract_jobs_from_page(self, soup: BeautifulSoup, page_url: str) -> List[Dict]:
+        jobs = []
+
+        # NOTE: Ring Twice uses a React/SPA-rendered frontend. The selectors below are
+        # best-effort fallbacks covering common patterns. If no cards are found, the
+        # scraper returns an empty list gracefully. Update the primary selector once
+        # the actual HTML class name is confirmed by inspecting a live page.
+        job_cards = (
+            soup.find_all('div', class_='mission-card') or
+            soup.find_all('article', class_='mission') or
+            soup.find_all('div', class_='job-card') or
+            soup.find_all('div', class_='task-card') or
+            soup.find_all('li', class_='mission') or
+            soup.find_all('div', attrs={'data-mission-id': True}) or
+            soup.find_all('div', attrs={'data-job-id': True})
+        )
+
+        # Generic fallback: any article or card container with a link
+        if not job_cards:
+            job_cards = soup.find_all('article') or soup.find_all('div', class_='card')
+
+        for card in job_cards:
+            # URL
+            link_tag = card.find('a', href=True)
+            if not link_tag and card.name == 'a':
+                link_tag = card
+            if not link_tag:
+                continue
+            job_url = urljoin(page_url, link_tag['href'])
+
+            # Title
+            title_tag = (
+                card.find('h2') or
+                card.find('h3') or
+                card.find('h4') or
+                card.find(class_='mission-title') or
+                card.find(class_='task-title') or
+                card.find(class_='title') or
+                card.find(class_='job-title')
+            )
+            job_title = title_tag.get_text(strip=True) if title_tag else 'N/A'
+            if job_title == 'N/A' or len(job_title) < 3:
+                continue
+
+            # Description
+            desc_tag = (
+                card.find('p', class_='description') or
+                card.find('div', class_='description') or
+                card.find('p', class_='excerpt') or
+                card.find('p', class_='summary') or
+                card.find('div', class_='content') or
+                card.find('p')
+            )
+            job_description = desc_tag.get_text(strip=True) if desc_tag else 'N/A'
+
+            # Location (city/region in Belgium)
+            location_tag = (
+                card.find(class_='location') or
+                card.find('span', class_='city') or
+                card.find(class_='address') or
+                card.find(class_='zone')
+            )
+            job_location = location_tag.get_text(strip=True) if location_tag else 'Belgique'
+
+            # Price / compensation
+            price_tag = (
+                card.find(class_='price') or
+                card.find(class_='rate') or
+                card.find(class_='budget') or
+                card.find('span', string=lambda s: s and '€' in s)
+            )
+            job_price = price_tag.get_text(strip=True) if price_tag else 'N/A'
+
+            jobs.append({
+                'url': job_url,
+                'title': job_title,
+                'description': job_description,
+                'location': job_location,
+                'price': job_price,
+            })
+
         return jobs
 
 

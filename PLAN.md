@@ -1,7 +1,7 @@
 # Enhancement Plan — afidiOS-finder
 
 **Date:** 2026-05-02  
-**Status:** In progress
+**Status:** Implemented (see Applied section below)
 
 ---
 

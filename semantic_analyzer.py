@@ -478,7 +478,7 @@ RESPOND IN JSON FORMAT ONLY:
 
         strong_onsite_keywords = [
             'sur place', 'physique', 'présentiel', 'déplacement',
-            'à votre domicile', 'à domicile', 'intervention à',
+            'à votre domicile', 'à domicile', 'intervention à domicile',
             'nettoyer', 'réparer', 'construire', 'installer',
             'tournage', 'plateau', 'terrain', 'chantier',
             'ménage', 'jardinage', 'garde d\'enfant', 'livraison',
@@ -593,8 +593,8 @@ RESPOND IN JSON FORMAT ONLY:
                 'reason': f'NLP Analysis: Likely on-site work (score: {onsite_score} vs {remote_score})'
             }
         else:
-            # Equal scores — neighbourhood-help platforms are predominantly physical;
-            # default to on-site when there are no positive remote signals.
+            # Tied scores — neighbourhood-help platforms are predominantly physical;
+            # default to on-site when remote and on-site scores are equal.
             return {
                 'is_remote': False,
                 'remote_confidence': 0.3,

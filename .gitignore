@@ -44,3 +44,6 @@ scheduled_scraper_old.py
 # !exports/remote_jobs_latest.csv
 
 cache/
+
+# Copilot agent worktrees (gitlink entries — not real submodules)
+.claude/worktrees/

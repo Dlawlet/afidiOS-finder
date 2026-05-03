@@ -1,6 +1,6 @@
 {
-  "timestamp": "2026-05-02T19:10:21.421168",
-  "duration_seconds": 1037,
+  "timestamp": "2026-05-03T10:08:09.364975",
+  "duration_seconds": 6049,
   "sites": [
     "voscours",
     "findtutors_uk",
@@ -10,13 +10,13 @@
   "llm_quota": 500,
   "llm_calls": 250,
   "llm_utilisation_pct": 50.0,
-  "scraped": 6672,
+  "scraped": 38817,
   "pre_filtered_out": 250,
   "incremental_skipped": 0,
-  "stem_priority_count": 56,
+  "stem_priority_count": 54,
   "quota_trimmed": 0,
   "tutoring_posts_new": 250,
   "tutoring_posts_total": 250,
-  "stem_posts_total": 68,
+  "stem_posts_total": 71,
   "errors": []
 }

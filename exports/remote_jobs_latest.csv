@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 ﻿id,title,location,category,price,poster,date_posted,source,vertical,poster_type,subject_category,instruction_lang,level,classification,confidence,is_remote,remote_confidence,reasoning,reason,description_preview,description_source,was_reanalyzed,url
 N/A,Application qui permet de trouver un artisan rapidement pour travaux,Remote,N/A,N/A,N/A,N/A,codeur,general,unknown,N/A,N/A,N/A,N/A,N/A,Yes,0.99,N/A,Cached from history: RECENT (seen 0h ago),"Vous avez un projet similaire ?
        Déposez un projet gratuitement",listing_page,No,https://www.codeur.com/projects/482691-application-qui-permet-de-trouver-un-artisan-rapidement-pour-travaux
@@ -209,3 +210,8 @@ N/A,Cookie policy,United Kingdom,N/A,N/A,N/A,N/A,findtutors_uk,tutoring,student,
 N/A,T&Cs for tutors,United Kingdom,N/A,N/A,N/A,N/A,findtutors_uk,tutoring,student,N/A,N/A,N/A,N/A,N/A,Yes,0.99,N/A,Cached from history: RECENT (seen 0h ago),N/A,listing_page,No,https://www.findtutors.co.uk/info/tutor-terms
 N/A,Security,United Kingdom,N/A,N/A,N/A,N/A,findtutors_uk,tutoring,student,N/A,N/A,N/A,N/A,N/A,Yes,0.99,N/A,Cached from history: RECENT (seen 0h ago),N/A,listing_page,No,https://www.findtutors.co.uk/security/
 N/A,Student access,United Kingdom,N/A,N/A,N/A,N/A,findtutors_uk,tutoring,student,N/A,N/A,N/A,N/A,N/A,Yes,0.99,N/A,Cached from history: RECENT (seen 0h ago),N/A,listing_page,No,https://www.findtutors.co.uk/signup/student-looking-for-a-tutor
+=======
+﻿id,title,location,category,price,poster,date_posted,source,vertical,poster_type,subject_category,instruction_lang,level,classification,confidence,is_remote,reasoning,description_preview,description_source,was_reanalyzed,url
+N/A,Cherche Graphisme - Création flyer - plaquette à Landerneau,France,N/A,N/A,N/A,N/A,allovoisins,general,employer,N/A,N/A,N/A,remote,MEDIUM,Yes,LLM: Graphisme créatif,N/A,listing_page,No,https://www.allovoisins.com/v/graphisme-creation-flyer-plaquette
+N/A,Recherche Secrétariat à La Couronne,France,N/A,N/A,N/A,N/A,allovoisins,general,unknown,N/A,N/A,N/A,remote,MEDIUM,Yes,NLP Analysis: Strong remote indicators (score: 3 vs 0),N/A,listing_page,No,https://www.allovoisins.com/v/secretariat
+>>>>>>> 5f5a20968d5eaa1640aa3f290d75cc29554459f7

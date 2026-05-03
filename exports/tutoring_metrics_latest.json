@@ -1,11 +1,17 @@
 {
+<<<<<<< HEAD
   "timestamp": "2026-05-03T14:13:57.706970",
   "duration_seconds": 2,
+=======
+  "timestamp": "2026-05-03T10:08:09.364975",
+  "duration_seconds": 6049,
+>>>>>>> 5f5a20968d5eaa1640aa3f290d75cc29554459f7
   "sites": [
     "voscours",
     "findtutors_uk"
   ],
   "llm_quota": 500,
+<<<<<<< HEAD
   "llm_calls": 0,
   "llm_utilisation_pct": 0.0,
   "scraped": 11,
@@ -16,5 +22,17 @@
   "tutoring_posts_new": 11,
   "tutoring_posts_total": 11,
   "stem_posts_total": 0,
+=======
+  "llm_calls": 250,
+  "llm_utilisation_pct": 50.0,
+  "scraped": 38817,
+  "pre_filtered_out": 250,
+  "incremental_skipped": 0,
+  "stem_priority_count": 54,
+  "quota_trimmed": 0,
+  "tutoring_posts_new": 250,
+  "tutoring_posts_total": 250,
+  "stem_posts_total": 71,
+>>>>>>> 5f5a20968d5eaa1640aa3f290d75cc29554459f7
   "errors": []
 }

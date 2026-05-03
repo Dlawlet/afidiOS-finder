@@ -1,5 +1,6 @@
 {
   "metadata": {
+<<<<<<< HEAD
     "export_date": "2026-05-03 14:14:00",
     "total_jobs": 176,
     "analysis_mode": "NLP-Only",
@@ -7,12 +8,26 @@
       "total_jobs_seen": 6376,
       "remote_jobs_seen": 839,
       "last_update": "2026-05-03 14:14:00"
+=======
+    "export_date": "2026-05-03 08:31:58",
+    "total_jobs": 2,
+    "analysis_mode": "LLM-Enhanced",
+    "history_stats": {
+      "total_jobs_seen": 6252,
+      "remote_jobs_seen": 664,
+      "last_update": "2026-05-03 08:31:58"
+>>>>>>> 5f5a20968d5eaa1640aa3f290d75cc29554459f7
     },
     "employee_posts_filtered": 0
   },
   "statistics": {
+<<<<<<< HEAD
     "total": 176,
     "remote": 176,
+=======
+    "total": 2,
+    "remote": 2,
+>>>>>>> 5f5a20968d5eaa1640aa3f290d75cc29554459f7
     "on_site": 0,
     "remote_percentage": 100.0,
     "llm_used": false,
@@ -27,6 +42,7 @@
       "voscours",
       "findtutors_uk"
     ],
+<<<<<<< HEAD
     "export_date": "2026-05-03 14:14:00"
   },
   "jobs": [
@@ -2294,6 +2310,57 @@
       "reason": "Cached from history: RECENT (seen 0h ago)",
       "was_reanalyzed": false,
       "vertical": "tutoring"
+=======
+    "export_date": "2026-05-03 08:31:58"
+  },
+  "jobs": [
+    {
+      "title": "Cherche Graphisme - Création flyer - plaquette à Landerneau",
+      "description": "N/A",
+      "url": "https://www.allovoisins.com/v/graphisme-creation-flyer-plaquette",
+      "location": "France",
+      "price": "N/A",
+      "is_remote": true,
+      "remote_confidence": 0.8,
+      "reason": "LLM: Graphisme créatif",
+      "id": "N/A",
+      "category": "N/A",
+      "poster": "N/A",
+      "date_posted": "N/A",
+      "confidence": "MEDIUM",
+      "classification": "remote",
+      "reasoning": "LLM: Graphisme créatif",
+      "description_source": "listing_page",
+      "was_reanalyzed": false,
+      "poster_type": "employer",
+      "source": "allovoisins",
+      "vertical": "general",
+      "subject_category": "N/A",
+      "instruction_lang": "N/A",
+      "level": "N/A",
+      "scraped_at": "2026-05-03 08:07:07.291675"
+    },
+    {
+      "url": "https://www.allovoisins.com/v/secretariat",
+      "title": "Recherche Secrétariat à La Couronne",
+      "description": "N/A",
+      "location": "France",
+      "price": "N/A",
+      "source": "allovoisins",
+      "is_remote": true,
+      "remote_confidence": 0.99,
+      "reason": "Cached from history: RECENT (seen 20h ago)",
+      "confidence": "MEDIUM",
+      "classification": "remote",
+      "reasoning": "NLP Analysis: Strong remote indicators (score: 3 vs 0)",
+      "description_source": "listing_page",
+      "was_reanalyzed": false,
+      "poster_type": "unknown",
+      "id": "N/A",
+      "category": "N/A",
+      "poster": "N/A",
+      "date_posted": "N/A"
+>>>>>>> 5f5a20968d5eaa1640aa3f290d75cc29554459f7
     }
   ]
 }

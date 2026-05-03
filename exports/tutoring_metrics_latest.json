@@ -1,22 +1,20 @@
 {
-  "timestamp": "2026-05-02T19:10:21.421168",
-  "duration_seconds": 1037,
+  "timestamp": "2026-05-03T14:13:57.706970",
+  "duration_seconds": 2,
   "sites": [
     "voscours",
-    "findtutors_uk",
-    "jemepropose",
-    "allovoisins"
+    "findtutors_uk"
   ],
   "llm_quota": 500,
-  "llm_calls": 250,
-  "llm_utilisation_pct": 50.0,
-  "scraped": 6672,
-  "pre_filtered_out": 250,
-  "incremental_skipped": 0,
-  "stem_priority_count": 56,
+  "llm_calls": 0,
+  "llm_utilisation_pct": 0.0,
+  "scraped": 11,
+  "pre_filtered_out": 0,
+  "incremental_skipped": 11,
+  "stem_priority_count": 0,
   "quota_trimmed": 0,
-  "tutoring_posts_new": 250,
-  "tutoring_posts_total": 250,
-  "stem_posts_total": 68,
+  "tutoring_posts_new": 11,
+  "tutoring_posts_total": 11,
+  "stem_posts_total": 0,
   "errors": []
 }

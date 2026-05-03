@@ -1,15 +1,13 @@
 """
 Job Results Exporter - Export and update job analysis results
 Supports JSON and CSV formats with incremental updates
-Enhanced with job history tracking
 """
 
 import json
 import csv
+import os
 from datetime import datetime, timedelta
 from pathlib import Path
-
-from tutoring_helpers import TutoringPreFilter
 
 
 class JobExporter:
@@ -28,99 +26,8 @@ class JobExporter:
         # Generate timestamp for this export session
         self.timestamp = datetime.now().strftime('%Y%m%d_%H%M%S')
         self.date_str = datetime.now().strftime('%Y-%m-%d %H:%M:%S')
-        
-        # History file path
-        self.history_file = self.output_dir / 'job_history.json'
     
-    def load_job_history(self):
-        """Load previously seen job IDs and URLs"""
-        if self.history_file.exists():
-            try:
-                with open(self.history_file, 'r', encoding='utf-8') as f:
-                    return json.load(f)
-            except (json.JSONDecodeError, IOError):
-                return {'seen_urls': {}, 'last_update': None}
-        return {'seen_urls': {}, 'last_update': None}
-    
-    def update_job_history(self, jobs):
-        """Update history with new jobs"""
-        history = self.load_job_history()
-        
-        for job in jobs:
-            url = job.get('url')
-            if url and url != 'N/A':
-                # Preserve existing first_seen date if job was seen before
-                existing_entry = history['seen_urls'].get(url, {})
-                
-                history['seen_urls'][url] = {
-                    'first_seen': existing_entry.get('first_seen', self.date_str),
-                    'last_seen': self.date_str,
-                    'title': job.get('title'),
-                    'is_remote': job.get('is_remote'),
-                    'poster_type': job.get('poster_type', 'unknown'),
-                    'description': job.get('description', 'N/A'),
-                    'confidence': job.get('confidence', 'MEDIUM'),
-                    'classification': job.get('classification', 'unknown'),
-                    'reasoning': job.get('reasoning', 'N/A'),
-                    'description_source': job.get('description_source', 'listing_page')
-                }
-        
-        history['last_update'] = self.date_str
-        
-        try:
-            with open(self.history_file, 'w', encoding='utf-8') as f:
-                json.dump(history, f, ensure_ascii=False, indent=2)
-        except IOError as e:
-            print(f"⚠️  Could not update history: {e}")
-        
-        return history
-    
-    def filter_new_jobs(self, jobs, days=7):
-        """
-        Return only jobs not seen in last N days
-        
-        Args:
-            jobs: List of job dictionaries
-            days: Number of days to consider as "new" (default 7)
-            
-        Returns:
-            List of new jobs
-        """
-        history = self.load_job_history()
-        cutoff = datetime.now() - timedelta(days=days)
-        
-        new_jobs = []
-        for job in jobs:
-            url = job.get('url')
-            if url not in history['seen_urls']:
-                new_jobs.append(job)
-            else:
-                last_seen = history['seen_urls'][url].get('last_seen')
-                if last_seen:
-                    try:
-                        last_seen_date = datetime.strptime(last_seen, '%Y-%m-%d %H:%M:%S')
-                        if last_seen_date < cutoff:
-                            new_jobs.append(job)
-                    except ValueError:
-                        # If date parsing fails, include the job
-                        new_jobs.append(job)
-        
-        return new_jobs
-    
-    def get_history_stats(self):
-        """Get statistics about job history"""
-        history = self.load_job_history()
-        
-        total_seen = len(history['seen_urls'])
-        remote_seen = sum(1 for job in history['seen_urls'].values() if job.get('is_remote'))
-        
-        return {
-            'total_jobs_seen': total_seen,
-            'remote_jobs_seen': remote_seen,
-            'last_update': history.get('last_update', 'Never')
-        }
-    
-    def export_to_json(self, jobs, stats, filename=None, update_history=True):
+    def export_to_json(self, jobs, stats, filename=None):
         """
         Export job results to JSON format
         
@@ -137,18 +44,14 @@ class JobExporter:
         
         filepath = self.output_dir / filename
         
-        if update_history:
-            self.update_job_history(jobs)
         history_stats = self.get_history_stats()
-        
         export_data = {
             'metadata': {
                 'export_date': self.date_str,
                 'total_jobs': stats['total'],
                 'analysis_mode': 'LLM-Enhanced' if stats.get('llm_used', False) else 'NLP-Only',
                 'history_stats': history_stats,
-                # Provided by caller in stats so it reflects the full run, not just this slice
-                'employee_posts_filtered': stats.get('employee_posts_filtered', 0),
+                'employee_posts_filtered': stats.get('employee_posts_filtered', 0)
             },
             'statistics': stats,
             'jobs': jobs
@@ -187,27 +90,30 @@ class JobExporter:
             'price',
             'poster',
             'date_posted',
-            'source',           # which site the job came from
-            'vertical',         # general | tutoring
-            'poster_type',      # employer/employee/student/teacher/unknown
-            'subject_category', # tutoring: math_science|languages|music|...  general: N/A
-            'instruction_lang', # tutoring: french|english|both|other          general: N/A
-            'level',            # tutoring: primary|secondary|...              general: N/A
+            'source',
+            'vertical',
+            'poster_type',
+            'subject_category',
+            'instruction_lang',
+            'level',
             'classification',
             'confidence',
             'is_remote',
+            'remote_confidence',
             'reasoning',
+            'reason',
             'description_preview',
             'description_source',
             'was_reanalyzed',
             'url'
         ]
-
+        
         with open(filepath, 'w', newline='', encoding='utf-8-sig') as f:
             writer = csv.DictWriter(f, fieldnames=fieldnames)
             writer.writeheader()
-
+            
             for job in jobs:
+                # Prepare row data
                 row = {
                     'id': job.get('id', 'N/A'),
                     'title': job.get('title', 'N/A'),
@@ -225,7 +131,9 @@ class JobExporter:
                     'classification': job.get('classification', 'N/A'),
                     'confidence': job.get('confidence', 'N/A'),
                     'is_remote': 'Yes' if job.get('is_remote', False) else 'No',
+                    'remote_confidence': job.get('remote_confidence', 'N/A'),
                     'reasoning': job.get('reasoning', 'N/A'),
+                    'reason': job.get('reason', 'N/A'),
                     'description_preview': job.get('description', 'N/A')[:200] + '...' if len(job.get('description', '')) > 200 else job.get('description', 'N/A'),
                     'description_source': job.get('description_source', 'listing_page'),
                     'was_reanalyzed': 'Yes' if job.get('was_reanalyzed', False) else 'No',
@@ -254,108 +162,6 @@ class JobExporter:
             'csv': csv_path
         }
     
-    def export_tutoring_opportunities(self, all_jobs: list, run_stats: dict) -> dict:
-        """
-        Export the tutoring opportunities slice: vertical=tutoring, is_online=True,
-        poster_type=student (or unknown — we don't drop unknowns since on dedicated
-        sites like VosCours all cards are students).
-
-        Written to tutoring_opportunities_latest.json/csv so downstream consumers
-        can consume it independently without re-filtering jobs_latest.
-
-        Args:
-            all_jobs: The full merged job list (general + tutoring)
-            run_stats: Stats dict from the tutoring run
-
-        Returns:
-            dict with 'json', 'csv', 'count'
-        """
-        opportunities = [
-            job for job in all_jobs
-            if (
-                job.get('vertical') == 'tutoring'
-                and job.get('is_remote', False)
-                and job.get('poster_type', 'unknown') != 'teacher'
-                and job.get('poster_type', 'unknown') != 'institution'
-            )
-        ]
-
-        stats = run_stats.copy()
-        stats['total'] = len(opportunities)
-        stats['filter'] = 'vertical=tutoring AND is_remote=True AND poster_type!=teacher'
-
-        json_path = self.export_to_json(
-            opportunities, stats, filename='tutoring_opportunities_latest.json'
-        )
-        csv_path = self.export_to_csv(
-            opportunities, filename='tutoring_opportunities_latest.csv'
-        )
-
-        return {'json': json_path, 'csv': csv_path, 'count': len(opportunities)}
-
-    def export_tutoring_stem_opportunities(self, all_jobs: list, run_stats: dict) -> dict:
-        """
-        Export the STEM tutoring opportunities slice: vertical=tutoring, is_remote=True,
-        poster_type not teacher/institution, and subject_category in STEM buckets.
-
-        Args:
-            all_jobs: The full merged job list (general + tutoring)
-            run_stats: Stats dict from the tutoring run
-
-        Returns:
-            dict with 'json', 'csv', 'count'
-        """
-        stem_categories = TutoringPreFilter.STEM_SUBJECT_CATEGORIES
-        opportunities = [
-            job for job in all_jobs
-            if (
-                job.get('vertical') == 'tutoring'
-                and job.get('is_remote', False)
-                and job.get('poster_type', 'unknown') not in ('teacher', 'institution')
-                and job.get('subject_category') in stem_categories
-            )
-        ]
-
-        stats = run_stats.copy()
-        stats['total'] = len(opportunities)
-        stats['filter'] = 'vertical=tutoring AND is_remote=True AND subject_category in STEM'
-
-        json_path = self.export_to_json(
-            opportunities, stats, filename='tutoring_stem_opportunities_latest.json'
-        )
-        csv_path = self.export_to_csv(
-            opportunities, filename='tutoring_stem_opportunities_latest.csv'
-        )
-
-        return {'json': json_path, 'csv': csv_path, 'count': len(opportunities)}
-
-    def export_archive_snapshot(self, jobs, stats, filename_prefix):
-        """
-        Export timestamped archive snapshots without overwriting latest files.
-        History is not updated for archive snapshots to avoid duplicate history writes.
-
-        Args:
-            jobs: List of job dictionaries
-            stats: Statistics dictionary
-            filename_prefix: Prefix for archive files (e.g., jobs, remote_jobs)
-
-        Returns:
-            Dictionary with paths to archived files
-        """
-        archive_dir = self.output_dir / 'archive'
-        archive_dir.mkdir(exist_ok=True)
-        timestamp = datetime.now().strftime('%Y%m%d_%H%M%S')
-
-        json_filename = f"archive/{filename_prefix}_{timestamp}.json"
-        csv_filename = f"archive/{filename_prefix}_{timestamp}.csv"
-        json_path = self.output_dir / json_filename
-        csv_path = self.output_dir / csv_filename
-
-        self.export_to_json(jobs, stats, filename=json_filename, update_history=False)
-        self.export_to_csv(jobs, filename=csv_filename)
-
-        return {'json': json_path, 'csv': csv_path}
-
     def export_remote_only(self, jobs, stats, filename_prefix='remote_jobs'):
         """
         Export only remote jobs to separate files
@@ -368,10 +174,7 @@ class JobExporter:
         Returns:
             Dictionary with paths to exported files
         """
-        remote_jobs = [
-            job for job in jobs
-            if job.get('is_remote', False) and job.get('poster_type', 'unknown') != 'employee'
-        ]
+        remote_jobs = [job for job in jobs if job.get('is_remote', False)]
         
         # Update stats for remote-only export
         remote_stats = stats.copy()
@@ -475,26 +278,86 @@ class JobExporter:
         
         return summary
 
-    def cleanup_old_history(self, days=30):
-        """Remove jobs from history that haven't been seen in N days"""
+    def load_job_history(self) -> dict:
+        """Load job history from disk."""
+        history_path = self.output_dir / 'job_history.json'
+        if history_path.exists():
+            try:
+                with open(history_path, 'r', encoding='utf-8') as f:
+                    return json.load(f)
+            except Exception:
+                return {'seen_urls': {}, 'last_update': None}
+        return {'seen_urls': {}, 'last_update': None}
+
+    def update_job_history(self, jobs: list) -> dict:
+        """Update job history with a new batch of jobs."""
         history = self.load_job_history()
         seen_urls = history.get('seen_urls', {})
+        now = datetime.now().strftime('%Y-%m-%d %H:%M:%S')
 
+        for job in jobs:
+            url = job.get('url')
+            if not url or url == 'N/A':
+                continue
+
+            entry = seen_urls.get(url)
+            if entry:
+                entry['last_seen'] = now
+                entry['appearances'] = entry.get('appearances', 1) + 1
+                entry['title'] = job.get('title', entry.get('title', ''))
+                entry['is_remote'] = job.get('is_remote', entry.get('is_remote', False))
+            else:
+                seen_urls[url] = {
+                    'first_seen': now,
+                    'last_seen': now,
+                    'title': job.get('title', ''),
+                    'is_remote': job.get('is_remote', False),
+                    'appearances': 1,
+                }
+
+        history['seen_urls'] = seen_urls
+        history['last_update'] = now
+
+        history_path = self.output_dir / 'job_history.json'
+        with open(history_path, 'w', encoding='utf-8') as f:
+            json.dump(history, f, indent=2, ensure_ascii=False)
+
+        return history
+
+    def cleanup_old_history(self, days: int = 90) -> dict:
+        """Remove history entries older than N days."""
+        history = self.load_job_history()
+        seen_urls = history.get('seen_urls', {})
         cutoff = datetime.now() - timedelta(days=days)
-        original_count = len(seen_urls)
 
-        history['seen_urls'] = {
-            url: data for url, data in seen_urls.items()
-            if datetime.strptime(data.get('last_seen', '2000-01-01 00:00:00'), '%Y-%m-%d %H:%M:%S') > cutoff
-        }
-
-        removed = original_count - len(history['seen_urls'])
-
-        if removed > 0:
+        cleaned = {}
+        for url, entry in seen_urls.items():
+            last_seen = entry.get('last_seen')
             try:
-                with open(self.history_file, 'w', encoding='utf-8') as f:
-                    json.dump(history, f, ensure_ascii=False, indent=2)
-            except IOError as e:
-                print(f"⚠️  Could not update history during cleanup: {e}")
+                last_seen_dt = datetime.strptime(last_seen, '%Y-%m-%d %H:%M:%S')
+            except Exception:
+                last_seen_dt = None
+            if last_seen_dt and last_seen_dt >= cutoff:
+                cleaned[url] = entry
 
-        return removed
+        history['seen_urls'] = cleaned
+        history['last_update'] = datetime.now().strftime('%Y-%m-%d %H:%M:%S')
+
+        history_path = self.output_dir / 'job_history.json'
+        with open(history_path, 'w', encoding='utf-8') as f:
+            json.dump(history, f, indent=2, ensure_ascii=False)
+
+        return history
+
+    def get_history_stats(self) -> dict:
+        """Summarize history stats for metadata."""
+        history = self.load_job_history()
+        seen_urls = history.get('seen_urls', {})
+        total_seen = len(seen_urls)
+        remote_seen = sum(1 for entry in seen_urls.values() if entry.get('is_remote'))
+
+        return {
+            'total_jobs_seen': total_seen,
+            'remote_jobs_seen': remote_seen,
+            'last_update': history.get('last_update')
+        }

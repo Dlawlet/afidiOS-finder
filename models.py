@@ -11,38 +11,14 @@ from datetime import datetime
 class JobListing(BaseModel):
     """Validated job listing model"""
     
-    # Core fields
     title: str = Field(..., min_length=1, max_length=500, description="Job title")
     description: str = Field(..., min_length=1, description="Job description")  # Relaxed from 10 to 1
     url: str = Field(..., description="Job posting URL")
     location: str = Field(..., min_length=1, max_length=200, description="Job location/category")
     price: str = Field(default="N/A", max_length=100, description="Job price/rate")
-    
-    # Analysis fields
     is_remote: bool = Field(..., description="Whether job is remote")
     remote_confidence: float = Field(..., ge=0.0, le=1.0, description="Confidence score (0.0-1.0)")
     reason: str = Field(..., min_length=3, max_length=500, description="Classification reason")  # Relaxed from 5 to 3
-    
-    # Additional CSV export fields
-    id: str = Field(default="N/A", description="Job ID (if available)")
-    category: str = Field(default="N/A", description="Job category")
-    poster: str = Field(default="N/A", description="Job poster/employer")
-    date_posted: str = Field(default="N/A", description="Date job was posted")
-    confidence: str = Field(default="MEDIUM", description="Confidence level (HIGH/MEDIUM/LOW)")
-    classification: str = Field(default="unknown", description="Job classification (remote/on-site/cached)")
-    reasoning: str = Field(default="N/A", description="Reasoning for classification")
-    description_source: str = Field(default="listing_page", description="Source of description (listing_page/detail_page)")
-    was_reanalyzed: bool = Field(default=False, description="Whether job was reanalyzed")
-    poster_type: str = Field(default="unknown", description="Whether post is from employer or employee/self-promoter (employer/employee/unknown)")
-    source: Optional[str] = Field(default=None, description="Job source website")
-
-    # Tutoring vertical fields — 'N/A' for general pipeline jobs
-    vertical: str = Field(default="general", description="Pipeline that produced this job: general|tutoring")
-    subject_category: str = Field(default="N/A", description="Tutoring subject bucket (math_science|languages|music|arts_humanities|technology|test_prep|other|N/A)")
-    instruction_lang: str = Field(default="N/A", description="Language of instruction (french|english|both|other|N/A)")
-    level: str = Field(default="N/A", description="Education level (primary|secondary|university|adult|all_levels|unknown|N/A)")
-
-    # Metadata
     scraped_at: Optional[datetime] = Field(default_factory=datetime.now, description="Scrape timestamp")
     
     @field_validator('title', 'description')
@@ -106,17 +82,12 @@ class ScraperMetrics(BaseModel):
     jobs_analyzed: int = Field(..., ge=0)
     new_jobs: int = Field(..., ge=0)
     cached_jobs: int = Field(..., ge=0)
-    reanalyzed_jobs: int = Field(default=0, ge=0)
     remote_jobs: int = Field(..., ge=0)
     llm_calls: int = Field(..., ge=0)
-    llm_budget: int = Field(default=0, ge=0)
     cache_stats: dict
     confidence_distribution: dict
     errors: list[str] = Field(default_factory=list)
-    validation_errors: int = Field(default=0, ge=0)
-    incremental_enabled: bool = Field(default=True)
-    sites_scraped: dict = Field(default_factory=dict)
-
+    
     class Config:
         json_schema_extra = {
             "example": {

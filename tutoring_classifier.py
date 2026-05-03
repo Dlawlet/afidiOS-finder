@@ -22,6 +22,7 @@ from pathlib import Path
 from typing import Dict
 
 from semantic_analyzer import retry_with_backoff
+from groq_model_manager import GroqModelManager
 
 
 class TutoringClassifier:
@@ -34,9 +35,12 @@ class TutoringClassifier:
         self.groq_api_key = groq_api_key or os.getenv('GROQ_API_KEY')
         self.verbose = verbose
         self.groq_client = None
+        self.model_manager = GroqModelManager()
         self.cache_dir = Path('cache')
         self.cache_dir.mkdir(exist_ok=True)
         self.cache_stats = {'hits': 0, 'misses': 0}
+        self.llm_calls = 0
+        self.nlp_fallbacks = 0
         self.logger = logging.getLogger(__name__)
 
         if self.groq_api_key:
@@ -50,9 +54,9 @@ class TutoringClassifier:
 
     # ------------------------------------------------------------------ cache
 
-    def _get_hash(self, title: str, description: str, location: str) -> str:
+    def _get_hash(self, title: str, description: str, location: str, model_name: str) -> str:
         import hashlib
-        content = f"tutoring|{title}|{description}|{location}"
+        content = f"tutoring|{model_name}|{title}|{description}|{location}"
         return hashlib.md5(content.encode('utf-8')).hexdigest()
 
     def _load_cache(self, h: str) -> Dict:
@@ -82,12 +86,15 @@ class TutoringClassifier:
             'cache_misses': self.cache_stats['misses'],
             'total_requests': total,
             'hit_rate_percentage': round(self.cache_stats['hits'] / total * 100, 2) if total else 0,
+            'llm_calls': self.llm_calls,
+            'nlp_fallbacks': self.nlp_fallbacks,
+            'model_usage': self.model_manager.stats(),
         }
 
     # ------------------------------------------------------------------ LLM
 
     @retry_with_backoff(max_retries=3, base_delay=2)
-    def _call_groq(self, title: str, description: str, location: str) -> Dict:
+    def _call_groq(self, title: str, description: str, location: str, model_name: str) -> Dict:
         prompt = f"""You are analyzing a tutoring or teaching listing. The listing may be in French or English.
 
 LISTING:
@@ -157,7 +164,7 @@ RESPOND IN JSON FORMAT ONLY:
                 {"role": "system", "content": "You are an expert education analyst. Respond only with valid JSON."},
                 {"role": "user", "content": prompt},
             ],
-            model="moonshotai/kimi-k2-instruct",
+            model=model_name,
             temperature=0.1,
             max_tokens=250,
         )
@@ -231,34 +238,52 @@ RESPOND IN JSON FORMAT ONLY:
             dict with keys: is_online, poster_type, subject_category,
                             instruction_language, level, confidence, reason
         """
-        h = self._get_hash(title, description, location)
-        cached = self._load_cache(h)
-        if cached is not None:
-            if self.verbose:
-                print("    ♻️  Tutoring cache hit")
-            return cached
+        model_name = self.model_manager.pick_model() if self.model_manager else None
+        model_name = model_name or os.getenv('GROQ_MODEL', 'llama-3.3-70b-versatile')
 
         if not self.groq_client:
+            self.nlp_fallbacks += 1
             result = self._classify_with_nlp(title, description, location)
         else:
-            try:
-                raw = self._call_groq(title, description, location)
-                result = {
-                    'is_online': bool(raw.get('is_online', False)),
-                    'poster_type': raw.get('poster_type', 'unknown'),
-                    'subject_category': raw.get('subject_category', 'other'),
-                    'instruction_language': raw.get('instruction_language', 'french'),
-                    'level': raw.get('level', 'unknown'),
-                    'confidence': float(raw.get('confidence', 0.5)),
-                    'reason': f"LLM: {raw.get('reason', '')}",
-                }
-            except Exception as e:
-                if 'rate_limit' in str(e).lower() or '429' in str(e):
-                    self.logger.warning(f"Groq rate limit: {e}")
-                else:
-                    self.logger.error(f"Groq error: {e}", exc_info=True)
+            attempted_models = set()
+            result = None
+            while model_name and model_name not in attempted_models:
+                attempted_models.add(model_name)
+                h = self._get_hash(title, description, location, model_name)
+                cached = self._load_cache(h)
+                if cached is not None:
+                    if self.verbose:
+                        print("    ♻️  Tutoring cache hit")
+                    return cached
+                try:
+                    raw = self._call_groq(title, description, location, model_name)
+                    result = {
+                        'is_online': bool(raw.get('is_online', False)),
+                        'poster_type': raw.get('poster_type', 'unknown'),
+                        'subject_category': raw.get('subject_category', 'other'),
+                        'instruction_language': raw.get('instruction_language', 'french'),
+                        'level': raw.get('level', 'unknown'),
+                        'confidence': float(raw.get('confidence', 0.5)),
+                        'reason': f"LLM: {raw.get('reason', '')}",
+                        'model': model_name,
+                    }
+                    self.model_manager.record_call(model_name)
+                    self.llm_calls += 1
+                    break
+                except Exception as e:
+                    error_msg = str(e).lower()
+                    if 'not found' in error_msg or 'does not exist' in error_msg:
+                        self.model_manager.disable_model(model_name)
+                    elif 'rate_limit' in error_msg or '429' in error_msg:
+                        self.model_manager.disable_model(model_name)
+                    self.logger.error(f"Groq error for model {model_name}: {e}", exc_info=True)
+                    model_name = self.model_manager.pick_model()
+
+            if result is None:
+                self.nlp_fallbacks += 1
                 result = self._classify_with_nlp(title, description, location)
 
+        h = self._get_hash(title, description, location, result.get('model', 'nlp'))
         self._save_cache(h, result)
         self.logger.info(
             f"Tutoring classified: {title[:40]}... "

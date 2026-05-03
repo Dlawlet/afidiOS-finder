@@ -67,14 +67,18 @@ class IncrementalScraper:
             self.logger.warning(f"Date parsing error for {job_url}: {e}")
             return True, "PARSE_ERROR"
     
-    def filter_jobs_for_analysis(self, all_jobs: List[Dict], lookback_hours=24, reanalyze_cached=False) -> Tuple[List[Dict], List[Dict]]:
+    def filter_jobs_for_analysis(
+        self,
+        all_jobs: List[Dict],
+        lookback_hours=24,
+        reanalyze_cached: bool = False
+    ) -> Tuple[List[Dict], List[Dict]]:
         """
         Split jobs into those needing analysis vs those we can skip
         
         Args:
             all_jobs: All scraped jobs
             lookback_hours: Hours to consider job as "recent"
-            reanalyze_cached: Force re-analysis of cached jobs
             
         Returns:
             Tuple of (jobs_to_analyze, jobs_to_skip)
@@ -91,14 +95,9 @@ class IncrementalScraper:
             
             should_analyze, reason = self.should_analyze_job(url, title, lookback_hours)
             
-            # If reanalyze_cached is True, force analysis of all jobs seen within lookback
-            if reanalyze_cached and not should_analyze:
-                should_analyze = True
-                reason = f"REANALYSIS: {reason}"
-                if self.verbose:
-                    self.logger.info(f"🔄 Forcing reanalysis: {title[:50]}...")
-            
-            if should_analyze:
+            if should_analyze or reanalyze_cached:
+                if reanalyze_cached and not should_analyze:
+                    job['was_reanalyzed'] = True
                 jobs_to_analyze.append(job)
                 if self.verbose:
                     self.logger.debug(f"Will analyze: {title[:50]}... - {reason}")
@@ -108,26 +107,7 @@ class IncrementalScraper:
                 job['is_remote'] = job_history.get('is_remote', False)
                 job['remote_confidence'] = 0.99  # High confidence from history
                 job['reason'] = f"Cached from history: {reason}"
-                
-                # Restore additional fields from history if available
-                cached_description = job_history.get('description')
-                if cached_description and cached_description != 'N/A':
-                    job['description'] = cached_description
-                
-                # Restore analysis fields
-                job['confidence'] = job_history.get('confidence', 'HIGH')
-                job['classification'] = job_history.get('classification', 'cached')
-                job['reasoning'] = job_history.get('reasoning', 'Restored from cache')
-                job['description_source'] = job_history.get('description_source', 'listing_page')
                 job['was_reanalyzed'] = False
-                job['poster_type'] = job_history.get('poster_type', 'unknown')
-
-                # Fields not available from listing pages
-                job['id'] = 'N/A'
-                job['category'] = 'N/A'
-                job['poster'] = 'N/A'
-                job['date_posted'] = 'N/A'
-                
                 jobs_to_skip.append(job)
                 
                 if self.verbose:

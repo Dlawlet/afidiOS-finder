@@ -43,6 +43,8 @@ scheduled_scraper_old.py
 # !exports/remote_jobs_latest.json
 # !exports/remote_jobs_latest.csv
 
+exports/archive/
+
 cache/
 
 # Copilot agent worktrees (gitlink entries — not real submodules)

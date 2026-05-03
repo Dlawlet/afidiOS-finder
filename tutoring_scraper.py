@@ -21,7 +21,10 @@ Usage:
 
 import sys
 import io
-sys.stdout = io.TextIOWrapper(sys.stdout.buffer, encoding='utf-8')
+if hasattr(sys.stdout, "reconfigure"):
+    sys.stdout.reconfigure(encoding='utf-8')
+elif hasattr(sys.stdout, "buffer"):
+    sys.stdout = io.TextIOWrapper(sys.stdout.buffer, encoding='utf-8', line_buffering=True)
 
 import argparse
 import json
@@ -44,6 +47,7 @@ def _env_int(name: str, default: int) -> int:
         return default
 
 from semantic_analyzer import setup_logging
+from scheduled_scraper_v3 import is_professional_employment
 from job_exporter import JobExporter
 from incremental_scraper import IncrementalScraper
 from models import JobListing
@@ -81,6 +85,8 @@ def scrape_tutoring(
     lookback_hours=24,
     llm_quota=None,
     reanalyze_cached=False,
+    existing_general_jobs=None,
+    export_results=True,
 ):
     """
     Main tutoring scraper pipeline.
@@ -105,6 +111,7 @@ def scrape_tutoring(
         'stem_priority': 0,
         'quota_trimmed': 0,
         'errors': [],
+        'filtered_professional': 0,
     }
 
     if verbose:
@@ -146,12 +153,21 @@ def scrape_tutoring(
         lookback_hours=lookback_hours,
     )
     metrics['scraped'] = len(scraped_all)
+    metrics['incremental_skipped'] = len(jobs_from_cache)
 
     # ── Pre-filter: drop non-tutoring from general sites ────────────────────
     pre_filter = TutoringPreFilter()
     jobs_to_analyze = []
 
     for job in jobs_to_analyze_raw:
+        if is_professional_employment(
+            job.get('title', ''),
+            job.get('description', ''),
+            job.get('location', ''),
+        ):
+            metrics['filtered_professional'] += 1
+            continue
+
         site = job.get('source', '')
         if site in DEDICATED_TUTORING_SITES:
             # All posts on these sites are student requests — pass through
@@ -279,8 +295,9 @@ def scrape_tutoring(
 
     # Add cached tutoring jobs
     for job in jobs_from_cache:
-        if job.get('vertical') == 'tutoring':
-            all_jobs.append(job)
+        if job.get('vertical') != 'tutoring':
+            job['vertical'] = 'tutoring'
+        all_jobs.append(job)
 
     if verbose:
         online = sum(1 for j in all_jobs if j.get('is_remote'))
@@ -297,18 +314,19 @@ def scrape_tutoring(
 
     # ── Export ───────────────────────────────────────────────────────────────
     # Load existing jobs_latest so we can merge without overwriting general jobs
-    jobs_latest_path = Path('exports/jobs_latest.json')
-    existing_general_jobs = []
-    if jobs_latest_path.exists():
-        try:
-            with open(jobs_latest_path, 'r', encoding='utf-8') as f:
-                existing_data = json.load(f)
-            existing_general_jobs = [
-                j for j in existing_data.get('jobs', [])
-                if j.get('vertical', 'general') == 'general'
-            ]
-        except Exception as e:
-            logger.warning(f"Could not load existing jobs_latest: {e}")
+    if existing_general_jobs is None:
+        jobs_latest_path = Path('exports/jobs_latest.json')
+        existing_general_jobs = []
+        if jobs_latest_path.exists():
+            try:
+                with open(jobs_latest_path, 'r', encoding='utf-8') as f:
+                    existing_data = json.load(f)
+                existing_general_jobs = [
+                    j for j in existing_data.get('jobs', [])
+                    if j.get('vertical', 'general') == 'general'
+                ]
+            except Exception as e:
+                logger.warning(f"Could not load existing jobs_latest: {e}")
 
     merged_jobs = existing_general_jobs + all_jobs
     duration = (datetime.now() - metrics['start_time']).seconds
@@ -344,9 +362,10 @@ def scrape_tutoring(
         if j.get('vertical') == 'tutoring' and j.get('subject_category') in stem_categories
     )
 
-    json_all = exporter.export_to_json(merged_jobs, run_stats, filename='jobs_latest.json')
-    csv_all = exporter.export_to_csv(merged_jobs, filename='jobs_latest.csv')
-    archive_all = exporter.export_archive_snapshot(merged_jobs, run_stats, filename_prefix='jobs')
+    if export_results:
+        exporter.update_job_history(merged_jobs)
+        json_all = exporter.export_to_json(merged_jobs, run_stats, filename='jobs_latest.json')
+        csv_all = exporter.export_to_csv(merged_jobs, filename='jobs_latest.csv')
 
     # ── Tutoring metrics export ──────────────────────────────────────────────
     tutoring_metrics = {
@@ -365,6 +384,7 @@ def scrape_tutoring(
         'tutoring_posts_total': tutoring_count,
         'stem_posts_total': stem_count,
         'errors': metrics['errors'],
+        'filtered_professional': metrics['filtered_professional'],
     }
     tutoring_metrics_path = Path('exports/tutoring_metrics_latest.json')
     try:
@@ -373,11 +393,10 @@ def scrape_tutoring(
     except Exception as e:
         logger.warning(f"Could not write tutoring metrics: {e}")
 
-    if verbose:
+    if verbose and export_results:
         print(f"💾 Exported:")
         print(f"   {json_all}  ({len(merged_jobs)} total jobs, {tutoring_count} tutoring, {stem_count} STEM)")
         print(f"   {csv_all}")
-        print(f"   {archive_all['json']}")
         print(f"   {tutoring_metrics_path}  (LLM {metrics['llm_calls']}/{quota})")
 
     return {
@@ -387,6 +406,7 @@ def scrape_tutoring(
         'tutoring_total': tutoring_count,
         'stem_total': stem_count,
         'metrics': run_stats,
+        'merged_jobs': merged_jobs,
     }
 
 

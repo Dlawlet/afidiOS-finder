@@ -6,8 +6,10 @@ Supports multiple job platforms with incremental scraping and validation
 
 import sys
 import io
-import os
-sys.stdout = io.TextIOWrapper(sys.stdout.buffer, encoding='utf-8')
+if hasattr(sys.stdout, "reconfigure"):
+    sys.stdout.reconfigure(encoding='utf-8')
+elif hasattr(sys.stdout, "buffer"):
+    sys.stdout = io.TextIOWrapper(sys.stdout.buffer, encoding='utf-8', line_buffering=True)
 
 from semantic_analyzer import SemanticJobAnalyzer, setup_logging
 from job_exporter import JobExporter
@@ -26,49 +28,50 @@ from site_scrapers import (
     RemotiveScraper,
     WorkingNomadsScraper,
     ArbeitnowScraper,
-    RingTwiceScraper,
 )
+from tutoring_scraper import scrape_tutoring
 import json
 from datetime import datetime
 import logging
 import argparse
 
+# Free tier LLM quota (jobs per day)
+DAILY_LLM_QUOTA = 1500
 
-def _env_int(name: str, default: int) -> int:
-    raw = os.getenv(name)
-    if raw is None:
-        return default
-    try:
-        return int(raw)
-    except ValueError:
-        logging.getLogger(__name__).warning(
-            f"Invalid integer for {name}='{raw}', using default {default}"
-        )
-        return default
+PEER_TO_PEER_SITES = [
+    'jemepropose',
+    'allovoisins',
+]
 
-# Groq token budget configuration (approximate LLM call capacity)
-DEFAULT_DAILY_TOKEN_BUDGET = _env_int('GROQ_DAILY_TOKEN_BUDGET', 300000)
-_est_tokens = _env_int('GROQ_EST_TOKENS_PER_CALL', 900)
-if _est_tokens <= 0:
-    logging.getLogger(__name__).warning(
-        f"GROQ_EST_TOKENS_PER_CALL must be positive, using 1 instead of {_est_tokens}"
-    )
-    _est_tokens = 1
-EST_TOKENS_PER_CALL = max(_est_tokens, 1)
-DEFAULT_DAILY_LLM_QUOTA = max(1, DEFAULT_DAILY_TOKEN_BUDGET // EST_TOKENS_PER_CALL)
+PRO_SITES = [
+    'codeur',
+    'freelance.com',
+    'comet',
+    'remoteok',
+    'remotive',
+    'workingnomads',
+    'arbeitnow',
+    'malt',
+]
 
-# Optional direct override (jobs per day)
-DAILY_LLM_QUOTA = _env_int('GROQ_DAILY_LLM_QUOTA', DEFAULT_DAILY_LLM_QUOTA)
+DEFAULT_GENERAL_SITES = PEER_TO_PEER_SITES
 
-# Job history retention
-JOB_HISTORY_RETENTION_DAYS = _env_int('HISTORY_RETENTION_DAYS', 90)
+EMPLOYMENT_KEYWORDS = [
+    'cdi', 'cdd', 'alternance', 'stage', 'intérim', 'interim',
+    'temps plein', 'temps partiel', 'contrat', 'poste', 'recrute', 'recrutement',
+    'emploi', 'job', 'salaire', 'mensuel', 'annuel', 'hr', 'human resources',
+    'full-time', 'part-time', 'permanent', 'fixed-term', 'contract',
+    'employee', 'employer', 'hiring', 'apply now',
+]
 
-# Sources that are pre-classified and should not consume LLM quota
-LLM_EXEMPT_SITES = {'remoteok', 'remotive', 'workingnomads', 'arbeitnow'}
+
+def is_professional_employment(title: str, description: str, location: str) -> bool:
+    text = f"{title} {description} {location}".lower()
+    return any(keyword in text for keyword in EMPLOYMENT_KEYWORDS)
 
 
 def scrape_multi_site(
-    sites=['jemepropose'],
+    sites=None,
     use_llm=True,
     verbose=False,
     max_pages=None,
@@ -76,7 +79,8 @@ def scrape_multi_site(
     lookback_hours=24,
     llm_quota_per_site=None,
     reanalyze_cached=False,
-    fill_quota=True
+    export_results=True,
+    include_pro_sources=False
 ):
     """
     Multi-site job scraper with incremental support and intelligent quota management
@@ -90,16 +94,15 @@ def scrape_multi_site(
         lookback_hours: Hours to consider job as "recent"
         llm_quota_per_site: LLM quota per site (None = auto-calculate from DAILY_LLM_QUOTA)
         reanalyze_cached: Force re-analysis of cached jobs with updated prompt
-        fill_quota: Reanalyze cached jobs to use remaining LLM budget
     """
     logger = setup_logging(verbose)
     
-    llm_sites = [site for site in sites if site not in LLM_EXEMPT_SITES]
-    llm_site_count = len(llm_sites)
+    if sites is None:
+        sites = DEFAULT_GENERAL_SITES
 
-    # Calculate fair share quota per LLM site
+    # Calculate fair share quota per site
     if llm_quota_per_site is None:
-        llm_quota_per_site = DAILY_LLM_QUOTA // max(llm_site_count, 1)
+        llm_quota_per_site = DAILY_LLM_QUOTA // len(sites)
     
     # Track metrics
     metrics = {
@@ -108,13 +111,13 @@ def scrape_multi_site(
         'jobs_analyzed': 0,
         'new_jobs': 0,
         'cached_jobs': 0,
-        'reanalyzed_jobs': 0,
         'llm_calls': 0,
         'cache_hits': 0,
         'validation_errors': 0,
         'errors': [],
         'confidence_distribution': {'high': 0, 'medium': 0, 'low': 0},
         'sites_scraped': {},
+        'filtered_professional': 0,
     }
     
     if verbose:
@@ -125,14 +128,14 @@ def scrape_multi_site(
             print(f"📄 Max {max_pages} pages per site")
         else:
             print(f"📄 Default: 10 pages per site (quota applied after filtering)")
-        print(f"🎯 LLM quota per LLM site: {llm_quota_per_site} NEW jobs")
-        print(f"🎯 Total LLM budget: {llm_quota_per_site * llm_site_count} NEW jobs")
+        print(f"🎯 LLM quota per site: {llm_quota_per_site} NEW jobs")
+        print(f"🎯 Total LLM budget: {llm_quota_per_site * len(sites)} NEW jobs")
         print(f"♻️  Incremental mode: {'ENABLED' if incremental else 'DISABLED'}")
         if incremental:
             print(f"🕐 Lookback: {lookback_hours}h")
         print(f"{'='*60}\n")
     
-    logger.info(f"Starting multi-site scraper - sites: {sites}, total_quota: {llm_quota_per_site * llm_site_count}, incremental: {incremental}")
+    logger.info(f"Starting multi-site scraper - sites: {sites}, total_quota: {llm_quota_per_site * len(sites)}, incremental: {incremental}")
     
     try:
         # Initialize multi-site scraper
@@ -145,7 +148,6 @@ def scrape_multi_site(
             'freelance.com': FreelanceComScraper,
             'comet': CometScraper,
             'allovoisins': AlloVoisinsScraper,
-            'ringtwice': RingTwiceScraper,
             'codeur': CodeurScraper,
             'remoteok': RemoteOKScraper,
             'remotive': RemotiveScraper,
@@ -170,54 +172,47 @@ def scrape_multi_site(
         def incremental_filter_callback(jobs, lookback_hours):
             """Callback to filter jobs incrementally"""
             if incremental_scraper:
-                return incremental_scraper.filter_jobs_for_analysis(jobs, lookback_hours, reanalyze_cached)
+                return incremental_scraper.filter_jobs_for_analysis(
+                    jobs,
+                    lookback_hours,
+                    reanalyze_cached
+                )
             else:
                 return jobs, []  # All jobs are new if no incremental
         
         # Scrape with intelligent quota management
-        total_daily_quota = llm_quota_per_site * llm_site_count
+        total_daily_quota = llm_quota_per_site * len(sites)
         scraped_jobs, jobs_to_analyze, jobs_from_cache, quota_used = multi_scraper.scrape_with_incremental_quota(
             daily_quota=total_daily_quota,
             enabled_sites=sites,
             max_pages_per_site=max_pages,
             incremental_filter_callback=incremental_filter_callback if incremental else None,
-            lookback_hours=lookback_hours,
-            quota_exempt_sources=LLM_EXEMPT_SITES
+            lookback_hours=lookback_hours
         )
         
         metrics['jobs_scraped'] = len(scraped_jobs)
         metrics['new_jobs'] = len(jobs_to_analyze)
         metrics['cached_jobs'] = len(jobs_from_cache)
-        metrics['llm_budget'] = total_daily_quota
+
+        def _is_filtered(job):
+            if (job.get('source') in PRO_SITES) and not include_pro_sources:
+                return True
+            return is_professional_employment(
+                job.get('title', ''),
+                job.get('description', ''),
+                job.get('location', ''),
+            )
+
+        filtered_jobs_to_analyze = [job for job in jobs_to_analyze if not _is_filtered(job)]
+        filtered_jobs_from_cache = [job for job in jobs_from_cache if not _is_filtered(job)]
+        metrics['filtered_professional'] = len(jobs_to_analyze) - len(filtered_jobs_to_analyze)
+        jobs_to_analyze = filtered_jobs_to_analyze
+        jobs_from_cache = filtered_jobs_from_cache
         
         # Track per-site statistics
         for site in sites:
             site_jobs = [j for j in scraped_jobs if j.get('source') == site]
             metrics['sites_scraped'][site] = len(site_jobs)
-
-        # Optional backfill: reanalyze cached jobs to use remaining LLM budget
-        llm_jobs_initial = [job for job in jobs_to_analyze if not job.get('skip_analysis')]
-        remaining_llm_budget = max(total_daily_quota - len(llm_jobs_initial), 0)
-        if use_llm and fill_quota and remaining_llm_budget > 0 and jobs_from_cache:
-            reanalyze_candidates = [
-                job for job in jobs_from_cache
-                if not job.get('skip_analysis')
-            ]
-            to_reanalyze = reanalyze_candidates[:remaining_llm_budget]
-            reanalyze_urls = {job.get('url') for job in to_reanalyze}
-            jobs_from_cache = [
-                job for job in jobs_from_cache
-                if job.get('url') not in reanalyze_urls
-            ]
-            reanalyzed_jobs = [
-                {**job, 'was_reanalyzed': True}
-                for job in to_reanalyze
-            ]
-            jobs_to_analyze.extend(reanalyzed_jobs)
-            metrics['reanalyzed_jobs'] = len(reanalyzed_jobs)
-            metrics['cached_jobs'] = len(jobs_from_cache)
-            if verbose and to_reanalyze:
-                print(f"🔄 Reanalyzing {len(to_reanalyze)} cached jobs to fill LLM budget")
         
         # ===== PHASE 3: ANALYZE JOBS =====
         if verbose:
@@ -247,57 +242,62 @@ def scrape_multi_site(
             job_location = job_data['location']
             job_price = job_data.get('price', 'N/A')
             job_url = job_data['url']
-            job_source = job_data['source']
+            job_source = job_data.get('source', 'unknown')
+            
+            # Try to get a better description upfront if listing description is missing
+            if job_description == 'N/A' or len(job_description) < 50:
+                if job_url != 'N/A':
+                    better_desc = description_fetcher.fetch_full_description(job_url)
+                    if better_desc and len(better_desc) > len(job_description):
+                        job_description = better_desc
+                        stats['full_description_fetched'] += 1
+            
+            # Basic detection
+            basic_result = basic_detector.detect_confidence(job_title, job_description, job_location)
             
             # Track which description we'll use for export
             final_description = job_description
-            description_source = 'listing_page'
+            description_source = 'listing_page' if job_description == job_data.get('description', 'N/A') else 'detail_page'
 
-            # FAST PATH: job pre-classified by scraper (e.g. RemoteOK — always remote employer posts)
-            # These sites guarantee remote + employer, no LLM needed — saves quota entirely
+            # Remote-only API sources can skip LLM
             if job_data.get('skip_analysis'):
-                poster_type = job_data.get('poster_type', 'employer')
                 result = {
                     'is_remote': job_data.get('is_remote', True),
-                    'confidence_score': 0.99,
-                    'reason': f"Pre-classified by {job_source} scraper",
+                    'confidence_score': job_data.get('remote_confidence', 0.99),
+                    'reason': job_data.get('reason', 'Remote-only source'),
                     'confidence': 'HIGH'
                 }
                 stats['high_confidence_skip'] += 1
-            else:
-                # Basic detection
-                basic_result = basic_detector.detect_confidence(job_title, job_description, job_location)
-
-                # Analyze based on confidence
-                if basic_result['confidence'] == 'LOW':
-                    # Fetch full description if still needed
-                    full_description = job_description
-                    if job_url != 'N/A' and (job_description == 'N/A' or len(job_description) < 100):
-                        better_desc = description_fetcher.fetch_full_description(job_url)
-                        if better_desc and len(better_desc) > len(job_description):
-                            full_description = better_desc
-                            final_description = better_desc
-                            description_source = 'detail_page'
-                            stats['full_description_fetched'] += 1
-
-                    # Analyze with LLM
-                    analysis = llm_analyzer.analyze_with_groq(job_title, full_description, job_location)
-
-                    poster_type = analysis.get('poster_type', 'unknown')
-                    result = {
-                        'is_remote': analysis.get('is_remote', False),
-                        'confidence_score': analysis.get('remote_confidence', 0.5),
-                        'reason': analysis.get('reason', 'LLM analysis'),
-                        'confidence': 'HIGH' if analysis.get('remote_confidence', 0) > 0.8 else 'MEDIUM'
-                    }
-
+            # Analyze based on confidence
+            elif basic_result['confidence'] == 'LOW':
+                # Fetch full description if still needed
+                full_description = job_description
+                if job_url != 'N/A' and (job_description == 'N/A' or len(job_description) < 100):
+                    better_desc = description_fetcher.fetch_full_description(job_url)
+                    if better_desc and len(better_desc) > len(job_description):
+                        full_description = better_desc
+                        final_description = better_desc  # Use full description for export
+                        description_source = 'detail_page'
+                        stats['full_description_fetched'] += 1
+                
+                # Analyze with LLM
+                analysis = llm_analyzer.analyze_with_groq(job_title, full_description, job_location, job_price)
+                
+                # Use analysis result
+                result = {
+                    'is_remote': analysis.get('is_remote', False),
+                    'confidence_score': analysis.get('remote_confidence', 0.5),
+                    'reason': analysis.get('reason', 'LLM analysis'),
+                    'confidence': 'HIGH' if analysis.get('remote_confidence', 0) > 0.8 else 'MEDIUM'
+                }
+                
+                if use_llm:
                     stats['analyzed_with_llm'] += 1
                     metrics['llm_calls'] += 1
-                else:
-                    # High confidence on-site keyword — skip LLM
-                    result = basic_result
-                    poster_type = 'unknown'
-                    stats['high_confidence_skip'] += 1
+            else:
+                # High confidence - skip LLM
+                result = basic_result
+                stats['high_confidence_skip'] += 1
             
             # Track confidence distribution
             confidence_level = result.get('confidence', 'MEDIUM').lower()
@@ -324,13 +324,7 @@ def scrape_multi_site(
                 'reasoning': result['reason'],
                 'classification': 'remote' if result['is_remote'] else 'on-site',
                 'description_source': description_source,
-                'poster_type': poster_type,
-                'was_reanalyzed': job_data.get('was_reanalyzed', False),
-                # Tutoring vertical fields — always N/A for general pipeline
-                'vertical': 'general',
-                'subject_category': 'N/A',
-                'instruction_lang': 'N/A',
-                'level': 'N/A',
+                'was_reanalyzed': False  # Only true if we re-analyze an existing job
             }
             
             # Validate with Pydantic
@@ -342,19 +336,16 @@ def scrape_multi_site(
                 all_jobs.append(job_object)
                 metrics['validation_errors'] += 1
             
-            if result['is_remote'] and poster_type != 'employee':
+            if result['is_remote']:
                 remote_count += 1
-
+            
             metrics['jobs_analyzed'] += 1
-
+        
         # Add cached jobs to results
         all_jobs.extend(jobs_from_cache)
         if jobs_from_cache:
-            # Count remote jobs from cache — exclude employee self-promoters
-            remote_count += sum(
-                1 for job in jobs_from_cache
-                if job.get('is_remote') and job.get('poster_type', 'unknown') != 'employee'
-            )
+            # Count remote jobs from cache
+            remote_count += sum(1 for job in jobs_from_cache if job.get('is_remote'))
         
         logger.info(f"Analysis complete - Total: {len(all_jobs)}, Remote: {remote_count}")
         
@@ -371,15 +362,13 @@ def scrape_multi_site(
             print(f"      - Analyzed with LLM: {stats['analyzed_with_llm']}")
             print(f"      - High confidence skip: {stats['high_confidence_skip']}")
             print(f"      - Full descriptions fetched: {stats['full_description_fetched']}")
-            if metrics.get('reanalyzed_jobs'):
-                print(f"      - Reanalyzed cached jobs: {metrics['reanalyzed_jobs']}")
             if incremental:
                 print(f"      - Incremental reduction: {metrics['cached_jobs']}/{len(all_jobs)} ({round(metrics['cached_jobs']/len(all_jobs)*100, 1) if all_jobs else 0}%)")
             if metrics['validation_errors'] > 0:
                 print(f"      ⚠️  Validation errors: {metrics['validation_errors']}")
             print(f"{'='*60}\n")
         
-        # Export metrics
+    # Export metrics
         cache_stats = llm_analyzer.get_cache_stats()
         metrics['cache_hits'] = cache_stats.get('cache_hits', 0)
         duration = (datetime.now() - metrics['start_time']).seconds
@@ -391,16 +380,15 @@ def scrape_multi_site(
             'jobs_analyzed': metrics['jobs_analyzed'],
             'new_jobs': metrics['new_jobs'],
             'cached_jobs': metrics['cached_jobs'],
-            'reanalyzed_jobs': metrics['reanalyzed_jobs'],
             'remote_jobs': remote_count,
             'llm_calls': metrics['llm_calls'],
-            'llm_budget': metrics.get('llm_budget', total_daily_quota),
             'cache_stats': cache_stats,
             'confidence_distribution': metrics['confidence_distribution'],
             'validation_errors': metrics['validation_errors'],
             'incremental_enabled': incremental,
             'sites_scraped': metrics['sites_scraped'],
-            'errors': metrics['errors']
+            'errors': metrics['errors'],
+            'filtered_professional': metrics['filtered_professional'],
         }
         
         # Validate and export metrics
@@ -418,66 +406,54 @@ def scrape_multi_site(
         except Exception as e:
             logger.error(f"Failed to export metrics: {e}")
         
-        # Export jobs
-        if verbose:
-            print("💾 Exporting results...")
-        
-        exporter = JobExporter()
-        
-        # Count employee posts here while we still have the full list
-        employee_posts_count = sum(1 for j in all_jobs if j.get('poster_type') == 'employee')
-
         stats_all = {
             'total': len(all_jobs),
             'remote': remote_count,
             'on_site': len(all_jobs) - remote_count,
             'remote_percentage': round(remote_count / len(all_jobs) * 100, 2) if all_jobs else 0,
-            'employee_posts_filtered': employee_posts_count,
             'llm_used': use_llm,
             'incremental_enabled': incremental,
             'sites': list(metrics['sites_scraped'].keys()),
-            'export_date': datetime.now().strftime('%Y-%m-%d %H:%M:%S')
+            'export_date': datetime.now().strftime('%Y-%m-%d %H:%M:%S'),
+            'filtered_professional': metrics['filtered_professional'],
         }
-
-        remote_jobs = [
-            job for job in all_jobs
-            if job['is_remote'] and job.get('poster_type', 'unknown') != 'employee'
-        ]
-
+        
+        remote_jobs = [job for job in all_jobs if job['is_remote']]
+        
         stats_remote = {
             'total': len(remote_jobs),
             'remote': len(remote_jobs),
             'on_site': 0,
             'remote_percentage': 100.0,
-            'employee_posts_filtered': employee_posts_count,  # same run-level count
             'llm_used': use_llm,
             'sites': list(metrics['sites_scraped'].keys()),
-            'export_date': datetime.now().strftime('%Y-%m-%d %H:%M:%S')
+            'export_date': datetime.now().strftime('%Y-%m-%d %H:%M:%S'),
+            'filtered_professional': metrics['filtered_professional'],
         }
-        
-        # Clean up stale history and LLM cache entries
-        exporter.cleanup_old_history(days=JOB_HISTORY_RETENTION_DAYS)
-        llm_analyzer.cleanup_old_cache(days=60)
 
-        # Export
-        json_all = exporter.export_to_json(all_jobs, stats_all, filename='jobs_latest.json')
-        csv_all = exporter.export_to_csv(all_jobs, filename='jobs_latest.csv')
-        json_remote = exporter.export_to_json(remote_jobs, stats_remote, filename='remote_jobs_latest.json')
-        csv_remote = exporter.export_to_csv(remote_jobs, filename='remote_jobs_latest.csv')
-        archive_all = exporter.export_archive_snapshot(all_jobs, stats_all, filename_prefix='jobs')
-        archive_remote = exporter.export_archive_snapshot(remote_jobs, stats_remote, filename_prefix='remote_jobs')
-        
-        if verbose:
-            print(f"\n💾 Exported to:")
-            print(f"   - {json_all}")
-            print(f"   - {csv_all}")
-            print(f"   - {json_remote}")
-            print(f"   - {csv_remote}")
-            print(f"   - {archive_all['json']}")
-            print(f"   - {archive_remote['json']}")
-            print(f"   - exports/metrics_latest.json")
-        
-        logger.info(f"Export complete - Duration: {duration}s")
+        if export_results:
+            # Export jobs
+            if verbose:
+                print("💾 Exporting results...")
+
+            exporter = JobExporter()
+            exporter.update_job_history(all_jobs)
+
+            # Export
+            json_all = exporter.export_to_json(all_jobs, stats_all, filename='jobs_latest.json')
+            csv_all = exporter.export_to_csv(all_jobs, filename='jobs_latest.csv')
+            json_remote = exporter.export_to_json(remote_jobs, stats_remote, filename='remote_jobs_latest.json')
+            csv_remote = exporter.export_to_csv(remote_jobs, filename='remote_jobs_latest.csv')
+
+            if verbose:
+                print(f"\n💾 Exported to:")
+                print(f"   - {json_all}")
+                print(f"   - {csv_all}")
+                print(f"   - {json_remote}")
+                print(f"   - {csv_remote}")
+                print(f"   - exports/metrics_latest.json")
+
+            logger.info(f"Export complete - Duration: {duration}s")
         
         if verbose:
             print(f"\n✅ Scraping completed successfully!")
@@ -501,15 +477,114 @@ def scrape_multi_site(
         }
 
 
+def run_full_pipeline(
+    general_sites=None,
+    tutoring_sites=None,
+    use_llm=True,
+    verbose=False,
+    max_pages=None,
+    incremental=True,
+    lookback_hours=24,
+    llm_quota_per_site=None,
+    reanalyze_cached=False,
+    include_pro_sources=False,
+):
+    """Run general + tutoring pipelines and export unified outputs."""
+    general_sites = general_sites or DEFAULT_GENERAL_SITES
+    tutoring_sites = tutoring_sites or ['voscours', 'findtutors_uk']
+
+    general_result = scrape_multi_site(
+        sites=general_sites,
+        use_llm=use_llm,
+        verbose=verbose,
+        max_pages=max_pages,
+        incremental=incremental,
+        lookback_hours=lookback_hours,
+        llm_quota_per_site=llm_quota_per_site,
+        reanalyze_cached=reanalyze_cached,
+        export_results=False,
+        include_pro_sources=include_pro_sources,
+    )
+
+    tutoring_result = scrape_tutoring(
+        sites=tuple(tutoring_sites),
+        use_llm=use_llm,
+        verbose=verbose,
+        max_pages=max_pages,
+        incremental=incremental,
+        lookback_hours=lookback_hours,
+        llm_quota=None,
+        reanalyze_cached=reanalyze_cached,
+        existing_general_jobs=general_result.get('results', []),
+        export_results=False,
+    )
+
+    merged_jobs = tutoring_result.get('merged_jobs', [])
+    remote_jobs = [job for job in merged_jobs if job.get('is_remote')]
+
+    stats_all = {
+        'total': len(merged_jobs),
+        'tutoring_posts': tutoring_result.get('tutoring_total', 0),
+        'general_posts': len(general_result.get('results', [])),
+        'remote': len(remote_jobs),
+        'on_site': len(merged_jobs) - len(remote_jobs),
+        'remote_percentage': round(len(remote_jobs) / len(merged_jobs) * 100, 2) if merged_jobs else 0,
+        'llm_used': use_llm,
+        'incremental_enabled': incremental,
+        'sites': list(dict.fromkeys(list(general_sites) + list(tutoring_sites))),
+        'export_date': datetime.now().strftime('%Y-%m-%d %H:%M:%S'),
+        'filtered_professional': general_result.get('stats', {}).get('filtered_professional', 0),
+    }
+
+    stats_remote = {
+        'total': len(remote_jobs),
+        'remote': len(remote_jobs),
+        'on_site': 0,
+        'remote_percentage': 100.0,
+        'llm_used': use_llm,
+        'sites': list(dict.fromkeys(list(general_sites) + list(tutoring_sites))),
+        'export_date': datetime.now().strftime('%Y-%m-%d %H:%M:%S'),
+        'filtered_professional': general_result.get('stats', {}).get('filtered_professional', 0),
+    }
+
+    exporter = JobExporter()
+    exporter.update_job_history(merged_jobs)
+    exporter.cleanup_old_history()
+    json_all = exporter.export_to_json(merged_jobs, stats_all, filename='jobs_latest.json')
+    csv_all = exporter.export_to_csv(merged_jobs, filename='jobs_latest.csv')
+    json_remote = exporter.export_to_json(remote_jobs, stats_remote, filename='remote_jobs_latest.json')
+    csv_remote = exporter.export_to_csv(remote_jobs, filename='remote_jobs_latest.csv')
+
+    return {
+        'success': True,
+        'results': merged_jobs,
+        'stats': stats_all,
+        'exports': {
+            'jobs_json': json_all,
+            'jobs_csv': csv_all,
+            'remote_json': json_remote,
+            'remote_csv': csv_remote,
+        }
+    }
+
+
 if __name__ == '__main__':
-    parser = argparse.ArgumentParser(description='Multi-Site Job Scraper — neighborhood help / small missions')
-    parser.add_argument('--sites', nargs='+', default=['jemepropose', 'allovoisins', 'ringtwice'],
-                       choices=['jemepropose', 'allovoisins', 'ringtwice'],
-                       help='Sites to scrape (default: jemepropose allovoisins ringtwice)')
+    parser = argparse.ArgumentParser(description='Multi-Site Job Scraper with Intelligent Quota Management')
+    parser.add_argument('--sites', nargs='+', default=DEFAULT_GENERAL_SITES,
+                       choices=['jemepropose', 'malt', 'freelance.com', 'comet', 'allovoisins', 'codeur',
+                                'remoteok', 'remotive', 'workingnomads', 'arbeitnow'],
+                       help='General sites to scrape (default: peer-to-peer set)')
+    parser.add_argument('--include-pro-sources', action='store_true',
+                       help='Include professional job boards and APIs (not peer-to-peer)')
+    parser.add_argument('--tutoring-sites', nargs='+', default=['voscours', 'findtutors_uk'],
+                       choices=['voscours', 'findtutors_uk', 'jemepropose', 'allovoisins'],
+                       help='Tutoring sites to scrape (default: voscours findtutors_uk)')
+    parser.add_argument('--no-tutoring', action='store_true',
+                       help='Disable tutoring pipeline')
     parser.add_argument('--pages', type=int, default=None,
                        help='Max pages per site (default: None = unlimited, stops at quota)')
     parser.add_argument('--quota', type=int, default=None,
-                       help=f'LLM quota per LLM site (default: {DAILY_LLM_QUOTA} / llm_sites)')
+                       help=f'LLM quota per site (default: {DAILY_LLM_QUOTA} / num_sites)')
     parser.add_argument('--no-llm', action='store_true',
                        help='Disable LLM analysis (use NLP only)')
     parser.add_argument('--verbose', action='store_true',
@@ -520,19 +595,37 @@ if __name__ == '__main__':
                        help='Lookback window in hours (default: 24)')
     parser.add_argument('--reanalyze', action='store_true',
                        help='Force re-analysis of cached jobs with updated prompt')
-    parser.add_argument('--no-fill-quota', action='store_true',
-                       help='Disable reanalysis backfill when LLM budget remains')
     
     args = parser.parse_args()
-    
-    scrape_multi_site(
-        sites=args.sites,
-        use_llm=not args.no_llm,
-        verbose=args.verbose,
-        max_pages=args.pages,
-        incremental=not args.no_incremental,
-        lookback_hours=args.lookback,
-        llm_quota_per_site=args.quota,
-        reanalyze_cached=args.reanalyze,
-        fill_quota=not args.no_fill_quota
-    )
+
+    general_sites = list(args.sites)
+    if args.include_pro_sources:
+        for site in PRO_SITES:
+            if site not in general_sites:
+                general_sites.append(site)
+
+    if args.no_tutoring:
+        scrape_multi_site(
+            sites=general_sites,
+            use_llm=not args.no_llm,
+            verbose=args.verbose,
+            max_pages=args.pages,
+            incremental=not args.no_incremental,
+            lookback_hours=args.lookback,
+            llm_quota_per_site=args.quota,
+            reanalyze_cached=args.reanalyze,
+            include_pro_sources=args.include_pro_sources,
+        )
+    else:
+        run_full_pipeline(
+            general_sites=general_sites,
+            tutoring_sites=args.tutoring_sites,
+            use_llm=not args.no_llm,
+            verbose=args.verbose,
+            max_pages=args.pages,
+            incremental=not args.no_incremental,
+            lookback_hours=args.lookback,
+            llm_quota_per_site=args.quota,
+            reanalyze_cached=args.reanalyze,
+            include_pro_sources=args.include_pro_sources,
+        )

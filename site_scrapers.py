@@ -6,20 +6,17 @@ Generalized scraper framework supporting multiple job platforms
 
 from abc import ABC, abstractmethod
 from typing import List, Dict, Optional
+import re
+import html
 import requests
 from bs4 import BeautifulSoup
 from urllib.parse import urljoin
 import logging
-import random
-import time
-import html
-import re
 
 MAX_DESCRIPTION_LENGTH = 800
 
 
 def clean_html_description(raw_text: str) -> str:
-    """Strip HTML, normalize whitespace, and truncate."""
     if not raw_text:
         return ''
     cleaned = re.sub(r'<[^>]+>', ' ', raw_text)
@@ -36,22 +33,10 @@ class BaseSiteScraper(ABC):
     def __init__(self, verbose: bool = False):
         self.verbose = verbose
         self.logger = logging.getLogger(self.__class__.__name__)
-
-        _user_agents = [
-            'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/120.0.0.0 Safari/537.36',
-            'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/119.0.0.0 Safari/537.36',
-            'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/120.0.0.0 Safari/537.36',
-            'Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:121.0) Gecko/20100101 Firefox/121.0',
-            'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/605.1.15 (KHTML, like Gecko) Version/17.2 Safari/605.1.15',
-            'Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/120.0.0.0 Safari/537.36',
-        ]
-
         self.headers = {
-            'User-Agent': random.choice(_user_agents),
-            'Accept': 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,*/*;q=0.8',
+            'User-Agent': 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36',
+            'Accept': 'text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8',
             'Accept-Language': 'fr-FR,fr;q=0.9,en-US;q=0.8,en;q=0.7',
-            'Accept-Encoding': 'gzip, deflate, br',
-            'Connection': 'keep-alive',
         }
     
     @property
@@ -99,20 +84,7 @@ class BaseSiteScraper(ABC):
         try:
             if self.verbose:
                 self.logger.debug(f"Scraping {url}")
-
-            # Rotate User-Agent on every request
-            self.headers['User-Agent'] = random.choice([
-                'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/120.0.0.0 Safari/537.36',
-                'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/119.0.0.0 Safari/537.36',
-                'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/120.0.0.0 Safari/537.36',
-                'Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:121.0) Gecko/20100101 Firefox/121.0',
-                'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/605.1.15 (KHTML, like Gecko) Version/17.2 Safari/605.1.15',
-                'Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/120.0.0.0 Safari/537.36',
-            ])
-
-            # Polite delay to avoid rate limiting
-            time.sleep(random.uniform(0.5, 1.5))
-
+            
             response = requests.get(url, headers=self.headers, timeout=30)
             response.raise_for_status()
             
@@ -288,9 +260,11 @@ class FreelanceComScraper(BaseSiteScraper):
     
     @property
     def base_url(self) -> str:
-        return "https://www.freelance.com/projects"
+        return "https://www.freelance.com/freelance-recherche-nouvelle-mission/"
     
     def build_page_url(self, page_num: int) -> str:
+        if page_num == 1:
+            return self.base_url
         return f"{self.base_url}?page={page_num}"
     
     def extract_jobs_from_page(self, soup: BeautifulSoup, page_url: str) -> List[Dict]:
@@ -341,9 +315,11 @@ class CometScraper(BaseSiteScraper):
     
     @property
     def base_url(self) -> str:
-        return "https://www.comet.co/opportunities"
+        return "https://www.comet.co/fr/freelances/trouver-une-mission"
     
     def build_page_url(self, page_num: int) -> str:
+        if page_num == 1:
+            return self.base_url
         return f"{self.base_url}?page={page_num}"
     
     def extract_jobs_from_page(self, soup: BeautifulSoup, page_url: str) -> List[Dict]:
@@ -386,19 +362,19 @@ class CometScraper(BaseSiteScraper):
 
 
 class AlloVoisinsScraper(BaseSiteScraper):
-    """Scraper for allovoisins.com - French neighborhood help / small missions platform"""
-
+    """Scraper for allovoisins.com - Job rental/services platform"""
+    
     @property
     def site_name(self) -> str:
         return "allovoisins"
-
+    
     @property
     def base_url(self) -> str:
-        # Zone 0 = France entière (all regions nationwide)
-        return "https://www.allovoisins.com/r/-3/0/0"
-
+        # Clean base URL without tracking parameters
+        return "https://www.allovoisins.com/r/-3/0/33908"
+    
     def build_page_url(self, page_num: int) -> str:
-        # URL pattern: /r/-3/0/0/{page}/Job/location-vente
+        # URL pattern: /r/-3/0/33908/{page}/Job/location-vente
         # Page 0 = first page (0-indexed)
         page_index = page_num - 1
         return f"{self.base_url}/{page_index}/Job/location-vente"
@@ -469,25 +445,162 @@ class AlloVoisinsScraper(BaseSiteScraper):
         return jobs
 
 
-class RingTwiceScraper(BaseSiteScraper):
-    """
-    Scraper for ringtwice.be — Belgian neighborhood help / small missions platform.
-
-    Ring Twice connects people who need small tasks done (cleaning, gardening, moving,
-    DIY, etc.) with neighbours who can help. All listings are small, one-off missions —
-    NOT full-time or part-time employment.
-
-    The site is bilingual (FR/NL); we scrape the French-language mission board.
-    Pagination: ?page=N (1-indexed).
-    """
+class VosCoursScraper(BaseSiteScraper):
+    """Scraper for voscours.fr student requests (tutoring)."""
 
     @property
     def site_name(self) -> str:
-        return "ringtwice"
+        return "voscours"
 
     @property
     def base_url(self) -> str:
-        return "https://www.ringtwice.be/fr/missions"
+        return "https://www.voscours.fr/annonces/eleves"
+
+    def build_page_url(self, page_num: int) -> str:
+        if page_num == 1:
+            return self.base_url
+        return f"{self.base_url}?page={page_num}"
+
+    def extract_jobs_from_page(self, soup: BeautifulSoup, page_url: str) -> List[Dict]:
+        jobs = []
+        seen = set()
+
+        links = soup.select('a[href*="/annonces/eleves/"]')
+        for link in links:
+            href = link.get('href')
+            if not href:
+                continue
+
+            if not re.search(r"/annonces/eleves/\d+", href):
+                continue
+
+            job_url = urljoin(page_url, href)
+            if job_url in seen:
+                continue
+            seen.add(job_url)
+
+            title = link.get_text(strip=True)
+            card = link.find_parent('article') or link.find_parent('div') or link.parent
+            description = 'N/A'
+            location = 'N/A'
+            poster = 'N/A'
+            date_posted = 'N/A'
+
+            if card:
+                title_tag = card.find(['h2', 'h3'])
+                if title_tag:
+                    title = title_tag.get_text(strip=True)
+
+                desc_tag = card.find('p')
+                if desc_tag:
+                    description = desc_tag.get_text(strip=True)
+
+                loc_tag = card.find(class_='city') or card.find(class_='location')
+                if loc_tag:
+                    location = loc_tag.get_text(strip=True)
+
+                poster_tag = card.find(class_='author') or card.find(class_='name')
+                if poster_tag:
+                    poster = poster_tag.get_text(strip=True)
+
+                date_tag = card.find('time') or card.find(class_='date')
+                if date_tag:
+                    date_posted = date_tag.get_text(strip=True)
+
+            if not title:
+                title = "Demande de cours"
+
+            jobs.append({
+                'url': job_url,
+                'title': title,
+                'description': description,
+                'location': location,
+                'price': 'N/A',
+                'poster': poster,
+                'date_posted': date_posted,
+                'poster_type': 'student',
+            })
+
+        return jobs
+
+
+class FindTutorsUKScraper(BaseSiteScraper):
+    """Scraper for findtutors.co.uk tutoring requests."""
+
+    @property
+    def site_name(self) -> str:
+        return "findtutors_uk"
+
+    @property
+    def base_url(self) -> str:
+        return "https://www.findtutors.co.uk/browse/pupils"
+
+    def build_page_url(self, page_num: int) -> str:
+        if page_num == 1:
+            return self.base_url
+        return f"{self.base_url}?page={page_num}"
+
+    def extract_jobs_from_page(self, soup: BeautifulSoup, page_url: str) -> List[Dict]:
+        jobs = []
+        seen = set()
+
+        links = soup.select('a[href]')
+        for link in links:
+            href = link.get('href', '')
+            if not href:
+                continue
+
+            if not ("tutoring" in href or "tutor" in href):
+                continue
+
+            job_url = urljoin(page_url, href)
+            if job_url in seen:
+                continue
+            seen.add(job_url)
+
+            title = link.get_text(strip=True)
+            card = link.find_parent('article') or link.find_parent('div') or link.parent
+            description = 'N/A'
+            location = 'United Kingdom'
+
+            if card:
+                title_tag = card.find(['h2', 'h3'])
+                if title_tag:
+                    title = title_tag.get_text(strip=True)
+
+                desc_tag = card.find('p')
+                if desc_tag:
+                    description = desc_tag.get_text(strip=True)
+
+                loc_tag = card.find(class_='location') or card.find(class_='city')
+                if loc_tag:
+                    location = loc_tag.get_text(strip=True)
+
+            if not title:
+                title = "Tutoring request"
+
+            jobs.append({
+                'url': job_url,
+                'title': title,
+                'description': description,
+                'location': location,
+                'price': 'N/A',
+                'poster_type': 'student',
+            })
+
+        return jobs
+
+
+class CodeurScraper(BaseSiteScraper):
+    """Scraper for codeur.com freelance missions (remote-friendly)."""
+
+    @property
+    def site_name(self) -> str:
+        return "codeur"
+
+    @property
+    def base_url(self) -> str:
+        return "https://www.codeur.com/projects"
 
     def build_page_url(self, page_num: int) -> str:
         if page_num == 1:
@@ -497,85 +610,256 @@ class RingTwiceScraper(BaseSiteScraper):
     def extract_jobs_from_page(self, soup: BeautifulSoup, page_url: str) -> List[Dict]:
         jobs = []
 
-        # NOTE: Ring Twice uses a React/SPA-rendered frontend. The selectors below are
-        # best-effort fallbacks covering common patterns. If no cards are found, the
-        # scraper returns an empty list gracefully. Update the primary selector once
-        # the actual HTML class name is confirmed by inspecting a live page.
-        job_cards = (
-            soup.find_all('div', class_='mission-card') or
-            soup.find_all('article', class_='mission') or
-            soup.find_all('div', class_='job-card') or
-            soup.find_all('div', class_='task-card') or
-            soup.find_all('li', class_='mission') or
-            soup.find_all('div', attrs={'data-mission-id': True}) or
-            soup.find_all('div', attrs={'data-job-id': True})
-        )
-
-        # Generic fallback: any article or card container with a link
-        if not job_cards:
-            job_cards = soup.find_all('article') or soup.find_all('div', class_='card')
-
-        for card in job_cards:
-            # URL
-            link_tag = card.find('a', href=True)
-            if not link_tag and card.name == 'a':
-                link_tag = card
-            if not link_tag:
-                continue
-            job_url = urljoin(page_url, link_tag['href'])
-
-            # Title
-            title_tag = (
-                card.find('h2') or
-                card.find('h3') or
-                card.find('h4') or
-                card.find(class_='mission-title') or
-                card.find(class_='task-title') or
-                card.find(class_='title') or
-                card.find(class_='job-title')
-            )
-            job_title = title_tag.get_text(strip=True) if title_tag else 'N/A'
-            if job_title == 'N/A' or len(job_title) < 3:
+        seen = set()
+        project_links = soup.select('a[href*="/projects/"]')
+        for link_tag in project_links:
+            href = link_tag.get('href')
+            if not href or '/projects/' not in href:
                 continue
 
-            # Description
-            desc_tag = (
-                card.find('p', class_='description') or
-                card.find('div', class_='description') or
-                card.find('p', class_='excerpt') or
-                card.find('p', class_='summary') or
-                card.find('div', class_='content') or
-                card.find('p')
-            )
-            job_description = desc_tag.get_text(strip=True) if desc_tag else 'N/A'
+            job_url = urljoin(page_url, href)
+            if job_url in seen:
+                continue
+            seen.add(job_url)
 
-            # Location (city/region in Belgium)
-            location_tag = (
-                card.find(class_='location') or
-                card.find('span', class_='city') or
-                card.find(class_='address') or
-                card.find(class_='zone')
-            )
-            job_location = location_tag.get_text(strip=True) if location_tag else 'Belgique'
+            card = link_tag.find_parent('article') or link_tag.find_parent('div') or link_tag.parent
+            title_tag = (card.find(['h2', 'h3']) if card else None) or link_tag
+            title = title_tag.get_text(strip=True) if title_tag else 'N/A'
 
-            # Price / compensation
-            price_tag = (
-                card.find(class_='price') or
-                card.find(class_='rate') or
-                card.find(class_='budget') or
-                card.find('span', string=lambda s: s and '€' in s)
-            )
-            job_price = price_tag.get_text(strip=True) if price_tag else 'N/A'
+            desc_tag = card.find('p') if card else None
+            description = desc_tag.get_text(strip=True) if desc_tag else 'N/A'
+
+            price_tag = card.find(class_='budget') if card else None
+            if not price_tag and card:
+                price_tag = card.find(class_='price')
+            price = price_tag.get_text(strip=True) if price_tag else 'N/A'
 
             jobs.append({
                 'url': job_url,
-                'title': job_title,
-                'description': job_description,
-                'location': job_location,
-                'price': job_price,
+                'title': title,
+                'description': description,
+                'location': 'Remote',
+                'price': price,
             })
 
         return jobs
+
+
+class RemoteOKScraper(BaseSiteScraper):
+    """RemoteOK API scraper (remote-only)."""
+
+    @property
+    def site_name(self) -> str:
+        return "remoteok"
+
+    @property
+    def base_url(self) -> str:
+        return "https://remoteok.com/api"
+
+    def build_page_url(self, page_num: int) -> str:
+        return self.base_url if page_num == 1 else None
+
+    def scrape_page(self, page_num: int) -> tuple[List[Dict], bool]:
+        if page_num > 1:
+            return [], False
+
+        try:
+            response = requests.get(self.base_url, headers=self.headers, timeout=30)
+            response.raise_for_status()
+            raw = response.json()
+            entries = [e for e in raw if isinstance(e, dict) and e.get('position')]
+
+            jobs = []
+            for item in entries:
+                job_url = item.get('url', '')
+                if job_url and not job_url.startswith('http'):
+                    job_url = f"https://remoteok.com{job_url}"
+
+                description = clean_html_description(item.get('description', ''))
+                if item.get('tags'):
+                    description = f"{description} | Skills: {', '.join(item.get('tags', [])[:8])}"
+
+                jobs.append({
+                    'url': job_url or 'N/A',
+                    'title': item.get('position', 'N/A'),
+                    'description': description or 'Remote position',
+                    'location': item.get('location') or 'Remote / Worldwide',
+                    'price': item.get('salary', 'N/A'),
+                    'source': self.site_name,
+                    'is_remote': True,
+                    'remote_confidence': 0.99,
+                    'reason': 'RemoteOK API (remote-only)',
+                    'skip_analysis': True,
+                })
+
+            return jobs, False
+        except Exception as e:
+            self.logger.error(f"RemoteOK API error: {e}")
+            return [], False
+
+    def extract_jobs_from_page(self, soup: BeautifulSoup, page_url: str) -> List[Dict]:
+        _ = soup, page_url
+        return []
+
+
+class RemotiveScraper(BaseSiteScraper):
+    """Remotive API scraper (remote-only)."""
+
+    @property
+    def site_name(self) -> str:
+        return "remotive"
+
+    @property
+    def base_url(self) -> str:
+        return "https://remotive.com/api/remote-jobs"
+
+    def build_page_url(self, page_num: int) -> str:
+        return self.base_url if page_num == 1 else None
+
+    def scrape_page(self, page_num: int) -> tuple[List[Dict], bool]:
+        if page_num > 1:
+            return [], False
+
+        try:
+            response = requests.get(self.base_url, headers=self.headers, timeout=30)
+            response.raise_for_status()
+            payload = response.json()
+            entries = payload.get('jobs', [])
+
+            jobs = []
+            for item in entries:
+                description = clean_html_description(item.get('description', ''))
+                jobs.append({
+                    'url': item.get('url', 'N/A'),
+                    'title': item.get('title', 'N/A'),
+                    'description': description or 'Remote position',
+                    'location': item.get('candidate_required_location') or item.get('location') or 'Remote / Worldwide',
+                    'price': item.get('salary', 'N/A'),
+                    'source': self.site_name,
+                    'is_remote': True,
+                    'remote_confidence': 0.99,
+                    'reason': 'Remotive API (remote-only)',
+                    'skip_analysis': True,
+                })
+
+            return jobs, False
+        except Exception as e:
+            self.logger.error(f"Remotive API error: {e}")
+            return [], False
+
+    def extract_jobs_from_page(self, soup: BeautifulSoup, page_url: str) -> List[Dict]:
+        _ = soup, page_url
+        return []
+
+
+class WorkingNomadsScraper(BaseSiteScraper):
+    """WorkingNomads API scraper (remote-only)."""
+
+    PAGE_SIZE = 100
+
+    @property
+    def site_name(self) -> str:
+        return "workingnomads"
+
+    @property
+    def base_url(self) -> str:
+        return "https://www.workingnomads.com/jobsapi/jobposts"
+
+    def build_page_url(self, page_num: int) -> str:
+        offset = (page_num - 1) * self.PAGE_SIZE
+        return f"{self.base_url}?count={self.PAGE_SIZE}&offset={offset}"
+
+    def scrape_page(self, page_num: int) -> tuple[List[Dict], bool]:
+        url = self.build_page_url(page_num)
+        try:
+            response = requests.get(url, headers=self.headers, timeout=30)
+            if response.status_code == 405:
+                response = requests.post(url, headers=self.headers, timeout=30)
+            response.raise_for_status()
+            entries = response.json()
+            if not entries:
+                return [], False
+
+            jobs = []
+            for item in entries:
+                description = clean_html_description(item.get('description', '') or item.get('content', ''))
+                jobs.append({
+                    'url': item.get('url', 'N/A'),
+                    'title': item.get('title', 'N/A'),
+                    'description': description or 'Remote position',
+                    'location': item.get('location') or 'Remote / Worldwide',
+                    'price': item.get('salary', 'N/A'),
+                    'source': self.site_name,
+                    'is_remote': True,
+                    'remote_confidence': 0.99,
+                    'reason': 'WorkingNomads API (remote-only)',
+                    'skip_analysis': True,
+                })
+
+            has_more = len(entries) >= self.PAGE_SIZE
+            return jobs, has_more
+        except Exception as e:
+            self.logger.error(f"WorkingNomads API error: {e}")
+            return [], False
+
+    def extract_jobs_from_page(self, soup: BeautifulSoup, page_url: str) -> List[Dict]:
+        _ = soup, page_url
+        return []
+
+
+class ArbeitnowScraper(BaseSiteScraper):
+    """Arbeitnow API scraper (remote-only)."""
+
+    @property
+    def site_name(self) -> str:
+        return "arbeitnow"
+
+    @property
+    def base_url(self) -> str:
+        return "https://www.arbeitnow.com/api/job-board-api"
+
+    def build_page_url(self, page_num: int) -> str:
+        return self.base_url if page_num == 1 else f"{self.base_url}?page={page_num}"
+
+    def scrape_page(self, page_num: int) -> tuple[List[Dict], bool]:
+        url = self.build_page_url(page_num)
+        try:
+            response = requests.get(url, headers=self.headers, timeout=30)
+            response.raise_for_status()
+            payload = response.json()
+            entries = payload.get('data', [])
+
+            jobs = []
+            for item in entries:
+                if not item.get('remote', False):
+                    continue
+                description = clean_html_description(item.get('description', ''))
+                job_url = item.get('url') or item.get('slug') or 'N/A'
+                if job_url and not str(job_url).startswith('http'):
+                    job_url = f"https://www.arbeitnow.com/jobs/{job_url}"
+
+                jobs.append({
+                    'url': job_url,
+                    'title': item.get('title', 'N/A'),
+                    'description': description or 'Remote position',
+                    'location': item.get('location') or 'Remote / Europe',
+                    'price': 'N/A',
+                    'source': self.site_name,
+                    'is_remote': True,
+                    'remote_confidence': 0.99,
+                    'reason': 'Arbeitnow API (remote-only)',
+                    'skip_analysis': True,
+                })
+
+            has_more = bool(payload.get('links', {}).get('next'))
+            return jobs, has_more
+        except Exception as e:
+            self.logger.error(f"Arbeitnow API error: {e}")
+            return [], False
+
+    def extract_jobs_from_page(self, soup: BeautifulSoup, page_url: str) -> List[Dict]:
+        _ = soup, page_url
+        return []
 
 
 class MultiSiteScraper:
@@ -665,8 +949,7 @@ class MultiSiteScraper:
         enabled_sites: Optional[List[str]] = None, 
         max_pages_per_site: Optional[int] = None,
         incremental_filter_callback = None,
-        lookback_hours: int = 24,
-        quota_exempt_sources: Optional[List[str]] = None
+        lookback_hours: int = 24
     ) -> tuple:
         """
         Intelligent page-by-page scraping with incremental quota management
@@ -684,7 +967,6 @@ class MultiSiteScraper:
             max_pages_per_site: Hard limit on pages per site (None = unlimited)
             incremental_filter_callback: Function to filter new vs cached jobs
             lookback_hours: Hours to look back for incremental filtering
-            quota_exempt_sources: Site names that should not consume LLM quota
             
         Returns:
             tuple: (all_scraped_jobs, jobs_to_analyze, quota_used)
@@ -693,47 +975,34 @@ class MultiSiteScraper:
         all_jobs_to_analyze = []
         all_cached_jobs = []  # Track cached jobs separately
         sites_to_scrape = enabled_sites if enabled_sites else list(self.scrapers.keys())
-        quota_exempt_sources = set(quota_exempt_sources or [])
-        llm_sites = [s for s in sites_to_scrape if s not in quota_exempt_sources]
-        llm_sites_set = set(llm_sites)
         
         remaining_quota = daily_quota
         num_sites = len(sites_to_scrape)
-        llm_sites_remaining = len(llm_sites)
+        quota_per_site = daily_quota // num_sites if num_sites > 0 else daily_quota
         
         if self.verbose:
             print(f"\n🌐 Intelligent quota-based scraping")
             print(f"   Total daily quota: {daily_quota} LLM calls")
+            print(f"   Initial quota per site: {quota_per_site} jobs")
             print(f"   Sites: {len(sites_to_scrape)}")
-            if quota_exempt_sources:
-                print(f"   LLM-exempt sites: {', '.join(sorted(quota_exempt_sources))}")
         
         for site_idx, site_name in enumerate(sites_to_scrape, 1):
             if site_name not in self.scrapers:
                 self.logger.warning(f"Scraper not found: {site_name}")
-                if site_name in llm_sites_set:
-                    llm_sites_remaining = max(llm_sites_remaining - 1, 0)
                 continue
             
             scraper = self.scrapers[site_name]
-            is_quota_exempt = site_name not in llm_sites_set
             
             # Calculate quota for this site (redistribute if previous sites didn't use all)
-            if is_quota_exempt:
-                site_quota = None
-            else:
-                sites_remaining = llm_sites_remaining if llm_sites_remaining > 0 else 1
-                site_quota = remaining_quota // sites_remaining if sites_remaining > 0 else remaining_quota
+            sites_remaining = num_sites - site_idx + 1
+            site_quota = remaining_quota // sites_remaining if sites_remaining > 0 else remaining_quota
             
             if self.verbose:
                 print(f"\n📡 [{site_idx}/{num_sites}] {site_name.upper()}")
-                if is_quota_exempt:
-                    print("   🎯 LLM quota: EXEMPT (pre-classified)")
-                else:
-                    print(f"   🎯 Allocated quota: {site_quota} LLM jobs")
-                    print(f"   💰 Remaining budget: {remaining_quota}/{daily_quota}")
+                print(f"   🎯 Allocated quota: {site_quota} NEW jobs")
+                print(f"   💰 Remaining budget: {remaining_quota}/{daily_quota}")
             
-            if remaining_quota <= 0 and not is_quota_exempt:
+            if remaining_quota <= 0:
                 if self.verbose:
                     print(f"   🛑 No quota remaining, skipping")
                 break
@@ -741,7 +1010,6 @@ class MultiSiteScraper:
             try:
                 site_scraped_jobs = []
                 site_new_jobs = []
-                site_llm_jobs_count = 0
                 site_cached_jobs = []  # Track cached jobs for this site
                 page_num = 1
                 
@@ -753,16 +1021,13 @@ class MultiSiteScraper:
                         break
                     
                     # Check if we've hit site quota
-                    if not is_quota_exempt and site_llm_jobs_count >= site_quota:
+                    if len(site_new_jobs) >= site_quota:
                         if self.verbose:
-                            print(f"   ✅ Site quota reached: {site_llm_jobs_count}/{site_quota}")
+                            print(f"   ✅ Site quota reached: {len(site_new_jobs)}/{site_quota}")
                         break
                     
                     if self.verbose:
-                        if is_quota_exempt:
-                            print(f"   📄 Page {page_num} (LLM-exempt)")
-                        else:
-                            print(f"   📄 Page {page_num} (LLM so far: {site_llm_jobs_count}/{site_quota})")
+                        print(f"   📄 Page {page_num} (NEW so far: {len(site_new_jobs)}/{site_quota})")
                     
                     # Scrape one page
                     jobs, has_more = scraper.scrape_page(page_num)
@@ -790,47 +1055,21 @@ class MultiSiteScraper:
                         # Track cached jobs
                         site_cached_jobs.extend(page_cached_jobs)
                         
-                        # Add NEW jobs (respecting LLM quota, skip_analysis jobs are exempt)
-                        if is_quota_exempt:
-                            site_new_jobs.extend(page_new_jobs)
-                        else:
-                            exempt_jobs = []
-                            llm_jobs = []
-                            for job in page_new_jobs:
-                                if job.get('skip_analysis'):
-                                    exempt_jobs.append(job)
-                                else:
-                                    llm_jobs.append(job)
-                            
-                            site_new_jobs.extend(exempt_jobs)
-                            space_remaining = site_quota - site_llm_jobs_count
-                            jobs_to_add = llm_jobs[:space_remaining]
-                            site_new_jobs.extend(jobs_to_add)
-                            site_llm_jobs_count += len(jobs_to_add)
-                            
-                            if self.verbose and len(jobs_to_add) < len(llm_jobs):
-                                print(f"      ⚠️  Quota limit: taking {len(jobs_to_add)}/{len(llm_jobs)} LLM jobs")
+                        # Add NEW jobs (respecting site quota)
+                        space_remaining = site_quota - len(site_new_jobs)
+                        jobs_to_add = page_new_jobs[:space_remaining]
+                        site_new_jobs.extend(jobs_to_add)
+                        
+                        if self.verbose and len(jobs_to_add) < len(page_new_jobs):
+                            print(f"      ⚠️  Quota limit: taking {len(jobs_to_add)}/{len(page_new_jobs)} NEW jobs")
                     else:
                         # No incremental filtering, count all as new
-                        if is_quota_exempt:
-                            site_new_jobs.extend(jobs)
-                        else:
-                            exempt_jobs = []
-                            llm_jobs = []
-                            for job in jobs:
-                                if job.get('skip_analysis'):
-                                    exempt_jobs.append(job)
-                                else:
-                                    llm_jobs.append(job)
-                            
-                            site_new_jobs.extend(exempt_jobs)
-                            space_remaining = site_quota - site_llm_jobs_count
-                            jobs_to_add = llm_jobs[:space_remaining]
-                            site_new_jobs.extend(jobs_to_add)
-                            site_llm_jobs_count += len(jobs_to_add)
+                        space_remaining = site_quota - len(site_new_jobs)
+                        jobs_to_add = jobs[:space_remaining]
+                        site_new_jobs.extend(jobs_to_add)
                     
                     # Check if we hit quota
-                    if not is_quota_exempt and site_llm_jobs_count >= site_quota:
+                    if len(site_new_jobs) >= site_quota:
                         if self.verbose:
                             print(f"   ✅ Site quota reached after page {page_num}")
                         break
@@ -838,7 +1077,7 @@ class MultiSiteScraper:
                     # Check if more pages available
                     if not has_more:
                         if self.verbose:
-                            print(f"   🏁 Site exhausted - no more pages")
+                            print(f"   🏁 No more pages available")
                         break
                     
                     page_num += 1
@@ -848,34 +1087,14 @@ class MultiSiteScraper:
                 all_jobs_to_analyze.extend(site_new_jobs)
                 all_cached_jobs.extend(site_cached_jobs)  # Track cached jobs
                 
-                quota_used = site_llm_jobs_count if not is_quota_exempt else 0
+                quota_used = len(site_new_jobs)
                 remaining_quota -= quota_used
                 
                 if self.verbose:
                     print(f"   📊 Site summary:")
-                    print(f"      Total scraped: {len(site_scraped_jobs)} jobs ({page_num} pages)")
-                    if is_quota_exempt:
-                        print(f"      NEW jobs: {len(site_new_jobs)} (LLM-exempt)")
-                    else:
-                        print(f"      NEW jobs: {len(site_new_jobs)} (used {quota_used}/{site_quota} LLM quota)")
-                    print(f"      Cached jobs: {len(site_cached_jobs)}")
-                    
-                    # Show if site was exhausted or hit quota
-                    if not is_quota_exempt and site_llm_jobs_count < site_quota:
-                        unused = site_quota - site_llm_jobs_count
-                        print(f"      ⚠️  Site exhausted: {unused} quota unused (will redistribute)")
-                    
-                    if not is_quota_exempt:
-                        print(f"      💰 Budget remaining: {remaining_quota}/{daily_quota}")
-                
-                # If we still have remaining quota and there are more sites, continue
-                if remaining_quota <= 0:
-                    if self.verbose:
-                        print(f"\n   🎯 Total quota reached ({daily_quota} NEW jobs)!")
-                    break
-                
-                if not is_quota_exempt:
-                    llm_sites_remaining = max(llm_sites_remaining - 1, 0)
+                    print(f"      Total scraped: {len(site_scraped_jobs)} jobs")
+                    print(f"      NEW jobs: {len(site_new_jobs)} (quota used)")
+                    print(f"      Quota remaining: {remaining_quota}/{daily_quota}")
                 
             except Exception as e:
                 self.logger.error(f"Error scraping {site_name}: {e}")
@@ -988,455 +1207,6 @@ class MultiSiteScraper:
                 print(f"  - {site_name}: {count} jobs")
         
         return all_jobs
-
-
-class _ClassgapStudentScraper(BaseSiteScraper):
-    """
-    Base scraper for Classgap-group student-request boards.
-
-    Both voscours.fr and findtutors.co.uk are operated by the same company and
-    share identical HTML structure:
-      - Listing grid:  div.graella-new-student-cards
-      - Individual card: div.student-card  (data-id attribute)
-      - Subject:        div.subject  (first text node, e.g. "Mathématiques")
-      - Location:       div.location
-      - Date:           p.grid-date
-      - Student name:   p.name
-      - Request title:  p.title  (the actual tutoring request text)
-
-    Pagination: ?page=N  (1-indexed, page=1 == no param)
-    All cards are student requests — poster_type hardcoded to 'student'.
-    """
-
-    # Subclasses must define _BASE and _SITE_NAME
-    _BASE: str = ""
-    _SITE_NAME: str = ""
-
-    @property
-    def site_name(self) -> str:
-        return self._SITE_NAME
-
-    @property
-    def base_url(self) -> str:
-        return self._BASE
-
-    def build_page_url(self, page_num: int) -> str:
-        if page_num == 1:
-            return self._BASE
-        return f"{self._BASE}?page={page_num}"
-
-    def extract_jobs_from_page(self, soup: BeautifulSoup, page_url: str) -> List[Dict]:
-        jobs = []
-
-        grid = soup.find(class_='graella-new-student-cards')
-        if not grid:
-            return jobs
-
-        for card in grid.find_all('div', class_='student-card'):
-            data_id = card.get('data-id', 'N/A')
-
-            subject_el = card.select_one('div.subject')
-            subject = subject_el.get_text(strip=True) if subject_el else 'N/A'
-
-            location_el = card.select_one('div.location')
-            location = location_el.get_text(strip=True) if location_el else 'N/A'
-
-            date_el = card.select_one('p.grid-date')
-            date_posted = date_el.get_text(strip=True) if date_el else 'N/A'
-
-            name_el = card.select_one('p.name')
-            student_name = name_el.get_text(strip=True) if name_el else 'N/A'
-
-            title_el = card.select_one('p.title')
-            title = title_el.get_text(strip=True) if title_el else subject
-
-            # Build absolute URL — cards don't always have a direct link;
-            # use data-id to construct the detail URL pattern
-            link_tag = card.find('a', href=True)
-            if link_tag:
-                job_url = urljoin(page_url, link_tag['href'])
-            elif data_id != 'N/A':
-                # Construct from known URL pattern on both platforms
-                domain = page_url.split('/')[2]  # e.g. www.voscours.fr
-                job_url = f"https://{domain}/annonces/eleves/{data_id}"
-            else:
-                job_url = page_url
-
-            jobs.append({
-                'url': job_url,
-                'title': title if title else subject,
-                'description': title,   # title IS the request description on these cards
-                'location': location,
-                'price': 'N/A',
-                'date_posted': date_posted,
-                'poster': student_name,
-                'poster_type': 'student',   # hardcoded — this section is student requests only
-            })
-
-        return jobs
-
-
-class VosCoursScraper(_ClassgapStudentScraper):
-    """Scraper for voscours.fr student tutoring requests (France/EU)."""
-    _SITE_NAME = "voscours"
-    _BASE = "https://www.voscours.fr/annonces/eleves"
-
-
-class FindTutorsUKScraper(_ClassgapStudentScraper):
-    """Scraper for findtutors.co.uk student tutoring requests (UK)."""
-    _SITE_NAME = "findtutors_uk"
-    _BASE = "https://www.findtutors.co.uk/browse/pupils"
-
-
-class CodeurScraper(BaseSiteScraper):
-    """
-    Scraper for codeur.com — France's main French-language project marketplace.
-    All listings are employer/client posts seeking freelancers for digital work.
-    poster_type is hardcoded to 'employer'; LLM still used to verify is_remote.
-    """
-
-    @property
-    def site_name(self) -> str:
-        return "codeur"
-
-    @property
-    def base_url(self) -> str:
-        # Public project listing, no login required, server-side rendered for SEO
-        return "https://www.codeur.com/projects"
-
-    def build_page_url(self, page_num: int) -> str:
-        if page_num == 1:
-            return self.base_url
-        return f"{self.base_url}?page={page_num}"
-
-    def extract_jobs_from_page(self, soup: BeautifulSoup, page_url: str) -> List[Dict]:
-        jobs = []
-
-        # Codeur.com project card selectors (multiple fallbacks for resilience)
-        job_cards = (
-            soup.find_all('div', class_='project') or
-            soup.find_all('article', class_='project') or
-            soup.find_all('div', class_='project-item') or
-            soup.find_all('li', class_='project') or
-            # Generic fallback: any container with a project link
-            [a.parent for a in soup.find_all('a', href=lambda h: h and '/projects/' in h)]
-        )
-
-        # Deduplicate cards that may appear twice from the fallback
-        seen_elements = set()
-        unique_cards = []
-        for card in job_cards:
-            card_id = id(card)
-            if card_id not in seen_elements:
-                seen_elements.add(card_id)
-                unique_cards.append(card)
-
-        for card in unique_cards:
-            # URL
-            link_tag = card.find('a', href=lambda h: h and '/projects/' in h)
-            if not link_tag:
-                continue
-            job_url = urljoin(page_url, link_tag['href'])
-
-            # Title
-            title_tag = (
-                card.find('h2') or
-                card.find('h3') or
-                card.find(class_='project-title') or
-                card.find(class_='title') or
-                link_tag
-            )
-            job_title = title_tag.get_text(strip=True) if title_tag else 'N/A'
-            if not job_title or len(job_title) < 3:
-                continue
-
-            # Description
-            desc_tag = (
-                card.find('p', class_='description') or
-                card.find('div', class_='description') or
-                card.find('p', class_='excerpt') or
-                card.find('p')
-            )
-            job_description = desc_tag.get_text(strip=True) if desc_tag else 'N/A'
-
-            # Budget
-            price_tag = (
-                card.find(class_='budget') or
-                card.find(class_='price') or
-                card.find('span', string=lambda s: s and '€' in s)
-            )
-            job_price = price_tag.get_text(strip=True) if price_tag else 'N/A'
-
-            # Location — codeur projects are usually "France entière" (remote)
-            location_tag = card.find(class_='location') or card.find(class_='city')
-            job_location = location_tag.get_text(strip=True) if location_tag else 'France'
-
-            jobs.append({
-                'url': job_url,
-                'title': job_title,
-                'description': job_description,
-                'location': job_location,
-                'price': job_price,
-                'poster_type': 'employer',  # Codeur only has client/employer postings
-            })
-
-        return jobs
-
-
-class RemotiveScraper(BaseSiteScraper):
-    """
-    Scraper for remotive.com — public JSON API (remote-only jobs).
-    All jobs are remote; skip_analysis avoids LLM usage.
-    """
-
-    @property
-    def site_name(self) -> str:
-        return "remotive"
-
-    @property
-    def base_url(self) -> str:
-        return "https://remotive.com/api/remote-jobs"
-
-    def build_page_url(self, page_num: int) -> str:
-        return self.base_url if page_num == 1 else None
-
-    def scrape_page(self, page_num: int) -> tuple:
-        if page_num > 1:
-            return [], False
-
-        try:
-            response = requests.get(self.base_url, headers=self.headers, timeout=30)
-            response.raise_for_status()
-            payload = response.json()
-            entries = payload.get('jobs', [])
-
-            jobs = []
-            for item in entries:
-                description = clean_html_description(item.get('description', ''))
-
-                location = item.get('candidate_required_location') or item.get('location') or 'Remote / Worldwide'
-
-                jobs.append({
-                    'url': item.get('url', 'N/A'),
-                    'title': item.get('title', 'N/A'),
-                    'description': description or 'Remote position',
-                    'location': location,
-                    'price': item.get('salary', 'N/A'),
-                    'source': self.site_name,
-                    'is_remote': True,
-                    'poster_type': 'employer',
-                    'skip_analysis': True,
-                })
-
-            return jobs, False
-        except Exception as e:
-            self.logger.error(f"Remotive API error: {e}")
-            return [], False
-
-    def extract_jobs_from_page(self, soup: BeautifulSoup, page_url: str) -> List[Dict]:
-        _ = soup, page_url
-        return []
-
-
-class WorkingNomadsScraper(BaseSiteScraper):
-    """
-    Scraper for workingnomads.com — public JSON API (remote-only jobs).
-    """
-
-    PAGE_SIZE = 100
-
-    @property
-    def site_name(self) -> str:
-        return "workingnomads"
-
-    @property
-    def base_url(self) -> str:
-        return "https://www.workingnomads.com/jobsapi/jobposts"
-
-    def build_page_url(self, page_num: int) -> str:
-        offset = (page_num - 1) * self.PAGE_SIZE
-        return f"{self.base_url}?count={self.PAGE_SIZE}&offset={offset}"
-
-    def scrape_page(self, page_num: int) -> tuple:
-        url = self.build_page_url(page_num)
-        try:
-            response = requests.get(url, headers=self.headers, timeout=30)
-            response.raise_for_status()
-            entries = response.json()
-
-            if not entries:
-                return [], False
-
-            jobs = []
-            for item in entries:
-                description = clean_html_description(item.get('description', '') or item.get('content', ''))
-
-                jobs.append({
-                    'url': item.get('url', 'N/A'),
-                    'title': item.get('title', 'N/A'),
-                    'description': description or 'Remote position',
-                    'location': item.get('location') or 'Remote / Worldwide',
-                    'price': item.get('salary', 'N/A'),
-                    'source': self.site_name,
-                    'is_remote': True,
-                    'poster_type': 'employer',
-                    'skip_analysis': True,
-                })
-
-            has_more = len(entries) >= self.PAGE_SIZE
-            return jobs, has_more
-        except Exception as e:
-            self.logger.error(f"WorkingNomads API error: {e}")
-            return [], False
-
-    def extract_jobs_from_page(self, soup: BeautifulSoup, page_url: str) -> List[Dict]:
-        _ = soup, page_url
-        return []
-
-
-class ArbeitnowScraper(BaseSiteScraper):
-    """
-    Scraper for arbeitnow.com — EU-focused job board API.
-    Filters to remote-only jobs and skips LLM analysis.
-    """
-
-    @property
-    def site_name(self) -> str:
-        return "arbeitnow"
-
-    @property
-    def base_url(self) -> str:
-        return "https://www.arbeitnow.com/api/job-board-api"
-
-    def build_page_url(self, page_num: int) -> str:
-        return self.base_url if page_num == 1 else f"{self.base_url}?page={page_num}"
-
-    def scrape_page(self, page_num: int) -> tuple:
-        url = self.build_page_url(page_num)
-        try:
-            response = requests.get(url, headers=self.headers, timeout=30)
-            response.raise_for_status()
-            payload = response.json()
-            entries = payload.get('data', [])
-
-            jobs = []
-            for item in entries:
-                if not item.get('remote', False):
-                    continue
-
-                description = clean_html_description(item.get('description', ''))
-
-                job_url = item.get('url') or item.get('slug') or 'N/A'
-                if job_url and not str(job_url).startswith('http'):
-                    job_url = f"https://www.arbeitnow.com/jobs/{job_url}"
-
-                jobs.append({
-                    'url': job_url,
-                    'title': item.get('title', 'N/A'),
-                    'description': description or 'Remote position',
-                    'location': item.get('location') or 'Remote / Europe',
-                    'price': 'N/A',
-                    'source': self.site_name,
-                    'is_remote': True,
-                    'poster_type': 'employer',
-                    'skip_analysis': True,
-                })
-
-            has_more = bool(payload.get('links', {}).get('next'))
-            return jobs, has_more
-        except Exception as e:
-            self.logger.error(f"Arbeitnow API error: {e}")
-            return [], False
-
-    def extract_jobs_from_page(self, soup: BeautifulSoup, page_url: str) -> List[Dict]:
-        _ = soup, page_url
-        return []
-
-
-class RemoteOKScraper(BaseSiteScraper):
-    """
-    Scraper for remoteok.com — international remote-only jobs via their public JSON API.
-    All jobs are remote by definition and from verified employer postings.
-    Sets skip_analysis=True so the main loop never calls the LLM — zero quota cost.
-    """
-
-    @property
-    def site_name(self) -> str:
-        return "remoteok"
-
-    @property
-    def base_url(self) -> str:
-        return "https://remoteok.com/api"
-
-    def build_page_url(self, page_num: int) -> str:
-        # API returns all jobs at once — only one "page"
-        return self.base_url if page_num == 1 else None
-
-    def scrape_page(self, page_num: int) -> tuple:
-        """Override to consume JSON API instead of HTML."""
-        if page_num > 1:
-            return [], False  # Single-page API
-
-        url = self.base_url
-        try:
-            self.headers['User-Agent'] = random.choice([
-                'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/120.0.0.0 Safari/537.36',
-                'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/120.0.0.0 Safari/537.36',
-            ])
-            time.sleep(random.uniform(1.0, 2.0))  # RemoteOK asks for politeness
-            response = requests.get(url, headers=self.headers, timeout=30)
-            response.raise_for_status()
-
-            raw = response.json()
-            # First element is API metadata, skip it
-            entries = [e for e in raw if isinstance(e, dict) and e.get('position')]
-
-            import re
-            jobs = []
-            for item in entries:
-                job_url = item.get('url', '')
-                if not job_url.startswith('http'):
-                    job_url = f"https://remoteok.com{job_url}"
-
-                # Strip HTML from description
-                raw_desc = item.get('description', '')
-                description = re.sub(r'<[^>]+>', ' ', raw_desc)
-                description = ' '.join(description.split())[:600]
-
-                tags = item.get('tags', [])
-                if tags:
-                    description = f"{description} | Skills: {', '.join(tags[:8])}"
-
-                location = item.get('location') or 'Remote / Worldwide'
-                if location.lower() in ('', 'anywhere', 'worldwide', 'remote'):
-                    location = 'Remote / Worldwide'
-
-                salary = 'N/A'
-                if item.get('salary_min') or item.get('salary_max'):
-                    salary = f"${item.get('salary_min', '?')} - ${item.get('salary_max', '?')}/year"
-
-                jobs.append({
-                    'url': job_url,
-                    'title': item.get('position', 'N/A'),
-                    'description': description or 'Remote position',
-                    'location': location,
-                    'price': salary,
-                    'source': self.site_name,
-                    'is_remote': True,
-                    'poster_type': 'employer',
-                    'skip_analysis': True,  # Never call LLM — saves 100% of quota for these jobs
-                })
-
-            return jobs, False  # Always single page
-
-        except Exception as e:
-            self.logger.error(f"RemoteOK API error: {e}")
-            return [], False
-
-    def extract_jobs_from_page(self, soup: BeautifulSoup, page_url: str) -> List[Dict]:
-        """Unused — RemoteOK uses JSON API via overridden scrape_page."""
-        _ = soup, page_url  # Required by abstract interface; this scraper uses JSON API
-        return []
 
 
 # ===== QUICK TEST =====

@@ -1,27 +1,27 @@
 {
-  "timestamp": "2026-05-02 15:02:13.470900",
-  "duration_seconds": 2540,
-  "jobs_scraped": 8220,
+  "timestamp": "2026-05-03 07:57:50.580737",
+  "duration_seconds": 2047,
+  "jobs_scraped": 1660,
   "jobs_analyzed": 333,
   "new_jobs": 166,
-  "cached_jobs": 605,
+  "cached_jobs": 116,
   "reanalyzed_jobs": 167,
-  "remote_jobs": 0,
-  "llm_calls": 272,
+  "remote_jobs": 2,
+  "llm_calls": 263,
   "llm_budget": 333,
   "cache_stats": {
-    "cache_hits": 114,
-    "cache_misses": 158,
-    "total_requests": 272,
-    "hit_rate_percentage": 41.91,
-    "nlp_fallbacks": 87,
-    "llm_calls": 71,
-    "nlp_fallback_rate_percentage": 55.06,
+    "cache_hits": 25,
+    "cache_misses": 238,
+    "total_requests": 263,
+    "hit_rate_percentage": 9.51,
+    "nlp_fallbacks": 189,
+    "llm_calls": 49,
+    "nlp_fallback_rate_percentage": 79.41,
     "model": "llama-3.3-70b-versatile"
   },
   "confidence_distribution": {
-    "high": 193,
-    "medium": 140,
+    "high": 131,
+    "medium": 202,
     "low": 0
   },
   "errors": [],
@@ -29,7 +29,7 @@
   "incremental_enabled": true,
   "sites_scraped": {
     "jemepropose": 0,
-    "allovoisins": 8220,
+    "allovoisins": 1660,
     "ringtwice": 0
   }
 }

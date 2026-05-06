@@ -456,6 +456,70 @@ class AlloVoisinsScraper(BaseSiteScraper):
         return jobs
 
 
+class WorkingNomadsScraper(BaseSiteScraper):
+    """
+    Scraper for workingnomads.co - Remote job platform
+    Uses workaround for JavaScript-rendered content (headless-friendly)
+    """
+    
+    @property
+    def site_name(self) -> str:
+        return "workingnomads"
+    
+    @property
+    def base_url(self) -> str:
+        return "https://www.workingnomads.co/jobs"
+    
+    def build_page_url(self, page_num: int) -> str:
+        # WorkingNomads uses ?page=N pagination
+        return f"{self.base_url}?page={page_num}"
+    
+    def extract_jobs_from_page(self, soup: BeautifulSoup, page_url: str) -> List[Dict]:
+        jobs = []
+        
+        # WorkingNomads job listings
+        job_cards = soup.find_all('li', class_='job') or \
+                   soup.find_all('article', class_='job-listing') or \
+                   soup.find_all('div', class_='job-card')
+        
+        for card in job_cards:
+            # Extract job URL
+            link_tag = card.find('a', href=True)
+            job_url = urljoin(page_url, link_tag['href']) if link_tag else 'N/A'
+            
+            # Extract title
+            title_tag = card.find('h2') or card.find('h3') or card.find(class_='job-title')
+            job_title = title_tag.get_text(strip=True) if title_tag else 'N/A'
+            
+            # Extract description (usually from job card excerpt)
+            desc_tag = card.find('p', class_='job-description') or \
+                      card.find('p', class_='excerpt') or \
+                      card.find('div', class_='job-excerpt')
+            job_description = desc_tag.get_text(strip=True) if desc_tag else 'N/A'
+            
+            # Extract location (should be "Remote" or similar)
+            location_tag = card.find(class_='location') or \
+                          card.find('span', class_='job-location')
+            job_location = location_tag.get_text(strip=True) if location_tag else 'Remote'
+            
+            # Extract salary/budget
+            salary_tag = card.find(class_='salary') or \
+                        card.find('span', class_='job-salary') or \
+                        card.find(string=lambda s: s and ('$' in s or '/month' in s))
+            job_price = salary_tag.get_text(strip=True) if salary_tag else 'N/A'
+            
+            if job_title and job_title != 'N/A':
+                jobs.append({
+                    'url': job_url,
+                    'title': job_title,
+                    'description': job_description,
+                    'location': job_location,
+                    'price': job_price,
+                })
+        
+        return jobs
+
+
 class MultiSiteScraper:
     """
     Orchestrator for scraping multiple job sites
@@ -829,10 +893,8 @@ if __name__ == '__main__':
     
     # Register scrapers
     multi_scraper.register_scraper(JeMeProposeScraper(verbose=True))
-    multi_scraper.register_scraper(AlloVoisinsScraper(verbose=True))  # NEW!
-    # multi_scraper.register_scraper(MaltScraper(verbose=True))  # Uncomment when ready
-    # multi_scraper.register_scraper(FreelanceComScraper(verbose=True))
-    # multi_scraper.register_scraper(CometScraper(verbose=True))
+    multi_scraper.register_scraper(WorkingNomadsScraper(verbose=True))  # NEW!
+    multi_scraper.register_scraper(AlloVoisinsScraper(verbose=True))
     
     # Test with just 1 page
     print("\nTesting with 1 page per site...")

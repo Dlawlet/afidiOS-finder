@@ -13,7 +13,7 @@ from job_exporter import JobExporter
 from job_helpers import JobDescriptionFetcher, BasicRemoteDetector
 from incremental_scraper import IncrementalScraper
 from models import JobListing, validate_job_data, ScraperMetrics
-from site_scrapers import MultiSiteScraper, JeMeProposeScraper, MaltScraper, FreelanceComScraper, CometScraper, AlloVoisinsScraper
+from site_scrapers import MultiSiteScraper, JeMeProposeScraper, MaltScraper, FreelanceComScraper, CometScraper, AlloVoisinsScraper, WorkingNomadsScraper
 import json
 from datetime import datetime
 import logging
@@ -95,6 +95,7 @@ def scrape_multi_site(
             'freelance.com': FreelanceComScraper,
             'comet': CometScraper,
             'allovoisins': AlloVoisinsScraper,
+            'workingnomads': WorkingNomadsScraper,
         }
         
         for site_name in sites:
@@ -388,7 +389,7 @@ def scrape_multi_site(
 if __name__ == '__main__':
     parser = argparse.ArgumentParser(description='Multi-Site Job Scraper with Intelligent Quota Management')
     parser.add_argument('--sites', nargs='+', default=['jemepropose'],
-                       choices=['jemepropose', 'malt', 'freelance.com', 'comet', 'allovoisins'],
+                       choices=['jemepropose', 'malt', 'freelance.com', 'comet', 'allovoisins', 'workingnomads'],
                        help='Sites to scrape (default: jemepropose)')
     parser.add_argument('--pages', type=int, default=None,
                        help='Max pages per site (default: None = unlimited, stops at quota)')

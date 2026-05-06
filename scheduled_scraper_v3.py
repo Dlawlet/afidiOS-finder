@@ -12,6 +12,7 @@ from semantic_analyzer import SemanticJobAnalyzer, setup_logging
 from job_exporter import JobExporter
 from job_helpers import JobDescriptionFetcher, BasicRemoteDetector
 from incremental_scraper import IncrementalScraper
+from mission_type_filter import MissionTypeFilter, filter_jobs_by_mission_type
 from models import JobListing, validate_job_data, ScraperMetrics
 from site_scrapers import MultiSiteScraper, JeMeProposeScraper, MaltScraper, FreelanceComScraper, CometScraper, AlloVoisinsScraper, WorkingNomadsScraper
 import json
@@ -137,6 +138,36 @@ def scrape_multi_site(
         for site in sites:
             site_jobs = [j for j in scraped_jobs if j.get('source') == site]
             metrics['sites_scraped'][site] = len(site_jobs)
+        
+        # ===== PHASE 2.5: FILTER BY MISSION TYPE =====
+        # Exclude CDI/CDD/Freelance marketplace, keep only peer-to-peer missions
+        if verbose:
+            print(f"\n🎯 Phase 2.5: Filtering by mission type (excluding CDI/CDD/Freelance)...")
+        
+        jobs_before_filter = len(jobs_to_analyze)
+        jobs_to_analyze, mission_filter_stats = filter_jobs_by_mission_type(
+            jobs_to_analyze,
+            exclude_types=['cdi', 'cdd', 'freelance'],
+            verbose=False  # Don't spam output
+        )
+        jobs_after_filter = len(jobs_to_analyze)
+        
+        if verbose:
+            print(f"  Mission Type Filter Results:")
+            print(f"    Before: {jobs_before_filter} jobs")
+            print(f"    After: {jobs_after_filter} jobs")
+            if mission_filter_stats['cdi'] > 0 or mission_filter_stats['cdd'] > 0 or mission_filter_stats['freelance'] > 0:
+                excluded_detail = []
+                if mission_filter_stats['cdi'] > 0:
+                    excluded_detail.append(f"{mission_filter_stats['cdi']} CDI")
+                if mission_filter_stats['cdd'] > 0:
+                    excluded_detail.append(f"{mission_filter_stats['cdd']} CDD")
+                if mission_filter_stats['freelance'] > 0:
+                    excluded_detail.append(f"{mission_filter_stats['freelance']} Freelance")
+                print(f"    Excluded: {', '.join(excluded_detail)}")
+        
+        # Store filter stats in metrics
+        metrics['mission_type_filter'] = mission_filter_stats
         
         # ===== PHASE 3: ANALYZE JOBS =====
         if verbose:
